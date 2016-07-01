@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbosscache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:jboss:jbosscache-core:config:3.2">
+
+	<transaction transactionManagerLookupClass="org.jboss.cache.transaction.GenericTransactionManagerLookup"
+		syncRollbackPhase="false" syncCommitPhase="false" />
+
+	<eviction wakeUpInterval="100">
+		<default algorithmClass="org.jboss.cache.eviction.LRUAlgorithm" eventQueueSize="200000"
+			actionPolicyClass="org.jboss.cache.eviction.DefaultEvictionActionPolicy">
+		</default>
+	</eviction>
+</jbosscache>

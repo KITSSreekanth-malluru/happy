@@ -1,0 +1,32 @@
+<dsp:getvalueof var="bundleLinksArray" param="product.childSKUs[0].bundleLinks" />
+<dsp:droplet name="ForEach">
+  <dsp:param name="array" param="product.childSKUs[0].bundleLinks"/>
+  <dsp:param name="elementName" value="bLink"/>
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="index" param="index"/>
+    <dsp:getvalueof var="linkSkuId" param="bLink.item.repositoryId"/>
+    <dsp:getvalueof var="skuCodeArticle" param="bLink.item.codeArticle"/>
+  <dsp:getvalueof var="set" param="bLink.item.parentProducts.updatedValue"/>
+  <dsp:param name="list" value="${castCollection:list(set)}"/>
+  <dsp:getvalueof var="linkSkuProductId" param="list[0].repositoryId"/>
+  <dsp:getvalueof var="imgElem" param="bLink.item.thumbnailImage.url"/>
+  <dsp:getvalueof var="namesElem" param="bLink.item.displayName"/>
+        
+    <c:choose>
+      <c:when test="${index == 0}">
+        <c:set var="skuList" value="${linkSkuId}"/>
+        <c:set var="skuCodeArticleList" value="${skuCodeArticle}"/>
+        <c:set var="imgSrcList" value="${imgElem}"/>
+        <c:set var="namesList" value="${namesElem}"/>
+        <c:set var="productList" value="${linkSkuProductId}"/>
+      </c:when>
+      <c:otherwise>
+        <c:set var="skuList" value="${skuList},${linkSkuId}"/>
+        <c:set var="skuCodeArticleList" value="${skuCodeArticleList},${skuCodeArticle}"/>
+        <c:set var="imgSrcList" value="${imgSrcList},${imgElem}"/>
+        <c:set var="namesList" value="${namesList},${namesElem}"/>
+        <c:set var="productList" value="${productList},${linkSkuProductId}"/>
+      </c:otherwise>
+    </c:choose>
+  </dsp:oparam>
+</dsp:droplet>

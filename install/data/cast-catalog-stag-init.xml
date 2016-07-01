@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="catalog" id="masterCatalog">
+            <set-property name="displayName"><![CDATA[Master Catalog]]></set-property>
+            <set-property name="directAncestorCatalogsAndSelf"><![CDATA[masterCatalog]]></set-property>
+            <set-property name="creationDate"><![CDATA[7/27/2009 13:01:19]]></set-property>
+            <set-property name="lastModifiedDate"><![CDATA[7/27/2009 13:20:46]]></set-property>
+        </add-item>
+        <add-item item-descriptor="catalogFolder" id="CatalogFolder">
+            <set-property name="childItems"><![CDATA[masterCatalog]]></set-property>
+            <set-property name="type"><![CDATA[catalogFolder]]></set-property>
+            <set-property name="name"><![CDATA[Catalogs]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

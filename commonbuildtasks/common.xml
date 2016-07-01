@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This build.xml file contains the tasks common to most if not all of the
+  projects.  The basedir is not set here as it is meaningless in this context.
+
+  To include this fragment, include the following tags in your project file:
+    <property name="global.dir" value="${basedir}/.."/>
+    <import file="${global.dir}/buildtools/common.xml"/>
+-->
+<project name="common">
+
+  <property environment="env" />
+  <property name="commonbuildtasks.dir" value="${global.dir}/commonbuildtasks"/>
+  <property file="${global.dir}/userenv.properties" />
+  <property file="${commonbuildtasks.dir}/build.properties" />
+  <property file="build.properties" />
+  
+  <!-- Emma -->
+  <property name="reports" location="${build.dir}/reports"/>
+  <property name="coverage" location="${build.dir}/coverage" />
+  <property name="instr" location="${build.dir}/instr" />
+  
+  <import file="${commonbuildtasks.dir}/${deploy.definition.file}"/>
+  <import file="${commonbuildtasks.dir}/sql.xml"/>
+  <import file="${commonbuildtasks.dir}/data.xml"/>
+
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties"
+           classpath="${commonbuildtasks.dir}/lib/ant-contrib.jar"/>
+
+  <!--taskdef name="iseif"
+           classname="ise.antelope.tasks.IfTask"
+           classpath="${buildtools.dir}/lib/atg-ant.jar"/-->
+
+  <taskdef name="if"
+           classname="net.sf.antcontrib.logic.IfTask"
+           classpath="${commonbuildtasks.dir}/lib/ant-contrib.jar"/>
+
+  <taskdef name="foreach"
+           classname="net.sf.antcontrib.logic.ForEach"
+           classpath="${commonbuildtasks.dir}/lib/ant-contrib.jar"/>
+
+  <!-- Create a macro for copying sql files. -->
+  <macrodef name="copytemplate">
+    <attribute name="destdir"/>
+    <attribute name="srcdir"/>
+    <sequential>
+      <copy todir="@{destdir}" failonerror="false" verbose="true">
+        <fileset dir="@{srcdir}"/>
+        <filterchain>
+          <replacetokens>
+            <!-- We assume that the first four properties are constant properties -->
+            <token key="core_schema" value="${jdbc.core.user}" />
+            <token key="cataloga_schema" value="${jdbc.cataloga.user}" />
+            <token key="DYNAMO_ROOT" value="${dynamo.root.dir}" />
+          </replacetokens>
+        </filterchain>
+        <mapper type="glob" from="*.sql_master" to="*.sql"/>
+      </copy>
+    </sequential>
+  </macrodef>
+
+  <path id="dynamo.classpath">
+    <fileset dir="${dynamo.home}/../DAS/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAS-UI/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DPS/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DSS/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DCS/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../Publishing/base/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAF/Search/Index/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAF/Search/common/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAF/Search/Base/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAF/Search/Query/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAF/Search/common/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAF/Search/Routing/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../Publishing/base/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../PublishingAgent/base/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DAF/Search/Query/2006-3/lib">
+      <include name="**/*.jar" />
+    </fileset>
+    <fileset dir="${dynamo.home}/../DCS/PublishingAgent/lib">
+      <include name="**/*.jar" />
+    </fileset>
+  </path>
+
+
+
+  <!-- Other things to watch for in the classpath -->
+  <patternset id="resource.files">
+    <include name="**/*.properties" />
+    <include name="**/*.xml" />
+    <include name="**/*.dtd" />
+    <include name="**/*.bat" />
+    <include name="**/*.sh" />
+    <include name="**/*.txt" />
+    <include name="**/*.xsl" />
+    <include name="**/*.wsdd" />
+  </patternset>
+
+  <!--
+    Files to exclude when cleaning out the temp ear directory. Excluding
+    JSPs will make it so they don't get redeployed and recompiled.
+  -->
+  <patternset id="clean.ear.excludes">
+    <exclude name="**/*.jsp"/>
+    <exclude name="**/*.jspf"/>
+  </patternset>
+
+  <!--
+    Create the directories used in the build process. Not intended to be used publicly.
+  -->
+  <target name="-createdirs">
+    <mkdir dir="${build.dir}" />
+    <mkdir dir="${build.dir}/lib" />
+    <mkdir dir="${build.dir}/liveconfig" />
+    <mkdir dir="${build.stagconfig.dir}" />
+    <mkdir dir="${build.config.dir}" />
+    <mkdir dir="${classes.dir}" />
+    <mkdir dir="${reports.dir}" />
+    <mkdir dir="${javadoc.dir}" />
+    <mkdir dir="${ear.dir}" />
+    <mkdir dir="${build.dir}/install" />
+    <!-- Emma -->
+    <mkdir dir="${reports}" />
+    <mkdir dir="${coverage}" />
+    <mkdir dir="${instr}" />
+  </target>
+
+  
+  <!--
+    checks to see which core directories exist
+  -->
+  <target name="-coredirsexist" description="verifies that certain core directories exist">
+    <available file="${src.dir}"        property="srcdirectory.exists" />
+    <available file="${test.src.dir}"   property="testsrcdirectory.exists"/>
+    <available file="${sql.dir}"        property="sqldir.exists" />
+    <available file="${build.sql.dir}"  property="buildsqldir.exists" />
+    <available file="${liveconfig.dir}" property="liveconfig.exists" />
+    <available file="${stagconfig.dir}" property="stagconfig.exists" />
+    <available file="${config.dir}"     property="config.exists" />
+    <available file="${lib.dir}"        property="libdir.exists" />
+    <available file="${install.script.dir}"        property="importScriptdir.exists" />
+  </target>
+
+
+
+  <!--
+    Initializes the build.  This target is not public, but should be called
+    by all the others.
+  -->
+  <target name="-init">
+    <!-- Create the timestamp -->
+    <tstamp />
+    <echo message=""/>
+    <echo message=""/>
+    <echo message="#############################################################################"/>
+    <echo message="#############################################################################"/>
+    <echo message="${module.parent}.${module.name}: start date = ${DSTAMP}  start time = ${TSTAMP}" />
+    <echo message="JAVA_HOME       = ${env.JAVA_HOME}"/>
+    <echo message="dynamo.home     = ${dynamo.home}" />
+    <echo message="dynamo.root.dir = ${dynamo.root.dir}" />
+    <echo message="deploy.definition.file = ${deploy.definition.file}" />
+    <echo message="global.dir      = ${global.dir}" />
+    <echo message="#############################################################################"/>
+    <echo message="#############################################################################"/>
+    <echo message=""/>
+    <echo message=""/>
+  </target>
+
+  <!--
+  Deletes the build and install directories.
+  -->
+  <target name="clean"
+          depends="-init"
+          description="Deletes the contents of the install and build directories.">
+    <delete failonerror="false" includeEmptyDirs="true">
+      <fileset dir="${install.dir}" excludes="${clean.task.excludes}" />
+      <fileset dir="${build.dir}">
+        <patternset refid="clean.ear.excludes" />
+      </fileset>
+    </delete>
+  </target>
+
+   <!--
+    Compiles and jars the code.
+  -->
+  <target name="build"
+          depends="compile,-buildbeaninfos,-jar,-copylibs"
+          description="Compiles and jars the code.">
+  </target>
+
+  <!-- Compiles the codebase -->
+  <target name="compile"
+          depends="-init,-createdirs,-coredirsexist"
+          if="srcdirectory.exists"
+          description="Compiles the source code to the build directory.">
+    <mkdir dir="${classes.dir}" />
+
+
+    <echo message="CLASSPATH = ${classpath}"/>
+    <javac srcdir="${src.dir}"
+           destdir="${classes.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.6"
+           target="1.6"
+           verbose="${javac.verbose.bool}">
+
+      <classpath path="${classpath}"/>
+      <classpath path="${lib.classpath}"/>
+      <classpath refid="dynamo.classpath"/>
+      <include name="**/*.java" />
+    </javac>
+    <!-- copy java resource files to build directory -->
+    <copy todir="${classes.dir}">
+      <fileset dir="${src.dir}/">
+        <patternset refid="resource.files" />
+      </fileset>
+    </copy>
+  </target>
+
+  <!-- Compiles the test codebase -->
+  <!--target name="compiletest"
+          depends="-init,compile"
+          if="testsrcdirectory.exists"
+          description="Compiles the unit tests.">
+            
+    <mkdir dir="${testclasses.dir}" />
+    <javac srcdir="${test.src.dir}"
+           destdir="${testclasses.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.6"
+           target="1.6"
+           verbose="${javac.verbose.bool}">
+      <classpath path="${classes.dir}" />
+      <classpath path="${lib.classpath}" />
+      <classpath refid="test.lib.classpath"/>
+      <classpath refid="dynamo.classpath" />
+      <include name="**/*.java" />
+    </javac>
+  </target-->
+
+  <target name="-buildbeaninfos" 
+          if="buildbeaninfos.packageList">
+    <property name="beaninfo.list" location="${global.dir}/${buildbeaninfos.packageList}"/>
+    <property name="beaninfo.dest" location="${classes.dir}"/>
+
+    <echo>
+      building beaninfos from packages specified in file ${beaninfo.list}
+    </echo>
+
+    <mkdir dir="${beaninfo.dest}"/>
+
+    <javadoc doclet="atg.beaninfo.BeanInfoGenerator"
+             classpathref="dynamo.classpath"
+             sourcepath="${src.dir}"
+             destdir="${beaninfo.dest}"
+             docletpath="${buildtools.dir}/lib/devtools-buildbeaninfo.jar"
+             Private="true"
+             packageList="${beaninfo.list}"
+             additionalparam="-J-Xms64m -J-Xmx192m"/>
+    <javac srcdir="${beaninfo.dest}"
+           destdir="${classes.dir}"
+           failonerror="true"
+           classpathref="dynamo.classpath"
+           source="1.6" target="1.6">
+      <include name="**/*.java" />
+    </javac>
+  </target>
+
+  <target name="-jar"
+          depends="-init,-createdirs,-jarclasses,-jarliveconfig,-copymanifest,-copyscripts"
+          description="creates build directories, jars classes and configuration">
+  </target>
+
+  <target name="-copymanifest" depends="-init,-jarconfigs">
+    <!-- Set filter token to look for 
+         install unit
+         module parent name
+         and module name
+         settings in manifests and configuration files -->
+    <filter token="install_unit"                  value="${install.unit}"/>
+    <filter token="module_root_parent"            value="${module.root.parent}"/>
+    <filter token="module_name"                   value="${module.name}"/>
+    <filter token="project_name"                  value="${project.name}"/>
+    <filter token="default_context_root"          value="${default.context.root}"/>
+    <filter token="default_web_app_name"          value="${default.web.app.name}"/>
+    <filter token="merch_context_root"            value="${merch.context.root}"/>
+    <filter token="merch_web_app_name"            value="${merch.web.app.name}"/>
+    <filter token="fo_context_root"               value="${fo.context.root}"/>
+    <filter token="fo_web_app_name"               value="${fo.web.app.name}"/>
+    <filter token="loginUser_context_root"        value="${loginUser.context.root}"/>
+    <filter token="loginUser_web_app_name"        value="${loginUser.web.app.name}"/>
+    <filter token="createUser_context_root"       value="${createUser.context.root}"/>
+    <filter token="createUser_web_app_name"       value="${createUser.web.app.name}"/>
+    <filter token="updateUser_context_root"       value="${updateUser.context.root}"/>
+    <filter token="updateUser_web_app_name"       value="${updateUser.web.app.name}"/>
+    <filter token="searchClients_context_root"    value="${searchClients.context.root}"/>
+    <filter token="searchClients_web_app_name"    value="${searchClients.web.app.name}"/>
+    <filter token="forgotPassw_context_root"      value="${forgotPassw.context.root}"/>
+    <filter token="forgotPassw_web_app_name"      value="${forgotPassw.web.app.name}"/>
+	<filter token="rest_context_root"             value="${rest.context.root}"/>
+	<filter token="rest_web_app_name"             value="${rest.web.app.name}"/>
+
+    <!-- Copy the manifest -->
+    <copy todir="${build.dir}/META-INF" filtering="true">
+      <fileset dir="${inf.dir}" />
+    </copy>
+  </target>
+    
+  <!-- Granular task to just copy and jar the configs -->
+  <target name="-jarconfigs" depends="-init" if="config.exists">
+    <!-- Set filter token to look for 
+         install unit
+         module parent name
+         and module name
+         settings in manifests and configuration files -->
+    <filter token="install_unit"                  value="${install.unit}"/>
+    <filter token="module_root_parent"            value="${module.root.parent}"/>
+    <filter token="module_name"                   value="${module.name}"/>
+    <filter token="default_context_root"          value="${default.context.root}"/>
+    <filter token="default_web_app_name"          value="${default.web.app.name}"/>
+    <filter token="merch_context_root"            value="${merch.context.root}"/>
+    <filter token="merch_web_app_name"            value="${merch.web.app.name}"/>
+    <filter token="fo_context_root"               value="${fo.context.root}"/>
+    <filter token="fo_web_app_name"               value="${fo.web.app.name}"/>
+    <filter token="loginUser_context_root"        value="${loginUser.context.root}"/>
+    <filter token="loginUser_web_app_name"        value="${loginUser.web.app.name}"/>
+    <filter token="createUser_context_root"       value="${createUser.context.root}"/>
+    <filter token="createUser_web_app_name"       value="${createUser.web.app.name}"/>
+    <filter token="updateUser_context_root"       value="${updateUser.context.root}"/>
+    <filter token="updateUser_web_app_name"       value="${updateUser.web.app.name}"/>
+    <filter token="searchClients_context_root"    value="${searchClients.context.root}"/>
+    <filter token="searchClients_web_app_name"    value="${searchClients.web.app.name}"/>
+    <filter token="forgotPassw_context_root"      value="${forgotPassw.context.root}"/>
+    <filter token="forgotPassw_web_app_name"      value="${forgotPassw.web.app.name}"/>
+	<filter token="rest_context_root"             value="${rest.context.root}"/>
+    <filter token="rest_web_app_name"             value="${rest.web.app.name}"/>
+
+    <!-- Make a temporary config directory to support filter substitution -->
+    <mkdir dir="${build.tempconfig.dir}" />
+    <copy todir="${build.tempconfig.dir}" filtering="true">
+      <fileset dir="${config.dir}" />
+    </copy>
+
+    <!-- Jar up the configuration files -->
+    <jar jarfile="${build.config.dir}/config.jar" basedir="${build.tempconfig.dir}/" includes="**" />
+        
+  </target>
+  
+  
+    
+  <!-- Copy the configs from the build directory to the install -->
+  <target name="-installconfigs" depends="-init" description="Copy configs to install">
+    <delete dir="${install.dir}/config" />
+    <mkdir dir="${install.dir}/config" />
+    <move file="${build.config.dir}/config.jar"
+            todir="${install.dir}/config"/>
+  </target>
+
+  <!--
+    Jars the classes and config files, and copies the associated lib files.
+  -->
+  <target name="-jarclasses"
+          depends="-init,-createdirs,-coredirsexist"
+          if="srcdirectory.exists"
+          description="jars classes and source to build directory.">
+    <jar jarfile="${build.dir}/lib/classes.jar"
+         basedir="${classes.dir}/"
+         includes="**"/>
+      <zip zipfile="${build.dir}/src.zip"
+           basedir="${src.dir}/"
+           includes="**"/>
+  </target>
+  
+  <target name="-jarliveconfig"
+          depends="-init,-createdirs,-coredirsexist"
+          if="liveconfig.exists"
+          description="copies liveconfig to build directory.">
+    <copy todir="${build.dir}/liveconfig">
+      <fileset dir="${liveconfig.dir}" />
+    </copy>
+  </target>
+  
+  <!-- Granular task to just copy and jar the configs -->
+  <target name="-jarstagconfigs" depends="-init,-createdirs,-coredirsexist" if="stagconfig.exists">
+    <!-- Set filter token to look for 
+         install unit
+         module parent name
+         and module name
+         settings in manifests and configuration files -->
+    <filter token="install_unit"                  value="${install.unit}"/>
+    <filter token="module_root_parent"            value="${module.root.parent}"/>
+    <filter token="module_name"                   value="${module.name}"/>
+    <filter token="default_context_root"          value="${default.context.root}"/>
+    <filter token="default_web_app_name"          value="${default.web.app.name}"/>
+    <filter token="merch_context_root"            value="${merch.context.root}"/>
+    <filter token="merch_web_app_name"            value="${merch.web.app.name}"/>
+    <filter token="fo_context_root"               value="${fo.context.root}"/>
+    <filter token="fo_web_app_name"               value="${fo.web.app.name}"/>
+    <filter token="loginUser_context_root"        value="${loginUser.context.root}"/>
+    <filter token="loginUser_web_app_name"        value="${loginUser.web.app.name}"/>
+    <filter token="createUser_context_root"       value="${createUser.context.root}"/>
+    <filter token="createUser_web_app_name"       value="${createUser.web.app.name}"/>
+    <filter token="updateUser_context_root"       value="${updateUser.context.root}"/>
+    <filter token="updateUser_web_app_name"       value="${updateUser.web.app.name}"/>
+    <filter token="searchClients_context_root"    value="${searchClients.context.root}"/>
+    <filter token="searchClients_web_app_name"    value="${searchClients.web.app.name}"/>
+    <filter token="forgotPassw_context_root"      value="${forgotPassw.context.root}"/>
+    <filter token="forgotPassw_web_app_name"      value="${forgotPassw.web.app.name}"/>
+	<filter token="rest_context_root"             value="${rest.context.root}"/>
+    <filter token="rest_web_app_name"             value="${rest.web.app.name}"/>
+
+    <!-- Make a temporary config directory to support filter substitution -->
+    <mkdir dir="${build.tempstagconfig.dir}"/>
+    <copy todir="${build.tempstagconfig.dir}" filtering="true">
+      <fileset dir="${stagconfig.dir}" />
+    </copy>
+
+    <!-- Jar up the configuration files -->
+    <jar jarfile="${build.stagconfig.dir}/config.jar" basedir="${build.tempstagconfig.dir}/" includes="**" />
+        
+  </target>
+  
+  <target name="-copylibs"
+          depends="-coredirsexist"
+          if="libdir.exists"
+          description="copies libs to lib directory if they exist">
+    <copy todir="${build.dir}/lib">
+      <fileset dir="${lib.dir}" />
+    </copy>
+  </target>
+
+  <target name="-copyscripts"
+          depends="-coredirsexist"
+          if="importScriptdir.exists"
+          description="copies scripts  to install  directory if they exist">
+    <copy todir="${build.dir}/install">
+      <fileset dir="${install.script.dir}" >
+         <patternset refid="resource.files" />
+      </fileset>
+    
+    </copy>
+  </target>
+  
+  
+
+  <target name="-installscript"
+          depends="-copyscripts"
+          if="importScriptdir.exists"
+          description="installs  scripts to install directory if they exist">
+    <copy todir="${install.dir}/install">
+      <fileset dir="${build.dir}/install">
+        <patternset refid="resource.files" />
+      </fileset>
+    </copy>
+    <antcall  target="-permissions"/>
+  </target>
+
+  <target name="-permissions">
+    <chmod perm="ugo+rx">
+      <fileset dir="${install.dir}/install"/>
+    </chmod>
+  </target>
+
+  <!--
+    Installs the codebase to the install directory.  This will not build anything,
+    but will create enough of a base application to run off.
+  -->
+  <target name="install"
+          depends="-init, -createdirs, -installunit, -installcore, -installsql,-installddl"
+          description="Installs the codebase to the install directory.">
+  </target>
+
+  <target name="-installcore" depends="-copymanifest" description="Installs the core config and classes">
+    <mkdir dir="${install.dir}/../META-INF" />
+    <manifest mode="update" file="${install.dir}/../META-INF/MANIFEST.MF" />
+    <delete dir="${install.dir}/META-INF" />
+    <mkdir dir="${install.dir}/META-INF" />
+    <move file="${build.dir}/META-INF/MANIFEST.MF"
+          todir="${install.dir}/META-INF"/>
+    <delete dir="${install.dir}/lib" />
+    <mkdir dir="${install.dir}/lib" />
+    <!-- Do a copy so the classes stick around -->
+    <copy todir="${install.dir}/lib">
+      <fileset dir="${build.dir}/lib" />
+    </copy>
+    <delete dir="${install.dir}/config" />
+    <mkdir dir="${install.dir}/config" />
+    <available file="${build.config.dir}/config.jar" property="config.exists" />
+    <if>
+       <equals arg1="${config.exists}" arg2="true" />
+	 <then>
+       <move file="${build.config.dir}/config.jar"
+             todir="${install.dir}/config"/>
+	 </then>
+    </if>
+    <delete dir="${install.dir}/liveconfig" />
+    <mkdir dir="${install.dir}/liveconfig" />
+    <move todir="${install.dir}/liveconfig">
+      <fileset dir="${build.dir}/liveconfig" />
+    </move>
+    <delete dir="${install.dir}/configlayers/stagingandprod" />
+    <delete dir="${install.dir}/configlayers" />
+    <mkdir dir="${install.dir}/configlayers" />
+    <mkdir dir="${install.dir}/configlayers/stagingandprod" />
+    <available file="${build.stagconfig.dir}/config.jar" property="stagconfig.exists" />
+    <if>
+       <equals arg1="${stagconfig.exists}" arg2="true" />
+	 <then>
+       <move file="${build.stagconfig.dir}/config.jar"
+             todir="${install.dir}/configlayers/stagingandprod"/>
+	 </then>
+    </if>
+  </target>
+
+  <target name="-installunit"
+          description="Sets the project installation directory">
+      
+    <mkdir dir="${dynamo.root.dir}/${install.unit}/META-INF" />
+    <manifest mode="update" file="${dynamo.root.dir}/${install.unit}/META-INF/MANIFEST.MF">
+      <attribute name="ATG-Install-Unit"     value="${install.unit}"/> 
+      <attribute name="ATG-Install-Version"  value="${install.unit}@9.0"/>
+    
+      <!-- Example of how to write a requirement against an install unit      -->
+      <!--                                                                    -->
+      <!-- <attribute name="ATG-Install-Requires" value="DCS-ABTest@2004.3"/> -->
+    </manifest>  
+      
+  </target>
+  
+  <target name="-installsql"
+          description="Copy the sql to the deploy directory">
+    <antcall target="-installnonddlgen"/>
+    <antcall target="-installddlgen"/>
+  </target>
+
+  <target name="-installnonddlgen"
+          description="Copy the hand-coded sql to the deploy directory"
+          depends="-coredirsexist"
+          if="sqldir.exists">
+    <delete dir="${install.dir}/sql" />
+    <mkdir dir="${install.dir}/sql" />
+
+    <!--
+      Copy over the SQL files.
+    -->
+    <copy todir="${install.dir}/sql" verbose="true">
+      <fileset dir="${sql.dir}" />
+      <mapper type="glob" from="*.sql" to="*.sql"/>
+    </copy>
+
+    <!--
+      Convert and copy the sql_master files to sql by doing some string substitution.
+    -->
+    <!-- The destdir goes into the scripts as the filter, so this isn't as stupid as it looks. -->
+    <copytemplate srcdir="${sql.dir}/${database.type}/install" destdir="${install.dir}/sql/${database.type}/install"/>
+    <copytemplate srcdir="${sql.dir}/${database.type}/uninstall" destdir="${install.dir}/sql/${database.type}/uninstall"/>
+
+  </target>
+
+  <target name="-installddlgen"
+          description="Copy the generated sql to the deploy directory"
+          depends="-coredirsexist"
+          if="buildsqldir.exists">
+    <copy todir="${install.dir}/sql" verbose="true">
+      <fileset dir="${build.sql.dir}" />
+    </copy>
+  </target>
+
+  <target name="-installddl"
+          description="Copy the ddl xml to the deploy directory"
+          depends="-coredirsexist"
+          if="buildsqldir.exists">
+
+    <copy todir="${install.dir}/sql/dbsetup/ddlgen" verbose="true">
+      <fileset dir="${build.dir}/tempddl/ddlgen-source">
+        <exclude name="schemas.xml"/>
+      </fileset>
+      <mapper type="glob" from="*.xml" to="*.xml"/>
+    </copy>
+
+  </target>
+
+
+  <target name="-installdata"
+          description="Copy initial data to the deploy directory">
+    <mkdir dir="${install.dir}/data" />
+    <copy todir="${install.dir}/data" preservelastmodified="true">
+      <fileset dir="${basedir}/data"/>
+    </copy>
+  </target>
+
+  <target name="-installadmin"
+          description="Copy admin pages to the deploy directory">
+    <mkdir dir="${install.dir}/admin" />
+    <copy todir="${install.dir}/admin" preservelastmodified="true" filtering="true">
+      <fileset dir="${basedir}/admin"/>
+    </copy>
+  </target>
+
+  <!-- ================================================================= -->
+  <!-- Miscellaneous                                                     -->
+  <!-- ================================================================= -->
+
+  <!--
+    Runs DDLGen to convert dbms-neutral into dbms-specific sql scripts
+    Parameters:
+        ddlgen.ddlRoot = dir for input schema xml files
+        ddlgen.sqlRoot = dir for sql output files (both creates and drops)
+        ddlgen.tmpdir = temp directory for use by the conversion
+  -->
+  <target name="ddlgenconvert">
+    <delete dir="${ddlgen.tmpdir}/ddlgen-source"/>
+
+    <mkdir dir="${ddlgen.tmpdir}/ddlgen-source"/>
+    <copy todir="${ddlgen.tmpdir}/ddlgen-source">
+      <fileset dir="${ddlgen.ddlRoot}" includes="*.xml"/>
+    </copy>
+
+    <java classname="atg.road.ddlgen.DDLGenSchemaGenerator" fork="true"
+          failonerror="true">
+      <classpath path="${buildtools.dir}/lib"/>
+      <arg value="${ddlgen.tmpdir}/ddlgen-source"/>
+    </java>
+
+    <java classname="atg.road.ddlgen.DDLGen" fork="true" failonerror="true">
+      <classpath path="${buildtools.dir}/lib"/>
+      <classpath path="${buildtools.dir}/lib/devtools-xmlparserv2.jar"/>
+      <classpath path="${buildtools.dir}/lib/devtools-tools.jar"/>
+      <classpath path="${buildtools.dir}/lib/das-protocol.jar"/>
+      <jvmarg value="-Djava.naming.factory.url.pkgs=atg.jndi.url"/>
+      <jvmarg value="-Djava.protocol.handler.pkgs=atg.net.www.protocol"/>
+      <arg value="${ddlgen.tmpdir}/ddlgen-source"/>
+      <arg value="${ddlgen.sqlRoot}"/>
+      <arg value="${buildtools.dir}/ddlgen-config"/>
+      <arg value="${ddlgen.tmpdir}/ddlgen-source/schemas.xml"/>
+    </java>
+
+  </target>
+
+  <!--
+    Converts DDLGen input for a normal schema into DDLGen input for
+    the matching versioned schema.
+    Parameters:
+        ddlgen.version.gsa - Full path of associated repository definition file
+        ddlgen.version.ddl - Full path of ddlgen file to be transformed
+        ddlgen.version.out - Full path of ddlgen file to be generated
+  -->
+  <target name="ddlgentransform">
+    <property name="ddlgen.dtd.location"
+              value="${buildtools.dir}/ddlgen-config"/>
+    <property name="ddlgen.xslt.file"
+              value="${buildtools.dir}/ddlgen-config/new-ddl-tool-transform.xslt"/>
+
+    <dirname property="dst.ddl.dir" file="${ddlgen.version.out}"/>
+    <mkdir dir="${dst.ddl.dir}"/>
+    <java classname="atg.apache.xalan.xslt.Process"
+          fork="true" failonerror="true">
+      <classpath>
+        <pathelement path="${buildtools.dir}/lib/publishing-entityresolver.jar"/>
+        <pathelement path="${buildtools.dir}/lib/das-atg-services.jar"/>
+        <pathelement path="${buildtools.dir}/lib/das-xalan.jar"/>
+        <pathelement path="${buildtools.dir}/lib/das-xercesImpl.jar"/>
+        <pathelement path="${buildtools.dir}/lib/ddlgen-extensions.jar"/>
+        <pathelement path="${buildtools.dir}/lib/das-protocol.jar"/>
+      </classpath>
+      <jvmarg value="-Djava.naming.factory.url.pkgs=atg.jndi.url"/>
+      <jvmarg value="-Djava.protocol.handler.pkgs=atg.net.www.protocol"/>
+      <jvmarg value="-DDDLGenResolver.dtd.location=${ddlgen.dtd.location}"/>
+      <arg value="-ENTITYRESOLVER"/> <arg value="DDLGenResolver"/>
+      <arg value="-XSL"/>            <arg value="${ddlgen.xslt.file}"/>
+      <arg value="-IN"/>             <arg value="${ddlgen.version.ddl}"/>
+      <arg value="-PARAM"/>          <arg value="repositoryFile"/> <arg value="${ddlgen.version.gsa}"/>
+      <arg value="-OUT"/>            <arg value="${ddlgen.version.out}"/>
+    </java>
+  </target>
+
+  <target name="exec-database-file">
+    <condition property="param.schema.type" value="core">
+      <not>
+        <isset property="param.schema.type"/>
+      </not>
+    </condition>
+    <antcall target="exec-database-file.${param.schema.type}"/>
+  </target>
+
+  <!-- Uses core database schema -->
+  <target name="exec-database-file.core">
+    <echo message="**** Running ${sql.ddl} for agent schema"/>
+    <echo message="     db=${database.type}"/>
+    <echo message="     username=${jdbc.core.user}/password=${jdbc.core.password}"/>
+    <echo message="     driver=${jdbc.driver}"/>
+    <echo message="     url=${jdbc.url}/${jdbc.core.user}"/>
+    <antcall target="internal.exec-sql.${database.type}">
+      <param name="param.db.driver" value="${jdbc.driver}"/>
+      <param name="param.db.user" value="${jdbc.core.user}"/>
+      <param name="param.db.password" value="${jdbc.core.password}"/>
+      <param name="param.db.jdbc.url" value="${jdbc.url}/${jdbc.core.user}"/>
+    </antcall>
+  </target>
+
+  <!-- Uses "switching" catalog database schemas -->
+  <target name="exec-database-file.catalog">
+    <echo message="**** Running ${sql.ddl} for agent schema"/>
+    <echo message="     db=${database.type}"/>
+    <echo message="     username=${jdbc.cataloga.user}/password=${jdbc.cataloga.password}"/>
+    <echo message="     driver=${jdbc.driver}"/>
+    <echo message="     url=${jdbc.url}/${jdbc.cataloga.user}"/>
+    <antcall target="internal.exec-sql.${database.type}">
+      <param name="param.db.driver" value="${jdbc.driver}"/>
+      <param name="param.db.user" value="${jdbc.cataloga.user}"/>
+      <param name="param.db.password" value="${jdbc.cataloga.password}"/>
+      <param name="param.db.jdbc.url" value="${jdbc.url}/${jdbc.cataloga.user}"/>
+    </antcall>
+    <echo message="**** Running ${sql.ddl} for agent schema"/>
+    <echo message="     db=${database.type}"/>
+    <echo message="     username=${jdbc.catalogb.user}/password=${jdbc.catalogb.password}"/>
+    <echo message="     driver=${jdbc.driver}"/>
+    <echo message="     url=${jdbc.url}/${jdbc.catalogb.user}"/>
+    <antcall target="internal.exec-sql.${database.type}">
+      <param name="param.db.driver" value="${jdbc.driver}"/>
+      <param name="param.db.user" value="${jdbc.catalogb.user}"/>
+      <param name="param.db.password" value="${jdbc.catalogb.password}"/>
+      <param name="param.db.jdbc.url" value="${jdbc.url}/${jdbc.catalogb.user}"/>
+    </antcall>
+  </target>
+
+  <!-- Uses publishing database schema -->
+  <target name="exec-database-file.pub">
+    <echo message="**** Running ${sql.ddl} for agent schema"/>
+    <echo message="     db=${database.type}"/>
+    <echo message="     username=${jdbc.pub.user}/password=${jdbc.pub.password}"/>
+    <echo message="     driver=${jdbc.driver}"/>
+    <echo message="     url=${jdbc.url}/${jdbc.pub.user}"/>
+    <antcall target="internal.exec-sql.${database.type}">
+      <param name="param.db.driver" value="${jdbc.driver}"/>
+      <param name="param.db.user" value="${jdbc.pub.user}"/>
+      <param name="param.db.password" value="${jdbc.pub.password}"/>
+      <param name="param.db.jdbc.url" value="${jdbc.url}/${jdbc.pub.user}"/>
+    </antcall>
+  </target>
+
+  <target name="internal.exec-sql.db2">
+    <sql driver="${param.db.driver}" url="${param.db.jdbc.url}" src="${sql.ddl}"
+         userid="${param.db.user}" password="${param.db.password}"
+         onerror="${onerror.value}"
+         classpath="${classpath}">
+      <classpath>
+        <pathelement path="${devtools.root}/lib/db2java.zip"/>
+        <pathelement path="${devtools.root}/lib/db2jcc.jar"/>
+        <pathelement path="${devtools.root}/lib/db2jcc_license_cu.jar"/>
+        <pathelement path="${jdbc.classpath}"/>
+      </classpath>
+    </sql>
+  </target>
+
+  <target name="internal.exec-sql.mssql">
+    <sql driver="${param.db.driver}" url="${param.db.jdbc.url}" src="${sql.ddl}"
+         delimiter="go" delimitertype="row"
+         userid="${param.db.user}" password="${param.db.password}"
+         onerror="${onerror.value}"
+         classpath="${classpath}">
+      <classpath path="${jdbc.classpath}"/>
+    </sql>
+  </target>
+
+  <target name="internal.exec-sql.mysql">
+    <sql driver="${param.db.driver}" url="${param.db.jdbc.url}" src="${sql.ddl}"
+         userid="${param.db.user}" password="${param.db.password}"
+         onerror="${onerror.value}"
+         classpath="${classpath}">
+      <classpath path="${jdbc.classpath}"/>
+    </sql>
+  </target>
+
+  <target name="internal.exec-sql.oracle">
+    <sql driver="${param.db.driver}" url="${param.db.jdbc.url}" src="${sql.ddl}"
+         userid="${param.db.user}" password="${param.db.password}"
+         onerror="${onerror.value}"
+         classpath="${classpath}">
+      <classpath path="${jdbc.classpath}"/>
+    </sql>
+  </target>
+
+  <target name="internal.exec-sql.solid">
+    <echo message="JDBC Classpath = ${jdbc.classpath}"/>
+    <sql driver="${param.db.driver}" url="${param.db.jdbc.url}" src="${sql.ddl}"
+         userid="${param.db.user}" password="${param.db.password}"
+         onerror="${onerror.value}"
+         classpath="${classpath}">
+      <classpath path="${jdbc.classpath}"/>
+    </sql>
+  </target>
+
+  <!--
+    Creates the javadocs for the project.  This is an expensive operation.
+  -->
+  <target name="javadoc"
+          depends="-init,-createdirs"
+          description="Builds the javadoc.">
+    <javadoc destdir="${javadoc.dir}"
+             author="true"
+             version="true"
+             use="true">
+      <packageset dir="${src.dir}" defaultexcludes="yes">
+        <include name="**" />
+      </packageset>
+      <classpath path="${classpath}" />
+      <classpath path="${lib.classpath}" />
+      <classpath refid="dynamo.classpath" />
+      <link offline="true"
+            href="http://java.sun.com/j2se/1.4.2/docs/api/"
+            packagelistLoc="${jdk.docs.dir}"/>
+      <link offline="true"
+            href="http://www.atg.com/repositories/ContentCatalogRepository_en/manuals/ATG7.1/apidoc/"
+            packagelistLoc="${dynamo.docs.dir}"/>
+    </javadoc>
+  </target>
+  
+
+  <!--
+    The junit target.  This runs the unit tests.
+  -->
+  <!--target name="junit" depends="-init,compiletest" if="testsrcdirectory.exists" description="Runs the junit tests.">
+    <taskdef name="junit" classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask" 
+                          classpathref="test.lib.classpath"/>
+
+    <junit printsummary="yes" haltonfailure="yes">
+      <classpath path="${classes.dir}"/>
+      <classpath path="${testclasses.dir}"/>
+      <classpath refid="test.lib.classpath"/>
+      <classpath path="${lib.classpath}" />
+      <classpath refid="dynamo.classpath" />
+
+      <formatter type="xml"/>
+
+      <batchtest fork="yes" todir="${reports.dir}">
+        <fileset dir="${test.src.dir}">
+          <include name="**/*Test*.java"/>
+          <exclude name="**/AllTests.java"/>
+          <exclude name="**/*InContainerTest.java"/>
+        </fileset>
+      </batchtest>
+    </junit>
+  </target-->
+    
+  <!--
+    The cactus target.  This runs cactus tests.
+  -->
+  <!--target name="cactus" depends="-init,compiletest" if="testsrcdirectory.exists" description="Runs the cactus tests.">
+
+    <echo message="test.lib.dir: ${test.lib.dir}"/>
+    <echo message="global.dir: ${global.dir}"/>
+
+    <taskdef name="junit" classname="org.apache.tools.ant.taskdefs.optional.junit.JUnitTask"
+                          classpathref="test.lib.classpath"/>
+
+    <condition property="mytest.present">
+      <isset property="mytest"/>
+    </condition>
+
+    <if name="mytest.present" value="true">
+       <echo message="Running cactus specific test for: ${mytest}" />
+       <property name="testclasses" value="**/${mytest}"/>
+     <else>
+       <echo message="Running all cactus tests" />
+       <property name="testclasses" value="**/*InContainerTest.java"/>
+     </else>
+     </if>
+
+    <junit printsummary="on" haltonfailure="no">
+      <sysproperty key="atg.dynamo.root" value="${dynamo.home}/../" />
+      <sysproperty key="basedir" value="${basedir}" />
+      <sysproperty key="test.tmp.dir" value="${test.tmp.dir}" />
+      <sysproperty key="cactus.contextURL" value="${cactus.contextURL}" />
+      <classpath path="${classes.dir}"/>
+      <classpath path="${testclasses.dir}"/>
+      <classpath refid="test.lib.classpath"/>
+      <classpath path="${lib.classpath}" />
+      <classpath refid="dynamo.classpath" />
+
+      <formatter type="brief" usefile="false"/>
+      <formatter type="xml"/>
+
+      <batchtest fork="yes" todir="${reports.dir}">
+        <fileset dir="${test.src.dir}">
+          <include name="${testclasses}"/>
+        </fileset>
+      </batchtest>
+    </junit>
+
+  </target-->
+    
+  <!--
+    Jars and installs the configs
+  -->
+  <target name="devconfig" depends="-jarconfigs, -installconfigs"
+          description="Jars and installs the configuration files">
+  </target>
+  
+  <!-- Coverage targets -->
+  <target name="report.html" if="testsrcdirectory.exists">
+    <emma>
+      <report sourcepath="${src.dir}" >
+        <fileset dir="${coverage}" >
+          <include name="*.emma" />
+        </fileset>
+        <html outfile="${coverage}/coverage.html" />
+      </report>
+    </emma>
+  </target>
+   
+    <!-- Instrument the code -->
+    <target name="instr" depends="compile" if="emma.enabled" >
+    <echo message="Test directory: ${test.src.dir}"/>
+      <emma>
+        <instr instrpath="${classes.dir}"
+               outdir="${instr}"  
+               metadatafile="${coverage}/metadata.emma"
+               merge="true"/>
+      </emma>
+    </target>
+    
+    <!-- Runs the tests -->
+    <!--target name="test" depends="compiletest,instr" if="testsrcdirectory.exists" description="Runs the junit tests." >
+        <junit printsummary="yes" fork="yes" haltonfailure="no" >
+          <classpath path="${instr}" />
+          <classpath path="${testclasses.dir}" />
+          <classpath path="${lib.classpath}" />
+          <classpath refid="dynamo.classpath" />
+          <classpath refid="test.lib.classpath" />
+          <classpath refid="emma.lib.classpath" />
+          <jvmarg value="-Demma.coverage.out.file=${coverage}/coverage.emma" />
+          <jvmarg value="-Demma.coverage.out.merge=true" />
+      
+          <formatter type="plain"/>
+          <formatter type="xml" />
+          <batchtest todir="${reports}">
+            <fileset dir="${test.src.dir}" >
+              <include name="**/*Test.java" />
+            </fileset>
+          </batchtest>
+      </junit>
+    </target-->
+    
+    <!--target name="coverage" depends="test,report.html"/-->
+    
+</project>

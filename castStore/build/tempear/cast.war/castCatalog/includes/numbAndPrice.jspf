@@ -1,0 +1,49 @@
+<c:if test="${showQuantityMessage && cartQuantity}">
+  <div id="quantityMessage${itemId}" >
+    <span><fmt:message key="msg.cart.stock-remaining" /></span>
+	<span id="remainsInStock${itemId}"></span>
+    <input type="hidden" id="notSufficientAmount" value="${itemId}" />
+  </div>
+</c:if>
+
+<div class="fQty numberItemsV2">
+  <c:if test="${!cartQuantity}">
+    <span><fmt:message key="msg.cart.quantity"/></span>
+  </c:if>
+  <a class="iconMinus iconChangeAmount" id="iconMinus${itemId}" href="javascript:void(0);"><fmt:message key="msg.cart.quantity.less"/></a>
+  <c:choose>
+    <c:when test="${cartQuantity}">
+      <input name="${itemId}" class="quantityInput" id="quantityValue${itemId}" size="4" type="text" value="${quantity}" onchange="checkQuantity('${itemId}',${needUpdateQTY});"
+             onkeyup="checkQuantity('${itemId}',${needUpdateQTY});recalcEnterPres(event, 'RECALCULER${relationshipId}');return false;">
+    </c:when>
+    <c:otherwise>
+      <dsp:input bean="CastShoppingCartFormHandler.quantity" iclass="quantityInput" id="quantityValue${itemId}" size="4" type="text" value="${quantity}"
+                 onchange="checkQuantity('${itemId}', ${needUpdateQTY});"
+                 onkeyup="checkQuantity('${itemId}', ${needUpdateQTY});"
+                 onkeypress="return quantityEnterPres(event);" maxlength="3"/>
+    </c:otherwise>
+  </c:choose>
+  <a class="iconPlus iconChangeAmount" id="iconPlus${itemId}" href="javascript:void(0);"><fmt:message key="msg.cart.quantity.more"/></a>
+
+  <input type="hidden" value="${itemId}" id="fQtyItemId"/>
+  <input type="hidden" value="${needUpdateQTY}" id="fQtyNeedUpdateQTY"/>
+
+  <div class="clear"></div>
+</div>
+
+<c:if test="${showQuantityMessage && !cartQuantity}">
+  <div id="quantityMessage${itemId}" class="quantityMessage grayColor" >
+    <span><fmt:message key="msg.cart.stock-remaining" /></span>
+	<span id="remainsInStock${itemId}" class="grayColor"></span>
+    <input type="hidden" id="notSufficientAmount" value="${itemId}" />
+  </div>
+</c:if>
+
+<input type="hidden" value="${stockLevel}" id="stockLevel${itemId}"/>
+<input type="hidden" value="${skuId}" id="deliverySkuId${itemId}"/>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    checkQuantity('${itemId}', ${needUpdateQTY});
+  });
+</script>

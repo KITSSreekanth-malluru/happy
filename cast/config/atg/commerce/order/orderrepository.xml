@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template xml-combine="append">
+
+  <header xml-combine="replace">
+    <name>Castorama Custom Order</name>
+    <author>Epam Team</author>
+    <version>1.0</version>
+  </header>
+
+<!-- Code Review : Changement du  cache-mode-->
+<item-descriptor name="order" cache-mode="simple">
+  <table name="dcspp_order" type="primary" id-column-name="order_id">
+    <property name="state" cache-mode="disabled"/> 
+  </table>
+<!--<item-descriptor name="order" cache-mode="locked">-->
+<!-- /Code Review : Changement du  cache-mode-->
+<table name="casto_order" type="auxiliary" id-column-name="order_id">
+
+  <!-- 1281: conditions particulieres de pose -->
+  <property name="commandeCPOK" column-name="cp_acceptees" data-type="boolean" default="false" display-name="Conditions Particulieres Acceptees"/>
+  <!-- /1281 -->
+
+  <!--
+    *  
+    * G.Y, le 18/02/2008 : Ajout des informations de montants pour l'export commandes
+   *
+  -->
+  <property name="montantTotalCommandeTTC" column-name="MNT_TOTAL_TTC" data-type="double" display-name="Montant total TTC de la commande" category="Informations pour l'export de commandes"/>
+  <property name="montantFraisLivraisonNonRemise" column-name="MNT_LIV_NON_REMISE" data-type="double" display-name="Montant des frais de livraison (seule) non remise" category="Informations pour l'export de commandes"/>
+  <property name="montantRemiseLivraisonEtMonteeEtage" column-name="MNT_REMISE_LIV_ETAGE" data-type="double" display-name="Montant de la remise accordee sur les frais de livraison et montee a l'etage" category="Informations pour l'export de commandes" /><property name="montantFraisMonteeEtageNonRemise" column-name="MNT_MONTEE_ETAGE" data-type="double" display-name="Montant des frais de montee a l'etape (seul) non remise" category="Informations pour l'export de commandes"/>
+  
+  <property name="montantFraisDePreparationNonRemise" column-name="MNT_PREPA_NON_REMISE" data-type="double" display-name="Montant des frais de peparation (seul) non remise" category="Informations pour l'export de commandes"/>
+  <property name="montantFraisDePreparationRemise" column-name="MNT_FRAIS_PREPA_REMISE" data-type="double" display-name="Montant des frais de preparation remise" category="Informations pour l'export de commandes"/>
+  <property name="montantRemiseTotal" column-name="MNT_REMISES_COMMANDE" data-type="double" display-name="Montant total des remises commande" category="Informations pour l'export de commandes"/>
+  
+  <!--
+    *  
+    * G.Y, le 18/02/2008 : Ajout des informations de montants pour l'export commandes
+   *
+  -->
+  
+  <!--
+    *  
+    * LOGICA, le 20/03/2008 : Ajout des informations de montants PFL PFTpour l'export commandes
+   *
+  -->
+  <property name="montantPFL" column-name="MONTANT_PFL" data-type="double" display-name="Montant total des frais PFL de la commande" category="Informations pour l'export de commandes"/>
+  <property name="montantPFT" column-name="MONTANT_PFT" data-type="double" display-name="Montant total des frais PFT de la commande" category="Informations pour l'export de commandes"/>
+  <!--
+    *  
+    * LOGICA, le 20/03/2008 : Ajout des informations de montants PFL PFT pour l'export commandes
+   *
+  -->
+
+  <property name="commandecadeau" column-name="isgift" data-type="boolean" default="false" display-name="Commande Cadeau"/>
+  <property name="Commentaire" column-name="commentaire" data-type="string" display-name="Commentaire Client"/>
+  
+  <!-- GY la defense : export de commandes -->
+  <property name="exportdate" column-name="exportdate" data-type="timestamp" display-name="Date Export" category="Export commande"/>
+  <property name="numeroFichierExport" column-name="num_fic_export" data-type="string" display-name="Numero de sequence du fichier d'export" category="Export commande"/>
+  
+  <property name="auteur" column-name="auteur" data-type="string" display-name="Auteur"/>
+  <property name="datesuppression" column-name="datesuppression" data-type="timestamp" display-name="Date Suppression"/>
+    <!-- Code Review :  Attention anciennes donnees - On laisse ca ici pour les anciennes commandes -->
+    <!-- Code Review :  Attention anciennes donnees - C'est dans un objet paymentGroup cheque maintenant -->
+    <property name="numcheque_avtCodeReview" column-name="NUMCHEQUE" data-type="string" display-name="Numero du cheque" hidden="true" />
+    <property name="libelleBanque_avtCodeReview" column-name="LIBELLE_BANQUE" data-type="string" display-name="Sigle de la banque" hidden="true" />
+    <property name="montantChequeFrancs_avtCodeReview" column-name="MONTANT_CHEQUE_FRANCS" data-type="double" display-name="Montant du cheque en francs" hidden="true" />
+    <property name="montantChequeEuros_avtCodeReview" column-name="MONTANT_CHEQUE_EUROS" data-type="double" display-name="Montant du cheque en euros" hidden="true" />
+    <property name="chequeNonValide_avtCodeReview" column-name="CHEQUE_NON_VALIDE" data-type="boolean" default="false" display-name="Cheque non valide" hidden="true"/>
+    <property name="commentaireCheque_avtCodeReview" column-name="COMMENTAIRE_CHEQUE" data-type="string" display-name="Commentaires sur le cheque" hidden="true"/>
+    <!-- Code Review :  Attention anciennes donnees - C'est dans un objet paymentGroup atout maintenant -->
+    <property name="numCarteAtout_avtCodeReview" column-name="NUM_CARTE_ATOUT" data-type="string" display-name="Numero de carte Castorama" hidden="true"/>
+    <property name="dateValidAtout_avtCodeReview" column-name="DATE_VALID_ATOUT" data-type="timestamp" display-name="Date de validite de carte Castorama" hidden="true"/>
+    <property name="optionPaiementAtout_avtCodeReview" column-name="OPTION_PAIEMENT_ATOUT" default="1" data-type="string" display-name="Option de paiement carte Castorama" hidden="true"/>
+    <!-- Fin Attention anciennes donnees -->
+  <property name="BOState" column-name="BOState" data-type="string" display-name="Etat Back Office" cache-mode="disabled"/>
+  <property name="BOStateDetail" column-name="BOState_Detail" data-type="string" display-name="Detail Etat Back Office" cache-mode="disabled"/>
+  <property name="BOStateNum" column-name="BOState_Num" data-type="int" display-name="Code Etat Back Office" cache-mode="disabled"/>
+<!--  <property name="optionPaiementAtout" data-type="enumerated" default="paiement en une fois" column-name="OPTION_PAIEMENT_ATOUT" display-name="Option de paiement carte Castorama">
+    <attribute name="useCodeForValue" value="false"/>
+    <option value="paiement en une fois" code="1"/>
+    <option value="paiement en petites mensualites" code="3"/>
+    <option value="paiement en 3 fois sans frais" code="4"/>
+  </property>
+-->
+  <!-- Code Review : Deplacer
+  <property name="optionPaiementAtout" column-name="OPTION_PAIEMENT_ATOUT" default="1" data-type="string" display-name="Option de paiement carte Castorama"/>
+  -->
+  <property name="messageTransporteur" column-name="message_transporteur" data-type="string" default="" display-name="Message au transporteur"/>
+  <!--property name="URLTrackIdEntrant" column-name="url_trackId_entrant" data-type="string" default="" display-name="L'url d'entree avec un track id"/-->
+  <property name="preparationPriceInfo" display-name="Preparation Price info" queryable="true" readable="true" column-name="preparation_price_info" item-type="preparationPriceInfo" hidden="false" expert="false" cascade="delete" required="false" writable="true" cache-mode="inherit"/>
+  <!-- Update Sylis -->
+  <property name="fEtatIntegration" column-name="FETAT_INTEGRATION" default="false" data-type="boolean" display-name="Etat de l'integration"/>
+  <property name="cvente" column-name="CVENTE"  data-type="long" display-name="CVENTE BO de la commande"/>
+  <!-- Update Sylis -->
+  
+  <!-- 
+   * J.F, le 23/10/2006
+   * Ajout de deux champs pour la gestion des cheques cadeaux
+   -->
+   <property name="paiementChequeCadeau" column-name="PAIEMENT_CHEQUE_CADEAU" default="false" data-type="boolean" display-name="Paiement par cheques cadeaux" />
+    <property name="montantChequeCadeau" column-name="MONTANT_CHEQUE_CADEAU" data-type="double" display-name="Montant des cheques cadeaux" />
+   <!-- 
+    * Fin modif du 23/10/2006
+    -->
+    
+    <!-- 
+     * J.F, le 09/11/2006
+     * Ajout de champs pour l'export des commandes
+     -->
+  
+  <property name="enregCCPPresent" column-name="ENREG_CCP_PRESENT" data-type="string" display-name="Enreg ccp present" />
+  <property name="commentairePaiement" column-name="COMMENTAIRE_PAIEMENT" data-type="string" display-name="Commentaire paiement" />
+      
+    <!-- 
+    * Fin modif du le 09/11/2006
+    -->
+
+
+    
+   <!-- 
+    * 20/12/2007 *** Projet Castorama - La Defense
+    * ajout d'une propriete renseignant l'id du magasin pour une commande magasin
+    -->
+  <property name="origineMagasin" column-name="ORIGINE_MAGASIN" display-name="Origine Magasin" default="999" item-type="magasin" repository="/atg/registry/Repository/MagasinGSARepository" /> 
+  
+  <!-- Logica, le 07/02/08 : PLD : Ajout d'un champ pour la notion d'etage lors des livraisons -->
+  
+   <property name="etageLivraison" column-name="ETAGE_LIVRAISON" display-name="Etage de livraison" data-type="enumerated" default="RDC">
+     <attribute name="useCodeForValue" value="true" />
+    <option value="non renseigne" code="0" />
+    <option value="RDC" code="1" />
+    <option value="Etage" code="2" />
+   </property>
+   
+   <!-- 
+    * Logica, le 29/02/2008
+    *
+    * Ajout d'un champ pour conserver le Jsessionid
+    -->
+     <property name="JSessionID" column-name="JSESSIONID" display-name="JSessionID" data-type="string" />
+
+   <!-- Logica, Fiche Mantis 1294, le 27/10/2008 : Identifier les commandes faites par des admins -->
+  <property name="cdeAdmin" column-name="COMMANDE_ADMIN" data-type="boolean" default="false" display-name="Commande faite par un admin" category="Administration des commandes"/>
+  <property name="adminLogin" column-name="LOGIN_ADMIN" data-type="string" display-name="Login de l admin" category="Administration des commandes"/>
+  <!-- Fin Logica, Fiche Mantis 1294, le 27/10/2008 : Identifier les commandes faites par des admins -->
+
+  <property name="totalDiscount" column-name="TOTAL_DISCOUNT" data-type="double" display-name="Vous avez economise global" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="processingFees" column-name="PROCESSING_FEES" data-type="double" display-name="Frais de traitement" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="shippingFees" column-name="SHIPPING_FEES" data-type="double" display-name="Frais de livrason" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="shippingDiscount" column-name="SHIPPING_DISCOUNT" data-type="double" display-name="Remise livrason" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="totalWeight" column-name="TOTAL_WEIGHT" data-type="double" display-name="Poids total de la commande" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="itemsDiscount" column-name="ITEMS_DISCOUNT" data-type="double" display-name="Vous avez economise" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="transactionCount" column-name="TRANSACTION_COUNT" data-type="int" display-name="Transaction count" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="payboxHandled" column-name="PAYBOX_HANDLED" data-type="boolean" display-name="Paybox handled" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="paymentSource" column-name="PAYMENT_SOURCE" data-type="string" display-name="Source de paiement" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+  <property name="paymentUserId" column-name="PAYMENT_USER_ID" data-type="string" display-name="Utilisateur de paiement" category="Information pour les recapitulatif de votre commande" cache-mode="disabled"/>
+
+  <property name="deliveryType" column-name="DELIVERY_TYPE" data-type="enumerated" display-name="Delivery Type" default="deliveryToHome" category="Click and Collect" cache-mode="disabled">
+    <attribute name="useCodeForValue" value="false"/>
+      <option value="deliveryToHome" code="0"/>
+      <option value="clickAndCollect" code="1"/>
+    <attribute name="propertySortPriority" value="15"/>
+  </property>
+  <property name="magasinId" column-name="MAGASIN_ID" data-type="string" display-name="Magasin Id" category="Click and Collect" cache-mode="disabled"/>
+  <property name="processingFeeNiceWord" column-name="PROCESSING_FEE_NICE_WORD" data-type="string" display-name="Processing fee nice word" category="Click and Collect" cache-mode="disabled"/>
+
+  </table>
+  <table name="CASTO_ORDER_COMMENTAIRE" type="auxiliary" id-column-name="repositoryId">
+    <property name="commentaireValidation" column-name="commentaire" data-type="string" display-name="Commentaire De Validation"/>
+  </table>
+  <table name="CASTO_TRADEDOUBLER" type="auxiliary" id-column-name="order_id">
+    <property name="tduid" column-name="tduid" data-type="string" display-name="TDUID"/>
+  </table>
+  
+  <table name="CASTO_ORDER_EMAILS" type="multi" id-column-name="ORDER_ID" multi-column-name="email_type">
+        <property name="orderEmails" data-type="map" component-data-type="boolean" column-name="is_sent"/>
+    </table>
+  
+  <property name="PayeCarteAtout" default="false" data-type="boolean" display-name="PayeCarteAtout" />
+  <property name="CarteAtoutIndetermine" column-name="CARTE_ATOUT_INDETERMINE" default="true" data-type="boolean" display-name="CarteAtoutIndetermine" />
+
+</item-descriptor>
+
+<item-descriptor name="paymentGroup" sub-type-property="type" version-property="version" cache-mode="simple" >
+  <table name="dcspp_pay_group" type="primary" id-column-name="payment_group_id">
+      <property name="type" data-type="enumerated" default="paymentGroup" expert="true" category-resource="categoryInfo" display-name-resource="type">
+             <attribute name="useCodeForValue" value="false"/>
+              <option value="paymentGroup" code="0"/>
+              <option value="creditCard" code="1"/>
+              <option value="giftCertificate" code="2"/>
+              <option value="storeCredit" code="3"/>
+              <attribute name="resourceBundle" value="atg.commerce.OrderRepositoryTemplateResources"/>
+              <attribute name="propertySortPriority" value="10"/>
+        </property>
+  </table>
+</item-descriptor>
+
+<item-descriptor name="creditCard" super-type="paymentGroup" sub-type-value="creditCard"  version-property="version" cache-mode="simple">
+  <table name="CASTO_CARTE_ATOUT" id-column-name="payment_group_id">
+    <property name="idTransaction" data-type="int" required="false" column-name="ID_TRANSACTION" display-name="Identifiant de transaction" category="Paybox" />
+    <property name="numAutorisation" data-type="string" required="false" column-name="NUM_AUTORISATION" display-name="Num d'autorisation" category="Paybox" /> 
+     <property name="numTransaction" data-type="int" required="false" column-name="NUM_TRANSACTION" display-name="Num de transaction" category="Paybox" />
+      <property name="dateTransaction" data-type="timestamp" required="false" column-name="DATE_TRANSACTION" display-name="Date de la transaction" category="Paybox" />
+      <property name="datePaiement" data-type="timestamp" required="false" column-name="DATE_PAIEMENT" display-name="Date de paiement" category="Paybox" />  
+      <property name="dateValidAtout" column-name="DATE_VALID_ATOUT" data-type="timestamp" display-name="Date de validite de carte Castorama"/>
+    <property name="optionPaiementAtout" column-name="OPTION_PAIEMENT_ATOUT" default="1" data-type="string" display-name="Option de paiement carte Castorama" hidden="true"/>
+  </table>
+  <table name="CASTO_CARTE_CHEQUE" id-column-name="payment_group_id">
+    <property category="cheque" name="numcheque" column-name="NUMCHEQUE" data-type="string" display-name="Numero du cheque"/>
+    <property category="cheque" name="libelleBanque" column-name="LIBELLE_BANQUE" data-type="string" display-name="Sigle de la banque"/>
+    <property category="cheque" name="montantChequeFrancs" column-name="MONTANT_CHEQUE_FRANCS" data-type="double" display-name="Montant du cheque en francs"/>
+    <property category="cheque" name="montantChequeEuros" column-name="MONTANT_CHEQUE_EUROS" data-type="double" display-name="Montant du cheque en euros"/>
+    <property category="cheque" name="chequeNonValide" column-name="CHEQUE_NON_VALIDE" data-type="boolean" default="false" display-name="Cheque non valide"/>
+    <property category="cheque" name="commentaireCheque" column-name="COMMENTAIRE_CHEQUE" data-type="string" display-name="Commentaires sur le cheque"/>
+  </table>
+  <table name="CASTO_BILL_ADDR" type="auxiliary" id-column-name="PAYMENT_GROUP_ID">
+    <property name="civilite" data-type="enumerated" column-name="CIVILITE" display-name="civilite">
+          <attribute name="useCodeForValue" value="false"/>
+          <option value=" " code="0" />
+          <option value="Monsieur" code="1" />
+          <option value="Madame" code="2" />
+          <option value="Mlle" code="3" /> 
+        </property>
+        <property name="telPortable" column-name="TEL_PORTABLE" data-type="string" display-name="Telephone portable" category="Contact"/>
+        <property name="telProfessionnel" column-name="TEL_PROFESSIONNEL" data-type="string" display-name="Telephone professionnel" category="Contact"/>
+    <property name="adresseLibelle" column-name="ADRESSE_LIBELLE" data-type="string" display-name="Libelle de l'adresse" />
+    <property name="tvaIntracommunautaire" column-name="TVA_INTRACOMUNAUTAIRE" data-type="string" display-name="TVA intracommunautaire" />
+    <property name="alerteAutomatique" column-name="ALERTE_AUTO" data-type="boolean" default="true" display-name="Alerte automatique" category="Contact"/>
+    <property name="moyenContact" data-type="enumerated" column-name="MOYEN_CONTACT" display-name="Moyen de contact" category="Contact">
+          <attribute name="useCodeForValue" value="false"/>
+          <option value=" " code="0" />
+          <option value="Telephone" code="1" />
+          <option value="SMS" code="2" />
+          <option value="Mail" code="3" /> 
+        </property>
+    <property name="phoneNumber2" column-name="PHONE_NUMBER_2" data-type="string" display-name="Téléphone 2" category="Contact"/>        
+    <property name="locality" column-name="LOCALITY" data-type="string" display-name="Lieu-dit" category="Contact"/>        
+  </table>
+</item-descriptor> 
+
+<item-descriptor name="commerceItem" sub-type-property="type" version-property="version" display-name="Commerce Item">
+<table name="CASTO_COMMERCE_ITEM" type="auxiliary" id-column-name="COMMERCE_ITEM_ID">
+  <property category="Info sku" name="poids" column-name="POIDS" data-type="int" default="0" display-name="Poids"/>
+  <property category="Info sku" name="horsNormes" column-name="HORS_NORMES" data-type="boolean" default="false" display-name="Hors Norme"/>
+  <property category="Info sku" name="exonerationPFE" column-name="EXONERATION_PFE" data-type="boolean" default="false" display-name="Exoneration de PFE"/>
+  <property category="Info sku" name="exonerationPFT" column-name="EXONERATION_PFT" data-type="boolean" default="false" display-name="Exoneration de PFT"/>
+  <property category="Info sku" name="sommeForfaitaire" column-name="SOMME_FORFAITAIRE" data-type="float" display-name="Somme Forfaitaire"/>
+  <property category="Info sku" name="cadeau" data-type="boolean" default="false" column-name="cadeau" display-name="Est un cadeau"/>
+  <property category="Info sku" name="codeArticle" column-name="codeArticle" data-type="int" display-name="Code article"/>
+  <property category="Info sku" name="enVente" data-type="boolean" default="true" column-name="enVente" display-name="En vente"/>
+  <property category="Info sku" name="dateFinVie" column-name="dateFinVie" data-type="timestamp" display-name="Date fin de vie"/>
+  <property category="Info sku" name="CoefficientDeSatisfaction" column-name="CoefficientDeSatisfaction" data-type="float" display-name="Coefficient De Satisfaction"/>
+  <property category="Info sku" name="GeneralementLivreEnHeures" column-name="GeneralementLivreEnHeures" data-type="int" display-name="GeneralementLivreEnHeures"/>
+  <property name="creationDate" column-name="creation_date" data-type="timestamp" display-name="Creation Date">
+      <attribute name="propertySortPriority" value="-10"/>
+  </property>
+  <property category="Info sku" name="deliveryPeriod" column-name="DELIVERY_PERIOD" data-type="int" display-name="Disponibilite"/>
+  <property category="Info sku" name="displayName" column-name="DISPLAY_NAME" data-type="string" display-name="Display name"/>
+</table>
+</item-descriptor>
+
+<!-- Code Review : Changement du  cache-mode-->
+<item-descriptor name="hardgoodShippingGroup" super-type="shippingGroup" sub-type-value="hardgoodShippingGroup"
+              cache-mode="simple" display-name="Hardgood Shipping Group">
+    <!-- /Code Review -->
+              
+  <table name="CASTO_HARDGOOD_SHIPPING_GROUP" type="auxiliary" id-column-name="SHIPPING_GROUP_ID">
+    <property name="poidsTotal" column-name="POIDS_TOTAL" data-type="int" display-name="Poids total"/>
+    <property name="poidsPFT" column-name="POIDS_PFT" data-type="int" display-name="Poids PFT"/>
+    <property name="poidsPFL" column-name="POIDS_PFL" data-type="int" display-name="Poids PFL"/>
+    <property name="fraisDePreparation" column-name="FRAIS_PREPARATION" data-type="double" display-name="Frais de preparation"/>
+    <property name="delaiEngagement" column-name="DELAI_ENGAGEMENT" data-type="int" display-name="Delai engagement" category="Engagement Castorama"/>
+    
+    <!--
+       *  
+      * G.Y, le 18/02/2008 : Ajout des informations de delai d'engagement pour MAD et LIV
+      *
+     -->
+     
+    <property name="libelleDelaiEngagement" column-name="LIBELLE_DELAI_ENGAGEMENT" data-type="string" display-name="Libelle delai engagement" category="Engagement Castorama"/>
+    <property name="preferenceClientRetraitMAD" column-name="TRANCHE_HORAIRE_CLIENT_MAD" data-type="string" display-name="Tranche horaire souhaitee par le client pour MAD" category="Engagement Castorama"/>    
+    
+    <!--
+       *
+       * FIN de G.Y, le 18/02/2008 : Ajout des informations de delai d'engagement pour MAD et LIV
+      *
+     -->
+    
+  </table>
+
+  <!--
+    *
+    * J.F, le 21/09/2006 : ajout des proprietes pour les adresses de livraison
+   *
+  -->
+  <table name="CASTO_SHIP_ADDR" type="auxiliary" id-column-name="SHIPPING_GROUP_ID">
+    <property name="civilite" data-type="enumerated" column-name="CIVILITE" display-name="civilite">
+          <attribute name="useCodeForValue" value="false"/>
+          <option value=" " code="0" />
+          <option value="Monsieur" code="1" />
+          <option value="Madame" code="2" />
+          <option value="Mlle" code="3" /> 
+        </property>
+        <property name="telPortable" column-name="TEL_PORTABLE" data-type="string" display-name="Telephone portable" />
+        <property name="telProfessionnel" column-name="TEL_PROFESSIONNEL" data-type="string" display-name="Telephone professionnel" />
+    <property name="adresseLibelle" column-name="ADRESSE_LIBELLE" data-type="string" display-name="Libelle de l'adresse" />
+    <property name="tvaIntracommunautaire" column-name="TVA_INTRACOMUNAUTAIRE" data-type="string" display-name="TVA intracommunautaire" />
+    
+    <!-- 
+      *
+      * G.Y, le 13/02/2008
+      *
+     -->
+    <property name="alerteAutomatique" column-name="ALERTE_AUTO" data-type="boolean" default="true" display-name="Alerte automatique" category="Contact"/>
+    
+    <property name="moyenContact" data-type="enumerated" column-name="MOYEN_CONTACT" display-name="Moyen de contact" category="Contact">
+          <attribute name="useCodeForValue" value="false"/>
+          <option value=" " code="0" />
+          <option value="Telephone" code="1" />
+          <option value="SMS" code="2" />
+          <option value="Mail" code="3" /> 
+        </property>
+    <!-- 
+      *
+      * FIN G.Y, le 13/02/2008
+      *
+     -->
+     <property name="phoneNumber2" column-name="PHONE_NUMBER_2" data-type="string" display-name="Téléphone 2" category="Contact"/>        
+    <property name="locality" column-name="LOCALITY" data-type="string" display-name="Lieu-dit" category="Contact"/>        
+  </table>    
+  <!-- 
+   *
+   * Fin modif J.F, le 21/09/2006 
+   *
+   -->
+</item-descriptor>
+
+<item-descriptor name="poids" display-property="prixAuKg" display-name="Poids" cache-mode="simple">
+<table name="CASTO_PFE_POIDS" type="primary" id-column-name="ID">
+  <property name="poidsInf" data-type="int" column-name="poids_inf" display-name="Poids min"/>
+  <property name="poidsSup" data-type="int" column-name="poids_Sup" display-name="Poids max"/>
+  <property name="prixAuKg" data-type="double" column-name="prix_au_kg" display-name="Prix au Kg"/>
+  <property name="forfaitTTC" data-type="double" column-name="forfait_ttc" display-name="Forfait TTC"/>
+  <property name="forfaitHnTTC" data-type="double" column-name="forfait_hn_ttc" display-name="Forfait HN TTC"/>
+  <property name="grillePfeId" data-type="string" column-name="grille_pfe_id" display-name="Indentifiant grille PFE" required="true" default="1"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="grillePoidsPreparationDeCommande" display-property="montant" display-name="Grille de poids - Preparation">
+<table name="CASTO_PREPARATION_POIDS" type="primary" id-column-name="ID">
+  <property name="poidsInf" data-type="int" column-name="poids_inf" display-name="Poids min"/>
+  <property name="poidsSup" data-type="int" column-name="poids_Sup" display-name="Poids max"/>
+  <property name="montant" data-type="double" column-name="montant" display-name="forfait de preparation"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="codespostaux_PFE" display-property="code_postal" display-name="Code postal">
+<table name="CASTO_CODESPOSTAUX_PFE" type="primary" id-column-name="code_postal">
+  <property name="code_postal" data-type="string" column-name="code_postal" display-name="Code postal"/>
+  <property name="grillePfeId" data-type="string" column-name="grille_pfe_id" display-name="Indentifiant grille PFE"/>
+  <property name="poidMini" data-type="double" column-name="poid_minimum" display-name="Poid minimum"/>
+  <property name="volumeMini" data-type="double" column-name="volume_minimum" display-name="Volume minimum"/>
+</table>
+</item-descriptor>
+
+
+<!-- Fiche mantis 820 : J.R. modification de la taille du cache -->
+<item-descriptor sub-type-value="preparationPriceInfo" name="preparationPriceInfo" folder="false" display-name="Preparation Price Info" use-id-for-path="false" super-type="amountInfo" hidden="false" content="false" expert="false" cache-mode="simple" default="false" item-cache-size="10000">
+<!--<item-descriptor sub-type-value="preparationPriceInfo" name="preparationPriceInfo" folder="false" display-name="Preparation Price Info" use-id-for-path="false" super-type="amountInfo" hidden="false" content="false" expert="false" cache-mode="simple" default="false">-->
+  <table name="CASTO_PREPARATION_PRICE_INFO" type="auxiliary" id-column-name="id">
+    <property name="poids" data-type="int" column-name="poids" display-name="Poids"/>
+  </table>
+</item-descriptor>
+
+<!-- Fiche mantis 820 : J.R. modification de la taille du cache -->
+<item-descriptor name="amountInfo" item-cache-size="10000">
+<!--<item-descriptor name="amountInfo">-->
+<table name="dcspp_amount_info" type="primary" id-column-name="amount_info_id">
+   <property name="type" data-type="enumerated" display-name="Type" queryable="true" readable="true" hidden="false" expert="true" required="false" cache-mode="inherit" writable="true">
+     <attribute name="useCodeForValue" value="false"/>
+     <option code="0" value="orderPriceInfo"/>
+     <option code="1" value="itemPriceInfo"/>
+     <option code="2" value="taxPriceInfo"/>
+     <option code="3" value="shippingPriceInfo"/>
+     <option code="4" value="detailedItemPriceInfo"/>
+     <option code="5" value="preparationPriceInfo"/>
+   </property>
+</table>
+</item-descriptor>
+
+<!-- Fiche mantis 820 : J.R. modification de la taille du cache -->
+<item-descriptor name="orderPriceInfo" item-cache-size="10000">
+<!--<item-descriptor name="orderPriceInfo">-->
+  <table name="CASTO_ORDER_PRICE_INFO" type="auxiliary" id-column-name="id">
+     <property name="fraisDePreparation" column-name="fraisDePreparation" data-type="double" display-name="Participation aux Frais de Traitement"/>
+  </table>
+</item-descriptor>
+
+<!-- Fiche mantis 820 : J.R. modification de la taille des caches -->
+<item-descriptor name="itemPriceInfo" super-type="amountInfo" sub-type-value="itemPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorItemPriceInfo" >
+   <table name="cast_item_price_info" type="auxiliary" id-column-name="id">
+      <property name="onSaleDiscountDisplay" display-name="onSaleDiscountDisplay" category-resource="categoryItem" data-type="boolean" readable="true" column-name="on_sale_discount_display" writable="true" default="false">
+        <attribute name="propertySortPriority" value="65"/>
+        <attribute name="resourceBundle" value="com.castorama.commerce.order.OrderTemplateResources" />
+      </property>
+  </table>
+</item-descriptor>
+
+<item-descriptor name="taxPriceInfo" super-type="amountInfo" sub-type-value="taxPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorTaxPriceInfo" >
+</item-descriptor>
+
+<item-descriptor name="shippingPriceInfo" super-type="amountInfo" sub-type-value="shippingPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorShippingPriceInfo" >
+</item-descriptor>
+
+<item-descriptor name="detailedItemPriceInfo" super-type="amountInfo" sub-type-value="detailedItemPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorDetailedItemPriceInfo" >
+</item-descriptor>
+
+<item-descriptor name="pricingAdjustment" version-property="version" cache-mode="simple"
+              item-cache-size="10000" display-name-resource="itemDescriptorPricingAdjustment" item-cache-timeout="180000">
+</item-descriptor>
+
+
+
+
+
+</gsa-template>

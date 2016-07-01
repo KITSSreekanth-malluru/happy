@@ -1,0 +1,8 @@
+ATG-Product: The Castorama Search Extension
+Manifest-Version: 1.0
+ATG-Client-Class-Path: lib/classes.jar
+ATG-Class-Path: lib/classes.jar
+ATG-Config-Path: config/config.jar
+ATG-StagingConfig-Path: configlayers/stagingandprod/config.jar
+ATG-Required: @install_unit@.@module_root_parent@.castSearch
+

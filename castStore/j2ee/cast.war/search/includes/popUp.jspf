@@ -1,0 +1,125 @@
+<c:choose>
+  <c:when test="${not empty facetHolder.facet.id }">
+    <c:set var="ajouterFacetId" value="${facetHolder.facet.id }"/>
+  </c:when>
+  <c:otherwise>
+    <c:choose>
+      <c:when test="${not empty selectedFacetId }">
+        <c:set var="ajouterFacetId" value="${selectedFacetId }"/>
+      </c:when>
+      <c:otherwise>
+        <c:set var="ajouterFacetId" value=""/>
+      </c:otherwise>
+    </c:choose>
+  </c:otherwise>
+</c:choose>
+
+<dsp:getvalueof var="searchType" param="searchType"/>
+
+<dsp:droplet name="/atg/dynamo/droplet/IsEmpty">
+  <dsp:param name="value" param="resultedMapFacetIdToTrailParam.${ajouterFacetId}"/>
+  <dsp:oparam name="false">
+    <dsp:droplet name="/com/castorama/droplet/AjouterFacetValuesFinder">
+    <dsp:param name="currentAjouterFacetId" value="${ajouterFacetId}"/>
+    <dsp:param name="currentAjouterFacetTrail" param="resultedMapFacetIdToTrailParam.${ajouterFacetId}"/>
+    <dsp:oparam name="output">
+    
+     <dsp:droplet name="/com/castorama/search/droplet/CastFacetValuesDroplet">
+      <dsp:param name="facetValues" param="ajouterResultedFacetValueNodes"/>
+      <dsp:param name="pivotCategoryId" value="${categoryIdVar}"/>
+      <dsp:param name="isSearchForCategory" param="isSearchForCategory"/>
+      <dsp:oparam name="oparam">
+      
+        <dsp:droplet name="/atg/dynamo/droplet/IsEmpty">
+          <dsp:param name="value" param="facetValuesResultList"/>
+          <dsp:oparam name="false">
+  
+            <dsp:getvalueof var="formid" vartype="java.lang.String" value="ajouter_${ajouterFacetId}"/>
+         
+              <c:choose>
+                <c:when test="${not empty containerVar && fn:contains(containerVar, '?')}">
+                  <c:set var="actionContainerVar" value="${containerVar}&formid=${formid }"/>
+                </c:when>
+                <c:otherwise>
+                   <c:set var="actionContainerVar" value="${containerVar}?formid=${formid }"/>
+                </c:otherwise>
+              </c:choose>
+              <c:if test="${empty question }">
+                <dsp:getvalueof var="question" param="question"/>
+              </c:if>
+              <dsp:form action="${actionContainerVar }" method="post" id="${formid }">
+                <input type="hidden" name="trail" value="${castCollection:encode(trailVar)}"/>
+                <input type="hidden" name="categoryId" value="${categoryIdVar}"/>
+                <input type="hidden" name="sortByValue" value="${sortByValue }"/>
+                <input type="hidden" name="productListingView" value="${productListingView }"/>
+                <input type="hidden" name="question" value="${question }"/>
+                <input type="hidden" name="searchType" value="${searchType }"/>                
+                <input type="hidden" name="pageNum" value="1"/>
+                <input type="hidden" name="currentTab" value="${currentTab }"/>
+                
+                <input type="hidden" name="ajouterFacetId" value="${ajouterFacetId }"/>
+                <input type="hidden" name="previousTrail" value="<dsp:valueof param="trail"/>"/>
+                <input type="hidden" name="ajouterSearchRequest" value="true"/>
+                <div class="autres ${ajouterFacetId}" id="autres_${ajouterFacetId}">
+                  <dsp:a id="ajouterLink_${ajouterFacetId}" onclick="showContPopup('${ajouterFacetId}')" iclass="autresLnk" href="javascript:void(0)">Ajouter...</dsp:a>
+                  <div id="ajouterPopup_${ajouterFacetId}" class="autresPopup" style="display: none;">
+                  
+                  <dsp:getvalueof var="facetValuesResultListPopUpVar" param="facetValuesResultList"/>
+                  <c:if test="${not empty facetValuesResultListPopUpVar && facetHolder.facet.refinementElement.property == 'rating'}">
+                     ${ castCollection:reverse(facetValuesResultListPopUpVar) }
+                  </c:if>
+                  <dsp:droplet name="/atg/dynamo/droplet/ForEach">
+                    <dsp:param name="array" value="${facetValuesResultListPopUpVar }"/>
+                    <dsp:param name="elementName" value="ajouterFacetValueNode"/>
+                    <dsp:oparam name="output"> 
+                  
+                      <dsp:getvalueof var="ajouterFacetValueNodeVar" param="ajouterFacetValueNode"/>
+                      <dsp:getvalueof var="currentTrailChecked" param="trail"/>
+                      
+                      <div class="iOpt">
+                        <c:choose>
+                          <c:when test="${fn:contains(currentTrailChecked, ajouterFacetValueNodeVar.facetValue.value)}">
+                            <input type="checkbox" name="ajouter_${ajouterFacetId}" id="ajouter_${ajouterFacetValueNodeVar.facetValue }" value="${ajouterFacetValueNodeVar.facetValue.value }" checked/>
+                          </c:when>
+                          <c:otherwise>
+                            <input type="checkbox" name="ajouter_${ajouterFacetId}" id="ajouter_${ajouterFacetValueNodeVar.facetValue }" value="${ajouterFacetValueNodeVar.facetValue.value }"/>
+                          </c:otherwise>
+                        </c:choose>
+                        
+                        <label for="ajouter_${ajouterFacetValueNodeVar.facetValue }">
+                          <dsp:include page="facetValueFormatter.jsp">
+                              <dsp:param name="facetedProperty" value="${facetHolder.facet.refinementElement.property}"/>
+                              <dsp:param name="facetValue" value="${ajouterFacetValueNodeVar.facetValue}"/>
+                              <dsp:param name="value" value="${ajouterFacetValueNodeVar.facetValue.value}"/>
+                              <dsp:param name="facetId" value="${ajouterFacetValueNodeVar.facetValue.facet.id}"/>
+                            </dsp:include>
+                         <%-- %> (${ajouterFacetValueNodeVar.facetValue.matchingDocsCount}")--%>
+                        </label>
+                      </div>
+                    </dsp:oparam>
+                  </dsp:droplet>
+                                                                                
+                    <div class="icoPpTop"><img title="" alt="" src="images/icoPpTop.gif"/></div>
+                    <div class="ppOpt">
+                      <img class="ppImg" title="" alt="" src="images/icoAjouter.gif"/>
+                      <a id="select_${ajouterFacetId}" onclick="$('#ajouterPopup_${ajouterFacetId}').find('input').attr('checked', 'checked')" href="javascript:void(0)"><fmt:message key="search_filters.popUp_toutSelection"/></a>
+                      <a id="deselect_${ajouterFacetId}" onclick="$('#ajouterPopup_${ajouterFacetId}').find('input').removeAttr('checked')" href="javascript:void(0)"><fmt:message key="search_filters.popUp_deselect"/></a>                                 
+                    </div>
+                    <div class="formButtons floatedLeft">
+                      <span class="inputButton medBlueBorder">
+                        <input id="submit_${ajouterFacetId}" type="submit" defaultvalue="Valider" value="Valider"/>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+               </dsp:form>
+             </dsp:oparam>
+            </dsp:droplet>
+          </dsp:oparam>
+        </dsp:droplet>
+        
+      </dsp:oparam>
+    </dsp:droplet>
+  </dsp:oparam>
+</dsp:droplet>
+<c:set var="ajouterFacetId" value=""/>

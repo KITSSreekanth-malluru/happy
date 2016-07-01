@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+ATG-Module-Uri: @merch_web_app_name@
+ATG-Context-Root: @merch_context_root@

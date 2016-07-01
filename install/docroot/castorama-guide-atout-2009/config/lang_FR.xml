@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lang>
+	<accentconvert>
+<!--		<befor><![CDATA[ÀÁÂÃÄÅĀĂĄǺẠẢẤẦẨẪẬẮẰẲẴẶạảấầẩẫắằậẵẳặàáâãäåāăąǻÇĆĈĊČćĉċčçÐĎđďđÈÉÊËẸẺẼẾỀỂỄỆĒĔĖĘĚēĕėęěẹẻẽếềễểệèéêëſƒĜĞĠĢĝğġģĤħĥħÌÍÎÏĨĪĬĮİỈỊỉịìíîïĩīĭįıĴĶķĸĹĻĽĿŁłĺļľŀŃŅŇŊÑñńņňŉŋŌƠŎŐÒÓÔÕÖỌỎỐỒỔỖỘỚỜỞỠỢọồỏốổỗớộờởỡợòóôõöơōŏőŔŖŘŕŗřŚŜŞŠśŝşšŢŤŦţťŧŨŪŬŮŰŲỤỦỨỪỬỮỰƯÙÚÛÜùúûüưửừụủứữựũūŭůűųŴẀẂẄẁẃẅŵŶŸÝỲỴỶỸỳỵỷỹŷýÿŹŻŽźżž¹²³ªº()[]/\{}<>‹›«»|‘’';:‚!?¿“”„…#·⁄]]></befor>
+		<after><![CDATA[AAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaCCCCCcccccDDdddEEEEEEEEEEEEEEEEEeeeeeeeeeeeeeeeeeffGGGGggggHhhhIIIIIIIIIIIiiiiiiiiiiiJKkkLLLLLlllllNNNNNnnnnnnOOOOOOOOOOOOOOOOOOOOOoooooooooooooooooooooRRRrrrSSSSssssTTTtttUUUUUUUUUUUUUUUUUUuuuuuuuuuuuuuuuuuuWWWWwwwwYYYYYYYyyyyyyyZZZzzz123ao                               ]]></after>
+-->
+		<befor><![CDATA[ÀÁÂÃÄÅÂàáâãäåâÒÓÔÕÖØòóôõöøÈÉÊËèéêëÌÍÎÏìíîïÙÚÛÜùúûüÿÑñÇç.,;:!?']]></befor>
+		<after><![CDATA[AAAAAAAaaaaaaaOOOOOOooooooEEEEeeeeIIIIiiiiUUUUuuuuyNnCc       ]]></after>
+		
+	</accentconvert>
+	<trad id="homepage.goto"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour allez a la page ##value]]></a></trad>
+	<!--NAV-->
+	<trad id="gotohomepage"><l><![CDATA[]]></l><a><![CDATA[Retour à la page d'accueil]]></a></trad>
+	<trad id="gotopage"><l><![CDATA[Accès par page (total : XX pages)]]></l><a><![CDATA[Accéder directement à une page]]></a></trad>
+	<trad id="diaporama"><l><![CDATA[Visualiser le diaporama ]]></l><a><![CDATA[Accéder au diaporama]]></a></trad>	
+	<trad id="sendtofriend.show"><l><![CDATA[Envoyer ce guide à un(e) ami(e)]]></l><a><![CDATA[Envoyer le guide interactif par e-mail]]></a></trad>
+	<trad id="search"><l><![CDATA[Recherche par mot(s)-clé(s)]]></l><a><![CDATA[Tapez le mot recherché]]></a></trad>
+	<trad id="search.defaulttxt"><l><![CDATA[Tapez le mot recherché]]></l><a><![CDATA[]]></a></trad>
+	<trad id="submenu"><l><![CDATA[Sommaire du guide]]></l><a><![CDATA[##menuitem]]></a></trad>
+	<trad id="showhelp"><l><![CDATA[]]></l><a><![CDATA[Aide]]></a></trad>
+	<trad id="showinfo"><l><![CDATA[]]></l><a><![CDATA[Astuces]]></a></trad>
+	<trad id="newsletter"><l><![CDATA[]]></l><a><![CDATA[Newsletter]]></a></trad>
+	<trad id="contact"><l><![CDATA[]]></l><a><![CDATA[Contactez nous]]></a></trad>
+	<trad id="autozoomin"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour activer ou désactiver le zoom automatique des zones interactives]]></a></trad>
+	<trad id="desktop.screennormalbrowser"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour réduire l'écran]]></a></trad>
+	<trad id="desktop.screenfullbrowser"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour agrandir l'écran]]></a></trad>
+	
+	<trad id="historyprevious"><l><![CDATA[]]></l><a><![CDATA[Dernière page consultée]]></a></trad>
+	
+	<!--Around the double page, e.g. arrows-->
+	<trad id="doublepagenumleft"><l><![CDATA[- Page ##numpage-1 sur ##lastpage -]]></l><a><![CDATA[Vous indique sur quelle page de gauche vous vous situez dans le guide]]></a></trad>
+	<trad id="doublepagenumright"><l><![CDATA[- Page ##numpage sur ##lastpage -]]></l><a><![CDATA[Vous indique sur quelle page de droite vous vous situez dans le guide]]></a></trad>
+	<trad id="turnpagetopleft"><l><![CDATA[]]></l><a><![CDATA[Aller à la page précédente]]></a></trad>
+	<trad id="turnpagetopright"><l><![CDATA[]]></l><a><![CDATA[Aller à la page suivante]]></a></trad>
+	<trad id="turnpagebottomleft"><l><![CDATA[]]></l><a><![CDATA[Aller à la page précédente]]></a></trad>
+	<trad id="turnpagebottomright"><l><![CDATA[]]></l><a><![CDATA[Aller à la page suivante]]></a></trad>
+	<trad id="gotofirstpage"><l><![CDATA[]]></l><a><![CDATA[Aller à la première page]]></a></trad>
+	<trad id="gotolastpage"><l><![CDATA[]]></l><a><![CDATA[Aller à la dernière page]]></a></trad>
+	<trad id="zoompageleft"><l><![CDATA[]]></l><a><![CDATA[Faire un zoom sur la page de gauche]]></a></trad>
+	<trad id="zoompageright"><l><![CDATA[]]></l><a><![CDATA[Faire un zoom sur la page de droite]]></a></trad>
+	<trad id="zoompagedouble"><l><![CDATA[]]></l><a><![CDATA[Faire un zoom sur la double page]]></a></trad>
+	<trad id="zoomlist"><l><![CDATA[]]></l><a><![CDATA[Lecture en mode simple page]]></a></trad>
+	<trad id="zoomlist.close"><l><![CDATA[]]></l><a><![CDATA[Retour au mode double page normal]]></a></trad>
+	<trad id="newannotation"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour créer une nouvelle annotation]]></a></trad>
+	<trad id="geturl"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder à ##url]]></a></trad>
+	<trad id="markergo"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour aller à la page ##pagevalue]]></a></trad>
+	<trad id="markeradd"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour ajouter ou enlever un marque-page pour vos pages favorites]]></a></trad>
+	<trad id="markerremove"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour enlever cette page des favoris]]></a></trad>
+
+	<trad id="hidepanelgeneral"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour fermer la fenêtre]]></a></trad>
+	
+	<!-- PRINT -->	
+	<trad id="print.show"><l><![CDATA[Imprimer une page]]></l><a><![CDATA[Imprimer une page]]></a></trad>
+
+	<!-- PDF-->
+	<trad id="pdf.show"><l><![CDATA[Télécharger le guide en format PDF]]></l><a><![CDATA[Télécharger le guide en format PDF]]></a></trad>
+
+	<trad id="pdf.download"><l><![CDATA[]]></l><a><![CDATA[Télécharger la page]]></a></trad>
+	<trad id="pdf.panel.left.show"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour télécharger la page de gauche]]></a></trad>
+	<trad id="pdf.panel.left.download"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour télécharger la page de gauche]]></a></trad>
+	<trad id="pdf.panel.right.show"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour télécharger la page de droite]]></a></trad>
+	<trad id="pdf.panel.right.download"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour télécharger la page de droite]]></a></trad>
+	<trad id="pdf.panel.catalog.show"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour télécharger tout le guide]]></a></trad>
+	<trad id="pdf.catalog.size"><l><![CDATA[<i>Taille : 1,96 Mo</i>]]></l><a><![CDATA[]]></a></trad>
+	<trad id="pdf.panel.catalog.download"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour télécharger tout le guide]]></a></trad>
+
+	<trad id="pdf.panel.selection.show"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour consulter votre sélection de pdf et télécharger votre pdf personnalisé]]></a></trad>
+	<trad id="pdf.panel.selection.download"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour télécharger votre sélection de pages]]></a></trad>
+	<trad id="pdf.panel.selection.selectall"><l><![CDATA[]]></l><a><![CDATA[Ajouter toutes les pages de votre pdf personnalisé]]></a></trad>		
+	<trad id="pdf.panel.selection.selectnone"><l><![CDATA[]]></l><a><![CDATA[Supprimer toutes les pages de votre pdf personnalisé]]></a></trad>		
+	<trad id="pdf.panel.selection.download"><l><![CDATA[]]></l><a><![CDATA[Télécharger votre pdf personnalisé]]></a></trad>		
+	<trad id="pdf.panel.selection.overOn"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour sélectionner la page ##pagevalue]]></a></trad>		
+	<trad id="pdf.panel.selection.overOff"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour désélectionner la page ##pagevalue]]></a></trad>		
+
+	<!-- PDG GROUPS -->
+	<trad id="pdf.panel.group.show"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour télécharger les chapitres]]></a></trad>		
+	<trad id="pdf.panel.group.overOn"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour télécharger le chapitre "##pdfgroupid"]]></a></trad>		
+	<trad id="chapter1"><l><![CDATA[Modular Regulators & Manifold Systems]]></l><a><![CDATA[]]></a></trad>	
+	<trad id="chapter2"><l><![CDATA[Pneumatic Accessories]]></l><a><![CDATA[]]></a></trad>	
+	<trad id="chapter3"><l><![CDATA[Inline Filters]]></l><a><![CDATA[]]></a></trad>		
+	<trad id="chapter4"><l><![CDATA[Chapitre 4]]></l><a><![CDATA[]]></a></trad>	
+
+	<!-- PDF SELECTION -->
+	<trad id="pdfselection"><l><![CDATA[- Télécharger la sélection des pages]]></l><a><![CDATA[]]></a></trad>		
+
+	<trad id="annotationtxt"><l><![CDATA[Saisissez votre texte.]]></l><a><![CDATA[]]></a></trad>
+	
+	<trad id="search_loading"><l><![CDATA[Chargement en cours...]]></l><a><![CDATA[]]></a></trad>
+	<trad id="search_page"><l><![CDATA[Page]]></l><a><![CDATA[]]></a></trad>	
+	<trad id="search_nearwords"><l><![CDATA[Ne pas rechercher les mots voisins.]]></l><a><![CDATA[]]></a></trad>	
+	<trad id="search_strictly"><l><![CDATA[Rechercher strictement.]]></l><a><![CDATA[]]></a></trad>	
+	<trad id="search_combined"><l><![CDATA[Afficher seulement les combinaisons.]]></l><a><![CDATA[]]></a></trad>	
+	<trad id="search_noresult"><l><![CDATA[Aucune recherche ne correspond à votre demande.]]></l><a><![CDATA[]]></a></trad>	
+	<trad id="search_title"><l><![CDATA[Tapez vos mots clés :]]></l><a><![CDATA[]]></a></trad>
+	
+	<!--Zoom-->
+	<trad id="double_page_zoom"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour revenir en lecture normale]]></a></trad>
+	<trad id="simple_page_zoom"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour revenir en lecture normale]]></a></trad>
+	<trad id="zoomlist.zoomin"><l><![CDATA[]]></l><a><![CDATA[Faire un zoom (+)]]></a></trad>
+	<trad id="zoomlist.zoomout"><l><![CDATA[]]></l><a><![CDATA[Faire un zoom (-)]]></a></trad>
+	
+	<!--Diaporama-->
+	<trad id="diaporama.doublethumb"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder à la page ##doublepagevalue]]></a></trad>
+	<trad id="diaporama.doublethumb.firstpage"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder à la première page]]></a></trad>
+	<trad id="diaporama.marker"><l><![CDATA[]]></l><a><![CDATA[Marker]]></a></trad>
+	<trad id="diaporama.close"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour revenir en lecture normale]]></a></trad>
+	<!--Maps -->
+	<trad id="altzoomzoomin"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour zoomer ce produit]]></a></trad>
+	<trad id="altzoomzoomout"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour sortir du zoom]]></a></trad>
+	<trad id="altopenlink"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder à la fiche de ce produit]]></a></trad>
+	<trad id="altopenlinkmulti"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour sélectionner parmi les références]]></a></trad>
+	<trad id="altopenurl"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder au site ##url]]></a></trad>
+	<trad id="altgotopage"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour aller à la page ##numpage]]></a></trad>
+	<trad id="altaddtobasket"><l><![CDATA[]]></l><a><![CDATA[Cliquer ici pour ajouter au panier]]></a></trad>
+	<trad id="altopenmore"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder à plus d'information]]></a></trad>
+
+	<!--Imprimer-->
+	<trad id="print.print"><l><![CDATA[]]></l><a><![CDATA[Imprimer la page]]></a></trad>
+	<trad id="printportrait"><l><![CDATA[Portrait]]></l><a><![CDATA[]]></a></trad>
+	<trad id="printlandscape"><l><![CDATA[Paysage]]></l><a><![CDATA[]]></a></trad>
+	<trad id="print.panel.left.show"><l><![CDATA[]]></l><a><![CDATA[Imprimer la page de gauche]]></a></trad>
+	<trad id="print.panel.right.show"><l><![CDATA[]]></l><a><![CDATA[Imprimer la page de droite]]></a></trad>
+	<trad id="print.panel.double.show"><l><![CDATA[]]></l><a><![CDATA[Imprimer la double page]]></a></trad>
+	
+	<!--Zones-->
+	<trad id="zone.alt"><l><![CDATA[]]></l><a><![CDATA[##value]]></a></trad>
+	<trad id="zone.zoom"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour plus de détails]]></a></trad>
+	<trad id="zone.internal"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour executer le evenement interne]]></a></trad>		
+	<trad id="zone.url"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder à la fiche de ce produit]]></a></trad>
+	<trad id="zone.xurl"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour voir le vidéo]]></a></trad>
+	<trad id="zone.multi"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour sélectionner parmi les références]]></a></trad>
+	<trad id="zone.goto"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour aller à la page ##value]]></a></trad>
+	<trad id="zone.popup"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour voir l'animation]]></a></trad>	
+	<trad id="zone.ldc"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour ajouter au panier]]></a></trad>		
+	<trad id="zone.pdf"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour ouvrir un PDF]]></a></trad>			
+	<trad id="zone.zoom.quit"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour sortir du zoom]]></a></trad>
+	<trad id="zone.internal.quit"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour quitter le zoom]]></a></trad>			
+	<trad id="zone.goto.quit"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour accéder à la page ##value]]></a></trad>	
+	<trad id="zone.url.quit"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour sortir du zoom]]></a></trad>		
+	<trad id="zone.multi.quit"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour sortir du zoom]]></a></trad>			
+	<trad id="zone.zoom.picto"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour plus de détails]]></a></trad>	
+	<trad id="zone.internal.picto"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour lancer internal le picto]]></a></trad>				
+	<trad id="zone.ldc.picto"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour accéder au site]]></a></trad>			
+	<trad id="zone.url.picto"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour accéder au site]]></a></trad>		
+	<trad id="zone.multi.picto"><l><![CDATA[]]></l><a><![CDATA[Cliquez puis sélectionner parmi les actions possibles]]></a></trad>			
+	
+	
+	<!--Télécharger PDF-->
+	<trad id="pdf.download"><l><![CDATA[]]></l><a><![CDATA[Télécharger la page]]></a></trad>
+	<trad id="pdf.selectall"><l><![CDATA[]]></l><a><![CDATA[Ajouter toutes les pages de votre pdf personnalisé]]></a></trad>		
+	<trad id="pdf.selectnone"><l><![CDATA[]]></l><a><![CDATA[Supprimer toutes les pages de votre pdf personnalisé]]></a></trad>		
+	<trad id="pdf.downloadselection"><l><![CDATA[]]></l><a><![CDATA[Télécharger votre pdf personnalisé]]></a></trad>		
+	<trad id="pdf.selectall.overOn"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour sélectionner la page ##pagevalue]]></a></trad>		
+	<trad id="pdf.selectall.overOff"><l><![CDATA[]]></l><a><![CDATA[Cliquez pour désélectionner la page ##pagevalue]]></a></trad>		
+
+	<!-- PANEL ANNOTATIONS -->
+	<trad id="panelanno.show"><l><![CDATA[]]></l><a><![CDATA[Afficher toutes les annotations]]></a></trad>		
+	<trad id="panelanno.gotopage"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour aller à la page ##doublepagevalue]]></a></trad>		
+	<trad id="panelanno.btn.delete"><l><![CDATA[Supprimer]]></l><a><![CDATA[Supprimer l'annotation ##pagevalue]]></a></trad>		
+	<trad id="panelanno.btn.tab"><l><![CDATA[]]></l><a><![CDATA[Voir l'annotation ##pagevalue]]></a></trad>		
+	
+	<!-- PANEL ANNOTATIONS -->
+	<trad id="popup1.gotopage"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour allez à la page ##value]]></a></trad>		
+
+	<!--Xbuttons PDF-->
+	<trad id="selectpdfleft"><l><![CDATA[]]></l><a><![CDATA[Ajouter la page ##numpage-1 pour créer votre pdf personnalisé]]></a></trad>
+	<trad id="selectpdfright"><l><![CDATA[]]></l><a><![CDATA[Ajouter la page ##numpage pour créer votre pdf personnalisé]]></a></trad>
+	<trad id="downloadallpdfleft"><l><![CDATA[]]></l><a><![CDATA[Téléchargez votre pdf personnalisé]]></a></trad>
+	<trad id="downloadallpdfright"><l><![CDATA[]]></l><a><![CDATA[Téléchargez votre pdf personnalisé]]></a></trad>
+
+	<!--Xbuttons Autoplay-->
+	<trad id="autoplay.start"><l><![CDATA[]]></l><a><![CDATA[Démarrer l'autoplay]]></a></trad>
+	<trad id="autoplay.stop"><l><![CDATA[]]></l><a><![CDATA[Arreter l'autoplay]]></a></trad>
+
+	<!--Spécial-->
+	<trad id="gotopagedistributor"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour accéder à la liste des entrepôts]]></a></trad>
+
+	<!--Info-->
+	<trad id="infos.activate"><l><![CDATA[Activation des astuces au démarrage]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="infos.previous"><l><![CDATA[]]></l><a><![CDATA[Astuce précédente]]></a></trad>
+	<trad id="infos.next"><l><![CDATA[]]></l><a><![CDATA[Astuce suivante]]></a></trad>
+	<trad id="info_0001_0001"><l><![CDATA[1. Vous pouvez feuilleter le guide interactif à 
+	l'aide des fleche droite et gauche du clavier]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0001_0002"><l><![CDATA[2. Vous pouvez feuilleter le guide interactif 
+	à l'aide des flèches droite et gauche du guide]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0001_0003"><l><![CDATA[3. Vous pouvez aller à la 1ère ou à la dernière page 
+	du guide à l'aide des flèches droite et gauche du guide]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0001_0004"><l><![CDATA[4. Vous pouvez feuilleter le guide interactif à l'aide des 
+	coins de la page]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0001_0005"><l><![CDATA[5. Les vignettes vous indiquent la page suivante
+	ou la page précédente à laquelle vous accéderez en cliquant
+	sur les flèches de navigation]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0002_0001"><l><![CDATA[1.En mode zoom double page, vous pouvez utiliser la touche Echap pour revenir en mode normal]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0002_0002"><l><![CDATA[2.En mode zoom double page, vous pouvez utiliser les flèches du clavier pour vous déplacer]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0003_0001"><l><![CDATA[1.En mode zoom liste, vous pouvez utiliser la touche Echap pour revenir en mode normal]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0003_0002"><l><![CDATA[2.En mode zoom liste, vous pouvez utiliser les flèches bas et haut du clavier pour scroller les pages]]></l><a><![CDATA[1]]></a></trad>
+	<trad id="info_0003_0003"><l><![CDATA[3.En mode zoom liste, vous pouvez utiliser les flèches PgDw et PgUp du clavier pour vous déplacer parmi les pages]]></l><a><![CDATA[1]]></a></trad>	
+
+	<!-- send to friend -->
+	
+	<trad id="input.firstname"><l><![CDATA[Votre prénom* : ]]></l><a><![CDATA[]]></a></trad>
+	<trad id="input.lastname"><l><![CDATA[Votre nom* : ]]></l><a><![CDATA[]]></a></trad>
+	<trad id="input.from"><l><![CDATA[Votre adresse e-mail* : ]]></l><a><![CDATA[]]></a></trad>
+	<trad id="input.to"><l><![CDATA[Destinataire 1* :]]></l><a><![CDATA[]]></a></trad>
+	<trad id="inpu1.to"><l><![CDATA[Destinataire 2 :]]></l><a><![CDATA[]]></a></trad>
+	<trad id="inpu2.to"><l><![CDATA[Destinataire 3 :]]></l><a><![CDATA[]]></a></trad>
+	<trad id="input.message"><l><![CDATA[]]></l><a><![CDATA[]]></a></trad>
+
+	<trad id="input.pagemark"><l><![CDATA[J'envoie également mes marque-pages]]></l><a><![CDATA[]]></a></trad>
+	<trad id="stf.credits"><l><![CDATA[Les champs marqués d'une * sont obligatoires<br />Vous pouvez adresser ce guide par e-mail à une ou plusieurs personnes de votre choix.<br />Leurs coordonnées et votre message resteront confidentiels et ne seront pas conservés.]]></l><a><![CDATA[]]></a></trad>
+	
+	<trad id="sendtofriend.hide"><l><![CDATA[]]></l><a><![CDATA[Cliquez ici pour fermer la fenêtre]]></a></trad>
+	<trad id="sendtofriend.submit"><l><![CDATA[]]></l><a><![CDATA[Envoyer ce guide à un(e) ami(e)]]></a></trad>
+	<trad id="sendtofriend.submit.waiting"><l><![CDATA[Envoi du mail en cours.<br />Veuillez patienter.]]></l><a><![CDATA[]]></a></trad>
+	<trad id="sendtofriend.submit.succes"><l><![CDATA[Votre mail a bien été envoyé]]></l><a><![CDATA[]]></a></trad>
+	<trad id="sendtofriend.submit.error"><l><![CDATA[Malheureusement votre mail n'a pas été envoyé.<br />Veuillez essayer plus tard.]]></l><a><![CDATA[]]></a></trad>
+	<trad id="sendtofriend.submit.noserver"><l><![CDATA[Malheureusement le serveur de mail ne répond pas.<br />Veuillez essayer plus tard.]]></l><a><![CDATA[]]></a></trad>
+	<trad id="sendtofriend.submit.nourl"><l><![CDATA[Sending error. No url]]></l><a><![CDATA[]]></a></trad>
+
+	<!-- alerts -->
+	<trad id="alert.stf.nofirstname"><l><![CDATA[Merci de préciser votre prénom]]></l><a><![CDATA[]]></a></trad>
+	<trad id="alert.stf.nolastname"><l><![CDATA[Merci de préciser votre nom]]></l><a><![CDATA[]]></a></trad>
+	<trad id="alert.stf.noemail"><l><![CDATA[Merci de préciser une adresse d'e-mail correcte]]></l><a><![CDATA[]]></a></trad>
+	<trad id="alert.stf.noemail"><l><![CDATA[Merci de préciser une adresse d'e-mail correcte]]></l><a><![CDATA[]]></a></trad>
+	<trad id="alert.noannotation"><l><![CDATA[Actuellement, aucune page ne contient d'annotation]]></l><a><![CDATA[]]></a></trad>
+	<trad id="alert.annotation.delete"><l><![CDATA[Voulez-vous supprimer cette annotation ?]]></l><a><![CDATA[]]></a></trad>
+	<trad id="alert.pdf.select.nopages"><l><![CDATA[Vous n'avez pas de pages sélectionnées.<br>Veuillez sélectionner une page avant de cliquer<br>sur le bouton <b>Télécharger<b>]]></l><a><![CDATA[]]></a></trad>
+</lang>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<dynamo-message-system>
+    <patchbay>
+        <message-source>
+            <nucleus-name>/com/castorama/core/RepositoryInvalidationService</nucleus-name>
+
+            <output-port>
+                <port-name>RepositoryInvalidate</port-name>
+                <output-destination>
+                    <destination-name>patchbay:/sqldms/Castorama/Repository/InvalidationEvents</destination-name>
+                    <destination-type>Topic</destination-type>
+                </output-destination>
+            </output-port>
+
+        </message-source>
+        <message-sink>
+            <nucleus-name>/com/castorama/core/RepositoryInvalidationReceiver</nucleus-name>
+            
+            <input-port>
+                <port-name>RepositoryInvalidate</port-name>
+                <input-destination>
+                    <destination-name>patchbay:/sqldms/Castorama/Repository/InvalidationEvents</destination-name>
+                    <destination-type>Topic</destination-type>
+                </input-destination>
+            </input-port>
+            
+        </message-sink>
+    </patchbay>
+    
+    <message-registry>
+        <message-family>
+            <message-family-name>
+                Castorama
+            </message-family-name>
+            <message-type>
+                <jms-type>
+                    com.castorama.dms.InvalidateMessage
+                </jms-type>
+                <message-class>
+                    com.castorama.core.RepositoryInvalidationMessage
+                </message-class>
+            </message-type>
+        </message-family>
+    </message-registry>
+</dynamo-message-system>

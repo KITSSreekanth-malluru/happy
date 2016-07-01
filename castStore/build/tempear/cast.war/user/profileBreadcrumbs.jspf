@@ -1,0 +1,20 @@
+<div class="breadcrumbs bluePage">
+	<div class="homeBreadIco">
+		<a href="${pageContext.request.contextPath}/home.jsp">
+			<img src="${pageContext.request.contextPath}/images/icoHomeGray.gif" alt="" title="" />
+		</a>
+	</div>
+	<div class="splitter">&gt;</div>
+	<div><a href="${pageContext.request.contextPath}/user/clientSpaceHome.jsp"><fmt:message key="client.profile.ref" /></a></div>
+	<div class="splitter">&gt;</div>
+	<c:choose>
+		<c:when test="${'orders' == pageType}">
+				<div class="active"><fmt:message key="client.orders.ref" /></div>
+		</c:when>
+		<c:when test="${'order' == pageType}">
+				<div><a href="${pageContext.request.contextPath}/user/ordersHistory.jsp"><fmt:message key="client.orders.ref" /></a></div>
+				<div class="splitter">&gt;</div>
+				<div class="active"><fmt:message key="client.order.ref" />&nbsp;<dsp:valueof param="orderId" /></div>
+		</c:when>
+	</c:choose>
+</div>

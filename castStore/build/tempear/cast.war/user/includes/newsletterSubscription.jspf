@@ -1,0 +1,42 @@
+<%@ taglib prefix="dsp"
+  uri="http://www.atg.com/taglibs/daf/dspjspTaglib1_0"%>
+<div class="f-row f-checkbox2">					
+	<div class="f-inputs">
+		<label>
+			<dsp:input type="checkbox" iclass="i-checkbox"  bean="CastNewsletterFormHandler.value.receiveEmail" id="cast"/>
+			<fmt:message key="msg.newsletter.receiveEmail" />
+		</label>
+	</div>
+</div>
+<div class="f-row f-checkbox2">
+	<div class="f-inputs">
+		<label>
+			<dsp:input type="checkbox" iclass="i-checkbox"  bean="CastNewsletterFormHandler.value.reseiveOffers" id="partn"/>
+			<fmt:message key="msg.newsletter.reseiveOffers" />
+		</label>				
+	</div>
+</div>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+  $("#partn").click(function () {
+      var subCast=document.getElementById("cast");		  
+		  var subPartn=document.getElementById("partn");
+		  if (subPartn.checked == true) {
+		    $("#cast").attr("checked","true");		    
+		  }
+  });
+  
+    $("#cast").click(function () {
+      var subCast=document.getElementById("cast");      
+      var subPartn=document.getElementById("partn");
+      if (subCast.checked == false) {
+        subPartn.checked=false;       
+      }
+  });
+  
+});
+
+//-->
+</script>
+		

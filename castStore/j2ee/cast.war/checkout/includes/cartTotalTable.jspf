@@ -1,0 +1,60 @@
+<dsp:getvalueof var="rawSubTotal" value="${pricesList[0]}"/>
+<dsp:getvalueof var="totalDiscount" value="${pricesList[1]}"/>
+<dsp:getvalueof var="handlingPrice" value="${pricesList[2]}"/>
+<dsp:getvalueof var="shippingPrice" value="${pricesList[3]}"/>
+<dsp:getvalueof var="shippingDiscount" value="${pricesList[4]}"/>
+<dsp:getvalueof var="total" value="${pricesList[5]}"/>
+<dsp:getvalueof var="VAT" bean="/com/castorama/commerce/pricing/CastVATManager.VATValue"/>
+<dsp:getvalueof var="fullPlusVAT" value="${1 + VAT/100}"/>
+
+<h4><fmt:formatNumber value="${rawSubTotal}" type="currency" currencyCode="${currencyCode}" /></h4>
+
+<c:if test="${showVousAvezEconomise}">
+  <p><fmt:formatNumber value="${totalDiscount}" type="currency" currencyCode="${currencyCode}" /></p></c:if>
+<dsp:getvalueof var="processingFeeNiceWord" param="order.processingFeeNiceWord"/>
+<c:choose>
+  <c:when test="${orderDeliveryType == 'clickAndCollect' && not empty processingFeeNiceWord}">
+    <p>${processingFeeNiceWord}</p>
+  </c:when>
+  <c:otherwise>
+    <p><fmt:formatNumber value="${handlingPrice}" type="currency" currencyCode="${currencyCode}" /></p>
+  </c:otherwise>
+</c:choose>
+<p><fmt:formatNumber value="${shippingPrice}" type="currency" currencyCode="${currencyCode}" /></p>
+<c:if test="${showRemiseLivraison}">
+  <p><fmt:formatNumber value="${shippingDiscount}" type="currency" currencyCode="${currencyCode}" /></p></c:if>
+
+<h5><fmt:formatNumber value="${total}" type="currency" currencyCode="${currencyCode}" /></h5>
+
+<!-- Set values for Zanox tag -->
+<dsp:getvalueof var="requestURI" bean="/OriginatingRequest.requestURI"/>
+<c:if test="${fn:contains(requestURI, 'confirmation.jsp')}">
+  <fmt:formatNumber var="orderDiscount" value="${-totalDiscount - tagCommanderDiscountAmountATI}" minFractionDigits="6" groupingUsed="false"/>
+  <dsp:getvalueof var="orderDiscount" value="${fn:replace(orderDiscount, ',', '.')}" />
+
+  <fmt:formatNumber var="handlingPrice" value="${handlingPrice}" minFractionDigits="6" groupingUsed="false"/>
+  <dsp:getvalueof var="handlingPrice" value="${fn:replace(handlingPrice, ',', '.')}" />
+
+  <fmt:formatNumber var="realShippingPrice" value="${shippingPrice + shippingDiscount}" minFractionDigits="6" groupingUsed="false"/>
+  <dsp:getvalueof var="realShippingPrice" value="${fn:replace(realShippingPrice, ',', '.')}" />
+
+  <fmt:formatNumber var="tagCommanderTotalOrderTaxTVA" value="${tagCommanderTotalOrderTaxTVA}" minFractionDigits="6" groupingUsed="false"/>
+  <dsp:getvalueof var="tagCommanderTotalOrderTaxTVA" value="${fn:replace(tagCommanderTotalOrderTaxTVA, ',', '.')}" />
+  <dsp:getvalueof var="totalProductsNum" value="${order.totalCommerceItemCount}"/>
+  <dsp:getvalueof var="orderTaxTVA" value="${tagCommanderTotalOrderTaxTVA / totalProductsNum}" />
+
+  <dsp:getvalueof var="tagCommanderOrderAmountATIWithoutSF" value="${rawSubTotal + handlingPrice - orderDiscount}" scope="request"/>
+  <dsp:getvalueof var="tagCommanderOrderAmountATIWithSF" value="${total}" scope="request"/>
+
+  <c:if test="${totalDiscount!=0}">
+    <dsp:getvalueof var="tagCommanderDiscountAmountATI" value="${-totalDiscount}" scope="request" />
+  </c:if>
+  <dsp:getvalueof var="orderTFDiscount" value="${orderDiscount/(1+(orderTaxTVA/100))}" />
+  <dsp:getvalueof var="tagCommanderDiscountAmountTF" value="${tagCommanderDiscountAmountTF + orderTFDiscount}" scope="request" />
+
+  <dsp:getvalueof var="tagCommanderOrderAmountTFWithoutSF" value="${tagCommanderOrderAmountTFWithoutSF + handlingPrice/fullPlusVAT - orderTFDiscount}" scope="request"/>
+  <dsp:getvalueof var="tagCommanderOrderAmountTFWithSF" value="${tagCommanderOrderAmountTFWithoutSF + realShippingPrice/fullPlusVAT}" scope="request"/>
+
+  <dsp:getvalueof var="tagCommanderShippingAmountATI" value="${realShippingPrice}" scope="request"/>
+  <dsp:getvalueof var="tagCommanderShippingAmountTF" value="${realShippingPrice/fullPlusVAT}" scope="request"/>
+</c:if>

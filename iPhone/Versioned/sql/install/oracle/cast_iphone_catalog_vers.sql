@@ -1,0 +1,13 @@
+CREATE TABLE CAST_IPHONE_CATALOG (
+	ASSET_VERSION	                        NUMBER(19)   NOT NULL,
+	CATALOG_ID                              VARCHAR2(40) NOT NULL,
+	CATEGORY_ID                             VARCHAR2(40) NULL,
+	PRIMARY KEY (CATALOG_ID,ASSET_VERSION));
+
+CREATE TABLE CAST_IPHONE_SKU_IMAGES (
+	ASSET_VERSION	                        NUMBER(19)   NOT NULL,
+    SKU_ID                                  VARCHAR2(40) NOT NULL,
+    AUG_TRANSP_IMAGE_ID                     VARCHAR2(40) NULL,
+    AUG_CAROUSEL_IMAGE_ID                   VARCHAR2(40) NULL,  
+	PRIMARY KEY (SKU_ID,ASSET_VERSION));
+COMMIT;

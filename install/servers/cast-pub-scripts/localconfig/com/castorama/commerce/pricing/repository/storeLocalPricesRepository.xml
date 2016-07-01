@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+  <header>
+    <name>Store Local Price Lists</name>
+    <author>EPAM Team</author>
+    <version>1.0</version>
+  </header>
+
+  <item-descriptor name="priceList" cache-mode="simple" id-space-name="priceList" 
+                   item-cache-size="250" query-cache-size="250" display-property="displayName" 
+                   display-name-resource="itemDescriptorPriceList">
+
+    <attribute name="resourceBundle" value="atg.commerce.PriceListsTemplateResources"/>
+    <table name="cast_price_list" type="primary" id-column-name="price_list_id">
+      <property name="id" column-name="price_list_id" data-type="string" expert="true" writable="false"
+                category-resource="priceListInfo" display-name-resource="id">
+        <attribute name="propertySortPriority" value="0"/>
+      </property>
+      <property name="displayName" column-name="display_name" data-type="string" required="true" 
+                category-resource="priceListBasics" display-name-resource="name">
+         <attribute name="propertySortPriority" value="1"/>
+      </property>
+      <property name="locale" column-name="locale" data-type="enumerated" default="fr_FR_EURO"
+                required="true" category-resource="priceListBasics" display-name-resource="locale">
+        <attribute name="useCodeForValue" value="false" />
+        <option value="en_US" code="0" />
+        <option value="de_DE_EURO" code="1" />
+        <option value="ja_JP" code="2" />
+        <option value="fr_FR_EURO" code="3" />
+        <attribute name="propertySortPriority" value="2" />
+      </property>
+      <property expert="false" readable="true" category-resource="priceListBasics" item-type="priceList" 
+                column-name="base_price_list" display-name-resource="basePriceList" hidden="false" 
+                writable="true" name="basePriceList" required="false" cache-mode="inherit" queryable="true">
+        <attribute name="propertySortPriority" value="3"/>
+      </property>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="price" cache-mode="simple" id-space-name="price" 
+                 item-cache-size="50000" query-cache-size="5000" display-name-resource="itemDescriptorPrice">
+    <attribute name="resourceBundle" value="atg.commerce.PriceListsTemplateResources"/>
+  
+    <table name="cast_price" type="primary" id-column-name="price_id" shared-table-sequence="1">
+      <property name="priceList" column-name="price_list" item-type="priceList"  required="true"
+                  category-resource="priceListInfo" display-name-resource="priceList">
+           <attribute name="propertySortPriority" value="10"/>
+      </property>
+        <property name="productId" column-name="product_id" data-type="string" 
+                  category-resource="priceListBasics" display-name-resource="productId">
+           <attribute name="propertySortPriority" value="20"/>
+      </property>
+        <property name="skuId" column-name="sku_id" data-type="string" 
+                  category-resource="priceListBasics" display-name-resource="skuId">
+        <attribute name="propertySortPriority" value="30"/>
+      </property>
+      <property name="listPrice" column-name="list_price" data-type="double" 
+                  category-resource="priceListRegular" display-name-resource="listPrice">
+        <attribute name="propertySortPriority" value="40"/>
+      </property>
+      <property expert="false" readable="true" category-resource="priceListBasics" column-name="parent_sku_id" 
+                display-name-resource="parentSkuId" data-type="string" hidden="false" writable="true" name="parentSkuId" 
+                required="false" cache-mode="inherit" queryable="true">
+        <attribute name="propertySortPriority" value="50"/>
+      </property>
+      <property expert="false" readable="true" category-resource="priceListBasics" display-name-resource="pricingScheme" 
+                writable="true" cache-mode="inherit" column-name="pricing_scheme" default="listPrice" data-type="enumerated" 
+                hidden="false" name="pricingScheme" required="true" queryable="true">
+          <attribute name="useCodeForValue" value="false"/>
+          <attribute name="propertySortPriority" value="60"/>
+          <option value="listPrice" code="0"/>
+          <option value="bulkPrice" code="1"/>
+          <option value="tieredPrice" code="2"/>
+      </property>
+      <property name="endDate" data-type="timestamp" column-name="end_date" 
+                category-resource="priceListBasics" display-name-resource="endDate">
+        <attribute name="propertySortPriority" value="70"/>
+      </property>
+    </table>
+  </item-descriptor>
+
+</gsa-template>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <!-- 1 items of type textProcessingOptionsSet -->
+
+        <add-item item-descriptor="textProcessingOptionsSet" id="100001">
+            <set-property name="created"><![CDATA[7/30/2009 00:00:00]]></set-property>
+            <set-property name="options">
+                <![CDATA[sentenceMinSize=100034,topicPropOnly=100022,tableCell=100043,wildcardChar=100056,ruleEnable=100013,metatagTermProp=100011,topicEnable=100016,spellMaxSuggestions=100050,metatagStringProp=100006,metatagSearchable=100041,metatagNorm=100038,topicRelevance=100019,topicDisable=100017,docNormMin=100032,queryRuleDisable=100015,ignoreStatement=100046,metatagNumberProp=100005,targetLanguage=100048,language=100001,expandedStemming=100053,indexContentMax=100028,featureZones=100035,topicConfidence=100020,storeSource=100027,metatagIndex=100040,ignoreZone=100047,indexScheme=100023,metatag=100003,indexTermMax=100030,targetLanguageExpansion=100054,metatagInfoProp=100010,metatagTextProp=100007,indexStopThresh=100029,propertyMapping=100058,index=100025,metatagFloatProp=100009,metatagExclude=100004,indexImageFile=100026,metatagEnumProp=100008,packageDisable=100012,queryRuleEnable=100014,indexCacheSize=100024,context=100002,indexTermThresh=100031,topicInheritance=100021,spellSuggestionFactor=100052,metatagDelim=100037,topicMaximum=100018,tableStructure=100044,metatagPropWeight=100042,delete=100045,sentenceMaxSize=100033,spellSuggestionCutoff=100051,featureSentenceTerms=100036,metatagSummary=100039,spellChecker=100049,wildcardMax=100055,securityRole=100057]]></set-property>
+            <set-property name="lastModified"><![CDATA[7/30/2009 00:00:00]]></set-property>
+            <set-property name="level"><![CDATA[index]]></set-property>
+            <set-property name="name"><![CDATA[FR_fr]]></set-property>
+        </add-item>
+
+        <!-- 58 items of type textProcessingOptionBase -->
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100041">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagSearchable]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100029">
+            <set-property name="values"><![CDATA[0]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[indexStopThresh]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100043">
+            <set-property name="values"><![CDATA[TAB]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[tableCell]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100022">
+            <set-property name="values"><![CDATA[false]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[topicPropOnly]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100044">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[tableStructure]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100056">
+            <set-property name="values"><![CDATA[.-_/]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[wildcardChar]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100057">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[securityRole]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100051">
+            <set-property name="values"><![CDATA[60]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[spellSuggestionCutoff]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100034">
+            <set-property name="values"><![CDATA[4]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[sentenceMinSize]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100012">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[packageDisable]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100013">
+            <set-property name="values"><![CDATA[Numbers,AlphaNumeric,InternetId,medium,heavy]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[ruleEnable]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100006">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagStringProp]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100030">
+            <set-property name="values"><![CDATA[1000000]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[indexTermMax]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100049">
+            <set-property name="values"><![CDATA[internal-wintertree]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[spellChecker]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100025">
+            <set-property name="values"><![CDATA[sentence]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[index]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100003">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatag]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100009">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagFloatProp]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100033">
+            <set-property name="values"><![CDATA[50]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[sentenceMaxSize]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100047">
+            <set-property name="values"><![CDATA[sup,sub]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[ignoreZone]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100017">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[topicDisable]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100008">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagEnumProp]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100039">
+            <set-property name="values"><![CDATA[atg:summary,primus:summary]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagSummary]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100050">
+            <set-property name="values"><![CDATA[4]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[spellMaxSuggestions]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100015">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[queryRuleDisable]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100007">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagTextProp]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100038">
+            <set-property name="values"><![CDATA[false]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagNorm]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100004">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagExclude]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100016">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[topicEnable]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100021">
+            <set-property name="values"><![CDATA[false]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[topicInheritance]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100014">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[queryRuleEnable]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100048">
+            <set-property name="values"><![CDATA[same]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[targetLanguage]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100037">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagDelim]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100026">
+            <set-property name="values"><![CDATA[ppt,vsd]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[indexImageFile]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100028">
+            <set-property name="values"><![CDATA[1000000]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[indexContentMax]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100023">
+            <set-property name="values"><![CDATA[compressed]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[indexScheme]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100045">
+            <set-property name="values"><![CDATA[select,ae_noindex,noscript,noframes,script,style]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[delete]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100035">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[featureZones]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100001">
+            <set-property name="values"><![CDATA[French]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[language]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100019">
+            <set-property name="values"><![CDATA[1]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[topicRelevance]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100005">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagNumberProp]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100053">
+            <set-property name="values"><![CDATA[untagged]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[expandedStemming]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100018">
+            <set-property name="values"><![CDATA[10]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[topicMaximum]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100054">
+            <set-property name="values"><![CDATA[false]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[targetLanguageExpansion]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100027">
+            <set-property name="values"><![CDATA[true]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[storeSource]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100010">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagInfoProp]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100032">
+            <set-property name="values"><![CDATA[20]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[docNormMin]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100020">
+            <set-property name="values"><![CDATA[0]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[topicConfidence]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100052">
+            <set-property name="values"><![CDATA[10]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[spellSuggestionFactor]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100042">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagPropWeight]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100031">
+            <set-property name="values"><![CDATA[1]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[indexTermThresh]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100011">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagTermProp]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100036">
+            <set-property name="values"><![CDATA[hasURL,hasMoney,hasSpeed,hasEmail,hasPhoneNum]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[featureSentenceTerms]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100058">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[propertyMapping]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100040">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[metatagIndex]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100002">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[context]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100046">
+            <set-property name="values"><![CDATA[]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[ignoreStatement]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100055">
+            <set-property name="values"><![CDATA[20]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[wildcardMax]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="textProcessingOptionBase" id="100024">
+            <set-property name="values"><![CDATA[5000]]></set-property>
+            <set-property name="TPOSet"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[indexCacheSize]]></set-property>
+        </add-item>
+
+    </import-items>
+
+</gsa-template>

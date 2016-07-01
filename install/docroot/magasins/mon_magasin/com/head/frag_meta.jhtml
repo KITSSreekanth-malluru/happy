@@ -1,0 +1,22 @@
+<droplet src="/com/head/frag_meta.jhtml"></droplet>
+<DROPLET BEAN="/atg/targeting/RepositoryLookup">
+<PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+<PARAM NAME="itemDescriptor" VALUE="magasin">
+<PARAM NAME="elementName" VALUE="magasin">
+<PARAM NAME="id" VALUE="param:magasinid">
+<OPARAM NAME="output">
+<droplet bean="/castorama/utils/DropletDesaccentuation">
+<param name="chaine_avec_accents_potentiels" value="param:magasin.nom">
+<oparam name="sortie">
+<meta name="description" content="`request.getParameter("sans_accents")` - Castorama : magasins de bricolage, jardinage et décoration dans toute la France">
+<meta name="keywords" content="`request.getParameter("sans_accents")`, castorama ile de france, est, ouest, nord, rhone alpes, atlantique, languedoc, provence, france, castorama magasin, magasin bricolage castorama, casto, magasin castorama, bourg  en bresse, antibes, le cannet, mandelieu, aix en provence, la valentine, plan de campagne, vitrolles, caen, angouleme, aytre la rochelle, dijon, besancon, montbeliard, saint marcel les valence, brest, quimper, nimes, l’union, portet sur garonne, saint orens, merignac, villenave d’ornon, beziers, montpellier, saint clement de riviere, rennes, chambray les tours, bourgoin jallieu, grenoble, roanne, saint etienne, nantes, saint nazaire, olivet, agen, reims, nancy, vannes, metz, terville, bondues, dunkerque, englos, hellemmes, creil, hénin beaumont, clermont, lille, anglet, pau, strasbourg, colmar, kingersheim, bron, dardilly, givors, rillieux la pape, villefranche sur saone, chalon sur saone, le mans, chambery, metz, paris clichy, paris nation, barentin, le havre, claye souilly, melun, pontault combault, coignieres, sartrouville, velizy, niort, puget sur argens, toulon la garde, toulon la seyne, avignon, poitiers, limoges, ballainvilliers, corbeil, montgeron, nanterre, villemomble, villetaneuse, creteil, fresnes, ormesson, ezanville, gonesse, eragny, castorama">
+</oparam>
+</droplet>
+</OPARAM>
+</DROPLET>
+<DROPLET BEAN="/castorama/droplet/RequestFromVerity">
+<OPARAM NAME="true">
+<META NAME="univers" CONTENT="magasins">
+<META NAME="rubrique" CONTENT="Magasins">
+</OPARAM>
+</DROPLET>

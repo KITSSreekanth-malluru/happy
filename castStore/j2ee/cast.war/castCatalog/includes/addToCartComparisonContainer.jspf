@@ -1,0 +1,52 @@
+<dsp:getvalueof var="stockVisualizationDisabled" 
+          bean="/com/castorama/stockvisualization/StockVisualizationManager.stockVisualizationDisabled" />
+<dsp:getvalueof var="requestURIwithQueryString" param="continueUrl"/>
+<dsp:getvalueof var="showMagasinLinkIfStockVisualizationDisabled" value="${false}"/>
+<dsp:getvalueof var="addToCartMode" value=""/>
+<dsp:getvalueof var="prodIdS" param="key.repositoryId"/>
+<dsp:getvalueof var="addWebStock" value="${0}"/>
+<dsp:getvalueof var="addLocalStock" value="${0}"/>
+
+<dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet">
+ <dsp:param name="product" param="key"/>
+ <dsp:param name="store" bean="Profile.currentLocalStore" />
+ <dsp:param name="svAvailableMap" value="${svAvailableMap}" />
+  <dsp:oparam name="immidiateWithdrawal"><!-- SAS ${prodIdS} IW-->
+  </dsp:oparam>
+  <dsp:oparam name="remainingStock"><!-- SAS ${prodIdS} RS-->
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+  </dsp:oparam>
+  <dsp:oparam name="soldOnlyInStore"><!-- SAS ${prodIdS} SOIS-->
+  <dsp:getvalueof var="showMagasinLinkIfStockVisualizationDisabled" value="${true}"/>
+  </dsp:oparam>
+  <dsp:oparam name="deliveryTime"><!-- SAS ${prodIdS} DT-->
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccRemainingStock"><!-- SAS ${prodIdS} CCRS-->
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccSoldOnlyInStore"><!-- SAS ${prodIdS} CCSOIS-->
+    <dsp:getvalueof var="addToCartMode" value="local"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccDeliveryTime"><!-- SAS ${prodIdS} CCDT-->
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+  </dsp:oparam>
+</dsp:droplet>
+<!-- draw price block for add to cart comparison container start for ${prodIdS} -->
+<c:if test="${not empty addToCartMode}">
+  <dsp:form method="post">
+    <dsp:input type="hidden" bean="CastShoppingCartFormHandler.webStockToAdd" value="${addWebStock}"/>
+    <dsp:input type="hidden" bean="CastShoppingCartFormHandler.localStockToAdd" value="${addLocalStock}"/>
+    <dsp:input bean="CastShoppingCartFormHandler.quantity" type="hidden" value="1"/>
+    <dsp:input bean="CastShoppingCartFormHandler.addToBoth" type="hidden" value="${addToCartMode}"/>
+    <dsp:input bean="CastShoppingCartFormHandler.productId" type="hidden"  paramvalue="product.repositoryId"/>
+    <dsp:input bean="CastShoppingCartFormHandler.catalogRefIds" type="hidden" value="${skuId}"/>
+    <dsp:input bean="CastShoppingCartFormHandler.addItemToOrder" type="submit" value='<fmt:message key="global_featuredProductPageList.addToCart"/>' iclass="buttonCartBig" onclick="disableButton(this)"/>
+    <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderSuccessURL" type="hidden" value="${contextPath}/checkout/preshopping.jsp"/>
+    <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderErrorURL" type="hidden"  value="${requestURIwithQueryString}" />
+  </dsp:form>
+</c:if>
+<c:if test="${showMagasinLinkIfStockVisualizationDisabled && stockVisualizationDisabled}">
+  <dsp:include page="/magasin/includes/magasin-button-link.jsp"/>
+</c:if>
+<!-- draw price block for add to cart comparison container end for ${prodIdS} -->

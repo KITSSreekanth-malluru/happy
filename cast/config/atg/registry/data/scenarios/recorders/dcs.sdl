@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE scenario
+  SYSTEM
+  "dynamosystemresource:/atg/scenario/definition/sdl.dtd">
+
+<scenario modification-time="963252213103" enabled="false" author="admin" creation-time="955071601000">
+  <segment>
+    <segment-name>Item Added to Order</segment-name>
+    <!--================================-->
+    <!--== Item added to order  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.commerce.order.ItemAddedToOrder</event-name>
+    </event>
+    <!--================================-->
+    <!--== Record event Item added to order in dataset Item added to order  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>recordEvent</action-name>
+      <action-param name="dataset">
+        <constant>/itemaddedtoorder.xml</constant>
+      </action-param>
+    </action>
+  </segment>
+  <segment>
+    <segment-name>Item Removed from Order</segment-name>
+    <!--================================-->
+    <!--== Item removed from order  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.commerce.order.ItemRemovedFromOrder</event-name>
+    </event>
+    <!--================================-->
+    <!--== Record event Item removed from order in dataset Item removed from order  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>recordEvent</action-name>
+      <action-param name="dataset">
+        <constant>/itemremovedfromorder.xml</constant>
+      </action-param>
+    </action>
+  </segment>
+  <segment>
+    <segment-name>Scenario Added Item to Order</segment-name>
+    <!--================================-->
+    <!--== A scenario added an item to an order  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.commerce.promotion.ScenarioAddedItemToOrder</event-name>
+    </event>
+    <!--================================-->
+    <!--== Record event A scenario added an item to an order in dataset Scenario added item to order  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>recordEvent</action-name>
+      <action-param name="dataset">
+        <constant>/scenarioaddeditemtoorder.xml</constant>
+      </action-param>
+    </action>
+  </segment>
+</scenario>

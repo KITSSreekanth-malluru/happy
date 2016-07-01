@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+ATG-Module-Uri: iphone.war
+ATG-Context-Root: iPhoneStore
+ATG-Required: commerce.castorama.castIphone

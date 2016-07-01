@@ -1,0 +1,64 @@
+<div class="orderContactContainer">
+	<dsp:getvalueof var="shippingGroup" param="order.shippingGroups[0]" />
+	<dsp:getvalueof var="shippingName" param="order.shippingGroups[0].adresseLibelle" />
+	<dsp:getvalueof var="paymentGroup" param="order.paymentGroups[0]" />
+	<dsp:getvalueof var="paymentMethod" param="order.paymentGroups[0].paymentMethod" />
+	<dsp:getvalueof var="orderTotal" param="details.orderTotal" />
+	<dsp:getvalueof var="orderStateBO" param="order.BOState" />
+    <dsp:getvalueof var="orderDeliveryType" param="order.deliveryType" />
+
+	<div class="contactContentBlock orderContact">
+		<h3><fmt:message key="msg.delivery.primary" /></h3>
+		<div class="subtitle"> </div>
+		<div class="contactContent">
+			<dsp:include page="includes/contentAddressInfo2.jsp">
+				<dsp:param name="group" value="${paymentGroup}" />
+			</dsp:include>
+		</div>
+	</div>
+    <c:if test="${orderDeliveryType == 'deliveryToHome'}">
+      <div class="contactContentBlock orderContact">
+        <h3><fmt:message key="msg.delivery.secondary" /></h3>
+        <c:if test="${not empty shippingName && fn:length(shippingName) > 0 }">
+          <div class="subtitle"><fmt:message key="msg.address.nom" />&nbsp;${shippingName}</div>
+        </c:if>
+        <div class="contactContent">
+          <dsp:include page="includes/contentAddressInfo2.jsp">
+            <dsp:param name="group" value="${shippingGroup}" />
+          </dsp:include>
+        </div>
+      </div>
+    </c:if>
+	<div class="contactContentBlock orderContact blockLast">
+		<h3><fmt:message key="confirmation.order.payment"/></h3>
+		<div class="subtitle"> </div>
+		<div class="contactContent">
+			<dsp:droplet name="/com/castorama/droplet/OrderPaymentDroplet" >
+      	<dsp:param name="paymentMethod" value="${paymentMethod}"/>
+        <dsp:param name="orderId" value="${orderId}" />
+        <dsp:oparam name="output">
+          <dsp:getvalueof var="paymentAmount" param="paymentAmount" />
+          <dsp:valueof param="paymentType" /> : <span class="blue">
+          <c:choose>
+            <c:when test="${null == paymentAmount}" >
+            	<c:choose>
+              	<c:when test="${'VALIDE' == orderStateBO}">
+              		<dsp:valueof value="${orderTotal}" converter="euro" locale="fr_FR"/>
+              	</c:when>
+              	<c:otherwise>
+              		<dsp:valueof param="paymentDescription" />
+              	</c:otherwise>
+              </c:choose>
+          	</c:when>
+           	<c:otherwise>
+           	  <dsp:valueof param="paymentAmount" converter="euro" locale="fr_FR"/>
+           	</c:otherwise>
+           </c:choose>
+           </span><br/>
+        </dsp:oparam>
+      </dsp:droplet>
+			<fmt:message key="confirmation.order.payment.total"/> :
+			<span class="blue">&nbsp;<dsp:valueof value="${orderTotal}" converter="euro" locale="fr_FR"/></span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xcl-stylesheet resource="atg/ui/expreditor/xcl/grammar.xsl"?>
+<?xcl-stylesheet resource="atg/ui/scenario/expression/scenario-grammar.xsl"?>
+
+<context>
+
+	<include template="atg.ui.process.expression.expression-grammar" />
+
+	<sequence id="referee-email-template">
+		<xml-template>
+			<action-param name="template">
+				<apply-xml-templates />
+			</action-param>
+		</xml-template>
+		<token>
+			<description>template for Referee notification</description>
+		</token>
+		<placeholder>
+			<rule name="mail-path" />
+		</placeholder>
+	</sequence>
+
+	<sequence id="referrer-val-email-template">
+		<xml-template>
+			<action-param name="referrerTemplate">
+				<apply-xml-templates />
+			</action-param>
+		</xml-template>
+		<token>
+			<description>template for Referrer validation</description>
+		</token>
+		<placeholder>
+			<rule name="mail-path" />
+		</placeholder>
+	</sequence>
+
+	<sequence id="referrer-email-template">
+		<xml-template>
+			<action-param name="template">
+				<apply-xml-templates />
+			</action-param>
+		</xml-template>
+		<token>
+			<description>template for Referrer validation</description>
+		</token>
+		<placeholder>
+			<rule name="mail-path" />
+		</placeholder>
+	</sequence>
+
+	<sequence id="action-referrer">
+		<xml-template>
+			<action-param name="referrer">
+				<apply-xml-templates />
+			</action-param>
+		</xml-template>
+		<token>
+			<description>from</description>
+		</token>
+		<placeholder>
+			<sequence>
+				<expression-class>atg.ui.expreditor.TypedSequenceExpression</expression-class>
+				<attribute name="typeClassName" value="atg.repository.RepositoryItem" />
+				<attribute name="repositoryName" value="/atg/userprofiling/ProfileAdapterRepository" />
+				<attribute name="repositoryItemType" value="user" />
+				<rule name="expr" />
+			</sequence>
+		</placeholder>
+	</sequence>
+
+	<sequence id="action-SendCouponToReferrer">
+		<xml-template>
+			<action-name>SendCouponToReferrer</action-name>
+			<apply-xml-templates />
+		</xml-template>
+		<token>
+			<description>Send Coupon To Referrer</description>
+		</token>
+		<rule name="referrer-email-template" />
+	</sequence>
+
+	<sequence id="action-SendCouponToReferee">
+		<xml-template>
+			<action-name>SendCouponToReferee</action-name>
+			<apply-xml-templates />
+		</xml-template>
+		<token>
+			<description>Send Coupon To Referee</description>
+		</token>
+		<rule name="referee-email-template" />
+		<rule name="referrer-val-email-template" />
+	</sequence>
+
+
+</context>

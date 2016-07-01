@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+  PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN"
+         "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+  <header>
+    <name>Tickets</name>
+    <author>Vasili Ivus</author>
+    <description>Repository for cusomer's tickets</description>
+  </header>
+
+  <item-descriptor name="ticketHeader" last-modified-property="lastActivity" cache-mode="disabled">
+    <table name="CASTO_TICKET_HEADER" type="primary" id-column-name="HEADER_ID">
+      <property name="id" data-types="string" column-name="HEADER_ID" writable="false"/>
+      <property name="wdmId" data-type="string" column-name="WDM_ID" display-name-resource="wdmId" />
+      <property name="ticketId" data-type="string" column-name="TICKET_ID" display-name-resource="ticketId" />
+      <property name="storeId" data-type="string" column-name="STORE_ID" display-name-resource="storeId" />
+      <property name="ticketDate" data-type="timestamp" column-name="TICKET_DATE" display-name-resource="ticketDate" />
+      <property name="homeId" data-type="string" column-name="HOME_ID" display-name-resource="homeId" />
+      <property name="tillId" data-type="string" column-name="TILL_ID" display-name-resource="tillId" />
+      <property name="hostessId" data-type="string" column-name="HOSTESS_ID" display-name-resource="hostessId" />
+      <property name="totalQuantity" data-type="double" column-name="TOTAL_QUANTITY" display-name-resource="totalQuantity" />
+      <property name="totalPriceTTC" data-type="double" column-name="TOTAL_PRICE_TTC" display-name-resource="totalPriceTTC" />
+      <property name="totalHT" data-type="double" column-name="TOTAL_HT" display-name-resource="totalHT" />
+      <property name="lastActivity" data-type="timestamp" column-name="LAST_MODIFIED"  display-name-resource="lastActivity" />
+    </table>
+    <table name="CASTO_TICKET_METHOD" type="multi" id-column-name="HEADER_ID">
+      <property name="methods" data-type="set"
+                component-item-type="ticketMethod"
+                column-names="METHOD_ID"
+                cascade="update,delete" 
+                display-name-resource="methods" />
+    </table>
+    <table name="CASTO_TICKET_LINE" type="multi" id-column-name="HEADER_ID">
+      <property name="lines" data-type="set"
+                component-item-type="ticketLine"
+                column-names="LINE_ID"
+                cascade="update,delete" 
+                display-name-resource="lines" />
+    </table>
+    <attribute name="resourceBundle" value="com.castorama.ticket.TicketTemplateResources"/>
+    <attribute name="updateLastModified" value="true"/>
+  </item-descriptor>
+
+  <item-descriptor name="ticketLine" cache-mode="disabled">
+    <table name="CASTO_TICKET_LINE" type="primary" id-column-name="LINE_ID">
+      <property name="id" data-types="string" column-name="LINE_ID" writable="false"/>
+      <property name="header" item-type="ticketHeader" column-name="HEADER_ID" display-name-resource="header" />
+      <property name="productId" data-type="string" column-name="PRODUCT_ID" display-name-resource="productId" />
+      <property name="productQuantity" data-type="double" column-name="PRODUCT_QUANTITY" display-name-resource="productQuantity" />
+      <property name="productLabel" data-type="string" column-name="PRODUCT_LABEL" display-name-resource="productLabel" />
+      <property name="unitPriceHT" data-type="double" column-name="UNIT_PRICE_HT" display-name-resource="unitPriceHT" />
+      <property name="unitPriceTTC" data-type="double" column-name="UNIT_PRICE_TTC" display-name-resource="unitPriceTTC" />
+      <property name="rateTVA" data-type="double" column-name="RATE_TVA" display-name-resource="rateTVA" />
+      <property name="discountAmount" data-type="double" column-name="DISCOUNT_AMOUNT" display-name-resource="discountAmount" />
+      <property name="discountLabel" data-type="string" column-name="DISCOUNT_LABEL" display-name-resource="discountLabel" />
+      <property name="productCreationDate" data-type="timestamp" column-name="PRODUCT_DATE" display-name-resource="productCreationDate" />
+      <property name="lineNumber" data-type="int" column-name="LINE_NUMBER" display-name-resource="lineNumber" />
+    </table>
+    <attribute name="resourceBundle" value="com.castorama.ticket.TicketTemplateResources"/>
+  </item-descriptor>
+
+  <item-descriptor name="ticketMethod" cache-mode="disabled">
+    <table name="CASTO_TICKET_METHOD" type="primary" id-column-name="METHOD_ID">
+      <property name="id" data-types="string" column-names="METHOD_ID" />
+      <property name="header" item-type="ticketHeader" column-name="HEADER_ID" display-name-resource="header" />
+      <property name="paymentAmmount" data-type="double" column-name="PAYMENT_AMMOUNT" display-name-resource="paymentAmmount" />
+      <property name="paymentType" data-type="int" column-name="PAYMENT_TYPE" display-name-resource="paymentType"/>
+    </table>
+    <attribute name="resourceBundle" value="com.castorama.ticket.TicketTemplateResources"/>
+  </item-descriptor>
+
+  <item-descriptor name="ticketStatistic" cache-mode="disabled">
+    <table name="CASTO_TICKET_STATISTIC" type="primary" id-column-name="ID">
+      <property name="id" data-types="string" column-names="ID" />
+      <property name="importName" data-type="string" column-name="IMPORT_NAME" display-name-resource="importName" />
+      <property name="importDate" data-type="timestamp" column-name="IMPORT_DATE" display-name-resource="importDate" />
+      <property name="importType" data-type="int" column-name="IMPORT_TYPE" display-name-resource="importType"/>
+      <property name="successCount" data-type="int" column-name="SUCCESS_COUNT" display-name-resource="successCount"/>
+      <property name="errorCount" data-type="int" column-name="ERROR_COUNT" display-name-resource="errorCount"/>
+    </table>
+    <attribute name="resourceBundle" value="com.castorama.ticket.TicketTemplateResources"/>
+  </item-descriptor>
+
+</gsa-template>

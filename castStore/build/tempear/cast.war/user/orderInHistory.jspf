@@ -1,0 +1,120 @@
+
+<dsp:getvalueof var="count" param="count" />
+<dsp:getvalueof var="size" param="size" />
+<dsp:getvalueof var="all_orders" param="all_orders" />
+<tr>
+	<td class="tblSplitter" colspan="5"><div><!--~--></div></td>
+</tr>
+
+<dsp:getvalueof var="orderInHistoryId" param="element.id" />
+<dsp:getvalueof var="deliveryType" param="element.deliveryType" />
+<dsp:droplet name="/com/castorama/droplet/MessageStateDroplet">
+	<dsp:param name="orderId" param="element.id" />
+	<dsp:oparam name="output">
+		<tr>
+			<td>
+				<dsp:valueof date="dd/MM/yyyy" param="element.submittedDate" />
+			</td>
+			<td>		
+				<div class="orderNumItemLink">
+					<dsp:a href="order.jsp">
+						<dsp:param name="orderId" param="element.id" />
+						<dsp:valueof param="element.id" />
+					</dsp:a>
+				</div>
+				<dsp:a href="order.jsp" iclass="darkBlueLink">
+					<dsp:param name="orderId" param="element.id" />
+                    <fmt:message key="client.orders.order.see.details"/>
+				</dsp:a>
+			</td>
+            <td>
+                <div class="orderType">
+                  <c:choose>
+                    <c:when test="${deliveryType == 'clickAndCollect'}">
+                      <div class="removingStore"><fmt:message key="cc.retrait.en.magasin"/></div>
+                    </c:when>
+                    <c:otherwise>
+                      <div class="deliveryToHome"><fmt:message key="msg.cart.delivery_at"/></div>
+                    </c:otherwise>
+                  </c:choose>
+               </div>
+            </td>
+			<td>
+              <div class="orderNumItem">  
+                <%@include file="orderState.jspf" %>
+              </div>
+              <c:if test="${deliveryType == 'deliveryToHome'}">
+                <div class="orderNumQuestion">
+                  <a href="javascript:showPopup('orderStatesHelp');"><img src="../images/icoQuestionOrange.png" alt="" title="" /></a>
+                </div>
+              </c:if>
+			</td>
+			<td class="lastCell center">
+                <c:if test="${deliveryType == 'deliveryToHome'}">
+                  <dsp:getvalueof var="messages_count" param="states.MESSAGES_COUNT" />
+                  <c:choose>
+                    <c:when test="${1 == messages_count}">
+                      <dsp:getvalueof var="last_messageId" param="states.LAST_MESSAGE.repositoryId" />
+                      <c:set var="link" value="javascript:window.location='${pageContext.request.contextPath}/user/ordersHistory.jsp?orderView=view&messageId=${last_messageId}';" />
+                    </c:when>
+                    <c:when test="${1 < messages_count}">
+                      <c:set var="link" value="javascript:window.location='${pageContext.request.contextPath}/user/order.jsp?orderId=${orderInHistoryId}#orderMessages';" />
+                    </c:when>
+                    <c:otherwise>
+                      <c:set var="link" value="javascript:void(0);" />
+                    </c:otherwise>
+                  </c:choose>
+                  <c:choose>
+                    <c:when test="${0 < messages_count}">
+                      <dsp:getvalueof var="unreaded_count" param="states.UNREADED_COUNT" />
+                      <dsp:getvalueof var="last_unreaded" param="states.LAST_UNREADED" />
+                      <dsp:getvalueof var="response_required" param="states.RESPONSE_REQUIRED" />
+                      <c:choose>
+                        <c:when test="${0 < unreaded_count}">
+                          <div class="orderHistoryIcons">
+                            <a href="${link}"><img class="icoMail" src="../images/blank.gif" alt="" title="" width="16" height="16" /></a>
+                          </div>
+                          <div class="orderHistoryTxt">${unreaded_count} message(s) non lu(s)</div>
+                          <c:if test="${response_required}">
+                            <div class="red">
+                              <strong> <fmt:message key="client.orders.message.response.required" />
+                              </strong>
+                            </div>
+                          </c:if>
+                        </c:when>
+                        <c:otherwise>
+                          <div class="orderHistoryIcons">
+                            <a href="${link}"><img class="icoMailOpen" src="../images/blank.gif" alt="" title="" width="16" height="16" /></a>
+                          </div>
+                          <c:choose>
+                            <c:when test="${1 == messages_count}">
+                              <div class="orderHistoryTxt">${messages_count} message</div>
+                            </c:when>
+                            <c:otherwise>
+                              <div class="orderHistoryTxt">${messages_count} messages</div>
+                            </c:otherwise>
+                          </c:choose>
+                        </c:otherwise>
+                      </c:choose>
+                    </c:when>
+                    <c:otherwise>
+                      <div class="orderHistoryIcons">
+                        <a href="javascript:void(0);"><img class="icoMailClose" src="../images/blank.gif" alt="" title="" width="16" height="16" /></a>
+                      </div>
+                    </c:otherwise>
+                  </c:choose>
+                </c:if>
+			</td>
+		</tr>	
+	</dsp:oparam>
+</dsp:droplet>
+
+<tr>
+	<td class="tblSplitter" colspan="5"><div><!--~--></div></td>
+</tr>
+
+<c:if test="${('true' == all_orders && count < size) || count < 4}" >
+	<tr>
+		<td class="productRowEnd noPadding" colspan="5"><div><!--~--></div></td>
+	</tr>
+</c:if>

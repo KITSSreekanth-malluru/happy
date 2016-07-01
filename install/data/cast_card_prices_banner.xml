@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="promoInformation" id="1500036">
+            <set-property name="image"><![CDATA[m570043]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m570043">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="creationDate"><![CDATA[10/31/2011 18:46:23]]></set-property>
+            <set-property name="url"><![CDATA[/banners/carte_casto_banner.png]]></set-property>
+            <set-property name="path"><![CDATA[/cardPriceBanner]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[cardPriceBanner]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

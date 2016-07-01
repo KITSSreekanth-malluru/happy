@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+
+        <add-item item-descriptor="promoInformation" id="1500001">
+            <set-property name="title"><![CDATA[Conseils and Forums Trouver de l'aide Home]]></set-property>
+            <set-property name="description">
+                <![CDATA[Promotional information to show in Trouver de l'aide block on Home Conseils and Forums page]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/trouver.html]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoInformation" id="1500002">
+            <set-property name="title"><![CDATA[Conseils and Forums Trouver de l'aide Filtered]]></set-property>
+            <set-property name="description">
+                <![CDATA[Promotional information to show in Trouver de l'aide block on Filtered Conseils and Forums page]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/trouver.html]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoInformation" id="1500003">
+            <set-property name="title"><![CDATA[Conseils and Forums Bottom Banner]]></set-property>
+            <set-property name="description">
+                <![CDATA[Promotional information to show on Bottom Banner on Conseils and Forums page]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/cf_bottom_banner.html]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoInformation" id="1500004">
+            <set-property name="title">
+                <![CDATA[Reinsurance Section block with Service Client 2012 Flap]]></set-property>
+            <set-property name="description">
+                <![CDATA[Promotional information with Service Client 2012 Flap to show on Reinsurance Section block]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/reinsuranceSectionWithFlap.html]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoInformation" id="1500005">
+            <set-property name="title"><![CDATA[Reinsurance Section block]]></set-property>
+            <set-property name="description">
+                <![CDATA[Promotional information to show on Reinsurance Section block]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/reinsuranceSection.html]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="fastLabConfigs" id="1000000">
+            <set-property name="cfGetHelpHomeBlock"><![CDATA[1500001]]></set-property>
+            <set-property name="cfGetHelpFilteredBlock"><![CDATA[1500002]]></set-property>
+            <set-property name="cfDefBottomBanner"><![CDATA[1500003]]></set-property>
+            <set-property name="reinsuranceSectionFlap"><![CDATA[1500004]]></set-property>
+            <set-property name="reinsuranceSection"><![CDATA[1500005]]></set-property>
+        </add-item>
+
+
+    </import-items>
+</gsa-template>

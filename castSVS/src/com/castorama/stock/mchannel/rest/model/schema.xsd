@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<xs:schema xmlns="http://castorama.fr/stocks" targetNamespace="http://castorama.fr/stocks" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+  <xs:element type="StocksBagType" name="stocks"></xs:element>
+  <xs:complexType name="StocksBagType">
+     <xs:sequence>
+                  <xs:element type="StockType" name="stock" maxOccurs="unbounded"/>
+     </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="StockType">
+     <xs:attribute name="status" type="xs:integer"></xs:attribute>
+     <xs:attribute name="stockAvailable" type="xs:integer"></xs:attribute>
+     <xs:attribute name="product" type="xs:string"></xs:attribute>
+     <xs:attribute name="store" type="xs:integer"></xs:attribute>
+  </xs:complexType>
+</xs:schema>

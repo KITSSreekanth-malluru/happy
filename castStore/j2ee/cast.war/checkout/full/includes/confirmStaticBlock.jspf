@@ -1,0 +1,14 @@
+<div class="padded">
+  <p class="font12px">
+    <strong><fmt:message key="confirmation.static.1"/><br />
+    <fmt:message key="confirmation.static.2"/></strong>
+  </p>
+  <p>
+    <fmt:message key="confirmation.static.3"/><br />
+    <fmt:message key="confirmation.static.4"/>&nbsp;<dsp:valueof bean="Profile.email" />
+  </p>
+  <p>
+    <fmt:message key="confirmation.static.5"/><br />
+    <fmt:message key="confirmation.static.6"/>
+  </p>
+</div>

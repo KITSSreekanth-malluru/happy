@@ -1,0 +1,11 @@
+<dsp:importbean bean="/atg/userprofiling/Profile"/>
+<dsp:importbean bean="/com/castorama/integration/experian/ExperianRequestDroplet"/>
+<dsp:droplet name="/atg/dynamo/servlet/dafpipeline/PayboxLogServlet">
+</dsp:droplet>
+<dsp:droplet name="ExperianRequestDroplet">
+    <dsp:param name="email" bean="Profile.email"/>
+    <dsp:param name="action" value="subscribe"/>
+    <dsp:param name="page" value="paybox-payment-verification.jsp"/>
+    <dsp:oparam name="output">
+    </dsp:oparam>
+</dsp:droplet>

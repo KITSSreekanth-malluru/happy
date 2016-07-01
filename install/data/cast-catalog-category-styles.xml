@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+
+        <add-item item-descriptor="categoryStyle" id="StyleRed">
+            <set-property name="tabStyle"><![CDATA[redTabs]]></set-property>
+            <set-property name="linkStyle"><![CDATA[redLink]]></set-property>
+            <set-property name="facetStyle"><![CDATA[redPage]]></set-property>
+            <set-property name="breadcrumbsStyle"><![CDATA[redPage]]></set-property>
+            <set-property name="productPromoStyle"><![CDATA[redH]]></set-property>
+            <set-property name="pagingStyle"><![CDATA[redPage]]></set-property>
+            <set-property name="cloudStyle"><![CDATA[redPage]]></set-property>
+            <set-property name="rightMenuStyle"><![CDATA[redPage]]></set-property>
+            <set-property name="listStyle"><![CDATA[red]]></set-property>
+            <set-property name="borderStyle"><![CDATA[redBorder]]></set-property>
+            <set-property name="backgroundStyle"><![CDATA[redBg]]></set-property>
+        </add-item>
+        <add-item item-descriptor="categoryStyle" id="StylePink">
+            <set-property name="tabStyle"><![CDATA[pinkTabs]]></set-property>
+            <set-property name="linkStyle"><![CDATA[pinkLink]]></set-property>
+            <set-property name="facetStyle"><![CDATA[pinkPage]]></set-property>
+            <set-property name="breadcrumbsStyle"><![CDATA[pinkPage]]></set-property>
+            <set-property name="productPromoStyle"><![CDATA[pinkH]]></set-property>
+            <set-property name="pagingStyle"><![CDATA[pinkPage]]></set-property>
+            <set-property name="cloudStyle"><![CDATA[pinkPage]]></set-property>
+            <set-property name="rightMenuStyle"><![CDATA[pinkPage]]></set-property>
+            <set-property name="listStyle"><![CDATA[pink]]></set-property>
+            <set-property name="borderStyle"><![CDATA[pinkBorder]]></set-property>
+            <set-property name="backgroundStyle"><![CDATA[pinkBg]]></set-property>
+        </add-item>
+        <add-item item-descriptor="categoryStyle" id="StyleBrown">
+            <set-property name="tabStyle"><![CDATA[brownTabs]]></set-property>
+            <set-property name="linkStyle"><![CDATA[brownLink]]></set-property>
+            <set-property name="facetStyle"><![CDATA[brownPage]]></set-property>
+            <set-property name="breadcrumbsStyle"><![CDATA[brownPage]]></set-property>
+            <set-property name="productPromoStyle"><![CDATA[brownH]]></set-property>
+            <set-property name="pagingStyle"><![CDATA[brownStyle]]></set-property>
+            <set-property name="cloudStyle"><![CDATA[brownPage]]></set-property>
+            <set-property name="rightMenuStyle"><![CDATA[brownPage]]></set-property>
+            <set-property name="listStyle"><![CDATA[brown]]></set-property>
+            <set-property name="borderStyle"><![CDATA[brownBorder]]></set-property>
+            <set-property name="backgroundStyle"><![CDATA[brownBg]]></set-property>
+        </add-item>
+        <add-item item-descriptor="categoryStyle" id="StyleGreen">
+            <set-property name="tabStyle"><![CDATA[greenTabs]]></set-property>
+            <set-property name="linkStyle"><![CDATA[greenLink]]></set-property>
+            <set-property name="facetStyle"><![CDATA[greenPage]]></set-property>
+            <set-property name="breadcrumbsStyle"><![CDATA[greenPage]]></set-property>
+            <set-property name="productPromoStyle"><![CDATA[greenH]]></set-property>
+            <set-property name="pagingStyle"><![CDATA[greenPage]]></set-property>
+            <set-property name="cloudStyle"><![CDATA[greenPage]]></set-property>
+            <set-property name="rightMenuStyle"><![CDATA[greenPage]]></set-property>
+            <set-property name="listStyle"><![CDATA[green]]></set-property>
+            <set-property name="borderStyle"><![CDATA[greenBorder]]></set-property>
+            <set-property name="backgroundStyle"><![CDATA[greenBg]]></set-property>
+        </add-item>
+        <add-item item-descriptor="categoryStyle" id="StyleLightBlue">
+            <set-property name="tabStyle"><![CDATA[lightblueTabs]]></set-property>
+            <set-property name="linkStyle"><![CDATA[lightblueLink]]></set-property>
+            <set-property name="facetStyle"><![CDATA[lightbluePage]]></set-property>
+            <set-property name="breadcrumbsStyle"><![CDATA[lightbluePage]]></set-property>
+            <set-property name="productPromoStyle"><![CDATA[lightblueH]]></set-property>
+            <set-property name="pagingStyle"><![CDATA[lightbluePage]]></set-property>
+            <set-property name="cloudStyle"><![CDATA[lightbluePage]]></set-property>
+            <set-property name="rightMenuStyle"><![CDATA[lightbluePage]]></set-property>
+            <set-property name="listStyle"><![CDATA[lightblue]]></set-property>
+            <set-property name="borderStyle"><![CDATA[lightblueBorder]]></set-property>
+            <set-property name="backgroundStyle"><![CDATA[lightblueBg]]></set-property>
+        </add-item>
+        <add-item item-descriptor="categoryStyle" id="StyleDarkBlue">
+            <set-property name="tabStyle"><![CDATA[darkblueTabs]]></set-property>
+            <set-property name="linkStyle"><![CDATA[darkblueLink]]></set-property>
+            <set-property name="facetStyle"><![CDATA[darkbluePage]]></set-property>
+            <set-property name="breadcrumbsStyle"><![CDATA[darkbluePage]]></set-property>
+            <set-property name="productPromoStyle"><![CDATA[darkblueH]]></set-property>
+            <set-property name="pagingStyle"><![CDATA[darkbluePage]]></set-property>
+            <set-property name="cloudStyle"><![CDATA[darkbluePage]]></set-property>
+            <set-property name="rightMenuStyle"><![CDATA[darkbluePage]]></set-property>
+            <set-property name="listStyle"><![CDATA[darkblue]]></set-property>
+            <set-property name="borderStyle"><![CDATA[darkblueBorder]]></set-property>
+            <set-property name="backgroundStyle"><![CDATA[darkblueBg]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

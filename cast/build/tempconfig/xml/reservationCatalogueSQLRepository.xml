@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+
+	<item-descriptor name="reservationCatalogue" display-property="adresse">
+		<table name="CASTO_RESERVATION_CATALOGUE" type="primary" id-column-name="id">
+			<property name="email" data-type="string" column-name="EMAIL" display-name="email"/>
+	     	<property name="civilite" data-type="string" column-name="civilite" required="true" display-name="Civilité"/>
+	     	<property name="prenom" data-type="string" column-name="prenom" required="true" display-name="Prénom"/>
+	     	<property name="nom" data-type="string" column-name="nom" required="true" display-name="Nom"/>
+	     	<property name="adresse" data-type="string" column-name="ADRESSE" required="true" display-name="N°, voie"/>
+	     	<property name="adresse2" data-type="string" column-name="ADRESSE2" display-name="Étage, appartement"/>
+	     	<property name="adresse3" data-type="string" column-name="ADRESSE3" display-name="Bâtiment"/>
+	     	<property name="adresse4" data-type="string" column-name="ADRESSE4" display-name="Lieu-dit"/>
+	     	<property name="cpltAdresse" data-type="string" column-name="cpltAdresse" display-name="Complément d'adresse"/>
+	     	<property name="ville" property-type="com.castorama.commerce.profile.CityPropertyDescriptor" column-name="ville" required="true" display-name="Ville"/>
+	     	<property name="codePostal" data-type="string" column-name="codePostal" required="true" display-name="Code postal"/>
+	     	<property name="pays" data-type="string" column-name="pays" required="true" display-name="Pays"/>
+	     	<property name="dateNaissance" data-type="date" column-name="dateNaissance" required="false" display-name="Date de naissance"/>
+	     	<property name="dateReservation" data-type="timestamp" column-name="dateReservation" display-name="Date de reservation du catalogue"/>
+	   		<property name="nouveauCompte" data-type="int" column-name="nouveauCompte" display-name="Nouveau compte?"/>
+	   		<property name="optIn" data-type="int" column-name="optIn" display-name="Inscription newletter"/>
+	   		<property name="phoneNumber1" column-name="phone_number_1" required="true" data-type="string" display-name="Téléphone 1"/>
+	   		<property name="phoneNumber2" column-name="phone_number_2" data-type="string" display-name="Téléphone 2"/>
+	   		<property name="catalogueId" column-name="CATALOGUE_ID" required="true" data-type="string" display-name="Cataolgue ID" />
+	   </table>
+    </item-descriptor>
+</gsa-template>

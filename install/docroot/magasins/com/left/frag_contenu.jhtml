@@ -1,0 +1,24 @@
+<DECLAREPARAM NAME="bgColor" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="bgColorOver" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="class" CLASS="java.lang.String" DESCRIPTION="">
+
+<SETVALUE PARAM="bgColor" VALUE="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<SETVALUE PARAM="bgColorOver" VALUE="#FFFFCC">
+<SETVALUE PARAM="textClass" VALUE="tbl">
+<table width="119" cellpadding="0" cellspacing="0" border="0">
+<tr><td bgcolor="#104498" style="background-image:none"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<DROPLET BEAN="/atg/targeting/TargetingForEach">
+<PARAM NAME="targeter" VALUE="bean:/atg/registry/RepositoryTargeters/magasinContent/targeterAllRegions">
+<PARAM NAME="fireContentEvent" VALUE="false">
+<PARAM NAME="fireContentTypeEvent" VALUE="false">
+	<OPARAM NAME="output">
+	<DROPLET SRC="frag_region.jhtml"><param name="url_region" value="`"/magasins/detailCarte.jhtml?regionid="+request.getParameter("element.repositoryId")`"><param name="region" value="param:element.nom"><param name="textClass" value="tbc"></DROPLET>
+	<tr><td bgcolor="#104498" style="background-image:none"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+	</OPARAM> 
+	<OPARAM NAME="empty">
+	Aucune r&eacute;gion.
+	</OPARAM>
+	</DROPLET>
+</SELECT>
+<tr><td bgcolor="#104498" style="background-image:none"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+</table>

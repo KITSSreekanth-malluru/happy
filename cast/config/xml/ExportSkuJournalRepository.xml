@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+  PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN"
+         "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+         
+<gsa-template>
+<header>
+   	<name>Export SKU Journalizing</name>
+	<author/>
+</header>
+<item-descriptor name="BORNES_EXPORT_JOURNALISATION">
+	<table name="CASTO_BORNES_EXPORT_JOURNAL" type="primary" id-column-name="SKU_ID">
+		<property name="SKU_ID" data-type="string" column-name="SKU_ID" required="true"/>
+		<property name="URL" data-type="string" column-name="URL" required="true"/>
+		<property name="DATE_EXPORT" data-type="timestamp" column-name="DATE_EXPORT"/>
+	</table>
+</item-descriptor>
+
+<item-descriptor name="PLANNER_EXPORT_JOURNALISATION">
+	<table name="CASTO_PLANNER_EXPORT_JOURNAL" type="primary" id-column-name="SKU_ID">
+		<property name="SKU_ID" data-type="string" column-name="SKU_ID" required="true"/>
+		<property name="IMAGE_URL" data-type="string" column-name="IMAGE_URL"/>
+		<property name="BRAND_URL" data-type="string" column-name="BRAND_URL"/>
+		<property name="IMAGE_DATE_EXPORT" data-type="timestamp" column-name="IMAGE_DATE_EXPORT"/>
+		<property name="BRAND_DATE_EXPORT" data-type="timestamp" column-name="BRAND_DATE_EXPORT"/>
+	</table>
+</item-descriptor>
+</gsa-template>
+         

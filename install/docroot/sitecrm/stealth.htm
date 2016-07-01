@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title></title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script language="javascript" src="varcrm.js" type="text/javascript"></script>
+<script language=javascript>
+window.resizeTo(300,320);
+
+var agt=navigator.userAgent.toLowerCase();
+var major=(agt.indexOf('6',0));
+var client=(agt.indexOf("msie"));
+
+if (client>=0)
+{
+	window.blur();
+	setInterval('vbcheckfx()',1000);
+}
+
+if (client<0)
+{
+	window.moveTo(-1000,-1000);
+	setInterval('checkfx()',1000);
+}
+
+</script>
+</head>
+<script language=javascript>
+
+function checkfx()
+{ 
+	//init();	
+	var x;
+	x=window.opener.location;
+	document.F1.T1.value=x;
+	urlfx();
+	window.onerror=error1;
+}
+
+function urlfx()
+ {
+	var count=parseInt(readCookie("counter"));
+	//alert(count);
+	if(isNaN(count))
+	{
+		count=readCookie("counter");
+		//alert(count);
+		if(count == "")
+		{
+			count=1;
+			var urlx=window.opener.location;
+			var datex=new Date();
+			writeCookie("counter",count,null);
+			writeCookie("url"+count,escape(urlx),null);
+			writeCookie("url"+count+"VisitTime",datex.getTime(),null)
+		}
+	}
+	else
+	{
+		if(count<=7)
+		{
+			var urlPrevious=readCookie("url"+count);
+			var urlx=window.opener.location;
+			//alert(unescape(urlx)!=unescape(urlPrevious));
+			if(unescape(urlx)!=unescape(urlPrevious))
+			{
+				var datex=new Date();
+				count=parseInt(count)+1;
+				writeCookie("counter",count,null);
+				writeCookie("url"+count,escape(urlx),null);
+				writeCookie("url"+count+"VisitTime",datex.getTime(),null)
+				//alert(datex.getHours()+":"+datex.getMinutes()+":"+datex.getSeconds());
+			}
+		}
+	}
+
+}
+
+
+function error1()
+{ 
+	var datey=new Date();
+	writeCookie("urlEndTime",datey.getTime(),null);
+	//location.href="exit.htm";
+	window.location.href="exit.htm";
+	window.onerror=null;
+	urlfx();
+}
+
+
+function openfx()
+{
+	var datey=new Date();
+	writeCookie("urlEndTime",datey.getTime(),null);
+	//location.href="exit.htm";
+	window.location.href="exit.htm";
+	urlfx();	
+}
+
+// Example:
+// alert( readCookie("myCookie") );
+function readCookie(name)
+{
+  var cookieValue = "";
+  var search = name + "=";
+  if(document.cookie.length > 0)
+  { 
+    offset = document.cookie.indexOf(search);
+    if (offset != -1)
+    { 
+      offset += search.length;
+      end = document.cookie.indexOf(";", offset);
+      if (end == -1) end = document.cookie.length;
+      cookieValue = unescape(document.cookie.substring(offset, end))
+    }
+  }
+  return cookieValue;
+}
+// Example:
+// writeCookie("myCookie", "my name", 24);
+// Stores the string "my name" in the cookie "myCookie" which expires after 24 hours.
+function writeCookie(name, value, hours)
+{
+  var expire = "";
+  if(hours != null)
+  {
+    expire = new Date((new Date()).getTime() + hours * 3600000);
+    expire = "; expires=" + expire.toGMTString();
+  }
+  document.cookie = name + "=" + escape(value) + expire +";path=/;";
+}
+
+	writeCookie("crmseen","seen",cookieexpire);
+
+
+
+function urlfx()
+{
+	var count=parseInt(readCookie("counter"));
+	//alert(count);
+	if(isNaN(count))
+	{
+		count=readCookie("counter");
+		//alert(count);
+		if(count == "")
+		{
+			count=1;
+			var urlx=window.opener.location;
+			var datex=new Date();
+			writeCookie("counter",count,null);
+			writeCookie("url"+count,escape(urlx),null);
+			writeCookie("url"+count+"VisitTime",datex.getTime(),null)
+		}
+	}
+	else
+	{
+		if(count<=7)
+		{
+			var urlPrevious=readCookie("url"+count);
+			var urlx=window.opener.location;
+			//alert(unescape(urlx)!=unescape(urlPrevious));
+			if(unescape(urlx)!=unescape(urlPrevious))
+			{
+				var datex=new Date();
+				count=parseInt(count)+1;
+				writeCookie("counter",count,null);
+				writeCookie("url"+count,escape(urlx),null);
+				writeCookie("url"+count+"VisitTime",datex.getTime(),null)
+				//alert(datex.getHours()+":"+datex.getMinutes()+":"+datex.getSeconds());
+			}
+		}
+	}
+
+}
+
+
+</script>
+
+<script language="vbscript">
+sub vbcheckfx()
+	dim k
+	on error resume next
+	k=window.opener.document.title
+	document.F1.T1.value=k
+	urlfx
+	if err.number <> 0 then
+	    openfx
+		err.clear
+	end if
+end sub
+
+</script>
+
+
+<body style="background:#FFFFFF" id="crm_bodytxtst">
+<form name="F1">
+    <input type="hidden" value="60" name="T1" size="57">
+
+    <script language="javascript">
+var counter=parseInt(readCookie("counter"));
+if(!isNaN(counter))
+{
+counter=parseInt(counter);
+document.write("<input type='hidden' name='nourl' value="+counter+">");
+document.write("<input type='hidden' name='urlEndTime' value="+readCookie("urlEndTime")+">");
+for (var i=1;i<=counter;i++)
+{ 
+   if(readCookie("url"+i))
+	{
+	   document.write("<input type='hidden' name='url"+i+"' value='"+unescape(readCookie("url"+i))+"'>");
+	   document.write("<input type='hidden' name='urlt"+i+"' value='"+readCookie("url"+i+"VisitTime")+"'>");
+	}
+}
+}
+
+    </script>
+
+    <div id="crm_stealth">
+        <img class="stl" src="image/pbg.gif" alt=""/>
+
+        <div id="crm_stl_content" class="divcrm">
+            <span id="crm_stl_title"></span>
+		<span id="crm_stl_texte">Merci de ne pas fermer cette fenêtre. Vous pourrez répondre au questionnaire après votre visite sur le site … <br/><br/> A tout à l’heure !
+</span>
+        </div>
+        <div id="crm_bouton_stl">
+            <a href="javascript:self.blur()"><img alt="Minimiser" src="image/btn1.gif"/></a>
+            <span><a href="javascript:self.blur()" id="crm_a2">Minimiser</a></span></div>
+    </div>
+
+</form>
+
+</body>
+
+</html>
+

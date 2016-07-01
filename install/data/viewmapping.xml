@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+
+        <!-- Read-only and editable item mappings; contain one view mapping per tab -->
+
+        <add-item item-descriptor="itemMapping" id="aMgrImViewCat">
+            <set-property name="description">
+                <![CDATA[AssetManager read-only mapping for category items]]></set-property>
+            <set-property name="attributes"><![CDATA[atgPreviewURL=aMgrImViewCatPreviewUrl]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrImViewCatPreviewUrl">
+            <set-property name="value"><![CDATA[/ondemand$[template.url]?id=$id&type=$itemType]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="itemMapping" id="aMgrImEditCat">
+            <set-property name="description"><![CDATA[AssetManager editable mapping for category items]]></set-property>
+            <set-property name="attributes"><![CDATA[atgPreviewURL=aMgrImEditCatPreviewUrl]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrImEditCatPreviewUrl">
+            <set-property name="value"><![CDATA[/ondemand$[template.url]?id=$id&type=$itemType]]></set-property>
+        </add-item>
+
+        <!-- View mapping for category media tab -->
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmCatMediaView">
+            <set-property name="propertyMappings">
+                <![CDATA[thumbnailImage=aMgrPvmVImgLink,smallImage=aMgrPvmVImgLink,largeImage=aMgrPvmVImgLink,titleImage=aMgrPvmVImgLink]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmCatMediaEdit">
+            <set-property name="propertyMappings">
+                <![CDATA[thumbnailImage=aMgrPvmEImgLink,smallImage=aMgrPvmEImgLink,largeImage=aMgrPvmEImgLink,titleImage=aMgrPvmEImgLink]]></set-property>
+        </add-item>
+
+        <!-- ======================================================================= -->
+        <!-- Customizations for product items                                        -->
+        <!-- ======================================================================= -->
+
+        <!-- Read-only and editable item mappings; contain one view mapping per tab -->
+
+        <add-item item-descriptor="itemMapping" id="aMgrImViewPrdt">
+            <set-property name="description"><![CDATA[AssetManager read-only mapping for product items]]></set-property>
+            <set-property name="attributes"><![CDATA[atgPreviewURL=aMgrImViewPrdtPreviewUrl]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrImViewPrdtPreviewUrl">
+            <set-property name="value"><![CDATA[/ondemand$[template.url]?id=$id]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="itemMapping" id="aMgrImEditPrdt">
+            <set-property name="description"><![CDATA[AssetManager editable mapping for product items]]></set-property>
+            <set-property name="attributes"><![CDATA[atgPreviewURL=aMgrImEditPrdtPreviewUrl]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrImEditPrdtPreviewUrl">
+            <set-property name="value">
+                <![CDATA[/ondemand$[template.url]?id=$id&componentPath=$componentPath&itemType=$itemType&displayName=$[displayName]]]></set-property>
+        </add-item>
+
+        <!-- View mapping for product's media tab -->
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmPrdtMediaView">
+            <set-property name="propertyMappings">
+                <![CDATA[thumbnailImage=aMgrPvmVImgLink,smallImage=aMgrPvmVImgLink,largeImage=aMgrPvmVImgLink,detailImage=aMgrPvmVImgLink,promoImage=aMgrPvmVImgLink,titleImage=aMgrPvmVImgLink]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmPrdtMediaEdit">
+            <set-property name="propertyMappings">
+                <![CDATA[thumbnailImage=aMgrPvmEImgLink,smallImage=aMgrPvmEImgLink,largeImage=aMgrPvmEImgLink,detailImage=aMgrPvmEImgLink,promoImage=aMgrPvmEImgLink,titleImage=aMgrPvmEImgLink]]></set-property>
+        </add-item>
+
+        <!-- ======================================================================= -->
+        <!-- Customizations for external user items                                  -->
+        <!-- ======================================================================= -->
+
+        <!-- View mapping for external user's commerce tab -->
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvExtUserCommerceCats">
+            <set-property name="value">
+                <![CDATA[categoryCommercePromotions,categoryCommercePreferences,categoryCommerceAddressAndPhone,categoryCommerceBehaviorTracking,categoryCommerceLists,categoryCommerceGiftAddresses,categoryCommerceGeneral,categoryCommerceAbandonedOrderTracking,categoryOrderTracking,categoryCommercePayment]]></set-property>
+        </add-item>
+
+        <!-- ======================================================================= -->
+        <!-- Customizations for catalog items                                        -->
+        <!-- ======================================================================= -->
+
+        <!-- Read-only and editable item mappings; contain one view mapping per tab -->
+
+        <update-item item-descriptor="itemMapping" id="aMgrImViewLog">
+            <set-property name="viewMappings">
+                <![CDATA[aMgrIvmLogBasics,aMgrIvmLogInfo,fctSrchIvmLogFacet,aMgrIvmLogGeolocation]]></set-property>
+        </update-item>
+
+        <update-item item-descriptor="itemMapping" id="aMgrImEditLog">
+            <set-property name="viewMappings">
+                <![CDATA[aMgrIvmLogBasics,aMgrIvmLogInfo,fctSrchIvmLogFacet,aMgrIvmLogGeolocation]]></set-property>
+        </update-item>
+
+        <!-- View mapping for catalog's Geolocation tab -->
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmLogGeolocation">
+            <set-property name="name"><![CDATA[AssetManager CatalogGeolocationView]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager catalog geolocation view]]></set-property>
+            <set-property name="displayName"><![CDATA[aMgrIvmLogGeolocation.displayName]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[resourceBundle=aMgrAvLogGeolocationResourceBundle,categorizedGrouping=aMgrAvLogGeolocationCats,excludedProperties=aMgrAvLogGeolocationExc,showNewProperties=aMgrAvLogGeolocationShowNew]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvLogGeolocationResourceBundle">
+            <set-property name="value">
+                <![CDATA[com.castorama.commerce.catalog.CustomProductCatalogResources]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvLogGeolocationCats">
+            <set-property name="value">
+                <![CDATA[categoryGeolocation,categoryOtherConfig,categoryCheckout]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvLogGeolocationExc">
+            <set-property name="value">
+                <![CDATA[ancestorCategories,directAncestorCatalogsAndSelf,indirectAncestorCatalogs,subCatalogs,ancestorCatalogsAndSelf,directParentCatalogs,parentFolders,itemAcl,creationDate,id,status]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvLogGeolocationShowNew">
+            <set-property name="value"><![CDATA[false]]></set-property>
+        </add-item>
+
+        <!-- ======================================================================= -->
+        <!-- Customizations for magasin items                                        -->
+        <!-- ======================================================================= -->
+
+        <!-- Read-only and editable item mappings; contain one view mapping per tab -->
+
+        <add-item item-descriptor="itemMapping" id="aMgrImViewCastoMagasin">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description">
+                <![CDATA[AssetManager read-only mapping for castorama magasin items]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="itemName"><![CDATA[magasin]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/registry/Repository/MagasinGSARepository]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmView]]></set-property>
+            <set-property name="viewMappings"><![CDATA[aMgrIvmMagasinBasics,aMgrIvmMagasinCCConfig]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="itemMapping" id="aMgrImEditCastoMagasin">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description">
+                <![CDATA[AssetManager editable mapping for castorama magasin items]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="itemName"><![CDATA[magasin]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/registry/Repository/MagasinGSARepository]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+            <set-property name="viewMappings"><![CDATA[aMgrIvmMagasinBasics,aMgrIvmMagasinCCConfig]]></set-property>
+        </add-item>
+
+        <!-- View mapping for magasin's basics tab -->
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmMagasinBasics">
+            <set-property name="name"><![CDATA[AssetManager MagasinBasicsView]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager magasin basics view]]></set-property>
+            <set-property name="displayName"><![CDATA[aMgrIvmMagasinBasics.displayName]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[resourceBundle=aMgrAvMagasinBasicsResourceBundle,categorizedGrouping=aMgrAvMagasinBasicsCats,showNewProperties=aMgrAvMagasinBasicsShowNew]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvMagasinBasicsResourceBundle">
+            <set-property name="value"><![CDATA[com.castorama.magasin.CastoMagasinResources]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvMagasinBasicsCats">
+            <set-property name="value"><![CDATA[]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvMagasinBasicsShowNew">
+            <set-property name="value"><![CDATA[true]]></set-property>
+        </add-item>
+
+        <!-- View mapping for magasin's C&C config tab -->
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmMagasinCCConfig">
+            <set-property name="name"><![CDATA[AssetManager MagasinCCConfigView]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager magasin C&C config view]]></set-property>
+            <set-property name="displayName"><![CDATA[aMgrIvmMagasinCCConfig.displayName]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[resourceBundle=aMgrAvMagasinCCConfigResourceBundle,categorizedGrouping=aMgrAvMagasinCCConfigCats,showNewProperties=aMgrAvMagasinCCConfigShowNew]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvMagasinCCConfigResourceBundle">
+            <set-property name="value"><![CDATA[com.castorama.magasin.CastoMagasinResources]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvMagasinCCConfigCats">
+            <set-property name="value">
+                <![CDATA[categoryCCConfig,categoryStoreContacts,paymentConfigInfo]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="attributeValue" id="aMgrAvMagasinCCConfigShowNew">
+            <set-property name="value"><![CDATA[false]]></set-property>
+        </add-item>
+
+        <!-- ======================================================================= -->
+
+    </import-items>
+</gsa-template>

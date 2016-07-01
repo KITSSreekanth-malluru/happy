@@ -1,0 +1,16 @@
+<fmt:message key="msg.cart.add" var="cartAdd"/>
+<c:if test="${!isGroupedProduct}" >
+  <dsp:input bean="CastShoppingCartFormHandler.productId" type="hidden"  value="${productId}"/>
+  <dsp:input bean="CastShoppingCartFormHandler.catalogRefIds" type="hidden" value="${skuId}"/>
+</c:if>
+<div class="inputButtonV2">
+  <c:choose>
+    <c:when test="${isGroupedProduct}">
+      <dsp:input bean="CastShoppingCartFormHandler.addMultipleItemsToOrder" type="submit" value="${cartAdd}" iclass="buttonCartBig" onclick="disableButton(this)" />
+    </c:when>
+    <c:otherwise>
+      <dsp:input bean="CastShoppingCartFormHandler.addItemToOrder" type="submit" value="${cartAdd}" iclass="buttonCartBig" onclick="disableButton(this)" />
+      <dsp:input bean="CastShoppingCartFormHandler.addToBoth" type="hidden" value="${addToCartMode}"/>
+    </c:otherwise>
+  </c:choose>
+</div>

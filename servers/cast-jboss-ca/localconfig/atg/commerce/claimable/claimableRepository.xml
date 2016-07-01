@@ -1,0 +1,7 @@
+<gsa-template>
+  <item-descriptor name="claimable" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="GiftCertificateClaimable" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="PromotionClaimable" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="DeployablePromotionClaimable" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="StoreCreditClaimable" cache-mode="simple"></item-descriptor>
+</gsa-template>

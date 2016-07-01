@@ -1,0 +1,7 @@
+<gsa-template xml-combine="append">
+
+    <item-descriptor name="sku-link" item-cache-size="5000" query-cache-size="100"/>
+    <item-descriptor name="promoTemplate" item-cache-size="5000" query-cache-size="100"/>
+    <item-descriptor name="CrossSellingSku" item-cache-size="4000" query-cache-size="100"/>
+    
+</gsa-template>

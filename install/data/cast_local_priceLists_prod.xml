@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="priceList" id="lpl0036">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Aix-en-Provence]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0034">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Vitrolles]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0037">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Anglet]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0043">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Bron]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0042">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Toulon La Seyne]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0041">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Avignon]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0040">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Créteil]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl001200006">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Bourgoin-Jallieu]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0023">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Grenoble]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0024">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Givors]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0025">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: St Orens]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0026">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Pau Lescar]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0027">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Toulon La Garde]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0028">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Clichy]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0029">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Cormeilles en Parisis]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl003">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Creil St Maximin]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl002">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Ezanville]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl001">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Barentin]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0030">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Villetaneuse]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl006">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Nation]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl005">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Bourg-en-Bresse]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl004">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: La Rochelle]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0031">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Eragny]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl008">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Le Havre]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0019">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Ballainvilliers]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0017">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Ormesson]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0018">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Coignières]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0015">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Mandelieu]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0016">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Roanne]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0013">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Nanterre]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0014">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Gonesse]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl004300013">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Lormont]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0011">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Antibes]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0012">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Melun]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0021">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Châlon-sur-Saône]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0020">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Vélizy - Villacoublay]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00109">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Chambourcy]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00107">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Dardilly]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00106">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Rillieux]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00105">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Dijon-Marsannay-la-Côte]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00104">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Agen]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00103">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: La Valentine]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00102">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Vandoeuvre les Nancy]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00101">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Colmar]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00100">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Strasbourg]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0097">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Chambéry]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0096">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Le Cannet]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl002400007">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: La Défense]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0095">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Nantes Orvault]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0094">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Toulouse l Union]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0092">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Englos]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0091">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Bordeaux Mérignac]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0010">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Plan de Campagne]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0088">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Béziers]]></set-property>
+        </add-item>
+        <!-- add-item item-descriptor="priceList" id="lpl00999">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Castorama Direct]]></set-property>
+        </add-item> -->
+        <add-item item-descriptor="priceList" id="lpl00116">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Fresnes]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0079">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Montpellier St Clément]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00114">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Lille-Hellemmes]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0078">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Bondues]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00112">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Limoges]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00113">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Clayes sous Bois]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl001000010">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Dunkerque]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl002000005">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Fréjus]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00118">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Villabé]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00119">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Clermont-Ferrand]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0080">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Perpignan]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0081">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Quimper]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0086">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: St Marcel Les Valence]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0087">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Metz Tessy]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl002300014">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Carré de soie]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00125">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Rennes St Jacques]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0066">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Vannes]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0068">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Flins]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00121">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Hénin Beaumont]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00122">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Reims Val de Murigny]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00123">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Villemomble]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00124">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Nîmes]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl001300006">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Flandre]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl001300007">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Pontault Combault]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0076">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Chambray-les-Tours]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0059">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Bordeaux Villenave d Ornon]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0058">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Poitiers]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0057">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Angoulême]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0056">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Portet sur Garonne]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0055">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Kingersheim]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl001800004">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Rennes Cap Malo]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl001800003">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Toulouse Blagnac]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00800002">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Claye Souilly]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0064">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Brest III]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0065">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Metz]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0062">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Nantes La Beaujoire]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0063">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Angers]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0060">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Montpellier Lattes]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00500002">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Olivet]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0049">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Niort]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl003100015">
+            <set-property name="displayName">
+                <![CDATA[Store Local List Price List: Marne la Vallée - CC Val d Europe]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0048">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Montgeron]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0044">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Besançon]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0047">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Rouen Est Darnétal]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl00700002">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Terville]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0051">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Le Mans]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0052">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Caen Hérouville]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl0053">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: St Nazaire]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="lpl004500009">
+            <set-property name="displayName"><![CDATA[Store Local List Price List: Bd de Grenelle]]></set-property>
+        </add-item>
+
+    </import-items>
+
+</gsa-template>
+

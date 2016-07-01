@@ -1,0 +1,46 @@
+<dsp:getvalueof var="contextPath" bean="/OriginatingRequest.contextPath"/>
+<c:choose>
+  <c:when test="${not empty facetHolder.facet.id }">
+    <c:set var="ajouterFacetId" value="${facetHolder.facet.id }"/>
+  </c:when>
+  <c:otherwise>
+    <c:choose>
+      <c:when test="${not empty selectedFacetId }">
+        <c:set var="ajouterFacetId" value="${selectedFacetId }"/>
+      </c:when>
+      <c:otherwise>
+        <c:choose>
+          <c:when test="${not empty orderedFacetsId }">
+            <c:set var="ajouterFacetId" value="${orderedFacetsId }"/>
+          </c:when>
+          <c:otherwise>
+            <c:set var="ajouterFacetId" value=""/>
+          </c:otherwise>
+        </c:choose>
+      </c:otherwise>
+    </c:choose>
+  </c:otherwise>
+</c:choose>
+
+<dsp:droplet name="/atg/dynamo/droplet/IsEmpty">
+  <dsp:param name="value" param="resultedMapFacetIdToTrailParam.${ajouterFacetId}"/>
+  <dsp:oparam name="false">
+    <dsp:getvalueof var="ajouterTrail" param="resultedMapFacetIdToTrailParam.${ajouterFacetId}"/>
+    <dsp:getvalueof var="trailVar" param="trail"/>
+    <dsp:getvalueof var="question" param="question"/>
+    <dsp:getvalueof var="isSearchForCategory" param="isSearchForCategory"/>
+    <dsp:getvalueof var="searchType" param="searchType"/>
+    <dsp:getvalueof var="productListingView" param="productListingView"/>    
+    <div class="autres ${ajouterFacetId}" id="autres_${ajouterFacetId}">
+      <dsp:getvalueof var="paramToLoad" value="${contextPath}/search/ajouter/popUpRenederer.jsp?question=${castCollection:encode(question)}&trail=${castCollection:encode(trailVar)}&categoryId=${categoryIdVar }&sortByValue=${sortByValue }&productListingView=${productListingView }&searchType=${searchType }&currentTab=${currentTab }&container=${castCollection:encode(containerVar)}&isSearchForCategory=${isSearchForCategory}&ajouterTrail=${castCollection:encode(ajouterTrail)}&ajouterFacetId=${ajouterFacetId}"/>
+      <dsp:a id="ajouterLink_${ajouterFacetId}" onclick="showContPopup('${ajouterFacetId}', '${paramToLoad}')" iclass="autresLnk" href="javascript:void(0)"><fmt:message key="search_ajouter.ajouter"/></dsp:a>
+     
+      <div id="ajouterPopup_${ajouterFacetId}" class="autresPopup" style="display: none;" loaded="false">
+        <img src="${contextPath}/images/ajax-loader-tr.gif" align="middle"/>
+      </div>
+    </div>
+               
+  </dsp:oparam>
+</dsp:droplet>
+
+<c:set var="ajouterFacetId" value=""/>

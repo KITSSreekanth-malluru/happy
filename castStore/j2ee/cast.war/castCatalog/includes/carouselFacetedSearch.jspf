@@ -1,0 +1,47 @@
+<div class="carousel carThumbsContainer" id="carousel">
+  <div class="carThumbs" style="text-align: center; width:950px;">
+     <img src="${contextPath}/images/ajax-loader-tr.gif" align="middle" style="margin-top: 5px;"/>
+  </div>
+
+  <dsp:getvalueof var="trail" param="trail"/>
+  <dsp:getvalueof var="productId" param="productId"/>
+  <dsp:getvalueof var="categoryId" param="categoryId"/>
+  <dsp:getvalueof var="documentId" param="documentId"/>
+  <dsp:getvalueof var="ownerProductId" param="ownerProductId"/>
+  <dsp:getvalueof var="ownerCategoryId" param="ownerCategoryId"/>
+  <dsp:getvalueof var="isSearchResult" param="isSearchResult"/>
+  <dsp:getvalueof var="sortByValue" param="sortByValue"/>
+      
+  <div class="clear"></div>
+  <div class="carouselPopup"></div>
+  <div class="inside prdMarker slPrdMarker"><!--~--></div>
+</div>
+
+<script>
+
+$(window).load(function(){
+
+  $(".carThumbsContainer").load("${contextPath}/castCatalog/includes/carouselFacetedSearchProductRenderer.jsp?trail=${trail}&productId=${productId}&isSearchResult=${isSearchResult}&categoryId=${categoryId}&documentId=${documentId}&ownerProductId=${ownerProductId}&ownerCategoryId=${ownerCategoryId}&sortByValue=${sortByValue}", null, function(){
+    doThis();
+    counAndShowCarItems(${carouselProductCount});
+   });
+  /* COUNT AND SHOW CAROUSEL ITEMS COUNTER */
+  function doThis() {
+  	
+    $("#carousel").carousel({
+      inside : ".carThumbs", /* Scrollable elements must be inside of this element */
+      nxt : ".carNext", /* classname or ID of the next button */
+      prev : ".carPrev", /* classname or ID of the previos button */
+      moveCount : 1, /* How match images scroll in one moment */
+      speed : 300, /* Speed of animation "slow", "normal", "fast" or integer */
+
+      crollOnMouseOver : true, /* Is carousel need scroll on mouseover */
+      speedOver : 550, /* Speed of animation when mouseover */
+      speedOverClick : 200, /* Speed of animation when click */
+
+      preLoad : 2 /* Count of images to preload in a right invisible area */
+    });
+    prepareDraggables();
+  }
+  });
+</script>

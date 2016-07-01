@@ -1,0 +1,237 @@
+<DECLAREPARAM NAME="strUrlMagasin" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="strUrl" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="multi" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="magasinid" CLASS="java.lang.Integer" DESCRIPTION="">
+<DECLAREPARAM NAME="regionid" CLASS="java.lang.Integer" DESCRIPTION="">
+<java>
+String strUrl3 = "monMagasin.jhtml?magasinid=" + request.getParameter("magasinid") +"&regionid=" + request.getParameter("regionid");
+request.setParameter("strUrlMagasin",strUrl3);
+</java>
+<DROPLET BEAN="/atg/dynamo/droplet/Switch">
+    <PARAM NAME="value" VALUE="param:magasinid">
+    <OPARAM NAME="default">
+        <DROPLET BEAN="/atg/dynamo/droplet/Redirect">
+            <PARAM NAME="url" VALUE="param:strUrlMagasin">
+        </DROPLET>
+    </OPARAM>
+    <OPARAM NAME="unset">
+    </OPARAM>
+</DROPLET>
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+  <tbody>
+    <tr>
+      <td align="center" class="tibl">&nbsp;<br /><b>LES MAGASINS CASTORAMA<br />DECO, BRICO, BATI, JARDIN</b></td>
+    </tr>
+  </tbody>
+</table>
+&nbsp;
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+  <tbody>
+    <tr>
+      <td class="t">
+        Avec plus de 90 magasins Castorama en France, où que vous soyez, il y a toujours un magasin Castorama pr&egrave;s de chez vous.
+        <br />
+        Id&eacute;es, conseils, produits et services... retrouvez-nous vite dans votre magasin Castorama !
+        <br />
+        <br />
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table border="0" width="95%" cellpadding="0" cellspacing="3">
+  <tbody>
+    <tr>
+      <td class="t" valign="top"><nobr><span class="stibl"><b>ACC&Egrave;S G&Eacute;N&Eacute;RAL par la carte</b></span></nobr>
+        <br />
+        <img src="/com/img/px_jaune.gif" width="190" height="1" border="0" alt="" />
+        <br />
+        <img src="/com/img/1pixel.gif" height="5" border="0" alt="" />
+        <br />
+        Cliquez sur la r&eacute;gion de votre choix
+        </td>
+      <td class="t" valign="top"><nobr><span class="stibl"><b>ACC&Egrave;S RAPIDE par le menu d&eacute;roulant</b></span></nobr>
+        <br />
+        <img src="/com/img/px_jaune.gif" width="250" height="1" border="0" alt="" />
+        <br />
+        <img src="/com/img/1pixel.gif" height="5" border="0" alt="" />
+        <br />
+        S&eacute;lectionnez la r&eacute;gion de votre choix 
+        <br />
+        &agrave; l'aide du menu d&eacute;roulant ci-dessous.
+      </td>
+    </tr>
+    <tr>
+      <td align="left" valign="top"><IMG src="com/img/france.gif" border="0" usemap="#ImageMap36141" alt="" /></td>
+      <td valign="top" class="t">
+        <table>
+          <tbody>
+              <tr>
+                <td align="center">
+                        <form name="form" method="post" action="/magasins/detailCarte.jhtml">
+                            <IMG src="/com/img/1pixel.gif" alt="" WIDTH="5" HEIGHT="1" ALIGN="left" />
+                            <SELECT NAME="regionid" width=135 class="formCom" onChange="if(this.selectedIndex>0)go(document.form);">
+                                <option value="default">Nos magasins par d&eacute;partement...</option>
+                                <DROPLET BEAN="/atg/dynamo/droplet/SQLQueryForEach">
+                                    <PARAM NAME="queryBean" VALUE="bean:/castorama/SQLQueryMagasin2">
+                                    <PARAM NAME="elementName" VALUE="departement">
+                                    <OPARAM NAME="output">
+                                        <option value="param:departement.column[1]"><valueof param="departement.column[0]"/></option>
+                                    </OPARAM>
+                                </DROPLET>
+                            </SELECT>
+                        </FORM>
+                </td>
+              </tr>
+              <tr>
+                <td class="t" align="center">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+                    <tbody>
+                      <tr>
+                        <td valign="top"><img src="/com/img/coing_univers.gif" alt="" border="0" /></td>
+                        <td align="center" valign="middle" class="stibc" width="100%"><b>Castostages en magasin</b></td>
+                        <td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" alt="" border="0" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                        <img src="/com/img/fleche_bleue.gif" width="12" height="7" border="0" alt="" /><a href="castoStages.jhtml" target="_top">Planning des Castostages</a><br />&nbsp;
+                        <droplet bean="/atg/dynamo/droplet/SQLQueryRange">
+                            <param name="dataSource" value="bean:/atg/dynamo/service/jdbc/JTDataSource">
+                            <param name="querySQL" value="select nom,descriptif,datestage,horaires from CASTO_STAGE where datestage>= sysdate order by datestage">
+                            <param name="transactionManager" value="bean:/atg/dynamo/transaction/TransactionManager">
+                            <PARAM NAME="howMany" VALUE="1">
+                            <oparam name="outputStart">
+                                <table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#F6F6F6">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" class="t"><b>Le prochain Castostage</b></td>
+                                    </tr>  
+                            </oparam>
+                            <oparam name="outputEnd">
+                                  </tbody>
+                                </table>
+                            </oparam>
+                            <oparam name="outputRowStart">
+                            </oparam>
+                            <oparam name="outputRowEnd">
+                            </oparam>
+                            <oparam name="output">
+                                <tr>
+                                  <td class="t" align="center">
+                                      Le <valueof param="element.column[2]" converter="date" date="dd MMM yyyy"/> <valueof param="element.column[3]"/> :<br />
+                                      <img src="/com/img/fleche_bleue.gif" border="0"><a href="castoStages.jhtml" target="_top"><b><valueof param="element.column[0]"/></b></a>
+                                  </td>
+                                </tr>
+                            </oparam>
+                        </droplet>
+                </td>
+              </tr>
+                <droplet bean="/castorama/magasin/DropletOperationsSpecialesMagasin">
+                    <param name="homePage" value="true">
+                    <param name="elementNameTitre" value="titre">
+                    <param name="elementNameLibelle" value="lien">
+                    <param name="elementNameOperationId" value="operationId">
+                    <oparam name="outputStart">
+                        <tr>
+                          <td class="t" align="center">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+                              <tbody>
+                                <tr>
+                                  <td valign="top"><img src="/com/img/coing_univers.gif" alt="" border="0" /></td>
+                                  <td align="center" valign="middle" class="stibc" width="100%"><b>Ouvertures exceptionelles</b></td>
+                                  <td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" alt="" border="0" /></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                    </oparam>
+                    <oparam name="output">
+                        <table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#F6F6F6">
+                          <tbody>
+                            <tr>
+                              <td align="center" class="t"><b><valueof param="titre"/></b></td>
+                            </tr>
+                            <tr>
+                              <td align="center" class="t"><img src="/com/img/fleche_bleue.gif" alt="" border="0" /><a href="operationsSpeciales.jhtml" target="_top"><param name="operationId" value="param:operationId"><valueof param="lien"/></a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </oparam>
+                    <oparam name="outputEnd">
+                            </td>
+                        </tr>
+                    </oparam>
+                    <oparam name="empty">
+                    </oparam>
+                </droplet>
+              <tr>
+                <td>
+                        <DROPLET BEAN="/atg/targeting/TargetingArray">
+                            <PARAM NAME="targeter" VALUE="bean:/atg/registry/Slots/EntiteContenuMagasinsSlot">
+                            <oparam name="output">
+                                <DROPLET BEAN="/atg/dynamo/droplet/IsNull">
+                                    <PARAM NAME="value" VALUE="param:elements">
+                                    <OPARAM NAME="false">
+                                        <DROPLET BEAN="/atg/dynamo/droplet/Range">
+                                            <PARAM NAME="array" VALUE="param:elements">
+                                            <PARAM NAME="elementName" VALUE="entite">
+                                            <param name="howMany" value="1">
+                                            <oparam name="outputStart">
+                                                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                                  <tbody>
+                                                    <tr>
+                                                      <td width="100%" CLASS="t" valign="top" align="center">
+                                            </oparam>
+                                            <oparam name="outputEnd">
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                            </oparam>
+                                            <OPARAM NAME="output">
+                                                <DROPLET BEAN="/atg/dynamo/droplet/IsNull">
+                                                    <PARAM NAME="value" VALUE="param:entite">
+                                                    <oparam name="false">
+                                                        <droplet bean="/atg/dynamo/droplet/Switch">
+                                                            <param name="value" value="param:entite.com_01_Type">
+                                                            <oparam name="sku">
+                                                                <droplet src="/communaute/frag_sku.jhtml">
+                                                                    <PARAM NAME="entiteHp" VALUE="param:entite">
+                                                                </droplet>
+                                                            </oparam>
+                                                            <oparam name="free">
+                                                                <DROPLET BEAN="/atg/dynamo/droplet/IsNull">
+                                                                    <PARAM NAME="value" VALUE="param:entite.free_01_Template">
+                                                                    <oparam name="false">
+                                                                        <droplet src="param:entite.free_01_Template"></droplet>
+                                                                    </oparam>
+                                                                </droplet>
+                                                            </oparam>
+                                                        </droplet>
+                                                    </oparam>
+                                                </droplet>
+                                                <br />
+                                                <br />
+                                            </oparam>
+                                        </droplet>
+                                    </oparam>
+                                </droplet>
+                            </oparam>
+                        </droplet>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      &nbsp;
+      </td>
+    </tr>
+  </table>
+<MAP NAME="ImageMap36141">
+<area shape="poly" COORDS="127,59, 139,52, 133,45, 161,31, 162,12, 182,3, 186,11, 191,12, 204,25, 218,21, 218,34, 224,34, 226,39, 233,34, 251,51, 158,51, 158,59" href="detailCarte.jhtml?regionid=1" target="" alt="Nord" />
+    <area shape="poly" COORDS="278,149, 282,137, 294,128, 294,118, 305,111, 305,115, 311,108, 305,84, 312,84, 308,73, 315,63, 281,57, 278,49, 269,50, 265,48, 254,55, 251,51, 198,51, 197,149" href="detailCarte.jhtml?regionid=2" target="" alt="Est" />
+    <area shape="poly" COORDS="127,59, 123,59, 119,56, 100,59, 91,48, 90,44, 78,47, 78,49, 87,65, 84,75, 91,81, 77,83, 75,79, 55,79, 51,68, 42,65, 41,75, 31,81, 21,78, 5,84, 12,88, 7,98, 16,106, 22,102, 40,110, 43,115, 57,116, 73,132, 72,149, 158,149, 158,59" href="detailCarte.jhtml?regionid=3" target="" alt="Ouest" />
+    <area shape="poly" COORDS="197,149, 158,149, 158,51, 198,51" href="detailCarte.jhtml?regionid=4" target="" alt="Paris / Centre" />
+    <area shape="poly" COORDS="158,300, 146,292, 133,296, 125,292, 93,284, 72,267, 89,222, 89,197, 100,203, 95,184, 85,178, 89,166, 72,149, 158,149" href="detailCarte.jhtml?regionid=7" target="" alt="Atlantique" />
+    <area shape="poly" COORDS="158,150, 278,149, 272,162, 284,163, 289,148, 295,154, 291,161, 297,170, 295,180, 304,188, 288,197, 284,207, 295,207, 292,231, 237,231, 237,209, 159,209" href="detailCarte.jhtml?regionid=6" target="" alt="Rhône-Alpes" />
+    <area shape="poly" COORDS="292,231, 291,242, 304,245, 306,256, 281,268, 281,273, 265,284, 253,284, 245,279, 243,273, 238,273, 237,231" href="detailCarte.jhtml?regionid=8" target="" alt="Provence" />
+    <area shape="poly" COORDS="237,273, 219,270, 189,282, 190,301, 175,307, 169,299, 161,301, 159,300, 159,209, 237,209" href="detailCarte.jhtml?regionid=9" target="" alt="Languedoc" />
+</MAP>
+<droplet src="/com/frag_linkRetourHaut.jhtml"/>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+
+    <!-- 9 items of type sku-link -->
+
+    <add-item item-descriptor="sku-link" id="skul10002">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="displayName"><![CDATA[Link1]]></set-property>
+        <set-property name="item"><![CDATA[Casto511447]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 10:56:39]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10005">
+        <set-property name="quantity"><![CDATA[2]]></set-property>
+        <set-property name="displayName"><![CDATA[Link2]]></set-property>
+        <set-property name="item"><![CDATA[Casto510103]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 10:58:17]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10008">
+        <set-property name="quantity"><![CDATA[3]]></set-property>
+        <set-property name="displayName"><![CDATA[Link3]]></set-property>
+        <set-property name="item"><![CDATA[Casto506597]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:02:34]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10011">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="displayName"><![CDATA[Link4]]></set-property>
+        <set-property name="item"><![CDATA[Casto234002]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:06:13]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10014">
+        <set-property name="quantity"><![CDATA[4]]></set-property>
+        <set-property name="displayName"><![CDATA[Link5]]></set-property>
+        <set-property name="item"><![CDATA[Casto549034]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:06:59]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10017">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="displayName"><![CDATA[Link6]]></set-property>
+        <set-property name="item"><![CDATA[Casto529012]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:07:32]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10020">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="displayName"><![CDATA[Link7]]></set-property>
+        <set-property name="item"><![CDATA[Casto553077]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:10:49]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10023">
+        <set-property name="quantity"><![CDATA[3]]></set-property>
+        <set-property name="displayName"><![CDATA[Link8]]></set-property>
+        <set-property name="item"><![CDATA[Casto514601]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:11:28]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10029">
+        <set-property name="quantity"><![CDATA[2]]></set-property>
+        <set-property name="displayName"><![CDATA[Link9]]></set-property>
+        <set-property name="item"><![CDATA[Casto896040]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:14:16]]></set-property>
+    </add-item>
+
+    <!-- 5 items of type casto-sku for packs-->
+
+    <add-item item-descriptor="casto_sku" id="sku10003">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10002,skul10005]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[111111]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[3]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 10:55:09]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto_sku" id="sku10005">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10002,skul10008,skul10005]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[222222]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[3]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:01:16]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto_sku" id="sku10007">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10011,skul10014,skul10017]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[333333]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:07:35]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto_sku" id="sku10009">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10020,skul10023]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[444444]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:09:24]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto_sku" id="sku10011">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10020,skul10023,skul10029]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[555555]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[3]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:12:34]]></set-property>
+    </add-item>
+
+    <!-- 5 items of type casto-pack -->
+
+    <add-item item-descriptor="casto-pack" id="prod603983">
+        <set-property name="childSKUs"><![CDATA[sku10003]]></set-property>
+        <set-property name="displayName"><![CDATA[Pack1]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 10:45:59]]></set-property>
+        <set-property name="type"><![CDATA[casto-pack]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto-pack" id="prod603987">
+        <set-property name="childSKUs"><![CDATA[sku10005]]></set-property>
+        <set-property name="displayName"><![CDATA[Pack2]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:02:58]]></set-property>
+        <set-property name="type"><![CDATA[casto-pack]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto-pack" id="prod603989">
+        <set-property name="childSKUs"><![CDATA[sku10007]]></set-property>
+        <set-property name="displayName"><![CDATA[Pack3]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:05:01]]></set-property>
+        <set-property name="type"><![CDATA[casto-pack]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto-pack" id="prod603991">
+        <set-property name="childSKUs"><![CDATA[sku10009]]></set-property>
+        <set-property name="displayName"><![CDATA[Pack4]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:09:11]]></set-property>
+        <set-property name="type"><![CDATA[casto-pack]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto-pack" id="prod603993">
+        <set-property name="childSKUs"><![CDATA[sku10011]]></set-property>
+        <set-property name="displayName"><![CDATA[Pack5]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[8/4/2009 11:12:00]]></set-property>
+        <set-property name="type"><![CDATA[casto-pack]]></set-property>
+    </add-item>
+
+
+    <update-item item-descriptor="casto_sku" id="Casto511447">
+        <set-property name="packs"><![CDATA[prod603987,prod603983]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto234002">
+        <set-property name="packs"><![CDATA[prod603989]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto553077">
+        <set-property name="packs"><![CDATA[prod603991,prod603993]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_category" id="cat10008">
+        <set-property name="fixedChildProducts" add="true">
+            <![CDATA[prod603983,prod603987,prod603989,prod603991,prod603993]]></set-property>
+    </update-item>
+</gsa-template>

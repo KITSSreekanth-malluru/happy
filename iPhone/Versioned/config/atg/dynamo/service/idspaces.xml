@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE idgenerator
+  PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Id Generator//EN"
+  'http://www.atg.com/dtds/idgen/idgenerator_1.0.dtd'>
+
+<id-spaces>  
+  <id-space name="iPhoneVideo"  seed="1"	batch-size="10000" 	prefix="iPhV"/>
+  <id-space name="iPhoneAugAuxImage"  seed="1"   batch-size="10000"  prefix="iPhIm"/>
+</id-spaces>

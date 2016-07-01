@@ -1,0 +1,10 @@
+<!-- Empty Shopping Cart message block -->
+<dsp:getvalueof var="contextPath" bean="/OriginatingRequest.contextPath"/>
+<div class="boxCartWrEmpty">
+  <div class="votrePanier">   
+    <p><fmt:message key="msg.cart.empty.long"/></p>
+  </div>
+  <span class="ccBlueButton">
+    <button type="submit" class="ccBlueButton" onclick="window.location.replace('${contextPath }');"><fmt:message key="msg.cart.button.return.home"/></button>
+  </span>
+</div>

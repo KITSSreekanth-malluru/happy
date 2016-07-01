@@ -1,0 +1,65 @@
+<dsp:getvalueof var="count" param="count" />
+<dsp:getvalueof var="size" param="size" />
+
+
+<tr>
+	<td class="tblSplitter" colspan="6"><div><!--~--></div></td>
+</tr>
+<tr>
+	<td class="alignLeft">
+		<dsp:getvalueof var="codeArticle" param="line.CESCLAVE" />
+		<dsp:droplet name="SKUFindDroplet">
+			<dsp:param name="code" param="line.CESCLAVE" />
+			<dsp:oparam name="empty">
+				<dsp:droplet name="/com/castorama/droplet/ProductNameDroplet">
+					<dsp:param name="url" value="" />
+					<dsp:param name="name" value="" />
+					<dsp:oparam name="output">
+						<strong>
+							<dsp:valueof param="outName" />
+						</strong>
+					</dsp:oparam>
+				</dsp:droplet>
+			</dsp:oparam>
+			<dsp:oparam name="output">
+					<strong>
+						<dsp:valueof param="sku.displayName" />
+					</strong>
+			</dsp:oparam>
+		</dsp:droplet>
+	</td>
+	<td>
+		${codeArticle}
+	</td>
+	<td>
+		<dsp:valueof param="line.QRETOUR" number="###" >0</dsp:valueof>
+	</td>
+	<td>
+		<dsp:valueof param="element.DRETOUR_MARCHANDISE" date="dd/MM/yyyy" />
+	</td>
+	<td>
+		<dsp:getvalueof var="validationDate" param="element.DVALIDATION_RETOUR" />
+		<dsp:getvalueof var="refuseDate" param="element.DREFUS_RETOUR" />
+		<c:choose>
+			<c:when test="${null != validationDate}">
+				<fmt:message key="client.order.returns.state.1" />
+			</c:when>
+			<c:when test="${null != refuseDate}">
+				<fmt:message key="client.order.returns.state.2" />
+			</c:when>
+			<c:otherwise>
+				<fmt:message key="client.order.returns.state.3" />
+			</c:otherwise>
+		</c:choose>
+	</td>
+	<td class="lastCell center">
+		<dsp:getvalueof var="returnMotif" param="line.CMOTIF_RETOUR_SUR_BON_C640" />
+		<fmt:message key="client.order.returns.motif.${returnMotif}" />
+	</td>
+</tr>
+<tr>
+	<td class="tblSplitter" colspan="6"><div><!--~--></div></td>
+</tr>
+<tr>
+	<td class="productRowEnd noPadding" colspan="6"><div><!--~--></div></td>
+</tr>

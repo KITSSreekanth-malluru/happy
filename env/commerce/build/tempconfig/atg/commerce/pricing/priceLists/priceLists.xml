@@ -1,0 +1,7 @@
+<gsa-template xml-combine="append">
+
+    <item-descriptor name="price" item-cache-size="100000" query-cache-size="125">
+        <attribute name="cacheNullItems" value="true"/>
+    </item-descriptor>  
+    
+</gsa-template>

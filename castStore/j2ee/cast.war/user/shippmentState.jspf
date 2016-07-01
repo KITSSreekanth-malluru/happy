@@ -1,0 +1,6 @@
+<div class="orderNumItem shipmentState">
+	<div class="circlesPlaceholder">
+		<div class="circles${delivery_state}"></div>
+	</div>
+	<div><fmt:message key="client.order.delivery.state.${delivery_state}" /></div>
+</div>

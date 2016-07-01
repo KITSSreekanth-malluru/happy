@@ -1,0 +1,35 @@
+<div id="sentMessage" class="whitePopupContainer">
+	
+	<div class="whitePopupContent popupFormContainer">
+		<div class="whitePopupHeader">
+			<h1>Demander conseil sur ma commande</h1>
+			<c:choose>
+				<c:when test="${null == orderId}">
+					<c:set var="backURL" value="${originatingRequest.requestURL}" />
+				</c:when>
+				<c:otherwise>
+					<c:set var="backURL" value="${originatingRequest.requestURL}?orderId=${orderId}" />
+				</c:otherwise>
+			</c:choose>
+			<dsp:a href="${backURL}" iclass="closeBut">
+				<span><!--~--></span>
+				<fmt:message key="castCatalog_label.close" />
+			</dsp:a>
+		</div>
+		<div class="clear"><!--~--></div>                     
+		<div class="popupContentContainer formMainBlock orderMsgContainer">
+			<div class="formContent grayCorner grayCornerGray">
+				<div class="cornerBorderGrayBg cornerTopLeft"><!--~--></div>
+				<div class="cornerBorderGrayBg cornerTopRight"><!--~--></div>
+				<div class="cornerBorderGrayBg cornerBottomLeft"><!--~--></div>
+				<div class="cornerBorderGrayBg cornerBottomRight"><!--~--></div>
+				<div class="cornerOverlay">	                    
+					<div class="orderMessage">Votre message a bien été envoyé.</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+<div class="clear"><!--~--></div>

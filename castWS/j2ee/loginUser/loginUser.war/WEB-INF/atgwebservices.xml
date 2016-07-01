@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE webservices PUBLIC "-//IBM Corporation, Inc.//DTD J2EE Web services 1.0//EN" "http://www.ibm.com/webservices/dtd/j2ee_web_services_1_0.dtd">
+<webservices>
+<webservice-description>
+<webservice-description-name>loginUser</webservice-description-name>
+<wsdl-file>WEB-INF/loginUser.wsdl</wsdl-file>
+<jaxrpc-mapping-file>WEB-INF/loginUserMapping.xml</jaxrpc-mapping-file>
+<port-component>
+<port-component-name>loginUser</port-component-name>
+<wsdl-port>
+<namespaceURI>http://www.atg.com/webservices</namespaceURI>
+<localpart>LoginUserSEIPort</localpart>
+</wsdl-port>
+<service-endpoint-interface>webservices.LoginUserSEI</service-endpoint-interface>
+<service-impl-bean>
+<servlet-link>loginUser</servlet-link>
+</service-impl-bean>
+</port-component>
+</webservice-description>
+</webservices>

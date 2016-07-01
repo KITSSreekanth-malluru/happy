@@ -1,0 +1,126 @@
+<script language="javascript">
+var Vide = new Array ('...','Vide');
+
+<DROPLET BEAN="/castorama/DropletListeStatutsMotifsIssues">
+  <OPARAM NAME="output">
+  <valueof param="element"/>
+  </OPARAM>
+</DROPLET>
+
+function RechercheValeur(tab,valeur)
+{
+	var chaine;
+	for (i=0;i<tab.length;i+=2)
+	{
+		if (tab[i+1] == valeur)
+		{
+			chaine = tab[i];
+			break;	
+		}
+	}
+	return chaine;
+}
+
+
+function renvoieSelections()
+{
+	var rSelStatuts = document.forms['contact'].elements['ComboStatuts'];
+	statutCourant = RechercheValeur(lesStatuts,rSelStatuts.value);
+	var rSelMotifs = document.forms['contact'].elements['ComboMotifs'];
+	motifCourant = RechercheValeur(Tableau(rSelStatuts.value),rSelMotifs.value);
+	var rSelIssues = document.forms['contact'].elements['ComboIssues'];
+	issueCourant = rSelIssues.value;
+	if (statutCourant == 'Vide' || statutCourant == "..." || statutCourant == "") statutCourant='null';
+	if (motifCourant == 'Vide' || motifCourant == "..." || motifCourant == "") motifCourant='null';
+	if (issueCourant == 'Vide' || issueCourant == "..."  || issueCourant == "") issueCourant='null';
+	
+	window.document.contact.statutText.value = statutCourant;
+	window.document.contact.motifText.value = motifCourant;
+	window.document.contact.issueText.value = issueCourant;		
+}
+
+
+function combo(elName)
+{
+	return document.forms['contact'].elements[elName];	
+}
+function Ajouter(elName,inText,inValue)
+{
+   var rSel = combo(elName);
+   rSel.options[rSel.length] = new Option(inText,inValue,false,false);
+}
+function VideCombo(elName)
+{
+	var rSel = combo(elName);
+	rSel.length = 0;
+}
+function RempliEtVideCombo(elName,tab)
+{
+	VideCombo(elName);
+	RempliCombo(elName,tab);
+}
+function RempliCombo(elName,tab)
+{
+	var taille = tab.length-1;
+	for (i=taille;i>=1;i-=2)
+	{
+		Ajouter(elName,tab[i-1],tab[i]);
+	}
+}
+
+function changementStatuts(elName1,elName2,elName3)
+{
+	var rSel = combo(elName1);
+	VideCombo(elName2);
+	var tabx = Tableau(rSel.value);
+	RempliComboS(elName2,tabx,'...');	
+	RempliEtVideCombo(elName3,Vide);
+}
+
+function changementMotifs(elName1,elName2)
+{
+	var rSel = combo(elName1);
+	VideCombo(elName2);
+	RempliComboS(elName2,Tableau(rSel.value),'...');
+}
+function RempliComboS(elName,tab,defaultSelected)
+{
+	var taille = tab.length-1;
+	var rang = 0;
+	var j = 0;
+	var l_ValueSelected = null;
+
+	for (i=taille;i>=1;i-=2)
+	{
+		if (defaultSelected == tab[i-1])
+		{
+			l_ValueSelected = tab[i];
+			rang = j;
+		}
+		Ajouter(elName,tab[i-1],tab[i]);
+		j++;
+	}
+	SelectItem(elName,rang);
+	return l_ValueSelected;
+}
+
+function SelectItem(elName,index)
+{
+	var rSel = combo(elName);
+	if (index >= 0 && index < rSel.options.length)
+	{
+		rSel.selectedIndex = index;
+	}
+	return true;
+}
+function chargementInitial(val1,val2,val3)
+{
+	l_strValueSelected = RempliComboS('ComboStatuts',lesStatuts,val1);
+	var leMotif = Tableau(l_strValueSelected);
+	l_strValueSelected = RempliComboS('ComboMotifs',leMotif,val2);
+	var lIssue = Tableau(l_strValueSelected);
+	l_ValueSelected = RempliComboS('ComboIssues',lIssue,val3);
+}
+
+</script>
+

@@ -1,0 +1,26 @@
+<!-- Combining xml files - no DOCTYPE declaration necessary -->
+<gsa-template xml-combine="append">
+    <header>
+        <name>default</name>
+        <author/>
+    </header>
+    <item-descriptor name="magasin">
+        <table name="CAST_STORE_GEOLOCATION" type="auxiliary" id-column-name="id">
+          <property category="Geo Location" name="longitude" data-type="double" column-name="longitude" display-name-resource="store.longitude">
+             <attribute name="resourceBundle" value="com.castorama.mobile.store.StoreCatalogResources" />
+          </property>
+          <property category="Geo Location" name="latitude" data-type="double" column-name="latitude" display-name-resource="store.latitude">
+            <attribute name="resourceBundle" value="com.castorama.mobile.store.StoreCatalogResources" />
+          </property>
+        </table>
+        <table name="CASTO_MAGASIN" type="primary" id-column-name="id">
+            <property name="productLocalization" column-name="product_localization" data-type="enumerated" 
+                    display-name="Is product localization enabled for the store" required="true" 
+                    readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit">
+                <attribute name="useCodeForValue" value="true"/>
+                <option value="true" code="1"/>
+                <option value="false" code="0"/>
+            </property>
+        </table>
+    </item-descriptor>
+</gsa-template>

@@ -1,0 +1,51 @@
+<dsp:importbean bean="/atg/userprofiling/Profile" />
+
+<dsp:droplet name="/atg/commerce/inventory/InventoryLookup">
+  <dsp:param name="itemId" value="${skuId}"/>
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="stockLevel" param="inventoryInfo.stockLevel"/>
+  </dsp:oparam>
+</dsp:droplet>
+
+<dsp:getvalueof var="cartQuantity" value="${true}"/>
+<dsp:getvalueof var="showQuantityMessage" value="${false}"/>
+<dsp:getvalueof var="isOnRemainingStock" value="${false}"/>
+<dsp:getvalueof var="needUpdateQTY" value="${false}"/>
+
+<dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet">
+ <dsp:param name="product" param="element"/>
+ <dsp:param name="store" bean="Profile.currentLocalStore" />
+ <dsp:param name="svAvailableMap" value="${svAvailableMap}" />
+
+  <dsp:oparam name="remainingStock">
+    <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+  </dsp:oparam>
+
+  <dsp:oparam name="ccSoldOnlyInStore">
+    <c:if test="${deliveryType != 'deliveryToHome'}">
+      <dsp:getvalueof var="stockLevel" param="svStockAvailable"/>
+    </c:if>
+    <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+  </dsp:oparam>
+
+  <dsp:oparam name="ccDeliveryTime">
+    <c:if test="${deliveryType != 'deliveryToHome'}">
+      <dsp:getvalueof var="stockLevel" param="svStockAvailable"/>
+      <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    </c:if>
+    <dsp:getvalueof var="needUpdateQTY" value="${mode == 'cart' and deliveryType != 'deliveryToHome'}"/>
+  </dsp:oparam>
+
+  <dsp:oparam name="ccRemainingStock">
+    <c:if test="${deliveryType != 'deliveryToHome'}">
+      <dsp:getvalueof var="stockLevel" param="svStockAvailable"/>
+    </c:if>
+    <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+  </dsp:oparam>
+
+</dsp:droplet>
+
+<%@include file="../castCatalog/includes/numbAndPrice.jspf" %>

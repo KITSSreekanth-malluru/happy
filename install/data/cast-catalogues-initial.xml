@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <add-item item-descriptor="catalogue" id="c100001">
+            <set-property name="title"><![CDATA[E-dépliant destination maison]]></set-property>
+            <set-property name="description">
+                <![CDATA[2009 l'année des 40 ans de Castorama Dès maintenant et tout le long de l'année, profitez d’offres exceptionnelles !]]></set-property>
+            <set-property name="promoMessage"><![CDATA[PLUS DE 200 PRODUITS À PRIX EXCEPTIONNEL]]></set-property>
+            <set-property name="active"><![CDATA[true]]></set-property>
+            <set-property name="featured"><![CDATA[true]]></set-property>
+            <set-property name="bookable"><![CDATA[false]]></set-property>
+            <set-property name="image"><![CDATA[lesCataImg1]]></set-property>
+            <set-property name="browse_url"><![CDATA[#]]></set-property>
+            <set-property name="displayOrder"><![CDATA[2]]></set-property>
+            <set-property name="availableCoppies"><![CDATA[30000]]></set-property>
+            <set-property name="releaseDate"><![CDATA[1/11/2009 12:00:00]]></set-property>
+        </add-item>
+        <add-item item-descriptor="catalogue" id="c100002">
+            <set-property name="title"><![CDATA[Aménagement extérieur & jardin 2009]]></set-property>
+            <set-property name="description">
+                <![CDATA[Lorem ipsum dolor sit amet, contetur adipiscing elit. Nulla et tortor semper. Nullam pretium malesuada mauris.]]></set-property>
+            <set-property name="promoMessage"><![CDATA[NOUVEAU]]></set-property>
+            <set-property name="active"><![CDATA[true]]></set-property>
+            <set-property name="featured"><![CDATA[true]]></set-property>
+            <set-property name="bookable"><![CDATA[true]]></set-property>
+            <set-property name="image"><![CDATA[lesCataImg2]]></set-property>
+            <set-property name="browse_url"><![CDATA[#]]></set-property>
+            <set-property name="displayOrder"><![CDATA[1]]></set-property>
+            <set-property name="availableCoppies"><![CDATA[30000]]></set-property>
+            <set-property name="releaseDate"><![CDATA[1/11/2009 12:00:00]]></set-property>
+        </add-item>
+        <add-item item-descriptor="catalogue" id="c100003">
+            <set-property name="title"><![CDATA[Inspiration maison]]></set-property>
+            <set-property name="description">
+                <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tortor. ]]></set-property>
+            <set-property name="active"><![CDATA[true]]></set-property>
+            <set-property name="featured"><![CDATA[false]]></set-property>
+            <set-property name="bookable"><![CDATA[false]]></set-property>
+            <set-property name="image"><![CDATA[lesCataImg3]]></set-property>
+            <set-property name="browse_url"><![CDATA[#]]></set-property>
+            <set-property name="displayOrder"><![CDATA[5]]></set-property>
+            <set-property name="availableCoppies"><![CDATA[30000]]></set-property>
+            <set-property name="releaseDate"><![CDATA[1/11/2009 12:00:00]]></set-property>
+        </add-item>
+        <add-item item-descriptor="catalogue" id="c100004">
+            <set-property name="title"><![CDATA[Mieux vivre sa maison]]></set-property>
+            <set-property name="description">
+                <![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et tortor. ]]></set-property>
+            <set-property name="active"><![CDATA[true]]></set-property>
+            <set-property name="featured"><![CDATA[false]]></set-property>
+            <set-property name="bookable"><![CDATA[false]]></set-property>
+            <set-property name="image"><![CDATA[lesCataImg4]]></set-property>
+            <set-property name="browse_url"><![CDATA[#]]></set-property>
+            <set-property name="displayOrder"><![CDATA[4]]></set-property>
+            <set-property name="availableCoppies"><![CDATA[30000]]></set-property>
+            <set-property name="releaseDate"><![CDATA[1/11/2009 12:00:00]]></set-property>
+        </add-item>
+        <add-item item-descriptor="catalogue" id="c100005">
+            <set-property name="title"><![CDATA[Innovations maison]]></set-property>
+            <set-property name="description">
+                <![CDATA[Lorem ipsum dolor sit amet, contetur adipiscing elit. Nulla et tortor semper. Nullam pretium malesuada mauris.]]></set-property>
+            <set-property name="active"><![CDATA[true]]></set-property>
+            <set-property name="featured"><![CDATA[false]]></set-property>
+            <set-property name="bookable"><![CDATA[false]]></set-property>
+            <set-property name="image"><![CDATA[lesCataImg5]]></set-property>
+            <set-property name="browse_url"><![CDATA[#]]></set-property>
+            <set-property name="displayOrder"><![CDATA[1]]></set-property>
+            <set-property name="availableCoppies"><![CDATA[30000]]></set-property>
+            <set-property name="releaseDate"><![CDATA[1/11/2009 12:00:00]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

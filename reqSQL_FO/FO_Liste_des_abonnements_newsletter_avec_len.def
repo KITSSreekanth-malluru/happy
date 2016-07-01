@@ -1,0 +1,80 @@
+nom:FO_Liste_des_abonnements_newsletter_avec_len
+category:FO
+titre:Liste des abonnements newsletter avec informations LEN
+requete:select distinct 
+CASE WHEN (t.profile_id is not null and t1.email=t.email and t1.id=t.profile_id and t1.id=t3.id) 
+THEN     
+t1.id
+||'#'||
+CASE WHEN t3.civilite=1 THEN 'Mr' WHEN t3.civilite=2 THEN 'Mme' WHEN t3.civilite=3 THEN 'Mlle' END 
+||'#'||t1.last_name
+||'#'||t1.first_name
+||'#'||t.email
+ELSE
+'####'||t.email
+END
+||'#'||t.canalinscription
+
+
+/* IRW 04/04/2007 correction */
+
+/* par simplification, on estime qu'un internaute est C (client) m?me s'il n'a fait qu'une commande ch?que m?me non valid?e */
+
+||'#' || CASE WHEN t.profile_id in (select distinct profile_id from dcspp_order)  then 'C' else 'P' END
+
+/*||'#'|| case when (t2.order_id is not null) then 'C' else 'P' end */
+
+||'#'|| CASE WHEN t.carteatout=0 THEN 'NON' WHEN t.carteatout=1 THEN 'OUI' END 
+
+||'##'|| CASE WHEN t.proprietaire_locataire=0 THEN 'OUI' WHEN t.proprietaire_locataire=1 THEN 'NON' END 
+
+||'#'|| CASE WHEN t.maison=0 THEN 'NON' WHEN t.maison=1 THEN 'OUI' END 
+
+||'#'|| CASE WHEN t.jardin=0 THEN 'NON' WHEN t.jardin=1 THEN 'OUI' END 
+
+||'##'|| CASE WHEN t.acces_partenaires_casto=0 THEN 'NON' WHEN t.acces_partenaires_casto=1 THEN 'OUI' END 
+
+||'#'|| CASE WHEN t.joueur=0 THEN 'NON' WHEN t.joueur=1 THEN 'OUI' END 
+
+||'#'|| CASE WHEN t.format=0 THEN '1' WHEN t.format=1 THEN '2' END 
+
+||'#'||
+CASE WHEN (t.profile_id is not null and t1.email=t.email and t1.id=t.profile_id and t1.id=t3.id) 
+THEN 
+ CASE when ((t3.civilite=1 or t3.civilite=2 or t3.civilite=3) and ( t1.last_name is not null) and (t1.first_name is not null) ) then '2' when ( (t3.civilite is null) and ( t1.last_name is not null) and (t1.first_name is not null) ) then '1' when ( (t3.civilite is null) and (( t1.last_name is not null) or (t1.first_name is not null)) ) then '0' END 
+END
+||'#'||t.codepostal 
+
+||'#'||t.ville 
+
+||'#'|| CASE WHEN t.age=0 THEN '1' WHEN t.age=1 THEN '2' WHEN t.age=2 THEN '3' WHEN t.age=3 THEN '4' END 
+
+||'#'||t.nbpersonnes 
+
+||'#'|| CASE WHEN t.maisoncampagne=0 THEN 'non' WHEN t.maisoncampagne=1 THEN 'oui' END 
+
+/* IRW 04/04/2007 Bizarre, on inverse le champ VALID, je laisse comme ca, ce doit etre pour EDATIS */
+
+||'##'|| CASE WHEN t.valid=0 THEN '1' WHEN t.valid=1 THEN '0' END 
+
+||'#'||to_char( t.datedesincrption,'DD/MM/YYYY') 
+
+||'###'|| CASE WHEN (t.magasin='0' or t.magasin='no' or t.magasin is null) THEN 'NON' WHEN (t.magasin='1' or t.magasin='yes') THEN 'OUI' END 
+
+||'#'|| CASE WHEN t.reseive_offers=1 THEN 'castoramaPartenaires' WHEN t.receive_email=1 THEN 'castoramaUniquement' END 
+
+||'#' 
+
+from casto_abonnement_newsletter t,dps_user t1, casto_user t3
+
+parametre:t.valid|inscrit(1=oui,0=non)|1|number
+parametre:t.email|email|irwan.djoehana@castorama.fr|string
+parametre:t.canaldesinscription|canal de desinscription|News112003|string
+parametre:decode(t.magasin,'1','OUI','yes','OUI','0','NON','no','NON')|flag Magasin (OUI ou NON)|OUI|string
+parametre:t.reponse_loi_len|reponse loi len (1=castoramaUniquement ou 0=castoramaPartenaires)|1|string
+parametre:t.receive_email|castorama Uniquement (true=1 ou false=2)|1|string
+parametre:t.reseive_offers|castoramaPartenaires (true=1 ou false=2)|1|string
+parametre:t.dateInscription|Date d'inscription (JJ/MM/AA)|01/01/07|date
+parametre:t.dateInscription|Date d'inscription (JJ/MM/AA)|01/01/07|date
+parametre:t.dateDesincrption|Date de desinscription (JJ/MM/AA)|01/01/07|date
+parametre:t.dateDesincrption|Date de desinscription (JJ/MM/AA)|01/01/07|date

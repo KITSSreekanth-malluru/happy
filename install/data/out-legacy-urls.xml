@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="legacyURL" id="lu1000001">
+            <set-property name="uri"><![CDATA[/store/kit-alarme-PLcategorie_4348.htm]]></set-property>
+            <set-property name="attachedTo"><![CDATA[cat100001]]></set-property>
+        </add-item>
+        <add-item item-descriptor="legacyURL" id="lu1000002">
+            <set-property name="uri"><![CDATA[/store/station-meteo-PLcategorie_4757.htm]]></set-property>
+            <set-property name="attachedTo"><![CDATA[cat100001]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arborescence separator=">>" colorLastText="0xff0000">
+	<range pages="0|10">
+		<txt>Primul capitol 1</txt>
+		<alttext>navigator.id1</alttext>		
+		<range pages="0|5">
+			<txt>subcapitol 1</txt>
+			<alttext>navigator.id1</alttext>					
+			<range pages="2|3">
+				<txt>SUB SUB subcapitol 1</txt>
+				<alttext>navigator.id1</alttext>									
+			</range>
+			<range pages="4|5">
+				<txt>SUB SUB subcapitol 2</txt>
+				<alttext>navigator.id1</alttext>									
+			</range>
+		</range>
+		<range pages="6|10">
+			<txt>subcapitol 2</txt>
+			<alttext>navigator.id1</alttext>					
+		</range>		
+	</range>
+	<range pages="11|20">
+		<txt>capitoliu 2</txt>
+		<alttext>navigator.id1</alttext>		
+		<range pages="11|15">
+			<txt>supt din deal 1</txt>
+			<alttext>navigator.id1</alttext>					
+		</range>
+		<range pages="16|20">
+			<txt>subcapitol din vale</txt>
+			<alttext>navigator.id1</alttext>					
+		</range>		
+	</range>	
+</arborescence>

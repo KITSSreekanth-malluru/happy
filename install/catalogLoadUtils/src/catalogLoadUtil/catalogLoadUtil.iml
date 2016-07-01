@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://D:/ATG/ATG9.0/DCS/lib/resources.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DCS/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DSS/lib/resources.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DSS/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/WebUI/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DPS/lib/resources.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DPS/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS-UI/lib/uiresources.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS-UI/lib/uiclasses.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS-UI/lib/jhall.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS/lib/resources.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS/lib/servlet.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS/solid/SolidDriver2.1.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAS/lib/ice.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/Publishing/base/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DCS/PublishingAgent/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/PublishingAgent/base/lib/agent.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAF/Search/Query/lib/classes.jar" />
+    <libelement value="file://D:/ATG/ATG9.0/DAF/Search/common/lib/classes.jar" />
+    <libelement value="file://D:/jboss_4.2.2/server/atg/lib/jboss-j2ee.jar" />
+    <libelement value="jar://$MODULE_DIR$/commons-lang-2.4.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="resources.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DCS/lib/resources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DCS/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DSS/lib/resources.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DSS/lib/resources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DSS/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DSS/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/WebUI/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/WebUI/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DPS/lib/resources.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DPS/lib/resources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DPS/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DPS/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="uiresources.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS-UI/lib/uiresources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="uiclasses.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS-UI/lib/uiclasses.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jhall.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS-UI/lib/jhall.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DAS/lib/resources.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS/lib/resources.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DAS/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="servlet.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS/lib/servlet.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="SolidDriver2.1.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS/solid/SolidDriver2.1.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ice.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAS/lib/ice.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/Publishing/base/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/Publishing/base/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DCS/PublishingAgent/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DCS/PublishingAgent/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="agent.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/PublishingAgent/base/lib/agent.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DAF/Search/Query/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAF/Search/Query/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://D:/ATG SRC/DAF/final/9.0/Search/Query/src/classes" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="D:/ATG/ATG9.0/DAF/Search/common/lib/classes.jar">
+        <CLASSES>
+          <root url="file://D:/ATG/ATG9.0/DAF/Search/common/lib/classes.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://D:/ATG SRC/DAF/final/9.0/Search/common/src/classes" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jboss-j2ee.jar">
+        <CLASSES>
+          <root url="file://D:/jboss_4.2.2/server/atg/lib/jboss-j2ee.jar" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-lang-2.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/commons-lang-2.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

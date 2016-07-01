@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+        
+<!--
+	Mathieu Chatte - Le 20/05/2009 - Fiche Mantis 1429
+-->     
+<gsa-template>
+
+<item-descriptor name="messageRegionRepository" display-name="Message Region" display-property="message_ID">
+     
+    <table name="CASTO_MESSAGES" type="primary" id-column-name="message_ID">
+	    <property name="message_ID" display-name="Id" required="true" writable="false"/>
+	    <property name="messageNom" data-type="string" column-name="message_nom" display-name="Nom"/>
+     	<property name="messageTexte" data-type="string" column-name="message_texte" display-name="Message"/>
+    </table>
+     
+	<table name="CASTO_REGION_MESSAGES" type="multi" id-column-name="message_id" multi-column-name="seq">
+    	<property name="regions" data-type="list" component-item-type="region" column-name="region_id" display-name="Régions" repository="/atg/registry/Repository/MagasinGSARepository"/>
+	</table>
+    
+</item-descriptor>
+
+</gsa-template>

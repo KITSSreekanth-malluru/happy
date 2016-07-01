@@ -1,0 +1,16 @@
+<div id="sofinco" class="whitePopupContainer">
+	<div class="whitePopupContent popupFormContainer longWidthPopup">
+		<div class="whitePopupHeader">
+			<a href="javascript:void(0)" onclick="hidePopup(this)" class="closeBut" >
+				<span><!--~--></span><fmt:message key="castCatalog_label.close" />
+			</a>
+		</div>
+		<div class="clear"><!--~--></div>                     
+		<div class="popupContentContainer">
+			<iframe id="routeSofinco"  width="95%" height="600" frameborder="none" border="none" scrolling="auto" 
+							src="" >
+								
+			</iframe>
+		</div>
+	</div>
+</div>

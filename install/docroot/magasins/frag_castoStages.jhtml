@@ -1,0 +1,47 @@
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+<tr><td align="center" class="tibl">&nbsp;<br><b>Les Castostages en magasin</b></td></tr>
+</table>
+<droplet src="/com/frag_linkRetour.jhtml"/>
+<table cellpadding="0" cellspacing="0" border="0" width="80%">
+<tr><td class="t"><b>Vous êtes un adepte du marteau  ou vous ne savez pas poser du papier peint ? Couper du carrelage vous semble hors de portée  ? </b> Les magasins Castorama offrent à tous l’opportunité d’apprendre à bien s’y prendre et proposent des stages de bricolage gratuits, dispensés chaque samedi matin, au sein de votre magasin*, par des vendeurs-experts. De 9h30 à 11h30, les Castostages abordent les différentes étapes de mises en œuvre de votre projet. Alors, n’hésitez plus, rendez-vous à l’accueil de votre magasin Castorama pour vous inscrire.<br><br>*Selon magasins<br><br></td></tr>
+<tr><td class="t">Vous pouvez &eacute;galement visionner nos <IMG src="/com/img/fleche_bleue.gif" BORDER="0"><a href="/conseils/castostages/index.jhtml" target="_top">Castostages en vidéo</a>.</td></tr>
+</table>
+<br>
+<TABLE WIDTH="90%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><TD class="stibl"><b>Planning des Castostages en magasin :</b></TD></TR>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" height="1" border="0"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+</TABLE>
+
+<droplet bean="/atg/dynamo/droplet/SQLQueryRange">
+<param name="dataSource" value="bean:/atg/dynamo/service/jdbc/JTDataSource">
+<param name="querySQL" value="select nom,descriptif,datestage,horaires from CASTO_STAGE where datestage>= sysdate order by datestage">
+<param name="transactionManager" value="bean:/atg/dynamo/transaction/TransactionManager">
+<PARAM NAME="howMany" VALUE="12">
+<oparam name="outputStart">
+<table width="90%" border="0" cellpadding="1" cellspacing="1">
+<tr>
+	<td width="30%" align="center" class="t" bgcolor="#F9E592"><b>DATES</b></td>
+	<td width="70%" class="t" bgcolor="#F9E592"><b>THEMES</b><img src="/com/img/1pixel.gif" height="1" width="20" border="0"><img src="com/img/pictos.gif" border="0" align="absmiddle"></td>
+</tr>
+</oparam>
+<oparam name="outputEnd">
+</oparam>
+<oparam name="outputRowStart">
+</oparam>
+<oparam name="outputRowEnd">
+</oparam>
+<oparam name="output">
+<tr>
+	<td class="t" bgcolor="#F6F6F6" align="center"><valueof param="element.column[2]" converter="date" date="dd MMM yyyy"/><br><br><valueof param="element.column[3]"/></td>
+	<td class="t" bgcolor="#F6F6F6"><b><valueof param="element.column[0]"/></b><br><valueof param="element.column[1]" valueishtml/></td>
+</tr>
+<tr>
+	<td bgcolor="#F9E592"><img src="/com/img/1pixel.gif" height="1" border="0"></td>
+	<td bgcolor="#F9E592"><img src="/com/img/1pixel.gif" height="1" border="0"></td>
+</tr>
+</oparam>
+</droplet>
+</table>
+<br><br>
+<droplet src="/com/frag_linkRetourHaut.jhtml"/>&nbsp;

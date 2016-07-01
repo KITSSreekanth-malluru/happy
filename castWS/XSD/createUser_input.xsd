@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:user="http://ws.castorama.com/user" xmlns:cu="http://ws.castorama.com/createUser" targetNamespace="http://ws.castorama.com/createUser" attributeFormDefault="unqualified" elementFormDefault="unqualified">
+	<xsd:import namespace="http://ws.castorama.com/user" schemaLocation="user.xsd"/>
+	
+	<xsd:element name="createUserRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="typeAcces">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="web"/>
+							<xsd:enumeration value="magasin"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				
+				<xsd:element name="newUser" type="user:userType" />
+				
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>

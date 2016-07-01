@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE process SYSTEM "dynamosystemresource:/atg/dtds/pdl/pdl_1.0.dtd">
+<process author="admin" creation-time="1246022220796" enabled="true" last-modified-by="admin" modification-time="1320105376244">
+  <segment migrate-from="1246033358990,1246033474106,1246033494227,1246033668050,1246265114778,1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 1</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePageFeaturedSectionSlot  -->
+    <!--================================-->
+    <event id="1" recurring="true">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePageFeaturedSectionSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePageFeaturedSectionSlot from targeter HomePageFeaturedSection  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePageFeaturedSectionSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePageFeaturedSection</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246033474106,1246033474106,1246033494227,1246033668050,1246265114778,1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 2</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePageFeaturedProductsSlot  -->
+    <!--================================-->
+    <event id="1" recurring="true">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePageFeaturedProductsSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePageFeaturedProductsSlot from targeter HomePageFeaturedProducts  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePageFeaturedProductsSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePageFeaturedProducts</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246265114778,1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 3</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot EcoStyleRightSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/EcoStyleRightSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named EcoStyleRightSlot from targeter EcoStyleRight  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/EcoStyleRightSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/EcoStyleRight</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246265114778,1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 4</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot EcoStyleTopSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/EcoStyleTopSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named EcoStyleTopSlot from targeter EcoStyleTop  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/EcoStyleTopSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/EcoStyleTop</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246265114778,1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 5</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HouseStyleRightSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HouseStyleRightSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HouseStyleRightSlot from targeter HouseStyleRight  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HouseStyleRightSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HouseStyleRight</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246265114778,1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 6</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HouseStyleTopSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HouseStyleTopSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HouseStyleTopSlot from targeter HouseStyleTop  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HouseStyleTopSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HouseStyleTop</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 7</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo1Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo1Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo1Slot from targeter HomePagePromo1  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo1Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo1</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 8</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo2Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo2Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo2Slot from targeter HomePagePromo2  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo2Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo2</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 9</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo3Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo3Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo3Slot from targeter HomePagePromo3  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo3Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo3</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 10</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo4Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo4Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo4Slot from targeter HomePagePromo4  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo4Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo4</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 11</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo5Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo5Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo5Slot from targeter HomePagePromo5  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo5Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo5</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 12</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo6Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo6Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo6Slot from targeter HomePagePromo6  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo6Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo6</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 13</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo7Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo7Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo7Slot from targeter HomePagePromo7  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo7Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo7</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 14</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo8Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo8Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo8Slot from targeter HomePagePromo8  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo8Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo8</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1320103649417" migrate-subjects="true">
+    <segment-name>Segment 15</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePagePromo9Slot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePagePromo9Slot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePagePromo9Slot from targeter HomePagePromo9  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePagePromo9Slot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePagePromo9</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1246279045328,1314997089729,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 16</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot TopBarPromoSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/TopBarPromoSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named TopBarPromoSlot from targeter TopBarPromo  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/TopBarPromoSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/TopBarPromo</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1314997089729,1314997089729,1314997300884,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 17</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePageTopSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePageTopSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePageTopSlot from targeter HomePageTop  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePageTopSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePageTop</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1314997089729,1314997089729,1314997300884,1314997300884,1314997544897,1320103649417" migrate-subjects="true">
+    <segment-name>Segment 18</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot HomePageSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/HomePageSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named HomePageSlot from targeter HomePageAll  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/HomePageSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/HomePageAll</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1320103649417" migrate-subjects="true">
+    <segment-name>Segment 19</segment-name>
+    <!--================================-->
+    <!--== Items requested by slot CastCardPriceSlot  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dss.SlotItemRequest</event-name>
+      <filter operator="eq">
+        <event-property>
+          <property-name>slotName</property-name>
+        </event-property>
+        <constant>/atg/registry/Slots/CastCardPriceSlot</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Add items to slot named CastCardPriceSlot from targeter CastCardPrice  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>fillSlot</action-name>
+      <action-param name="slot">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/Slots/CastCardPriceSlot</nucleus-path>
+        </nucleus-property>
+      </action-param>
+      <action-param name="targeter">
+        <nucleus-property>
+          <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/CastCardPrice</nucleus-path>
+        </nucleus-property>
+      </action-param>
+    </action>
+  </segment>
+</process>

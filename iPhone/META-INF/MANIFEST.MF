@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.0
+Created-By: 1.5.0_12-b04 (Sun Microsystems Inc.)
+ATG-Config-Path: config/config.jar
+ATG-Required: @install_unit@.@module_root_parent@.cast
+ATG-Class-Path: lib/classes.jar
+ATG-Client-Class-Path: lib/classes.jar
+
+Name: lib/classes.jar
+ATG-Client-Update-File: true
+

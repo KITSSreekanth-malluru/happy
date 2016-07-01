@@ -1,0 +1,5 @@
+<div class="banner_block_2">
+	<dsp:a href="${pageContext.request.contextPath}/user/faq.jsp">
+		<img title="" alt="" src="../images/banners/contact_2_banner.png"/>
+	</dsp:a>
+</div>

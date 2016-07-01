@@ -1,0 +1,9 @@
+<droplet src="/com/head/frag_meta.jhtml"></droplet>
+<meta name="description" content="CastoStages : Stages de bricolage gratuits dispenses par des vendeurs dans les magasins Castorama">
+<meta name="keywords" content="castostage, stage gratuit bricolage, bricolage, decoration, amenagement, apprendre poser parquet, stage jardinage, apprendre poser carrelage mural, apprendre poser papier peint, stage isolation thermique, decoration, bricolage, jardinage, jardin, castorama">
+<DROPLET BEAN="/castorama/droplet/RequestFromVerity">
+<OPARAM NAME="true">
+<META NAME="univers" CONTENT="magasins">
+<META NAME="rubrique" CONTENT="Magasins">
+</OPARAM>
+</DROPLET>

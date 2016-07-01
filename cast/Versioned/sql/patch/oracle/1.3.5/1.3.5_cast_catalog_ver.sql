@@ -1,0 +1,6 @@
+CREATE TABLE CAST_GROUPED_ASSEMBLY_OPTIONS (
+    ASSET_VERSION                           NUMBER(19)   NOT NULL,
+    SEQUENCE_NUM                            INTEGER      NOT NULL,
+    GROUPED_PRODUCT_ID                      VARCHAR2(40) NOT NULL,
+    SKU_LINK_ID                             VARCHAR2(40) NOT NULL
+,constraint CAST_GROUPED_ASSEMBLY_OPT_p primary key (GROUPED_PRODUCT_ID,SKU_LINK_ID,ASSET_VERSION));

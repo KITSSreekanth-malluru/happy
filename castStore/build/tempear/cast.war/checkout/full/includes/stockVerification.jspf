@@ -1,0 +1,38 @@
+<dsp:page>
+
+    <dsp:importbean bean="/com/castorama/integration/webservice/inventory/WebServiceConfiguration"/>
+    <dsp:getvalueof var="stockIsNotEnoughUri" bean="WebServiceConfiguration.stockIsNotEnoughUri"/>
+
+    <div class="whitePopupContainer" id="stockVerificationPopup">
+        <div class="whitePopupContent">
+            <div id="stockVerification">
+                <h4>
+                    <fmt:message key="delivery.stockVerification.popup.merci"/>
+                </h4>
+                <img src="/store/images/icoClock.png"/>
+
+                <p>
+                    <strong>
+                        <fmt:message key="delivery.stockVerification.popup.verification"/>
+                    </strong>
+                </p>
+            </div>
+            <div id="stockIsNotEnough">
+                <img src="/store/images/icoWarning.png"/>
+
+                <p>
+                    <strong>
+                        <fmt:message key="delivery.stockVerification.popup.errorMessage"/>
+                    </strong>
+                </p>
+            <span class="ccStockVerificationButton blue">
+                <button class="ccStockVerificationButton" type="button" onclick="hidePopup(this); window.location='${stockIsNotEnoughUri}'">
+                    <fmt:message key="msg.delivery.assign.cc"/>
+                </button>
+            </span>
+            </div>
+        </div>
+    </div>
+
+</dsp:page>
+

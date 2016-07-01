@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE task-configuration
+        PUBLIC "-//Art Technology Group, Inc.//DTD Commerce Web Asset Manager//EN"
+        'http://www.atg.com/dtds/web/assetmanager/taskConfiguration_1.0.dtd'>
+
+<task-configuration>
+
+  <default-activity>
+    <tabs>
+      <tab id="browse">
+        <views>
+          <view-order xml-combine="append-without-matching">
+            <view-id>magasins</view-id>
+            <view-id>messages</view-id>
+            <view-id>catalogue</view-id>
+            <view-id>castoramaDocument</view-id>
+            <view-id>legacyURL</view-id>
+            <view-id>promoInformation</view-id>  
+            <view-id>promoTemplate</view-id>
+            <view-id>castostages</view-id>
+            <view-id>marque</view-id>
+            <view-id>Attributs Casto</view-id>
+            <view-id>thematique</view-id>
+            <view-id>thematiqueContainer</view-id>
+            <view-id>chapterThematique</view-id>
+            <view-id>guiMenu</view-id>
+            <view-id>menuItem</view-id>
+            <view-id>fastLabConfigs</view-id>
+            <view-id>castoDocFilterTagCategory</view-id>
+            <view-id>castoDocFilterTag</view-id>
+            <view-id>castoDocType</view-id>
+            <view-id>castoDocSubcat</view-id>
+            <view-id>storeLocalPrices</view-id>
+			<view-id>footerMenuItem</view-id>
+			<view-id>nosServicesMenuItem</view-id>
+          </view-order>
+          <view id="magasins">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.magasins</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/MagasinBrowseTabConfiguration</configuration>
+          </view>
+          <view id="messages">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.messages</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/MessageBrowseTabConfiguration</configuration>
+          </view>
+          <view id="catalogue">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.catalogue</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/CatalogueBrowseTabConfiguration</configuration>
+          </view>
+          <view id="castoramaDocument">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.castoramaDocument</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/CastoramaDocumentBrowseTabConfiguration</configuration>
+          </view>
+          <view id="legacyURL">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.legacyURL</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/LegacyURLBrowseTabConfiguration</configuration>
+          </view>
+          <view id="promoInformation">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.promoInformation</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/PromoInformationBrowseTabConfiguration</configuration>
+          </view>
+          <view id="promoTemplate">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.promoTemplate</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/PromoTemplateBrowseTabConfiguration</configuration>
+          </view>                    
+          <view id="castostages">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.castostages</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/CastostageBrowseTabConfiguration</configuration>
+          </view>
+          <view id="marque">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.marque</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/BrandURLBrowseTabConfiguration</configuration>
+          </view>
+          <view id="Attributs Casto">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.attributsCasto</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/AttributsCastoBrowseTabConfiguration</configuration>
+          </view>
+          <view id="thematique">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.thematique</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/ThematiqueBrowseTabConfiguration</configuration>
+          </view>
+          <view id="thematiqueContainer">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.thematiqueContainer</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/ThematiqueContainerBrowseTabConfiguration</configuration>
+          </view>
+          <view id="chapterThematique">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.chapterThematique</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/ChapterThematiqueBrowseTabConfiguration</configuration>
+          </view>
+          <view id="guiMenu">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.guiMenu</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/GuiMenuBrowseTabConfiguration</configuration>
+          </view>
+          <view id="menuItem">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.menuItem</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/MenuItemBrowseTabConfiguration</configuration>
+          </view>
+		  <view id="nosServicesMenuItem">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.nosServicesMenuItem</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/NosServicesMenuItemBrowseTabConfiguration</configuration>
+          </view>
+		  <view id="footerMenuItem">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.footerMenuItem</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/FooterMenuItemBrowseTabConfiguration</configuration>
+          </view>
+          <view id="fastLabConfigs">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.fastLabConfigs</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/FastLabConfigsBrowseTabConfiguration</configuration>
+          </view>
+          <view id="castoDocFilterTagCategory">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.castoDocFilterTagCategory</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/CastoDocFilterTagCategoryBrowseTabConfiguration</configuration>
+          </view>
+          <view id="castoDocFilterTag">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.castoDocFilterTag</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/CastoDocFilterTagBrowseTabConfiguration</configuration>
+          </view>
+          <view id="castoDocType">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.castoDocType</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/CastoDocTypeBrowseTabConfiguration</configuration>
+          </view>
+          <view id="castoDocSubcat">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.castoDocSubcat</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/CastoDocSubcatBrowseTabConfiguration</configuration>
+          </view>
+          <view id="storeLocalPrices">
+            <resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+            <display-name-resource>browseTab.view.storeLocalPrices</display-name-resource>
+            <page>/browse/list.jsp</page>
+            <configuration>/atg/commerce/web/assetmanager/StoreLocalPricesConfigsBrowseTabConfiguration</configuration>
+          </view>
+        </views>
+      </tab>
+      <tab id="search">
+        <views>
+          <initial-view>form</initial-view>
+          <view id="form">
+            <item-types xml-combine="replace">
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:sku</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:casto_sku</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:configurableSku</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:product</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:casto_product</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:category</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:casto_category</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:catalog</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:catalogFolder</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:promotion</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:Item Discount</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:Shipping Discount</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:Order Discount</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:folder</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:media</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:media-external</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:media-internal-binary</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:media-internal-text</item-type>
+              <item-type if="usingPriceLists">/atg/commerce/pricing/priceLists/SecurePriceLists:priceList</item-type>
+              <item-type if="usingPriceLists">/atg/commerce/pricing/priceLists/SecurePriceLists:priceListFolder</item-type>
+              <item-type>/atg/commerce/claimable/ClaimableRepository:DeployablePromotionClaimable</item-type>
+              <item-type>/atg/registry/Repository/MagasinGSARepository:magasin</item-type>
+              <item-type>/atg/registry/Repository/MessageRegionRepository:messageRegionRepository</item-type>
+              <item-type>/atg/registry/Repository/CatalogueGSARepository:catalogue</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:castoramaDocument</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:legacyURL</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:promoInformation</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:promoTemplate</item-type>
+              <item-type>/atg/registry/Repository/CastostageGSARepository:STAGE</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:marque</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:Attributs Casto</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:thematique</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:thematiqueContainer</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:chapterThematique</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:guiMenu</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:menuItem</item-type>
+			  <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:footerMenuItem</item-type>
+			  <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:nosServicesMenuItem</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:fastLabConfigs</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:castoDocFilterTagCategory</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:castoDocFilterTag</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:castoDocType</item-type>
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:castoDocSubcat</item-type>
+              <item-type>/com/castorama/commerce/pricing/repository/StoreLocalPricesRepository:priceList</item-type>
+            </item-types>
+          </view>
+        </views>
+      </tab>
+    </tabs>
+    <view-mappings>
+      <view-mapping mode="AssetManager.multiEdit">
+        <item-mapping>
+          <item-type>/atg/commerce/catalog/ProductCatalog:casto_sku</item-type>
+          <item-mapping-name>AssetManager</item-mapping-name>
+        </item-mapping>
+      </view-mapping>
+    </view-mappings>
+  </default-activity>
+  
+  <task id="/Commerce/adminCommerceSearch.wdl">
+    <workflow-name>/Commerce/adminCommerceSearch.wdl</workflow-name>
+    <tabs>
+      <tab id="browse">
+        <views>
+          <view-order xml-combine="append-without-matching">
+            <view-id combine="remove">magasins</view-id>
+            <view-id combine="remove">messages</view-id>
+            <view-id combine="remove">catalogue</view-id>
+            <view-id combine="remove">castoramaDocument</view-id>
+            <view-id combine="remove">legacyURL</view-id>
+            <view-id combine="remove">promoInformation</view-id>
+            <view-id combine="remove">promoTemplate</view-id>
+            <view-id combine="remove">castostages</view-id>
+            <view-id combine="remove">marque</view-id>
+            <view-id combine="remove">Attributs Casto</view-id>
+            <view-id combine="remove">thematique</view-id>
+            <view-id combine="remove">thematiqueContainer</view-id>
+            <view-id combine="remove">chapterThematique</view-id>
+            <view-id combine="remove">guiMenu</view-id>
+            <view-id combine="remove">menuItem</view-id>
+            <view-id combine="remove">fastLabConfigs</view-id>
+            <view-id combine="remove">castoDocFilterTagCategory</view-id>
+            <view-id combine="remove">castoDocFilterTag</view-id>
+            <view-id combine="remove">castoDocType</view-id>
+            <view-id combine="remove">castoDocSubcat</view-id>
+            <view-id combine="remove">storeLocalPrices</view-id>
+			<view-id combine="remove">footerMenuItem</view-id>
+			<view-id combine="remove">nosServicesMenuItem</view-id>
+		</view-order>
+        </views>
+      </tab>
+      <tab id="search">
+        <views>
+          <view id="form">
+            <item-types xml-combine="append-without-matching">
+              <item-type combine="remove">
+                /atg/registry/Repository/MagasinGSARepository:magasin
+              </item-type>
+              <item-type combine="remove">
+                /atg/commerce/catalog/MerchandisingProductCatalog:castoramaDocument
+              </item-type>
+              <item-type combine="remove">
+                /atg/commerce/catalog/MerchandisingProductCatalog:legacyURL
+              </item-type>
+              <item-type combine="remove">
+                /atg/commerce/catalog/MerchandisingProductCatalog:promoInformation
+              </item-type>
+              <item-type combine="remove">
+                /atg/commerce/catalog/MerchandisingProductCatalog:promoTemplate
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MessageRegionRepository:messageRegionRepository
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/CatalogueGSARepository:catalogue
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/CastostageGSARepository:STAGE
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:marque
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:Attributs Casto
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:thematique
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:thematiqueContainer
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:chapterThematique
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:guiMenu
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:menuItem
+              </item-type>
+			  <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:nosServicesMenuItem
+              </item-type>
+			  <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:footerMenuItem
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:fastLabConfigs
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:castoDocFilterTagCategory
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:castoDocFilterTag
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:castoDocType
+              </item-type>
+              <item-type combine="remove">
+                /atg/registry/Repository/MerchandisingProductCatalog:castoDocSubcat
+              </item-type>
+              <item-type combine="remove">
+                /com/castorama/commerce/pricing/repository/StoreLocalPricesRepository:priceList
+              </item-type>
+            </item-types>
+          </view>
+        </views>
+      </tab>
+    </tabs>
+  </task>
+</task-configuration>

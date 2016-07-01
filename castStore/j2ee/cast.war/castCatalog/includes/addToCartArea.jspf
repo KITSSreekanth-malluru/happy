@@ -1,0 +1,441 @@
+<fmt:message var="cartAdd" key="msg.cart.add" />
+<dsp:getvalueof var="productType" param="element.type"/>
+<dsp:getvalueof var="isGroupedProduct" value="${productType=='casto-grouped-product'}"/>
+<dsp:getvalueof var="prodIdS" param="element.repositoryId"/>
+<dsp:getvalueof var="stockVisualizationDisabled" bean="/com/castorama/stockvisualization/StockVisualizationManager.stockVisualizationDisabled" />
+
+<c:if test="${!isGroupedProduct}">
+  <dsp:getvalueof var="singleSkuId" param="skuId"/>
+  <dsp:getvalueof var="isAddToCart" param="isAddToCart" />
+  <dsp:getvalueof var="choisePhrase" param="element.libelleListe"/>
+  <c:choose>
+    <c:when test="${empty choisePhrase || choisePhrase == ''}">
+      <fmt:message var="popupMsg" key="msg.cart.selectArticle" />
+    </c:when>
+    <c:otherwise>
+      <c:set var="splitedChoisePhrase" value="${fn:split(choisePhrase, ' ')}" />
+      <c:set var="lastWordIndex" value="${fn:length(splitedChoisePhrase)-1}" />
+      <c:set var="lastWord" value="${splitedChoisePhrase[lastWordIndex]}" />
+      <fmt:message var="startMessage" key="msg.cart.selectsku" />
+      <dsp:getvalueof var="popupMsg" value="${startMessage} ${lastWord}"/>
+    </c:otherwise>
+  </c:choose>
+</c:if>
+
+<c:if test="${multiSku == 'true' and empty singleSkuId and isAddToCart}">
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $('a.poplight[href^=#]').click();
+  });
+  </script>
+</c:if>
+
+<c:choose>
+  <c:when test="${(multiSku == 'true' and empty singleSkuId) or (fn:length(childSku)>1 and empty featuredSkuId)}">
+    <dsp:getvalueof var="isMultiSkuProduct" value="${true}" />
+  </c:when>
+  <c:otherwise>
+    <dsp:getvalueof var="isMultiSkuProduct" value="${false}" />
+  </c:otherwise>
+</c:choose>
+
+<dsp:getvalueof var="isCC" bean="Profile.currentLocalStore.retraitMagasin"/>
+<dsp:getvalueof var="extPriceBlockClasses" value=""/>
+<dsp:getvalueof var="intPriceBlockClasses" value=""/>
+<dsp:getvalueof var="isProductDetails" value="${(not empty pageType) and (pageType == 'productDetails')}"/>
+<dsp:getvalueof var="isDocumentPage" value="${(not empty pageType) and (pageType == 'documentPage')}"/>
+<dsp:getvalueof var="isProductPageTabs" value="${(not empty pageType) and (pageType == 'productPageTabs')}"/>
+<dsp:getvalueof var="showButtonForm" value="${false}"/>
+<dsp:getvalueof var="needUpdateQTY" value="${false}"/>
+<dsp:getvalueof var="showQuantityMessage" value="${false}"/>
+<dsp:getvalueof var="addToCartMode" value=""/>
+<dsp:getvalueof var="showUnavailableMessage" value="${false}"/>
+<dsp:getvalueof var="needRecalcStockLevel" value="${false}"/>
+<dsp:getvalueof var="showAddToComparator" value="${true}"/>
+<dsp:getvalueof var="showAddToCartButton" value="${true}"/>
+<dsp:getvalueof var="showMagasinLinkIfStockVisualizationDisabled" value="${false}"/>
+<dsp:getvalueof var="showCheckStockLevel" value="${false}"/>
+<dsp:getvalueof var="addWebStock" value="${0}"/>
+<dsp:getvalueof var="addLocalStock" value="${0}"/>
+<dsp:getvalueof var="displayVUMMessage" value="${false}"/>
+
+<c:if test="${!isMultiSkuProduct or isProductPageTabs}">
+  <dsp:droplet name="InventoryLookup">
+    <dsp:param name="itemId" value="${skuId }"/>
+    <dsp:oparam name="output">
+      <dsp:getvalueof var="stockLevel" param="inventoryInfo.stockLevel"/>
+    </dsp:oparam>
+  </dsp:droplet>
+</c:if>
+
+<dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet">
+  <c:if test="${!isDocumentPage && isMultiSkuProduct}">
+    <dsp:param name="product" param="element"/>
+  </c:if>
+ <dsp:param name="store" bean="Profile.currentLocalStore" />
+ <dsp:param name="svAvailableMap" value="${svAvailableMap}" />
+ <dsp:param name="isMultiSkuProduct" value="${isMultiSkuProduct}" />
+ <dsp:param name="isModifiedVersion" value="true" />
+
+  <dsp:oparam name="immidiateWithdrawal"><!-- SAS ${prodIdS} IW -->
+    <dsp:getvalueof var="showUnavailableMessage" value="${true}"/>
+    <dsp:getvalueof var="showAddToComparator" value="${false}"/>
+    <dsp:getvalueof var="showAddToCartButton" value="${false}"/>
+    <dsp:getvalueof var="extPriceBlockClasses" value="fPrix sss ${pageType}PriceBlock showAddToCartButton${showAddToCartButton} isMultiSkuProduct${isMultiSkuProduct}"/>
+    <dsp:getvalueof var="intPriceBlockClasses" value="productPrix ${pageType}PriceBlock"/>
+  </dsp:oparam>
+  <dsp:oparam name="remainingStock"><!-- SAS ${prodIdS} RS -->
+    <dsp:getvalueof var="addWebStock" value="${stockLevel}"/>
+    <dsp:getvalueof var="showButtonForm" value="${true}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+    <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+    <dsp:getvalueof var="showAddToCartButton" value="${true}"/>
+    <dsp:getvalueof var="showCheckStockLevel" value="${true}"/>
+    <dsp:getvalueof var="extPriceBlockClasses" value="fPrix vvv ${pageType}PriceBlock showAddToCartButton${showAddToCartButton} isMultiSkuProduct${isMultiSkuProduct}"/>
+    <dsp:getvalueof var="intPriceBlockClasses" value="productPrix ${pageType}PriceBlock"/>
+  </dsp:oparam>
+  <dsp:oparam name="soldOnlyInStore"><!-- SAS ${prodIdS} SOIS -->
+    <dsp:getvalueof var="showMagasinLinkIfStockVisualizationDisabled" value="${true}"/>
+    <dsp:getvalueof var="showAddToCartButton" value="${false}"/>
+    <dsp:getvalueof var="showCheckStockLevel" value="${true}"/>
+    <dsp:getvalueof var="extPriceBlockClasses" value="fPrix priceBlockUno ${pageType}PriceBlock showAddToCartButton${showAddToCartButton} isMultiSkuProduct${isMultiSkuProduct}"/>
+    <dsp:getvalueof var="intPriceBlockClasses" value="productPrix ${pageType}PriceBlock"/>
+	<dsp:getvalueof var="displayVUMMessage" value="${true}"/>
+	
+  </dsp:oparam>
+  <dsp:oparam name="deliveryTime"><!-- SAS ${prodIdS} DT -->
+    <dsp:getvalueof var="showButtonForm" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+    <dsp:getvalueof var="showAddToCartButton" value="${true}"/>
+    <dsp:getvalueof var="showCheckStockLevel" value="${true}"/>
+    <dsp:getvalueof var="extPriceBlockClasses" value="fPrix multScuV2 ${pageType}PriceBlock showAddToCartButton${showAddToCartButton} isMultiSkuProduct${isMultiSkuProduct}"/>
+    <dsp:getvalueof var="intPriceBlockClasses" value="productPrix priceBlockUno ${pageType}PriceBlock"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccRemainingStock"><!-- SAS ${prodIdS} CCRS -->
+    <dsp:getvalueof var="addWebStock" value="${stockLevel}"/>
+    <dsp:getvalueof var="svStockAvailable" param="svStockAvailable"/>
+    <dsp:getvalueof var="addLocalStock" param="svStockAvailable"/>
+    <dsp:getvalueof var="showButtonForm" value="${true}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+    <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+    <dsp:getvalueof var="needRecalcStockLevel" value="${true}"/>
+    <dsp:getvalueof var="showAddToCartButton" value="${true}"/>
+    <dsp:getvalueof var="extPriceBlockClasses" value="fPrix vvv ${pageType}PriceBlock showAddToCartButton${showAddToCartButton} isMultiSkuProduct${isMultiSkuProduct}"/>
+    <dsp:getvalueof var="intPriceBlockClasses" value="productPrix ${pageType}PriceBlock"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccSoldOnlyInStore"><!-- SAS ${prodIdS} CCSOIS -->
+    <dsp:getvalueof var="svStockAvailable" param="svStockAvailable"/>
+    <dsp:getvalueof var="addLocalStock" param="svStockAvailable"/>
+    <dsp:getvalueof var="showButtonForm" value="${true}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="local"/>
+    <dsp:getvalueof var="needRecalcStockLevelCCSOIS" value="${true}"/>
+    <dsp:getvalueof var="showAddToCartButton" value="${true}"/>
+    <dsp:getvalueof var="extPriceBlockClasses" value="fPrix vvv ${pageType}PriceBlock showAddToCartButton${showAddToCartButton} isMultiSkuProduct${isMultiSkuProduct}"/>
+    <dsp:getvalueof var="intPriceBlockClasses" value="productPrix ${pageType}PriceBlock"/>
+	</dsp:oparam>
+  <dsp:oparam name="ccDeliveryTime"><!-- SAS ${prodIdS} CCDT -->
+    <dsp:getvalueof var="addLocalStock" param="svStockAvailable"/>
+    <dsp:getvalueof var="showButtonForm" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+    <dsp:getvalueof var="showAddToCartButton" value="${true}"/>
+    <dsp:getvalueof var="extPriceBlockClasses" value="fPrix multScuV2 ${pageType}PriceBlock showAddToCartButton${showAddToCartButton} isMultiSkuProduct${isMultiSkuProduct}"/>
+    <dsp:getvalueof var="intPriceBlockClasses" value="productPrix priceBlockUno ${pageType}PriceBlock"/>
+  </dsp:oparam>
+</dsp:droplet>
+<!-- draw price block start for ${prodIdS} -->
+<c:if test="${needRecalcStockLevel}">
+  <c:if test="${(stockLevel != -1) and (svStockAvailable > stockLevel)}">
+    <dsp:getvalueof var="stockLevel" value="${svStockAvailable}"/>
+  </c:if>
+  <dsp:getvalueof var="showQuantityMessage" value="${(stockLevel != -1) and (svStockAvailable > -1)}"/>
+</c:if>
+<c:if test="${needRecalcStockLevelCCSOIS}">
+  <dsp:getvalueof var="stockLevel" value="${svStockAvailable}"/>
+</c:if>
+
+
+<div class="${extPriceBlockClasses} storeIsCC${storeIsCC}">
+
+  <c:if test="${featuredProduct}" >
+    <div class="featuredProductWrap">
+  </c:if>
+
+  <c:if test="${isProductDetails}">
+    <div class="${intPriceBlockClasses}">
+      <dsp:include page="skuPrice.jsp">
+        <dsp:param name="pageType" value="productDetails"/>
+        <dsp:param name="productId" value="${productId}"/>
+        <dsp:param name="sku" param="sku"/>
+        <dsp:param name="multiSku" value="${multiSku}"/>
+        <dsp:param name="notCheapestSkuPromo" value="${notCheapestSkuPromo}" />
+		<dsp:param name="displayVUMMessage" value="${displayVUMMessage}" />
+		<dsp:param name="displayVUMMessageStyle" value="vumMsg"/>
+		</dsp:include>
+    </div>
+  </c:if>
+
+  <c:if test="${featuredProduct}">
+    <dsp:include page="skuPrice.jsp">
+      <dsp:param name="productId" value="${productId}"/>
+      <dsp:param name="sku" param="sku"/>
+      <dsp:param name="featuredProduct" value="${featuredProduct}"/>
+      <dsp:param name="notCheapestSkuPromo" value="${notCheapestSkuPromo}" />
+    </dsp:include>
+    <c:if test="${isMultiSkuProduct}">
+      <dsp:include page="skuDropDown.jsp" flush="true">
+      <dsp:param name="productId" value="${productId}"/>
+      <dsp:param name="featuredProduct" value="${featuredProduct}"/>
+      <dsp:param name="isMultiSku" value="true"/>
+      </dsp:include>
+    </c:if>
+  </c:if>
+
+  <c:if test="${!isDocumentPage && !isProductPageTabs && showUnavailableMessage}" >
+    <span class="fPrixDesc">
+      <fmt:message key="castCatalog_productDetails.unavailable"/>
+    </span>
+  </c:if>
+
+  <c:if test="${isGroupedProduct}">
+    <dsp:getvalueof var="bundleLinksArray" param="element.childSKUs[0].bundleLinks"/>
+  </c:if>
+
+  <c:choose>
+    <c:when test="${isMultiSkuProduct && !isDocumentPage && !isProductPageTabs}">
+      <dsp:include page="simpleModalPopup.jsp">
+        <dsp:param name="messageBody" value="${popupMsg}" />
+        <dsp:param name="idSuffix" value="${productId}${skuId}${divId}"/>
+      </dsp:include>
+      <div class="inputButtonV2">
+        <a href="#?w=300" rel="popup_name${productId}${skuId}${divId}" class="poplight buttonCartBig"></a>
+      </div>
+    </c:when>
+    <c:otherwise>
+      <dsp:form method="post">
+        <dsp:getvalueof var="quantity" value="1"/>
+        <dsp:getvalueof var="PUPUV" param="sku.PUPUV"/>
+        <dsp:getvalueof var="CUP" param="sku.CUP"/>
+        <dsp:getvalueof var="showM2PriceFirst" param="sku.showM2PriceFirst"/>
+        <dsp:getvalueof var="showSurface" value="${(CUP == 'm2' || CUP == 'M2') && showM2PriceFirst}"/>
+        <dsp:getvalueof var="itemId" value="${skuId}"/>
+
+        <dsp:input type="hidden" bean="CastShoppingCartFormHandler.webStockToAdd" value="${addWebStock}"/>
+        <dsp:input type="hidden" bean="CastShoppingCartFormHandler.localStockToAdd" value="${addLocalStock}"/>
+
+        <c:if test="${isGroupedProduct}">
+          <dsp:input type="hidden" bean="CastShoppingCartFormHandler.productType" value="${productType}"/>
+          <dsp:input bean="CastShoppingCartFormHandler.addItemCount" type="hidden" value="${fn:length(bundleLinksArray)}"/>
+          <dsp:droplet name="ForEach">
+            <dsp:param name="array" param="element.childSKUs[0].bundleLinks"/>
+            <dsp:param name="elementName" value="bsku"/>
+            <dsp:oparam name="output">
+              <dsp:getvalueof var="linkSkuId" param="bsku.item.repositoryId"/>
+              <dsp:getvalueof var="set" param="bsku.item.parentProducts.updatedValue"/>
+              <dsp:param name="list" value="${castCollection:list(set)}"/>
+              <dsp:getvalueof var="linkSkuProductId" param="list[0].repositoryId"/>
+              <dsp:getvalueof var="indexVar" param="index"/>
+              <dsp:input type="hidden" bean="CastShoppingCartFormHandler.items[${indexVar }].catalogRefId" value="${linkSkuId}"/>
+              <dsp:input type="hidden" bean="CastShoppingCartFormHandler.items[${indexVar }].productId" value="${linkSkuProductId}"/>
+              <dsp:input type="hidden" bean="CastShoppingCartFormHandler.items[${indexVar }].quantity" paramvalue="bsku.quantity"/>
+              <dsp:input bean="CastShoppingCartFormHandler.addToBoth" type="hidden" value="${addToCartMode}"/>
+            </dsp:oparam>
+          </dsp:droplet>
+        </c:if>
+
+        <c:if test="${(!isCC || empty storeIsCC) && isDocumentPage}">
+          <%@include file="deliverOrCCwr.jsp" %>
+          <div class="${intPriceBlockClasses}">
+            <div class="documentPagePriceCell">
+              <dsp:include page="skuPrice.jsp">
+                <dsp:param name="pageType" value="documentPage"/>
+                <dsp:param name="productId" value="${productId}"/>
+                <dsp:param name="sku" param="sku"/>
+                <dsp:param name="multiSku" value="${multiSku}"/>
+                <dsp:param name="notCheapestSkuPromo" value="${notCheapestSkuPromo}" />
+              </dsp:include>
+            </div>
+          </div>
+          <c:choose>
+            <c:when test="${showCheckStockLevel && !stockVisualizationDisabled && !asJS}">
+              <div class="blockLastCell"><!--for notCC store-->
+            </c:when>
+            <c:otherwise>
+              <div class="blockLastCell noCheckStockLevel showQuantityMessage${showQuantityMessage}"><!--for notCC store-->
+            </c:otherwise>
+          </c:choose>
+          <div class="minHeightWrap">
+        </c:if>
+
+        <c:if test="${isDocumentPage && isCC}">
+          <div class="${intPriceBlockClasses}">
+            <div class="documentPagePriceCell">
+              <dsp:include page="skuPrice.jsp">
+                <dsp:param name="pageType" value="documentPage"/>
+                <dsp:param name="productId" value="${productId}"/>
+                <dsp:param name="sku" param="sku"/>
+                <dsp:param name="multiSku" value="${multiSku}"/>
+                <dsp:param name="notCheapestSkuPromo" value="${notCheapestSkuPromo}" />
+              </dsp:include>
+            </div>
+          </div>
+        </c:if>
+
+        <div class="numbAndPriceV2">
+          <c:if test="${showSurface && !isDocumentPage && !isProductPageTabs && showAddToCartButton}">
+            <div class="fQty">
+              <span class="numberMetersV2"><fmt:message key="msg.cart.surface"/></span>
+              <input id="surfaceValue" type="text" class="surfaceInp" onkeypress="return quantityEnterPres(event);"/>
+              <span class="floatedSpanV2">&nbsp;m<sup>2</sup></span>
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function (){
+                doCalculation ('${itemId}', '${divId}', '${PUPUV}', Number(${quantity}), Boolean(${needUpdateQTY}));
+              });
+            </script>
+          </c:if>
+          <c:if test="${showAddToCartButton}">
+            <%@include file="numbAndPrice.jspf" %>
+          </c:if>
+        </div>
+
+        <c:if test="${(isCC && isDocumentPage) || isProductPageTabs}">
+
+          <div class="blockLastCell">
+            <div class="minHeightWrap"><!--for CC store-->
+
+          <c:if test="${isProductPageTabs}">
+            <div class="productDetailsPriceBlock">
+              <dsp:include page="skuPrice.jsp">
+                <dsp:param name="pageType" value="productDetails"/>
+                <dsp:param name="productId" value="${productId}"/>
+                <dsp:param name="sku" param="sku"/>
+                <dsp:param name="multiSku" value="${multiSku}"/>
+                <dsp:param name="notCheapestSkuPromo" value="${notCheapestSkuPromo}" />
+				</dsp:include>
+            </div>
+          </c:if>
+
+          <c:if test="${isDocumentPage && !showAddToCartButton && !showUnavailableMessage}">
+            <dsp:a page="${templateUrl}" iclass="voirProduit" title="Produit"><fmt:message key="castCatalog_label.view.product" /></dsp:a>
+          </c:if>
+
+        </c:if>
+
+        <c:if test="${showAddToCartButton && !featuredProduct}" >
+          <%@include file="addToCartButton.jspf" %>
+        </c:if>
+
+        <c:if test="${(!isCC || empty isCC) && isDocumentPage}">
+          <c:if test="${showCheckStockLevel}" >
+            <c:if test="${!stockVisualizationDisabled && !asJS}">
+              <div class="checkStockLevel" id="checkStockLevel${skuId}">
+              </div>
+              <script>
+                $(document).ready(function(){
+                 checkStockLevelOnCartArea("${contextPath}", "${categoryId}", "${productId}", "${featuredProduct}", "${skuId}", "${featuredSkuId}", "${isDocumentPage}", "${templateUrl}");
+                });
+              </script>
+            </c:if>
+          </c:if>
+          <c:if test="${showMagasinLinkIfStockVisualizationDisabled}" >
+            <c:if test="${!isMultiSkuProduct and stockVisualizationDisabled && !asJS}">
+              <dsp:include page="/magasin/includes/magasin-button-link.jsp"/>
+            </c:if>
+          </c:if>
+        </c:if>
+
+        <c:if test="${(isDocumentPage || isProductPageTabs) && showUnavailableMessage}" >
+          <span class="fPrixDesc">
+            <fmt:message key="castCatalog_productDetails.unavailable"/>
+          </span>
+        </c:if>
+
+        <c:if test="${(!isCC || empty isCC) && isDocumentPage}">
+          </div>
+          </div><!--end for .blockLastCell for notCC store-->
+        </c:if>
+
+        <c:if test="${(!isDocumentPage || (isCC && isDocumentPage &&  showAddToCartButton)) && !featuredProduct && !isProductDetails}">
+          <%@include file="deliverOrCCwr.jsp" %>
+        </c:if>
+
+        <c:if test="${(isCC && isDocumentPage) || isProductPageTabs}">
+          </div>
+          </div><!--end for .blockLastCell for CC store-->
+        </c:if>
+
+        <c:if test="${showAddToCartButton && featuredProduct}" >
+          <%@include file="addToCartButton.jspf" %>
+        </c:if>
+
+        <c:choose>
+          <c:when test="${isGroupedProduct}">
+            <dsp:input bean="CastShoppingCartFormHandler.addMultipleItemsToOrderSuccessURL" type="hidden" value="${contextPath}/checkout/preshopping.jsp"/>
+            <dsp:input bean="CastShoppingCartFormHandler.addMultipleItemsToOrderErrorURL" type="hidden"  value="${requestURIwithQueryString}" />
+          </c:when>
+          <c:otherwise>
+            <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderSuccessURL" type="hidden" value="${contextPath}/checkout/preshopping.jsp"/>
+            <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderErrorURL" type="hidden"  value="${requestURIwithQueryString}" />
+          </c:otherwise>
+        </c:choose>
+
+      </dsp:form>
+    </c:otherwise>
+  </c:choose>
+
+  <c:if test="${featuredProduct}" >
+    </div>
+    <c:if test="${showAddToCartButton}">
+      <%@include file="deliverOrCCwr.jsp" %>
+    </c:if>
+    <c:if test="${showCheckStockLevel}" >
+      <c:if test="${!isMultiSkuProduct and !isCC and !stockVisualizationDisabled and !asJS}">
+        <div class="checkStockLevel" id="checkStockLevel${skuId}"></div>
+        <script>
+          $(document).ready(function(){
+            checkStockLevelOnCartArea("${contextPath}", "${categoryId}", "${productId}", "${featuredProduct}", "${skuId}", "${featuredSkuId}", "${isDocumentPage}", "${templateUrl}");
+          });
+        </script>
+      </c:if>
+    </c:if>
+    <c:if test="${showMagasinLinkIfStockVisualizationDisabled}" >
+      <c:if test="${!isMultiSkuProduct and stockVisualizationDisabled && !asJS}">
+        <dsp:include page="/magasin/includes/magasin-button-link.jsp"/>
+      </c:if>
+    </c:if>
+  </c:if>
+
+  <c:if test="${showMagasinLinkIfStockVisualizationDisabled && !isMultiSkuProduct && stockVisualizationDisabled && !asJS && !isDocumentPage && !featuredProduct && !isProductPageTabs && !isProductDetails}" >
+    <dsp:include page="/magasin/includes/magasin-button-link.jsp"/>
+  </c:if>
+
+</div>
+
+<c:if test="${isProductDetails}" >
+  <c:if test="${showAddToCartButton}">
+    <%@include file="deliverOrCCwr.jsp" %>
+  </c:if>
+  <c:if test="${showCheckStockLevel}" >
+    <c:if test="${!isMultiSkuProduct and !isCC and !stockVisualizationDisabled and !asJS}">
+      <div class="checkStockLevel" id="checkStockLevel${skuId}"></div>
+      <script>
+        $(document).ready(function(){
+            checkStockLevelOnCartArea("${contextPath}", "${categoryId}", "${productId}", "${featuredProduct}", "${skuId}", "${featuredSkuId}", "${isDocumentPage}", "${templateUrl}");
+        });
+      </script>
+    </c:if>
+  </c:if>
+  <c:if test="${showMagasinLinkIfStockVisualizationDisabled}" >
+    <c:if test="${!isMultiSkuProduct and stockVisualizationDisabled && !asJS}">
+      <dsp:include page="/magasin/includes/magasin-button-link.jsp"/>
+    </c:if>
+  </c:if>
+</c:if>
+<!-- draw price block end for ${prodIdS} -->
+
+<c:if test="${showAddToComparator and not featuredProduct and not asJS}">
+  <%@ include file="/castCatalog/includes/addToComparator.jspf" %>
+</c:if>

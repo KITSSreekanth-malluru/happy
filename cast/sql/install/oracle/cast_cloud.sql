@@ -1,0 +1,18 @@
+  CREATE TABLE CAST_CLOUD (
+	"ID"                        NUMBER(19)	  NOT NULL,
+	"REFERENCE_ID"              VARCHAR2(40)  NOT NULL,
+	"TYPE"                      NUMBER(5)    NOT NULL
+	,CONSTRAINT PK_CAST_CLOUD PRIMARY KEY (ID));
+	
+  CREATE TABLE CAST_CLOUD_TERM (
+	"ID"                        NUMBER(19)	  NOT NULL,
+	"CLOUD_ID"                  NUMBER(19)	  NULL,
+	"TERM"	                    VARCHAR2(250) NOT NULL,
+	"TYPE"	                    NUMBER(5)    NOT NULL,
+	"URL"	                    VARCHAR2(250) NOT NULL,
+	"SORT_ORDER"                NUMBER(5)    NOT NULL
+	,CONSTRAINT PK_CAST_CLOUD_TERM PRIMARY KEY (ID)
+	,CONSTRAINT FK_CAST_CLOUD_TERM FOREIGN KEY (CLOUD_ID) REFERENCES CAST_CLOUD (ID));
+	
+	
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+
+  <header>
+    <name>Stabilisation</name>
+    <author>Geoffrey Yusif</author>
+    <version>$ 1.0 $</version>
+  </header>
+
+
+  <item-descriptor name="journalisationCC" display-property="id" display-name="JournalisationCC">
+     <table name="CASTO_LOG_CALL_CENTER" type="primary" id-column-name="id_journalisation">
+     	<property name="id" data-type="string" column-name="id_journalisation" display-name="identifiant" category="Basics" writable="false"/>
+     	<property name="userId" data-type="string" column-name="user_id" display-name="identifiant utilisateur" category="Utilisateur"/>
+     	<property name="login" data-type="string" column-name="login" display-name="login utilisateur" category="Utilisateur"/>
+     	<property name="dateAction" data-type="date" column-name="date_action" display-name="date de l'action"  category="Action"/>
+     	<property name="action" data-type="string" column-name="action" display-name="action"/>
+     	<property name="orderId" data-type="string" column-name="order_id" display-name="numéro de commande"/>
+     </table>     
+   </item-descriptor>
+
+
+	
+   
+   
+</gsa-template>

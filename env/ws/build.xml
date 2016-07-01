@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="castorama-env-ws" default="all" basedir=".">
+
+  <!-- Set properties needed by included XML files -->
+  <property name="global.dir" value="${basedir}/../.."/>
+
+  <!-- Import global defaults and settings and common tasks -->
+  <import file="${global.dir}/commonbuildtasks/common.xml"/>
+
+  <!-- Define the all task.  -->
+  <target name="all"
+    depends="clean,build,install,deploy"
+    description="Cleans, builds, checks and installs the project." />
+    
+</project>
+

@@ -1,0 +1,260 @@
+/*
+Name:Feuille de style 
+Version:09 decembre 2009, rev 19 janvier 2010, rev 03 mars 2014 (jblois -> changement identite graphique)
+Author:frd
+
+/** Premier bloc **/
+	/* Visuel */
+	/* Titres */
+	/* Vos avis */
+	/* Bouton decouvrez toute la gamme */
+
+/** Bloc de navigation de la page **/
+	/* Pour toutes les pages */
+		/* Détails des critères */	
+		/* Bloc En savoir plus */	
+	/* Pour la page pas à pas */
+		/* Player casto */
+		/* Bloc communautaire :télécharger, exporter, partager le Pas à pas */	
+		/* Navigation des etapes */	
+		/* Easy Slider */	
+	/* Pour la page aide au choix */
+	/* mise en forme generale */
+
+body {font-family:Arial;font-weight:normal;font-size:11px;color:#1c1c1c}
+h2 {font-size:22px;font-weight:normal}
+
+/** Definition des liens **/
+.etapes a, 
+.etapes a:link, 
+.etapes a:visited {color:#616161;border:0px solid green;padding: 11px 0 11px 15px;margin:0px 0 0 0;position:relative;display:block;text-decoration:none}
+.etapes a:hover {background: url('/documents/images/illu/btn-hover.png') no-repeat 0 2px;color:#fff;text-decoration:none}
+.etapes .on {background: url('/documents/images/illu/btn-hover.png') no-repeat 0 2px;color:#fff !important;text-decoration:none}
+#communautaire a, 
+#communautaire a:hover, 
+#communautaire a:link, 
+#communautaire a:visited {color:#1C1C1C;text-decoration:none} 
+
+.choix a:hover {background: url('/documents/images/illu/btn-hover-long.png') no-repeat 0 2px;color:#fff;text-decoration:none}
+#etape-nav a {color:#1C1C1C;text-decoration:none}
+
+/** Premier bloc **/
+	#je {width:790px;height:200px;border:1px solid #ccc;background:#fff;margin:10px 0;position:relative}
+	#je h2 {padding:0px 0 0 170px; margin:10px;color:#0078d7}
+	#je p {margin-left:180px;color:#4a4a4a}
+	#je p b {color:#010101}
+	#je p.note {color:#7e7e7e;font-size:10px}
+	/* Visuel */
+	#visuel {background:#fff;width:169px;height:169px;position:absolute;overflow:hidden;z-index:20}
+	/* Titres */
+	#titre-realise, #titre-choisis {	color:#fff;height:64px;border:1px solid #5A7B88;/* fusion des marges */ position:relative;}
+	#titre-realise {background:#5A7B88 url('/documents/images/illu/titre-realise.jpg') no-repeat top left;}
+	#titre-choisis {background:#5A7B88 url('/documents/images/illu/titre-choisis.jpg') no-repeat top left}
+	#titre-realise h2, #titre-choisis h2 {padding:25px 0 0 210px;color:#fff}
+	
+	/* Vos avis */
+	#vos-avis {display:none;position:absolute;top:0;right:5px;border:0px solid red;width:145px;height:62px}
+	#vos-avis p {color:#fff;font:normal normal bold 12px/1em Arial;margin:10px}
+	/* Bouton decouvrez toute la gamme */
+	.dec-gamme {background:url('/documents/images/illu/decouvrir-gamme-all.png') no-repeat 0 0;position:absolute;bottom:10px;right:10px;width:185px;height:22px}
+	.dec-gamme2 {background:url('/documents/images/illu/decouvrir-gamme.png') no-repeat 0 0;position:absolute;bottom:10px;right:10px;width:139px;height:22px}
+/** FIN **/
+
+/** Bloc de navigation de la page **/
+#pas-a-pas,
+#pas-a-pas-html,
+#aide-au-choix {width:602px;text-align:justify;padding:0 178px 10px 10px;position:relative;border:1px solid #0078d7;background:#fff url('/documents/images/illu/bloc-degrade.jpg') repeat-x bottom left;margin:10px 0;min-height:161px;/*height:113px;*/}
+#aide-au-choix {background:#fff url('/documents/images/illu/criteres-degrade.jpg') repeat-x bottom left !important;margin:0 0 -1px 0;border:1px solid #d3D3D3}
+
+#pas-a-pas h2,
+#pas-a-pas-html h2,
+#aide-au-choix h2 {color:#0078d7;text-indent:-9999px;display:block;background:url('/documents/images/illu/titre-etapes.png') no-repeat 0 0;width:292px;height:26px;margin:15px 0 5px 0}
+#aide-au-choix h2 {background:url('/documents/images/illu/titre-choix.png') no-repeat 0 0}
+
+/* Pour toutes les pages */
+	#eco-attitude, #en-savoir-plus {width:111px;height:111px;position:absolute;top:50px}
+	#eco-attitude {background:url('/documents/images/illu/picto-eco-att.png') no-repeat top left;right:131px}
+	#eco-attitude .lien-tooltip,
+	#en-savoir-plus .lien-savoir-plus {border:0px solid red;padding:1px 1px 100px 105px;text-decoration:none}
+	#en-savoir-plus {background:url('/documents/images/illu/picto-savoir-plus.png') no-repeat top left;right:10px}
+
+	#ma-tooltip {background:#fff;border:2px solid #ccc;padding:10px}
+	#ma-tooltip .picto {border-bottom:1px solid #41c0eb;padding:5px 0 5px 60px;min-height:72px;width:350px}
+	#ma-tooltip .eau {background:url('/documents/images/illu/picto-EcoEau.png') no-repeat 0px 5px;}
+	#ma-tooltip .terre {background:url('/documents/images/illu/picto-EcoTerre.png') no-repeat 0px 5px;}
+	#ma-tooltip .air {background:url('/documents/images/illu/picto-EcoAir.png') no-repeat 0px 5px;}
+	#ma-tooltip .energie {background:url('/documents/images/illu/picto-EcoEnergie.png') no-repeat 0px 5px;}
+
+	#mot-expert {	border:0px solid red;width:150px;height:147px;	position:absolute;bottom:0;right:252px;	background:transparent url('/documents/images/illu/mot-expert.jpg') no-repeat bottom right}
+	
+	#critere1 h3, #critere2 h3, #critere3 h3, #critere4 h3, #critere5 h3, #critere6 h3 {color:#1C1C1C}
+	/* Détails des critères */
+	.critere-detail {width:770px;padding:0 10px 10px 10px;background:transparent url('/documents/images/illu/titre-degrade.jpg') repeat-x  0 -4px;position:relative;	border:1px solid #ccc;margin-top:-1px}
+	.critere-detail h3 {font-size:12px;font-weight:bold;text-transform:uppercase;color:#0078d7;padding:10px 0px 0px 15px;height:24px;margin:0}
+	.critere-detail-gauche {border:0px solid black;width:380px;position:relative;float:left}
+	.critere-detail-droite {border:0px solid blue;width:380px;position:relative; float:left;margin:0 0 0 10px}
+	.critere-detail-element {border:1px solid #ccc;background:#fff;width:358px;height:auto;	float:none;margin:5px 5px 10px 0;padding:10px;position:relative;	text-align:justify;color:#1C1C1C}
+	.critere-detail-element h4 {margin-top:0;text-transform:uppercase;color:#91006a;letter-spacing:1px}
+	p.resume {display:inline}
+	
+	.cde-bloc {background:#ccc;width:130px;height:130px;margin:0 10px 0px 0;float:left}
+	/* Bloc En savoir plus */
+	#savoir-plus {	width:770px;	padding:0 10px 10px 10px;	
+		border:1px solid #ccc;	margin:10px 0}
+	#savoir-plus h3 {	font-size:14px;	font-weight:bold;	color:#fff;	background:#0078d7 url('/documents/images/illu/puce-fermee-blanche.jpg') no-repeat 10px 15px;	padding:10px 0px 0px 25px;	height:26px;	margin:0px -10px 0 -10px}
+
+	
+/* Pour la page pas à pas */
+	.etapes {float:left;width:266px;min-height:130px;margin:0 10px 10px -5px;padding:0px 0 0px 0px}
+	.etapes li {list-style-position:inside;list-style-type:none;margin:0;text-transform:uppercase;color:#616161;font-size:11px;font-weight:bold;font-family:Arial;	width:266px;height:36px;border:0px solid red}
+	
+	/* Player casto */
+	.player-casto {width:750px;background:#fff url('/documents/images/illu/criteres-degrade.jpg') repeat-x bottom left;padding:5px  10px;position:relative;border:1px solid #0078d7;	margin:0 auto 10px auto}
+	.player-titre {width:750px;background:#dcdcdc url('/documents/images/illu/player-titre-degrade.jpg') repeat-x top left}
+	/* Niveaux de difficulté */
+	#niveau {border:0px solid blue;width:193px;height:15px;position:absolute;top:20px;left:298px}
+	.niveau-facile {background:url('/documents/images/illu/niveau-facile.png') no-repeat 0 0}
+	.niveau-accessible {background:url('/documents/images/illu/niveau-accessible.png') no-repeat 0 0}
+	.niveau-avance {background:url('/documents/images/illu/niveau-avance.png') no-repeat 0 0}
+
+	/* Bloc communautaire :télécharger, exporter, partager le Pas à pas */
+	#communautaire {	width:792px;margin:10px 0;padding:0;position:relative;border:none;height:31px;overflow:hidden;background:url('/documents/images/illu/commu-degrade.jpg') repeat-x top left;border:1px solid #ccc}
+	#communautaire ul {list-style-position:inside;list-style-type:none;padding:0;margin:0;width:792px;}
+	#communautaire ul li {height:20px;padding:9px 0 0 25px;margin:0;float:left;width:238px;border:0px solid #ccc}
+	
+	#communautaire .pdf {background:url('/documents/images/illu/picto-pdf.png') no-repeat 5px center;border-right:none}
+	#communautaire .envoyer {background:url('/documents/images/illu/picto-envoyer.png') no-repeat 5px center;border-right:none}
+	#communautaire .exporter {background:url('/documents/images/illu/picto-exporter.png') no-repeat 5px center;width:237px}
+
+	#buzz {width:500px;height:300px;background:#eee;padding:10px;border:1px solid #0078d7}
+	#buzz textarea { width:480px;height:230px;padding:10px;overflow:hidden}
+	
+	/* Navigation des etapes classique */
+	#etape-nav {	width:790px;position:relative;height:12px;	text-transform:uppercase;font-weight:bold;color:#1C1C1C;font-size:11px;	margin:5px 0 0 0}
+	#etape-nav ul {list-style-type:none}	
+	
+	/* Easy Slider */
+	#slider ul, #slider li {margin:0;padding:0;list-style:none}
+	#slider, #slider li{/* list items must be the same size as the slider area */ 
+		width:790px;height:150px;overflow:hidden}			
+	#slider .critere-detail {border:0px solid #ccc}
+	#slider {border:1px solid #ccc}
+	span#nextBtn {position:absolute;top:0;right:0;padding:0 15px 0 10px;background:url('/documents/images/illu/puce-suiv.png') no-repeat right 0px}
+	span#prevBtn {position:absolute;top:0;left:0;padding:0 15px 0 15px;background:url('/documents/images/illu/puce-prec.png') no-repeat 0px -1px}
+	
+/* Pour la page pas à pas sans vidéo */
+
+	/* Navigation des étapes pour le pas à pas sans vidéo + slider */
+	#pas-a-pas #etape-nav,
+	#pas-a-pas-html #etape-nav  {width:750px;margin:10px 0 0 0;position:absolute}
+	
+	#slider-crit ul, #slider-crit li {margin:0;padding:0;list-style:none}
+	#slider-crit, #slider-crit li{/* list items must be the same size as the slider area */width:755px;height:428px;overflow:hidden}	
+	#slider-crit {position:relative;border:0px solid orange}
+	#slider-crit li{}
+	#slider-crit span {font:normal normal bold 18px/1em Arial;color:#0078d7}
+	
+	.etape-bloc {float:left;width:230px;margin:0 10px 10px 0;padding:5px; text-align:left}
+	.etape-bloc2 {float:left;width:730px;margin:0 10px 10px 0;padding:5px; text-align:left;border:0px solid red}
+	.etape-bloc2 .centree { float:left;margin-right:10px}
+	
+	.etape-titre {margin:-8px 0 10px 0;margin:4px 0 10px 0;width:100%;height:20px;padding:0}
+	.etape-titre h3 {color:#eee !important;text-transform:uppercase;font-size:12px;margin:0}
+	
+/* Pour la page aide au choix */
+	.choix {width:308px}
+	.choix li {width:308px;}	
+	.go {background:none;border:0; display:inline;color:#0078d7;margin-bottom:30px}
+	.suite-txt {color:#0078d7}
+
+/* mise en forme generale */
+	.nettoyeur {clear:both;height:0px;background:#fff;color:#fff}
+	.lire_suite {color:#0078d7;border:0px solid #ccc;text-align:right}
+	.puce_ouverte_blanche {background:#0078d7 url('/documents/images/illu/puce-ouverte-blanche.jpg') no-repeat 10px 14px}
+
+/* player flash */
+	#pas-a-pas ul li a.selectFL { background: url('/documents/images/illu/btn-hover.png') no-repeat 0 2px;color:#fff;text-decoration:none;}
+	#player-casto {position:relative;left:-15px;top:-10px;outline:none;margin-bottom:-20px }
+	* html #player-casto {position:relative;left:-3px;top:-13px;width:790px;height:564px;}
+	#player-casto a img {border:none;}
+
+/* correction de l'alignement des blocs pour version client */
+	#je p, .bloc p, #crit p, #savoir-plus p {margin-top:10px}
+
+/* mise en forme pour le bloc en savoir plus */
+	.sp_bloc {float:left;border:0px solid #ccc;width:375px;margin:10px 10px 0 0}
+	.sp_bloc .picto {float:left;margin:10px 10px 10px 0}
+	.sp_bloc ul {list-style-position:inside;float:left;padding:0}
+	
+/* ie6 */
+* html #je h2 {margin-bottom:0px}
+* html #pas-a-pas h2,
+* html #pas-a-pas-html h2,
+* html #aide-au-choix h2 {background:transparent url('/documents/images/illu/titre-etapes.jpg') no-repeat 0px 0}
+
+* html #en-savoir-plus {right:10px}
+* html #eco-attitude .lien-tooltip {padding:80px 50px 100px 50px;}
+
+* html #aide-au-choix {width:600px;min-height:171px;height:auto !important;height:171px}
+* html #crit #aide-au-choix {width:600px}
+
+* html #pas-a-pas {width:601px;padding:0px 0px 10px 0}
+* html #pas-a-pas-html {width:600px;min-height:700px;height:auto !important;height:700px;padding:0 0 10px 0}
+
+* html #savoir-plus {width:770px}
+
+* html #ma-tooltip .picto {height:72px;}
+
+* html .player-casto {margin:10px}
+* html .etapes {margin:0 -5px 10px 0px;height:120px}
+* html .etapes li {margin:0 0 0 -15px}
+* html .etape-bloc {width:225px}
+* html .etape-titre {margin:3px 0 10px 0}
+* html .etapes .on {background: url('/documents/images/illu/btn-hover.png') no-repeat 0 4px;color:#fff;text-decoration:none}
+* html .etapes a:hover {background-position:0 4px}
+
+* html #slider-crit, 
+* html #slider-crit li {width:745px;height:460px}
+* html #slider,
+* html #slider li, .contn {overflow:hidden;position:relative;}
+
+* html .critere-detail-gauche {float:left;width:360px}
+* html .critere-detail-droite {float:right;margin:0;width:360px}
+* html .critere-detail {width:770px}
+* html .critere-detail {width:770px;margin:0;}
+* html .critere-detail-element {width:350px;font-size:11px}
+* html .critere-detail-element h4 {font-size:10px}
+* html .critere-detail-element .go {float:right}
+* html .suite-txt {clear:both}
+* html .sp_bloc {height:75px} /*/
+* html #communautaire {overflow:visible} /*/
+* html #communautaire ul,
+* html #communautaire ul li {display:inline} /*/
+
+/* ie7 */
+*+html #aide-au-choix {width:601px;min-height:171px;height:auto !important;height:171px}
+*+html #pas-a-pas-html {width:601px} /*/
+*+html #pas-a-pas {width:601px;min-height:700px;height:auto !important;height:700px;}
+*+html #je h2 {margin-bottom:0px}	
+*+html #en-savoir-plus .lien-savoir-plus,
+*+html #eco-attitude .lien-tooltip {padding:50px;display:block;text-decoration:none}
+*+html .critere-detail {width:770px}
+*+html .critere-detail-gauche {width:390px;float:left;}
+*+html .critere-detail-droite {width:390px;float:right;margin:0}
+*+html .critere-detail-element {width:360px;font-size:11px}
+*+html .critere-detail-element h4 {font-size:10px}
+*+html .critere-detail-element .go {float:right}
+*+html .suite-txt {clear:both}
+*+html .etape-bloc {width:225px}
+*+html .etape-titre {margin:3px 0 10px 0}
+*+html #slider-crit, 
+*+html #slider-crit li {width:755px;height:460px;height:auto} /*/
+*+html #slider, 
+*+html #slider li, .contn {overflow:hidden;position:relative;}
+*+html #slider ul {border:0px solid blue;}
+*+html .etapes {margin:0 -5px 10px 0px}
+*+html .etapes li {margin:0 0 0 -15px}
+*+html .sp_bloc {min-height:75px} /*/
+*+html #communautaire {overflow:visible} /*/
+*+html #communautaire ul,
+*+html #communautaire ul li {display:inline} /*/

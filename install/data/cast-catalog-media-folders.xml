@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="folder" id="fld10002">
+            <set-property name="path"><![CDATA[Text]]></set-property>
+            <set-property name="name"><![CDATA[Text]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="folder" id="imageFolder">
+            <set-property name="path"><![CDATA[/]]></set-property>
+            <set-property name="name"><![CDATA[Images]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="folder" id="airImageFolder">
+            <set-property name="path"><![CDATA[/]]></set-property>
+            <set-property name="name"><![CDATA[Air emmision images]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="folder" id="templateFolder">
+            <set-property name="path"><![CDATA[/]]></set-property>
+            <set-property name="name"><![CDATA[Templates]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="folder" id="staticSiteFolder">
+            <set-property name="path"><![CDATA[/]]></set-property>
+            <set-property name="name"><![CDATA[StaticSitemap]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="folder" id="promotionsFolder">
+            <set-property name="path"><![CDATA[/]]></set-property>
+            <set-property name="name"><![CDATA[promotions]]></set-property>
+        </add-item>
+        <add-item item-descriptor="folder" id="cataloguesFolder">
+            <set-property name="path"><![CDATA[/]]></set-property>
+            <set-property name="name"><![CDATA[catalogues]]></set-property>
+        </add-item>
+        <add-item item-descriptor="folder" id="fld30005">
+            <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[10/23/2009 15:45:45]]></set-property>
+            <set-property name="path"><![CDATA[Instructions]]></set-property>
+            <set-property name="name"><![CDATA[Instructions]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

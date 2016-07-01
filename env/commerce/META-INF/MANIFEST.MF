@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+ATG-Config-Path: config/config.jar
+ATG-Product: Castorama Store Environment module
+ATG-Required: DafEar.Admin 
+ B2CCommerce 
+ DCS.PublishingAgent 
+ DAF.Search.Routing 
+ DAF.Search.Topics 
+ DAF.Search.Query 
+ DCS.Search 
+ commerce.castorama.castStore 
+ DCS.Search.CustomCatalogs.Index 
+ commerce.castorama.castSearch.Production 
+ DCS.Search.CustomCatalogs.Query 

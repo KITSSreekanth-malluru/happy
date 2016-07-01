@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee         http://java.sun.com/xml/ns/j2ee/ejb-jar_2_1.xsd"
+  version="2.1">
+  <enterprise-beans>
+    <message-driven>
+      <ejb-name>Test</ejb-name>
+      <ejb-class>com.castorama.stock.quartz.ClearCacheJob</ejb-class>
+      <messaging-type>org.quartz.Job</messaging-type>
+      <transaction-type>Container</transaction-type>
+      <activation-config>
+        <activation-config-property>
+          <activation-config-property-name>
+            cronTrigger
+          </activation-config-property-name>
+          <activation-config-property-value>
+            <![CDATA[0 0 10 ? * *]]>
+          </activation-config-property-value>
+        </activation-config-property>
+      </activation-config>
+    </message-driven>
+  </enterprise-beans>
+</ejb-jar>

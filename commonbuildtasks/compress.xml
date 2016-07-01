@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="compress" default="compress_all" basedir=".">
+
+
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties">
+    <classpath>
+      <pathelement location="${basedir}/commonbuildtasks/lib/ant-contrib.jar"/>
+    </classpath>
+  </taskdef>
+  <target name="compress_all">
+  <if>
+	<equals arg1="${js.css.compress}" arg2="true" />
+	<then>
+		<echo message="Compressing js and css" />
+		<antcall target="compress" />
+	</then>
+	<else>
+		<echo message="Compressing js and css was declined" />
+	</else>
+	</if>
+  </target>
+  <target name="compress" 
+          description="Compress javascripts">
+	<echo message="Create backup dirs" />
+	<mkdir dir="${global.dir}/castStore/build/jscss/js"/>
+	<mkdir dir="${global.dir}/castStore/build/jscss/js/original"/>
+	<mkdir dir="${global.dir}/castStore/build/jscss/js/compressed"/>
+	<mkdir dir="${global.dir}/castStore/build/jscss/css"/>
+	<mkdir dir="${global.dir}/castStore/build/jscss/css/original"/>
+	<mkdir dir="${global.dir}/castStore/build/jscss/css/compressed"/>
+	<copy todir="${global.dir}/castStore/build/jscss/js/original" verbose="true" filtering="true">
+		<fileset dir="${global.dir}/castStore/j2ee">
+			<include name="**/*.js"/>
+			<exclude name="**/jquery.js"/>
+		</fileset>
+	</copy>
+	<echo message="Copy backup css" />
+	<copy todir="${global.dir}/castStore/build/jscss/css/original" verbose="true" filtering="true">
+		<fileset dir="${global.dir}/castStore/j2ee">
+			<include name="**/*.css"/>
+		</fileset>
+	</copy>
+	<echo message="Copy backup js" />
+	<copy todir="${global.dir}/castStore/build/jscss/js/compressed" verbose="true" filtering="true">
+		<fileset dir="${global.dir}/castStore/build/jscss/js/original">
+		</fileset>
+	</copy>
+	
+	<copy todir="${global.dir}/castStore/build/jscss/css/compressed" verbose="true" filtering="true">
+		<fileset dir="${global.dir}/castStore/build/jscss/css/original">
+		</fileset>
+	</copy>
+
+	<foreach param="file" target="compress_js">
+	  <path>
+		<fileset dir="${global.dir}/castStore/build/jscss/js/compressed">
+		</fileset>
+	  </path>
+	</foreach>
+	
+	<foreach param="file" target="compress_css">
+	  <path>
+		<fileset dir="${global.dir}/castStore/build/jscss/css/compressed">
+		</fileset>
+	  </path>
+	</foreach>
+
+	<echo message="dynamo root = ${dynamo.root.dir}" />
+	
+	<copy todir="${install.j2ee.dir}/${module.name}" verbose="true" filtering="true">
+		<fileset dir="${global.dir}/castStore/build/jscss/js/compressed">
+		</fileset>
+	</copy>
+	
+	<copy todir="${install.j2ee.dir}/${module.name}" verbose="true" filtering="true">
+		<fileset dir="${global.dir}/castStore/build/jscss/css/compressed">
+		</fileset>
+	</copy>
+	
+	</target>
+
+	<target name="compress_js"> 
+		<echo message="compress file ${file}"/>
+		<java jar="${global.dir}/commonbuildtasks/lib/yuicompressor-2.4.2.jar" failonerror="true" fork="true" >
+			<arg line="-o ${file} --nomunge --preserve-semi --disable-optimizations --charset utf-8 ${file}"/>
+		</java>
+	</target>
+	
+	<target name="compress_css"> 
+		<echo message="compress file ${file}"/>
+		<java jar="${global.dir}/commonbuildtasks/lib/yuicompressor-2.4.2.jar" failonerror="true" fork="true" >
+			<arg line="-o ${file} --charset utf-8 ${file}"/>
+		</java>
+	</target>
+
+</project>

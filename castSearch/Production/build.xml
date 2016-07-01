@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="castorama-Production" default="all" basedir=".">
+
+  <!-- Set properties needed by included XML files -->
+  <property name="global.dir" value="${basedir}/../.."/>
+
+  <!-- Import global defaults and settings and common tasks -->
+  <import file="${global.dir}/commonbuildtasks/common.xml"/>
+ <path id="castorama.classpath">
+  <fileset dir="${dynamo.home}/../commerce/castorama/castSearch/lib">
+    <include name="**/*.jar" />
+  </fileset>
+ </path>
+
+
+  <!-- Define the all task. -->
+  <target name="all"
+    depends="clean,build,install,deploy"
+    description="Cleans, builds, checks and installs the project." />
+  <target name="compile"
+          depends="-init,-createdirs,-coredirsexist"
+          if="srcdirectory.exists"
+          description="Compiles the source code to the build directory.">
+    <mkdir dir="${classes.dir}" />
+
+
+    <echo message="CLASSPATH = ${classpath}"/>
+    <javac srcdir="${src.dir}"
+           destdir="${classes.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.6"
+           target="1.6"
+           verbose="${javac.verbose.bool}">
+
+      <classpath path="${classpath}"/>
+      <classpath path="${lib.classpath}"/>
+      <classpath refid="dynamo.classpath"/>      
+      <classpath refid="castorama.classpath"/>
+      <include name="**/*.java" />
+    </javac>
+    <!-- copy java resource files to build directory -->
+    <copy todir="${classes.dir}">
+      <fileset dir="${src.dir}/">
+        <patternset refid="resource.files" />
+      </fileset>
+    </copy>
+  </target>
+
+
+</project>
+

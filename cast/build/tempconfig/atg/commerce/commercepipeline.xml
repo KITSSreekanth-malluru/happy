@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE pipelinemanager
+        PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Pipeline Manager//EN"
+        'http://www.atg.com/dtds/pipelinemanager/pipelinemanager_1.0.dtd'>
+
+<pipelinemanager>
+  <pipelinechain headlink="checkForExpiredPromotions1" name="payboxProcessOrder1" transaction="TX_REQUIRED" xml-combine="append-without-matching">
+    <pipelinelink name="checkForExpiredPromotions1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/CheckForExpiredPromotions"/>
+      <transition link="removeEmptyShippingGroups1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="removeEmptyShippingGroups1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/RemoveEmptyShippingGroups"/>
+      <transition link="removeEmptyPaymentGroups1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="removeEmptyPaymentGroups1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/RemoveEmptyPaymentGroups"/>
+      <transition link="createImplicitRelationships1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="createImplicitRelationships1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/CreateImplicitRelationships"/>
+      <transition link="setPaymentGroupAmount1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="setPaymentGroupAmount1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/SetPaymentGroupAmount"/>
+      <transition link="saveBillingAddress1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="saveBillingAddress1" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/SaveBillingAddress"/>
+      <transition link="saveInfoForOrderSummary1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="saveInfoForOrderSummary1" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/SaveInfoForOrderSummary"/>
+      <transition link="orderBackup1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="orderBackup1" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/OrderBackup"/>
+    </pipelinelink>
+  </pipelinechain>
+  <pipelinechain headlink="moveUsedPromotions1" name="payboxProcessOrder2" transaction="TX_REQUIRED" xml-combine="append-without-matching">
+    <pipelinelink name="moveUsedPromotions1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/MoveUsedPromotions"/>
+      <transition link="updateInventoryRepository" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="updateInventoryRepository" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/UpdateInventory"/>
+      <transition link="affectOrderAmount" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="affectOrderAmount" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/AffectAmount"/>
+      <transition link="saveInfoForOrderSummary" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="saveInfoForOrderSummary" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/SaveInfoForOrderSummary"/>
+      <transition link="changeOrderStatus" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="changeOrderStatus" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/ChangeOrderStatus"/>
+      <transition link="logOrder" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="logOrder" transaction="TX_MANDATORY">
+      <processor jndi="/com/castorama/commerce/order/processor/LogOrder"/>
+      <transition link="addOrderToRepository1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="addOrderToRepository1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/AddOrderToRepository"/>
+      <transition link="sendPromotionUsedMessage1" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="sendPromotionUsedMessage1" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/SendPromotionUsedMessage"/>
+      <transition link="sendCastoOrderMessage" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="sendCastoOrderMessage" transaction="TX_MANDATORY">
+       <processor jndi="/com/castorama/commerce/order/processor/SendCastoOrderMessage"/>      
+    </pipelinelink>
+  </pipelinechain>
+</pipelinemanager>

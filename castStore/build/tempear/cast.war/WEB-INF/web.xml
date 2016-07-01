@@ -1,0 +1,425 @@
+<?xml version="1.0" ?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <!-- You must include a display name with the web application.  If you do not then when
+      you run your web application on JBoss (or other app server) you will be graced with
+      a NullPointerException from within the NucleusServlet
+
+      java.lang.NullPointerException
+      atg.servlet.NameContextManager.initializeSessionNameContext(NameContextManager.java:504)
+      atg.taglib.dspjsp.Utils.checkParentSessionNameContext(Unknown Source)
+      atg.filter.dspjsp.PageFilter.doFilter(Unknown Source)
+      org.jboss.web.tomcat.filters.ReplyHeaderFilter.doFilter(ReplyHeaderFilter.java:75)
+    -->
+    <display-name>Castorama Store</display-name>
+
+    <!-- This setting tells JBoss that it needs to manage session replication.  If you
+      deploy this web application on a non-farmed JBoss server you will see this
+      error message in the server console:
+
+      13:04:35,751 ERROR [JBossCacheManager] JBossCacheService to Tomcat clustering not found
+      13:04:35,751 ERROR [TomcatDeployer] Failed to setup clustering, clustering disabled
+
+      <distributable/>
+    -->
+
+    <!--
+      This is the name/value of the "parent web application", i.e. the name
+      of a web application, which has a SessionNameContextServlet defined in it
+      that will define the session scope for this web application.
+      Setting this here allows the child application to share the same session
+      scope with the above application.  Meaning these two apps share session.
+      The parent web application OOTB is DafEar.base.
+    -->
+
+    <context-param>
+        <param-name>atg.session.parentContextName</param-name>
+        <param-value>/dyn</param-value>
+    </context-param>
+
+
+    <context-param>
+        <param-name>atg.dafear.bootstrapContextName</param-name>
+        <param-value>/dyn</param-value>
+    </context-param>
+
+
+    <!--
+      If context-root is set here, then ServletContextWebAppRegistry will use
+      this setting as the context-root for this WebApp. This must match
+      the context-root setting in application.xml.
+    -->
+    <context-param>
+        <param-name>context-root</param-name>
+        <param-value>store</param-value>
+    </context-param>
+
+    <!--
+      Called when a request is for a .jsp file, the PageFilter servlet is
+      the entry point into the DAF pipeline.  PageFilter calls
+      atg/dynamo/servlet/dafpipeline/DynamoHandler to start the DAF servlet
+      pipeline for JSP requests. The DAF servlet pipeline relies on JBoss
+      to handle the complete page compilation process.
+    -->
+    <filter>
+        <filter-name>JSessionIdFilter</filter-name>
+        <filter-class>com.castorama.seo.DisableUrlSessionFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>IphoneFilter</filter-name>
+        <filter-class>com.castorama.iphone.IphoneFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>PageFilter</filter-name>
+        <filter-class>atg.filter.dspjsp.PageFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>CrossScriptingFilter</filter-name>
+        <filter-class>com.castorama.utils.CrossScriptingFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>URLRewriter</filter-name>
+        <filter-class>com.castorama.seo.UrlRewriteFilter</filter-class>
+        <init-param>
+            <param-name>loggingDebug</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <init-param>
+            <param-name>urlRewriteService</param-name>
+            <param-value>
+                ctx:dynamo:/com/castorama/seo/UrlRewriteService
+            </param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>*.htm</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>IphoneFilter</filter-name>
+        <url-pattern>/home.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>*.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>/rechercher/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>/rechercher2/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>/rechercher3/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>/rechercher4/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>JSessionIdFilter</filter-name>
+        <url-pattern>/offres-carte-castorama</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>PageFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>CrossScriptingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>URLRewriter</filter-name>
+        <url-pattern>*.htm</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>URLRewriter</filter-name>
+        <url-pattern>*.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>URLRewriter</filter-name>
+        <url-pattern>/rechercher/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>URLRewriter</filter-name>
+        <url-pattern>/rechercher2/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>URLRewriter</filter-name>
+        <url-pattern>/rechercher3/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>URLRewriter</filter-name>
+        <url-pattern>/rechercher4/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>URLRewriter</filter-name>
+        <url-pattern>/offres-carte-castorama</url-pattern>
+    </filter-mapping>
+    <!--  filter-mapping>
+      <filter-name>URLRewriter</filter-name>
+
+      <url-pattern>*.htm</url-pattern>
+    </filter-mapping>
+    -->
+    <!--
+      The ADCDataInsertFilter turns on auto-tagging of pages for the
+      Click To Call feature implemented by the ClickToConnect module.
+      The ConditionalDelegatingFilter allows this web application to run
+      whether or not the ClickToConnect module is present. If you always
+      want to run with ClickToConnect or some other auto-tagging feature,
+      you can simplify the filter tag as follows:
+        <filter>
+          <filter-name>ADCDataInsertFilter</filter-name>
+          <filter-class>
+            atg.adc.filter.ADCDataInsertFilter
+          </filter-class>
+        </filter>
+    -->
+    <filter>
+        <filter-name>ADCDataInsertFilter</filter-name>
+        <filter-class>
+            atg.filter.ConditionalDelegatingFilter
+        </filter-class>
+        <init-param>
+            <param-name>targetFilter</param-name>
+            <param-value>
+                atg.adc.filter.ADCDataInsertFilter
+            </param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>ADCDataInsertFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+
+
+    <!-- FOR SEO COMPLIANCE
+    <servlet>
+      <servlet-name>MappedJumpServlet</servlet-name>
+      <servlet-class>
+        atg.repository.seo.MappedJumpServlet
+      </servlet-class>
+      <init-param>
+        <param-name>loggingDebug</param-name>
+        <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>jumpServlet</param-name>
+        <param-value>
+          ctx:dynamo:/atg/dynamo/servlet/dafpipeline/JumpServlet
+        </param-value>
+      </init-param>
+    </servlet>
+
+   <servlet>
+      <servlet-name>CastMappedJumpServlet</servlet-name>
+      <servlet-class>
+        com.castorama.seo.MappedJumpServlet
+      </servlet-class>
+      <init-param>
+        <param-name>loggingDebug</param-name>
+        <param-value>true</param-value>
+      </init-param>
+    </servlet>
+    -->
+    <!--
+      This servlet must be defined in each web application which is designated
+      as a "main" web application (i.e. its context name is the value of
+      another web application's atg.session.parentContextName parameter).
+
+      If you are seeing this here then this web application is being designated as
+      a parent web app.  Which means it will not share session with another
+      web application; other web applications may look to it as a parent when
+      sharing sessions.  Ensure the atg.session.parentContextName is also set
+      to the context root of this web application.
+
+      Only uncomment this if this web application is a parent web application.
+
+      <servlet>
+      <servlet-name>SessionNameContextServlet</servlet-name>
+      <servlet-class>atg.nucleus.servlet.SessionNameContextServlet</servlet-class>
+      </servlet>
+    -->
+
+    <!--
+      To use ATG platform functionality, a Web application on a 3rd party application
+      server needs to start Nucleus by invoking NucleusSerlvet. This servlet does not
+      need to have any paths mapped to it, but must have the load-on-startup flag set
+      to 1 so that it runs before any other ATG component. The NucleusServlet creates
+      an instance of Nucleus and sets it as an attribute of the web application.
+    -->
+
+    <servlet>
+        <servlet-name>NucleusServlet</servlet-name>
+        <servlet-class>
+            atg.nucleus.servlet.NucleusServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!--
+      This servlet exposes the dynamo servlet pipeline.  It is necessary if
+      you want to support serving JHTML pages on your site.  The context path
+      and servlet path used by this servlet are prepended onto all URLs
+      for JHTML pages on your site.
+    -->
+
+    <servlet>
+        <servlet-name>DynamoProxyServlet</servlet-name>
+        <servlet-class>
+            atg.nucleus.servlet.NucleusProxyServlet
+        </servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>GeneratePdfServlet</servlet-name>
+        <servlet-class>
+            com.castorama.commerce.order.invoice.GeneratePdfServlet
+        </servlet-class>
+        <init-param>
+            <param-name>orderManager</param-name>
+            <param-value>ctx:dynamo:/atg/commerce/order/OrderManager</param-value>
+        </init-param>
+        <init-param>
+            <param-name>countryList</param-name>
+            <param-value>ctx:dynamo:/atg/commerce/util/CountryList_fr</param-value>
+        </init-param>
+        <init-param>
+            <param-name>profileServices</param-name>
+            <param-value>ctx:dynamo:/atg/userprofiling/ProfileServices</param-value>
+        </init-param>
+        <load-on-startup>100</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PrintTicketPdf</servlet-name>
+        <servlet-class>
+            com.castorama.purchasehistory.pdf.PrintTicketPdfServlet
+        </servlet-class>
+        <init-param>
+            <param-name>ticketRetrievalService</param-name>
+            <param-value>ctx:dynamo:/com/castorama/purchaseHistory/TicketRetrievalService</param-value>
+        </init-param>
+        <init-param>
+            <param-name>profileRepository</param-name>
+            <param-value>ctx:dynamo:/atg/userprofiling/ProfileAdapterRepository</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cipherHelper</param-name>
+            <param-value>ctx:dynamo:/com/castorama/util/CipherHelper</param-value>
+        </init-param>
+
+        <load-on-startup>101</load-on-startup>
+    </servlet>
+
+    <!-- Servlets for cactus unit testing -->
+    <!-- <servlet>
+      <servlet-name>ServletRedirector</servlet-name>
+      <servlet-class>org.apache.cactus.server.ServletTestRedirector</servlet-class>
+      </servlet>
+      <servlet>
+      <servlet-name>JspRedirector</servlet-name>
+      <jsp-file>/ondemand/test/jspRedirector.jsp</jsp-file>
+      </servlet> -->
+
+
+    <servlet-mapping>
+        <servlet-name>DynamoProxyServlet</servlet-name>
+        <url-pattern>/dyn/*</url-pattern>
+    </servlet-mapping>
+
+
+    <!-- For diagnostic purposes only  -->
+    <servlet-mapping>
+        <servlet-name>NucleusServlet</servlet-name>
+        <url-pattern>/nucleus/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- PDF generation  -->
+    <servlet-mapping>
+        <servlet-name>GeneratePdfServlet</servlet-name>
+        <url-pattern>/generatePdf/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PrintTicketPdf</servlet-name>
+        <url-pattern>/generateTicketPdf/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- FOR SEO COMPLIANCE -->
+    <!--servlet-mapping>
+      <servlet-name>MappedJumpServlet</servlet-name>
+      <url-pattern>/jump/*</url-pattern>
+    </servlet-mapping
+    <servlet-mapping>
+      <servlet-name>CastMappedJumpServlet</servlet-name>
+      <url-pattern>*.htm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+      <servlet-name>CastMappedJumpServlet</servlet-name>
+      <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+  -->
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- the 403 page -->
+    <error-page>
+        <error-code>403</error-code>
+        <location>/global/404.jsp</location>
+    </error-page>
+    <!-- the 404 page -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/global/404.jsp</location>
+    </error-page>
+    <!-- the 409 page: session expired-->
+    <error-page>
+        <error-code>409</error-code>
+        <location>/global/409.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/global/500.jsp</location>
+    </error-page>
+
+    <!--
+      For internal errors.  This should really never happen, but
+      just in case...
+      -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/global/500.jsp</location>
+    </error-page>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://castFunction</taglib-uri>
+            <taglib-location>/WEB-INF/tags/cast/castFunction.tld</taglib-location>
+        </taglib>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+            <scripting-invalid>true</scripting-invalid>
+            <include-prelude>/includes/prelude.jspf</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+
+</web-app>

@@ -1,0 +1,26 @@
+<dsp:importbean bean="/com/castorama/profile/CastProfileFormHandler" />
+<dsp:importbean bean="/atg/userprofiling/Profile" />
+<dsp:importbean bean="/atg/dynamo/droplet/ForEach" />
+
+<h2>
+  <c:if test="${isReserveCatalog}">
+    <fmt:message key="msg.main.address" />
+  </c:if>
+  <c:if test="${!isReserveCatalog}">
+    <fmt:message key="msg.address.edit.title" />
+  </c:if>
+</h2>
+<div class="formContent grayCorner grayCornerGray">
+<div class="cornerBorderGrayBg cornerTopLeft"><!--~--></div>
+<div class="cornerBorderGrayBg cornerTopRight"><!--~--></div>
+<div class="cornerBorderGrayBg cornerBottomLeft"><!--~--></div>
+<div class="cornerBorderGrayBg cornerBottomRight"><!--~--></div>
+	<div class="cornerOverlay">
+		<dsp:input bean="CastProfileFormHandler.shipToBillingAddress" type="hidden" value="true" />
+     <dsp:include page="/user/includes/contentMyAddress.jsp">
+        <dsp:param name="content"  value="${content}"/>
+        <dsp:param name="bean" value="${bean}"/>
+        <dsp:param name="newAccount" value="${newAccount}"/>
+    </dsp:include> 
+	</div>
+</div>

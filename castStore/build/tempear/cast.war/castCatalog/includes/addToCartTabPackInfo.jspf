@@ -1,0 +1,44 @@
+<dsp:getvalueof var="packProductId" param="product.repositoryId"/>
+<fmt:message  var="cartAdd" key="msg.cart.add"/>
+<dsp:getvalueof var="skuParam" param="skuParam"/>
+<dsp:getvalueof var="prodIdS" param="skuParam.repositoryId"/>
+<dsp:getvalueof var="showButtonForm" value="${true}"/>
+<dsp:getvalueof var="showUnavailableMessage" value="${false}"/>
+<dsp:getvalueof var="needRecalcStockLevel" value="${false}"/>
+<dsp:getvalueof var="addToCartMode" value=""/>
+<dsp:getvalueof var="needUpdateQTY" value="${false}"/>
+<dsp:getvalueof var="showQuantityMessage" value="${false}"/>
+<dsp:getvalueof var="addWebStock" value="${0}"/>
+<dsp:getvalueof var="addLocalStock" value="${0}"/>
+<dsp:getvalueof var="quantity" param="quantity"/>
+
+<div class="fPrix multScuV2 productPageTabsPriceBlock ">
+
+<%--<dsp:form method="post" formid="anyV2">--%>
+<div class="numbAndPriceV2">
+  <div class="fQty numberItemsV2">
+		<span><fmt:message key="msg.cart.quantity"/></span>
+		<span>${quantity}</span>
+  </div>
+</div>
+
+  <div class="blockLastCell">
+    <div class="minHeightWrap">
+        <div class="productDetailsPriceBlock">
+          <dsp:include page="skuPrice.jsp">
+            <dsp:param name="pageType" value="productDetails"/>
+            <dsp:param name="productId" value="${packProductId}"/>
+            <dsp:param name="sku" value="${skuParam}"/>
+          </dsp:include>
+        </div>
+
+        <div class="inputButtonV2">
+			<input value="Ajouter au panier" class="buttonCartBig" type="submit" style="visibility:hidden;">
+        </div>
+
+	<%@include file="deliverOrCCwrInfo.jsp" %>
+  
+<%--</dsp:form>--%>
+
+  </div>
+<!-- draw price block for add to cart tab pack end for ${prodIdS} -->

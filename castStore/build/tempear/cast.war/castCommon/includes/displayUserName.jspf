@@ -1,0 +1,11 @@
+<dsp:getvalueof var="lastName" bean="Profile.lastName" />
+<c:if test="${not empty lastName && lastName != ''}">
+	<dsp:droplet name="/atg/dynamo/droplet/Switch">
+	    <dsp:param name="value" bean="Profile.civilite" />
+	    <dsp:oparam name="miss"><fmt:message key="msg.address.prefix.miss" />&nbsp;</dsp:oparam>
+	    <dsp:oparam name="mrs"><fmt:message key="msg.address.prefix.mrs" />&nbsp;</dsp:oparam>
+	    <dsp:oparam name="mr"><fmt:message key="msg.address.prefix.mr" />&nbsp;</dsp:oparam>
+	</dsp:droplet>
+	<dsp:getvalueof var="firstName" bean="Profile.firstName" />
+	<c:out value="${fn:substring(firstName, 0, 1)}" />.&nbsp;<dsp:valueof bean="Profile.lastName" />
+</c:if>

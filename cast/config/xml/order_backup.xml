@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<!-- 
+	Logica - 19/09/2008 - Descripteur du repository de sauvegarde des commandes pré paiement
+	
+	Objectif : Permettre à Leslie Laire de pouvoir "rattrapper" les commandes "inexistantes" du site
+	
+	Ce repository se remplit au niveau du panier recap par une droplet classique en fin de page :
+		>	1 Ligne par commande.
+		>	La purge se fera par un SQL
+-->
+<gsa-template>
+
+	<!-- Ce repository permet de stocker les informations sur les paiements en cas de commande inexistante -->
+	<item-descriptor name="order_backup" display-name="order backup" display-property="order_id">
+	    <table name="CASTO_ORDER_BACKUP" type="primary" id-column-name="order_id">
+			<!-- Id de la commande - Identifiant du repository -->
+	     	<property category="Id de la Commande"		name="order_id" 		data-type="string" 	column-name="order_id"			display-name="Id de la commande"/>
+	     	<!-- Données de la commande -->
+			<property category="Données de la Commande"	name="dateCommande" 	data-type="date" 	column-name="date_commande" 	display-name="Date du passage de la commande"/>
+			<property category="Données de la Commande"	name="totalArticles" 	data-type="double" 	column-name="total_articles" 	display-name="Total des articles"/>
+			<property category="Données de la Commande"	name="FraisLivraison"	data-type="double" 	column-name="frais_livraison" 	display-name="Frais de livraison de la commande"/>
+			<property category="Données de la Commande"	name="FraisTraitement"	data-type="double" 	column-name="frais_traitement" 	display-name="Frais de traitement de la commande"/>
+			<property category="Données de la Commande"	name="totalCommande" 	data-type="double" 	column-name="total_commande" 	display-name="Total de la commande"/>
+			<property category="Données de la Commande"	name="origineMagasin" 	data-type="String" 	column-name="origine_magasin" 	display-name="Origine Magasin" /> 
+			<property category="Données de la Commande"	name="moyenPaiement" 	data-type="String" 	column-name="moyen_paiement" 	display-name="Moyen de Paiement" /> 
+			<!-- Données sur le client -->
+			<property category="Données Client"			name="login" 			data-type="string" 	column-name="LOGIN" 			display-name="Login sur le site" />
+			<property category="Données Client"			name="nom" 				data-type="string" 	column-name="NOM_CLIENT" 		display-name="Nom du client" />
+			<property category="Données Client"			name="prenom" 			data-type="string" 	column-name="PRENOM_CLIENT" 	display-name="Prénom du client" />
+			<property category="Données Client"			name="telPortable" 		data-type="string" 	column-name="TEL_PORTABLE" 		display-name="Telephone portable" />
+      		<property category="Données Client"			name="telFixe" 			data-type="string" 	column-name="TEL_FIXE" 			display-name="Telephone fixe" />
+      		<property category="Données Client"			name="adresseLibelleFactu" 	data-type="string" 	column-name="ADRESSE_LIBELLE_FACTU" 	display-name="Libelle de l'adresse de facturation" />
+      		<property category="Données Client"			name="adresseLibelleLiv" 	data-type="string" 	column-name="ADRESSE_LIBELLE_LIV" 	    display-name="Libelle de l'adresse de livraison" />
+	     </table>
+	     <!-- Ce repository permet de stocker les informations sur les articles de la commande inexistante -->
+	     <table name="CASTO_CCE_ITEM_LISTE_BACKUP" type="multi" id-column-name="order_id">
+      	 	<property category="Données de la Commande"	name="listCceItems" 	data-type="set" 	column-name="COMMERCE_ITEM_ID" 	display-name="Commerce Items Id"	component-item-type="commerce_item_backup" cascade="delete" />
+   		 </table>
+	</item-descriptor>	
+		
+	<!-- Ce repository permet de stocker les informations sur les articles de la commande inexistante -->
+	<item-descriptor name="commerce_item_backup" display-name="commerce item backup" display-property="COMMERCE_ITEM_ID">
+		 <!-- Articles de la commande -->
+	     <table name="CASTO_COMMERCE_ITEM_BACKUP" type="primary" id-column-name="COMMERCE_ITEM_ID">
+	        <property category="Info sku" 				name="COMMERCE_ITEM_ID" data-type="string" 	column-name="COMMERCE_ITEM_ID"	display-name="COMMERCE_ITEM_ID"/>
+			<property category="Info sku" 				name="codeArticle" 		data-type="string" 	column-name="code_article" 		display-name="Code article"/>
+			<property category="Info sku" 				name="cdeRef" 			data-type="string" 	column-name="cde_ref" 			display-name="Commande de référence"/>
+			<property category="Info sku" 				name="quantite" 		data-type="long" 	column-name="quantite" 			display-name="Quantité article"/>
+			<property category="Info sku" 				name="prixLigneArticle" data-type="double" 	column-name="prix_unitaire" 	display-name="Prix article"/>
+		</table>
+	</item-descriptor>
+</gsa-template>

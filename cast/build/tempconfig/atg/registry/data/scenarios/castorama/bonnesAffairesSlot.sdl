@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE process SYSTEM "dynamosystemresource:/atg/dtds/pdl/pdl_1.0.dtd">
+<process author="admin" creation-time="1246022220796" enabled="true" last-modified-by="admin" modification-time="1246279045328">
+<segment migrate-subjects="true">
+<segment-name>Segment 1</segment-name>
+<!--================================-->
+<!--== Items requested by slot BonnesAffairesTopSlot  -->
+<!--================================-->
+<event id="1">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/BonnesAffairesTopSlot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named BonnesAffairesTopSlot from targeter BonnesAffairesTop  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/BonnesAffairesTopSlot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/BonnesAffairesTop</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-subjects="true">
+<segment-name>Segment 2</segment-name>
+<!--================================-->
+<!--== Items requested by slot BonnesAffairesFeaturedProductsSlot  -->
+<!--================================-->
+<event id="1" recurring="true">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/BonnesAffairesFeaturedProductsSlot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named BonnesAffairesFeaturedProductsSlot from targeter BonnesAffairesFeaturedProducts  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/BonnesAffairesFeaturedProductsSlot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/BonnesAffairesFeaturedProducts</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+</process>

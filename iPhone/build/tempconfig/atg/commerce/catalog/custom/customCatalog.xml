@@ -1,0 +1,92 @@
+﻿<!-- Combining xml files - no DOCTYPE declaration necessary -->
+<gsa-template xml-combine="append">
+	<header xml-combine="replace">
+		<name>Castorama Custom Catalog</name>
+		<author>Epam Team</author>
+		<version>2.0</version>
+	</header>
+
+	<item-descriptor name="catalog">
+      <table name="cast_iphone_catalog" type="auxiliary" id-column-name="catalog_id">
+        <property name="augmentedRealityCategory" item-type="category" column-name="category_id" display-name-resource="augmReality.category">
+			<attribute name="propertySortPriority" value="60" />
+            <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+		</property>
+      </table>    
+    </item-descriptor>
+    <item-descriptor name="category">
+      <table name="iph_cat_display_image" type="auxiliary" id-column-name="category_id">
+        <property category-resource="iPhone" name="categoryDisplayImage" item-type="media" column-name="cat_display_image" display-name-resource="augmReality.categoryDisplayImage">
+          <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+        </property>
+      </table>
+    </item-descriptor>
+    
+    <item-descriptor name="casto_sku">
+      <table name="cast_iphone_sku_images" type="auxiliary" id-column-name="sku_id">
+        <property category-resource="categoryImagesMedia" name="augmentedRealityCarouselImage" item-type="media" column-name="aug_carousel_image_id"
+          display-name-resource="sku.augmentedRealityCarouselImage">
+          <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="-6" />
+          <attribute name="references" value="true" />
+        </property>
+        <property category-resource="categoryImagesMedia" name="augmentedRealityTransparentImage" item-type="media" column-name="aug_transp_image_id"
+          display-name-resource="sku.augmentedRealityTransparentImage">
+          <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="-7" />
+          <attribute name="references" value="true" />
+        </property>
+        <property category-resource="categoryImagesMedia" name="augmentedRealityRetinaImage" item-type="media" column-name="aug_retina_image_id"
+          display-name-resource="sku.augmentedRealityRetinaImage">
+          <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="-8" />
+          <attribute name="references" value="true" />
+        </property>
+      </table>
+      <table name="iphone_sku_aug_images" type="multi" multi-column-name="seq_num" id-column-name="sku_id">
+        <property category-resource="categoryImagesMedia" name="auxAugmRealityImages" data-type="list" component-item-type="iPhoneAugAuxImage" column-name="augm_aux_id"
+          display-name-resource="sku.auxAugmRealityImages">
+          <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+        </property>
+      </table>
+    </item-descriptor>
+    <item-descriptor name="iPhoneVideo" display-name-resource="iPhoneVideo.itemDescriptorName" display-property="displayName"
+      id-space-name="iPhoneVideo" query-cache-size="1000" hidden="false" content="false" cache-mode="simple" writable="true"
+      id-separator=":" item-cache-size="1000">
+      <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+      <table name="iphone_video" type="primary" id-column-name="iphone_video_id">
+        <property name="id" data-type="string" column-name="iphone_video_id" />
+        <property name="displayName" data-type="string" column-name="display_name" display-name-resource="iPhoneVideo.displayName" required="true">
+          <attribute name="propertySortPriority" value="1" />
+        </property>
+        <property name="shortURL" data-type="string" column-name="short_url" display-name-resource="iPhoneVideo.shortURL" required="true">
+          <attribute name="propertySortPriority" value="2" />
+        </property>
+        <property name="longURL" data-type="string" column-name="long_url" display-name-resource="iPhoneVideo.longURL" required="true">
+          <attribute name="propertySortPriority" value="3" />
+        </property>
+      </table>
+    </item-descriptor>
+    <item-descriptor name="iPhoneAugAuxImage" display-name-resource="iPhoneAugAuxImage.itemDescriptorName" display-property="displayName"
+      id-space-name="iPhoneAugAuxImage" query-cache-size="1000" hidden="false" content="false" cache-mode="simple" writable="true"
+      id-separator=":" item-cache-size="1000">
+      <attribute name="resourceBundle" value="com.castorama.mobile.catalog.CustomProductCatalogResources" />
+      <table name="iphone_aug_aux_image" type="primary" id-column-name="augm_aux_id">
+        <property name="id" data-type="string" column-name="augm_aux_id" />
+        <property category-resource="Basic" name="displayName" data-type="string" column-name="display_name" display-name-resource="iPhoneAugAuxImage.displayName" required="true">
+          <attribute name="propertySortPriority" value="1" />
+        </property>
+        <property category-resource="Basic" name="augmentedRealityCarouselImage" item-type="media" column-name="aug_car_image_id"
+          queryable="false" display-name-resource="iPhoneAugAuxImage.augmentedRealityCarouselImage" required="true">
+          <attribute name="propertySortPriority" value="2" />
+          <attribute name="references" value="true" />
+        </property>
+        <property category-resource="Basic" name="augmentedRealityRetinaImage" item-type="media" column-name="aug_tr_image_id"
+          queryable="false" display-name-resource="iPhoneAugAuxImage.augmentedRealityRetinaImage" required="true">
+          <attribute name="propertySortPriority" value="3" />
+          <attribute name="references" value="true" />
+        </property>
+      </table>
+    </item-descriptor>
+    
+</gsa-template>

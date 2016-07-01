@@ -1,0 +1,144 @@
+<div id="replayMessage" class="whitePopupContainer">
+	
+	<dsp:getvalueof var="orderView" param="orderView" />
+	<c:if test="${'replay' == orderView}" >
+	
+	<div class="whitePopupContent popupFormContainer longWidthPopup">
+		<div class="whitePopupHeader">
+			<h1>Réponse à un message</h1>
+				
+				<c:choose>
+					<c:when test="${null == orderId}">
+						<c:set var="backURL" value="${originatingRequest.requestURL}" />
+					</c:when>
+					<c:otherwise>
+						<c:set var="backURL" value="${originatingRequest.requestURL}?orderId=${orderId}" />
+					</c:otherwise>
+				</c:choose>
+				<a href="${backURL}" class="closeBut" >
+					<span><!--~--></span><fmt:message key="castCatalog_label.close" />
+				</a>
+		</div>
+		<div class="clear"><!--~--></div>
+		
+			<dsp:droplet name="/atg/dynamo/droplet/Switch">
+				<dsp:param name="value" bean="CastWebOrdersFormHandler.formError" />
+				<dsp:oparam name="true">
+					<div class="errorList">
+						<ul>
+							<dsp:droplet name="/atg/dynamo/droplet/ForEach">
+								<dsp:param name="array" bean="CastWebOrdersFormHandler.formExceptions" />
+								<dsp:oparam name="output">
+									<li>
+										<dsp:valueof param="element.message" valueishtml="true"/>
+									</li>
+								</dsp:oparam>
+							</dsp:droplet>
+						</ul>
+					</div>
+				</dsp:oparam>
+			</dsp:droplet>
+		<div class="clear"><!--~--></div>
+		                     
+
+		<dsp:getvalueof var="messageId" param="messageId" />
+		<dsp:droplet name="MessageDetailsDroplet">
+			<dsp:param name="messageId" value="${messageId}" />
+			<dsp:oparam name="output">
+				<dsp:form method="post">
+					<dsp:getvalueof var="motifId" param="motifId" />
+					<dsp:input type="hidden" bean="CastWebOrdersFormHandler.successURL" value="${backURL}" />
+					<dsp:input type="hidden" bean="CastWebOrdersFormHandler.cancelURL" value="${backURL}" />
+					<dsp:input type="hidden" bean="CastWebOrdersFormHandler.messageId" value="${messageId}" />
+						<div class="popupContentContainer">
+							<div class="popupPdnR">
+								<label class="fCustomLabel">
+									Message
+									<dsp:getvalueof var="is_response_required" param="responseRequired" />
+									<c:if test="${is_response_required}" >
+										&nbsp;<span class="red">(Réponse attendue)</span>
+									</c:if>
+								</label>
+								<div class="popupGrayBrgBlock">
+									<div class="clear"></div>
+									<div class="t_row">
+										<div class="t_cell alignRight">Émetteur :</div>
+										<div class="t_cell">
+											<dsp:valueof param="from" />
+										</div>
+								</div>
+								<div class="t_row">
+								<div class="t_cell alignRight">Numéro de la commande :</div>
+						<div class="t_cell">
+							<dsp:valueof param="order.NCOMMANDE_CLIENT" />
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="t_row">
+						<div class="t_cell alignRight">Destinataire :</div>
+						<div class="t_cell">
+							<dsp:valueof param="to" />
+						</div>
+					</div>
+					<div class="t_row">
+						<div class="t_cell alignRight">Date de la commande :</div>
+						<div class="t_cell">
+							<dsp:valueof param="order.DENVOI" date="dd/MM/yyyy" />
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="t_row">
+						<div class="t_cell alignRight">Date du message :</div>
+						<div class="t_cell">
+							<dsp:valueof param="message.DCONTACT" date="dd/MM/yyyy"/>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="popupWhiteBrgBlock">
+					<div class="clear"></div>
+					<div class="t_row">
+						<div class="t_cell alignRight">Motif :</div>
+						<div class="t_cell">
+							<span class="red">
+								<dsp:valueof param="motif" />
+							</span>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="t_row">
+						<div class="t_cell alignRight">Mode de contact :</div>
+						<div class="t_cell">
+							<dsp:valueof param="mode" />
+						</div>
+					</div>							
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="popupGrayBrgBlock txtAdvBlock">
+				<dsp:setvalue param="ddd" paramvalue="message.LCONTACT" />
+				<dsp:valueof param="ddd"  valueishtml="true" />
+			</div>
+			<div class="popupPdnR">
+				<label class="fCustomLabel">
+					Votre réponse :
+				</label>
+				<dsp:textarea iclass="i-textarea fWidthTxtar" bean="CastWebOrdersFormHandler.messageText">
+					(Saisissez votre message ici)
+				</dsp:textarea>
+			</div>
+			<div class="formButtons">
+				<span class="inputButton">
+					<dsp:input type="submit" bean="CastWebOrdersFormHandler.replay" value="ENVOYER"/>
+				</span>
+			</div>  
+			<div class="clear"></div>
+		</div>
+	</dsp:form>
+	</dsp:oparam>
+	</dsp:droplet>
+	</div>
+	
+	</c:if>
+	
+</div>

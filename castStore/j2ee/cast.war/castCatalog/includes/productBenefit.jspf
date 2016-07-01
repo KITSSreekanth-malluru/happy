@@ -1,0 +1,28 @@
+<c:if test="${view=='galeryView'}">
+  <c:if test="${not empty productBenefit}">
+      <c:if test="${(not empty printVersion) and printVersion}">
+        <div class="printVersion">
+          <dsp:getvalueof var="contextPath" bean="/OriginatingRequest.contextPath"/>
+          <dsp:img src="${contextPath}/images/prodH.gif" iclass="${productPromoColor}"/>
+      </c:if>
+      <div class="prodHighlight ${productPromoColor}">
+        <span class="prodHighlightContent">
+          <dsp:valueof value="${productBenefit}"/>
+        </span>
+      </div>
+    <c:if test="${(not empty printVersion) and printVersion}">
+      </div><!--end for .printVersion-->
+    </c:if>
+  </c:if>
+</c:if>
+<c:if test="${view=='listView'}">
+  <c:if test="${not empty productBenefit}">
+   
+    <span class="${productPromoColor}">
+	  <strong>
+        <dsp:valueof value="${productBenefit}" valueishtml="true"/>
+      </strong>
+    </span><br/>
+	
+  </c:if>
+</c:if>

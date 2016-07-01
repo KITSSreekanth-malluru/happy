@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <update-item item-descriptor="magasin" id="36">
+        <set-property name="localPriceList"><![CDATA[lpl0036]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="34">
+        <set-property name="localPriceList"><![CDATA[lpl0034]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="37">
+        <set-property name="localPriceList"><![CDATA[lpl0037]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="43">
+        <set-property name="localPriceList"><![CDATA[lpl0043]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="42">
+        <set-property name="localPriceList"><![CDATA[lpl0042]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="41">
+        <set-property name="localPriceList"><![CDATA[lpl0041]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="40">
+        <set-property name="localPriceList"><![CDATA[lpl0040]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="1200006">
+        <set-property name="localPriceList"><![CDATA[lpl001200006]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="23">
+        <set-property name="localPriceList"><![CDATA[lpl0023]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="24">
+        <set-property name="localPriceList"><![CDATA[lpl0024]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="25">
+        <set-property name="localPriceList"><![CDATA[lpl0025]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="26">
+        <set-property name="localPriceList"><![CDATA[lpl0026]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="27">
+        <set-property name="localPriceList"><![CDATA[lpl0027]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="28">
+        <set-property name="localPriceList"><![CDATA[lpl0028]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="29">
+        <set-property name="localPriceList"><![CDATA[lpl0029]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="3">
+        <set-property name="localPriceList"><![CDATA[lpl003]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="2">
+        <set-property name="localPriceList"><![CDATA[lpl002]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="1">
+        <set-property name="localPriceList"><![CDATA[lpl001]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="30">
+        <set-property name="localPriceList"><![CDATA[lpl0030]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="6">
+        <set-property name="localPriceList"><![CDATA[lpl006]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="5">
+        <set-property name="localPriceList"><![CDATA[lpl005]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="4">
+        <set-property name="localPriceList"><![CDATA[lpl004]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="31">
+        <set-property name="localPriceList"><![CDATA[lpl0031]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="8">
+        <set-property name="localPriceList"><![CDATA[lpl008]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="19">
+        <set-property name="localPriceList"><![CDATA[lpl0019]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="17">
+        <set-property name="localPriceList"><![CDATA[lpl0017]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="18">
+        <set-property name="localPriceList"><![CDATA[lpl0018]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="15">
+        <set-property name="localPriceList"><![CDATA[lpl0015]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="16">
+        <set-property name="localPriceList"><![CDATA[lpl0016]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="13">
+        <set-property name="localPriceList"><![CDATA[lpl0013]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="14">
+        <set-property name="localPriceList"><![CDATA[lpl0014]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="4300013">
+        <set-property name="localPriceList"><![CDATA[lpl004300013]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="11">
+        <set-property name="localPriceList"><![CDATA[lpl0011]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="12">
+        <set-property name="localPriceList"><![CDATA[lpl0012]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="21">
+        <set-property name="localPriceList"><![CDATA[lpl0021]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="20">
+        <set-property name="localPriceList"><![CDATA[lpl0020]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="109">
+        <set-property name="localPriceList"><![CDATA[lpl00109]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="107">
+        <set-property name="localPriceList"><![CDATA[lpl00107]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+        <set-property name="ccSpecificBannerPromoInfo"><![CDATA[prin200107]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="106">
+        <set-property name="localPriceList"><![CDATA[lpl00106]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="105">
+        <set-property name="localPriceList"><![CDATA[lpl00105]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="104">
+        <set-property name="localPriceList"><![CDATA[lpl00104]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="103">
+        <set-property name="localPriceList"><![CDATA[lpl00103]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="102">
+        <set-property name="localPriceList"><![CDATA[lpl00102]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="101">
+        <set-property name="localPriceList"><![CDATA[lpl00101]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="100">
+        <set-property name="localPriceList"><![CDATA[lpl00100]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="97">
+        <set-property name="localPriceList"><![CDATA[lpl0097]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="96">
+        <set-property name="localPriceList"><![CDATA[lpl0096]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="2400007">
+        <set-property name="localPriceList"><![CDATA[lpl002400007]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="95">
+        <set-property name="localPriceList"><![CDATA[lpl0095]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="94">
+        <set-property name="localPriceList"><![CDATA[lpl0094]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="92">
+        <set-property name="localPriceList"><![CDATA[lpl0092]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="91">
+        <set-property name="localPriceList"><![CDATA[lpl0091]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="10">
+        <set-property name="localPriceList"><![CDATA[lpl0010]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="88">
+        <set-property name="localPriceList"><![CDATA[lpl0088]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="999">
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="116">
+        <set-property name="localPriceList"><![CDATA[lpl00116]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="79">
+        <set-property name="localPriceList"><![CDATA[lpl0079]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="114">
+        <set-property name="localPriceList"><![CDATA[lpl00114]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="78">
+        <set-property name="localPriceList"><![CDATA[lpl0078]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="112">
+        <set-property name="localPriceList"><![CDATA[lpl00112]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="113">
+        <set-property name="localPriceList"><![CDATA[lpl00113]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="1000010">
+        <set-property name="localPriceList"><![CDATA[lpl001000010]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="2000005">
+        <set-property name="localPriceList"><![CDATA[lpl002000005]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="118">
+        <set-property name="localPriceList"><![CDATA[lpl00118]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="119">
+        <set-property name="localPriceList"><![CDATA[lpl00119]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="80">
+        <set-property name="localPriceList"><![CDATA[lpl0080]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="81">
+        <set-property name="localPriceList"><![CDATA[lpl0081]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="86">
+        <set-property name="localPriceList"><![CDATA[lpl0086]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="87">
+        <set-property name="localPriceList"><![CDATA[lpl0087]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="2300014">
+        <set-property name="localPriceList"><![CDATA[lpl002300014]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="125">
+        <set-property name="localPriceList"><![CDATA[lpl00125]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="66">
+        <set-property name="localPriceList"><![CDATA[lpl0066]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="68">
+        <set-property name="localPriceList"><![CDATA[lpl0068]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="121">
+        <set-property name="localPriceList"><![CDATA[lpl00121]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="122">
+        <set-property name="localPriceList"><![CDATA[lpl00122]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="123">
+        <set-property name="localPriceList"><![CDATA[lpl00123]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="124">
+        <set-property name="localPriceList"><![CDATA[lpl00124]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="1300006">
+        <set-property name="localPriceList"><![CDATA[lpl001300006]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="1300007">
+        <set-property name="localPriceList"><![CDATA[lpl001300007]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="76">
+        <set-property name="localPriceList"><![CDATA[lpl0076]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="59">
+        <set-property name="localPriceList"><![CDATA[lpl0059]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="58">
+        <set-property name="localPriceList"><![CDATA[lpl0058]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="57">
+        <set-property name="localPriceList"><![CDATA[lpl0057]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="56">
+        <set-property name="localPriceList"><![CDATA[lpl0056]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="55">
+        <set-property name="localPriceList"><![CDATA[lpl0055]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="1800004">
+        <set-property name="localPriceList"><![CDATA[lpl001800004]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="1800003">
+        <set-property name="localPriceList"><![CDATA[lpl001800003]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="800002">
+        <set-property name="localPriceList"><![CDATA[lpl00800002]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="64">
+        <set-property name="localPriceList"><![CDATA[lpl0064]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="65">
+        <set-property name="localPriceList"><![CDATA[lpl0065]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="62">
+        <set-property name="localPriceList"><![CDATA[lpl0062]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="63">
+        <set-property name="localPriceList"><![CDATA[lpl0063]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="60">
+        <set-property name="localPriceList"><![CDATA[lpl0060]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="500002">
+        <set-property name="localPriceList"><![CDATA[lpl00500002]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="49">
+        <set-property name="localPriceList"><![CDATA[lpl0049]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="3100015">
+        <set-property name="localPriceList"><![CDATA[lpl003100015]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="48">
+        <set-property name="localPriceList"><![CDATA[lpl0048]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="44">
+        <set-property name="localPriceList"><![CDATA[lpl0044]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="47">
+        <set-property name="localPriceList"><![CDATA[lpl0047]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="700002">
+        <set-property name="localPriceList"><![CDATA[lpl00700002]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="51">
+        <set-property name="localPriceList"><![CDATA[lpl0051]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="52">
+        <set-property name="localPriceList"><![CDATA[lpl0052]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="53">
+        <set-property name="localPriceList"><![CDATA[lpl0053]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+    <update-item item-descriptor="magasin" id="4500009">
+        <set-property name="localPriceList"><![CDATA[lpl004500009]]></set-property>
+        <set-property name="retraitMagasin"><![CDATA[false]]></set-property>
+        <set-property name="localPrix"><![CDATA[false]]></set-property>
+    </update-item>
+
+</gsa-template>
+

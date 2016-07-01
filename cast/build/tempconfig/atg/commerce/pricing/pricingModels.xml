@@ -1,0 +1,93 @@
+<gsa-template xml-combine="append">
+	<header>
+		<name>Castorama Direct 2003 Pricing</name>
+		<author>Remy Lammertin : Sopra</author>
+		<version>$Id: pricingModels.xml,v 1.1 2006/06/30 17:29:06 groupinfra\pereirag Exp $</version>
+	</header>
+
+	<!--*************************************** PROMOTION  Debut********************************************-->
+	<item-descriptor name="promotion" cache-mode="simple">
+		<table name="CASTO_GESTPROMO_OPECO" type="auxiliary" id-column-name="promotion_id">
+			<property category="OPECOM Description" name="createur" data-type="string" column-name="createur"
+				display-name="createur de la promotion" />
+			<property category="OPECOM Affichage" name="conditionApplication" data-type="string" column-name="conditionApplication"
+				display-name="Message client condition d application" />
+			<property category="OPECOM Affichage" name="messageCoupon" data-type="string" column-name="messageCoupon"
+				display-name="message client coupon OK" />
+			<property category="OPECOM Description" name="actionCo" item-type="ActionCommercialeCastorama" column-name="actionCo_id"
+				display-name="Type d action commerciale" />
+			<property category="OPECOM Affichage" name="typeAffichage" data-type="enumerated" default="aucun" column-name="typeAffichage"
+				display-name="Type de l affichage">
+				<attribute name="useCodeForValue" value="false" />
+				<option value="prixbarre" code="0" />
+				<option value="remisepourcent" code="1" />
+				<option value="remisevaleur" code="2" />
+				<option value="coutant" code="3" />
+				<option value="aucun" code="4" />
+			</property>
+			<property category="OPECOM Affichage" name="applicationMagasin" data-type="enumerated" default="indifferent"
+				column-name="applicationMagasin" display-name="Condition application magasin">
+				<attribute name="useCodeForValue" value="false" />
+				<option value="indifferent" code="0" />
+				<option value="uniquementMagasin" code="1" />
+				<option value="uniquementSite" code="2" />
+			</property>
+
+			<!-- GY ajour du chapo pour espace client -->
+			<property category="Chapo de la promotion" name="chapo" data-type="string" column-name="chapo"
+				display-name="Chapo de la promotion" />
+
+			<!-- GP Ajout usageUnique -->
+			<property category="Parametrage" name="usageUnique" data-type="boolean" column-name="usageUnique"
+				display-name="Usage unique (oui/non) ?" />
+
+			<!-- MC Ajout nonCumulable avec toutes les promotions -->
+			<property category="OPECOM Regles" name="opeco_nc_all" data-type="boolean" column-name="opeco_nc_all"
+				display-name="Operations non cumulables avec tous les promotions" />
+
+		</table>
+
+		<table name="CASTO_GESTPROMO_ELEMENT" type="multi" id-column-name="promotion_id" multi-column-name="sequence_num">
+			<property category="OPECOM Description" name="element" data-type="list" component-data-type="string" column-name="element"
+				display-name="Liste des repertoires scenarios utilises" />
+		</table>
+
+
+		<table name="CASTO_GESTPROMO_OPECO_NC" type="multi" id-column-name="promotion_id" multi-column-name="sequence_num">
+			<property category="OPECOM Regles" name="opeco_nc" data-type="list" component-item-type="promotion" column-name="promotionNC_id"
+				display-name="Operations non cumulables" />
+		</table>
+
+
+
+
+		<!-- Logica - La Défense - 2008 -->
+		<!-- Typage d'une promotion CD, PLD, CD&PLD -->
+		<table name="CASTO_PROMOTION" type="auxiliary" id-column-name="promotion_id">
+			<property category="Parametrage" name="typagePromotion" data-type="enumerated" column-name="typage_promotion"
+				display-name="Typage de la promotion" hidden="false">
+				<attribute name="type_promotion" value="0" />
+				<option value="Castorama Direct" code="0" />
+				<option value="Paris La Défense" code="1" />
+				<option value="CD et PLD" code="2" />
+				<attribute name="propertySortPriority" value="-2" />
+			</property>
+		</table>
+		<!-- Logica - La Défense - 2008 -->
+	</item-descriptor>
+	<!--*************************************** PROMOTION  Fin********************************************-->
+
+	<!--*************************************** Action commerciale Castorama Debut********************************************-->
+	<item-descriptor name="ActionCommercialeCastorama" display-name="Action Commerciale Castorama" display-property="actionCo_nom"
+		id-space-name="ActionCo">
+		<table name="CASTO_GESTPROMO_ACTIONCO" type="primary" id-column-name="actionCo_id">
+			<property category="Description" name="actionCo_nom" data-type="string" column-name="actionCo_nom"
+				display-name="Nom de l action" />
+			<property category="Description" name="actionCo_description" data-type="string" column-name="actionCo_description"
+				display-name="Description de l action" />
+			<property category="Description" name="notice" data-type="string" column-name="notice"
+				display-name="Lien vers la documentation de l action" />
+		</table>
+	</item-descriptor>
+	<!--*************************************** Action commerciale Castorama Fin********************************************-->
+</gsa-template>

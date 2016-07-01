@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE item PUBLIC "-//Art Technology Group, Inc.//DTD Repository Ouput Specifier 1.0//EN" "http://www.atg.com/dtds/search/indexing-dependency-schema.dtd">
+
+<item repository-path="/atg/registry/Repository/MagasinGSARepository" item-descriptor-name="magasin" is-document="true">
+	<title property-name="nom" />
+	<meta-properties>
+		<property name="$repositoryId" type="string" store-as-meta-index="true" />
+		<property name="$repository.repositoryName" suppress="true" />
+	</meta-properties>
+	<text-properties>
+		<property name="nom" />
+		<property name="keywords" />
+		<property name="description" />
+	</text-properties>
+	<item property-name="entite">
+		<meta-properties>
+			<property name="$repositoryId" type="string" />
+			<property name="$repository.repositoryName" suppress="true" />
+		</meta-properties>
+		<text-properties>
+			<property name="nom" />
+		</text-properties>
+		<item property-name="adresse">
+			<meta-properties>
+				<property name="$repositoryId" type="string" />
+				<property name="$repository.repositoryName" suppress="true" />
+			</meta-properties>
+			<text-properties>
+				<property name="ville" />
+				<property name="rue" />
+				<property name="cp" />
+			</text-properties>
+			<item property-name="departement">
+				<meta-properties>
+					<property name="$repositoryId" type="string" />
+					<property name="$repository.repositoryName" suppress="true" />
+				</meta-properties>
+				<text-properties>
+					<property name="nom" />
+				</text-properties>
+				<item property-name="region">
+					<meta-properties>
+						<property name="$repositoryId" type="string" />
+						<property name="$repository.repositoryName" suppress="true" />
+						<property name="nom" type="string"/>
+					</meta-properties>
+					<text-properties>
+						<property name="nom" />
+					</text-properties>
+				</item>
+			</item>
+		</item>
+	</item>
+	<item property-name="listservices" is-multi="true">
+		<meta-properties>
+			<property name="$repositoryId" type="string" />
+			<property name="$repository.repositoryName" suppress="true" />
+		</meta-properties>
+		<text-properties>
+			<property name="nom" />
+		</text-properties>
+	</item>
+</item>

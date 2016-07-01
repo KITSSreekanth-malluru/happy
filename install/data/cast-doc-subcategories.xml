@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <add-item item-descriptor="castoDocSubcat" id="100001">
+            <set-property name="subcatTitle"><![CDATA[Inspiration]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100002">
+            <set-property name="subcatTitle"><![CDATA[3D]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100003">
+            <set-property name="subcatTitle"><![CDATA[Appli Web]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100004">
+            <set-property name="subcatTitle"><![CDATA[Vidéos]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100005">
+            <set-property name="subcatTitle"><![CDATA[Pas à pas]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100006">
+            <set-property name="subcatTitle"><![CDATA[Castostages]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100007">
+            <set-property name="subcatTitle"><![CDATA[Communauté]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100008">
+            <set-property name="subcatTitle"><![CDATA[Pack]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocSubcat" id="100009">
+            <set-property name="subcatTitle"><![CDATA[Application smartphone]]></set-property>
+        </add-item>
+
+
+    </import-items>
+</gsa-template>

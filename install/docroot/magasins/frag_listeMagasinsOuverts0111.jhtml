@@ -1,0 +1,763 @@
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td align="center" class="tibl">&nbsp;<br><b>Ouvertures exceptionnelles le vendredi 1er Novembre</b><br></td></tr>
+</table>
+
+<DROPLET SRC="/com/frag_linkRetour.jhtml"/>
+Les magasins figurant dans la liste ci-dessous seront ouverts le vendredi 1er novembre
+<br><br>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%" align="left" class="t">
+    <img src="/com/img/fleche_bleue.gif"><a href="#Atlantique" >Région Atlantique</a>
+    </td>
+
+   <td width="33%" align="left" class="t">
+   <img src="/com/img/fleche_bleue.gif"><a href="#Est" >Région Est</a>
+    </td>
+    <td width="33%" align="left" class="t">
+	    <img src="/com/img/fleche_bleue.gif"><a href="#Languedoc" >Région Languedoc</a>
+    </td>
+
+ </tr>
+ <tr>
+     <td width="33%" align="left" class="t">
+     <img src="/com/img/fleche_bleue.gif"><a href="#Nord" >Région Nord</a>
+     </td>
+
+    <td width="33%" align="left" class="t">
+    <img src="/com/img/fleche_bleue.gif"><a href="#Ouest" >Région Ouest</a>
+     </td>
+     <td width="33%" align="left" class="t">
+	     <img src="/com/img/fleche_bleue.gif"><a href="#ParisNord" >Région Paris Nord</a>
+    </td>
+ </tr>
+ <tr>
+      <td width="33%" align="left" class="t">
+      <img src="/com/img/fleche_bleue.gif"><a href="#ParisSud" >Région Paris Sud</a>
+      </td>
+
+     <td width="33%" align="left" class="t">
+     <img src="/com/img/fleche_bleue.gif"><a href="#Provence" >Région Provence</a>
+      </td>
+      <td width="33%" align="left" class="t">
+ 	     <img src="/com/img/fleche_bleue.gif"><a href="#Rhone" >Région Rhone Alpes</a>
+     </td>
+ </tr>
+</table>
+
+
+
+<br>
+
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td  valign="middle" class="stibc" width="100%" align="left">
+<a name="Atlantique" >
+<b>
+Région Atlantique
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+			<a href='/magasins/monMagasin.jhtml?magasinid=4&regionid=8' class='moncasto'>La Rochelle</a>
+
+
+    </td>
+
+    <td width="33%"  class="t" align="left">
+
+
+
+    </td>
+
+    <td width="33%"  class="t" align="left">
+    </td>
+
+  </tr>
+ </table>
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="Est" >
+<b>
+Région Est
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+			<a href='/magasins/monMagasin.jhtml?magasinid=44&regionid=5' class='moncasto'>Besancon</a>
+
+
+
+    </td>
+
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=74&regionid=5' class='moncasto'>Montbeliard</a>
+
+
+    </td>
+
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=122&regionid=4' class='moncasto'>Reims Val de Murigny</a>
+
+    </td>
+
+  </tr>
+
+
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=102&regionid=5' class='moncasto'>Vandoeuvre</a>
+
+
+
+    </td>
+
+    <td width="33%"  class="t" align="left">
+
+    </td>
+
+    <td width="33%"  class="t" align="left">
+
+    </td>
+
+  </tr>
+
+ </table>
+
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="Languedoc" >
+<b>
+Région Languedoc
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=86&regionid=9' class='moncasto'>Saint Marcel Les Valence</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=124&regionid=11' class='moncasto'>Nimes</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=94&regionid=10' class='moncasto'>Toulouse L'Union    </a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=56&regionid=10' class='moncasto'>ToulousePortet</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=25&regionid=10' class='moncasto'>Saint Orens</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=88&regionid=11' class='moncasto'>Beziers</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=60&regionid=11' class='moncasto'>Monpellier Lattes</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=79&regionid=11' class='moncasto'>Saint Clément</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=80&regionid=11' class='moncasto'>Perpignan</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=41&regionid=11' class='moncasto'>Avignon</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+  </tr>
+ </table>
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="Nord" >
+<b>
+Région Nord
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=78&regionid=1' class='moncasto'>Bondues</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=1000010&regionid=1' class='moncasto'>Dunkerque </a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=92&regionid=1' class='moncasto'>Englos</a>
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=114&regionid=1' class='moncasto'>Hellemmes</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=117&regionid=1' class='moncasto'>Leers</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=75&regionid=1' class='moncasto'>Petite Forêt</a>
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=120&regionid=1' class='moncasto'>Béthune</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=1000004&regionid=1' class='moncasto'>Boulogne </a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=121&regionid=1' class='moncasto'>Noyelles</a>
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=1&regionid=2' class='moncasto'>Barentin</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+  		<a href='/magasins/monMagasin.jhtml?magasinid=47&regionid=2' class='moncasto'>Darnetal</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+    <img src="/com/img/fleche_bleue.gif">
+    <a href='/magasins/monMagasin.jhtml?magasinid=8&regionid=2' class='moncasto'>Le Havre</a>
+
+    </td>
+  </tr>
+ </table>
+
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="Ouest" >
+<b>
+Région Ouest
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=125&regionid=6' class='moncasto'>Rennes Saint Jacques</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=76&regionid=7' class='moncasto'>Chambray les Tours</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=1000012&regionid=7' class='moncasto'>Tours St Cyr     </a>
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=95&regionid=7' class='moncasto'>Orvault</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=63&regionid=7' class='moncasto'>Angers</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=51&regionid=7' class='moncasto'>Le Mans</a>
+
+
+    </td>
+  </tr>
+</table>
+
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="ParisNord" >
+<b>
+Région Paris Nord
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=3&regionid=3' class='moncasto'>Creil Saint Maximin</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=28&regionid=3' class='moncasto'>Clichy</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=6&regionid=3' class='moncasto'>Nation</a>
+
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=800002&regionid=3' class='moncasto'>Claye Souilly</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=29&regionid=3' class='moncasto'>Sartrouville</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=13&regionid=3' class='moncasto'>Nanterre</a>
+
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=46&regionid=3' class='moncasto'>Parinor</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=123&regionid=3' class='moncasto'>Villemomble</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=30&regionid=3' class='moncasto'>Villetaneuse</a>
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=17&regionid=3' class='moncasto'>Ormesson</a>
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=31&regionid=3' class='moncasto'>Eragny</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+    <img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=2&regionid=3' class='moncasto'>Ezanville</a>
+
+
+    </td>
+  </tr>
+
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=14&regionid=3' class='moncasto'>Gonesse</a>
+
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+  </tr>
+ </table>
+
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="ParisSud" >
+<b>
+Région Paris Sud
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=12&regionid=3' class='moncasto'>Melun</a>
+
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=109&regionid=3' class='moncasto'>Chambourcy</a>
+
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=18&regionid=3' class='moncasto'>Coignieres</a>
+
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=68&regionid=3' class='moncasto'>Flins</a>
+
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=113&regionid=3' class='moncasto'>Plaisir</a>
+
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=20&regionid=3' class='moncasto'>Velizy</a>
+
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=19&regionid=3' class='moncasto'>Ballainvilliers</a>
+
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=118&regionid=3' class='moncasto'>Corbeil</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=48&regionid=3' class='moncasto'>Montgeron</a>
+
+
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=40&regionid=3' class='moncasto'>Creteil</a>
+
+
+
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=116&regionid=3' class='moncasto'>Fresnes</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+
+  		<img src="/com/img/fleche_bleue.gif">
+
+<a href='/magasins/monMagasin.jhtml?magasinid=500002&regionid=7' class='moncasto'>Olivet</a>
+
+    </td>
+  </tr>
+ </table>
+
+
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="Provence" >
+<b>
+Région Provence
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=11&regionid=12' class='moncasto'>Antibes </a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=96&regionid=12' class='moncasto'>Le Cannet</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=15&regionid=12' class='moncasto'>Mandelieu</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=36&regionid=12' class='moncasto'>Aix en Provence</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=103&regionid=12' class='moncasto'>La Valentine</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=10&regionid=12' class='moncasto'>Plan De Campagne</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=34&regionid=12' class='moncasto'>Vitrolles</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=42&regionid=12' class='moncasto'>Ollioules</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=33&regionid=12' class='moncasto'>Puget</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=27&regionid=12' class='moncasto'>Toulon</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+  </tr>
+</table>
+
+
+<br>
+<table width="75%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+<td valign="top"><img src="/com/img/coing_univers.gif" border="0"></td>
+<td align="left" valign="middle" class="stibc" width="100%">
+<a name="Rhone" >
+<b>
+Région Rhone Alpes
+</b>
+</a>
+</td>
+<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+</tr>
+</table>
+
+<table border="0" width="75%">
+  <tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=5&regionid=9' class='moncasto'>Bourg en Bresse</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=23&regionid=9' class='moncasto'>Grenoble</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=16&regionid=9' class='moncasto'>Roanne</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=39&regionid=9' class='moncasto'>Saint Etienne</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=119&regionid=9' class='moncasto'>Clermont   </a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=43&regionid=9' class='moncasto'>Bron</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=107&regionid=9' class='moncasto'>Dardilly</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=24&regionid=9' class='moncasto'>Givors</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=106&regionid=9' class='moncasto'>Rillieux La Pape</a>
+    </td>
+  </tr>
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=22&regionid=9' class='moncasto'>Villefranche sur Saone</a>
+
+    </td>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=21&regionid=9' class='moncasto'>Chalon Sur Saone</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+      		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=97&regionid=9' class='moncasto'>Savoie/Chambery</a>
+    </td>
+  </tr>
+
+<tr>
+    <td width="33%"  class="t" align="left">
+  		<img src="/com/img/fleche_bleue.gif">
+<a href='/magasins/monMagasin.jhtml?magasinid=87&regionid=9' class='moncasto'>Metz-Tessy</a>
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+    <td width="33%"  class="t" align="left">
+    </td>
+  </tr>
+ </table>
+
+ <br><br>
+ <DROPLET SRC="/com/frag_linkRetourHaut.jhtml"/>
+
+
+
+
+
+
+

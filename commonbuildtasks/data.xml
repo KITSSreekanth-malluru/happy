@@ -1,0 +1,136 @@
+<project name="data" default="importdata" basedir=".">
+
+  <!-- ================================================================= -->
+  <!-- Repository import.                                                -->
+  <!-- ================================================================= -->
+
+  <target name="importdata"
+          depends="dropcatalogschema,importoracledata,importxmldata"
+          description="Imports data into the schemas">
+  </target>
+
+  <target name="dropcatalogschema"
+          description="Drops the schema for the catalogs">
+    <!-- Project Specific Tables Go Here -->
+    <!-- Commerce catalog tables -->
+    <ant target="-performcatalogsql">
+      <property name="sql.ddl.file" value="${sql.uninstall.atg.catalog}" />
+    </ant>
+  </target>
+
+  <!-- An import using Oracle Import -->
+  <target name="importoracledata" description="uses SQLPlus to import data">
+
+    <unzip src="${basedir}/data/catalogdata.zip" dest="${basedir}/data"/>
+
+    <!-- Create the catalog -->
+    <ant target="oracleimport">
+      <property name="import.sql.file" value="${basedir}/data/catalogdata.dmp"/>
+      <property name="import.sql.log"  value="${basedir}/data/catalogdata.log"/>
+      <property name="jdbc.user"       value="${jdbc.cataloga.user}"/>
+      <property name="jdbc.password"   value="${jdbc.cataloga.password}"/>
+    </ant>
+    <!-- Create it again for the other schema-->
+    <ant target="oracleimport">
+      <property name="import.sql.file" value="${basedir}/data/catalogdata.dmp"/>
+      <property name="import.sql.log"  value="${basedir}/data/catalogdata.log"/>
+      <property name="jdbc.user"       value="${jdbc.catalogb.user}"/>
+      <property name="jdbc.password"   value="${jdbc.catalogb.password}"/>
+    </ant>
+  </target>
+
+
+  <!-- Another import, this time using startSQLRepository -->
+  <target name="importxmldata" description="uses startSQLRepository to import data">
+    <ant target="startsqlrepository">
+      <property name="import.data.file" value="${basedir}/clothingdata/csvconverter/out-catalog.xml"/>
+      <property name="import.repository" value="/atg/commerce/catalog/ProductCatalog"/>
+    </ant>
+    <ant target="startsqlrepository">
+      <property name="import.data.file" value="${basedir}/clothingdata/csvconverter/out-pricelists.xml"/>
+      <property name="import.repository" value="/atg/commerce/pricing/priceLists/PriceLists"/>
+    </ant>
+    <ant target="startsqlrepository">
+      <property name="import.data.file" value="${basedir}/clothingdata/csvconverter/out-inventory.xml"/>
+      <property name="import.repository" value="/atg/commerce/inventory/InventoryRepository"/>
+    </ant>
+  </target>
+
+  <target name="oracleimport"
+          description="Uses a sql dump file to import data into the repository.  Creates the tables also.">
+    <exec executable="${import.sql.win32.cmd}"
+          os="${tools.exec.os.Windows}"
+          failonerror="yes">
+      <arg value="${jdbc.user}/${jdbc.password}@${jdbc.tnsname}"/>
+      <arg value="FILE=${import.sql.file}"/>
+      <arg value="FULL=Y"/>
+      <arg value="LOG=${import.sql.log}"/>
+    </exec>
+
+    <exec executable="${import.sql.unix.cmd}"
+          os="${tools.exec.os.UNIX}"
+          failonerror="yes">
+      <arg value="${jdbc.user}/${jdbc.password}@${jdbc.tnsname}"/>
+      <arg value="FILE=${import.sql.file}"/>
+      <arg value="FULL=Y"/>
+      <arg value="LOG=${import.sql.log}"/>
+    </exec>
+  </target>
+
+  <target name="startsqlrepository" description="Calls ATG startSQLRepository for import">
+    <exec executable="${startSqlRepository.win32.cmd}"
+          os="${tools.exec.os.Windows}"
+          failonerror="yes">
+      <arg value="-s" />
+      <arg value="${server.name}"/>
+      <arg value="-m" />
+      <arg value="${module.for.import}" />
+      <arg value="-database" />
+      <arg value="oracle" />
+      <arg value="-repository" />
+      <arg value="${import.repository}" />
+      <arg value="-import" />
+      <arg value="${import.data.file}" />
+    </exec>
+    <exec executable="${startSqlRepository.unix.cmd}"
+          os="${tools.exec.os.UNIX}"
+          failonerror="yes">
+      <arg value="-s" />
+      <arg value="${server.name}"/>
+      <arg value="-m" />
+      <arg value="${module.for.import}" />
+      <arg value="-database" />
+      <arg value="oracle" />
+      <arg value="-repository" />
+      <arg value="${import.repository}" />
+      <arg value="-import" />
+      <arg value="${import.data.file}" />
+    </exec>
+  </target>
+
+  <target name="startsqlrepositorymulti" description="Calls ATG startSQLRepository with multi-import capability">
+    <exec executable="${startSqlRepository.win32.cmd}"
+          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+          failonerror="no">
+      <arg value="-s" />
+      <arg value="${import.scripts.server.name}"/>
+      <arg line="${modules.for.import}" />
+      <arg value="-multiImport" />
+      <arg value="${import.data.file}" />
+      <arg value="-startDir" />
+      <arg value="${import.startDir}"/>
+    </exec>
+    <exec executable="${startSqlRepository.unix.cmd}"
+          os="Solaris,Linux"
+          failonerror="no">
+      <arg value="-s" />
+      <arg value="${import.scripts.server.name}"/>
+      <arg line="${modules.for.import}" />
+      <arg value="-multiImport" />
+      <arg value="${import.data.file}" />
+      <arg value="-startDir" />
+      <arg value="${import.startDir}"/>
+    </exec>
+  </target>
+</project>
+

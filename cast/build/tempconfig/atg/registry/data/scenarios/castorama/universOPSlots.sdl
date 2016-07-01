@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE process SYSTEM "dynamosystemresource:/atg/dtds/pdl/pdl_1.0.dtd">
+<process author="admin" creation-time="1246022220796" enabled="true" last-modified-by="admin" modification-time="1246279045328">
+<segment migrate-from="1246033358990,1246033474106,1246033494227,1246033668050,1246265114778" migrate-subjects="true">
+<segment-name>Segment 1</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPPageTopSlot  -->
+<!--================================-->
+<event id="1" recurring="true">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPPageTopSlot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPPageTopSlot from targeter UniversOPPageTop  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPPageTopSlot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPPageTop</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246033358990,1246033474106,1246033494227,1246033668050,1246265114778" migrate-subjects="true">
+<segment-name>Segment 2</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPPage3Slot  -->
+<!--================================-->
+<event id="1" recurring="true">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPPage3Slot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPPage3Slot from targeter UniversOPPage3  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPPage3Slot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPPage3</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246033474106,1246033474106,1246033494227,1246033668050,1246265114778" migrate-subjects="true">
+<segment-name>Segment 3</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPPage4Slot  -->
+<!--================================-->
+<event id="1" recurring="true">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPPage4Slot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPPage4Slot from targeter UniversOPPage4  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPPage4Slot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPPage4</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246033474106,1246033474106,1246033494227,1246033668050,1246265114778" migrate-subjects="true">
+<segment-name>Segment 4</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPPage5Slot  -->
+<!--================================-->
+<event id="1" recurring="true">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPPage5Slot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPPage5Slot from targeter UniversOPPage5  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPPage5Slot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPPage5</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246265114778" migrate-subjects="true">
+<segment-name>Segment 5</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPPage6Slot  -->
+<!--================================-->
+<event id="1">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPPage6Slot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPPage6Slot from targeter UniversOPPage6  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPPage6Slot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPPage6</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246265114778" migrate-subjects="true">
+<segment-name>Segment 6</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPPage7Slot  -->
+<!--================================-->
+<event id="1">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPPage7Slot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPPage7Slot from targeter UniversOPPage7  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPPage7Slot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPPage7</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246265114778" migrate-subjects="true">
+<segment-name>Segment 7</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPFeaturedProductsSlot  -->
+<!--================================-->
+<event id="1">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPFeaturedProductsSlot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPFeaturedProductsSlot from targeter UniversOPFeaturedProducts  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPFeaturedProductsSlot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPFeaturedProducts</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246265114778" migrate-subjects="true">
+<segment-name>Segment 8</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPBreadcrumbsSlot  -->
+<!--================================-->
+<event id="1">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPBreadcrumbsSlot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPBreadcrumbsSlot from targeter UniversOPBreadcrumbs  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPBreadcrumbsSlot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPBreadcrumbs</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246265114778" migrate-subjects="true">
+<segment-name>Segment 9</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPLeftNameSlot  -->
+<!--================================-->
+<event id="1">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPLeftNameSlot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPLeftNameSlot from targeter UniversOPLeftName  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPLeftNameSlot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPLeftName</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+<segment migrate-from="1246265114778" migrate-subjects="true">
+<segment-name>Segment 10</segment-name>
+<!--================================-->
+<!--== Items requested by slot UniversOPRightNameSlot  -->
+<!--================================-->
+<event id="1">
+<event-name>atg.dss.SlotItemRequest</event-name>
+<filter operator="eq">
+<event-property>
+<property-name>slotName</property-name>
+</event-property>
+<constant>/atg/registry/Slots/UniversOPRightNameSlot</constant>
+</filter>
+</event>
+<!--================================-->
+<!--== Add items to slot named UniversOPRightNameSlot from targeter UniversOPRightName  -->
+<!--================================-->
+<action id="2">
+<action-name>fillSlot</action-name>
+<action-param name="slot">
+<nucleus-property>
+<nucleus-path>/atg/registry/Slots/UniversOPRightNameSlot</nucleus-path>
+</nucleus-property>
+</action-param>
+<action-param name="targeter">
+<nucleus-property>
+<nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/UniversOPRightName</nucleus-path>
+</nucleus-property>
+</action-param>
+</action>
+</segment>
+</process>

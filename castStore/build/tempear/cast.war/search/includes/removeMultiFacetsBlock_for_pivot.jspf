@@ -1,0 +1,119 @@
+<c:set var="srchFacetLabel" value="SRCH" />
+<c:if test="${currentFacetValue.facet.id != srchFacetLabel && !(status.count == 1 && currentFacetValue.facet.refinementElement.property == 'ancestorCategories.$repositoryId')}">
+ <li>
+  <dsp:droplet name="CommerceFacetTrailDroplet">
+    <dsp:setvalue param="trail" value="${trailString}" />
+    <dsp:setvalue param="removeFacet" value="${currentFacetValue.facet.id}:${currentMultiFacetValue}" />
+    
+    <dsp:oparam name="output">
+    <dsp:getvalueof var="facetTrail" param="facetTrail" />
+
+    <dsp:getvalueof var="urlTrail" value=""/>
+      <c:if test="${fn:length(facetTrail.facetValues) > 0  }">
+        <c:forEach items="${facetTrail.facetValues}" var="fTrail" end="${(fn:length(facetTrail.facetValues))-1}" >
+          <c:if test="${fTrail.facet.label == 'facet.label.MarqueCommerciale' || fTrail.facet.label == 'facet.label.Category'}">
+            <dsp:getvalueof var="separator" value=":"/>
+              <c:if test="${empty urlTrail}">
+                <dsp:getvalueof var="separator" value=""/>
+              </c:if>
+            <dsp:getvalueof var="urlTrail" value="${urlTrail}${separator}${fTrail}"/>
+          </c:if>
+        </c:forEach>
+      </c:if>
+
+
+     <dsp:getvalueof var="trailVar" param="facetTrail.trailString" />
+     <dsp:droplet name="CastFacetedPropertyDroplet">
+        <dsp:param name="facetId" value="${currentFacetValue.facet.id}"/>
+        <dsp:oparam name="output">
+          <dsp:getvalueof var="facetedPropertyVar" param="facetedProperty"/>
+          
+          <dsp:droplet name="CastQueryStringDroplet">
+            <c:if test="${trailVar != urlTrail}">
+              <dsp:param name="trail" value="${trailVar}"/>
+            </c:if>
+            <dsp:param name="sortByValue" value="${sortByValue}"/>
+            <dsp:param name="productListingView" value="${productListingView}"/>
+            <dsp:param name="question" value="${question}"/>
+            <dsp:param name="searchType" value="${searchType}"/>
+            <dsp:param name="pageNum" value="1"/>
+            <dsp:param name="currentTab" value="${currentTab}"/>
+            <dsp:param name="lastFilter" value="${lastFilter}"/>
+            <dsp:param name="osearchmode" value="${osearchmode}"/>
+            <!-- <dsp:param name="names" value="trail,sortByValue,productListingView,question,searchType,pageNum,currentTab,lastFilter,osearchmode"/> -->
+            <dsp:param name="names" value="trail,sortByValue,productListingView,question,searchType,pageNum,currentTab,lastFilter,osearchmode"/>
+            <dsp:oparam name="output">
+              <dsp:getvalueof var="qString" param="qString"/>
+            </dsp:oparam>
+          </dsp:droplet>
+          
+          <c:choose>
+            <c:when test="${fn:length(urlTrail) - fn:length(fn:replace(urlTrail, ':', '')) != 1}">
+              <dsp:getvalueof var="fullUrl" value="${contextPath}/${fn:replace(castCollection:encode(urlTrail), '%3A', '/')}${url}?${qString}"/>
+            </c:when>
+            <c:otherwise>
+              <dsp:getvalueof var="fullUrl" value="${contextPath}${url}?${qString}"/>
+              <dsp:getvalueof var="urlTrail" value=""/>
+            </c:otherwise>
+          </c:choose>
+          
+          <c:choose>
+            <c:when test="${facetedPropertyVar == 'rating'}">
+            
+                <dsp:include page="facetValueFormatter_for_pivot.jsp">
+                  <dsp:param name="facetedProperty" param="facetedProperty"/>
+                  <dsp:param name="facetValue" value="${currentFacetValue}"/>
+                  <dsp:param name="value" value="${currentMultiFacetValue}"/>
+                  <dsp:param name="facetId" value="${currentFacetValue.facet.id}"/>
+                  <dsp:param name="trailVar" value="${fn:replace(urlTrail, '|', '_')}"/>
+                  <dsp:param name="categoryUrl" value="${url}"/>
+                  <dsp:param name="qString" value="${qString}"/>
+                  <dsp:param name="checked" value="checked"/>
+                  <dsp:param name="includeInput" value="false"/>
+                  <dsp:param name="labelType" value="removeLink"/>
+                </dsp:include>
+                
+                <dsp:param name="trail" param="facetTrail.trailString"/>
+                <dsp:param name="categoryId" param="categoryId"/>
+                <dsp:param name="sortByValue" param="sortByValue"/>
+                <dsp:param name="productListingView" param="productListingView"/>
+                <dsp:param name="question" param="question"/>
+                <dsp:param name="searchType" param="searchType"/>
+                <dsp:param name="pageNum" param="1"/>
+                <dsp:param name="osearchmode" param="osearchmode"/>
+                <dsp:param name="currentTab" param="currentTab"/>
+            </c:when>
+            <c:otherwise>
+                <dsp:include page="facetValueFormatter_for_pivot.jsp">
+                  <dsp:param name="facetedProperty" param="facetedProperty"/>
+                  <dsp:param name="facetValue" value="${currentFacetValue}"/>
+                  <dsp:param name="value" value="${currentMultiFacetValue}"/>
+                  <dsp:param name="facetId" value="${currentFacetValue.facet.id}"/>
+                  <dsp:param name="trailVar" value="${fn:replace(urlTrail, '|', '_')}"/>
+                  <dsp:param name="categoryUrl" value="${url}"/>
+                  <dsp:param name="qString" value="${qString}"/>
+                  <dsp:param name="checked" value="checked"/>
+                  <dsp:param name="includeInput" value="false"/>
+                  <dsp:param name="labelType" value="removeLink"/>
+                </dsp:include>
+                <dsp:param name="trail" param="facetTrail.trailString"/>
+                <dsp:param name="categoryId" param="categoryId"/>
+                <dsp:param name="sortByValue" param="sortByValue"/>
+                <dsp:param name="productListingView" param="productListingView"/>
+                <dsp:param name="question" param="question"/>
+                <dsp:param name="searchType" param="searchType"/>
+                <dsp:param name="pageNum" param="1"/>
+                <dsp:param name="osearchmode" param="osearchmode"/>
+                <dsp:param name="currentTab" param="currentTab"/>
+                
+              
+            </c:otherwise>
+          </c:choose>
+          
+        </dsp:oparam>
+      </dsp:droplet>
+    
+    </dsp:oparam>
+  </dsp:droplet>
+  </li>
+</c:if>

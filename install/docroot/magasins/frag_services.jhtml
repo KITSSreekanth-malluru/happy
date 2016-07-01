@@ -1,0 +1,77 @@
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+<tr><td align="center" class="tibl">&nbsp;<br><b>Les services en magasin</b></td></tr>
+</table>
+<droplet src="/com/frag_linkRetour.jhtml"/>
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+<tr><td class="t">Dans votre magasin Castorama, une foule de services vous attendent. Avec les services Castorama, vivez votre passion comme vous l'entendez !</td></tr>
+</table>&nbsp;
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+<tr><td class="t"><strong>Certains magasins Castorama ne disposent pas de la totalité des services ci-dessous, veuillez vous renseigner à l'accueil de votre magasin !</strong></td></tr>
+</table>&nbsp;
+<table width="80%" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="stibl"><a name="1"></a><b>La d&eacute;coupe du bois</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Besoin d'effectuer des d&eacute;coupes importantes ? <br>Nous nous en chargeons. En nous confiant &agrave; l'avance toutes vos commandes, vous &eacute;vitez toute attente.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="2"></a><b>La d&eacute;coupe du verre</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Besoin d'une d&eacute;coupe &agrave; fa&ccedil;on, d'un sablage, d'un biseautage ou d'un double-vitrage ? Nos conseillers sont &agrave; l'&eacute;coute de toutes vos demandes particuli&egrave;res.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="3"></a><b>L'encadrement</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Vous recherchez des moulures d'encadrement ? nous vous proposons plus de 300 r&eacute;f&eacute;rences. Toutes nos moulures peuvent &ecirc;tre d&eacute;coup&eacute;es sur mesure.<br>Nous assemblons &eacute;galement votre cadre avec ou sans passe-partout.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="4"></a><b>Le SAV</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Avec le service apr&egrave;s-vente Casto, votre mat&eacute;riel est suivi, r&eacute;vis&eacute; et r&eacute;par&eacute; hors et sous garantie.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="5"></a><b>La location de mat&eacute;riel</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Pour vos gros travaux et vos besoins ponctuels, la location de mat&eacute;riel Casto est une solution pratique, s&ucirc;re et peu co&ucirc;teuse.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="6"></a><b>La livraison &agrave; domicile</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Vous souhaitez &ecirc;tre livr&eacute; &agrave; domicile ? Nous nous rendons chez vous au jour convenu.<br>Pour en savoir plus, renseignez-vous aupr&egrave;s de nos h&ocirc;tesses d'accueil.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="7"></a><b>La location d'une camionette</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Vous pr&eacute;f&eacute;rez vous livrer vous-m&ecirc;me ? Pour tous vos besoins particuliers en mati&egrave;re de transport, nos camionnettes sont &agrave; votre disposition. Pour la location de nos v&eacute;hicules, une pi&egrave;ce d'identit&eacute;, votre permis de conduire et un ch&egrave;que de caution suffisent.<br>Pour en savoir plus, rapprochez-vous de votre magasin Castorama.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="8"></a><b>La librairie</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">La librairie Casto constitue le rendez-vous des passionn&eacute;s de la d&eacute;co, du bricolage et du jardinage.<br>Des tonnes de conseils, des id&eacute;es et des astuces &agrave; d&eacute;couvrir : faites donc un saut !<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="9"></a><b>La carte l'Atout</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">La carte l'Atout est le compagnon id&eacute;al pour tous vos travaux. Devenez adh&eacute;rent et b&eacute;n&eacute;ficiez de nos offres sp&eacute;ciales, des ch&egrave;ques fid&eacute;lit&eacute;, financez vos projets et beaucoup d'autres choses encore.<br>De nombreux avantages dont il serait dommage de ne pas profiter ! <br>Renseignez-vous aupr&egrave;s de l'espace carte de votre magasin.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="10"></a><b>Le ch&egrave;que cadeau Castorama</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Faire plaisir, c'est facile ! Castorama a pens&eacute; &agrave; vous et a cr&eacute;&eacute; des ch&egrave;ques cadeaux pratiques et appr&eacute;ci&eacute;s de tous. <br>Ils sont valables dans tous les rayons de tous les magasins de France. D'une validit&eacute; d'un an &agrave; dater de l'&eacute;mission, vous les trouverez &agrave; l'accueil de votre magasin Castorama.<br>Alors offrez tout Casto en cadeau !<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="11"></a><b>Le devis</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">R&eacute;aliser tous vos projets. Pour tous vos travaux importants, votre responsable client&egrave;le se tient &agrave; votre disposition pour &eacute;tudier vos projets et &eacute;tablir vos devis.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="12"></a><b>Les achats en toute confiance</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Vous garantir le meilleur prix ! Vous trouvez le m&ecirc;me article moins cher ailleurs, ou votre achat fait l'objet d'une promotion dans les 15 jours suivants l'acquisition ?<br>C'est simple : Castorama vous rembourse la diff&eacute;rence. Voir conditions en magasin.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="13"></a><b>Le remboursement</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Castorama vous rembourse votre surplus de mat&eacute;riel ou tout article qui ne vous conviendrait pas. Quoi de plus pratique ?<br><span class="et">*dans un d&eacute;lai de 30 jours sur pr&eacute;sentation du ticket de caisse. Produit non d&eacute;ball&eacute; et hors produit sur commande. Voir conditions en magasin.</span><br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="14"></a><b>La liste de mariage</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Renseignez-vous &agrave; l'accueil de votre magasin.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="15"></a><b>La prise en charge maximum</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Transport et enl&egrave;vement des produits volumineux, une zone de retrait de marchandises est sp&eacute;cialement am&eacute;nag&eacute;e pour vous simplifier la t&acirc;che.<br>&nbsp;</td></tr>
+<tr><td class="stibl"><a name="16"></a><b>160 personnes &agrave; votre service</b></td></tr>
+<tr><td bgcolor="#FFCC00" height="1"><img src="/com/img/1pixel.gif" height="1" border="0"><br></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" height="5" border="0"></td></tr>
+<tr><td class="t">Une &eacute;quipe de 160 personnes d&eacute;vou&eacute;es est &agrave; votre service, pour vous donner un conseil attentif et personnalis&eacute;, et vous aider &agrave; faire le meilleur choix.<br>&nbsp;</td></tr>
+</table>
+<droplet src="/com/frag_linkRetourHaut.jhtml"/>

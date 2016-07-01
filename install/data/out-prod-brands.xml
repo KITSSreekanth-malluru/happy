@@ -1,0 +1,1930 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <update-item item-descriptor="casto_sku" id="Casto529826">
+        <set-property name="MarqueCommerciale"><![CDATA[GASCOGNE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod529826">
+        <set-property name="MarqueCommerciale"><![CDATA[GASCOGNE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294600">
+        <set-property name="MarqueCommerciale"><![CDATA[IMBERTY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294600">
+        <set-property name="MarqueCommerciale"><![CDATA[IMBERTY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294630">
+        <set-property name="MarqueCommerciale"><![CDATA[DIAGRAM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294630">
+        <set-property name="MarqueCommerciale"><![CDATA[DIAGRAM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294597">
+        <set-property name="MarqueCommerciale"><![CDATA[HOZELOCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294597">
+        <set-property name="MarqueCommerciale"><![CDATA[HOZELOCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294594">
+        <set-property name="MarqueCommerciale"><![CDATA[LE_CHAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294594">
+        <set-property name="MarqueCommerciale"><![CDATA[LE_CHAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294598">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294598">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294627">
+        <set-property name="MarqueCommerciale"><![CDATA[BRILLIANT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294627">
+        <set-property name="MarqueCommerciale"><![CDATA[BRILLIANT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294602">
+        <set-property name="MarqueCommerciale"><![CDATA[SURYA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294602">
+        <set-property name="MarqueCommerciale"><![CDATA[SURYA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294605">
+        <set-property name="MarqueCommerciale"><![CDATA[MARINA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294605">
+        <set-property name="MarqueCommerciale"><![CDATA[MARINA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518122">
+        <set-property name="MarqueCommerciale"><![CDATA[ARAVEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518122">
+        <set-property name="MarqueCommerciale"><![CDATA[ARAVEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294626">
+        <set-property name="MarqueCommerciale"><![CDATA[DEVILLE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294626">
+        <set-property name="MarqueCommerciale"><![CDATA[DEVILLE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto554194">
+        <set-property name="MarqueCommerciale"><![CDATA[MASTERCUT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod554194">
+        <set-property name="MarqueCommerciale"><![CDATA[MASTERCUT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518117">
+        <set-property name="MarqueCommerciale"><![CDATA[FISCHER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518117">
+        <set-property name="MarqueCommerciale"><![CDATA[FISCHER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294596">
+        <set-property name="MarqueCommerciale"><![CDATA[BTB]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294596">
+        <set-property name="MarqueCommerciale"><![CDATA[BTB]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518123">
+        <set-property name="MarqueCommerciale"><![CDATA[DELTA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518123">
+        <set-property name="MarqueCommerciale"><![CDATA[DELTA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296037">
+        <set-property name="MarqueCommerciale"><![CDATA[DIAGRAL SOLO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod296037">
+        <set-property name="MarqueCommerciale"><![CDATA[DIAGRAL SOLO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294599">
+        <set-property name="MarqueCommerciale"><![CDATA[SARREGUEMINES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294599">
+        <set-property name="MarqueCommerciale"><![CDATA[SARREGUEMINES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518112">
+        <set-property name="MarqueCommerciale"><![CDATA[STIL GARDEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518112">
+        <set-property name="MarqueCommerciale"><![CDATA[STIL GARDEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518125">
+        <set-property name="MarqueCommerciale"><![CDATA[GELCO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518116">
+        <set-property name="MarqueCommerciale"><![CDATA[GELCO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499893">
+        <set-property name="MarqueCommerciale"><![CDATA[ADYX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod499893">
+        <set-property name="MarqueCommerciale"><![CDATA[ADYX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518118">
+        <set-property name="MarqueCommerciale"><![CDATA[GELCO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294601">
+        <set-property name="MarqueCommerciale"><![CDATA[ROUX ET FILS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294601">
+        <set-property name="MarqueCommerciale"><![CDATA[ROUX ET FILS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518119">
+        <set-property name="MarqueCommerciale"><![CDATA[GELCO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294593">
+        <set-property name="MarqueCommerciale"><![CDATA[CastoGARDEN LINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294593">
+        <set-property name="MarqueCommerciale"><![CDATA[CastoGARDEN LINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294604">
+        <set-property name="MarqueCommerciale"><![CDATA[GLISDOME]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294604">
+        <set-property name="MarqueCommerciale"><![CDATA[GLISDOME]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294629">
+        <set-property name="MarqueCommerciale"><![CDATA[ROULOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294629">
+        <set-property name="MarqueCommerciale"><![CDATA[ROULOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294623">
+        <set-property name="MarqueCommerciale"><![CDATA[CURVER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294623">
+        <set-property name="MarqueCommerciale"><![CDATA[CURVER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294624">
+        <set-property name="MarqueCommerciale"><![CDATA[BONODOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294624">
+        <set-property name="MarqueCommerciale"><![CDATA[BONODOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519547">
+        <set-property name="MarqueCommerciale"><![CDATA[MAISON ECO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod519547">
+        <set-property name="MarqueCommerciale"><![CDATA[MAISON ECO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod497929">
+        <set-property name="MarqueCommerciale"><![CDATA[1ER PRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto500711">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLTERA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod500711">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLTERA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518120">
+        <set-property name="MarqueCommerciale"><![CDATA[SEDPA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518120">
+        <set-property name="MarqueCommerciale"><![CDATA[SEDPA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518114">
+        <set-property name="MarqueCommerciale"><![CDATA[FUN LINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518114">
+        <set-property name="MarqueCommerciale"><![CDATA[FUN LINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518113">
+        <set-property name="MarqueCommerciale"><![CDATA[SEPTIMO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518113">
+        <set-property name="MarqueCommerciale"><![CDATA[SEPTIMO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518121">
+        <set-property name="MarqueCommerciale"><![CDATA[BOREAL CLIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518121">
+        <set-property name="MarqueCommerciale"><![CDATA[BOREAL CLIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518124">
+        <set-property name="MarqueCommerciale"><![CDATA[SOCONA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518124">
+        <set-property name="MarqueCommerciale"><![CDATA[SOCONA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294603">
+        <set-property name="MarqueCommerciale"><![CDATA[DINAFIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294603">
+        <set-property name="MarqueCommerciale"><![CDATA[DINAFIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294606">
+        <set-property name="MarqueCommerciale"><![CDATA[SOULET]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294606">
+        <set-property name="MarqueCommerciale"><![CDATA[SOULET]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294595">
+        <set-property name="MarqueCommerciale"><![CDATA[SADER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294595">
+        <set-property name="MarqueCommerciale"><![CDATA[SADER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294625">
+        <set-property name="MarqueCommerciale"><![CDATA[FLYMO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294625">
+        <set-property name="MarqueCommerciale"><![CDATA[FLYMO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294628">
+        <set-property name="MarqueCommerciale"><![CDATA[MOULUDECOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294628">
+        <set-property name="MarqueCommerciale"><![CDATA[MOULUDECOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516816">
+        <set-property name="MarqueCommerciale"><![CDATA[OMENEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516816">
+        <set-property name="MarqueCommerciale"><![CDATA[OMENEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516819">
+        <set-property name="MarqueCommerciale"><![CDATA[LASERLINER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516819">
+        <set-property name="MarqueCommerciale"><![CDATA[LASERLINER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516808">
+        <set-property name="MarqueCommerciale"><![CDATA[MOEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516808">
+        <set-property name="MarqueCommerciale"><![CDATA[MOEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto569662">
+        <set-property name="MarqueCommerciale"><![CDATA[UNIROSS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod569662">
+        <set-property name="MarqueCommerciale"><![CDATA[UNIROSS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516408">
+        <set-property name="MarqueCommerciale"><![CDATA[FORM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535943">
+        <set-property name="MarqueCommerciale"><![CDATA[MADECO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod535943">
+        <set-property name="MarqueCommerciale"><![CDATA[MADECO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518827">
+        <set-property name="MarqueCommerciale"><![CDATA[DOGANE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod518827">
+        <set-property name="MarqueCommerciale"><![CDATA[DOGANE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto569664">
+        <set-property name="MarqueCommerciale"><![CDATA[GARDENA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod569664">
+        <set-property name="MarqueCommerciale"><![CDATA[GARDENA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519607">
+        <set-property name="MarqueCommerciale"><![CDATA[SICLI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod519607">
+        <set-property name="MarqueCommerciale"><![CDATA[SICLI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod582580">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535944">
+        <set-property name="MarqueCommerciale"><![CDATA[STEINEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod535944">
+        <set-property name="MarqueCommerciale"><![CDATA[STEINEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516795">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519609">
+        <set-property name="MarqueCommerciale"><![CDATA[HAEMMERLIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod519609">
+        <set-property name="MarqueCommerciale"><![CDATA[HAEMMERLIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516818">
+        <set-property name="MarqueCommerciale"><![CDATA[MANUEST]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516818">
+        <set-property name="MarqueCommerciale"><![CDATA[MANUEST]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto569663">
+        <set-property name="MarqueCommerciale"><![CDATA[NOYON ET THIEBAULT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod569663">
+        <set-property name="MarqueCommerciale"><![CDATA[NOYON ET THIEBAULT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535942">
+        <set-property name="MarqueCommerciale"><![CDATA[NATIONAL_GEOGRAPHIC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod535942">
+        <set-property name="MarqueCommerciale"><![CDATA[NATIONAL_GEOGRAPHIC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516410">
+        <set-property name="MarqueCommerciale"><![CDATA[FORM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516807">
+        <set-property name="MarqueCommerciale"><![CDATA[REVOLUTIONAIR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516807">
+        <set-property name="MarqueCommerciale"><![CDATA[REVOLUTIONAIR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535945">
+        <set-property name="MarqueCommerciale"><![CDATA[6100002]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod535945">
+        <set-property name="MarqueCommerciale"><![CDATA[6100002]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516817">
+        <set-property name="MarqueCommerciale"><![CDATA[DYLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516817">
+        <set-property name="MarqueCommerciale"><![CDATA[DYLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod582574">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516815">
+        <set-property name="MarqueCommerciale"><![CDATA[INTEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516815">
+        <set-property name="MarqueCommerciale"><![CDATA[INTEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516409">
+        <set-property name="MarqueCommerciale"><![CDATA[FORM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto569661">
+        <set-property name="MarqueCommerciale"><![CDATA[INTERPLAST]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod569661">
+        <set-property name="MarqueCommerciale"><![CDATA[INTERPLAST]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod583924">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod572611">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516803">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296064">
+        <set-property name="MarqueCommerciale"><![CDATA[2800005]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod296064">
+        <set-property name="MarqueCommerciale"><![CDATA[2800005]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516813">
+        <set-property name="MarqueCommerciale"><![CDATA[KIDDE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516813">
+        <set-property name="MarqueCommerciale"><![CDATA[KIDDE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516810">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod572614">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod473256">
+        <set-property name="MarqueCommerciale"><![CDATA[1ER PRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516419">
+        <set-property name="MarqueCommerciale"><![CDATA[WIPER BLITZ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516419">
+        <set-property name="MarqueCommerciale"><![CDATA[WIPER BLITZ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto581915">
+        <set-property name="MarqueCommerciale"><![CDATA[ROCKET]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod581915">
+        <set-property name="MarqueCommerciale"><![CDATA[ROCKET]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516411">
+        <set-property name="MarqueCommerciale"><![CDATA[FISCHER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516411">
+        <set-property name="MarqueCommerciale"><![CDATA[FISCHER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516809">
+        <set-property name="MarqueCommerciale"><![CDATA[CAPRI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod516809">
+        <set-property name="MarqueCommerciale"><![CDATA[CAPRI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto485887">
+        <set-property name="MarqueCommerciale"><![CDATA[CASTEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod485887">
+        <set-property name="MarqueCommerciale"><![CDATA[CASTEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto485885">
+        <set-property name="MarqueCommerciale"><![CDATA[ALUGAS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod485885">
+        <set-property name="MarqueCommerciale"><![CDATA[ALUGAS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto525436">
+        <set-property name="MarqueCommerciale"><![CDATA[ASTRAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod525436">
+        <set-property name="MarqueCommerciale"><![CDATA[ASTRAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto295959">
+        <set-property name="MarqueCommerciale"><![CDATA[SENTRY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod295959">
+        <set-property name="MarqueCommerciale"><![CDATA[SENTRY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto474720">
+        <set-property name="MarqueCommerciale"><![CDATA[FEDERAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod474720">
+        <set-property name="MarqueCommerciale"><![CDATA[FEDERAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto485865">
+        <set-property name="MarqueCommerciale"><![CDATA[LB (LOIRE BETONNIERES)]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod485865">
+        <set-property name="MarqueCommerciale"><![CDATA[LB (LOIRE BETONNIERES)]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto485884">
+        <set-property name="MarqueCommerciale"><![CDATA[GERLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod485884">
+        <set-property name="MarqueCommerciale"><![CDATA[GERLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto485886">
+        <set-property name="MarqueCommerciale"><![CDATA[LES MURS SE CREENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod485886">
+        <set-property name="MarqueCommerciale"><![CDATA[LES MURS SE CREENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto517739">
+        <set-property name="MarqueCommerciale"><![CDATA[WAGNER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod517739">
+        <set-property name="MarqueCommerciale"><![CDATA[WAGNER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod544716">
+        <set-property name="MarqueCommerciale"><![CDATA[BODNER ET MANN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto544720">
+        <set-property name="MarqueCommerciale"><![CDATA[2400008]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod544720">
+        <set-property name="MarqueCommerciale"><![CDATA[2400008]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296018">
+        <set-property name="MarqueCommerciale"><![CDATA[LE_SECRET_DE_L_EBENISTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod296018">
+        <set-property name="MarqueCommerciale"><![CDATA[LE_SECRET_DE_L_EBENISTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto494314">
+        <set-property name="MarqueCommerciale"><![CDATA[RAYOVAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod494314">
+        <set-property name="MarqueCommerciale"><![CDATA[RAYOVAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto494315">
+        <set-property name="MarqueCommerciale"><![CDATA[TECHNO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod494315">
+        <set-property name="MarqueCommerciale"><![CDATA[TECHNO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto494316">
+        <set-property name="MarqueCommerciale"><![CDATA[MULTIMETRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod494316">
+        <set-property name="MarqueCommerciale"><![CDATA[MULTIMETRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto540149">
+        <set-property name="MarqueCommerciale"><![CDATA[LIBERON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod540149">
+        <set-property name="MarqueCommerciale"><![CDATA[LIBERON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto540471">
+        <set-property name="MarqueCommerciale"><![CDATA[LES MURS SE CREENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod540471">
+        <set-property name="MarqueCommerciale"><![CDATA[LES MURS SE CREENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto544728">
+        <set-property name="MarqueCommerciale"><![CDATA[HELARION]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod544728">
+        <set-property name="MarqueCommerciale"><![CDATA[HELARION]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294053">
+        <set-property name="MarqueCommerciale"><![CDATA[HANSGROHE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto543340">
+        <set-property name="MarqueCommerciale"><![CDATA[JULIEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod543340">
+        <set-property name="MarqueCommerciale"><![CDATA[JULIEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod292714">
+        <set-property name="MarqueCommerciale"><![CDATA[EUROSANIT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto544133">
+        <set-property name="MarqueCommerciale"><![CDATA[GROSFILLEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod544133">
+        <set-property name="MarqueCommerciale"><![CDATA[GROSFILLEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod294070">
+        <set-property name="MarqueCommerciale"><![CDATA[HANSGROHE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto552315">
+        <set-property name="MarqueCommerciale"><![CDATA[CEVAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod552315">
+        <set-property name="MarqueCommerciale"><![CDATA[CEVAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod513120">
+        <set-property name="MarqueCommerciale"><![CDATA[HANSGROHE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod513117">
+        <set-property name="MarqueCommerciale"><![CDATA[HANSGROHE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod544624">
+        <set-property name="MarqueCommerciale"><![CDATA[FORM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod513119">
+        <set-property name="MarqueCommerciale"><![CDATA[HANSGROHE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod519614">
+        <set-property name="MarqueCommerciale"><![CDATA[FORM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod293160">
+        <set-property name="MarqueCommerciale"><![CDATA[EUROSANIT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod513122">
+        <set-property name="MarqueCommerciale"><![CDATA[HANSGROHE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498540">
+        <set-property name="MarqueCommerciale"><![CDATA[BOIRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod498540">
+        <set-property name="MarqueCommerciale"><![CDATA[BOIRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498539">
+        <set-property name="MarqueCommerciale"><![CDATA[STARCLIMA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod498539">
+        <set-property name="MarqueCommerciale"><![CDATA[STARCLIMA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto489826">
+        <set-property name="MarqueCommerciale"><![CDATA[REMY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod489826">
+        <set-property name="MarqueCommerciale"><![CDATA[REMY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto582412">
+        <set-property name="MarqueCommerciale"><![CDATA[ROSTED]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod582412">
+        <set-property name="MarqueCommerciale"><![CDATA[ROSTED]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto582413">
+        <set-property name="MarqueCommerciale"><![CDATA[SUNSHINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod582413">
+        <set-property name="MarqueCommerciale"><![CDATA[SUNSHINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto583980">
+        <set-property name="MarqueCommerciale"><![CDATA[HAEMMERLIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod583980">
+        <set-property name="MarqueCommerciale"><![CDATA[HAEMMERLIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto489835">
+        <set-property name="MarqueCommerciale"><![CDATA[OUTIL MALIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod489835">
+        <set-property name="MarqueCommerciale"><![CDATA[OUTIL MALIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod520649">
+        <set-property name="MarqueCommerciale"><![CDATA[ALTIMA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto582404">
+        <set-property name="MarqueCommerciale"><![CDATA[JACOB DELAFON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod582404">
+        <set-property name="MarqueCommerciale"><![CDATA[JACOB DELAFON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod580124">
+        <set-property name="MarqueCommerciale"><![CDATA[SCHULTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod298764">
+        <set-property name="MarqueCommerciale"><![CDATA[1ER PRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto582402">
+        <set-property name="MarqueCommerciale"><![CDATA[M341]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod582402">
+        <set-property name="MarqueCommerciale"><![CDATA[M341]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod523912">
+        <set-property name="MarqueCommerciale"><![CDATA[GELCO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto489840">
+        <set-property name="MarqueCommerciale"><![CDATA[GUINARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod489840">
+        <set-property name="MarqueCommerciale"><![CDATA[GUINARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod500254">
+        <set-property name="MarqueCommerciale"><![CDATA[WIRQUIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod500117">
+        <set-property name="MarqueCommerciale"><![CDATA[WIRQUIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod500132">
+        <set-property name="MarqueCommerciale"><![CDATA[WIRQUIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod500253">
+        <set-property name="MarqueCommerciale"><![CDATA[WIRQUIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod500261">
+        <set-property name="MarqueCommerciale"><![CDATA[WIRQUIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod500512">
+        <set-property name="MarqueCommerciale"><![CDATA[WIRQUIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto513996">
+        <set-property name="MarqueCommerciale"><![CDATA[LE TONKINOIS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod513996">
+        <set-property name="MarqueCommerciale"><![CDATA[LE TONKINOIS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto546933">
+        <set-property name="MarqueCommerciale"><![CDATA[RED HEAD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10022">
+        <set-property name="MarqueCommerciale"><![CDATA[RED HEAD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537500">
+        <set-property name="MarqueCommerciale"><![CDATA[BIONAIRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150009">
+        <set-property name="MarqueCommerciale"><![CDATA[BIONAIRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto511447">
+        <set-property name="MarqueCommerciale"><![CDATA[SUNDIS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10021">
+        <set-property name="MarqueCommerciale"><![CDATA[SUNDIS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto500307">
+        <set-property name="MarqueCommerciale"><![CDATA[SMOBY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90002">
+        <set-property name="MarqueCommerciale"><![CDATA[SMOBY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto234002">
+        <set-property name="MarqueCommerciale"><![CDATA[SUPERSWITCH]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150058">
+        <set-property name="MarqueCommerciale"><![CDATA[SUPERSWITCH]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto553077">
+        <set-property name="MarqueCommerciale"><![CDATA[MASTER LOCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120009">
+        <set-property name="MarqueCommerciale"><![CDATA[MASTER LOCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto473968">
+        <set-property name="MarqueCommerciale"><![CDATA[REMY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470017">
+        <set-property name="MarqueCommerciale"><![CDATA[REMY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto506250">
+        <set-property name="MarqueCommerciale"><![CDATA[AXTEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10023">
+        <set-property name="MarqueCommerciale"><![CDATA[AXTEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto515513">
+        <set-property name="MarqueCommerciale"><![CDATA[1ER PRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130012">
+        <set-property name="MarqueCommerciale"><![CDATA[1ER PRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto494545">
+        <set-property name="MarqueCommerciale"><![CDATA[SMARTOOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150004">
+        <set-property name="MarqueCommerciale"><![CDATA[SMARTOOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto530547">
+        <set-property name="MarqueCommerciale"><![CDATA[DUCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10027">
+        <set-property name="MarqueCommerciale"><![CDATA[DUCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto748978">
+        <set-property name="MarqueCommerciale"><![CDATA[EVOLUTIF]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150020">
+        <set-property name="MarqueCommerciale"><![CDATA[EVOLUTIF]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto640522">
+        <set-property name="MarqueCommerciale"><![CDATA[DEGRYPOIL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10026">
+        <set-property name="MarqueCommerciale"><![CDATA[DEGRYPOIL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537942">
+        <set-property name="MarqueCommerciale"><![CDATA[OREGON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100001">
+        <set-property name="MarqueCommerciale"><![CDATA[OREGON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto486558">
+        <set-property name="MarqueCommerciale"><![CDATA[MTD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10012">
+        <set-property name="MarqueCommerciale"><![CDATA[MTD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538124">
+        <set-property name="MarqueCommerciale"><![CDATA[DELARBRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150003">
+        <set-property name="MarqueCommerciale"><![CDATA[DELARBRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535473">
+        <set-property name="MarqueCommerciale"><![CDATA[ARTUB]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120016">
+        <set-property name="MarqueCommerciale"><![CDATA[ARTUB]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto544844">
+        <set-property name="MarqueCommerciale"><![CDATA[ERGOS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10034">
+        <set-property name="MarqueCommerciale"><![CDATA[ERGOS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514162">
+        <set-property name="MarqueCommerciale"><![CDATA[CITY CAVERS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150056">
+        <set-property name="MarqueCommerciale"><![CDATA[CITY CAVERS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521191">
+        <set-property name="MarqueCommerciale"><![CDATA[ABAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90008">
+        <set-property name="MarqueCommerciale"><![CDATA[ABAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294598">
+        <set-property name="MarqueCommerciale"><![CDATA[TIBELEC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70004">
+        <set-property name="MarqueCommerciale"><![CDATA[TIBELEC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto720051">
+        <set-property name="MarqueCommerciale"><![CDATA[ECAR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150021">
+        <set-property name="MarqueCommerciale"><![CDATA[ECAR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto299135">
+        <set-property name="MarqueCommerciale"><![CDATA[YORK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120017">
+        <set-property name="MarqueCommerciale"><![CDATA[YORK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538422">
+        <set-property name="MarqueCommerciale"><![CDATA[APIC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70013">
+        <set-property name="MarqueCommerciale"><![CDATA[APIC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto870396">
+        <set-property name="MarqueCommerciale"><![CDATA[EVOLUTIONBUILD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100012">
+        <set-property name="MarqueCommerciale"><![CDATA[EVOLUTIONBUILD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto292168">
+        <set-property name="MarqueCommerciale"><![CDATA[HAGER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10039">
+        <set-property name="MarqueCommerciale"><![CDATA[HAGER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto528175">
+        <set-property name="MarqueCommerciale"><![CDATA[PLASPLUG]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150051">
+        <set-property name="MarqueCommerciale"><![CDATA[PLASPLUG]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto204259">
+        <set-property name="MarqueCommerciale"><![CDATA[DINALUXE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150052">
+        <set-property name="MarqueCommerciale"><![CDATA[DINALUXE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto554964">
+        <set-property name="MarqueCommerciale"><![CDATA[SARLAM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150042">
+        <set-property name="MarqueCommerciale"><![CDATA[SARLAM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296191">
+        <set-property name="MarqueCommerciale"><![CDATA[CPED]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470011">
+        <set-property name="MarqueCommerciale"><![CDATA[CPED]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto549034">
+        <set-property name="MarqueCommerciale"><![CDATA[RADIAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150059">
+        <set-property name="MarqueCommerciale"><![CDATA[RADIAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto745483">
+        <set-property name="MarqueCommerciale"><![CDATA[RETRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470033">
+        <set-property name="MarqueCommerciale"><![CDATA[RETRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521182">
+        <set-property name="MarqueCommerciale"><![CDATA[VOGELS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90009">
+        <set-property name="MarqueCommerciale"><![CDATA[VOGELS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538619">
+        <set-property name="MarqueCommerciale"><![CDATA[COMPO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150044">
+        <set-property name="MarqueCommerciale"><![CDATA[COMPO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto293345">
+        <set-property name="MarqueCommerciale"><![CDATA[ACOVA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150022">
+        <set-property name="MarqueCommerciale"><![CDATA[ACOVA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto529012">
+        <set-property name="MarqueCommerciale"><![CDATA[BROUETTES RICHARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150057">
+        <set-property name="MarqueCommerciale"><![CDATA[BROUETTES RICHARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto489916">
+        <set-property name="MarqueCommerciale"><![CDATA[SARREGUEMINES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470035">
+        <set-property name="MarqueCommerciale"><![CDATA[SARREGUEMINES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519003">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLOPLAST VOSSCHEMIE ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470019">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLOPLAST VOSSCHEMIE ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto891552">
+        <set-property name="MarqueCommerciale"><![CDATA[GERFLOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10015">
+        <set-property name="MarqueCommerciale"><![CDATA[GERFLOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto800953">
+        <set-property name="MarqueCommerciale"><![CDATA[INTUITO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120019">
+        <set-property name="MarqueCommerciale"><![CDATA[INTUITO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto532227">
+        <set-property name="MarqueCommerciale"><![CDATA[EDA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod60002">
+        <set-property name="MarqueCommerciale"><![CDATA[EDA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto555145">
+        <set-property name="MarqueCommerciale"><![CDATA[AREV]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150034">
+        <set-property name="MarqueCommerciale"><![CDATA[AREV]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto527521">
+        <set-property name="MarqueCommerciale"><![CDATA[ALPI_S]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120024">
+        <set-property name="MarqueCommerciale"><![CDATA[ALPI_S]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537532">
+        <set-property name="MarqueCommerciale"><![CDATA[CAMPINGAZ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90018">
+        <set-property name="MarqueCommerciale"><![CDATA[CAMPINGAZ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto981693">
+        <set-property name="MarqueCommerciale"><![CDATA[TRIPLEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130006">
+        <set-property name="MarqueCommerciale"><![CDATA[TRIPLEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto430291">
+        <set-property name="MarqueCommerciale"><![CDATA[ISOVER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470015">
+        <set-property name="MarqueCommerciale"><![CDATA[ISOVER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296942">
+        <set-property name="MarqueCommerciale"><![CDATA[RAWLPLUG]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120025">
+        <set-property name="MarqueCommerciale"><![CDATA[RAWLPLUG]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499312">
+        <set-property name="MarqueCommerciale"><![CDATA[INTEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140007">
+        <set-property name="MarqueCommerciale"><![CDATA[INTEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516110">
+        <set-property name="MarqueCommerciale"><![CDATA[NATUREN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120028">
+        <set-property name="MarqueCommerciale"><![CDATA[NATUREN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538156">
+        <set-property name="MarqueCommerciale"><![CDATA[ROSTAING]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140005">
+        <set-property name="MarqueCommerciale"><![CDATA[ROSTAING]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto497466">
+        <set-property name="MarqueCommerciale"><![CDATA[ILLBRUCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10007">
+        <set-property name="MarqueCommerciale"><![CDATA[ILLBRUCK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto860218">
+        <set-property name="MarqueCommerciale"><![CDATA[ZENITH]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10017">
+        <set-property name="MarqueCommerciale"><![CDATA[ZENITH]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto548687">
+        <set-property name="MarqueCommerciale"><![CDATA[NOIROT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150036">
+        <set-property name="MarqueCommerciale"><![CDATA[NOIROT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto531101">
+        <set-property name="MarqueCommerciale"><![CDATA[ARKE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10049">
+        <set-property name="MarqueCommerciale"><![CDATA[ARKE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538154">
+        <set-property name="MarqueCommerciale"><![CDATA[CAILLARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140004">
+        <set-property name="MarqueCommerciale"><![CDATA[CAILLARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto992286">
+        <set-property name="MarqueCommerciale"><![CDATA[DIAGRAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90014">
+        <set-property name="MarqueCommerciale"><![CDATA[DIAGRAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498781">
+        <set-property name="MarqueCommerciale"><![CDATA[WINDHAGER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10040">
+        <set-property name="MarqueCommerciale"><![CDATA[WINDHAGER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto291798">
+        <set-property name="MarqueCommerciale"><![CDATA[BONODOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70006">
+        <set-property name="MarqueCommerciale"><![CDATA[BONODOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537512">
+        <set-property name="MarqueCommerciale"><![CDATA[RADIAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150008">
+        <set-property name="MarqueCommerciale"><![CDATA[RADIAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto508862">
+        <set-property name="MarqueCommerciale"><![CDATA[QCL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140003">
+        <set-property name="MarqueCommerciale"><![CDATA[QCL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto495896">
+        <set-property name="MarqueCommerciale"><![CDATA[REGENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70007">
+        <set-property name="MarqueCommerciale"><![CDATA[REGENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto560651">
+        <set-property name="MarqueCommerciale"><![CDATA[BLACK ET DECKER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150007">
+        <set-property name="MarqueCommerciale"><![CDATA[BLACK ET DECKER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514165">
+        <set-property name="MarqueCommerciale"><![CDATA[STARCLIMA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150055">
+        <set-property name="MarqueCommerciale"><![CDATA[STARCLIMA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto896040">
+        <set-property name="MarqueCommerciale"><![CDATA[CALRUS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120011">
+        <set-property name="MarqueCommerciale"><![CDATA[CALRUS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto101585">
+        <set-property name="MarqueCommerciale"><![CDATA[HAMMERITE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10008">
+        <set-property name="MarqueCommerciale"><![CDATA[HAMMERITE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto985875">
+        <set-property name="MarqueCommerciale"><![CDATA[WORLDSAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130003">
+        <set-property name="MarqueCommerciale"><![CDATA[WORLDSAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto610743">
+        <set-property name="MarqueCommerciale"><![CDATA[CITY CAVERS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150035">
+        <set-property name="MarqueCommerciale"><![CDATA[CITY CAVERS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto495188">
+        <set-property name="MarqueCommerciale"><![CDATA[OCAI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70008">
+        <set-property name="MarqueCommerciale"><![CDATA[OCAI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto620568">
+        <set-property name="MarqueCommerciale"><![CDATA[BAGSTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100002">
+        <set-property name="MarqueCommerciale"><![CDATA[BAGSTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto560649">
+        <set-property name="MarqueCommerciale"><![CDATA[FULGURANT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150006">
+        <set-property name="MarqueCommerciale"><![CDATA[FULGURANT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto520753">
+        <set-property name="MarqueCommerciale"><![CDATA[XYLADECOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120029">
+        <set-property name="MarqueCommerciale"><![CDATA[XYLADECOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto257487">
+        <set-property name="MarqueCommerciale"><![CDATA[STARLICHT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90020">
+        <set-property name="MarqueCommerciale"><![CDATA[STARLICHT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516107">
+        <set-property name="MarqueCommerciale"><![CDATA[OPTEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120026">
+        <set-property name="MarqueCommerciale"><![CDATA[OPTEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto555060">
+        <set-property name="MarqueCommerciale"><![CDATA[FRIEDLAND]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90022">
+        <set-property name="MarqueCommerciale"><![CDATA[FRIEDLAND]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto525457">
+        <set-property name="MarqueCommerciale"><![CDATA[SELECTION READERS DIGEST]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150045">
+        <set-property name="MarqueCommerciale"><![CDATA[SELECTION READERS DIGEST]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto552315">
+        <set-property name="MarqueCommerciale"><![CDATA[TECNOMA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod370005">
+        <set-property name="MarqueCommerciale"><![CDATA[TECNOMA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto955542">
+        <set-property name="MarqueCommerciale"><![CDATA[KARCHER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10032">
+        <set-property name="MarqueCommerciale"><![CDATA[KARCHER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto907941">
+        <set-property name="MarqueCommerciale"><![CDATA[POLYFILLA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10047">
+        <set-property name="MarqueCommerciale"><![CDATA[POLYFILLA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534539">
+        <set-property name="MarqueCommerciale"><![CDATA[ARISTON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150050">
+        <set-property name="MarqueCommerciale"><![CDATA[ARISTON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto505730">
+        <set-property name="MarqueCommerciale"><![CDATA[CBP]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10042">
+        <set-property name="MarqueCommerciale"><![CDATA[CBP]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto570578">
+        <set-property name="MarqueCommerciale"><![CDATA[GRANDON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70001">
+        <set-property name="MarqueCommerciale"><![CDATA[GRANDON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto526241">
+        <set-property name="MarqueCommerciale"><![CDATA[ROX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120004">
+        <set-property name="MarqueCommerciale"><![CDATA[ROX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto677849">
+        <set-property name="MarqueCommerciale"><![CDATA[BERNARD LOISIRS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150015">
+        <set-property name="MarqueCommerciale"><![CDATA[BERNARD LOISIRS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto533318">
+        <set-property name="MarqueCommerciale"><![CDATA[BROUETTES RICHARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130002">
+        <set-property name="MarqueCommerciale"><![CDATA[BROUETTES RICHARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535258">
+        <set-property name="MarqueCommerciale"><![CDATA[MOBOIS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120023">
+        <set-property name="MarqueCommerciale"><![CDATA[MOBOIS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto891202">
+        <set-property name="MarqueCommerciale"><![CDATA[STANLEY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10016">
+        <set-property name="MarqueCommerciale"><![CDATA[STANLEY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto258408">
+        <set-property name="MarqueCommerciale"><![CDATA[ROYALFLEUR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10033">
+        <set-property name="MarqueCommerciale"><![CDATA[ROYALFLEUR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto974507">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLUVERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150013">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLUVERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519230">
+        <set-property name="MarqueCommerciale"><![CDATA[RED HEAD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10048">
+        <set-property name="MarqueCommerciale"><![CDATA[RED HEAD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521865">
+        <set-property name="MarqueCommerciale"><![CDATA[SEBICO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90013">
+        <set-property name="MarqueCommerciale"><![CDATA[SEBICO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto610707">
+        <set-property name="MarqueCommerciale"><![CDATA[DEMSON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150030">
+        <set-property name="MarqueCommerciale"><![CDATA[DEMSON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto601701">
+        <set-property name="MarqueCommerciale"><![CDATA[BUTAGAZ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150029">
+        <set-property name="MarqueCommerciale"><![CDATA[BUTAGAZ]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto507636">
+        <set-property name="MarqueCommerciale"><![CDATA[SICLI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140006">
+        <set-property name="MarqueCommerciale"><![CDATA[SICLI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto601702">
+        <set-property name="MarqueCommerciale"><![CDATA[IPOCORK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150028">
+        <set-property name="MarqueCommerciale"><![CDATA[IPOCORK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521190">
+        <set-property name="MarqueCommerciale"><![CDATA[BONDEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90011">
+        <set-property name="MarqueCommerciale"><![CDATA[BONDEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto549824">
+        <set-property name="MarqueCommerciale"><![CDATA[ECAR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130001">
+        <set-property name="MarqueCommerciale"><![CDATA[ECAR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto824410">
+        <set-property name="MarqueCommerciale"><![CDATA[MOREL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10014">
+        <set-property name="MarqueCommerciale"><![CDATA[MOREL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto822800">
+        <set-property name="MarqueCommerciale"><![CDATA[OREGON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10013">
+        <set-property name="MarqueCommerciale"><![CDATA[OREGON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto488989">
+        <set-property name="MarqueCommerciale"><![CDATA[SUNBAY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90023">
+        <set-property name="MarqueCommerciale"><![CDATA[SUNBAY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499078">
+        <set-property name="MarqueCommerciale"><![CDATA[AQUA VAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130008">
+        <set-property name="MarqueCommerciale"><![CDATA[AQUA VAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto770068">
+        <set-property name="MarqueCommerciale"><![CDATA[VITROCLEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120005">
+        <set-property name="MarqueCommerciale"><![CDATA[VITROCLEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537463">
+        <set-property name="MarqueCommerciale"><![CDATA[VENUS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10044">
+        <set-property name="MarqueCommerciale"><![CDATA[VENUS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto662616">
+        <set-property name="MarqueCommerciale"><![CDATA[GIRARD SUDRON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90017">
+        <set-property name="MarqueCommerciale"><![CDATA[GIRARD SUDRON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto270047">
+        <set-property name="MarqueCommerciale"><![CDATA[SELFSAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150048">
+        <set-property name="MarqueCommerciale"><![CDATA[SELFSAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto902061">
+        <set-property name="MarqueCommerciale"><![CDATA[SICLI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10043">
+        <set-property name="MarqueCommerciale"><![CDATA[SICLI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294911">
+        <set-property name="MarqueCommerciale"><![CDATA[ACCEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70009">
+        <set-property name="MarqueCommerciale"><![CDATA[ACCEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521187">
+        <set-property name="MarqueCommerciale"><![CDATA[VARTA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90012">
+        <set-property name="MarqueCommerciale"><![CDATA[VARTA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto486722">
+        <set-property name="MarqueCommerciale"><![CDATA[HOMEMASTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90024">
+        <set-property name="MarqueCommerciale"><![CDATA[HOMEMASTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto500006">
+        <set-property name="MarqueCommerciale"><![CDATA[HONDA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120003">
+        <set-property name="MarqueCommerciale"><![CDATA[HONDA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto515875">
+        <set-property name="MarqueCommerciale"><![CDATA[FISCHER-DAREX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470009">
+        <set-property name="MarqueCommerciale"><![CDATA[FISCHER-DAREX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto497263">
+        <set-property name="MarqueCommerciale"><![CDATA[DEFLECT'O]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10006">
+        <set-property name="MarqueCommerciale"><![CDATA[DEFLECT'O]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto510103">
+        <set-property name="MarqueCommerciale"><![CDATA[VARTA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10020">
+        <set-property name="MarqueCommerciale"><![CDATA[VARTA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto666362">
+        <set-property name="MarqueCommerciale"><![CDATA[GLISDOME]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150014">
+        <set-property name="MarqueCommerciale"><![CDATA[GLISDOME]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto432048">
+        <set-property name="MarqueCommerciale"><![CDATA[STAYER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470021">
+        <set-property name="MarqueCommerciale"><![CDATA[STAYER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto283094">
+        <set-property name="MarqueCommerciale"><![CDATA[DYLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150041">
+        <set-property name="MarqueCommerciale"><![CDATA[DYLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto661463">
+        <set-property name="MarqueCommerciale"><![CDATA[DEFINOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150016">
+        <set-property name="MarqueCommerciale"><![CDATA[DEFINOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto352289">
+        <set-property name="MarqueCommerciale"><![CDATA[LA BOUTIQUE DU RANGEMENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10003">
+        <set-property name="MarqueCommerciale"><![CDATA[LA BOUTIQUE DU RANGEMENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296606">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLS ET PLANTES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470007">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLS ET PLANTES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto678435">
+        <set-property name="MarqueCommerciale"><![CDATA[BIL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90019">
+        <set-property name="MarqueCommerciale"><![CDATA[BIL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto200240">
+        <set-property name="MarqueCommerciale"><![CDATA[LUOMAN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150047">
+        <set-property name="MarqueCommerciale"><![CDATA[LUOMAN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto663639">
+        <set-property name="MarqueCommerciale"><![CDATA[OCEA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90016">
+        <set-property name="MarqueCommerciale"><![CDATA[OCEA]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498148">
+        <set-property name="MarqueCommerciale"><![CDATA[CHAINEY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130009">
+        <set-property name="MarqueCommerciale"><![CDATA[CHAINEY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto546740">
+        <set-property name="MarqueCommerciale"><![CDATA[ROSSIGNOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150033">
+        <set-property name="MarqueCommerciale"><![CDATA[ROSSIGNOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534658">
+        <set-property name="MarqueCommerciale"><![CDATA[IMBERTY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150046">
+        <set-property name="MarqueCommerciale"><![CDATA[IMBERTY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto502289">
+        <set-property name="MarqueCommerciale"><![CDATA[ARNOULD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150011">
+        <set-property name="MarqueCommerciale"><![CDATA[ARNOULD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto543340">
+        <set-property name="MarqueCommerciale"><![CDATA[AFBAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70005">
+        <set-property name="MarqueCommerciale"><![CDATA[AFBAT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516012">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLVERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120027">
+        <set-property name="MarqueCommerciale"><![CDATA[SOLVERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514157">
+        <set-property name="MarqueCommerciale"><![CDATA[CURVER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150053">
+        <set-property name="MarqueCommerciale"><![CDATA[CURVER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto556716">
+        <set-property name="MarqueCommerciale"><![CDATA[RAYOVAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90021">
+        <set-property name="MarqueCommerciale"><![CDATA[RAYOVAC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514486">
+        <set-property name="MarqueCommerciale"><![CDATA[ACD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130005">
+        <set-property name="MarqueCommerciale"><![CDATA[ACD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto974506">
+        <set-property name="MarqueCommerciale"><![CDATA[FARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150012">
+        <set-property name="MarqueCommerciale"><![CDATA[FARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto522103">
+        <set-property name="MarqueCommerciale"><![CDATA[MADIALL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100004">
+        <set-property name="MarqueCommerciale"><![CDATA[MADIALL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto497263">
+        <set-property name="MarqueCommerciale"><![CDATA[REMY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10009">
+        <set-property name="MarqueCommerciale"><![CDATA[REMY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto557977">
+        <set-property name="MarqueCommerciale"><![CDATA[DELARBRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70010">
+        <set-property name="MarqueCommerciale"><![CDATA[DELARBRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto554118">
+        <set-property name="MarqueCommerciale"><![CDATA[TALON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100031">
+        <set-property name="MarqueCommerciale"><![CDATA[TALON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto770786">
+        <set-property name="MarqueCommerciale"><![CDATA[CARRON PHOENIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120006">
+        <set-property name="MarqueCommerciale"><![CDATA[CARRON PHOENIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto991078">
+        <set-property name="MarqueCommerciale"><![CDATA[NICOLS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140002">
+        <set-property name="MarqueCommerciale"><![CDATA[NICOLS]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto960990">
+        <set-property name="MarqueCommerciale"><![CDATA[ALDES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90015">
+        <set-property name="MarqueCommerciale"><![CDATA[ALDES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto895110">
+        <set-property name="MarqueCommerciale"><![CDATA[BAYER JARDIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120020">
+        <set-property name="MarqueCommerciale"><![CDATA[BAYER JARDIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514601">
+        <set-property name="MarqueCommerciale"><![CDATA[FARTOOLS BRICO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120008">
+        <set-property name="MarqueCommerciale"><![CDATA[FARTOOLS BRICO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto558596">
+        <set-property name="MarqueCommerciale"><![CDATA[GARDEN CLAW]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70011">
+        <set-property name="MarqueCommerciale"><![CDATA[GARDEN CLAW]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto100359">
+        <set-property name="MarqueCommerciale"><![CDATA[EURODOMO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10004">
+        <set-property name="MarqueCommerciale"><![CDATA[EURODOMO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534541">
+        <set-property name="MarqueCommerciale"><![CDATA[DYLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150049">
+        <set-property name="MarqueCommerciale"><![CDATA[DYLON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487684">
+        <set-property name="MarqueCommerciale"><![CDATA[NONY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120007">
+        <set-property name="MarqueCommerciale"><![CDATA[NONY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537504">
+        <set-property name="MarqueCommerciale"><![CDATA[PACK STORY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150010">
+        <set-property name="MarqueCommerciale"><![CDATA[PACK STORY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto517149">
+        <set-property name="MarqueCommerciale"><![CDATA[TALON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470023">
+        <set-property name="MarqueCommerciale"><![CDATA[TALON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514563">
+        <set-property name="MarqueCommerciale"><![CDATA[BURGER INTERNATIONAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120022">
+        <set-property name="MarqueCommerciale"><![CDATA[BURGER INTERNATIONAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534953">
+        <set-property name="MarqueCommerciale"><![CDATA[AUTOGYRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120021">
+        <set-property name="MarqueCommerciale"><![CDATA[AUTOGYRE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto624867">
+        <set-property name="MarqueCommerciale"><![CDATA[GERFLOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90010">
+        <set-property name="MarqueCommerciale"><![CDATA[GERFLOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto352287">
+        <set-property name="MarqueCommerciale"><![CDATA[HENRI SAVY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10002">
+        <set-property name="MarqueCommerciale"><![CDATA[HENRI SAVY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514160">
+        <set-property name="MarqueCommerciale"><![CDATA[GERFLOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150054">
+        <set-property name="MarqueCommerciale"><![CDATA[GERFLOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto200255">
+        <set-property name="MarqueCommerciale"><![CDATA[ERARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100028">
+        <set-property name="MarqueCommerciale"><![CDATA[ERARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto501730">
+        <set-property name="MarqueCommerciale"><![CDATA[HOMEMASTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100030">
+        <set-property name="MarqueCommerciale"><![CDATA[HOMEMASTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto907394">
+        <set-property name="MarqueCommerciale"><![CDATA[CastoGARDEN LINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10046">
+        <set-property name="MarqueCommerciale"><![CDATA[CastoGARDEN LINE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto300834">
+        <set-property name="MarqueCommerciale"><![CDATA[UBBINK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140001">
+        <set-property name="MarqueCommerciale"><![CDATA[UBBINK]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto510453">
+        <set-property name="MarqueCommerciale"><![CDATA[ELEPHANT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10035">
+        <set-property name="MarqueCommerciale"><![CDATA[ELEPHANT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499608">
+        <set-property name="MarqueCommerciale"><![CDATA[ZIBRO KAMIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130010">
+        <set-property name="MarqueCommerciale"><![CDATA[ZIBRO KAMIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto489630">
+        <set-property name="MarqueCommerciale"><![CDATA[BISTRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150023">
+        <set-property name="MarqueCommerciale"><![CDATA[BISTRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto550726">
+        <set-property name="MarqueCommerciale"><![CDATA[BRICARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10037">
+        <set-property name="MarqueCommerciale"><![CDATA[BRICARD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto522373">
+        <set-property name="MarqueCommerciale"><![CDATA[CHAFFOTEAUX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150060">
+        <set-property name="MarqueCommerciale"><![CDATA[CHAFFOTEAUX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514296">
+        <set-property name="MarqueCommerciale"><![CDATA[RAPHAEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100005">
+        <set-property name="MarqueCommerciale"><![CDATA[RAPHAEL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto541957">
+        <set-property name="MarqueCommerciale"><![CDATA[MULTIWOOD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10031">
+        <set-property name="MarqueCommerciale"><![CDATA[MULTIWOOD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499962">
+        <set-property name="MarqueCommerciale"><![CDATA[CHAFFOTEAUX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90004">
+        <set-property name="MarqueCommerciale"><![CDATA[CHAFFOTEAUX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto985878">
+        <set-property name="MarqueCommerciale"><![CDATA[PACK STORY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130004">
+        <set-property name="MarqueCommerciale"><![CDATA[PACK STORY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto529014">
+        <set-property name="MarqueCommerciale"><![CDATA[SINTOFER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150062">
+        <set-property name="MarqueCommerciale"><![CDATA[SINTOFER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto297949">
+        <set-property name="MarqueCommerciale"><![CDATA[RONT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120018">
+        <set-property name="MarqueCommerciale"><![CDATA[RONT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto570575">
+        <set-property name="MarqueCommerciale"><![CDATA[HOLLYPOOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70002">
+        <set-property name="MarqueCommerciale"><![CDATA[HOLLYPOOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto483784">
+        <set-property name="MarqueCommerciale"><![CDATA[KAPRIOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120015">
+        <set-property name="MarqueCommerciale"><![CDATA[KAPRIOL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto526639">
+        <set-property name="MarqueCommerciale"><![CDATA[SOCADIF]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150064">
+        <set-property name="MarqueCommerciale"><![CDATA[SOCADIF]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto526645">
+        <set-property name="MarqueCommerciale"><![CDATA[CADELEC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150063">
+        <set-property name="MarqueCommerciale"><![CDATA[CADELEC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto483751">
+        <set-property name="MarqueCommerciale"><![CDATA[CBP]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120013">
+        <set-property name="MarqueCommerciale"><![CDATA[CBP]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto541980">
+        <set-property name="MarqueCommerciale"><![CDATA[HANDY BAG EXPERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90006">
+        <set-property name="MarqueCommerciale"><![CDATA[HANDY BAG EXPERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto299542">
+        <set-property name="MarqueCommerciale"><![CDATA[HALO TERMITES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10030">
+        <set-property name="MarqueCommerciale"><![CDATA[HALO TERMITES]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto506597">
+        <set-property name="MarqueCommerciale"><![CDATA[ARBRE VERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10019">
+        <set-property name="MarqueCommerciale"><![CDATA[ARBRE VERT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto550721">
+        <set-property name="MarqueCommerciale"><![CDATA[ROUNDUP]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10036">
+        <set-property name="MarqueCommerciale"><![CDATA[ROUNDUP]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto472052">
+        <set-property name="MarqueCommerciale"><![CDATA[MAXICRAFT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100013">
+        <set-property name="MarqueCommerciale"><![CDATA[MAXICRAFT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto473046">
+        <set-property name="MarqueCommerciale"><![CDATA[RADIAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150032">
+        <set-property name="MarqueCommerciale"><![CDATA[RADIAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto101586">
+        <set-property name="MarqueCommerciale"><![CDATA[AXAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10005">
+        <set-property name="MarqueCommerciale"><![CDATA[AXAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto501750">
+        <set-property name="MarqueCommerciale"><![CDATA[CHACON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150061">
+        <set-property name="MarqueCommerciale"><![CDATA[CHACON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto555063">
+        <set-property name="MarqueCommerciale"><![CDATA[VILMORIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10018">
+        <set-property name="MarqueCommerciale"><![CDATA[VILMORIN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537942">
+        <set-property name="MarqueCommerciale"><![CDATA[ALGOFLASH]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto543802">
+        <set-property name="MarqueCommerciale"><![CDATA[MINILOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10050">
+        <set-property name="MarqueCommerciale"><![CDATA[MINILOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto907512">
+        <set-property name="MarqueCommerciale"><![CDATA[BERTHOUD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10045">
+        <set-property name="MarqueCommerciale"><![CDATA[BERTHOUD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto478067">
+        <set-property name="MarqueCommerciale"><![CDATA[LIBERON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100003">
+        <set-property name="MarqueCommerciale"><![CDATA[LIBERON]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto288410">
+        <set-property name="MarqueCommerciale"><![CDATA[MAC ALLISTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470025">
+        <set-property name="MarqueCommerciale"><![CDATA[MAC ALLISTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519887">
+        <set-property name="MarqueCommerciale"><![CDATA[PAGODE ROYALE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70017">
+        <set-property name="MarqueCommerciale"><![CDATA[PAGODE ROYALE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto475283">
+        <set-property name="MarqueCommerciale"><![CDATA[KAPRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150019">
+        <set-property name="MarqueCommerciale"><![CDATA[KAPRO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto650150">
+        <set-property name="MarqueCommerciale"><![CDATA[RUSTOL OWATROL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150026">
+        <set-property name="MarqueCommerciale"><![CDATA[RUSTOL OWATROL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537847">
+        <set-property name="MarqueCommerciale"><![CDATA[PAREXLANKO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150002">
+        <set-property name="MarqueCommerciale"><![CDATA[PAREXLANKO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521185">
+        <set-property name="MarqueCommerciale"><![CDATA[VITREX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90007">
+        <set-property name="MarqueCommerciale"><![CDATA[VITREX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto600663">
+        <set-property name="MarqueCommerciale"><![CDATA[VYNEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150031">
+        <set-property name="MarqueCommerciale"><![CDATA[VYNEX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto101631">
+        <set-property name="MarqueCommerciale"><![CDATA[UNIFEU]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70016">
+        <set-property name="MarqueCommerciale"><![CDATA[UNIFEU]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto993729">
+        <set-property name="MarqueCommerciale"><![CDATA[MULTIMETRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10028">
+        <set-property name="MarqueCommerciale"><![CDATA[MULTIMETRIX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518405">
+        <set-property name="MarqueCommerciale"><![CDATA[ARNOULD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10025">
+        <set-property name="MarqueCommerciale"><![CDATA[ARNOULD]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto515879">
+        <set-property name="MarqueCommerciale"><![CDATA[FEDERAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470005">
+        <set-property name="MarqueCommerciale"><![CDATA[FEDERAL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto352286">
+        <set-property name="MarqueCommerciale"><![CDATA[ROULOR]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498151">
+        <set-property name="MarqueCommerciale"><![CDATA[FILTEC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130011">
+        <set-property name="MarqueCommerciale"><![CDATA[FILTEC]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto541786">
+        <set-property name="MarqueCommerciale"><![CDATA[PACK STORY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470031">
+        <set-property name="MarqueCommerciale"><![CDATA[PACK STORY]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499946">
+        <set-property name="MarqueCommerciale"><![CDATA[LAURENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90005">
+        <set-property name="MarqueCommerciale"><![CDATA[LAURENT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto517156">
+        <set-property name="MarqueCommerciale"><![CDATA[MADIALL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470027">
+        <set-property name="MarqueCommerciale"><![CDATA[MADIALL]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto210008">
+        <set-property name="MarqueCommerciale"><![CDATA[LE_SECRET_DE_L_EBENISTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150040">
+        <set-property name="MarqueCommerciale"><![CDATA[LE_SECRET_DE_L_EBENISTE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto650158">
+        <set-property name="MarqueCommerciale"><![CDATA[IDEVOLUM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150027">
+        <set-property name="MarqueCommerciale"><![CDATA[IDEVOLUM]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto524573">
+        <set-property name="MarqueCommerciale"><![CDATA[PLASCO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150005">
+        <set-property name="MarqueCommerciale"><![CDATA[PLASCO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto201168">
+        <set-property name="MarqueCommerciale"><![CDATA[ARKE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100029">
+        <set-property name="MarqueCommerciale"><![CDATA[ARKE]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487677">
+        <set-property name="MarqueCommerciale"><![CDATA[WORX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120012">
+        <set-property name="MarqueCommerciale"><![CDATA[WORX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto993730">
+        <set-property name="MarqueCommerciale"><![CDATA[TEHALIT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10029">
+        <set-property name="MarqueCommerciale"><![CDATA[TEHALIT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto478087">
+        <set-property name="MarqueCommerciale"><![CDATA[VITROCLEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10024">
+        <set-property name="MarqueCommerciale"><![CDATA[VITROCLEN]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514365">
+        <set-property name="MarqueCommerciale"><![CDATA[SPECI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150024">
+        <set-property name="MarqueCommerciale"><![CDATA[SPECI]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto300019">
+        <set-property name="MarqueCommerciale"><![CDATA[KERO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150017">
+        <set-property name="MarqueCommerciale"><![CDATA[KERO]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto989111">
+        <set-property name="MarqueCommerciale"><![CDATA[METALUX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150025">
+        <set-property name="MarqueCommerciale"><![CDATA[METALUX]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487793">
+        <set-property name="MarqueCommerciale"><![CDATA[AGLOS CONFORT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70012">
+        <set-property name="MarqueCommerciale"><![CDATA[AGLOS CONFORT]]></set-property>
+    </update-item>
+</gsa-template>

@@ -1,0 +1,75 @@
+  <dsp:getvalueof var="trail" param="trail"/>
+  <dsp:getvalueof var="ajouterTrail" param="ajouterTrail"/>
+  <dsp:getvalueof var="ajouterSearchRequest" param="ajouterSearchRequest"/>
+  <c:if test="${not empty ajouterSearchRequest and ajouterSearchRequest == 'true'}">
+  	<dsp:getvalueof var="ajouterTrail" bean="FacetSearchTools.facetTrail"/>
+  </c:if>
+  <dsp:getvalueof var="lastFilter" param="lastFilter"/>
+
+  <dsp:getvalueof var="omnitureFullFilterTypes" value="None"/>
+  <dsp:getvalueof var="omnitureLastFilterType" value="None"/>
+  <dsp:getvalueof var="omnitureLastFilterValue" value="None"/>
+  <c:if test="${currentCategoryId == null}">
+    <dsp:getvalueof var="currentCategoryId" value=""/>
+  </c:if>
+  <c:if test="${((not empty trail || not empty ajouterTrail) && (not empty currentCategoryId || not empty omnitureSearchKeyword))}">
+    <dsp:droplet name="/com/castorama/search/droplet/FacetOmniture">
+      <dsp:param name="trail" value="${trail}"/>
+      <dsp:param name="ajouterTrail" value="${ajouterTrail}"/>
+      <dsp:param name="categoryId" value="${currentCategoryId}"/>
+      <dsp:param name="lastFilter" value="${lastFilter}"/>
+      <dsp:oparam name="output">
+       <dsp:getvalueof var="omnitureFullFilterTypes" param="fullFilterTypes"/>
+       <dsp:getvalueof var="omnitureLastFilterType" param="lastType"/>
+       <dsp:getvalueof var="lastValue" param="lastValue"/>
+       <dsp:getvalueof var="lastRefinementProperty" param="lastRefinementProperty"/>
+       
+       <c:choose>
+         <c:when test="${not empty lastRefinementProperty && lastRefinementProperty == 'price'}">
+            <c:set var="priceRanges" value="${fn:split(lastValue, '-')}" />
+           
+            <fmt:message key="search_filters.priceRangesFormatter" var="omnitureLastFilterValue">
+              <fmt:param>
+                <fmt:formatNumber type="currency" currencyCode="EUR" value="${priceRanges[0] }" maxFractionDigits="0" />
+              </fmt:param>
+              <fmt:param>
+                <fmt:formatNumber type="currency" currencyCode="EUR" value="${priceRanges[1] }" maxFractionDigits="0" />
+              </fmt:param>
+            </fmt:message>
+         </c:when>
+        <c:when test="${not empty lastRefinementProperty && lastRefinementProperty == 'availability' }">
+          <fmt:message key="facet.label.availability.${lastValue}"  var="omnitureLastFilterValue"/>
+        </c:when>
+        <c:when test="${not empty lastRefinementProperty && lastRefinementProperty == 'brand' }">
+          <dsp:droplet name="RefinementValueDroplet">
+          <%-- if brand facet - hardcode facet id --%>
+           <dsp:param name="refinementId" value="10001"/>
+           <dsp:param name="refinementValue" value="${lastValue }"/>
+           <dsp:oparam name="output">
+            <dsp:getvalueof var="omnitureLastFilterValue" param="displayValue" />
+           </dsp:oparam>
+          </dsp:droplet>
+        </c:when>
+        <c:when test="${lastRefinementProperty == 'ancestorCategories.$repositoryId' }">
+            <dsp:droplet name="RefinementValueDroplet">
+            <%-- if categorie facet - hardcode facet id --%>
+             <dsp:param name="refinementId" value="10002"/>
+             <dsp:param name="refinementValue" value="${lastValue }"/>
+             <dsp:oparam name="output">              
+               <dsp:getvalueof var="omnitureLastFilterValue" param="displayValue" />
+             </dsp:oparam>
+            </dsp:droplet>
+         </c:when>
+         <c:when test="${not empty lastRefinementProperty && lastRefinementProperty == 'rating'}">
+         	<fmt:message key="facet.label.star.${lastValue}" var="omnitureLastFilterValue"/>
+         </c:when>
+         <c:when test="${not empty lastRefinementProperty && lastRefinementProperty == 'ccMode' }">
+         	<fmt:message key="facet.label.ccMode.${lastValue}" var="omnitureLastFilterValue"/>
+         </c:when>
+         <c:otherwise>
+           <dsp:getvalueof var="omnitureLastFilterValue" value="None" />
+         </c:otherwise>
+       </c:choose>
+      </dsp:oparam>
+    </dsp:droplet>
+  </c:if>

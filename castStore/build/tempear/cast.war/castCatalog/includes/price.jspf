@@ -1,0 +1,268 @@
+<%@ include file="/includes/taglibs.jspf" %>
+<dsp:page>
+
+<dsp:importbean bean="/atg/userprofiling/Profile"/>
+<dsp:droplet name="/com/castorama/droplet/PriceBlockDataGeneratorDroplet">
+  <dsp:param name="productType" param="prod.type"/>
+  <dsp:param name="sku" param="sku"/>
+  <dsp:param name="product" param="prod"/>
+  <dsp:param name="pageType" param="pageType"/>
+  <dsp:param name="printVersion" param="printVersion"/>
+  <dsp:param name="tauxTVA" param="sku.tauxTVA"/>
+  <dsp:param name="skuId" param="skuId"/>
+  <dsp:param name="featuredSkuId" param="featuredSkuId"/>
+  <dsp:param name="featuredProduct" param="featuredProduct"/>
+  <dsp:param name="storeIsCC" value="${storeIsCC}"/>
+  <dsp:param name="store" bean="Profile.currentLocalStore" />
+  <dsp:param name="profile" bean="Profile" />
+  <dsp:param name="svAvailableMap" value="${svAvailableMap}" />
+  <dsp:oparam name="output">
+
+    <dsp:getvalueof var="displayOnSale" param="displayOnSale" />
+    <dsp:getvalueof var="displayShowDiscount" param="displayShowDiscount" />
+    <dsp:getvalueof var="displayPercent" param="displayPercent" />
+    <dsp:getvalueof var="displayPrintVersion" param="displayPrintVersion" />
+    <dsp:getvalueof var="displayListPrice" param="displayListPrice" />
+    <dsp:getvalueof var="displaySalePrice" param="displaySalePrice" />
+    <dsp:getvalueof var="displayLibelle" param="displayLibelle" />
+    <dsp:getvalueof var="displayAllTaxIncludedPrice" param="displayAllTaxIncludedPrice" />
+    <dsp:getvalueof var="displayTaxFreePrice" param="displayTaxFreePrice" />
+    <dsp:getvalueof var="displayOneM2Price" param="displayOneM2Price" />
+    <dsp:getvalueof var="displayShowD3e" param="displayShowD3e" />
+    <dsp:getvalueof var="displayEcoTax" param="displayEcoTax" />
+    <dsp:getvalueof var="displayShowEconomize" param="displayShowEconomize" />
+    <dsp:getvalueof var="displayEconomizeAmount" param="displayEconomizeAmount" />
+    <dsp:getvalueof var="displayShowPUPUVPrice" param="displayShowPUPUVPrice" />
+    <dsp:getvalueof var="displayPUPUVPrice" param="displayPUPUVPrice" />
+    <dsp:getvalueof var="displayPUPUV" param="displayPUPUV" />
+    <dsp:getvalueof var="displayShowCardPrice" param="displayShowCardPrice" />
+    <dsp:getvalueof var="displayCardPriceByM2" param="displayCardPriceByM2" />
+    <dsp:getvalueof var="displayCardPrice" param="displayCardPrice" />
+    <dsp:getvalueof var="displayShowCastaCardPdPng" param="displayShowCastaCardPdPng" />
+    <dsp:getvalueof var="displayShowOffresCarteCastoramaLink" param="displayShowOffresCarteCastoramaLink" />
+    <dsp:getvalueof var="displayShowFreeShippingMessage" param="displayShowFreeShippingMessage" />
+    <dsp:getvalueof var="displayShowM2PriceFirst" param="displayShowM2PriceFirst" />
+    <dsp:getvalueof var="displayShowM2Price" param="displayShowM2Price" />
+    <dsp:getvalueof var="displayCurrencyCode" param="displayCurrencyCode" />
+    <c:set var="skuDiscountValue" value="${displayPercent}" scope="request"/>
+
+    <dsp:getvalueof var="dbg" param="dbg"/>
+    <c:if test="${dbg == 'true'}">
+    <!-- 
+        displayOnSale=${displayOnSale}<br/>
+        displayShowDiscount=${displayShowDiscount}<br/>
+        displayShowM2PriceFirst=${displayShowM2PriceFirst}<br/>
+        displayShowM2Price=${displayShowM2Price}<br/>
+        displayPercent=${displayPercent}<br/>
+        displayPrintVersion=${displayPrintVersion}<br/>
+        displayListPrice=<fmt:formatNumber value="${displayListPrice}" type="number" maxFractionDigits="2" minFractionDigits="2" groupingUsed="true"/><br/>
+        displaySalePrice=<fmt:formatNumber value="${displaySalePrice}" type="number" maxFractionDigits="2" minFractionDigits="2" groupingUsed="true"/><br/>
+        displayLibelle=${displayLibelle}<br/>
+        displayAllTaxIncludedPrice=${displayAllTaxIncludedPrice}<br/>
+        displayTaxFreePrice=${displayTaxFreePrice}<br/>
+        displayOneM2Price=${displayOneM2Price}<br/>
+        displayShowD3e=${displayShowD3e}<br/>
+        displayEcoTax=${displayEcoTax}<br/>
+        displayShowEconomize=${displayShowEconomize}<br/>
+        displayEconomizeAmount=${displayEconomizeAmount}<br/>
+        displayShowPUPUVPrice=${displayShowPUPUVPrice}<br/>
+        displayPUPUVPrice=${displayPUPUVPrice}<br/>
+        displayPUPUV=${displayPUPUV}<br/>
+        displayShowCardPrice=${displayShowCardPrice}<br/>
+        displayCardPrice=${displayCardPrice}<br/>
+        displayCardPriceByM2=${displayCardPriceByM2}<br/>
+        displayShowCastaCardPdPng=${displayShowCastaCardPdPng}<br/>
+        displayShowOffresCarteCastoramaLink=${displayShowOffresCarteCastoramaLink}<br/>
+        displayShowFreeShippingMessage=${displayShowFreeShippingMessage}<br/>
+        displayCurrencyCode=${displayCurrencyCode}<br/>
+      -->
+    </c:if>
+    <%-- content of price_m.jspf start --%>
+
+    <c:if test="${pageType == 'productDetails'}">
+      <fmt:formatNumber var="allTaxIncludedPrice" value="${displayAllTaxIncludedPrice}" type="number"
+                        maxFractionDigits="2"
+                        minFractionDigits="2" groupingUsed="false" scope="request"/>
+      <fmt:formatNumber var="taxFreePrice" value="${displayTaxFreePrice}" type="number"
+                        maxFractionDigits="2" minFractionDigits="2" groupingUsed="false" scope="request"/>
+    </c:if>
+    <c:if test="${displayShowCardPrice}">
+      <c:choose>
+        <c:when test="${displayShowM2PriceFirst}">
+          <dsp:getvalueof var="displayedCardPrice" value="${displayCardPriceByM2}"/>
+          <dsp:getvalueof var="notDisplayedCardPrice" value="${displayCardPrice}"/>
+        </c:when>
+        <c:otherwise>
+          <dsp:getvalueof var="displayedCardPrice" value="${displayCardPrice}"/>
+          <dsp:getvalueof var="notDisplayedCardPrice" value="${displayCardPriceByM2}"/>
+        </c:otherwise>
+      </c:choose>
+    </c:if>
+
+
+    <c:if test="${displayShowDiscount == 'true' && not empty displayPercent}">
+      <c:choose>
+        <c:when test="${pageType == 'printPage'}">
+          <dsp:getvalueof var="contextPath" bean="/OriginatingRequest.contextPath"/>
+          <div class="printVersionDiscount discount">
+            <dsp:img src="${contextPath}/images/discount.png"/>
+            <span>${displayPercent}</span>
+          </div>
+        </c:when>
+        <c:otherwise>
+          <div class="discount">${displayPercent}</div>
+        </c:otherwise>
+      </c:choose>
+    </c:if>
+
+    <div class="priceContent">
+
+      <c:if test="${pageType == 'productDetails'}">
+        <c:if test="${productType=='casto-grouped-product'}">
+          <c:if test="${!isEmpty}">
+            <div class="additionalPrice"><i class="implanMessV2">${implantaMessage}</i></div>
+          </c:if>
+        </c:if>
+      </c:if>
+
+      <c:choose>
+        <c:when test="${displayShowDiscount == 'true'}">
+
+          <span class="oldprice">
+            <fmt:formatNumber value="${displayListPrice}" type="currency" currencyCode="${displayCurrencyCode}"/>
+            <c:if test="${displayShowM2PriceFirst}">/${displayLibelle}</c:if>
+          </span>
+  
+          <span class="newprice">
+          <fmt:formatNumber value="${displaySalePrice}" type="currency" currencyCode="${displayCurrencyCode}"/>
+          <c:if test="${displayShowM2PriceFirst}">/${displayLibelle}</c:if>
+          </span>
+  
+          <c:choose>
+            <c:when test="${displayShowM2Price && !displayShowM2PriceFirst && displayOneM2Price > 0}">
+              <div class="additionalPrice discountedM2">
+              <span class="additionalPriceSum">
+                <fmt:message key="castCatalog_productTemplate.soit"/>&nbsp;
+                <fmt:formatNumber value="${displayOneM2Price}" type="currency" currencyCode="${displayCurrencyCode}"/>
+              </span><c:if test="${not empty displayShowCardPrice}">/${displayLibelle}</c:if>
+              </div>
+            </c:when>
+            <c:otherwise>
+              <c:if test="${!displayShowM2PriceFirst}">
+                <div class="additionalPrice">
+                  <dsp:include page="unitePriceCode.jsp">
+                    <dsp:param name="sku" value="${sku}"/>
+                    <dsp:param name="currencyCode" value="${displayCurrencyCode}"/>
+                    <dsp:param name="price" value="${displaySalePrice}"/>
+                  </dsp:include>
+                </div>
+              </c:if>
+            </c:otherwise>
+          </c:choose>
+        </c:when>
+        <c:otherwise>
+          <c:choose>
+            <c:when test="${displayShowM2PriceFirst}">
+              <dsp:getvalueof var="displayedPrice" value="${displayOneM2Price}"/>
+            </c:when>
+            <c:otherwise>
+              <dsp:getvalueof var="displayedPrice" value="${displayListPrice}"/>
+            </c:otherwise>
+          </c:choose>
+
+            <div class="price">
+                <fmt:formatNumber value="${displayedPrice}" type="currency" currencyCode="${displayCurrencyCode}"/>
+                <c:if test="${displayShowM2PriceFirst}">/${displayLibelle}</c:if>
+            </div>
+          
+          <c:if test="${!displayShowM2PriceFirst}">
+            <div class="additionalPrice">
+              <dsp:include page="unitePriceCode.jsp">
+                <dsp:param name="sku" value="${sku}"/>
+                <dsp:param name="currencyCode" value="${displayCurrencyCode}"/>
+                <dsp:param name="price" value="${displayListPrice}"/>
+              </dsp:include>
+            </div>
+          </c:if>
+        </c:otherwise>
+      </c:choose>
+
+      <c:if test="${pageType != 'productDetails' && pageType != 'printPage'}">
+        <c:if test="${productType=='casto-grouped-product'}">
+          <c:if test="${!isEmpty}">
+            <div class="additionalPrice"><i class="implanMessV2">${implantaMessage}</i></div>
+          </c:if>
+        </c:if>
+      </c:if>
+
+      <c:if test="${displayShowPUPUVPrice}">
+        <div class="additionalPrice">
+        <span class="cardAddMess"> <fmt:message key="castCatalog_productTemplate.vendu"/>&nbsp;<fmt:formatNumber
+            value="${displayPUPUV}" maxFractionDigits="2" groupingUsed="false"/>&nbsp;${displayLibelle},
+          <fmt:message key="castCatalog_productTemplate.soit"/>&nbsp;<fmt:formatNumber value="${displayPUPUVPrice}"
+                                                                                       type="currency"
+                                                                                       currencyCode="${displayCurrencyCode}"/>
+        </span>
+        </div>
+      </c:if>
+
+      <c:if test="${displayShowEconomize}">
+        <div class="economize">
+          <fmt:message key="castCatalog_productTemplate.economize"/>
+          <strong>
+            <fmt:formatNumber value="${displayEconomizeAmount}" type="currency"
+                              currencyCode="${displayCurrencyCode}"/>
+          </strong>
+        </div>
+      </c:if>
+
+      <c:if test="${displayShowD3e}">
+        <div class="additionalPrice">
+          <fmt:message key="castCatalog_productTemplate.d3e">
+            <fmt:param>
+              <fmt:formatNumber value="${displayEcoTax}" type="currency" currencyCode="${displayCurrencyCode}"/>
+            </fmt:param>
+          </fmt:message>
+        </div>
+      </c:if>
+
+      <c:if test="${displayShowFreeShippingMessage}">
+        <span class="fGratuite">
+          <fmt:message key="castCatalog_productTemplate.freeShipping"/>
+        </span>
+      </c:if>
+
+      <c:if test="${displayShowCardPrice}">
+        <div class="castCardWithSoit">
+          <div class="cast_card">
+            <span>
+              <strong>
+                <fmt:formatNumber value="${displayedCardPrice}" type="currency" currencyCode="${displayCurrencyCode}"/>
+                <c:if test="${displayShowM2PriceFirst}">/${displayLibelle}</c:if>
+              </strong>
+            </span>
+            <a href="/store/offres-carte-castorama" class="cast_card_link" title="<fmt:message key="search_searchPageTitle.castCardPage"/>"></a>
+          </div>
+          <c:if test="${displayShowM2Price && displayOneM2Price > 0}">
+            <div class="additionalPrice">
+              <span class="additionalPriceSum"> <fmt:message key="castCatalog_productTemplate.soit"/>&nbsp; <fmt:formatNumber
+                  value="${notDisplayedCardPrice}" type="currency"
+                  currencyCode="${displayCurrencyCode}"/>
+             </span>
+             <c:if test="${!displayShowM2PriceFirst}">/${displayLibelle}</c:if>
+            </div>
+          </c:if>
+        </div>
+      </c:if>
+
+        <c:if test="${displayVUMMessage == true}">
+            <div id="${displayVUMMessageStyle}">
+                <p> Vendu uniquement </br> dans certains magasins</p>
+            </div>
+        </c:if>
+
+    </div>
+    <%-- content of price_m.jspf end --%>
+  </dsp:oparam>
+</dsp:droplet>
+</dsp:page>

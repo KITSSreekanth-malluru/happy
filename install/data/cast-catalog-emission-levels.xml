@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <add-item item-descriptor="folder" id="airImageFolder">
+            <set-property name="path"><![CDATA[/]]></set-property>
+            <set-property name="name"><![CDATA[Air emmision images]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="am100000">
+            <set-property name="parentFolder"><![CDATA[airImageFolder]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/8/2011 11:34:10]]></set-property>
+            <set-property name="url"><![CDATA[/banners/air/air_logo_a+.png]]></set-property>
+            <set-property name="path"><![CDATA[/air_logo_a_plus.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[air_logo_a_plus.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="am100001">
+            <set-property name="parentFolder"><![CDATA[airImageFolder]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/8/2011 11:37:45]]></set-property>
+            <set-property name="url"><![CDATA[/banners/air/air_logo_a.png]]></set-property>
+            <set-property name="path"><![CDATA[/air_logo_a.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[air_logo_a.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="am100002">
+            <set-property name="parentFolder"><![CDATA[airImageFolder]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/8/2011 11:37:45]]></set-property>
+            <set-property name="url"><![CDATA[/banners/air/air_logo_b.png]]></set-property>
+            <set-property name="path"><![CDATA[/air_logo_b.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[air_logo_b.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="am100003">
+            <set-property name="parentFolder"><![CDATA[airImageFolder]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/8/2011 11:37:45]]></set-property>
+            <set-property name="url"><![CDATA[/banners/air/air_logo_c.png]]></set-property>
+            <set-property name="path"><![CDATA[/air_logo_c.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[air_logo_c.png]]></set-property>
+        </add-item>
+
+
+    </import-items>
+</gsa-template>

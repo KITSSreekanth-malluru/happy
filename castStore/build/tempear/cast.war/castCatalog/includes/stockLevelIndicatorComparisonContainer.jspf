@@ -1,0 +1,101 @@
+<dsp:getvalueof var="skuId" param="sku.id"/>
+<dsp:getvalueof var="showStockVisButton" value="false"/>
+<dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet">
+  <dsp:param name="skuId" value="${skuId}"/>
+  <dsp:param name="store" bean="Profile.currentLocalStore" />
+  <dsp:param name="svAvailableMap" value="${svAvailableMap}" />
+  <dsp:oparam name="immidiateWithdrawal">
+  </dsp:oparam>
+  <dsp:oparam name="remainingStock">
+      <dsp:getvalueof var="showStockVisButton" value="true"/>
+  </dsp:oparam>
+  <dsp:oparam name="soldOnlyInStore">
+      <dsp:getvalueof var="showStockVisButton" value="true"/>
+  </dsp:oparam>
+  <dsp:oparam name="deliveryTime">
+      <dsp:getvalueof var="showStockVisButton" value="true"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccRemainingStock">
+      <dsp:getvalueof var="showStockVisButton" value="true"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccSoldOnlyInStore">
+      <dsp:getvalueof var="showStockVisButton" value="true"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccDeliveryTime">
+      <dsp:getvalueof var="showStockVisButton" value="true"/>
+  </dsp:oparam>
+</dsp:droplet>
+
+<c:if test="${showStockVisButton}">
+
+<dsp:getvalueof var="templateUrl" param="key.template.url" />
+<dsp:getvalueof var="codeArticle" param="sku.codeArticle"/>
+<dsp:droplet name="/com/castorama/droplet/CastProductLinkDroplet">
+  <dsp:param name="productId" param="key.repositoryId"/>
+  <dsp:param name="skuId" value="${skuId}"/>
+  <dsp:param name="navAction" value="jump"/>
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="templateUrl" param="url"/>
+  </dsp:oparam>
+</dsp:droplet>
+<dsp:getvalueof var="templateUrl" value="${pageContext.request.contextPath}${templateUrl}#stockArea"/>
+
+<dsp:getvalueof var="localStore" bean="Profile.currentLocalStore"/>
+<dsp:getvalueof var="localStoreId" bean="Profile.currentLocalStore.id"/>
+<c:choose>
+  <c:when test="${(not empty localStore) and (localStoreId != '999')}">
+    <dsp:importbean bean="/com/castorama/stockvisualization/StockVisualizationDroplet" />
+	<dsp:importbean bean="/com/castorama/stockvisualization/StockModelHolder" />
+	
+	<dsp:droplet name="StockVisualizationDroplet">
+	    <dsp:param name="queryCondition" value="byDefinedStore" />
+	    <dsp:param name="prodId" param="sku.codeArticle" />
+	    <dsp:param name="magasinId" value="${localStoreId}" />
+	</dsp:droplet>
+	
+	<dsp:getvalueof var="definedStoreStock" bean="StockModelHolder.definedStoreStock" />
+	<dsp:getvalueof var="definedStoreName" bean="StockModelHolder.definedStoreStock.magasin.nom" />
+	
+	<c:choose>
+	    <c:when test="${(not empty definedStoreStock) and ((definedStoreStock.status == '1') or (definedStoreStock.status == '2'))}">
+	        <c:if test="${definedStoreStock.status == '1'}">
+	            <ul>
+	                <li>
+	                    <dsp:a href="${templateUrl}" onclick="hidePopup(this)" iclass="buttonStockLevelIndicatorGreen textedLinkComparator" id="indicator_${codeArticle}">
+	                        <fmt:message key="stockVisualization.availableStatusLink"/><br /><b>${definedStoreName}</b>
+	                    </dsp:a>
+	                </li>
+	            </ul>
+	        </c:if>
+	        <c:if test="${definedStoreStock.status == '2'}">
+	            <ul>
+	                <li>
+	                    <dsp:a href="${templateUrl}" onclick="hidePopup(this)" iclass="buttonStockLevelIndicatorOrange textedLinkComparator" id="indicator_${codeArticle}">
+	                        <fmt:message key="stockVisualization.limitedAvailabilityStatusLink2"/><br /><b>${definedStoreName}</b>
+	                    </dsp:a>
+	                </li>
+	            </ul>
+	        </c:if>
+	    </c:when>
+	    <c:otherwise>
+	      <ul>
+          <li class="notAvailable">
+            <dsp:a href="${templateUrl}" onclick="hidePopup(this)" onmouseover="document.getElementById('natooltip${codeArticle}').style.display='block';" onmouseout="document.getElementById('natooltip${codeArticle}').style.display='none';">
+              <span>
+                  <div id="natooltip${codeArticle}" class="toolTip"><fmt:message key="stockVisualization.notAvailableTooltip" /></div>
+              </span>
+            </dsp:a>
+          </li>
+          </ul>
+        </c:otherwise>
+    </c:choose>
+  </c:when>
+  <c:otherwise>
+        <ul>
+            <li>
+                <dsp:a href="${templateUrl}" onclick="hidePopup(this)" iclass="buttonConsulter" id="indicator_${codeArticle}"></dsp:a>
+            </li>
+        </ul>
+  </c:otherwise>
+</c:choose>
+</c:if>

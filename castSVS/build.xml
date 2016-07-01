@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="castorama-SVS" default="all" basedir=".">
+  
+  <!-- Set properties needed by included XML files -->
+  <property name="global.dir" value="${basedir}/.."/>
+
+  <!-- Import global defaults and settings and common tasks -->
+  <import file="${global.dir}/commonbuildtasks/common.xml"/>
+  
+  <!-- Import compress settings and common tasks -->
+  <import file="${global.dir}/commonbuildtasks/compress.xml"/>
+  
+  <!-- Define the all task. -->
+  <target name="all"
+          depends="clean,set-build-number,build,install,deploy"
+          description="Cleans, builds, and installs the project."/>
+
+  <!-- This will update build number in about.jsp -->
+  <target name="set-build-number">
+    <replace file="j2ee/castSVS.war/about.jsp" value="Build ???" propertyFile="${global.dir}/version.properties">
+      <replacefilter token="@BuildNumber@" property="build.number"/>
+    </replace>
+  </target>
+
+  <!-- Compiles the codebase -->
+  <target name="compile"
+          depends="-init,-createdirs,-coredirsexist"
+          if="srcdirectory.exists"
+          description="Compiles the source code to the build directory.">
+    <mkdir dir="${classes.dir}" />
+
+
+    <echo message="CLASSPATH = ${classpath}"/>
+    <javac srcdir="${src.dir}"
+           destdir="${classes.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.5"
+           target="1.5"
+           verbose="${javac.verbose.bool}">
+
+      <classpath path="${classpath}"/>
+      <classpath>
+        <fileset dir="${basedir}/lib">
+          <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${basedir}/j2ee/castSVS.war/WEB-INF/lib">
+          <include name="**/*.jar"/>
+        </fileset>
+      </classpath>
+      <include name="**/*.java" />
+    </javac>
+    <!-- copy java resource files to build directory -->
+    <copy todir="${classes.dir}">
+      <fileset dir="${src.dir}/">
+        <patternset refid="resource.files" />
+      </fileset>
+    </copy>
+
+    <mkdir dir="${quartz.classes.dir}" />
+    
+    <javac srcdir="${quartz.src.dir}"
+           destdir="${quartz.classes.dir}"
+           debug="true"
+           deprecation="false"
+           optimize="false"
+           source="1.5"
+           target="1.5"
+           verbose="${javac.verbose.bool}">
+
+      <classpath path="${classpath}"/>
+      <classpath>
+        <fileset dir="${basedir}/lib">
+          <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${basedir}/j2ee/castSVS.war/WEB-INF/lib">
+          <include name="**/*.jar"/>
+        </fileset>
+      </classpath>
+      <include name="**/*.java" />
+    </javac>
+    <!-- copy java resource files to build directory -->
+    <copy todir="${quartz.classes.dir}">
+      <fileset dir="${quartz.src.dir}/">
+        <patternset refid="resource.files" />
+      </fileset>
+    </copy>
+
+    
+    <copy todir="${temp.ear.dir}/${module.name}.war/WEB-INF/classes">
+      <fileset dir="${classes.dir}"/>
+    </copy>
+    
+    
+  </target>
+  
+
+  <target name="-jarclasses"
+          depends="-init,-createdirs,-coredirsexist"
+          if="srcdirectory.exists"
+          description="jars classes and source to build directory.">
+    <jar jarfile="${build.dir}/lib/classes.jar"
+         basedir="${classes.dir}/"
+         includes="**"/>
+    <copy todir="${quartz.classes.dir}">
+      <fileset dir="${basedir}/ejb"/>
+    </copy>
+
+    <copy todir="${build.dir}/stock-quartz-ejb.jar">
+      <fileset dir="${quartz.classes.dir}"/>
+    </copy>
+
+    <zip zipfile="${build.dir}/src.zip"
+         basedir="${src.dir}/"
+         includes="**"/>
+  </target>
+  
+  
+  <target name="-create-exploded-dar" depends="-create-ear-file">
+   
+   <mkdir dir="${ear.dir}/exploded/${module.name}.ear" />
+   <unjar src="${ear.dir}/${module.name}.ear"
+         dest="${ear.dir}/exploded/${module.name}.ear"/>
+   
+   <mkdir dir="${ear.dir}/exploded/${module.name}.ear/stock-quartz-ejb.jar"/>
+   <copy todir="${ear.dir}/exploded/${module.name}.ear/stock-quartz-ejb.jar">
+      <fileset dir="${build.dir}/stock-quartz-ejb.jar"/>
+    </copy>
+
+  </target>
+
+  <target name="deploy-ear">
+   <copy todir="${jboss.server.deploy.dir}/${module.name}.ear">
+      <fileset dir="${ear.dir}/exploded/${module.name}.ear"/>
+    </copy>
+  </target>
+
+</project>
+

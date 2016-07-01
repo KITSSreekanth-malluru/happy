@@ -1,0 +1,164 @@
+<dsp:droplet name="/atg/dynamo/droplet/RQLQueryRange" >
+  <dsp:param name="id" value="${selectedFilterId}" />
+  <dsp:param name="itemDescriptor" value="fastLabConfigs" />
+  <dsp:param name="repository" bean="ProductCatalog" />
+  <dsp:param name="queryRQL" value="ALL" />
+  <dsp:param name="howMany" value="1" />
+  <dsp:param name="sortProperties" value="" />
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="fastLabConfigs" param="element" />
+  </dsp:oparam>
+</dsp:droplet>
+<dsp:setvalue param="fastLabConfigs" value="${fastLabConfigs}" />
+<div class="rightNavigationArea ${categoryStyle}">
+    <dsp:droplet name="CastCategoryDocumentsDroplet">
+      <dsp:param name="product" value="${product}"/>
+      <dsp:param name="category" value="${category}"/>
+      <dsp:param name="pivotCategory" value="${pivotCategory}"/>
+      <dsp:param name="document" value="${document}"/>
+      <dsp:param name="numberOfDocumentPerSection" value="1"/>
+      <dsp:oparam name="output">
+    
+        <div class="miniWrap190px">
+        
+          <dsp:getvalueof var="showDisArea" value="false" />
+          <dsp:droplet name="IsEmpty">
+            <dsp:param name="value" param="documentMap.ideas"/>
+            <dsp:oparam name="false">
+              <dsp:getvalueof var="showDisArea" value="true" />
+            </dsp:oparam>
+          </dsp:droplet>
+          <dsp:droplet name="IsEmpty">
+            <dsp:param name="value" param="documentMap.rightProducts"/>
+            <dsp:oparam name="false">
+              <dsp:getvalueof var="showDisArea" value="true" />
+            </dsp:oparam>
+          </dsp:droplet>
+          <dsp:droplet name="IsEmpty">
+            <dsp:param name="value" param="documentMap.howTo"/>
+            <dsp:oparam name="false">
+              <dsp:getvalueof var="showDisArea" value="true" />
+            </dsp:oparam>
+          </dsp:droplet>
+        
+          <c:if test="${showDisArea and not baFakeContext}" >
+          <div class="groupMenuPointV2 conseilsV2">
+            <div class="groupMenuPointHeaderV2">
+              <div class="nameMenuPointHeaderV2"></div>
+            </div>
+                
+                <dsp:droplet name="IsEmpty">
+                  <dsp:param name="value" param="documentMap.ideas"/>
+                  <dsp:oparam name="false">
+    
+                    <dsp:droplet name="/com/castorama/droplet/CastDocumentLinkDroplet">
+                      <dsp:param name="documentId" param="documentMap.ideas[0].id"/>
+                      <dsp:param name="navAction" param="navAction"/>
+                      <dsp:oparam name="output">
+                        <dsp:getvalueof var="url" param="url"/>
+                        <c:if test="${fn:startsWith(url, 'http') == false}">
+		                  <dsp:getvalueof var="url" value="${contextPath}${url}&productId=${productId}"/>
+		                </c:if>
+                        <div class="menuPointV2 noBg">
+                            <a href="${url}">
+                              <img src="<dsp:valueof param="documentMap.ideas[0].image.url"/>" width="177" height="84"></img>
+	                          <h2><dsp:valueof param="documentMap.ideas[0].title" valueishtml="true" /></h2>
+	                        </a>
+	                      	  
+	                      	<dsp:droplet name="IsEmpty">
+			                  <dsp:param name="value" param="documentMap.ideas[0].cfRColDisLinkName"/>
+			                  <dsp:oparam name="false">
+	                      	    <a class="linkWithArrow" href="${url}">    
+	                      	      <dsp:valueof param="documentMap.ideas[0].cfRColDisLinkName" />
+                                </a>
+                              </dsp:oparam>
+                		    </dsp:droplet>
+                        </div>
+                      </dsp:oparam>
+                    </dsp:droplet>
+                  </dsp:oparam>
+                </dsp:droplet>
+                <dsp:droplet name="IsEmpty">
+                  <dsp:param name="value" param="documentMap.rightProducts"/>
+                  <dsp:oparam name="false">
+    
+                    <dsp:droplet name="/com/castorama/droplet/CastDocumentLinkDroplet">
+                      <dsp:param name="documentId" param="documentMap.rightProducts[0].id"/>
+                      <dsp:param name="navAction" param="navAction"/>
+                      <dsp:oparam name="output">
+                        <dsp:getvalueof var="url" param="url"/>
+                        <c:if test="${fn:startsWith(url, 'http') == false}">
+		                  <dsp:getvalueof var="url" value="${contextPath}${url}&productId=${productId}"/>
+		                </c:if>
+                        <div class="menuPointV2">
+                          <a href="${url}">
+                          	<img src="<dsp:valueof param="documentMap.rightProducts[0].image.url"/>" width="177" height="84" ></img>
+                          	<h2><dsp:valueof param="documentMap.rightProducts[0].title" valueishtml="true" /></h2>
+                          </a>
+                          
+                          <dsp:droplet name="IsEmpty">
+			                  <dsp:param name="value" param="documentMap.rightProducts[0].cfRColDisLinkName"/>
+			                  <dsp:oparam name="false">
+	                      	    <a class="linkWithArrow" href="${url}">    
+	                      	      <dsp:valueof param="documentMap.rightProducts[0].cfRColDisLinkName" />
+                                </a>
+                              </dsp:oparam>
+                		  </dsp:droplet>
+                          
+                        </div>
+                      </dsp:oparam>
+                    </dsp:droplet>
+                  </dsp:oparam>
+                </dsp:droplet>
+                <dsp:droplet name="IsEmpty">
+                  <dsp:param name="value" param="documentMap.howTo"/>
+                  <dsp:oparam name="false">
+    
+                    <dsp:droplet name="/com/castorama/droplet/CastDocumentLinkDroplet">
+                      <dsp:param name="documentId" param="documentMap.howTo[0].id"/>
+                      <dsp:param name="navAction" param="navAction"/>
+                      <dsp:oparam name="output">
+                        <dsp:getvalueof var="url" param="url"/>
+                        <c:if test="${fn:startsWith(url, 'http') == false}">
+		                  <dsp:getvalueof var="url" value="${contextPath}${url}&productId=${productId}"/>
+		                </c:if>
+                        <div class="menuPointV2">
+                           <a href="${url}">
+                              <img src="<dsp:valueof param="documentMap.howTo[0].image.url"/>" width="177" height="84"></img>
+	                          <h2><dsp:valueof param="documentMap.howTo[0].title" valueishtml="true" /></h2>
+	                       </a>
+	                       
+	                       <dsp:droplet name="IsEmpty">
+			                  <dsp:param name="value" param="documentMap.howTo[0].cfRColDisLinkName"/>
+			                  <dsp:oparam name="false">
+	                      	    <a class="linkWithArrow" href="${url}">    
+	                      	      <dsp:valueof param="documentMap.howTo[0].cfRColDisLinkName" />
+                                </a>
+                              </dsp:oparam>
+                		   </dsp:droplet>
+	                       
+                        </div>
+                      </dsp:oparam>
+                    </dsp:droplet>
+                  </dsp:oparam>
+                </dsp:droplet>
+          </div>
+          </c:if>
+          
+          <dsp:include page="rightBannersPanel.jsp">
+            <dsp:param name="disablePC" value="true"/>
+          </dsp:include>
+        
+        </div>
+        
+        <c:if test="${not baFakeContext}">
+          <dsp:include page="/comparison/camparateur.jsp" flush="true">
+              <dsp:param name="categoryId" value="${categoryId}" />
+          </dsp:include>
+        </c:if>
+
+      </dsp:oparam>
+      
+    </dsp:droplet>
+    
+  </div>

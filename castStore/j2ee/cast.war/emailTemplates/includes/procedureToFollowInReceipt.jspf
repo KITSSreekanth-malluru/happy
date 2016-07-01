@@ -1,0 +1,13 @@
+<p><strong><fmt:message key="email.confirmation.common.procedure.receipt.title"/></strong></p>
+
+<p><fmt:message key="email.confirmation.common.procedure.receipt.1"/></p>
+
+<ul>
+  <li><fmt:message key="email.confirmation.common.procedure.receipt.1.outside"/></li> 
+  <li><fmt:message key="email.confirmation.common.procedure.receipt.1.inside"/></li>
+</ul>
+
+<p><fmt:message key="email.confirmation.common.procedure.receipt.2"/>
+<p><fmt:message key="email.confirmation.common.procedure.receipt.3"/></p> 
+
+<p><fmt:message key="email.confirmation.common.procedure.receipt.4"/></p>

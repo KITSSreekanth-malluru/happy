@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+	<item-descriptor name="hint" display-property="query" last-modified-property="lastModified" item-cache-size="4000">
+		<attribute name="updateLastModified" value="true"/>
+		<table name="HINT_SEARCH" type="primary" id-column-name="id">	     	
+	     	<property name="query" data-type="string" column-name="QUERY" required="true" display-name="Hint"/>
+			<property name="lastModified" data-type="timestamp"  column-name="LAST_MODIFIED" required="true"/>
+			<property name="hintCount" data-type="int" column-name="HINT_COUNT" display-name="Count of hints"></property>
+	   </table>
+	</item-descriptor>
+</gsa-template>
+

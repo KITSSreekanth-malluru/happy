@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="facet" id="100005">
+            <set-property name="name"><![CDATA[facet.label.DocumentType]]></set-property>
+            <set-property name="propertyType"><![CDATA[integer]]></set-property>
+            <set-property name="property"><![CDATA[documentType]]></set-property>
+            <set-property name="selectionType"><![CDATA[oneSelection]]></set-property>
+            <set-property name="sortType"><![CDATA[numeric]]></set-property>
+            <set-property name="filter"><![CDATA[1]]></set-property>
+            <set-property name="precision"><![CDATA[2]]></set-property>
+            <set-property name="topFacetSet"><![CDATA[100004]]></set-property>
+            <set-property name="parentBaseFacet"><![CDATA[100004]]></set-property>
+
+        </add-item>
+
+        <add-item item-descriptor="facetSet" id="100004">
+            <set-property name="name"><![CDATA[DocumentFacetSet]]></set-property>
+            <set-property name="baseFacetType"><![CDATA[facetSet]]></set-property>
+            <set-property name="childFacets"><![CDATA[100005]]></set-property>
+            <set-property name="lastModified"><![CDATA[7/27/2009 13:20:46]]></set-property>
+        </add-item>
+    </import-items>
+
+</gsa-template>
+

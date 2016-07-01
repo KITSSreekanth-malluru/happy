@@ -1,0 +1,5 @@
+<TR onMouseOver="this.bgColor='`request.getParameter("bgColorOver")`';" onMouseOut="this.bgColor='`request.getParameter("bgColor")`';" bgcolor="`request.getParameter("bgColor")`" ALIGN="left" VALIGN="middle">
+<TD style="background-image:none" height="20">
+<div style="margin-left: 5px"><A HREF="`request.getParameter("url_region")`" CLASS="`request.getParameter("textClass")`" TARGET="_top">
+<valueof param="region" valueishtml/></A></div>
+</TD></TR>

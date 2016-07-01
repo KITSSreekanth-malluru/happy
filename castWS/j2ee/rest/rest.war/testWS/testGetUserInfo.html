@@ -1,0 +1,50 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+	<script type="text/javascript">
+		function submitCall() {
+			$("#result").show();
+			$("#out").html("<em>in progress...</em>");
+			var login = $("#login").val();
+			var password = $("#password").val();
+			var content = {"login":login, "password":password};
+			$.ajax(
+				$("#url").val(),
+				{
+					type: "POST",
+					contentType: "application/json;charset=utf-8",
+					data: JSON.stringify(content),
+					dataType: "json",
+					success: handleResponse,
+					error: handleError
+				}
+			);
+		}
+		function handleResponse(data) {
+			$("#out").html("<pre>" + JSON.stringify(data, null, 4) + "</pre>");
+		}
+		function handleError(req, textStatus, errorThrown) {
+			$("#out").html("<strong><h3>Error!</h3>" + textStatus + '(' + errorThrown + ").<br/>Response text: " + req.responseText + " </strong>");
+		}
+	</script>
+</head>
+<body>
+	<h1>This is a test page for the Get User Info Web service</h1>
+	<p>
+		<label for="url">URL to the service</label>
+		<input id="url" type="text" value="/rest/getUserInfo" style="width:50%"/>
+	</p>
+	<p>
+		<label for="login">Login/Email</label>
+		<input id="login" type="text"/>
+		<label for="password">Password</label>
+		<input id="password" type="text"/>
+		<input type="button" value="Submit" onclick="submitCall();return false;"/>
+	</p>
+	<div id="result" style="display:none">
+		<h2>Output</h2>
+		<div id="out"></div>
+	</div>
+</body>
+</html>

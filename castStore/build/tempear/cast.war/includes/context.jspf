@@ -1,0 +1,5 @@
+<dsp:importbean var="requestLocale" bean="/atg/dynamo/servlet/RequestLocale" />
+<fmt:setLocale value="${requestLocale.locale}"/>
+
+<dsp:importbean var="resources" bean="/com/castorama/CastWebAppConfiguration" />
+<fmt:setBundle basename="${resources.resourceBundle}" />

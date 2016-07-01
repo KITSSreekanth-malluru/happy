@@ -1,0 +1,15 @@
+<gsa-template xml-combine="append">
+
+	<item-descriptor name="promoInfo" item-cache-size="1250" query-cache-size="1250">
+        <attribute name="cacheNullItems" value="true"/>
+    </item-descriptor>
+    
+    <item-descriptor name="discount" item-cache-size="1250" query-cache-size="1250">
+        <attribute name="cacheNullItems" value="true"/>
+    </item-descriptor>
+
+    <item-descriptor name="skuClickCollectFlag" item-cache-size="500000" query-cache-size="5000">
+        <attribute name="cacheNullItems" value="true"/>
+    </item-descriptor>
+  
+</gsa-template>

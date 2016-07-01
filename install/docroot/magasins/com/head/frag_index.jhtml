@@ -1,0 +1,6 @@
+<head>
+<droplet src="./frag_title.jhtml"></droplet>
+<droplet src="./frag_meta.jhtml"></droplet>
+<droplet src="./frag_link.jhtml"></droplet>
+<droplet src="./frag_js.jhtml"></droplet>
+</head>

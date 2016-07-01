@@ -1,0 +1,135 @@
+<dsp:droplet name="/atg/dynamo/droplet/RQLQueryRange" >
+  <dsp:param name="id" value="${selectedFilterId}" />
+  <dsp:param name="itemDescriptor" value="fastLabConfigs" />
+  <dsp:param name="repository" bean="ProductCatalog" />
+  <dsp:param name="queryRQL" value="ALL" />
+  <dsp:param name="howMany" value="1" />
+  <dsp:param name="sortProperties" value="" />
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="fastLabConfigs" param="element" />
+  </dsp:oparam>
+</dsp:droplet>
+<dsp:setvalue param="fastLabConfigs" value="${fastLabConfigs}" />
+ <div class="diyBlockV2">
+      <div class="headerDiyBlockV2">
+        <span>
+          <fmt:message key="diyBlock.header">
+            <fmt:param><a href="/store/lancez-vous.jsp">Conseils</a></fmt:param>
+            <fmt:param><a href="/store/lancez-vous.jsp">forums</a></fmt:param>
+          </fmt:message>
+        </span>
+      </div>  
+      <div class="navDiyBlock">
+        <ul>
+    <dsp:droplet name="CastCategoryDocumentsDroplet">
+      <dsp:param name="product" value="${product}"/>
+      <dsp:param name="category" value="${category}"/>
+      <dsp:param name="pivotCategory" value="${pivotCategory}"/>
+      <dsp:param name="document" value="${document}"/>
+      <dsp:param name="numberOfDocumentPerSection" value="1"/>
+      <dsp:oparam name="output">
+        <dsp:getvalueof var="showDefaultDocument" value="${true}"/>
+        <dsp:droplet name="IsEmpty">
+          <dsp:param name="value" param="documentMap.ideas"/>
+          <dsp:oparam name="false">
+
+            <dsp:droplet name="/com/castorama/droplet/CastDocumentLinkDroplet">
+              <dsp:param name="documentId" param="documentMap.ideas[0].id"/>
+              <dsp:param name="navAction" param="navAction"/>
+              <dsp:oparam name="output">
+                <dsp:getvalueof var="url" param="url"/>
+                <c:if test="${fn:startsWith(url, 'http') == false}">
+                  <dsp:getvalueof var="url" value="${contextPath}${url}&productId=${productId}"/>
+                </c:if>
+                  <li>
+                    <a href="${url}">
+                      <img src="<dsp:valueof param="documentMap.ideas[0].image.url"/>" />
+                      <span><dsp:valueof param="documentMap.ideas[0].title" valueishtml="true" /></span>
+                    </a>  
+                  </li>
+              </dsp:oparam>
+            </dsp:droplet>
+            <dsp:getvalueof var="showDefaultDocument" value="${false}"/>
+          </dsp:oparam>
+        </dsp:droplet>
+        <dsp:droplet name="IsEmpty">
+          <dsp:param name="value" param="documentMap.rightProducts"/>
+          <dsp:oparam name="false">
+
+            <dsp:droplet name="/com/castorama/droplet/CastDocumentLinkDroplet">
+              <dsp:param name="documentId" param="documentMap.rightProducts[0].id"/>
+              <dsp:param name="navAction" param="navAction"/>
+              <dsp:oparam name="output">
+                <dsp:getvalueof var="url" param="url"/>
+                <c:if test="${fn:startsWith(url, 'http') == false}">
+                  <dsp:getvalueof var="url" value="${contextPath}${url}&productId=${productId}"/>
+                </c:if>
+                  <li>
+                    <a href="${url}">
+                      <img src="<dsp:valueof param="documentMap.rightProducts[0].image.url"/>" />
+                      <span><dsp:valueof param="documentMap.rightProducts[0].title" valueishtml="true" /></span>
+                    </a>
+                  </li>
+              </dsp:oparam>
+            </dsp:droplet>
+            <dsp:getvalueof var="showDefaultDocument" value="${false}"/>
+          </dsp:oparam>
+        </dsp:droplet>
+        <dsp:droplet name="IsEmpty">
+          <dsp:param name="value" param="documentMap.howTo"/>
+          <dsp:oparam name="false">
+
+            <dsp:droplet name="/com/castorama/droplet/CastDocumentLinkDroplet">
+              <dsp:param name="documentId" param="documentMap.howTo[0].id"/>
+              <dsp:param name="navAction" param="navAction"/>
+              <dsp:oparam name="output">
+                <dsp:getvalueof var="url" param="url"/>
+                <c:if test="${fn:startsWith(url, 'http') == false}">
+                  <dsp:getvalueof var="url" value="${contextPath}${url}&productId=${productId}"/>
+                </c:if>
+                  <li>
+                    <a href="${url}">
+                      <img src="<dsp:valueof param="documentMap.howTo[0].image.url"/>" />
+                      <span><dsp:valueof param="documentMap.howTo[0].title" valueishtml="true" /></span>
+                    </a>
+                  </li>
+              </dsp:oparam>
+            </dsp:droplet>
+            <dsp:getvalueof var="showDefaultDocument" value="${false}"/>
+          </dsp:oparam>
+        </dsp:droplet>
+        <c:if test="${showDefaultDocument}">
+          <dsp:droplet name="/com/castorama/droplet/CastDocumentLinkDroplet">
+            <dsp:param name="documentId" param="fastLabConfigs.DisDefaultDoc.id"/>
+            <dsp:param name="navAction" param="navAction"/>
+            <dsp:oparam name="output">
+              <dsp:getvalueof var="url" param="url"/>
+              <c:if test="${fn:startsWith(url, 'http') == false}">
+                <dsp:getvalueof var="url" value="${contextPath}${url}&productId=${productId}"/>
+              </c:if>
+              <li>
+                <a href="${url}">
+                  <img src="<dsp:valueof param="fastLabConfigs.DisDefaultDoc.image.url"/>" />
+                  <span><dsp:valueof param="fastLabConfigs.DisDefaultDoc.title" valueishtml="true" /></span>
+                </a>
+              </li>
+            </dsp:oparam>
+          </dsp:droplet>
+        </c:if>
+          
+        <dsp:getvalueof var="prodDisFbLinkTitle" param="fastLabConfigs.prodDisFbLinkTitle" />
+        <dsp:getvalueof var="fbLinkValue" param="fastLabConfigs.fbLinkValue" />
+        <dsp:getvalueof var="prodDisFdLinkTitle" param="fastLabConfigs.prodDisFdLinkTitle" />
+        <dsp:getvalueof var="fdLinkValue" param="fastLabConfigs.fdLinkValue" />
+        <dsp:getvalueof var="prodDisEgLinkTitle" param="fastLabConfigs.prodDisEgLinkTitle" />
+        <dsp:getvalueof var="egLinkValue" param="fastLabConfigs.egLinkValue" />
+        <li class="lastLi">
+          <a href="${fbLinkValue}" onClick="s.tl(this,'e','ForumBrico_FicheProduit');" target="_blank">${prodDisFbLinkTitle}</a>
+          <a href="${fdLinkValue}" onClick="s.tl(this,'e','ForumDeco_FicheProduit');" target="_blank">${prodDisFdLinkTitle}</a>
+          <a href="${egLinkValue}" onClick="s.tl(this,'e','TrocHeures_FicheProduit');" target="_blank">${prodDisEgLinkTitle}</a>
+        </li>
+      </dsp:oparam>
+    </dsp:droplet>
+   </ul>
+  </div>
+</div>

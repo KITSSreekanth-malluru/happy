@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/activitymanager/activitymanager_workflows_1.0.dtd">
+
+<workflow-activities>
+  <activity>
+    <id>oneStepDeploymentWorkflow</id>
+    <workflow-name>/Commerce/castorama/OneStepDeploymentWorkflow.wdl</workflow-name>
+    <acl>Profile$role$epubAdmin:read;Profile$role$epubSuperAdmin:read;Profile$role$epubManager:read;Profile$role$epubUser:read</acl>
+
+    <resource-bundle>com.castorama.commerce.web.WebAppResources</resource-bundle>
+    <display-name-resource>editDisplayName</display-name-resource>
+    <description-resource>editDescription</description-resource>	
+  </activity>
+</workflow-activities>

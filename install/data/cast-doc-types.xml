@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+
+        <add-item item-descriptor="castoDocType" id="100001">
+            <set-property name="typeTitle"><![CDATA[Agencer et concevoir]]></set-property>
+            <set-property name="typeNumber"><![CDATA[0]]></set-property>
+            <set-property name="typeDescription">
+                <![CDATA[Découvrez tous nos outils pour bien préparer votre projet.]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="castoDocType" id="100002">
+            <set-property name="typeTitle"><![CDATA[Apprendre à faire soi-même]]></set-property>
+            <set-property name="typeNumber"><![CDATA[1]]></set-property>
+            <set-property name="typeDescription">
+                <![CDATA[Vous souhaitez réaliser vous-même vos travaux mais vous avez besoin d'aide ? Regardez nos vidéos ou assistez à nos castostages.]]></set-property>
+        </add-item>
+
+
+    </import-items>
+</gsa-template>

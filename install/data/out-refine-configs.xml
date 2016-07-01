@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="facet" id="100003">
+            <set-property name="selectionType"><![CDATA[oneSelection]]></set-property>
+            <set-property name="baseFacetType"><![CDATA[facet]]></set-property>
+            <set-property name="sortType"><![CDATA[numeric]]></set-property>
+            <set-property name="filter"><![CDATA[true]]></set-property>
+            <set-property name="property"><![CDATA[entite.adresse.departement.region.nom]]></set-property>
+            <set-property name="precision"><![CDATA[2]]></set-property>
+            <set-property name="propertyType"><![CDATA[string]]></set-property>
+            <set-property name="name"><![CDATA[Regions]]></set-property>
+            <set-property name="parentBaseFacet"><![CDATA[100001]]></set-property>
+            <set-property name="topFacetSet"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="facetSet" id="100001">
+            <set-property name="baseFacetType"><![CDATA[facetSet]]></set-property>
+            <set-property name="childFacets"><![CDATA[100003]]></set-property>
+            <set-property name="name"><![CDATA[Magasins]]></set-property>
+            <set-property name="lastModified"><![CDATA[07/07/2009 00:00]]></set-property>
+        </add-item>
+
+    </import-items>
+</gsa-template>

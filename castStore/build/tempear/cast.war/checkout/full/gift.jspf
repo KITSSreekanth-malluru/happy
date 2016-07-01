@@ -1,0 +1,22 @@
+<div class="grayContainerBlock formMainBlock">
+  <div class="formContent">
+    <div class="f-row f-checkbox">
+      <label for="news_2">
+        <strong><fmt:message key="msg.delivery.gift.flag" /></strong>
+      </label>
+      <div class="f-inputs">
+        <dsp:input type="checkbox" bean="CastDeliveryFormHandler.commandeCadeau"
+                   priority="1" id="isGift" onclick="removeGiftMessage(this);"/>
+                   <%-- %>id="news_2" name="news_2"
+                   iclass="i-checkbox" priority="1" />--%>
+      </div>
+    </div>
+    <div class="label_checkbox_adv">
+      <fmt:message key="msg.delivery.gift.desc" /><br /><br />
+      <fmt:message key="msg.delivery.message" /><br />
+      <dsp:textarea bean="CastDeliveryFormHandler.commentaire"
+                    iclass="collapseTxt" priority="2"
+                    onkeydown="limitText(this,200);" onkeyup="limitText(this,200);typeGiftMessage();" id="giftMessage"/>
+    </div>
+  </div>
+</div>

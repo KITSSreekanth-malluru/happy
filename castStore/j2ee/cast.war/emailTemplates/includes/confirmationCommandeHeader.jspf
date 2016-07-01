@@ -1,0 +1,25 @@
+<br />
+<font size="2" face="Arial" color="#323232">
+<font size="3" face="Arial" color="#09438b"><b>
+  <fmt:message key="email.confirmation.header.title">
+    <fmt:param>${orderId}</fmt:param>
+  </fmt:message>
+</b></font>
+<br />
+<p>
+  <fmt:message key="email.common.client.code">
+    <fmt:param>${userId}</fmt:param>
+  </fmt:message>
+  <br />
+  <fmt:message key="email.confirmation.header.email">
+    <fmt:param>${mail}</fmt:param>
+  </fmt:message>
+</p>
+
+<%@ include file="/emailTemplates/includes/commandeHeader.jspf" %>
+
+<p>
+  <fmt:message key="email.confirmation.header.confirm.order">
+    <fmt:param><br /><fmt:formatDate value="${orderMoveToPaymentDate }" type="date" dateStyle="long"/></fmt:param>
+  </fmt:message>
+</p>

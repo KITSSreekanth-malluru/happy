@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pipelinemanager PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Pipeline Manager//EN" "http://www.atg.com/dtds/pipelinemanager/pipelinemanager_1.0.dtd">
+<pipelinemanager>
+  <pipelinechain headlink="executeValidateForCheckoutChain2" name="payboxProcessOrder1" transaction="TX_REQUIRED">
+    <pipelinelink name="executeValidateForCheckoutChain2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/ExecuteValidateForCheckoutChain"/>
+      <transition link="checkForExpiredPromotions2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="checkForExpiredPromotions2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/CheckForExpiredPromotions"/>
+      <transition link="removeEmptyShippingGroups2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="removeEmptyShippingGroups2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/RemoveEmptyShippingGroups"/>
+      <transition link="removeEmptyPaymentGroups2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="removeEmptyPaymentGroups2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/RemoveEmptyPaymentGroups"/>
+      <transition link="createImplicitRelationships2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="createImplicitRelationships2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/CreateImplicitRelationships"/>
+      <transition link="setPaymentGroupAmount2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="setPaymentGroupAmount2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/SetPaymentGroupAmount"/>
+    </pipelinelink>
+  </pipelinechain>
+  <pipelinechain headlink="moveUsedPromotions2" name="payboxProcessOrder2" transaction="TX_REQUIRED">
+    <pipelinelink name="moveUsedPromotions2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/MoveUsedPromotions"/>
+      <transition link="authorizePayment2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="authorizePayment2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/AuthorizePayment"/>
+      <transition link="updateGiftRepository2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="updateGiftRepository2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/UpdateGiftRepository"/>
+      <transition link="addOrderToRepository2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="addOrderToRepository2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/AddOrderToRepository"/>
+      <transition link="sendPromotionUsedMessage2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="sendPromotionUsedMessage2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/SendPromotionUsedMessage"/>
+      <transition link="sendFulfillmentMessage2" returnvalue="1"/>
+    </pipelinelink>
+    <pipelinelink name="sendFulfillmentMessage2" transaction="TX_MANDATORY">
+      <processor jndi="/atg/commerce/order/processor/SendFulfillmentMessage"/>
+    </pipelinelink>
+  </pipelinechain>
+</pipelinemanager>

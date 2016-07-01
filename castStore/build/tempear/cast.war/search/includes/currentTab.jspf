@@ -1,0 +1,87 @@
+
+<dsp:getvalueof var="prSR"  value="${ produitsQFH.searchResponse.results }"/>
+<dsp:getvalueof var="docSR" value="${ docQFH.searchResponse.results }"/>
+<dsp:getvalueof var="magSR" value="${ magasinQFH.searchResponse.results }"/>
+<dsp:getvalueof var="searchTypeVar" param="searchType"/>
+<dsp:getvalueof var="activeTabVar" param="currentTab"/>
+<c:choose>
+	<c:when test="${empty activeTabVar}">
+	  <c:choose>
+	    <c:when test="${not empty searchTypeVar && searchTypeVar == '2'}">
+	      <c:set var="activeTabVar" value="produitsTab"/>
+	    </c:when>
+	    <c:when test="${not empty searchTypeVar && searchTypeVar == '3'}">
+	     <c:set var="activeTabVar" value="ideasTab"/>    
+	    </c:when>
+	    <c:when test="${not empty searchTypeVar && searchTypeVar == '4'}">
+	      <c:set var="activeTabVar" value="magasinTab"/>
+	    </c:when>
+	    <c:otherwise>
+	      <c:choose>
+	        <c:when test="${not empty prSR }">
+	          <c:set var="activeTabVar" value="produitsTab"/>
+	        </c:when>
+	        <c:otherwise>
+	          <c:choose>
+	            <c:when test="${not empty docSR }">
+	              <c:set var="activeTabVar" value="ideasTab"/>
+	            </c:when>
+	            <c:otherwise>
+	              <c:choose>
+	                <c:when test="${not empty magSR }">
+	                  <c:set var="activeTabVar" value="magasinTab"/>
+	                </c:when>
+	                <c:otherwise>
+	                 <c:set var="activeTabVar" value="produitsTab"/>
+	                </c:otherwise>
+	          	  </c:choose>
+	            </c:otherwise>
+	          </c:choose>
+	        </c:otherwise>
+	      </c:choose>
+	    </c:otherwise>        
+	  </c:choose>
+	</c:when>
+	<c:otherwise>
+	 <c:choose>
+		 <c:when test="${activeTabVar=='produitsTab' && empty prSR}">
+       <c:choose>
+	       <c:when test="${not empty docSR }">
+	         <c:set var="activeTabVar" value="ideasTab"/>
+	       </c:when>
+	       <c:otherwise>
+	         <c:choose>
+	           <c:when test="${not empty magSR }">
+	             <c:set var="activeTabVar" value="magasinTab"/>
+	           </c:when>
+	           <c:otherwise>
+	            <c:set var="activeTabVar" value="produitsTab"/>
+	           </c:otherwise>
+	         </c:choose>
+	       </c:otherwise>
+	     </c:choose>
+		 </c:when>
+		 <c:when test="${activeTabVar=='ideasTab' && empty docSR}">
+	     <c:choose>
+	       <c:when test="${not empty magSR }">
+	         <c:set var="activeTabVar" value="magasinTab"/>
+	       </c:when>
+	       <c:otherwise>
+	        <c:set var="activeTabVar" value="produitsTab"/>
+	       </c:otherwise>
+	     </c:choose>
+     </c:when>
+     <c:when test="${activeTabVar=='magasinTab' && empty magSR}">
+       <c:choose>
+         <c:when test="${not empty docSR }">
+           <c:set var="activeTabVar" value="ideasTab"/>
+         </c:when>
+         <c:otherwise>
+          <c:set var="activeTabVar" value="produitsTab"/>
+         </c:otherwise>
+       </c:choose>
+     </c:when>
+	 </c:choose>
+	</c:otherwise>
+</c:choose>
+

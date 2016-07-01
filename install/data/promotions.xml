@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <add-item item-descriptor="Shipping Discount - Percent Off" id="promo50051">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[3000 Euro dchats vous recevez une remise de 20 % sur le frais de livraison !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[12.2 Discount of X% on shipping fee]]></set-property>
+            <set-property name="enabled"><![CDATA[false]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 12:17:44]]></set-property>
+            <set-property name="type"><![CDATA[Shipping Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's rawSubtotal is not less than 3000 Shipping Group -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.rawSubtotal</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>3000.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo90029">
+            <set-property name="adjuster"><![CDATA[35.0]]></set-property>
+            <set-property name="displayName"><![CDATA[MP_Login_Discount]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/19/2009 13:42:17]]></set-property>
+            <set-property name="giveToAnonymousProfiles"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( sku named 543340 ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.catalogRefId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>Casto543340</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50061">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="description"><![CDATA[-10 % sur tout produit Outillage !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[17.1 X percent off on products from a certain category]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 12:27:08]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product in category named Outillage ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <includes>
+        <value>item.auxiliaryData.productRef.ancestorCategoryIds</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>cat270022</string-value>
+        </constant>
+      </includes>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo90019">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description"><![CDATA[-50 off order coupon]]></set-property>
+            <set-property name="displayName"><![CDATA[TEST_coupon_1]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[12/10/2009 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/2/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/19/2009 11:20:44]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Order Total -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50035">
+            <set-property name="adjuster"><![CDATA[200.0]]></set-property>
+            <set-property name="description"><![CDATA[-200 Euro sur le sous-total de votre commande !]]></set-property>
+            <set-property name="displayName"><![CDATA[8.3 Coupon for X euro]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 11:47:59]]></set-property>
+            <set-property name="giveToAnonymousProfiles"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Order Total -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50029">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description"><![CDATA[-50 Euro sur le sous-total de votre commande !]]></set-property>
+            <set-property name="displayName"><![CDATA[8.1 Coupon for X euro]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/2/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/2/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/6/2009 11:44:17]]></set-property>
+            <set-property name="giveToAnonymousProfiles"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Order Total -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Percent Off" id="promo90015">
+            <set-property name="adjuster"><![CDATA[15.0]]></set-property>
+            <set-property name="displayName"><![CDATA[MP_Order_Discount]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/18/2009 17:35:12]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Order Total -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50023">
+            <set-property name="adjuster"><![CDATA[30.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Profitez maintenant remise de 30 % sur ce produit !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[6.3 Discount in percentage on a product -30]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 16:04:42]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product named Fauteuil de relaxation "Futura", coloris Outdoor ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod120021</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo20003">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="media"><![CDATA[slotImage=mReferrerPromoImg]]></set-property>
+            <set-property name="displayName"><![CDATA[Referrer Promo 20 Off]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[8/28/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[8/27/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[8/28/2009 12:18:12]]></set-property>
+            <set-property name="giveToAnonymousProfiles"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Order Total -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50019">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Profitez maintenant d'une remise de 10 % sur ce produit !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[6.1 Discount in percentage on a product -10]]></set-property>
+            <set-property name="priority"><![CDATA[2]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 16:02:45]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product named Cadre Dora 33 x 33 cm ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod120024</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Shipping Discount - Percent Off" id="promo90017">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="displayName"><![CDATA[MP_Shipping_Discount]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/18/2009 17:37:36]]></set-property>
+            <set-property name="type"><![CDATA[Shipping Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Shipping Group -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Shipping Discount - Percent Off" id="promo50049">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description"><![CDATA[-50 % sur le frais de livraison !]]></set-property>
+            <set-property name="displayName"><![CDATA[12.1 Discount of X% on shipping fee]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/2/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/2/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/6/2009 12:15:32]]></set-property>
+            <set-property name="type"><![CDATA[Shipping Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Shipping Group -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo90013">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="displayName"><![CDATA[MP_Item_Discount]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/18/2009 17:33:42]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( sku named 529826 ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.catalogRefId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>Casto529826</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50033">
+            <set-property name="adjuster"><![CDATA[100.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description"><![CDATA[-100 Euro sur le sous-total de votre commande !]]></set-property>
+            <set-property name="displayName"><![CDATA[8.2 Coupon for X euro]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/5/2009 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/1/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/6/2009 11:46:19]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Order Total -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50027">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Remise de 50 % sur tout produit plus de 5 tonnes !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[7.2 Discount in percentage if the article weight is more than X kg]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 16:11:29]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( sku whose Poids is not less than 5000000 ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <greater-than-or-equals>
+        <value>item.auxiliaryData.catalogRef.PoidsUV</value>
+        <constant>
+          <data-type>java.lang.Integer</data-type>
+          <string-value>5000000</string-value>
+        </constant>
+      </greater-than-or-equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50005">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Vous venez de bnficier d'une remise de 50 Euro sur le sous-total de votre commande !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[1.2 Discount in euros on an amount -50]]></set-property>
+            <set-property name="enabled"><![CDATA[false]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:29:38]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's rawSubtotal is not less than 1000 Order Total -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.rawSubtotal</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>1000.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Shipping Discount - Fixed Price" id="promo50043">
+            <set-property name="adjuster"><![CDATA[0.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description"><![CDATA[Vous bnficiez de la LIVRAISON GRATUITE !]]></set-property>
+            <set-property name="upsell"><![CDATA[true]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[10.1 Free shipping]]></set-property>
+            <set-property name="enabled"><![CDATA[false]]></set-property>
+            <!--set-property name="closenessQualifiers"><![CDATA[200010]]></set-property-->
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/2/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/2/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/6/2009 11:58:07]]></set-property>
+            <set-property name="oneUsePerOrder"><![CDATA[true]]></set-property>
+            <set-property name="type"><![CDATA[Shipping Discount - Fixed Price]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's total is not less than 10000 Shipping Group -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.total</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>10000.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50053">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[-50 Euro sur votre commande pour ces 2 produits achets !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[14.1 For 2 specific products purchased, X euros off]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 12:21:07]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When order contains at least 1 ( product named Carport Cara ) and order contains at least 1 ( product named Sauna VERHAEGHE Oostende ) Order Total -->
+  <qualifier>
+    <and>
+      <at-least number="1">
+        <collection-name>items</collection-name>
+        <element-name>item</element-name>
+        <element-quantity-property>quantity</element-quantity-property>
+        <equals>
+          <value>item.auxiliaryData.productId</value>
+          <constant>
+            <data-type>java.lang.String</data-type>
+            <string-value>prod150033</string-value>
+          </constant>
+        </equals>
+      </at-least>
+      <at-least number="1">
+        <collection-name>items</collection-name>
+        <element-name>item</element-name>
+        <element-quantity-property>quantity</element-quantity-property>
+        <equals>
+          <value>item.auxiliaryData.productId</value>
+          <constant>
+            <data-type>java.lang.String</data-type>
+            <string-value>prod150005</string-value>
+          </constant>
+        </equals>
+      </at-least>
+    </and>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Shipping Discount - Fixed Price" id="promo50059">
+            <set-property name="adjuster"><![CDATA[0.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Vous bnficiez de la LIVRAISON GRATUITE ds 20 000 Euro  !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[15.1 Free shipping starting from X euros]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 12:24:54]]></set-property>
+            <set-property name="type"><![CDATA[Shipping Discount - Fixed Price]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's rawSubtotal is not less than 20000 Shipping Group -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.rawSubtotal</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>20000.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50015">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="description"><![CDATA[Remise de 50 % sur tout produit  MULTIMETRIX !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[3.2 Discount in percentage on a brand -50]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:39:24]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( sku whose Marque Commerciale is MULTIMETRIX ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.catalogRef.MarqueCommerciale</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>MULTIMETRIX</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Amount Off" id="promo80007">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="description"><![CDATA[-20 Euro]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[Grouped -20 Euro]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/16/2009 10:24:03]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( sku named 352287 ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.catalogRefId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>Casto352287</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Amount Off" id="promo40007">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Profitez ds maintenant d'une remise de 50 Euro sur ce produit !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[0.1 Discount in amount on a product -50]]></set-property>
+            <set-property name="priority"><![CDATA[3]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:14:08]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product named Balise solaire Globall LED coloris ambre ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod120011</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50025">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Remise de 10 % sur tout produit psant plus de 2 tonnes !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[7.1 Discount in percentage if the article weight is more than X kg]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 16:10:25]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( sku whose Poids is not less than 2000000 ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <greater-than-or-equals>
+        <value>item.auxiliaryData.catalogRef.PoidsUV</value>
+        <constant>
+          <data-type>java.lang.Integer</data-type>
+          <string-value>2000000</string-value>
+        </constant>
+      </greater-than-or-equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Shipping Discount - Percent Off" id="promo90023">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description"><![CDATA[-50% off shipping coupon]]></set-property>
+            <set-property name="displayName"><![CDATA[TEST_coupon_3]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/17/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/19/2009 11:24:01]]></set-property>
+            <set-property name="oneUsePerOrder"><![CDATA[true]]></set-property>
+            <set-property name="type"><![CDATA[Shipping Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Shipping Group -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo80005">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="description"><![CDATA[Promotion 2]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[Promotion 2]]></set-property>
+            <set-property name="priority"><![CDATA[2]]></set-property>
+            <set-property name="enabled"><![CDATA[false]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/13/2009 15:56:54]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product named Balise solaire Globall LED coloris ambre ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod120011</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50013">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="description"><![CDATA[Remise de 10 % sur tout produit WIRQUIN !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[3.1 Discount in percentage on a brand -10]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:37:27]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( sku whose Marque Commerciale is WIRQUIN ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.catalogRef.MarqueCommerciale</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>WIRQUIN</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50057">
+            <set-property name="adjuster"><![CDATA[100.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[-100 Euro sur votre commande pour ces 2 produits achets !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[14.2 For 2 specific products purchased, X euros off]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 12:23:25]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When order contains at least 1 ( sku named 555145 ) and order contains at least 1 ( sku named 537847 ) Order Total -->
+  <qualifier>
+    <and>
+      <at-least number="1">
+        <collection-name>items</collection-name>
+        <element-name>item</element-name>
+        <element-quantity-property>quantity</element-quantity-property>
+        <equals>
+          <value>item.catalogRefId</value>
+          <constant>
+            <data-type>java.lang.String</data-type>
+            <string-value>Casto555145</string-value>
+          </constant>
+        </equals>
+      </at-least>
+      <at-least number="1">
+        <collection-name>items</collection-name>
+        <element-name>item</element-name>
+        <element-quantity-property>quantity</element-quantity-property>
+        <equals>
+          <value>item.catalogRefId</value>
+          <constant>
+            <data-type>java.lang.String</data-type>
+            <string-value>Casto537847</string-value>
+          </constant>
+        </equals>
+      </at-least>
+    </and>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo10004">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="media"><![CDATA[slotImage=mRefereePromoImg]]></set-property>
+            <set-property name="displayName"><![CDATA[Referee Promo 20 Off]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[8/28/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[8/27/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[8/27/2009 19:43:24]]></set-property>
+            <set-property name="giveToAnonymousProfiles"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Order Total -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Amount Off" id="promo40011">
+            <set-property name="adjuster"><![CDATA[5.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description">
+                <![CDATA[Profitez ds maintenant d'une remise de 5 Euro sur ce produit !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[0.3 Discount in amount on a product -5]]></set-property>
+            <set-property name="priority"><![CDATA[4]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/3/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/1/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:17:30]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product named Balise solaire Globall LED coloris ambre ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod120011</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Shipping Discount - Fixed Price" id="promo90021">
+            <set-property name="adjuster"><![CDATA[0.0]]></set-property>
+            <set-property name="description"><![CDATA[free shipping coupon]]></set-property>
+            <set-property name="displayName"><![CDATA[TEST_coupon_2]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/19/2009 11:22:39]]></set-property>
+            <set-property name="oneUsePerOrder"><![CDATA[true]]></set-property>
+            <set-property name="type"><![CDATA[Shipping Discount - Fixed Price]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always Shipping Group -->
+  <qualifier/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Fixed Price" id="promo50045">
+            <set-property name="adjuster"><![CDATA[1.0]]></set-property>
+            <set-property name="description">
+                <![CDATA['2 Piles alcaline plus DX2 LR20' POUR 1 EURO ! Ajoutez-les  votre panier pour bnficiez de cette offre maintenant !]]></set-property>
+            <set-property name="upsell"><![CDATA[true]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[11.1 For a specific purchased product, another one for 1 euro]]></set-property>
+            <!--set-property name="closenessQualifiers"><![CDATA[200002]]></set-property-->
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 12:03:04]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Fixed Price]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When order contains at least 1 ( sku named 891552 ) up to 1 ( sku named 870396 ) -->
+  <qualifier>
+    <at-least number="1">
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <element-quantity-property>quantity</element-quantity-property>
+      <equals>
+        <value>item.catalogRefId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>Casto891552</string-value>
+        </constant>
+      </equals>
+    </at-least>
+  </qualifier>
+  <target>
+    <up-to-and-including number="1" sort-by="priceInfo.listPrice" sort-order="ascending">
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <element-quantity-property>quantity</element-quantity-property>
+      <equals>
+        <value>item.catalogRefId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>Casto870396</string-value>
+        </constant>
+      </equals>
+    </up-to-and-including>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Percent Off" id="promo50011">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Vous venez de bnficier d'une remise de 20 % sur le sous-total de votre commande !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[2.2 Discount in percentage on an amount -50]]></set-property>
+            <set-property name="enabled"><![CDATA[false]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:32:32]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's rawSubtotal is not less than 5000 Order Total -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.rawSubtotal</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>5000.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Fixed Price" id="promo90009">
+            <set-property name="adjuster"><![CDATA[0.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Maison d'enfant Loulou GRATUITE ds 10'000 Euro  !]]></set-property>
+            <set-property name="upsell"><![CDATA[true]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[13. Adding a product for free to an existing shopping cart]]></set-property>
+            <!--set-property name="closenessQualifiers"><![CDATA[200004]]></set-property-->
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/18/2009 11:53:14]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Fixed Price]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's total is not less than 10000 up to 1 ( product named Maison d'enfant Loulou ) -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.total</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>10000.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+  <target>
+    <up-to-and-including number="1" sort-by="priceInfo.listPrice" sort-order="ascending">
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <element-quantity-property>quantity</element-quantity-property>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod140004</string-value>
+        </constant>
+      </equals>
+    </up-to-and-including>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Amount Off" id="promo70007">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[TEST Item Discount - Amount Off - Description Description Description Description Description]]></set-property>
+            <set-property name="displayName"><![CDATA[TEST Item Discount - Amount Off]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/9/2009 15:36:32]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always all items -->
+  <qualifier/>
+  <target/>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo50021">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Profitez ds maintenant d'une remise de 20 % sur ce produit !]]></set-property>
+            <!--set-property name="media"><![CDATA[icon=m360042]]></set-property-->
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[6.2 Discount in percentage on a product -20]]></set-property>
+            <set-property name="priority"><![CDATA[5]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 16:03:50]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product named Balise solaire Globall LED coloris ambre ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod120011</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50039">
+            <set-property name="adjuster"><![CDATA[100.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description">
+                <![CDATA[-100 Euro sur le sous-total de votre commande ds 500 Euro  !]]></set-property>
+            <set-property name="displayName"><![CDATA[9.2 Coupon for X euro for an amount of X euro]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/2/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/2/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/6/2009 11:52:26]]></set-property>
+            <set-property name="giveToAnonymousProfiles"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's total is not less than 500 Order Total -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.total</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>500.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Fixed Price" id="promo50017">
+            <set-property name="adjuster"><![CDATA[0.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Mitigeur douche Axium OFFERT ! Ajoutez-le  votre panier pour profiter de cette offre !]]></set-property>
+            <set-property name="upsell"><![CDATA[true]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[4.1 For 2 specific articles purchased 1 for free]]></set-property>
+            <!--set-property name="closenessQualifiers"><![CDATA[100004,100002]]></set-property-->
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:49:59]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Fixed Price]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When order contains at least 1 ( sku named 294602 ) and order contains at least 1 ( sku named 516817 ) up to 1 ( sku named 494314 ) -->
+  <qualifier>
+    <and>
+      <at-least number="1">
+        <collection-name>items</collection-name>
+        <element-name>item</element-name>
+        <element-quantity-property>quantity</element-quantity-property>
+        <equals>
+          <value>item.catalogRefId</value>
+          <constant>
+            <data-type>java.lang.String</data-type>
+            <string-value>Casto294602</string-value>
+          </constant>
+        </equals>
+      </at-least>
+      <at-least number="1">
+        <collection-name>items</collection-name>
+        <element-name>item</element-name>
+        <element-quantity-property>quantity</element-quantity-property>
+        <equals>
+          <value>item.catalogRefId</value>
+          <constant>
+            <data-type>java.lang.String</data-type>
+            <string-value>Casto516817</string-value>
+          </constant>
+        </equals>
+      </at-least>
+    </and>
+  </qualifier>
+  <target>
+    <up-to-and-including number="1" sort-by="priceInfo.listPrice" sort-order="ascending">
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <element-quantity-property>quantity</element-quantity-property>
+      <equals>
+        <value>item.catalogRefId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>Casto494314</string-value>
+        </constant>
+      </equals>
+    </up-to-and-including>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Amount Off" id="promo40009">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description">
+                <![CDATA[Profitez ds maintenant d'une remise de 20 Euro sur ce produit !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[0.2 Discount in amount on a product -20]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/2/2010 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/2/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:16:15]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always every ( product named Balise solaire Globall LED coloris ambre ) -->
+  <qualifier/>
+  <target>
+    <every>
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <equals>
+        <value>item.auxiliaryData.productId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>prod120011</string-value>
+        </constant>
+      </equals>
+    </every>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Fixed Price" id="promo90011">
+            <set-property name="adjuster"><![CDATA[0.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Achetez 3 Fauteuils de relaxation et recevez un 4me GRATUITEMENT !]]></set-property>
+            <set-property name="upsell"><![CDATA[true]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[16. For X times the same product purchased X for free]]></set-property>
+            <!--set-property name="closenessQualifiers"><![CDATA[200008,200006]]></set-property-->
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/18/2009 12:00:55]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Fixed Price]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--Always up to 1 ( sku named 514563 ) -->
+  <qualifier/>
+  <target>
+    <up-to-and-including number="1" sort-by="priceInfo.listPrice" sort-order="ascending">
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <element-quantity-property>quantity</element-quantity-property>
+      <equals>
+        <value>item.catalogRefId</value>
+        <constant>
+          <data-type>java.lang.String</data-type>
+          <string-value>Casto514563</string-value>
+        </constant>
+      </equals>
+    </up-to-and-including>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Item Discount - Percent Off" id="promo90007">
+            <set-property name="adjuster"><![CDATA[10.0]]></set-property>
+            <set-property name="description"><![CDATA[Discount in % on the cheapest article -10%]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[Discount in % on the cheapest article -10%]]></set-property>
+            <set-property name="uses"><![CDATA[Infinite]]></set-property>
+            <set-property name="allowMultiple"><![CDATA[true]]></set-property>
+            <set-property name="enabled"><![CDATA[false]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/17/2009 13:00:14]]></set-property>
+            <set-property name="type"><![CDATA[Item Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's rawSubtotal is not less than 50 up to 1 ( sku whose Poids is not less than 0 ) -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.rawSubtotal</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>50.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+  <target>
+    <up-to-and-including number="1" sort-by="priceInfo.listPrice" sort-order="ascending">
+      <collection-name>items</collection-name>
+      <element-name>item</element-name>
+      <element-quantity-property>quantity</element-quantity-property>
+      <greater-than-or-equals>
+        <value>item.auxiliaryData.catalogRef.PoidsUV</value>
+        <constant>
+          <data-type>java.lang.Integer</data-type>
+          <string-value>0</string-value>
+        </constant>
+      </greater-than-or-equals>
+    </up-to-and-including>
+  </target>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo40013">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Vous venez de bnficier d'une remise de 20 Euro sur le sous-total de votre commande !]]></set-property>
+            <set-property name="displayName"><![CDATA[1.1 Discount in euros on an amount -20]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:19:48]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's rawSubtotal is not less than 200 Order Total -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.rawSubtotal</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>200.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Percent Off" id="promo50008">
+            <set-property name="adjuster"><![CDATA[20.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[Vous venez de bnficier d'une remise de 20 % sur le sous-total de votre commande !]]></set-property>
+            <set-property name="global"><![CDATA[true]]></set-property>
+            <set-property name="displayName"><![CDATA[2.1 Discount in percentage on an amount -20%]]></set-property>
+            <set-property name="enabled"><![CDATA[false]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/5/2009 15:31:08]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Percent Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's rawSubtotal is not less than 500 Order Total -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.rawSubtotal</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>500.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50041">
+            <set-property name="adjuster"><![CDATA[200.0]]></set-property>
+            <set-property name="description">
+                <![CDATA[-200 Euro sur le sous-total de votre commande ds 1000 Euro  !]]></set-property>
+            <set-property name="displayName"><![CDATA[9.3 Coupon for X euro for an amount of X euro]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[11/6/2009 11:54:49]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's total is not less than 1000 Order Total -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.total</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>1000.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Order Discount - Amount Off" id="promo50037">
+            <set-property name="adjuster"><![CDATA[50.0]]></set-property>
+            <set-property name="relativeExpiration"><![CDATA[true]]></set-property>
+            <set-property name="description">
+                <![CDATA[-50 Euro sur le sous-total de votre commande ds 100 Euro  !]]></set-property>
+            <set-property name="displayName"><![CDATA[9.1 Coupon for X euro for an amount of X euro]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="endUsable"><![CDATA[11/5/2009 00:00:00]]></set-property>
+            <set-property name="beginUsable"><![CDATA[11/1/2009 00:00:00]]></set-property>
+            <set-property name="creationDate"><![CDATA[11/6/2009 11:50:31]]></set-property>
+            <set-property name="type"><![CDATA[Order Discount - Amount Off]]></set-property>
+            <set-property name="pmdlRule"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE pricing-model
+  SYSTEM
+  "dynamosystemresource:/atg/dtds/pmdl/pmdl_1.0.dtd">
+
+<pricing-model>
+  <!--When Order's priceInfo's total is not less than 100 Order Total -->
+  <qualifier>
+    <greater-than-or-equals>
+      <value>order.priceInfo.total</value>
+      <constant>
+        <data-type>java.lang.Double</data-type>
+        <string-value>100.0</string-value>
+      </constant>
+    </greater-than-or-equals>
+  </qualifier>
+</pricing-model>
+]]></set-property>
+        </add-item>
+
+    </import-items>
+</gsa-template>

@@ -1,0 +1,35 @@
+<ul class="bookingSteps">
+  <dsp:droplet name="Switch">
+    <dsp:param name="value" param="selectedStep" />
+    <dsp:oparam name="1">
+      <li class="active">
+    </dsp:oparam>
+    <dsp:oparam name="default">
+      <li>
+    </dsp:oparam>
+  </dsp:droplet>
+    <span>1</span>&nbsp;<fmt:message key="msg.delivery.ref" />
+  </li>
+  <dsp:droplet name="Switch">
+    <dsp:param name="value" param="selectedStep" />
+    <dsp:oparam name="2">
+      <li class="active">
+    </dsp:oparam>
+    <dsp:oparam name="default">
+      <li>
+    </dsp:oparam>
+  </dsp:droplet>
+    <span>2</span>&nbsp;<fmt:message key="msg.payment.ref" />
+  </li>
+  <dsp:droplet name="Switch">
+    <dsp:param name="value" param="selectedStep" />
+    <dsp:oparam name="3">
+      <li class="active">
+    </dsp:oparam>
+    <dsp:oparam name="default">
+      <li>
+    </dsp:oparam>
+  </dsp:droplet>
+    <span>3</span>&nbsp;<fmt:message key="msg.confirmation.ref" />
+  </li>
+</ul>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+	<item-descriptor name="suiviCommandeMail" display-name="Mails de suivi des commandes" display-property="ID">
+		<table name="CASTO_MAILSUIVICOMMANDE" type="primary" id-column-name="ID">
+	     	<property name="ID" data-type="string" column-name="ID" required="true" display-name="Id"/>
+	     	<property name="PROFILE_ID" data-type="string" required="true" column-name="PROFILE_ID" display-name="Profil"/>
+	     	<property name="ORDER_ID" data-type="string" column-name="ORDER_ID" required="true" display-name="Commande"/>
+	     	<property name="QUESTIONNAIRE_ID" data-type="string" column-name="QUESTIONNAIRE_ID" required="true" display-name="Questionnaire"/>
+	     	<property name="LCOMMENTAIRE" data-type="string" column-name="LCOMMENTAIRE" display-name="Commentaire"/>
+	     	<property name="CCONTACT" data-type="int" column-name="CCONTACT" display-name="Contact"/>
+	     	<property name="CENLEVEMENT" data-type="int" column-name="CENLEVEMENT" display-name="Enlevement"/>
+	     	<property name="CREMBOURSEMENT" data-type="int" column-name="CREMBOURSEMENT" display-name="Remboursement"/>
+	     	<property name="DATE_ENVOIE" data-type="timestamp" column-name="DATE_ENVOIE" display-name="Date envoie"/>
+	   </table>
+    </item-descriptor>
+</gsa-template>
+
+ 
+	
+	

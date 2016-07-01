@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100000">
+            <set-property name="description"><![CDATA[Agencer les dalles PVC]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Agencer les dalles PVC]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100001]]></set-property>
+            <set-property name="rating"><![CDATA[0.18]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100001">
+            <set-property name="description"><![CDATA[Bord à bord]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Bord à bord]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100002]]></set-property>
+            <set-property name="rating"><![CDATA[0.24]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100002">
+            <set-property name="description">
+                <![CDATA[Choisir et monter une cloison en carreaux de plâtre]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Choisir et monter une cloison en carreaux de plâtre]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100003]]></set-property>
+            <set-property name="rating"><![CDATA[1.85]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100003">
+            <set-property name="description"><![CDATA[Choisir le type de pose]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Choisir le type de pose]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100004]]></set-property>
+            <set-property name="rating"><![CDATA[3.71]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100004">
+            <set-property name="description"><![CDATA[Choisir son parquet]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Choisir son parquet]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100005]]></set-property>
+            <set-property name="rating"><![CDATA[1.32]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100005">
+            <set-property name="description"><![CDATA[Couper et poser des carreaux de périphériques]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Couper et poser des carreaux de périphériques]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100006]]></set-property>
+            <set-property name="rating"><![CDATA[0.87]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100006">
+            <set-property name="description"><![CDATA[Découper les plaques de plâtre]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Découper les plaques de plâtre]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100007]]></set-property>
+            <set-property name="rating"><![CDATA[0.87]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100007">
+            <set-property name="description"><![CDATA[Emplacements difficiles]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Emplacements difficiles]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100008]]></set-property>
+            <set-property name="rating"><![CDATA[0.72]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100008">
+            <set-property name="description"><![CDATA[Finition du revêtement]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Finition du revêtement]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100009]]></set-property>
+            <set-property name="rating"><![CDATA[4.24]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_100009">
+            <set-property name="description"><![CDATA[Finitions]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Finitions]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100001]]></set-property>
+            <set-property name="rating"><![CDATA[0.78]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000010">
+            <set-property name="description"><![CDATA[Fixer le lambris bois]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Fixer le lambris bois]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100002]]></set-property>
+            <set-property name="rating"><![CDATA[0.27]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000011">
+            <set-property name="description"><![CDATA[Fixer les tasseaux]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Fixer les tasseaux]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100003]]></set-property>
+            <set-property name="rating"><![CDATA[3.75]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000012">
+            <set-property name="description"><![CDATA[Jointoyer]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Jointoyer]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100004]]></set-property>
+            <set-property name="rating"><![CDATA[1.94]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000013">
+            <set-property name="description"><![CDATA[Lames à chants droits]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Lames à chants droits]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100005]]></set-property>
+            <set-property name="rating"><![CDATA[0.41]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000014">
+            <set-property name="description"><![CDATA[Monter une cloison en briques de verre]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Monter une cloison en briques de verre]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100006]]></set-property>
+            <set-property name="rating"><![CDATA[1.16]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000015">
+            <set-property name="description"><![CDATA[Monter une cloison sur ossature métallique]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Monter une cloison sur ossature métallique]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100007]]></set-property>
+            <set-property name="rating"><![CDATA[2.00]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000016">
+            <set-property name="description"><![CDATA[niveler]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[niveler]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100008]]></set-property>
+            <set-property name="rating"><![CDATA[4.42]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000017">
+            <set-property name="description"><![CDATA[Passage des encadrements et montants de portes]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Passage des encadrements et montants de portes]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100009]]></set-property>
+            <set-property name="rating"><![CDATA[0.32]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000018">
+            <set-property name="description"><![CDATA[Passage des tuyauteries]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Passage des tuyauteries]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100001]]></set-property>
+            <set-property name="rating"><![CDATA[0.46]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000019">
+            <set-property name="description"><![CDATA[Poncer les lames de parquet]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poncer les lames de parquet]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100002]]></set-property>
+            <set-property name="rating"><![CDATA[4.77]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000020">
+            <set-property name="description"><![CDATA[Poser des bandes à joints]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser des bandes à joints]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100003]]></set-property>
+            <set-property name="rating"><![CDATA[1.62]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000021">
+            <set-property name="description"><![CDATA[Poser des carreaux]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser des carreaux]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100004]]></set-property>
+            <set-property name="rating"><![CDATA[2.80]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000022">
+            <set-property name="description"><![CDATA[Poser des dalles d'aggloméré]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser des dalles d'aggloméré]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100005]]></set-property>
+            <set-property name="rating"><![CDATA[0.45]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000023">
+            <set-property name="description"><![CDATA[Poser des dalles PVC adhésives]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser des dalles PVC adhésives]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100006]]></set-property>
+            <set-property name="rating"><![CDATA[1.62]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000024">
+            <set-property name="description"><![CDATA[Poser des lames à clipser]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser des lames à clipser]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100007]]></set-property>
+            <set-property name="rating"><![CDATA[4.66]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000025">
+            <set-property name="description"><![CDATA[Poser du PVC souple]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser du PVC souple]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100008]]></set-property>
+            <set-property name="rating"><![CDATA[2.05]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000026">
+            <set-property name="description"><![CDATA[Poser le lambris pvc]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser le lambris pvc]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100009]]></set-property>
+            <set-property name="rating"><![CDATA[4.22]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000027">
+            <set-property name="description"><![CDATA[Poser son parquet]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser son parquet]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100001]]></set-property>
+            <set-property name="rating"><![CDATA[4.23]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000028">
+            <set-property name="description">
+                <![CDATA[Poser une porte en cours de montage d'une cloison]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Poser une porte en cours de montage d'une cloison]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100001]]></set-property>
+            <set-property name="rating"><![CDATA[0.61]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000029">
+            <set-property name="description"><![CDATA[Reboucher les fentes]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Reboucher les fentes]]></set-property>
+            <set-property name="documentType"><![CDATA[Pédagogie et Communauté]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100003]]></set-property>
+            <set-property name="rating"><![CDATA[4.46]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000030">
+            <set-property name="description"><![CDATA[Remplacer une portion de lame]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title"><![CDATA[Remplacer une portion de lame]]></set-property>
+            <set-property name="documentType"><![CDATA[Inspiration]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100001]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100004]]></set-property>
+            <set-property name="rating"><![CDATA[4.74]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+        <add-item item-descriptor="castoramaDocument" id="cast_doc_1000031">
+            <set-property name="description">
+                <![CDATA[Réaliser un angle, Faire une jonction avec un mur existant]]></set-property>
+            <set-property name="relativeURL"><![CDATA[/documents/aide_au_choix.htm]]></set-property>
+            <set-property name="image"><![CDATA[532227_w100]]></set-property>
+            <set-property name="title">
+                <![CDATA[Réaliser un angle, Faire une jonction avec un mur existant]]></set-property>
+            <set-property name="documentType"><![CDATA[Outil]]></set-property>
+            <set-property name="documentSubType"><![CDATA[100002]]></set-property>
+            <set-property name="documentSubcategory"><![CDATA[100005]]></set-property>
+            <set-property name="rating"><![CDATA[4.70]]></set-property>
+            <set-property name="template"><![CDATA[mDocTemplate]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>  

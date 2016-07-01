@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+
+    <!-- 5 items of type sku-link -->
+
+    <add-item item-descriptor="sku-link" id="skul10004">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="tabName"><![CDATA[Meubles hauts]]></set-property>
+        <set-property name="displayName"><![CDATA[Link10]]></set-property>
+        <set-property name="item"><![CDATA[Casto352287]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[9/3/2009 09:29:20]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10006">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="tabName"><![CDATA[Meubles hauts]]></set-property>
+        <set-property name="displayName"><![CDATA[Link11]]></set-property>
+        <set-property name="item"><![CDATA[Casto352289]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[9/3/2009 09:30:32]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10009">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="tabName"><![CDATA[électricité]]></set-property>
+        <set-property name="displayName"><![CDATA[Link12]]></set-property>
+        <set-property name="item"><![CDATA[Casto486558]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[9/3/2009 09:32:24]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10012">
+        <set-property name="quantity"><![CDATA[1]]></set-property>
+        <set-property name="tabName"><![CDATA[électricité]]></set-property>
+        <set-property name="displayName"><![CDATA[Link13]]></set-property>
+        <set-property name="item"><![CDATA[Casto472052]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[9/3/2009 09:33:14]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="sku-link" id="skul10015">
+        <set-property name="quantity"><![CDATA[2]]></set-property>
+        <set-property name="tabName"><![CDATA[salle de bain]]></set-property>
+        <set-property name="displayName"><![CDATA[Link14]]></set-property>
+        <set-property name="item"><![CDATA[Casto532227]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[1]]></set-property>  -->
+        <set-property name="creationDate"><![CDATA[9/3/2009 09:34:54]]></set-property>
+    </add-item>
+
+    <!-- 3 items of type casto_sku -->
+
+    <add-item item-descriptor="casto_sku" id="sku10021">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="displayName"><![CDATA[Cabine de douche]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10015]]></set-property>
+        <set-property name="LibelleClientLong">
+            <![CDATA[Cabine de douche Flotille circulaire 100 cm. Porte coulissante. Verre securit transparent de 4 mm. Profilés en alu blanc. Mitigeur thermostatique. Dimensions : 100 x 100 x 207 cm.]]></set-property>
+        <set-property name="MarqueCommerciale"><![CDATA[POLYFILLA]]></set-property>
+        <set-property name="largeImage"><![CDATA[294598_w270]]></set-property>
+        <set-property name="thumbnailImage"><![CDATA[294598_w100]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[888888]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[4]]></set-property>  -->
+        <set-property name="computedCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[9/2/2009 18:45:28]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto_sku" id="sku10016">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="displayName"><![CDATA[Lampe torche Varta]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10009,skul10012]]></set-property>
+        <set-property name="LibelleClientLong">
+            <![CDATA[Lampe torche Varta pocket light 3R12 non incluses. 3,70V; 0,30 A Argon (Ref. 720000402). Plastique. 104 grammes.]]></set-property>
+        <set-property name="MarqueCommerciale"><![CDATA[HAMMERITE]]></set-property>
+        <set-property name="largeImage"><![CDATA[472052_w270]]></set-property>
+        <set-property name="thumbnailImage"><![CDATA[472052_w100]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[666666]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[3]]></set-property>  -->
+        <set-property name="computedCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[9/2/2009 18:34:28]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto_sku" id="sku10018">
+        <set-property name="type"><![CDATA[casto_sku]]></set-property>
+        <set-property name="displayName"><![CDATA[Meuble-sous-évier 100 cm]]></set-property>
+        <set-property name="bundleLinks"><![CDATA[skul10004,skul10006]]></set-property>
+        <set-property name="LibelleClientLong">
+            <![CDATA[Corps de meuble et façade réalisés en panneau de particules agglomérées mélaminé décor hêtre, épaisseur 16 mm, chants plaqués mélaminés, boutons coloris hêtre en PVC, charnières métalliques réglables, derrière en panneau de fibres moyenne densité, surface intérieure laquée hêtre, épaisseur 3,2 mm, vide sanitaire pour le passage des tuyaux, vérins réglables en hauteur, traverse arrière verticale pour une meilleure stabilité, une étagère positionnable à gauche ou à droite, réglable en hauteur, 3 portes, 1 bandeau fixe, 1 séparation, dimensions: 120 x 58 x 83 cm.]]></set-property>
+        <set-property name="MarqueCommerciale"><![CDATA[ROSTED]]></set-property>
+        <set-property name="largeImage"><![CDATA[352286_w270]]></set-property>
+        <set-property name="thumbnailImage"><![CDATA[352286_w100]]></set-property>
+        <set-property name="CodeArticle"><![CDATA[777777]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[5]]></set-property>  -->
+        <set-property name="computedCatalogs"><![CDATA[masterCatalog]]></set-property>
+        <set-property name="creationDate"><![CDATA[9/2/2009 18:34:40]]></set-property>
+    </add-item>
+
+    <!-- 3 items of type casto-grouped-product -->
+
+    <add-item item-descriptor="casto-grouped-product" id="prod603988">
+        <set-property name="childSKUs"><![CDATA[sku10018]]></set-property>
+        <set-property name="thumbnailImage"><![CDATA[352286_w100]]></set-property>
+        <set-property name="displayName"><![CDATA[Meuble-sous-évier 100 cm]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[7]]></set-property>  -->
+        <set-property name="groupingType"><![CDATA[kitchen]]></set-property>
+        <set-property name="creationDate"><![CDATA[9/2/2009 17:57:37]]></set-property>
+        <set-property name="largeImage"><![CDATA[352286_w270]]></set-property>
+        <set-property name="template"><![CDATA[mGrpdProdTemplate]]></set-property>
+        <set-property name="type"><![CDATA[casto-grouped-product]]></set-property>
+        <set-property name="rating"><![CDATA[0.497984]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto-grouped-product" id="prod613986">
+        <set-property name="childSKUs"><![CDATA[sku10016]]></set-property>
+        <set-property name="thumbnailImage"><![CDATA[472052_w100]]></set-property>
+        <set-property name="displayName"><![CDATA[Lampe torche Varta]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[6]]></set-property>  -->
+        <set-property name="groupingType"><![CDATA[kitchen]]></set-property>
+        <set-property name="creationDate"><![CDATA[9/2/2009 18:52:45]]></set-property>
+        <set-property name="largeImage"><![CDATA[472052_w270]]></set-property>
+        <set-property name="template"><![CDATA[mGrpdProdTemplate]]></set-property>
+        <set-property name="type"><![CDATA[casto-grouped-product]]></set-property>
+        <set-property name="rating"><![CDATA[1.85413]]></set-property>
+    </add-item>
+
+    <add-item item-descriptor="casto-grouped-product" id="prod613989">
+        <set-property name="childSKUs"><![CDATA[sku10021]]></set-property>
+        <set-property name="thumbnailImage"><![CDATA[294598_w100]]></set-property>
+        <set-property name="displayName"><![CDATA[Cabine de douche]]></set-property>
+        <!-- export is false   <set-property name="version"><![CDATA[7]]></set-property>  -->
+        <set-property name="groupingType"><![CDATA[kitchen]]></set-property>
+        <set-property name="creationDate"><![CDATA[9/2/2009 18:55:02]]></set-property>
+        <set-property name="largeImage"><![CDATA[294598_w270]]></set-property>
+        <set-property name="template"><![CDATA[mGrpdProdTemplate]]></set-property>
+        <set-property name="type"><![CDATA[casto-grouped-product]]></set-property>
+        <set-property name="rating"><![CDATA[0.027065]]></set-property>
+    </add-item>
+
+    <update-item item-descriptor="casto_category" id="cat290018">
+        <set-property name="fixedChildProducts"><![CDATA[prod90020,prod613986]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="casto_category" id="cat290004">
+        <set-property name="fixedChildProducts"><![CDATA[prod10002,prod10003,prod603988]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="casto_category" id="cat290008">
+        <set-property name="fixedChildProducts"><![CDATA[prod70003,prod70004,prod613989]]></set-property>
+    </update-item>
+
+</gsa-template>

@@ -1,0 +1,23 @@
+<importbean bean="/atg/dynamo/droplet/Switch">
+<importbean bean="/atg/dynamo/droplet/ErrorMessageForEach">
+<importbean bean="/atg/dynamo/security/SecurityAccessor">
+<DROPLET SRC="/call_center/common/protocolChange.jhtml"><PARAM NAME="protocol" VALUE="secure"></DROPLET>
+<html>
+<head><title>Trouver un contact</title>
+</head>
+<body>
+<droplet src="/call_center/common/header.jhtml">
+</droplet>
+<p>
+<!--- CONTACT --->
+<droplet name="SecurityAccessor">
+ <param name="allowGroups" value="commerce-csr-profiles-privilege">
+ <param name="denyGroups" value="">
+ <oparam name="accessAllowed">
+   <droplet src="find_contact.jhtml"></droplet>
+ </oparam>
+ <oparam name="accessDenied"></oparam>
+</droplet>
+</body>
+</HTML>
+

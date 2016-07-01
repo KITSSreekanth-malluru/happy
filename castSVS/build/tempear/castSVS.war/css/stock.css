@@ -1,0 +1,305 @@
+body {
+}
+
+h1 {
+}
+
+dl {
+    margin-bottom: 50px;
+}
+
+dl dt {
+    font-weight: bold;
+    margin: 5px 0;
+    padding: 5px 0;
+    width: 150px;
+    text-align: right;
+}
+
+dl dd {
+    margin: 2px 0;
+    width: 250px;
+    padding: 5px 0;
+}
+
+#sv_wstest_getstatus {
+    font-weight: bold;
+    width: 235px;
+}
+
+#sv_wstest_data {
+    width: 100%;
+    margin-left: 50px;
+}
+
+#sv_wstest_response {
+    font-size: 20px;
+    width: 800px;
+    height: 300px;
+    float: top;
+    border: 2px solid #default;
+    background: #c6c6c6;
+    color: #5a6b7c;
+}
+
+#sv_wstest_url {
+    font-size: 20px;
+    width: 800px;
+    height: 50px;
+    float: top;
+    border: 1px solid #default;
+    background: #c6c6c6;
+    color: #5a6b7c;
+}
+
+#sv_wstest_response_hr {
+    width: 800px;
+    margin-left: 0;
+    text-align: left;
+}
+
+#sv_wstest_url_hr {
+    width: 800px;
+    margin-left: 0;
+    text-align: left;
+}
+
+.sv_wstest_tag {
+    color: #800080;
+    font-weight: bold;
+}
+
+.sv_wstest_attr {
+    color: #3CB371;
+}
+
+.sv_wstest_value {
+    color: #4682B4;
+}
+
+.sv_wstest_label {
+    text-align: right;
+}
+
+/* Stock Availability Supervision Page */
+
+.stockAvailabilityBody {
+    background: white;
+    width: 580px;
+    margin: 0 auto 0 auto;
+}
+
+.stockAvailabilityHeader {
+    height: 100px;
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial,sans-serif;
+}
+
+
+.stockAvailabilityFooter {
+    padding-top: 25px;
+}
+
+
+.stockAvailabilityFooterTable td {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial,sans-serif;
+    margin: 0 auto;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.stockAvailabilityTable {
+    width: 570px;
+    border-collapse: collapse;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin: 0 auto 0 auto;
+}
+
+.stockAvailabilityTableRow {
+}
+
+.stockAvailabilityTableHeaderRow {
+}
+
+.stockAvailabilityTableOddRow {
+}
+
+.stockAvailabilityTable td {
+    text-align: left;
+    background-color: #E8E8E8;
+    font-family: Arial,sans-serif;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+
+    border-color: black;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+}
+
+.stockAvailabilityTableHeaderRow td {
+    border-style: solid;
+    font-weight: bold;
+}
+
+.stockAvailabilityTableOddRow td {
+    background-color: white;
+}
+
+.stockAvailabilityResult {
+    float: left;
+    margin-top: 40px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial,sans-serif;
+}
+
+.stockAvailabilityContent {
+   float: left;
+}
+
+.stockAvailabilityContentBlock {
+    float: left;
+    min-height: 170px;
+    width: 49%;
+    margin-right: 10px;
+    position: relative;
+}
+
+.footerDate {
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Arial,sans-serif;
+    margin-top: 50px;
+}
+
+.supervisionFooter {width:570px; margin-top:40px; font-weight:bold; font-size:22px; font-family:Arial,sans-serif; }
+.supervisionFooter .date {float:left;}
+.supervisionFooter .result {float:right;}
+
+.stockAvailabilitySubheader {
+    text-align: center;
+    font-family: Arial,sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+/* Stock Monitoring Page */
+
+.stockMonitoringBody {
+    background: white;
+}
+
+.stockMonitoringHeader {
+    width: 700px;
+    margin: 40px auto 50px auto;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Arial,sans-serif;
+    text-align: center;
+}
+
+.stockMonitoringMonthSelect {
+    float: right;
+
+    width: 150px;
+
+    font-size: 16px;
+    font-family: Arial,sans-serif;
+}
+
+.stockMonitoringContent {
+    width: 500px;
+    margin: 20px auto 80px auto;
+}
+
+.stockMonitoringTable {
+    border-collapse: collapse;
+    border-color: black;
+    border-width: 1px;
+}
+
+.stockMonitoringTableRow {
+}
+
+.stockMonitoringTableHeaderRow {
+}
+
+.stockMonitoringTableOddRow {
+}
+
+.stockMonitoringTableEmptyRow {
+}
+
+.stockMonitoringTable td {
+    padding-left: 20px;
+
+    text-align: left;
+    background-color: #E8E8E8;
+    font-family: Arial,sans-serif;
+
+    border-color: black;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+}
+
+.stockMonitoringTableHeaderRow td {
+    width: 125px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-style: solid;
+    font-weight: bold;
+}
+
+.stockMonitoringTableHeaderRow td.date {width:180px;}
+
+.stockMonitoringTableOddRow td {
+    background-color: white;
+}
+
+.stockMonitoringTableEmptyRow td {
+    background-color: white;
+    border-top-style: solid;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.stockMonitoringTableHeaderCategories td {
+    background-color: white;
+    border-width: 1px;
+    border-left: none;
+    height: 40px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.stockMonitoringTableHeaderCell {
+    border: 1px solid;
+}
+

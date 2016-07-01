@@ -1,0 +1,22 @@
+<dsp:getvalueof var="altName" param="sku.displayName"/>
+<dsp:getvalueof var="skuCodeArticle" param="sku.CodeArticle"/>
+<dsp:getvalueof var="skuImage" param="sku.thumbnailImage.url"/><%-- sku's image URL to be shown in comparator --%>
+
+<c:if test="${empty  skuImage}">
+  <dsp:getvalueof var="skuImage" value="/default_images/c_no_img.jpg"/>
+</c:if>
+
+<script type="text/javascript" >
+ var productParams = {
+   productId : "${productId}",
+   skuImage : "${skuImage}",
+   skuId : "${skuId}",
+   skuDiscountValue : "${skuDiscountValue}",
+   altName : "${altName}",
+   skuCodeArticle : "${skuCodeArticle}"
+ };
+</script>
+
+<div class="addToComparatorBlock">
+  <a style="text-decoration: none;" type="button" class="buttonAddToComparator" onclick="addProductLink(productParams);"></a>
+</div>

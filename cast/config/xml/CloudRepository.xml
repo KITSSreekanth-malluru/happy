@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+	<item-descriptor name="cloud_term" query-cache-size="1000" item-expire-timeout="300000" query-expire-timeout="300000">
+		<table name="cast_cloud_term" type="primary" id-column-name="id">
+			<property name="cloud" column-name="cloud_id" item-type="cloud"/>
+			<property name="term" data-type="string" column-name="term"/>
+			<property name="type" data-type="enumerated" column-name="type">
+				<option value="1" code="1"/>
+				<option value="2" code="2"/>
+				<option value="3" code="3"/>
+				<option value="4" code="4"/>
+			</property>
+			<property name="url" data-type="string" column-name="url"/>
+			<property name="sortOrder" data-type="int" column-name="sort_order"/>
+		</table>
+	</item-descriptor>
+	<item-descriptor name="cloud" default="true" query-cache-size="1000" item-expire-timeout="300000" query-expire-timeout="300000">
+		<table name="cast_cloud" type="primary" id-column-name="id">
+			<property name="referenceId" data-type="string" column-name="reference_id"/>
+			<property name="type" data-type="enumerated" column-name="type">
+				<option value="category" code="0"/>
+				<option value="page" code="1"/>
+				<option value="advice" code="2"/>
+			</property>
+		</table>
+		<table name="cast_cloud_term" type="multi" id-column-name="cloud_id">
+			<property name="terms" column-name="id" data-type="set" component-item-type="cloud_term"/>
+		</table>
+	</item-descriptor>
+</gsa-template>

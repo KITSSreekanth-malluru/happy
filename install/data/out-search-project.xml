@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <!-- No items of type queuedTask -->
+
+        <!-- No items of type externalContentItem -->
+
+        <!-- No items of type registeredImplementation -->
+
+        <!-- No items of type indexVersion -->
+
+        <!-- No items of type platform -->
+
+        <!-- No items of type historyData -->
+
+        <!-- No items of type syncStepStatusError -->
+
+        <!-- 21 items of type contentSourceAdapter -->
+
+        <add-item item-descriptor="contentSourceAdapter" id="100015">
+            <set-property name="extraConfig"><![CDATA[100001]]></set-property>
+            <set-property name="name">
+                <![CDATA[ATG Repository - localhost:10160 - /atg/commerce/search/ProductCatalogOutputConfig]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100007">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/FileQueryRuleAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.file.query_rules]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="300017">
+            <set-property name="extraConfig"><![CDATA[300004]]></set-property>
+            <set-property name="name">
+                <![CDATA[ATG Repository - localhost:10160 - /com/castorama/magasin/MagasinOutputConfig]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100004">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/FileRankConfigAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.file.rank_config]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100016">
+            <set-property name="extraConfig"><![CDATA[100002]]></set-property>
+            <set-property name="name">
+                <![CDATA[ATG Repository - localhost:10160 - /atg/commerce/search/ProductCatalogOutputConfig]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100010">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/FileAuxiliaryDataAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.file.auxiliary_data]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100014">
+            <set-property name="handlingService">
+                <![CDATA[/atg/commerce/search/config/CatalogRankConfigAdapter_staging]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.repository.staging_rank_config]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100003">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/FileTermWeightsAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.file.term_weights]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="500019">
+            <set-property name="extraConfig"><![CDATA[500007]]></set-property>
+            <set-property name="name">
+                <![CDATA[Castorama Document - localhost:10160 - /com/castorama/repository/search/indexing/RemoteCatalogDocumentScannerImpl]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100009">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/FileRefinementAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.file.refinement]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100011">
+            <set-property name="handlingService">
+                <![CDATA[/atg/commerce/search/refinement/CatalogRefineConfigAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.repository.refine_config]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="500020">
+            <set-property name="extraConfig"><![CDATA[500008]]></set-property>
+            <set-property name="name">
+                <![CDATA[Castorama Document - localhost:10160 - /com/castorama/repository/search/indexing/RemoteCatalogDocumentScannerImpl]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="srchLocalCustomizationDataAdapter">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/LocalCustomizationDataAdapter]]></set-property>
+            <set-property name="name"><![CDATA[local]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100008">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/FileTextProcessingOptionsAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.file.tpo]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100002">
+            <set-property name="handlingService">
+                <![CDATA[/atg/commerce/search/config/SearchUpdateAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.repository.search_update]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100012">
+            <set-property name="handlingService">
+                <![CDATA[/atg/commerce/search/refinement/CatalogRefineConfigAdapter_staging]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.repository.staging_refine_config]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="300018">
+            <set-property name="extraConfig"><![CDATA[300005]]></set-property>
+            <set-property name="name">
+                <![CDATA[ATGRepository - localhost:10160 - /com/castorama/magasin/MagasinOutputConfig]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100001">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/RemoteSolutionAuxiliaryDataAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.solution.auxiliary_data]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100013">
+            <set-property name="handlingService">
+                <![CDATA[/atg/searchadmin/adapter/customization/FileDictionaryAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.file.dictionary]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100006">
+            <set-property name="handlingService">
+                <![CDATA[/atg/commerce/search/config/CatalogRankConfigAdapter]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.repository.rank_config]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSourceAdapter" id="100005">
+            <set-property name="handlingService">
+                <![CDATA[/atg/commerce/search/config/SearchUpdateAdapter_staging]]></set-property>
+            <set-property name="name"><![CDATA[select_custsource_type.repository.staging_search_update]]></set-property>
+        </add-item>
+
+        <!-- No items of type syncTaskCustomizationDataSelection -->
+
+        <!-- No items of type contentSourceSetCustomizationDataSelection -->
+
+        <!-- 10 items of type projectCustomizationDataSelection -->
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="100001">
+            <set-property name="extraConfig"><![CDATA[100003]]></set-property>
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[100001]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Language Configuration]]></set-property>
+            <set-property name="project"><![CDATA[100001]]></set-property>
+            <set-property name="members"><![CDATA[French]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="100003">
+            <set-property name="contentSourceAdapter"><![CDATA[100006]]></set-property>
+            <set-property name="sharedId"><![CDATA[100003]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Rank Config]]></set-property>
+            <set-property name="project"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="100004">
+            <set-property name="contentSourceAdapter"><![CDATA[100011]]></set-property>
+            <set-property name="sharedId"><![CDATA[100004]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Refinement Configuration]]></set-property>
+            <set-property name="project"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="300005">
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[300005]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Project Text Processing Options]]></set-property>
+            <set-property name="project"><![CDATA[100001]]></set-property>
+            <set-property name="members"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="300006">
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[300006]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Project Text Processing Options]]></set-property>
+            <set-property name="project"><![CDATA[200002]]></set-property>
+            <set-property name="members"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="300007">
+            <set-property name="extraConfig"><![CDATA[300006]]></set-property>
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[300007]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Language Configuration]]></set-property>
+            <set-property name="project"><![CDATA[200002]]></set-property>
+            <set-property name="members"><![CDATA[French]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="500008">
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[500008]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Refinement Configuration]]></set-property>
+            <set-property name="project"><![CDATA[200002]]></set-property>
+            <set-property name="members"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="700009">
+            <set-property name="extraConfig"><![CDATA[500009]]></set-property>
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[700009]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Language Configuration]]></set-property>
+            <set-property name="project"><![CDATA[400003]]></set-property>
+            <set-property name="members"><![CDATA[French]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="700010">
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[700010]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Project Text Processing Options]]></set-property>
+            <set-property name="project"><![CDATA[400003]]></set-property>
+            <set-property name="members"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="projectCustomizationDataSelection" id="700011">
+            <set-property name="contentSourceAdapter"><![CDATA[srchLocalCustomizationDataAdapter]]></set-property>
+            <set-property name="sharedId"><![CDATA[700011]]></set-property>
+            <set-property name="customizationDataType"><![CDATA[Refinement Configuration]]></set-property>
+            <set-property name="project"><![CDATA[400003]]></set-property>
+            <set-property name="members"><![CDATA[100004]]></set-property>
+        </add-item>
+
+        <!-- No items of type baseCustomizationDataSelection -->
+
+        <!-- 7 items of type syncStepType -->
+
+        <add-item item-descriptor="syncStepType" id="srchContent">
+            <set-property name="superStepEnum"><![CDATA[content_super_step]]></set-property>
+            <set-property name="availableOptions">
+                <![CDATA[srchBuildIndex,srchUpdateIndex,srchDoNotIndex]]></set-property>
+            <set-property name="enum"><![CDATA[content_step]]></set-property>
+            <set-property name="name"><![CDATA[Content]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepType" id="srchDeployment">
+            <set-property name="superStepEnum"><![CDATA[deployment_super_step]]></set-property>
+            <set-property name="availableOptions"><![CDATA[srchDeployIndex,srchDoNotDeployIndex]]></set-property>
+            <set-property name="enum"><![CDATA[deployment_step]]></set-property>
+            <set-property name="name"><![CDATA[Deployment]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepType" id="srchHarvest">
+            <set-property name="superStepEnum"><![CDATA[content_super_step]]></set-property>
+            <set-property name="availableOptions">
+                <![CDATA[srchHarvestContent,srchUseLocalContentIfAvailable,srchDoNotHarvest]]></set-property>
+            <set-property name="enum"><![CDATA[harvest_step]]></set-property>
+            <set-property name="name"><![CDATA[Harvesting of Content]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepType" id="srchIndexing">
+            <set-property name="superStepEnum"><![CDATA[indexing_super_step]]></set-property>
+            <set-property name="availableOptions"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="enum"><![CDATA[indexing_step]]></set-property>
+            <set-property name="name"><![CDATA[Indexing]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepType" id="srchPartition">
+            <set-property name="superStepEnum"><![CDATA[content_super_step]]></set-property>
+            <set-property name="availableOptions">
+                <![CDATA[srchUseCleanPartition,srchUseExistingPartition]]></set-property>
+            <set-property name="enum"><![CDATA[partition_step]]></set-property>
+            <set-property name="name"><![CDATA[Partition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepType" id="srchPostIndexCustomizations">
+            <set-property name="superStepEnum"><![CDATA[content_super_step]]></set-property>
+            <set-property name="availableOptions">
+                <![CDATA[srchPostCustomizationLoadLatest,srchPostCustomizationUseExisting]]></set-property>
+            <set-property name="enum"><![CDATA[post_index_customization_step]]></set-property>
+            <set-property name="name"><![CDATA[Post-Index Customizations]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepType" id="srchPreIndexCustomizations">
+            <set-property name="superStepEnum"><![CDATA[content_super_step]]></set-property>
+            <set-property name="availableOptions">
+                <![CDATA[srchPreCustomizationLoadLatest,srchPreCustomizationUseExisting]]></set-property>
+            <set-property name="enum"><![CDATA[pre_index_customization_step]]></set-property>
+            <set-property name="name"><![CDATA[Pre-Index Customizations]]></set-property>
+        </add-item>
+
+        <!-- 9 items of type syncTaskType -->
+
+        <add-item item-descriptor="syncTaskType" id="srchComplete">
+            <set-property name="enum"><![CDATA[complete]]></set-property>
+            <set-property name="syncSteps">
+                <![CDATA[srchPartition,srchPreIndexCustomizations,srchContent,srchPostIndexCustomizations,srchIndexing,srchDeployment]]></set-property>
+            <set-property name="name"><![CDATA[Complete]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchCustom">
+            <set-property name="enum"><![CDATA[custom]]></set-property>
+            <set-property name="syncSteps">
+                <![CDATA[srchPartition,srchPreIndexCustomizations,srchContent,srchPostIndexCustomizations,srchIndexing,srchDeployment]]></set-property>
+            <set-property name="name"><![CDATA[Custom]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchDeployHistorical">
+            <set-property name="enum"><![CDATA[deploy_historical]]></set-property>
+            <set-property name="syncSteps"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="name"><![CDATA[Deploy Historical]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchDeployOnly">
+            <set-property name="enum"><![CDATA[deploy_only]]></set-property>
+            <set-property name="syncSteps"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="name"><![CDATA[Deploy Only]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchHarvestContentOnly">
+            <set-property name="enum"><![CDATA[harvest_only]]></set-property>
+            <set-property name="syncSteps"><![CDATA[srchHarvest]]></set-property>
+            <set-property name="name"><![CDATA[Harvest Content Only]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchIncremental">
+            <set-property name="enum"><![CDATA[incremental]]></set-property>
+            <set-property name="syncSteps">
+                <![CDATA[srchPartition,srchPreIndexCustomizations,srchContent,srchPostIndexCustomizations,srchIndexing,srchDeployment]]></set-property>
+            <set-property name="name"><![CDATA[Incremental]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchLoadPostCustomizationsOnly">
+            <set-property name="enum"><![CDATA[apply_post_index_customization_only]]></set-property>
+            <set-property name="syncSteps">
+                <![CDATA[srchPartition,srchPreIndexCustomizations,srchContent,srchPostIndexCustomizations,srchIndexing,srchDeployment]]></set-property>
+            <set-property name="name"><![CDATA[Load Post Index Customizations Only]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchPreIndexCustomizationsOnly">
+            <set-property name="enum"><![CDATA[apply_pre_index_customization_only]]></set-property>
+            <set-property name="syncSteps">
+                <![CDATA[srchPartition,srchPreIndexCustomizations,srchContent,srchIndexing]]></set-property>
+            <set-property name="name"><![CDATA[Load Pre Index Customizations]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskType" id="srchPushCustomizationRealTime">
+            <set-property name="enum"><![CDATA[push_customization_real_time]]></set-property>
+            <set-property name="syncSteps">
+                <![CDATA[srchPartition,srchPreIndexCustomizations,srchContent,srchPostIndexCustomizations,srchIndexing,srchDeployment]]></set-property>
+            <set-property name="name"><![CDATA[Push Customization Real Time]]></set-property>
+        </add-item>
+
+        <!-- 3 items of type searchProject -->
+
+        <add-item item-descriptor="searchProject" id="100001">
+            <set-property name="description"><![CDATA[Castorama Product Search Project]]></set-property>
+            <set-property name="customizationDataSelections"><![CDATA[100001,100003,100004,300005]]></set-property>
+            <set-property name="index"><![CDATA[100001]]></set-property>
+            <set-property name="syncTaskDefinitions"><![CDATA[100001,700008,100002,700007]]></set-property>
+            <set-property name="searchEnvironments"><![CDATA[100001,100002]]></set-property>
+            <set-property name="name"><![CDATA[Castorama Product Search Project]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchProject" id="200002">
+            <set-property name="description"><![CDATA[Castorama Magasin Search Project]]></set-property>
+            <set-property name="customizationDataSelections"><![CDATA[300006,300007,500008]]></set-property>
+            <set-property name="index"><![CDATA[200002]]></set-property>
+            <set-property name="syncTaskDefinitions"><![CDATA[300004,300003]]></set-property>
+            <set-property name="searchEnvironments"><![CDATA[300004,300003]]></set-property>
+            <set-property name="name"><![CDATA[Castorama Magasin Search Project]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchProject" id="400003">
+            <set-property name="description"><![CDATA[Castorama Document Search Project]]></set-property>
+            <set-property name="customizationDataSelections"><![CDATA[700009,700010,700011]]></set-property>
+            <set-property name="index"><![CDATA[400003]]></set-property>
+            <set-property name="syncTaskDefinitions"><![CDATA[500005,500006]]></set-property>
+            <set-property name="searchEnvironments"><![CDATA[500006,500005]]></set-property>
+            <set-property name="name"><![CDATA[Castorama Document Search Project]]></set-property>
+        </add-item>
+
+        <!-- 8 items of type syncTaskDefinition -->
+
+        <add-item item-descriptor="syncTaskDefinition" id="100001">
+            <set-property name="searchEnvironmentSelections"><![CDATA[100002]]></set-property>
+            <set-property name="taskType"><![CDATA[srchComplete]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Default full task]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[100001]]></set-property>
+            <set-property name="syncSteps"><![CDATA[100001,100002,100003,100004,100005,100006]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskDefinition" id="100002">
+            <set-property name="searchEnvironmentSelections"><![CDATA[100002]]></set-property>
+            <set-property name="taskType"><![CDATA[srchIncremental]]></set-property>
+            <set-property name="schedule"><![CDATA[MANUAL]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Default incremental task]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[100001]]></set-property>
+            <set-property name="syncSteps"><![CDATA[100007,100008,100009,100010,100011,100012]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskDefinition" id="300003">
+            <set-property name="searchEnvironmentSelections"><![CDATA[300004]]></set-property>
+            <set-property name="taskType"><![CDATA[srchComplete]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Default full task]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[200002]]></set-property>
+            <set-property name="syncSteps"><![CDATA[300013,300014,300015,300016,300017,300018]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskDefinition" id="300004">
+            <set-property name="searchEnvironmentSelections"><![CDATA[300004]]></set-property>
+            <set-property name="taskType"><![CDATA[srchIncremental]]></set-property>
+            <set-property name="schedule"><![CDATA[MANUAL]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Default incremental task]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[200002]]></set-property>
+            <set-property name="syncSteps"><![CDATA[300019,300020,300021,300022,300023,300024]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskDefinition" id="500005">
+            <set-property name="searchEnvironmentSelections"><![CDATA[500006]]></set-property>
+            <set-property name="taskType"><![CDATA[srchComplete]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Default full task]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[400003]]></set-property>
+            <set-property name="syncSteps"><![CDATA[500025,500026,500027,500028,500029,500030]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskDefinition" id="500006">
+            <set-property name="searchEnvironmentSelections"><![CDATA[500006]]></set-property>
+            <set-property name="taskType"><![CDATA[srchIncremental]]></set-property>
+            <set-property name="schedule"><![CDATA[MANUAL]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Default incremental task]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[400003]]></set-property>
+            <set-property name="syncSteps"><![CDATA[500031,500032,500033,500034,500035,500036]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskDefinition" id="700007">
+            <set-property name="searchEnvironmentSelections"><![CDATA[100002]]></set-property>
+            <set-property name="description"><![CDATA[Runs after every incremental deployment]]></set-property>
+            <set-property name="taskType"><![CDATA[srchIncremental]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Castorama-Site(Local Dev environment)-Incremental]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[100001]]></set-property>
+            <set-property name="syncSteps"><![CDATA[700037,700038,700039,700040,700041,700042]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncTaskDefinition" id="700008">
+            <set-property name="searchEnvironmentSelections"><![CDATA[100002]]></set-property>
+            <set-property name="description"><![CDATA[Runs after every full deployment]]></set-property>
+            <set-property name="taskType"><![CDATA[srchComplete]]></set-property>
+            <set-property name="enabled"><![CDATA[true]]></set-property>
+            <set-property name="subname"><![CDATA[Castorama-Site(Local Dev environment)-Full]]></set-property>
+            <set-property name="baseType"><![CDATA[syncTaskDefinition]]></set-property>
+            <set-property name="searchProject"><![CDATA[100001]]></set-property>
+            <set-property name="syncSteps"><![CDATA[700043,700044,700045,700046,700047,700048]]></set-property>
+        </add-item>
+
+        <!-- No items of type syncTask -->
+
+        <!-- No items of type baseSyncTask -->
+
+        <!-- 15 items of type syncStepOption -->
+
+        <add-item item-descriptor="syncStepOption" id="srchBuildIndex">
+            <set-property name="optionType"><![CDATA[Content_BuildIndex]]></set-property>
+            <set-property name="name"><![CDATA[Process all content from selected content sets]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchDefaultIndexingOption">
+            <set-property name="optionType"><![CDATA[Indexing_DefaultOption]]></set-property>
+            <set-property name="name"><![CDATA[Build index]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchDeployIndex">
+            <set-property name="optionType"><![CDATA[Deployment_DeployIndex]]></set-property>
+            <set-property name="name"><![CDATA[Deploy index to selected search environments]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchDoNotDeployIndex">
+            <set-property name="optionType"><![CDATA[Deployment_DoNotDeployIndex]]></set-property>
+            <set-property name="name"><![CDATA[Do not deploy index]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchDoNotHarvest">
+            <set-property name="optionType"><![CDATA[Harvest_DoNotHarvest]]></set-property>
+            <set-property name="name"><![CDATA[Do not harvest content]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchDoNotIndex">
+            <set-property name="optionType"><![CDATA[Content_DoNotIndex]]></set-property>
+            <set-property name="name"><![CDATA[Do not index content]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchHarvestContent">
+            <set-property name="optionType"><![CDATA[Harvest_HarvestContent]]></set-property>
+            <set-property name="name"><![CDATA[Harvest Content]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchPostCustomizationLoadLatest">
+            <set-property name="optionType"><![CDATA[PostIndexCustomization_LoadLatest]]></set-property>
+            <set-property name="name"><![CDATA[Load latest post-index customizations]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchPostCustomizationUseExisting">
+            <set-property name="optionType"><![CDATA[PostIndexCustomization_UseExisting]]></set-property>
+            <set-property name="name"><![CDATA[Use existing post index customizations]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchPreCustomizationLoadLatest">
+            <set-property name="optionType"><![CDATA[PreIndexCustomizations_LoadLatest]]></set-property>
+            <set-property name="name"><![CDATA[Load latest pre-index customizations]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchPreCustomizationUseExisting">
+            <set-property name="optionType"><![CDATA[PreIndexCustomizations_UseExisting]]></set-property>
+            <set-property name="name"><![CDATA[Use existing pre-index customizations]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchUpdateIndex">
+            <set-property name="optionType"><![CDATA[Content_UpdateIndex]]></set-property>
+            <set-property name="name"><![CDATA[Process updated content from selected content sets]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchUseCleanPartition">
+            <set-property name="optionType"><![CDATA[Partition_UseCleanPartition]]></set-property>
+            <set-property name="name"><![CDATA[Start with clean index]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchUseExistingPartition">
+            <set-property name="optionType"><![CDATA[Partition_UseExistingPartition]]></set-property>
+            <set-property name="name"><![CDATA[Use existing index]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepOption" id="srchUseLocalContentIfAvailable">
+            <set-property name="optionType"><![CDATA[Harvest_UseLocalContentIfAvailable]]></set-property>
+            <set-property name="name"><![CDATA[Use local content if available, else harvest]]></set-property>
+        </add-item>
+
+        <!-- No items of type syncStepStatus -->
+
+        <!-- 48 items of type syncStepDefinition -->
+
+        <add-item item-descriptor="syncStepDefinition" id="500033">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchBuildIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700041">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500027">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchBuildIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500025">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseCleanPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700040">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500035">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100012">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100006">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300020">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationUseExisting]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700045">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchBuildIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500028">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300023">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100003">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchBuildIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500036">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100009">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchBuildIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300014">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700044">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100008">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationUseExisting]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700047">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700042">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700048">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100007">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseExistingPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100004">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300016">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300013">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseCleanPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500029">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700039">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUpdateIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300015">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchBuildIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500030">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500032">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationUseExisting]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700038">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationUseExisting]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100001">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseCleanPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700043">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseCleanPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100005">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700037">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseExistingPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300017">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100010">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300022">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="700046">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500026">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300019">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseExistingPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100011">
+            <set-property name="syncStepType"><![CDATA[srchIndexing]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDefaultIndexingOption]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300024">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300021">
+            <set-property name="syncStepType"><![CDATA[srchContent]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchBuildIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="100002">
+            <set-property name="syncStepType"><![CDATA[srchPreIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPreCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500034">
+            <set-property name="syncStepType"><![CDATA[srchPostIndexCustomizations]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchPostCustomizationLoadLatest]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="500031">
+            <set-property name="syncStepType"><![CDATA[srchPartition]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchUseExistingPartition]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="syncStepDefinition" id="300018">
+            <set-property name="syncStepType"><![CDATA[srchDeployment]]></set-property>
+            <set-property name="stepOption"><![CDATA[srchDeployIndex]]></set-property>
+            <set-property name="baseType"><![CDATA[syncStepDefinition]]></set-property>
+        </add-item>
+
+        <!-- No items of type baseSyncStep -->
+
+        <!-- 3 items of type contentSource -->
+
+        <add-item item-descriptor="contentSource" id="100001">
+            <set-property name="parentLogicalPartition"><![CDATA[100001]]></set-property>
+            <set-property name="contentSourceAdapter"><![CDATA[100016]]></set-property>
+            <set-property name="sharedId"><![CDATA[100001]]></set-property>
+            <set-property name="forceContentType"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[structured]]></set-property>
+            <set-property name="name"><![CDATA[Castorama Product Content]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSource" id="200002">
+            <set-property name="parentLogicalPartition"><![CDATA[200002]]></set-property>
+            <set-property name="contentSourceAdapter"><![CDATA[300018]]></set-property>
+            <set-property name="sharedId"><![CDATA[200002]]></set-property>
+            <set-property name="forceContentType"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[structured]]></set-property>
+            <set-property name="name"><![CDATA[Castorama Magasin Content ]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="contentSource" id="400003">
+            <set-property name="parentLogicalPartition"><![CDATA[400003]]></set-property>
+            <set-property name="contentSourceAdapter"><![CDATA[500020]]></set-property>
+            <set-property name="sharedId"><![CDATA[400003]]></set-property>
+            <set-property name="forceContentType"><![CDATA[false]]></set-property>
+            <set-property name="type"><![CDATA[unstructured]]></set-property>
+            <set-property name="name"><![CDATA[Castorama Document Content]]></set-property>
+        </add-item>
+
+        <!-- 6 items of type searchEnvironment -->
+
+        <add-item item-descriptor="searchEnvironment"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="100001">
+            <set-property name="hosts"><![CDATA[100001]]></set-property>
+            <set-property name="parentProject"><![CDATA[100001]]></set-property>
+            <set-property name="envType"><![CDATA[indexing]]></set-property>
+            <set-property name="envName">
+                <![CDATA[indexing environment (Castorama Product Search Project)]]></set-property>
+            <set-property name="parentProjectName"><![CDATA[Castorama Product Search Project]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironment"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="100002">
+            <set-property name="hosts"><![CDATA[100002]]></set-property>
+            <set-property name="parentProject"><![CDATA[100001]]></set-property>
+            <set-property name="envType"><![CDATA[staging]]></set-property>
+            <set-property name="envName"><![CDATA[commerce]]></set-property>
+            <set-property name="parentProjectName"><![CDATA[Castorama Product Search Project]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironment"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="300003">
+            <set-property name="hosts"><![CDATA[300003]]></set-property>
+            <set-property name="parentProject"><![CDATA[200002]]></set-property>
+            <set-property name="envType"><![CDATA[indexing]]></set-property>
+            <set-property name="envName">
+                <![CDATA[indexing environment (Castorama Magasin Search Project)]]></set-property>
+            <set-property name="parentProjectName"><![CDATA[Castorama Magasin Search Project]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironment"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="300004">
+            <set-property name="hosts"><![CDATA[300004]]></set-property>
+            <set-property name="parentProject"><![CDATA[200002]]></set-property>
+            <set-property name="envType"><![CDATA[staging]]></set-property>
+            <set-property name="envName"><![CDATA[magasin]]></set-property>
+            <set-property name="parentProjectName"><![CDATA[Castorama Magasin Search Project]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironment"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="500005">
+            <set-property name="hosts"><![CDATA[500005]]></set-property>
+            <set-property name="parentProject"><![CDATA[400003]]></set-property>
+            <set-property name="envType"><![CDATA[indexing]]></set-property>
+            <set-property name="envName">
+                <![CDATA[indexing environment (Castorama Document Search Project)]]></set-property>
+            <set-property name="parentProjectName"><![CDATA[Castorama Document Search Project]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironment"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="500006">
+            <set-property name="hosts"><![CDATA[500006]]></set-property>
+            <set-property name="parentProject"><![CDATA[400003]]></set-property>
+            <set-property name="envType"><![CDATA[staging]]></set-property>
+            <set-property name="envName"><![CDATA[castoramaDocument]]></set-property>
+            <set-property name="parentProjectName"><![CDATA[Castorama Document Search Project]]></set-property>
+        </add-item>
+
+        <!-- No items of type deploymentHistory -->
+
+        <!-- 6 items of type searchEnvironmentHost -->
+
+        <add-item item-descriptor="searchEnvironmentHost"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="100001">
+            <set-property name="parentEnv"><![CDATA[100001]]></set-property>
+            <set-property name="indexRootPath"><![CDATA[../indexFiles]]></set-property>
+            <set-property name="numEngines"><![CDATA[1]]></set-property>
+            <set-property name="searchMachine"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironmentHost"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="100002">
+            <set-property name="parentEnv"><![CDATA[100002]]></set-property>
+            <set-property name="indexRootPath"><![CDATA[../indexFiles]]></set-property>
+            <set-property name="numEngines"><![CDATA[1]]></set-property>
+            <set-property name="searchMachine"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironmentHost"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="300003">
+            <set-property name="parentEnv"><![CDATA[300003]]></set-property>
+            <set-property name="indexRootPath"><![CDATA[../indexFiles]]></set-property>
+            <set-property name="numEngines"><![CDATA[1]]></set-property>
+            <set-property name="searchMachine"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironmentHost"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="300004">
+            <set-property name="parentEnv"><![CDATA[300004]]></set-property>
+            <set-property name="indexRootPath"><![CDATA[../indexFiles]]></set-property>
+            <set-property name="numEngines"><![CDATA[1]]></set-property>
+            <set-property name="searchMachine"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironmentHost"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="500005">
+            <set-property name="parentEnv"><![CDATA[500005]]></set-property>
+            <set-property name="indexRootPath"><![CDATA[../indexFiles]]></set-property>
+            <set-property name="numEngines"><![CDATA[1]]></set-property>
+            <set-property name="searchMachine"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchEnvironmentHost"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="500006">
+            <set-property name="parentEnv"><![CDATA[500006]]></set-property>
+            <set-property name="indexRootPath"><![CDATA[../indexFiles]]></set-property>
+            <set-property name="numEngines"><![CDATA[1]]></set-property>
+            <set-property name="searchMachine"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <!-- 1 items of type searchMachine -->
+
+        <add-item item-descriptor="searchMachine"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="100001">
+            <set-property name="hostname"><![CDATA[localhost]]></set-property>
+            <set-property name="launchServiceName"><![CDATA[/atg/search/routing/LaunchService]]></set-property>
+            <set-property name="startPort"><![CDATA[6072]]></set-property>
+            <set-property name="launchServicePort"><![CDATA[8860]]></set-property>
+            <set-property name="launchServiceProtocol"><![CDATA[rmi]]></set-property>
+            <set-property name="endPort"><![CDATA[6100]]></set-property>
+        </add-item>
+
+        <!-- No items of type contentSourceTargetIds -->
+
+        <!-- 3 items of type searchIndex -->
+
+        <add-item item-descriptor="searchIndex"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="100001">
+            <set-property name="logicalPartitions"><![CDATA[100001]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchIndex"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="200002">
+            <set-property name="logicalPartitions"><![CDATA[200002]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="searchIndex"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="400003">
+            <set-property name="logicalPartitions"><![CDATA[400003]]></set-property>
+        </add-item>
+
+        <!-- 3 items of type logicalPartition -->
+
+        <add-item item-descriptor="logicalPartition"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="100001">
+            <set-property name="thisIndexFullIndex"><![CDATA[true]]></set-property>
+            <set-property name="partitionMode"><![CDATA[hash]]></set-property>
+            <set-property name="sharedId"><![CDATA[100001]]></set-property>
+            <set-property name="originalPhysicalPartitionCount"><![CDATA[19]]></set-property>
+            <set-property name="flaggedForFullIndex"><![CDATA[false]]></set-property>
+            <set-property name="parentIndex"><![CDATA[100001]]></set-property>
+            <set-property name="name"><![CDATA[Content Set 1]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="logicalPartition"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="200002">
+            <set-property name="thisIndexFullIndex"><![CDATA[true]]></set-property>
+            <set-property name="partitionMode"><![CDATA[hash]]></set-property>
+            <set-property name="sharedId"><![CDATA[200002]]></set-property>
+            <set-property name="originalPhysicalPartitionCount"><![CDATA[19]]></set-property>
+            <set-property name="flaggedForFullIndex"><![CDATA[false]]></set-property>
+            <set-property name="parentIndex"><![CDATA[200002]]></set-property>
+            <set-property name="name"><![CDATA[Content Set 1]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="logicalPartition"
+                  repository="/atg/search/routing/repository/SearchConfigurationRepository" id="400003">
+            <set-property name="thisIndexFullIndex"><![CDATA[true]]></set-property>
+            <set-property name="partitionMode"><![CDATA[hash]]></set-property>
+            <set-property name="sharedId"><![CDATA[400003]]></set-property>
+            <set-property name="originalPhysicalPartitionCount"><![CDATA[19]]></set-property>
+            <set-property name="flaggedForFullIndex"><![CDATA[false]]></set-property>
+            <set-property name="parentIndex"><![CDATA[400003]]></set-property>
+            <set-property name="name"><![CDATA[Content Set 1]]></set-property>
+        </add-item>
+
+        <!-- No items of type physicalPartition -->
+
+        <!-- No items of type indexingActivitySummary -->
+
+        <!-- No items of type indexingCommandCount -->
+
+        <!-- No items of type secureOrganization -->
+
+        <!-- 9 items of type extraConfig -->
+
+        <add-item item-descriptor="extraConfig" id="100001">
+            <set-property name="configuration"><![CDATA[#Thu Jul 30 21:05:29 EEST 2009
+IndexingOutputConfigPort=/atg/commerce/search/ProductCatalogOutputConfig
+Type=repository
+HostMachine=localhost
+$class=atg.searchadmin.adapter.content.impl.RepositoryAdapter
+Port=10160
+Local=false
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="100002">
+            <set-property name="configuration"><![CDATA[#Thu Jul 30 21:05:29 EEST 2009
+IndexingOutputConfigPort=/atg/commerce/search/ProductCatalogOutputConfig
+Type=repository
+HostMachine=localhost
+$class=atg.searchadmin.adapter.content.impl.RepositoryAdapter
+Port=10160
+Local=false
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="100003">
+            <set-property name="configuration"><![CDATA[#Thu Jul 30 21:05:42 EEST 2009
+French=
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="300004">
+            <set-property name="configuration"><![CDATA[#Tue Aug 11 19:19:00 EEST 2009
+IndexingOutputConfigPort=/com/castorama/magasin/MagasinOutputConfig
+Type=repository
+HostMachine=localhost
+$class=atg.searchadmin.adapter.content.impl.RepositoryAdapter
+Port=10160
+Local=false
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="300005">
+            <set-property name="configuration"><![CDATA[#Tue Aug 11 19:19:19 EEST 2009
+IndexingOutputConfigPort=/com/castorama/magasin/MagasinOutputConfig
+Type=repository
+HostMachine=localhost
+$class=atg.searchadmin.adapter.content.impl.RepositoryAdapter
+\#Tue\ Aug\ 11\ 19\:19\:00\ EEST\ 2009=
+Local=false
+Port=10160
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="300006">
+            <set-property name="configuration"><![CDATA[#Tue Aug 11 19:19:46 EEST 2009
+French=
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="500007">
+            <set-property name="configuration"><![CDATA[#Wed Aug 12 14:36:21 EEST 2009
+Type=castoramadocument
+HostMachine=localhost
+$class=com.castorama.searchadmin.adapter.content.impl.CastoramaDocumentAdapter
+CatalogDocumentScanner=/com/castorama/repository/search/indexing/RemoteCatalogDocumentScannerImpl
+Port=10160
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="500008">
+            <set-property name="configuration"><![CDATA[#Wed Aug 12 14:36:21 EEST 2009
+Type=castoramadocument
+HostMachine=localhost
+$class=com.castorama.searchadmin.adapter.content.impl.CastoramaDocumentAdapter
+CatalogDocumentScanner=/com/castorama/repository/search/indexing/RemoteCatalogDocumentScannerImpl
+Port=10160
+]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="extraConfig" id="500009">
+            <set-property name="configuration"><![CDATA[#Wed Aug 12 14:37:05 EEST 2009
+French=
+]]></set-property>
+        </add-item>
+
+    </import-items>
+
+</gsa-template>

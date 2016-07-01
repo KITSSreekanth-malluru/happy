@@ -1,0 +1,27 @@
+${productName}
+<c:if test="${productName == null}">
+	<!-- Compose name of the pack -->
+	<c:set var="descriptionTmp" value=""/>
+	
+	<dsp:droplet name="ForEach">
+		<dsp:param name="array" param="sku.bundleLinks"/>
+		<dsp:param name="elementName" value="skuLink"/>
+		<dsp:getvalueof var="count" param="count"/>		
+			<dsp:oparam name="output">
+				<dsp:getvalueof var="quantity" param="skuLink.quantity"/>
+				<dsp:getvalueof var="displayName" param="skuLink.item.displayName"/>
+				<c:if test="${quantity > 1}"><c:set var="descriptionTmp" value="${descriptionTmp} ${quantity}"/></c:if> 
+				<c:set var="descriptionTmp" value="${descriptionTmp} ${displayName}"/>
+				<c:if test="${size != count}"><c:set var="descriptionTmp" value="${descriptionTmp} + "/></c:if>	
+			</dsp:oparam>
+	</dsp:droplet>
+	
+	<dsp:droplet name="/com/castorama/droplet/DocumentDescriptionBraker">
+       	<dsp:param name="description" value="${descriptionTmp}"/>
+        <dsp:param name="length" value="70"/>
+        <dsp:oparam name="output">
+        	<dsp:valueof param="updatedDescription" valueishtml="true"/>...
+   		</dsp:oparam>
+    </dsp:droplet>
+    
+</c:if>

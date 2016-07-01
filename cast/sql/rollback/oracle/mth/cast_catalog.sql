@@ -1,0 +1,12 @@
+drop table "CAST_CONT_CHAPT" cascade constraints;
+drop table "CAST_CHAPTERTHEM" cascade constraints;
+drop table "CAST_CONT_THEM" cascade constraints;
+drop table "CAST_CONTTHEM" cascade constraints;
+drop table "CAST_THEMATIQUE" cascade constraints;
+drop table "CAST_THEMATIQUE_DOCS_TOP" cascade constraints;
+drop table "CAST_THEMATIQUE_DOCS_BOTTOM" cascade constraints;
+drop table "CAST_GUIMENU" cascade constraints;
+drop table "CAST_MENUITEM" cascade constraints;
+drop table "CAST_GUIMENU_ITEMS" cascade constraints;
+drop table "CAST_THEMATIQUE_CHAPT" cascade constraints;
+commit;

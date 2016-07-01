@@ -1,0 +1,207 @@
+<dsp:droplet name="InventoryLookup">
+  <dsp:param name="itemId" param="skuParam.id"/>
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="stockLevel" param="inventoryInfo.stockLevel"/>
+  </dsp:oparam>
+</dsp:droplet> 
+<dsp:getvalueof var="packProductId" param="product.repositoryId"/>
+<fmt:message  var="cartAdd" key="msg.cart.add"/>
+<dsp:getvalueof var="skuParam" param="skuParam"/>
+<dsp:getvalueof var="prodIdS" param="skuParam.repositoryId"/>
+<dsp:getvalueof var="showButtonForm" value="${true}"/>
+<dsp:getvalueof var="showUnavailableMessage" value="${false}"/>
+<dsp:getvalueof var="needRecalcStockLevel" value="${false}"/>
+<dsp:getvalueof var="addToCartMode" value=""/>
+<dsp:getvalueof var="needUpdateQTY" value="${false}"/>
+<dsp:getvalueof var="showQuantityMessage" value="${false}"/>
+<dsp:getvalueof var="addWebStock" value="${0}"/>
+<dsp:getvalueof var="addLocalStock" value="${0}"/>
+
+<div class="fPrix multScuV2 productPageTabsPriceBlock ">
+<dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet" >
+  <dsp:param name="sku" param="skuParam"/>
+  <dsp:param name="store" bean="Profile.currentLocalStore"/>
+  <dsp:param name="svAvailableMap" value="${svAvailableMap}"/>
+  <dsp:oparam name="immidiateWithdrawal" ><!-- SAS ${prodIdS} IW -->
+    <dsp:getvalueof var="showButtonForm" value="${false}"/>
+    <dsp:getvalueof var="showUnavailableMessage" value="${true}"/>
+   </dsp:oparam>
+  <dsp:oparam name="remainingStock" ><!-- SAS ${prodIdS} RS -->
+    <dsp:getvalueof var="addWebStock" value="${stockLevel}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+    <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+  </dsp:oparam>
+  <dsp:oparam name="soldOnlyInStore"><!-- SAS ${prodIdS} SOIS -->
+    <dsp:getvalueof var="showButtonForm" value="${false}"/>
+  </dsp:oparam>
+  <dsp:oparam name="deliveryTime"><!-- SAS ${prodIdS} DT -->
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccRemainingStock"><!-- SAS ${prodIdS} CCRS -->
+    <dsp:getvalueof var="addWebStock" value="${stockLevel}"/>
+    <dsp:getvalueof var="svStockAvailable" param="svStockAvailable"/>
+    <dsp:getvalueof var="addLocalStock" param="svStockAvailable"/>
+    <dsp:getvalueof var="needRecalcStockLevel" value="${true}"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+    <dsp:getvalueof var="showQuantityMessage" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccSoldOnlyInStore"><!-- SAS ${prodIdS} CCSOIS -->
+    <dsp:getvalueof var="addLocalStock" param="svStockAvailable"/>
+    <dsp:getvalueof var="stockLevel" param="svStockAvailable"/>
+    <dsp:getvalueof var="needUpdateQTY" value="${true}"/>
+    <dsp:getvalueof var="addToCartMode" value="local"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccDeliveryTime" ><!-- SAS ${prodIdS} CCDT -->
+    <dsp:getvalueof var="addLocalStock" param="svStockAvailable"/>
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+  </dsp:oparam>
+</dsp:droplet>
+<!-- draw price block for add to cart tab pack start for ${prodIdS} -->
+<c:if test="${needRecalcStockLevel}">
+  <c:if test="${(stockLevel != -1) and (svStockAvailable > stockLevel)}">
+    <dsp:getvalueof var="stockLevel" value="${svStockAvailable}"/>
+  </c:if>
+</c:if>
+<c:choose>
+  <c:when test="${!showButtonForm}">
+    <div class="priceUnavV2">
+      <dsp:include page="skuPrice.jsp" >
+         <dsp:param name="productId" param="product.repositoryId"/>
+         <dsp:param name="sku" param="sku" />
+      </dsp:include>
+      <c:if test="${showUnavailableMessage}">
+        <div class="detailsUnavV2">
+          <fmt:message key="castCatalog_productDetails.unavailable" />
+        </div>
+      </c:if>
+    </div>
+  </c:when>
+  <c:otherwise>
+    <dsp:form method="post">
+      <dsp:input type="hidden" bean="CastShoppingCartFormHandler.webStockToAdd" value="${addWebStock}"/>
+      <dsp:input type="hidden" bean="CastShoppingCartFormHandler.localStockToAdd" value="${addLocalStock}"/>
+      <div class="numbAndPriceV2">
+        <dsp:getvalueof var="quantity" value="1"/>
+        <dsp:getvalueof var="itemId" value="${skuParam.repositoryId}"/>
+        <dsp:getvalueof var="skuId" value="${itemId}"/>
+        <%@include file="numbAndPrice.jspf" %>
+      </div>
+
+      <div class="blockLastCell">
+        <div class="minHeightWrap">
+            <div class="productDetailsPriceBlock">
+              <dsp:include page="skuPrice.jsp">
+                <dsp:param name="pageType" value="productDetails"/>
+                <dsp:param name="productId" value="${packProductId}"/>
+                <dsp:param name="sku" value="${skuParam}"/>
+              </dsp:include>
+            </div>
+
+            <div class="inputButtonV2">
+              <dsp:input bean="CastShoppingCartFormHandler.addItemToOrder" type="submit" value="${cartAdd}" iclass="buttonCartBig" onclick="disableButton(this)" />
+              <dsp:input bean="CastShoppingCartFormHandler.addToBoth" type="hidden" value="${addToCartMode}"/>
+            </div>
+
+      <div class="deliverOrCCwr">
+        <ul>
+        <dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet">
+          <dsp:param name="sku" param="skuParam"/>
+          <dsp:param name="store" bean="Profile.currentLocalStore" />
+          <dsp:param name="svAvailableMap" value="${svAvailableMap}" />
+          <dsp:oparam name="immidiateWithdrawal">
+            <fmt:message key="castCatalog_productDetails.unavailable"/>
+          </dsp:oparam>
+          <dsp:oparam name="remainingStock">
+            <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+              <span class="deliveryProd${itemId}">sous 1 semaine</span>
+              <c:if test='${storeIsCC}'>
+                <dsp:include page="freeShipping.jsp">
+                  <dsp:param name="sku" param="sku" />
+                </dsp:include>
+              </c:if>
+            </a></li>
+          </dsp:oparam>
+          <dsp:oparam name="soldOnlyInStore">
+          </dsp:oparam>
+          <dsp:oparam name="deliveryTime">
+            <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+              <span class="deliveryProd${itemId}">sous 1 semaine</span>
+              <c:if test='${storeIsCC}'>
+                <dsp:include page="freeShipping.jsp">
+                  <dsp:param name="sku" param="sku" />
+                </dsp:include>
+              </c:if>
+            </a></li>
+          </dsp:oparam>
+          <dsp:oparam name="ccRemainingStock">
+            <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+              <span class="deliveryProd${itemId}">sous 1 semaine</span>
+              <c:if test='${storeIsCC}'>
+                <dsp:include page="freeShipping.jsp">
+                  <dsp:param name="sku" param="sku" />
+                </dsp:include>
+              </c:if>
+            </a></li>
+            <dsp:getvalueof var="delayTime" bean="Profile.currentLocalStore.ccDelayPeriod"/>
+            <dsp:getvalueof var="delayUnit" bean="Profile.currentLocalStore.ccDelayPeriodUnit"/>
+            <fmt:message key="header.mon.magasin.delayunit.hour" var="hour"/>
+            <fmt:message key="header.mon.magasin.delayunit.day" var="day"/>
+            <fmt:message key="header.mon.magasin.delayunit.days" var="days"/>
+            <dsp:getvalueof var="displayDelayUnit" value="${(delayUnit == 0)?hour:(delayTime == 1?day:days)}" />
+            <li class="pickupMessage"><a><fmt:message key="header.mon.magasin.retrait" />&nbsp;${delayTime}${displayDelayUnit}</a></li>
+          </dsp:oparam>
+          <dsp:oparam name="ccSoldOnlyInStore">
+            <li class="deliverMessage hidden"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+              <span class="deliveryProd${itemId}">sous 1 semaine</span>
+              <c:if test='${storeIsCC}'>
+                <dsp:include page="freeShipping.jsp">
+                  <dsp:param name="sku" param="sku" />
+                </dsp:include>
+              </c:if>
+            </a></li>
+            <span style="display: none;" class="deliveryProd${itemId}"></span>
+            <dsp:getvalueof var="delayTime" bean="Profile.currentLocalStore.ccDelayPeriod"/>
+            <dsp:getvalueof var="delayUnit" bean="Profile.currentLocalStore.ccDelayPeriodUnit"/>
+            <fmt:message key="header.mon.magasin.delayunit.hour" var="hour"/>
+            <fmt:message key="header.mon.magasin.delayunit.day" var="day"/>
+            <fmt:message key="header.mon.magasin.delayunit.days" var="days"/>
+            <dsp:getvalueof var="displayDelayUnit" value="${(delayUnit == 0)?hour:(delayTime == 1?day:days)}" />
+            <li class="pickupMessage"><a><fmt:message key="header.mon.magasin.retrait" />&nbsp;${delayTime}${displayDelayUnit}</a></li>
+          </dsp:oparam>
+          <dsp:oparam name="ccDeliveryTime">
+            <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+              <span class="deliveryProd${itemId}">sous 1 semaine</span>
+              <c:if test='${storeIsCC}'>
+                <dsp:include page="freeShipping.jsp">
+                  <dsp:param name="sku" param="sku" />
+                </dsp:include>
+              </c:if>
+            </a></li>
+            <dsp:getvalueof var="delayTime" bean="Profile.currentLocalStore.ccDelayPeriod"/>
+            <dsp:getvalueof var="delayUnit" bean="Profile.currentLocalStore.ccDelayPeriodUnit"/>
+            <fmt:message key="header.mon.magasin.delayunit.hour" var="hour"/>
+            <fmt:message key="header.mon.magasin.delayunit.day" var="day"/>
+            <fmt:message key="header.mon.magasin.delayunit.days" var="days"/>
+            <dsp:getvalueof var="displayDelayUnit" value="${(delayUnit == 0)?hour:(delayTime == 1?day:days)}" />
+            <li class="pickupMessage"><a><fmt:message key="header.mon.magasin.retrait" />&nbsp;${delayTime}${displayDelayUnit}</a></li>
+          </dsp:oparam>
+        </dsp:droplet>
+          </ul>
+      </div>
+      
+      <input name="productId" type="hidden" value="${packProductId}">
+      <dsp:input bean="CastShoppingCartFormHandler.productId" type="hidden" value="${packProductId}" />
+      <dsp:input bean="CastShoppingCartFormHandler.catalogRefIds" type="hidden" value="${skuParam.repositoryId}" />
+      <%-- this divs must be here (impact ui in IE)--%>
+      </div>
+      </div>
+      <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderErrorURL" type="hidden" value="${requestURIwithQueryString}" />
+      <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderSuccessURL" type="hidden" value="${contextPath}/checkout/preshopping.jsp" />
+    </dsp:form>
+
+  </c:otherwise>
+</c:choose>
+  </div>
+<!-- draw price block for add to cart tab pack end for ${prodIdS} -->

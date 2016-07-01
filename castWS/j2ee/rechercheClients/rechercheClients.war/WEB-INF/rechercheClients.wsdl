@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://www.atg.com/atg.security" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.atg.com/webservices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.atg.com/webservices">
+<types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.atg.com/webservices" xmlns:ns1="http://www.atg.com/atg.security" xmlns:tns="http://www.atg.com/webservices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"/>
+</types>
+<import location="atg.security.wsdl" namespace="http://www.atg.com/atg.security"/>
+<message name="rechercheClientsInput">
+<part name="requestXML" type="xsd:string"/>
+</message>
+<message name="rechercheClientsOutput">
+<part name="return" type="xsd:string"/>
+</message>
+<message name="SecurityException">
+<part name="SecurityException" type="ns1:SecurityException"/>
+</message>
+<portType name="RechercheClientsSEI">
+<operation name="rechercheClients">
+<input message="tns:rechercheClientsInput"/>
+<output message="tns:rechercheClientsOutput"/>
+<fault message="tns:SecurityException" name="SecurityException"/>
+</operation>
+</portType>
+<binding name="RechercheClientsSEIBinding" type="tns:RechercheClientsSEI">
+<operation name="rechercheClients">
+<input>
+<soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.atg.com/webservices" use="encoded"/>
+</input>
+<output>
+<soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.atg.com/webservices" use="encoded"/>
+</output>
+<fault name="SecurityException">
+<soap:fault encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://www.atg.com/webservices" use="encoded"/>
+</fault>
+<soap:operation soapAction=""/>
+</operation>
+<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+</binding>
+<service name="RechercheClientsSEIService">
+<port binding="tns:RechercheClientsSEIBinding" name="RechercheClientsSEIPort">
+<soap:address location="rechercheClients"/>
+</port>
+</service>
+</definitions>

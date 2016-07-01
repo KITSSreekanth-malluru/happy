@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT stocks (stock+)>
+<!ELEMENT stock EMPTY>
+<!ATTLIST stock
+          product CDATA #IMPLIED
+          store CDATA #IMPLIED
+          status (1 | 2 | 3) #IMPLIED>

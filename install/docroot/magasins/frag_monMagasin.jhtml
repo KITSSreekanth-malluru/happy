@@ -1,0 +1,417 @@
+<LINK REL="stylesheet" HREF="/com/ie.css">
+
+<DECLAREPARAM NAME="plan" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="street0" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="city0" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="paramStreet0" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="paramCity0" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="dataId1" CLASS="java.lang.String" DESCRIPTION="">
+
+<SCRIPT language="Javascript">
+<!--
+
+var firstEmptyStreet = true;
+var firstEmptyCity = true;
+
+function emptyStreet(input)
+{
+  if (firstEmptyStreet){
+    input.value = "";
+  }
+  firstEmptyStreet = false;
+  return true;
+}
+
+function emptyCity(input)
+{
+  if (firstEmptyCity){
+    input.value = "";
+  }
+  firstEmptyCity = false;
+  return true;
+}
+
+function ControlForm_spec(form)
+{
+
+  // Si l'utilisateur n'a pas touché au champs street0.
+  if (form.street0.value == "Saisissez la rue") {
+    form.street0.value = "";
+  }
+
+  // Si l'utilisateur n'a pas touché au champs city0.
+  if (form.city0.value == "Saisissez la ville ou le CP") {
+    form.city0.value = "";
+  }
+
+  // Localité obligatoire pour les adresses
+  if (form.city0.value == "" || form.city0.value == "Saisissez la ville") {
+    alert("Veuillez saisir votre ville de départ ou son code postal.");
+    form.city0.focus();
+    return (false);
+  }
+
+
+
+  // pour la protection du caractère (') dans le nom de la ville (ex: villeneuve d'ascq).
+  form.paramStreet0.value=escape(form.street0.value);
+  form.paramCity0.value=escape(form.city0.value);
+
+  return true;
+}
+//-->
+</SCRIPT>
+
+<DROPLET BEAN="/atg/targeting/RepositoryLookup">
+<PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+<PARAM NAME="fireContentEvent" VALUE="false">
+<PARAM NAME="fireContentTypeEvent" VALUE="false">
+<PARAM NAME="itemDescriptor" VALUE="magasin">
+<PARAM NAME="id" VALUE="param:magasinid">
+<PARAM NAME="elementName" VALUE="magasin">
+<OPARAM NAME="output">
+    <DROPLET BEAN="/castorama/droplet/RequestFromVerity">
+    <OPARAM NAME="false">
+<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<TD CLASS="t">
+&nbsp;&nbsp;<span class="t">Vous &ecirc;tes ici :</span>
+        <DROPLET BEAN="/atg/targeting/RepositoryLookup">
+        <PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+        <PARAM NAME="fireContentEvent" VALUE="false">
+        <PARAM NAME="fireContentTypeEvent" VALUE="false">
+        <PARAM NAME="itemDescriptor" VALUE="region">
+        <PARAM NAME="id" VALUE="param:regionid">
+        <PARAM NAME="elementName" VALUE="region">
+        <OPARAM NAME="output">
+<img src="/com/img/fleche_bleue.gif" border="0"><a href="index.jhtml" target="_top">La carte des magasins > France</a> <img src="/com/img/fleche_bleue.gif" border="0"><a href="./detailCarte.jhtml" target="_top"><param name="regionid" value="param:region.repositoryId">R&eacute;gion <valueof param="region.nom"/></a> > <valueof param="magasin.nom"/>
+        </OPARAM>
+        </DROPLET>
+</TD>
+</TR>
+</TABLE>
+    </OPARAM>
+    <OPARAM NAME="true">
+<java> response.getWriter().print("<titre>"); </java><valueof param="magasin.nom"/><java> response.getWriter().print("</titre>"); </java>
+    </OPARAM>
+    </DROPLET>
+</OPARAM>
+<OPARAM NAME="empty">
+<br><br><br>
+<p><span class="t">Votre magasin Castorama a fermé ses portes.<br>
+Merci de vous orienter vers un autre magasin de la région.</span><p>
+</OPARAM>
+</DROPLET>
+<droplet src="/com/frag_linkRetour.jhtml"/>
+<DROPLET BEAN="/atg/targeting/RepositoryLookup">
+    <PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+    <PARAM NAME="fireContentEvent" VALUE="false">
+    <PARAM NAME="fireContentTypeEvent" VALUE="false">
+    <PARAM NAME="itemDescriptor" VALUE="magasin">
+    <PARAM NAME="id" VALUE="param:magasinid">
+    <param name="elementName" value="magasin">
+    <OPARAM NAME="output">
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+<tr><td align="center" class="tibl"><b>CASTORAMA <valueof param="magasin.nom"/></b></td></tr>
+</table>
+<table cellpadding="0" cellspacing="7" border="0" width="95%">
+<tr bgcolor="#F6F6F6"><td class="t" valign="top" width="33%"><b>Adresse :</b><br><valueof param="magasin.entite.adresse.rue" valueishtml/><br>
+<valueof param="magasin.entite.adresse.cp"/> <valueof param="magasin.entite.adresse.ville"/><br><br>
+T&eacute;l : <valueof param="magasin.entite.adresse.tel"/><br>
+Fax : <valueof param="magasin.entite.adresse.fax"/></td>
+<td class="t" valign="top" width="33%">
+<b>Horaires d'ouverture</b><br><valueof param="magasin.horaires" valueishtml/></td>
+<td class="t" valign="top" width="34%">
+<b>Consultez</b><br>
+<DROPLET BEAN="/castorama/droplet/RequestFromVerity">
+<OPARAM NAME="false">
+<span class="tbl2">&#149;</span> les <img src="/com/img/fleche_bleue.gif" border="0"><a href="#services">services</a> du magasin CASTORAMA <valueof param="magasin.nom"/><br>
+<span class="tbl2">&#149;</span> le <img src="/com/img/fleche_bleue.gif" border="0"><a href="#plan">plan d'acc&egrave;s</a> du magasin CASTORAMA <valueof param="magasin.nom"/><br>
+<span class="tbl2">&#149;</span> les prochains <img src="/com/img/fleche_bleue.gif" border="0"><a href="/magasins/castoStages.jhtml" target="_top">Castostages</a> de votre magasin.</TD></TR>
+</OPARAM>
+</DROPLET>
+</table>
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR>
+<DROPLET BEAN="/atg/dynamo/droplet/SQLQueryForEach">
+<PARAM NAME="queryBean" VALUE="bean:/castorama/SQLQueryMagasin3">
+<OPARAM NAME="output">
+<TD></TD>
+</OPARAM>
+</DROPLET>
+</TR>
+</TABLE>
+<droplet bean="/castorama/magasin/DropletActualitesMagasin">
+    <param name="elementNameTitre" value="titre">
+    <param name="elementNameContenu" value="contenu">
+    <param name="magasinId" value="param:magasinid">
+    <oparam name="outputStart">
+    <br>
+    <TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+        <TR>
+            <TD class="stibl"><b>L'actualité du magasin CASTORAMA <valueof param="magasin.nom"/></b></TD>
+        </TR>
+        <tr>
+            <td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td>
+        </tr>
+        <tr>
+            <td><img src="/com/img/1pixel.gif" width="1" height="5"></td>
+        </tr>
+    </TABLE>
+    <TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0" bgcolor="#FFFFFF">
+    </oparam>
+    <oparam name="output">
+        <TR valign="top">
+            <TD WIDTH="100%" colspan="2" class="tbl"><valueof param="titre" valueishtml/></TD>
+        </TR>
+        <TR valign="top">
+            <TD WIDTH="10"><img src="/com/img/1pixel.gif" border="0" width="10" height="10"></TD>
+            <TD WIDTH="100%" class="tbl"><valueof param="contenu" valueishtml/><br><br></TD>
+        </tr>
+    </oparam>
+    <oparam name="outputEnd">
+        </TABLE>
+    </oparam>
+</droplet>
+
+        <br><br>
+<a name="services"></a>
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><TD class="stibl"><b>Les services du magasin CASTORAMA <valueof param="magasin.nom"/></b></TD></TR>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" width="1" height="5"></td></tr>
+</TABLE>
+        <DROPLET BEAN="/atg/dynamo/droplet/TableForEach">
+            <PARAM NAME="array" VALUE="param:magasin.listservices">
+            <param name="numColumns" value="3">
+            <param name="elementName" value="service">
+            <OPARAM NAME="outputStart">
+<table width="80%" border="0" cellspacing="0" cellpadding="0">
+            </OPARAM>
+            <OPARAM NAME="outputEnd">
+</table>
+            </OPARAM>
+            <OPARAM NAME="outputRowStart">
+</td>
+            </OPARAM>
+            <OPARAM NAME="outputRowEnd">
+</tr>
+            </OPARAM>
+            <OPARAM NAME="output">
+<td class="t" nowrap width="33%">
+                <DROPLET BEAN="/atg/dynamo/droplet/IsNull">
+                <param name="value" value="param:service.repositoryId">
+                <oparam name="false">
+                    <DROPLET BEAN="/castorama/droplet/Ancre">
+                        <param name="nomAncre" value="param:service.repositoryId">
+                        <param name="elementName" value="ancre">
+                        <param name="url" value="/magasins/services.jhtml">
+                        <oparam name="appelAncre">
+<img src="/com/img/fleche_bleue.gif" border="0"><valueof param="ancre" converter="nullable"/><valueof param="service.nom"/></a>
+                        </oparam>
+                    </DROPLET>
+                </oparam>
+                </DROPLET>
+                </td>
+            </OPARAM>
+            <OPARAM NAME="empty">
+            Aucun service
+            </OPARAM>
+        </DROPLET>
+        
+<java>
+    String textStreet0 = "Saisissez la rue";
+    String textCity0 = "Saisissez la ville ou le CP";
+    String paramStreet0 = "";
+    String paramCity0 = "";
+
+    if (request.getObjectParameter("street0") != null && request.getObjectParameter("street0") != ""){
+        textStreet0 = (String) request.getObjectParameter("street0");
+    }
+    if (request.getObjectParameter("city0") != null && request.getObjectParameter("city0") != ""){
+        textCity0 = (String) request.getObjectParameter("city0");
+    }
+</java>
+
+<java>
+    if (request.getParameter("itineraire") != null){
+</java>
+<br>
+<a name="itineraire"></a>
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><TD class="stibl"><b>L'itinéraire jusqu'au magasin CASTORAMA <valueof param="magasin.nom"/></b></TD></TR>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" width="1" height="5"></td></tr>
+</TABLE>
+<br>
+<table cellpadding="0" cellspacing="0" border="0" width="80%">
+<tr bgcolor="#F6F6F6"><td class="t" valign="top" align="center" width="100%">
+  <b>Pour savoir comment vous rendre au magasin, saisissez votre adresse de d&eacute;part :</b><br><br>
+</td></tr>
+<tr bgcolor="#F6F6F6"><td class="t" valign="top" align="center" width="100%">
+    <FORM NAME="way" METHOD="post" ACTION="./monMagasin.jhtml" onSubmit="return ControlForm_spec(this);">
+        <INPUT TYPE="HIDDEN" NAME="magasinid" VALUE="`request.getObjectParameter("magasinid")`">
+        <INPUT TYPE="HIDDEN" NAME="regionid" VALUE="`request.getObjectParameter("regionid")`">
+        <INPUT TYPE="HIDDEN" NAME="itineraire" VALUE="oui">
+        <INPUT TYPE="HIDDEN" NAME="dataId1" VALUE="CASTO`request.getObjectParameter("magasinid")`">
+        <INPUT CLASS="input" class="formcom" TYPE="text" NAME="street0" SIZE="25" VALUE="`textStreet0`" onFocus="emptyStreet(this);">
+        <INPUT CLASS="input" class="formcom" TYPE="text" NAME="city0" SIZE="25" VALUE="`textCity0`" onFocus="emptyCity(this);">
+        <INPUT TYPE="HIDDEN" NAME="paramStreet0" VALUE="`paramStreet0`">
+        <INPUT TYPE="HIDDEN" NAME="paramCity0" VALUE="`paramCity0`">
+        <INPUT TYPE="submit" VALUE="OK" BORDER="0" NAME="submit">
+    </FORM>
+    </TD>
+  </TR>
+</TABLE>
+<br>
+<iframe id="route" src='http://fc1.1bis.com/castorama/check_way.asp?street0=`request.getObjectParameter("paramStreet0")`&city0=`request.getObjectParameter("paramCity0")`&dataId1=CASTO`request.getObjectParameter("magasinid")`' width="80%" height="600" frameborder="none" border="none" scrolling="auto">
+Votre navigateur ne supporte les cadres locaux (iframe).
+</iframe>
+<br><br>
+<java>
+    }
+</java>
+
+
+<a name="plan"></a>
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<tr><td align="right"><a href="#haut"><img src="/com/img/flechebhaut_retrait.gif" border="0"></a></td></tr>
+</table>&nbsp;
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><TD class="stibl"><b>Plan d'acc&egrave;s au magasin CASTORAMA <valueof param="magasin.nom"/></b></TD></TR>
+
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<TR><TD><img src="/com/img/1pixel.gif" height="10" border="0"></TD></tr>
+</table>
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><td align="center" class="t">
+<table cellspacing="0" cellpadding="1" width="350" bgcolor="#BDC7E7">
+<tr><td>
+<table cellspacing="0" cellpadding="1" width="350" bgcolor="#FFCC00">
+<tr><td><a href="param:magasin.pdfplan" target="_blank"><img src="param:magasin.imgplan" border="0"></a></td></tr>
+</table>
+</td></tr>
+</table>
+<img src="/com/img/fleche_bleue.gif" border="0"><a href="param:magasin.pdfplan" target="_blank">T&eacute;l&eacute;chargez</a> au format PDF (315ko).</TD></TR>
+</table>
+<br>
+<span class="t">La lecture du Format PDF requiert le logiciel Acrobat Reader.<br>
+Pour t&eacute;l&eacute;charger, rendez-vous sur le site d'Adobe (<img src="/com/img/fleche_bleue.gif" border="0"><a href="http://www.adobe.fr" target="_blank">www.adobe.fr</a>)</span>
+<BR><br>
+        <!--java>
+            String l_strParametre = (String) request.getLocalParameter("magasin.accesautoroute");
+            if(l_strParametre!=null){
+                if(l_strParametre.trim().length()>0){
+        </java>
+<table width="70%" border="0" cellspacing="0" cellpadding="0">
+<tr><td class="t"><b>Par l'autoroute</b></td></tr>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" width="1" height="5"></td></tr>
+<tr><td class="t"><valueof param="magasin.accesautoroute" valueishtml/></td></tr>
+</table>
+        <br>
+        <java>
+                }
+            }
+        </java>
+        <java>
+            l_strParametre = (String) request.getLocalParameter("magasin.accesroute");
+            if(l_strParametre!=null){
+                if(l_strParametre.trim().length()>0){
+        </java>
+<table width="70%" border="0" cellspacing="0" cellpadding="0">
+<tr><td class="t"><b>Par la route</b></td></tr>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" width="1" height="5"></td></tr>
+<tr><td class="t"><valueof param="magasin.accesroute" valueishtml/></td></tr>
+</table>
+        <br>
+        <java>
+                }
+            }
+        </java>
+        <java>
+            l_strParametre = (String) request.getLocalParameter("magasin.accesroute2");
+            if(l_strParametre!=null){
+                if(l_strParametre.trim().length()>0){
+        </java>
+<table width="70%" border="0" cellspacing="0" cellpadding="0">
+<tr><td class="t"><b>Par la route</b></td></tr>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" width="1" height="5"></td></tr>
+<tr><td class="t"><valueof param="magasin.accesroute2" valueishtml/></td></tr>
+</table>
+        <br>
+        <java>
+                }
+            }
+        </java>
+        <java>
+            l_strParametre = (String) request.getLocalParameter("magasin.accestransportcommun");
+            if(l_strParametre!=null){
+                if(l_strParametre.trim().length()>0){
+        </java>
+<table width="70%" border="0" cellspacing="0" cellpadding="0">
+<tr><td class="t"><b>Transport en commun</b></td></tr>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" width="1" height="5"></td></tr>
+<tr><td class="t"><valueof param="magasin.accestransportcommun" valueishtml/></td></tr-->
+</table>
+
+
+
+
+
+<java>
+    if (request.getParameter("itineraire") == null){
+</java>
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<TR><TD class="stibl"><b>L'itinéraire jusqu'au magasin CASTORAMA <valueof param="magasin.nom"/></b></TD></TR>
+<tr><td bgcolor="#FFCC00"><img src="/com/img/1pixel.gif" width="1" height="1"></td></tr>
+<tr><td><img src="/com/img/1pixel.gif" width="1" height="5"></td></tr>
+</TABLE>
+<br>
+<table cellpadding="0" cellspacing="0" border="0" width="80%">
+<tr bgcolor="#F6F6F6"><td class="t" valign="top" align="center" width="100%">
+  <b>Pour savoir comment vous rendre au magasin, saisissez votre adresse de d&eacute;part :</b><br><br>
+</td></tr>
+<tr bgcolor="#F6F6F6"><td class="t" valign="top" align="center" width="100%">
+    <FORM NAME="way" METHOD="post" ACTION="./monMagasin.jhtml" onSubmit="return ControlForm_spec(this);">
+        <INPUT TYPE="HIDDEN" NAME="magasinid" VALUE="`request.getObjectParameter("magasinid")`">
+        <INPUT TYPE="HIDDEN" NAME="regionid" VALUE="`request.getObjectParameter("regionid")`">
+        <INPUT TYPE="HIDDEN" NAME="itineraire" VALUE="oui">
+        <INPUT TYPE="HIDDEN" NAME="dataId1" VALUE="CASTO`request.getObjectParameter("magasinid")`">
+        <INPUT CLASS="input" class="formcom" TYPE="text" NAME="street0" SIZE="25" VALUE="`textStreet0`" onFocus="emptyStreet(this);">
+        <INPUT CLASS="input" class="formcom" TYPE="text" NAME="city0" SIZE="25" VALUE="`textCity0`" onFocus="emptyCity(this);">
+        <INPUT TYPE="HIDDEN" NAME="paramStreet0" VALUE="`paramStreet0`">
+        <INPUT TYPE="HIDDEN" NAME="paramCity0" VALUE="`paramCity0`">
+        <INPUT TYPE="submit" VALUE="OK" BORDER="0" NAME="submit">
+    </FORM>
+    </TD>
+  </TR>
+</TABLE>
+<br>
+<java>
+    }
+</java>
+        <!--java>
+                }
+            }
+        </java-->
+<TABLE WIDTH="80%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+<tr><td align="right"><a href="#haut"><img src="/com/img/flechebhaut_retrait.gif" border="0"></a></td></tr>
+</table>
+<table width="90%" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="t" align="right">
+            <java>
+                request.setParameter("pageName","Magasin "+request.getObjectParameter("magasin.nom"));
+            </java>
+            <DROPLET SRC="/moncasto/pages_sauvegardees/frag_savePage.jhtml">
+                <param name="pageName" value="param:pageName">
+                <PARAM NAME="class" VALUE="tbl">
+            </DROPLET>
+</td></tr>
+</table>
+<droplet src="/com/frag_linkRetourHaut.jhtml"/>
+    </OPARAM>
+</DROPLET>

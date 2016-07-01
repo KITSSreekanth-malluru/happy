@@ -1,0 +1,73 @@
+<dsp:getvalueof var="labelsList" value="${castCollection:column()}"/>
+<dsp:getvalueof var="d2hPricesList" value="${castCollection:column()}"/>
+<dsp:getvalueof var="ccPricesList" value="${castCollection:column()}"/>
+
+<!-- Fill list with summary block labels -->
+<fmt:message var="subTotalTTC" key="msg.cart.sub-total.ttc"/>
+${castCollection:add(labelsList, subTotalTTC)}
+<fmt:message var="discountSum" key="msg.cart.discount.sum" />
+${castCollection:add(labelsList, discountSum)}
+<fmt:message var="processingFee" key="msg.cart.processing-fee" />
+${castCollection:add(labelsList, processingFee)}
+<fmt:message var="deliveryFee" key="msg.cart.delivery-fee" />
+${castCollection:add(labelsList, deliveryFee)}
+<fmt:message var="deliveryDiscount" key="msg.cart.delivery.discount" />
+${castCollection:add(labelsList, deliveryDiscount)}
+<fmt:message var="totalTTC" key="msg.cart.total.vac" />
+${castCollection:add(labelsList, totalTTC)}
+<fmt:message var="recyclingFee" key="msg.cart.recycling-fee" />
+${castCollection:add(labelsList, recyclingFee)}
+
+<!-- Fill list with summary prices for D2H -->
+${castCollection:add(d2hPricesList, rawSubTotal)}
+<c:if test="${null == totalDiscount || 0 == totalDiscount}">
+  <dsp:getvalueof var="totalDiscount" value="0" />
+</c:if>
+${castCollection:add(d2hPricesList, totalDiscount)}
+<dsp:droplet name="/com/castorama/droplet/ShippingAndHandlingPriceDroplet">
+  <dsp:param name="order" value="${order}"/>
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="handlingPrice" param="handlingPrice"/>
+    <dsp:getvalueof var="shippingPrice" param="shippingPrice"/>
+    <dsp:getvalueof var="shippingDiscount" param="shippingDiscount"/>
+  </dsp:oparam>
+</dsp:droplet>
+${castCollection:add(d2hPricesList, handlingPrice)}
+${castCollection:add(d2hPricesList, shippingPrice)}
+${castCollection:add(d2hPricesList, shippingDiscount)}
+${castCollection:add(d2hPricesList, total)}
+
+<!-- Fill list with summary prices for C&C -->
+<c:if test="${storeIsCC && mode != 'confirmation'}">
+  <dsp:getvalueof var="catalogNiceWord" bean="/atg/userprofiling/Profile.catalog.processingFeeNiceWord"/>
+  <dsp:getvalueof var="orderNiceWord" bean="/atg/commerce/ShoppingCart.currentLocal.processingFeeNiceWord"/>
+  <c:if test="${catalogNiceWord != orderNiceWord}">
+    <dsp:setvalue bean="/atg/commerce/ShoppingCart.currentLocal.processingFeeNiceWord" value="${catalogNiceWord}"/>
+  </c:if>
+
+  ${castCollection:add(ccPricesList, rawSubTotalLocal)}
+  <c:if test="${null == totalDiscountLocal || 0 == totalDiscountLocal}">
+    <dsp:getvalueof var="totalDiscountLocal" value="0" />
+  </c:if>
+  ${castCollection:add(ccPricesList, totalDiscountLocal)}
+  <dsp:droplet name="/com/castorama/droplet/ShippingAndHandlingPriceDroplet">
+    <dsp:param name="order" value="${orderLocal}"/>
+    <dsp:oparam name="output">
+      <dsp:getvalueof var="handlingPrice" param="handlingPrice"/>
+      <dsp:getvalueof var="shippingPrice" param="shippingPrice"/>
+      <dsp:getvalueof var="shippingDiscount" param="shippingDiscount"/>
+    </dsp:oparam>
+  </dsp:droplet>
+  ${castCollection:add(ccPricesList, handlingPrice)}
+  ${castCollection:add(ccPricesList, shippingPrice)}
+  ${castCollection:add(ccPricesList, shippingDiscount)}
+  ${castCollection:add(ccPricesList, totalLocal)}
+</c:if>
+
+<!-- Calculate if need to display rows with "Vous avez économisé" and "Remise livraison" -->
+<c:if test="${(d2hPricesList[1] != 0) or (not empty ccPricesList and ccPricesList[1] != 0)}">
+  <dsp:getvalueof var="showVousAvezEconomise" value="${true}" scope="request" />
+</c:if>
+<c:if test="${(d2hPricesList[4] != 0) or (not empty ccPricesList and ccPricesList[4] != 0)}">
+  <dsp:getvalueof var="showRemiseLivraison" value="${true}" scope="request" />
+</c:if>

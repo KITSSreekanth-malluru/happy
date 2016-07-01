@@ -1,0 +1,114 @@
+<dsp:getvalueof var="storeIsCC" bean="Profile.currentLocalStore.retraitMagasin" scope="request"/>
+<dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet">
+  <dsp:param name="product" param="key"/>
+  <dsp:param name="store" bean="Profile.currentLocalStore"/>
+  <dsp:param name="svAvailableMap" value="${svAvailableMap}"/>
+  <dsp:oparam name="immidiateWithdrawal">
+    <p class="productDetails"><fmt:message key="castCatalog_productDetails.unavailable"/></p>
+  </dsp:oparam>
+  <dsp:oparam name="remainingStock">
+    <div class="deliverOrCCwr">
+      <ul>
+        <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+          <dsp:include page="/castCatalog/includes/productDelivery.jsp">
+            <dsp:param name="skuId" param="sku.id"/>
+          </dsp:include>
+          <c:if test='${storeIsCC}'>
+            <dsp:include page="/castCatalog/includes/freeShipping.jsp">
+              <dsp:param name="sku" param="sku"/>
+            </dsp:include>
+          </c:if>
+        </a></li>
+      </ul>
+    </div>
+  </dsp:oparam>
+  <dsp:oparam name="soldOnlyInStore">
+  </dsp:oparam>
+  <dsp:oparam name="deliveryTime">
+    <div class="deliverOrCCwr">
+      <ul>
+        <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+          <dsp:include page="/castCatalog/includes/productDelivery.jsp">
+            <dsp:param name="skuId" param="sku.id"/>
+          </dsp:include>
+          <c:if test='${storeIsCC}'>
+            <dsp:include page="/castCatalog/includes/freeShipping.jsp">
+              <dsp:param name="sku" param="sku"/>
+            </dsp:include>
+          </c:if>
+        </a></li>
+      </ul>
+    </div>
+  </dsp:oparam>
+  <dsp:oparam name="ccRemainingStock">
+    <div class="deliverOrCCwr">
+      <ul>
+        <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+          <dsp:include page="/castCatalog/includes/productDelivery.jsp">
+            <dsp:param name="skuId" param="sku.id"/>
+          </dsp:include>
+          <c:if test='${storeIsCC}'>
+            <dsp:include page="/castCatalog/includes/freeShipping.jsp">
+              <dsp:param name="sku" param="sku"/>
+            </dsp:include>
+          </c:if>
+        </a></li>
+
+        <dsp:getvalueof var="delayTime" bean="Profile.currentLocalStore.ccDelayPeriod"/>
+        <dsp:getvalueof var="delayUnit" bean="Profile.currentLocalStore.ccDelayPeriodUnit"/>
+        <fmt:message key="header.mon.magasin.delayunit.hour" var="hour"/>
+        <fmt:message key="header.mon.magasin.delayunit.day" var="day"/>
+        <fmt:message key="header.mon.magasin.delayunit.days" var="days"/>
+        <dsp:getvalueof var="displayDelayUnit" value="${(delayUnit == 0)?hour:(delayTime == 1?day:days)}"/>
+        <li class="pickupMessage"><a><fmt:message key="header.mon.magasin.retrait"/>&nbsp;${delayTime}${displayDelayUnit}</a></li>
+      </ul>
+    </div>
+  </dsp:oparam>
+  <dsp:oparam name="ccSoldOnlyInStore">
+    <div class="deliverOrCCwr">
+      <ul>
+        <li class="deliverMessage hidden"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+          <dsp:include page="/castCatalog/includes/productDelivery.jsp">
+            <dsp:param name="skuId" param="sku.id"/>
+          </dsp:include>
+          <c:if test='${storeIsCC}'>
+            <dsp:include page="/castCatalog/includes/freeShipping.jsp">
+              <dsp:param name="sku" param="sku"/>
+            </dsp:include>
+          </c:if>
+        </a></li>
+        <dsp:getvalueof var="delayTime" bean="Profile.currentLocalStore.ccDelayPeriod"/>
+        <dsp:getvalueof var="delayUnit" bean="Profile.currentLocalStore.ccDelayPeriodUnit"/>
+        <fmt:message key="header.mon.magasin.delayunit.hour" var="hour"/>
+        <fmt:message key="header.mon.magasin.delayunit.day" var="day"/>
+        <fmt:message key="header.mon.magasin.delayunit.days" var="days"/>
+        <dsp:getvalueof var="displayDelayUnit" value="${(delayUnit == 0)?hour:(delayTime == 1?day:days)}"/>
+        <li class="pickupMessage"><a><fmt:message key="header.mon.magasin.retrait"/>&nbsp;${delayTime}${displayDelayUnit}</a></li>
+      </ul>
+    </div>
+  </dsp:oparam>
+  <dsp:oparam name="ccDeliveryTime">
+    <div class="deliverOrCCwr">
+      <ul>
+        <li class="deliverMessage"><a><span><fmt:message key="msg.cart.delivery_at"/></span>
+          <dsp:include page="/castCatalog/includes/productDelivery.jsp">
+            <dsp:param name="skuId" param="sku.id"/>
+          </dsp:include>
+          <c:if test='${storeIsCC}'>
+            <dsp:include page="/castCatalog/includes/freeShipping.jsp">
+              <dsp:param name="sku" param="sku"/>
+            </dsp:include>
+          </c:if>
+        </a></li>
+
+        <dsp:getvalueof var="delayTime" bean="Profile.currentLocalStore.ccDelayPeriod"/>
+        <dsp:getvalueof var="delayUnit" bean="Profile.currentLocalStore.ccDelayPeriodUnit"/>
+        <fmt:message key="header.mon.magasin.delayunit.hour" var="hour"/>
+        <fmt:message key="header.mon.magasin.delayunit.day" var="day"/>
+        <fmt:message key="header.mon.magasin.delayunit.days" var="days"/>
+        <dsp:getvalueof var="displayDelayUnit" value="${(delayUnit == 0)?hour:(delayTime == 1?day:days)}"/>
+        <li class="pickupMessage"><a><fmt:message key="header.mon.magasin.retrait"/>&nbsp;${delayTime}${displayDelayUnit}</a></li>
+      </ul>
+    </div>
+  </dsp:oparam>
+</dsp:droplet>

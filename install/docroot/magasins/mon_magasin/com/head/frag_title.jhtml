@@ -1,0 +1,8 @@
+<TITLE><DROPLET BEAN="/atg/targeting/RepositoryLookup">
+			<PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+			<PARAM NAME="itemDescriptor" VALUE="magasin"><PARAM NAME="elementName" VALUE="magasin">
+			<PARAM NAME="id" VALUE="param:magasinid">
+			<OPARAM NAME="output"><droplet bean="/castorama/utils/DropletDesaccentuation">
+					 	<param name="chaine_avec_accents_potentiels" value="param:magasin.nom">
+					 	<oparam name="sortie"><valueof param="sans_accents"/></oparam>
+						</droplet></OPARAM></DROPLET> - Castorama</TITLE>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+    <header>
+        <name>Local Stores Info</name>
+        <author>EPAM Team</author>
+        <version>1.0</version>
+    </header>
+
+    <item-descriptor name="ecotaxeInfo" cache-mode="simple"
+                     item-cache-size="1000" query-cache-size="1000" display-name-resource="itemDescriptorEcotaxInfo">
+        <attribute name="resourceBundle"
+                   value="com.castorama.commerce.localStores.repository.LocalStoresInfoTemplateResources"/>
+        <table name="ecotax_info" type="primary" id-column-name="ecotax_id">
+            <property name="id" column-name="ecotax_id" data-type="string" required="true"
+                      display-name-resource="ecotaxeInfoId" category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="skuId" column-name="sku_id" data-type="string" required="true"
+                      display-name-resource="ecotaxeInfoSkuId" category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="20"/>
+            </property>
+            <property name="storeId" column-name="store_id" data-type="string" required="true"
+                      display-name-resource="ecotaxeInfoStoreId" category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="30"/>
+            </property>
+            <property name="md3e" column-name="md3e" data-type="double" display-name-resource="ecotaxeInfoMD3E"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="40"/>
+            </property>
+            <property name="mrep" column-name="mrep" data-type="double" display-name-resource="ecotaxeInfoMREP"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="50"/>
+            </property>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="promoInfo" cache-mode="simple"
+                     item-cache-size="1000" query-cache-size="1000" display-name-resource="itemDescriptorPromoInfo">
+        <attribute name="cacheNullItems" value="true"/>
+        <attribute name="resourceBundle"
+                   value="com.castorama.commerce.localStores.repository.LocalStoresInfoTemplateResources"/>
+        <table name="promo_info" type="primary" id-column-name="promo_id">
+            <property name="id" column-name="promo_id" data-type="string" required="true"
+                      display-name-resource="promoInfoId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="storeId" column-name="store_id" data-type="string" required="true"
+                      display-name-resource="promoInfoStoreId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="20"/>
+            </property>
+            <property name="skuId" column-name="sku_id" data-type="string" required="true"
+                      display-name-resource="promoInfoSkuId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="30"/>
+            </property>
+            <property name="fPromo" column-name="f_promo" data-type="boolean" display-name-resource="promoInfoF"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="40"/>
+            </property>
+            <property name="cPromo" column-name="c_promo" data-type="int" display-name-resource="promoInfoC"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="50"/>
+            </property>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="processingFee" cache-mode="simple"
+                     item-cache-size="250" query-cache-size="50" display-name-resource="itemDescriptorProcessingFee">
+        <attribute name="resourceBundle"
+                   value="com.castorama.commerce.localStores.repository.LocalStoresInfoTemplateResources"/>
+        <table name="processing_fee" type="primary" id-column-name="fee_id">
+            <property name="id" column-name="fee_id" data-type="string" required="true"
+                      display-name-resource="processingFeeId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="storeId" column-name="store_id" data-type="string" required="true"
+                      display-name-resource="processingFeeStoreId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="20"/>
+            </property>
+            <property name="amount" column-name="amount" data-type="double" display-name-resource="processingFeeAmount"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="30"/>
+            </property>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="skuClickCollectFlag" cache-mode="simple"
+                     item-cache-size="1000" query-cache-size="1000"
+                     display-name-resource="itemDescriptorSkuClickCollectFlag">
+        <attribute name="resourceBundle"
+                   value="com.castorama.commerce.localStores.repository.LocalStoresInfoTemplateResources"/>
+        <table name="click_collect" type="primary" id-column-name="cc_item_id">
+            <property name="id" column-name="cc_item_id" data-type="string" required="true"
+                      display-name-resource="skuClickCollectFlagId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="storeId" column-name="store_id" data-type="string" required="true"
+                      display-name-resource="skuClickCollectFlagStoreId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="20"/>
+            </property>
+            <property name="skuId" column-name="sku_id" data-type="string" required="true"
+                      display-name-resource="skuClickCollectFlagSkuId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="30"/>
+            </property>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="notAllowedSkus" cache-mode="disabled" display-name-resource="itemDescriptorNotAllowedSkus">
+        <attribute name="resourceBundle"
+                   value="com.castorama.commerce.localStores.repository.LocalStoresInfoTemplateResources"/>
+        <table name="not_allowed_skus" type="primary" id-column-name="id">
+            <property name="id" column-name="id" data-type="string" required="true"
+                      display-name-resource="notAllowedSkusId"/>
+            <property name="skus" column-name="skus" data-type="big string" required="true"
+                      display-name-resource="notAllowedSkus"/>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="discount" cache-mode="simple"
+                     item-cache-size="1000" query-cache-size="1000" display-name-resource="itemDescriptorDiscount">
+        <attribute name="resourceBundle"
+                   value="com.castorama.commerce.localStores.repository.LocalStoresInfoTemplateResources"/>
+        <table name="discount" type="primary" id-column-name="discount_id">
+            <property name="id" column-name="discount_id" data-type="string" required="true"
+                      display-name-resource="discountId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="storeId" column-name="store_id" data-type="string" required="true"
+                      display-name-resource="discountStoreId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="20"/>
+            </property>
+            <property name="skuId" column-name="sku_id" data-type="string" required="true"
+                      display-name-resource="discountSkuId"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="30"/>
+            </property>
+            <property name="displayDiscountBeginDate" column-name="display_discount_begin_date"
+                      data-type="date" required="true" display-name-resource="discountBeginDate"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="40"/>
+            </property>
+            <property name="displayDiscountEndDate" column-name="display_discount_end_date"
+                      data-type="date" required="true" display-name-resource="discountEndDate"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="50"/>
+            </property>
+            <property name="displayDiscount" column-name="display_discount" data-type="boolean"
+                      display-name-resource="discountDisplayFlag"
+                      category-resource="localStoresInfoGeneral">
+                <attribute name="propertySortPriority" value="60"/>
+            </property>
+        </table>
+    </item-descriptor>
+
+</gsa-template>

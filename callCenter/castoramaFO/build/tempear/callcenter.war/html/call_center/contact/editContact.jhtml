@@ -1,0 +1,323 @@
+<DECLAREPARAM NAME="id" CLASS="java.lang.String" DESCRIPTION="id du contact">
+<setvalue bean="ContactFormHandler.repositoryId" value="param:id">
+<IMPORTBEAN BEAN="/castorama/ContactFormHandler">
+<importbean bean="/atg/dynamo/droplet/Switch">
+<importbean bean="/atg/dynamo/droplet/ForEach">
+<droplet name="/atg/dynamo/security/SecurityAccessor">
+ <param name="allowGroups" value="commerce-csr-profiles-privilege">
+ <param name="denyGroups" value="">
+ <oparam name="accessAllowed">
+	<DROPLET SRC="/call_center/common/header.jhtml"/>
+	</OPARAM>
+</DROPLET>
+<DROPLET SRC="/call_center/common/protocolChange.jhtml"><PARAM NAME="protocol" VALUE="secure"></DROPLET>
+<html>
+<head>
+<TITLE>Castorama : Call center - Editer un contact</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="stylesheet" HREF="/css/hp.css">
+</head>
+<BODY BGCOLOR="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<droplet src="/call_center/common/erreur.jhtml"/>
+<br>
+	<!-- debut du form -->
+<form name="contact" method="post" action="editContact.jhtml">
+<input type="hidden" bean="ContactFormHandler.requireIdOnCreate" value="false">
+<input type="hidden" bean="ContactFormHandler.extractDefaultValuesFromItem" value="true">
+<input type="hidden" bean="ContactFormHandler.updateSuccessURL" value="/call_center/login_success.jhtml">
+<input type="hidden" bean="ContactFormHandler.createSuccessURL" value="/call_center/login_success.jhtml">
+<input type="hidden" bean="ContactFormHandler.updateErrorURL" value="editContact.jhtml">
+<input type="hidden" bean="ContactFormHandler.repositoryId" value="param:id">
+
+<input type="hidden" bean="ContactFormHandler.statut" name="statutText">
+<input type="hidden" bean="ContactFormHandler.motif" name="motifText">
+<input type="hidden" bean="ContactFormHandler.issue" name="issueText">
+
+<input type="hidden" bean="ContactFormHandler.ip" value="bean:/atg/dynamo/servlet/pipeline/BrowserAttributes.remoteAddr">
+<input type="hidden" bean="ContactFormHandler.ContactId" value="param:id">
+<input type="hidden" name="id" value="param:id">
+<droplet name="/atg/dynamo/security/CurrentUser">
+  <oparam name="output">
+  	<input type="hidden" bean="ContactFormHandler.value.teleoperateur" value="param:username">
+	<input type="hidden" bean="ContactFormHandler.nomLogin" value="param:username">
+ </oparam>
+  <oparam name="empty"></oparam>
+  <oparam name="error">error</oparam>
+</droplet>
+
+<table align=center width=600 border=0 cellpadding=0 cellspacing=0>
+ <tr>
+	<td align=center>
+<span class=prix>Editer un contact</span>
+<p>
+
+<!-- debut -->
+			<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0" align="center">
+    <tr bgcolor="#FFDE63"> 
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+    </tr>
+    <TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Civilité 
+        :&nbsp; 
+      </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">
+	  	<SELECT NAME="civilite" CLASS="moncasto" BEAN="ContactFormHandler.value.civilite">
+             <option value="Monsieur">Monsieur</option>
+             <option value="Madame">Madame</option>
+			 <option value="Mlle">Mlle</option>
+        </SELECT>
+	  </td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Nom* 
+        :&nbsp;   
+      </TD>
+      <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="nom" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.nom" required="true"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Prénom* 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="prenom" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.prenom" required="true"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Compte internaute 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="profileId" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.profileId"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">E-mail 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="email" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.email"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Adresse 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"> <input type="text" name="adresse" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.adresse"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR>
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Code postal 
+        :&nbsp; 
+      </TD>
+      <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="codePostal" class="moncasto" size="20" maxlength="5" BEAN="ContactFormHandler.value.codePostal"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Ville 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="ville" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.ville"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Téléphone 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="telephone" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.telephone"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Numéro de la commande 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="numCommande" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.numCommande"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Liste des codes produits 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" name="codesProduits" class="moncasto" size="20" maxlength="35" BEAN="ContactFormHandler.value.codesProduits"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Commentaire 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><textarea cols="20" rows="5" name="commentaire" class="moncasto" BEAN="ContactFormHandler.value.commentaire"></textarea></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Statut du contact* 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">
+	  		<select name="ComboStatuts" class="moncasto" onchange=changementStatuts('ComboStatuts','ComboMotifs','ComboIssues')>
+			</select>
+	  </td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Motif du contact* 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">
+	  	<select name="ComboMotifs" class="moncasto" onchange=changementMotifs('ComboMotifs','ComboIssues')>
+		</select>
+	  </td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Issue du contact* 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">
+	  	 <select name="ComboIssues" class="moncasto">
+		</select>
+	  </td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<DROPLET BEAN="/atg/dynamo/droplet/IsNull">  
+	<PARAM NAME="value" VALUE="bean:ContactFormHandler.value.contenu">
+ 	<OPARAM NAME="false">
+		<TR> 
+	      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+	      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+	      
+	      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Contenu Contact Internaute
+		  	:&nbsp;
+		  </TD>
+		  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">
+		  	 <textarea cols="40" rows="8" name="contenu" class="moncasto" BEAN="ContactFormHandler.value.contenu"></textarea>
+		  </td>
+	      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+	      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+	    </TR>
+	</oparam>
+  </droplet>
+    <tr bgcolor="#FFDE63"> 
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+    </tr>
+  </TABLE>  
+  <br>
+  <table width="600" border="0" align="center" cellspacing="0" cellpadding="0">
+        <tr align="center">
+          <td valign=top><a href="javascript:history.back();"><img src="/img/annuler.gif" border=0"></a></td>
+		  <td>
+          <input type="image" src="/img/valider.gif" border=0 bean="ContactFormHandler.update" value="CREER" onClick="javascript:renvoieSelections();">
+          </td>
+        </tr>
+      </table>
+	<!-- fin -->
+</FORM>
+<br>
+
+<droplet src="/call_center/common/menuBas.jhtml"/>
+</body>
+
+<DROPLET SRC="script_combos.jhtml"></DROPLET>
+<script language="javascript">
+<DROPLET BEAN="/atg/targeting/RepositoryLookup">
+	<PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/ContactCallCenterGSARepository">
+	<PARAM NAME="id" VALUE="param:id">
+	<PARAM NAME="elementName" value="C">
+	<PARAM NAME="itemDescriptor" VALUE="contactCallCenter">
+	<OPARAM NAME="output">
+		<DROPLET BEAN="/atg/dynamo/droplet/IsNull">
+			<PARAM NAME="value" VALUE="param:C.contactStatut.libelleStatut">
+			<PARAM NAME="elementName" value="A">
+			<OPARAM NAME="true">
+			chargementInitial('...','...','...');
+			</OPARAM>
+			<OPARAM NAME="false">
+				<DROPLET BEAN="/atg/dynamo/droplet/IsNull">
+					<PARAM NAME="value" VALUE="param:C.contactMotif.libelleMotif">
+					<PARAM NAME="elementName" value="B">
+					<OPARAM NAME="false">
+						<DROPLET BEAN="/atg/dynamo/droplet/IsNull">
+							<PARAM NAME="value" VALUE="param:C.contactIssue.libelleIssue">
+							<PARAM NAME="elementName" value="B">
+							<OPARAM NAME="false">
+							chargementInitial('<valueof param="C.contactStatut.libelleStatut"/>','<valueof param="C.contactMotif.libelleMotif"/>','<valueof param="C.contactIssue.libelleIssue"/>');
+							</OPARAM>
+							<OPARAM NAME="true">
+							chargementInitial('<valueof param="C.contactStatut.libelleStatut"/>','<valueof param="C.contactMotif.libelleMotif"/>','...');
+							</OPARAM>			
+						</DROPLET>	
+					</OPARAM>
+					<OPARAM NAME="true">
+					chargementInitial('<valueof param="C.contactStatut.libelleStatut"/>','...','...');
+					</OPARAM>			
+				</DROPLET>
+			</OPARAM>	
+		</DROPLET>
+	</OPARAM>
+	<OPARAM NAME="empty">
+		chargementInitial('...','...','...');		
+	</OPARAM>
+</DROPLET>
+</script>
+
+</html>

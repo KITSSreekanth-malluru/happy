@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+    <header>
+        <name>StockAvailability</name>
+        <author>Yahor But-Husaim</author>
+        <description>Stock availability repository</description>
+    </header>
+
+    <item-descriptor name="msInventory" cache-mode="disabled">
+        <table name="MS_INVENTORY" type="primary" id-column-names="STORE_ID,PRODUCT_ID">
+            <property name="productId" data-types="string" column-name="PRODUCT_ID"
+                      display-name-resource="productId"/>
+            <property name="storeId" data-type="int" column-name="STORE_ID"
+                      display-name-resource="storeId"/>
+            <property name="stockSnapshotDate" data-type="date"
+                      column-name="STOCK_SNAPSHOT_DATE" display-name-resource="stockSnapshotDate"/>
+            <property name="fileSequence" data-type="int" column-name="FILE_SEQ"
+                      display-name-resource="fileSequence"/>
+            <property name="createdDate" data-type="date"
+                      column-name="CREATED_DATE" display-name-resource="createdDate"/>
+            <property name="updatedDate" data-type="date"
+                      column-name="UPDATED_DATE" display-name-resource="updatedDate"/>
+            <property name="stockAvailable" data-type="double" column-name="STOCK_AVAILABLE"
+                      display-name-resource="stockAvailable"/>
+        </table>
+        <attribute name="resourceBundle"
+                   value="com.castorama.integration.stock.StockAvailabilityResources"/>
+    </item-descriptor>
+
+    <item-descriptor name="msPcodeToStores" cache-mode="disabled">
+        <table name="MS_PCODE_TO_STORES" type="primary" id-column-name="POSTAL_CODE">
+            <property name="postalCode" data-types="string" column-name="POSTAL_CODE"
+                      display-name-resource="postalCode" required="true"/>
+            <property name="store1" data-type="int" column-name="STORE_1"
+                      display-name-resource="store1"/>
+            <property name="store2" data-type="int" column-name="STORE_2"
+                      display-name-resource="store2"/>
+            <property name="store3" data-type="int" column-name="STORE_3"
+                      display-name-resource="store3"/>
+            <property name="store4" data-type="int" column-name="STORE_4"
+                      display-name-resource="store4"/>
+            <property name="store5" data-type="int" column-name="STORE_5"
+                      display-name-resource="store5"/>
+            <property name="store6" data-type="int" column-name="STORE_6"
+                      display-name-resource="store6"/>
+            <property name="store7" data-type="int" column-name="STORE_7"
+                      display-name-resource="store7"/>
+            <property name="store8" data-type="int" column-name="STORE_8"
+                      display-name-resource="store8"/>
+            <property name="store9" data-type="int" column-name="STORE_9"
+                      display-name-resource="store9"/>
+            <property name="store10" data-type="int" column-name="STORE_10"
+                      display-name-resource="store10"/>
+        </table>
+        <attribute name="resourceBundle"
+                   value="com.castorama.integration.stock.StockAvailabilityResources"/>
+    </item-descriptor>
+
+    <item-descriptor name="msSyncJournal" cache-mode="disabled">
+        <table name="MS_INVENTORY_SYNC_JOURNAL" type="primary" id-column-name="ID">
+            <property name="id" data-type="int" column-name="ID"
+                      display-name-resource="id" required="true"/>
+            <property name="storeId" data-type="int" column-name="STORE_ID"
+                      display-name-resource="storeId"/>
+            <property name="entityNumber" data-type="int" column-name="ENTITY_NUMBER"
+                      display-name-resource="entityNumber"/>
+            <property name="fileSequence" data-type="int" column-name="FILE_SEQ"
+                      display-name-resource="fileSequence"/>
+            <property name="lastUpdate" data-type="date"
+                      column-name="LAST_UPDATE" display-name-resource="lastUpdate"/>
+            <property name="status" data-type="int" column-name="STATUS"
+                      display-name-resource="status"/>
+        </table>
+        <attribute name="resourceBundle"
+                   value="com.castorama.integration.stock.StockAvailabilityResources"/>
+    </item-descriptor>
+
+    <item-descriptor name="msStockServiceErrLog" cache-mode="disabled">
+        <table name="MS_STOCK_SERVICE_ERR_LOG" type="primary" id-column-name="ID">
+            <property name="id" data-type="int" column-name="ID"
+                      display-name-resource="id" required="true"/>
+            <property name="postalCode" data-types="string" column-name="POSTAL_CODE"
+                      display-name-resource="postalCode"/>
+            <property name="storeId" data-type="string" column-name="STORE_ID"
+                      display-name-resource="storeId"/>
+            <property name="productId" data-types="string" column-name="PROD_ID"
+                      display-name-resource="productId"/>
+            <property name="channel" data-types="string" column-name="CHANNEL"
+                      display-name-resource="channel"/>
+            <property name="errorDate" data-type="date" column-name="ERROR_DATE"
+                      display-name-resource="errorDate"/>
+            <property name="errorCode" data-type="string" column-name="ERROR_CODE"
+                      display-name-resource="errorCode"/>
+        </table>
+        <attribute name="resourceBundle"
+                   value="com.castorama.integration.stock.StockAvailabilityResources"/>
+    </item-descriptor>
+
+</gsa-template>

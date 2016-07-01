@@ -1,0 +1,88 @@
+  <c:if test="${fn:contains(requestURI, 'delivery.jsp') || fn:contains(requestURI, 'payment.jsp') || fn:contains(requestURI, 'confirmation.jsp') || fn:contains(requestURI, 'cart.jsp')}">    
+    <dsp:getvalueof var="omnitureDeliveryTime" value=""/>
+    <dsp:getvalueof var="omnitureProducts" value=""/>
+    
+    <dsp:droplet name="ForEach">
+      <c:choose>
+        <c:when test="${fn:contains(requestURI, 'cart.jsp') }">
+          <dsp:param name="array" bean="/atg/commerce/ShoppingCart.current.ShippingGroups"/>
+        </c:when>
+        <c:when test="${fn:contains(requestURI, 'confirmation.jsp') }">
+          <dsp:param name="array" bean="/atg/commerce/ShoppingCart.last.ShippingGroups"/>
+          <c:if test="${orderDeliveryType == 'clickAndCollect'}">
+            <dsp:getvalueof var="omnitureDeliveryTimeCC" value="${delayTime}${displayDelayUnit}"/>
+          </c:if>
+        </c:when>
+        <c:otherwise>
+          <dsp:param name="array" bean="/atg/commerce/ShoppingCart.currentlySelected.ShippingGroups"/>
+        </c:otherwise>
+      </c:choose>
+      <dsp:param name="elementName" value="ShippingGroup"/>
+      <dsp:oparam name="output">
+        <dsp:droplet name="ForEach">
+          <dsp:param name="array" param="ShippingGroup.CommerceItemRelationships"/>
+          <dsp:param name="elementName" value="CiRelationship"/>
+          <dsp:getvalueof var="count" param="count"/>
+          <dsp:oparam name="output">
+            <dsp:getvalueof var="refNumber" param="CiRelationship.commerceItem.auxiliaryData.catalogRef.CodeArticle"/>
+            <c:set var="omnitureProducts" value="${omnitureProducts}${refNumber}"/>
+            <c:if test="${fn:contains(requestURI, 'confirmation.jsp')}">
+              <dsp:getvalueof var="quantity" param="CiRelationship.commerceItem.quantity"/>
+              <dsp:getvalueof var="itemAmount" param="CiRelationship.commerceItem.priceInfo.amount"/>
+              <c:set var="omnitureProducts" value="${omnitureProducts};${quantity};${itemAmount}"/>
+              
+              <c:choose>
+                <c:when test="${not empty omnitureDeliveryTimeCC}">
+                  <c:set var="omnitureDeliveryTime" value="${omnitureDeliveryTime}${omnitureDeliveryTimeCC}"/>
+                </c:when>
+                <c:otherwise>
+                  <dsp:getvalueof var="skuId" param="CiRelationship.commerceItem.auxiliaryData.catalogRef.repositoryId"/>
+                  <dsp:droplet name="/com/castorama/droplet/CastShippingDroplet">
+                    <dsp:param name="skuId" value="${skuId}"/>
+                    <dsp:param name="quantity" param="CiRelationship.commerceItem.quantity"/>
+                    <dsp:oparam name="output">
+                      <dsp:getvalueof param="expeditionPNS.deliveryTime" var="deliveryTime"/>
+                      <c:set var="omnitureDeliveryTime" value="${omnitureDeliveryTime}${deliveryTime}"/>
+                    </dsp:oparam>
+                  </dsp:droplet>
+                </c:otherwise>
+              </c:choose>
+            </c:if>
+               
+            <dsp:getvalueof param="size" var="size"/>
+            <c:if test="${size != count}">
+              <c:set var="omnitureProducts" value="${omnitureProducts},"/>
+              <c:if test="${fn:contains(requestURI, 'confirmation.jsp')}">
+                <c:set var="omnitureDeliveryTime" value="${omnitureDeliveryTime},"/>
+              </c:if>
+            </c:if>
+            <c:set var="omnitureDeliveryTime" value="${fn:replace(omnitureDeliveryTime, 'sous ', '')}" />
+          </dsp:oparam>
+        </dsp:droplet>
+      </dsp:oparam>
+    </dsp:droplet>
+  </c:if><%-- end of test="${fn:contains(requestURI, 'confirmation.jsp') || fn:contains(requestURI, 'confirmation.jsp') --%>
+
+<dsp:getvalueof var="cartLocalEmpty" bean="/atg/commerce/ShoppingCart.cartLocalEmpty"/>
+<c:if test="${fn:contains(requestURI, 'cart.jsp') && cartLocalEmpty == 'false'}">
+  <c:if test="${fn:length(omnitureProducts) > 0}">
+    <c:set var="omnitureProducts" value="${omnitureProducts},"/>
+  </c:if>
+  <dsp:droplet name="ForEach">
+    <dsp:param name="array" bean="/atg/commerce/ShoppingCart.currentLocal.ShippingGroups"/>
+    <dsp:param name="elementName" value="ShippingGroup"/>
+    <dsp:oparam name="output">
+      <dsp:droplet name="ForEach">
+        <dsp:param name="array" param="ShippingGroup.CommerceItemRelationships"/>
+        <dsp:param name="elementName" value="CiRelationship"/>
+        <dsp:oparam name="output">
+          <dsp:getvalueof var="refNumber" param="CiRelationship.commerceItem.auxiliaryData.catalogRef.CodeArticle"/>
+          <c:if test="${not fn:contains(omnitureProducts, refNumber)}">
+            <c:set var="omnitureProducts" value="${omnitureProducts}${refNumber},"/>
+          </c:if>
+        </dsp:oparam>
+      </dsp:droplet>
+    </dsp:oparam>
+  </dsp:droplet>
+  <c:set var="omnitureProducts" value="${fn:substring(omnitureProducts, 0, fn:length(omnitureProducts) - 1)}"/>
+</c:if>

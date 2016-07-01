@@ -1,0 +1,57 @@
+<div class="storeOrdersFilterBlock">
+    <label class="productNameLabel"><fmt:message key="client.store.orders.filter.product.label"/></label>
+    <label class="dateLabel"><fmt:message key="client.store.orders.filter.date.label"/></label>
+    <label class="magazinLabel"><fmt:message key="client.store.orders.filter.magazin.label"/></label>
+    <div class="productName">
+      <dsp:input type="text" id="storeOrdersFilterProductName" size="10" iclass="i-text" maxlength="40" bean="TicketFilterFormHandler.productName"/>
+    </div>
+    <div class="ticketDate">
+      <fmt:message key="client.store.orders.filter.date.from.label"/>&nbsp;<fmt:message key="common.colon"/><dsp:input type="text" id="storeOrdersFilterdateFrom" size="10" iclass="i-text date" maxlength="10" bean="TicketFilterFormHandler.dateFrom"/>
+      <fmt:message key="client.store.orders.filter.date.to.label"/>&nbsp;<fmt:message key="common.colon"/><dsp:input type="text" id="storeOrdersFilterdateTo" size="10" iclass="i-text date" maxlength="10" bean="TicketFilterFormHandler.dateTo"/>
+    </div>
+    <div class="magazin">
+      <dsp:getvalueof var="displayCastoramaFr" value="false" />
+      <dsp:select id="storeOrdersFilterProductName" iclass="i-selectW204" bean="TicketFilterFormHandler.storeId">
+        <dsp:droplet name="ForEach">
+          <dsp:param name="array" bean="TicketFilterFormHandler.availableStores" />
+          <dsp:param name="sortProperties" value="+entite.adresse.cp" />
+          <dsp:param name="elementName" value="store" />
+          <dsp:oparam name="empty">
+             <dsp:option value="all"><fmt:message key="client.store.orders.filter.stores.all"/></dsp:option>
+          </dsp:oparam>
+          <dsp:oparam name="outputStart">
+             <dsp:option value="all" selected="true"><fmt:message key="client.store.orders.filter.stores.all"/></dsp:option>
+          </dsp:oparam>
+          <dsp:oparam name="output">
+             <dsp:getvalueof var="code" param="store.entite.adresse.cp" />
+             <dsp:getvalueof var="id" param="store.repositoryId" />
+             <c:if test="${id!=999}">
+               <dsp:option paramvalue="store.storeId"><c:out value="${fn:substring(code, 0, 2)}" /> -  <dsp:valueof param="store.nom"/></dsp:option>
+             </c:if>
+             <c:if test="${id == 999}">
+               <c:set var="displayCastoramaFr" value="true"/>
+             </c:if>>
+          </dsp:oparam>
+          <dsp:oparam name="outputEnd">
+             <c:if test="${displayCastoramaFr}">
+               <dsp:option paramvalue="store.storeId"><fmt:message key="castorama.fr" /></dsp:option>
+             </c:if>
+          </dsp:oparam>
+
+        </dsp:droplet>
+      </dsp:select>
+    </div>
+    <div class="actionButton">
+      <span class="inputButton">
+        <fmt:message var="filterButtonText" key="client.store.orders.filter.button"/>
+        <dsp:input type="submit" bean="TicketFilterFormHandler.filter" value="${filterButtonText}"/>
+      </span>
+    </div>
+
+    <label class="productNameHint"><fmt:message key="client.store.orders.filter.product.hint"/></label>
+    <label class="dateHint"><fmt:message key="client.store.orders.filter.date.hint"/></label>
+    <label class="dateHint"><fmt:message key="client.store.orders.filter.date.hint"/></label>
+    
+    <dsp:input type="hidden" bean="TicketFilterFormHandler.validerAction" value="true"/>
+
+</div>

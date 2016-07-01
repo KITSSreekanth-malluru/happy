@@ -1,0 +1,1816 @@
+﻿<!-- Combining xml files - no DOCTYPE declaration necessary -->
+<gsa-template xml-combine="append">
+  <header xml-combine="replace">
+    <name>Castorama Custom Catalog</name>
+    <author>Epam Team</author>
+    <version>1.0</version>
+  </header>
+
+  <item-descriptor name="promoInformation" display-property="title" display-name-resource="promoInformation.displayName" cache-mode="simple" item-cache-size="100" query-cache-size="200">
+    <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+    <table name="cast_promo_information" type="primary" id-column-name="promo_information_id">
+      <property name="id" data-type="string" column-name="promo_information_id">
+        <attribute name="propertySortPriority" value="0" />
+      </property>
+      <property name="image" item-type="media" display-name-resource="promoInformation.image">
+        <attribute name="propertySortPriority" value="10" />
+      </property>
+      <property name="flash" data-type="string" display-name-resource="promoInformation.flash">
+        <attribute name="propertySortPriority" value="15" />
+      </property>
+	  <property name="shortDescription" data-type="string" column-name="short_description" display-name-resource="promoInformation.shortDescription" >
+		<attribute name="propertySortPriority" value="19" />
+      </property>
+      <property name="description" data-type="big string" display-name-resource="promoInformation.description">
+        <attribute name="propertySortPriority" value="20" />
+      </property>
+      <property name="url" data-type="string" display-name-resource="promoInformation.url">
+        <attribute name="propertySortPriority" value="30" />
+      </property>
+      <property name="wrapPage" data-type="boolean" column-name="WRAPPAGE" default="false" display-name-resource="promoInformation.wrapPage">
+        <attribute name="propertySortPriority" value="31" />
+      </property>
+      <property name="videoUrl" data-type="string" display-name-resource="promoInformation.videoUrl" column-name="VIDEOURL">
+        <attribute name="propertySortPriority" value="32" />
+      </property>
+      <property name="title" data-type="string" display-name-resource="promoInformation.title">
+        <attribute name="propertySortPriority" value="5" />
+      </property>
+      <property name="document" item-type="castoramaDocument" column-name="document_id" display-name-resource="promoInformation.document">
+        <attribute name="propertySortPriority" value="70" />
+      </property>
+      <property name="product" item-type="product" column-name="product_id" display-name-resource="promoInformation.product">
+        <attribute name="propertySortPriority" value="50" />
+      </property>
+      <property name="category" item-type="category" column-name="category_id" display-name-resource="promoInformation.category">
+        <attribute name="propertySortPriority" value="60" />
+      </property>
+      <property name="htmlUrl" data-type="string" display-name-resource="promoInformation.htmlUrl" column-name="HTMLURL">
+        <attribute name="propertySortPriority" value="40" />
+      </property>
+      <property name="pageTitlePattern" column-name="PAGE_TITLE_PATTERN" data-type="string" 
+        display-name-resource="pageTitlePattern" category-resource="seoSupportCategory" default="{title} - CASTORAMA">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+	  <property name="metaKeywordsPattern" column-name="META_KEYWORDS_PATTERN" data-type="string" 
+        display-name-resource="metaKeywordsPattern" category-resource="seoSupportCategory" default="{keywords,sep=,}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="metaDescriptionPattern" column-name="META_DESCRIPTION_PATTERN" data-type="string" 
+        display-name-resource="metaDescriptionPattern" category-resource="seoSupportCategory" default="{shortDescription}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+    </table>
+	<table name="cast_promo_info_keywrds" id-column-name="id" multi-column-name="sequence_num" type="multi" shared-table-sequence="1">
+		<property expert="false" readable="true" writable="true" cache-mode="inherit" data-type="list" hidden="false" name="keywords" required="false" component-data-type="string" queryable="true" column-name="keywords" display-name-resource="promoInformation.keywords" />
+	</table>
+  </item-descriptor>
+
+  <item-descriptor name="fastLabConfigs" display-name="Fast Lab project configuration properties" >
+    <table name="casto_fast_lab_configs" type="primary" id-column-name="id">
+      <property name="id" data-type="string" column-name="id" display-name="Id"/>
+      
+      <property name="fbLinkTitle" data-type="string" column-name="fb_link_title" default="Forum Brico" display-name-resource="Forum Brico link title" category="Global" />
+      <property name="fbLinkValue" data-type="string" column-name="fb_link_value" default="http://www.linternaute.com/bricolage/forum/" display-name-resource="Forum Brico link value" category="Global" />
+      <property name="fdLinkTitle" data-type="string" column-name="fd_link_title" default="Forum Déco" display-name-resource="Forum Déco link title" category="Global" />
+      <property name="fdLinkValue" data-type="string" column-name="fd_link_value" default="http://deco.journaldesfemmes.com/forum/" display-name-resource="Forum Déco link value" category="Global" />
+      <property name="egLinkTitle" data-type="string" column-name="eg_link_title" default="Les Troc'Heures" display-name-resource="Entraide Gratuite link title" category="Global" />
+      <property name="egLinkValue" data-type="string" column-name="eg_link_value" default="http://www.lestrocheures.fr/" display-name-resource="Entraide Gratuite link value" category="Global" />
+	  <property name="castoramaCard" item-type="promoInformation" column-name="card_castorama_block" default="" display-name-resource="Castorama card block" category="Global" />
+      <property name="disDefaultDoc" item-type="castoramaDocument" column-name="dis_def_doc" display-name="DIS default document" category="DIS" />
+      
+      <property name="prodDisFbLinkTitle" data-type="string" column-name="prod_dis_fb_link_title" default="FORUM&lt;br/&gt;BRICO" display-name-resource="Forum Brico link title" category="Product Page DIS" />
+      <property name="prodDisFdLinkTitle" data-type="string" column-name="prod_dis_fd_link_title" default="FORUM&lt;br/&gt;DÉCO" display-name-resource="Forum Déco link title" category="Product Page DIS" />
+      <property name="prodDisEgLinkTitle" data-type="string" column-name="prod_dis_eg_link_title" default="ENTRAIDE&lt;br/&gt;GRATUITE" display-name-resource="Entraide Gratuite link title" category="Product Page DIS" />
+      
+      <property name="enableNewCF" data-type="boolean" default="false" column-name="cf_enable_new" display-name="Enable new Conseils and Forums page" category="Conseils and Forums" />
+      <property name="cfPageTitle" data-type="string" default="Pour vous aider dans votre projet." column-name="cf_page_title" display-name-resource="Page main title" category="Conseils and Forums" />
+      <property name="cfPageDescr" data-type="big string" default="Sur l'espace LANCEZ-VOUS, retrouvez des guides et vidéos pédagogiques, des outils et applications." column-name="cf_page_descr" display-name-resource="Page main description" category="Conseils and Forums" />
+      <property name="cfDefBottomBanner" item-type="promoInformation" column-name="cf_def_bottom_banner" display-name="Default bottom banner" category="Conseils and Forums" />
+      <property name="cfGetHelpBlockTitle" data-type="string" column-name="cf_get_help_title" default="TROUVER DE L'AIDE" display-name="Trouver de l'aide Block title" category="Conseils and Forums" />
+      <property name="cfGetHelpBlockDescr" data-type="big string" column-name="cf_get_help_descr" default="Besoin de conseils ? Besoin de quelqu'un pour vous aider dans votre projet ? Postez vos questions sur nos forums, concluez un troc avec la communauté ou faites appel à notre service de pose." display-name="Trouver de l'aide Block description" category="Conseils and Forums" />
+      <property name="cfGetHelpHomeBlock" item-type="promoInformation" column-name="cf_get_help_home" display-name="Trouver de l'aide Block on Home page" category="Conseils and Forums" />
+      <property name="cfGetHelpFilteredBlock" item-type="promoInformation" column-name="cf_get_help_filtered" display-name="Trouver de l'aide on Filtered page" category="Conseils and Forums" />
+      
+      <property name="reinsuranceSection" item-type="promoInformation" column-name="reinsurance_section" display-name="Reinsurance Section block" category="Reinsurance Section" />
+      <property name="reinsuranceSectionFlap" item-type="promoInformation" column-name="reinsurance_section_flap" display-name="Reinsurance Section block with Service Client 2012 Flap" category="Reinsurance Section" />
+      <property name="chooseStoreLabel" data-type="string" column-name="choose_store_label" default="Choix du magasin" display-name="Choix du magasin" category="Store Locator" />
+      <property name="chooseStoreDescr" data-type="string" column-name="choose_store_descr" display-name="Choose Store Descr" category="Store Locator" />
+      <property name="searchInputTitle" data-type="string" column-name="search_input_title" default="Saisissez le code postal ou la ville … " display-name="Search input title" category="Store Locator" />
+      <property name="leadformanceLinkValue" data-type="string" column-name="leadformance_link_value" default="Infos, horaires et coordonnées" display-name="Leadformance Link Value" category="Store Locator" />
+      <property name="bestOffers" data-type="string" column-name="best_offers" default="Les offres du moment" display-name="best Offers label" category="Store Locator" />
+      <property name="ccStoreMessageLong" data-type="string" column-name="cc_store_message_long" default="Retrait en magasin sous " display-name="CC store message long" category="Store Locator" />
+      <property name="ccStoreMessageShort" data-type="string" column-name="cc_store_message_short" default="Retrait en magasin" display-name="CC store message short" category="Store Locator" />
+      <property name="changeStoreLabel" data-type="string" column-name="change_store_label" default="Changer de magasin" display-name="Change Store Label" category="Store Locator" />
+      <property name="chooseOtherStoreLabel" data-type="string" column-name="choose_other_store_label" default="Choisir un autre magasin :" display-name="Choose Other Store Label" category="Store Locator" />
+      <property name="chooseThisStoreLabel" data-type="string" column-name="choose_this_store_label" default="Choisir ce magasin" display-name="Choose This Store Label" category="Store Locator" />
+      <property name="yourStoreLabel" data-type="string" column-name="your_store_label" default="VOTRE MAGASIN : " display-name="Your Store Label" category="Store Locator" />
+      <property name="searchStoreLabel" data-type="string" column-name="search_store_label" default="TROUVER UN MAGASIN : " display-name="Search StoreLabel" category="Store Locator" />
+      <property name="linkToCatalogPage" data-type="string" column-name="catalog_page_link" default="http://www.castorama.fr/store/catalog/catalogs.jsp" display-name="Catalog Page Link" category="Store Locator" />
+      <property name="closeButtonEnabled" data-type="boolean" default="false" column-name="close_button_enabled" display-name="Close Button Enabled" category="Store Locator"/>
+      
+      <property name="firstCategoryImage" item-type="media" display-name="First category image" column-name="first_image" category="Search Improvements">
+        <attribute name="propertySortPriority" value="10" />
+      </property>
+      <property name="secondCategoryImage" item-type="media" display-name="Second category image" column-name="second_image" category="Search Improvements">
+        <attribute name="propertySortPriority" value="20" />
+      </property>
+      <property name="thirdCategoryImage" item-type="media" display-name="Third category image" column-name="third_image" category="Search Improvements">
+        <attribute name="propertySortPriority" value="30" />
+      </property>
+      <property name="firstCategoryLink" data-type="string" display-name="Link to the First category" column-name="first_cat_link" category="Search Improvements">
+        <attribute name="propertySortPriority" value="5" />
+      </property>
+      <property name="secondCategoryLink" data-type="string" display-name="Link to the second category" column-name="second_cat_link" category="Search Improvements">
+        <attribute name="propertySortPriority" value="15" />
+      </property>
+      <property name="thirdCategoryLink" data-type="string" display-name="Link to the third category" column-name="third_cat_link" category="Search Improvements">
+        <attribute name="propertySortPriority" value="25" />
+      </property>
+      <property name="error404message" data-type="string" display-name="Message to display on error 404 page" column-name="error_not_found_message" category="Search Improvements">
+        <attribute name="propertySortPriority" value="35" />
+      </property>
+      
+    </table>
+  </item-descriptor>
+  
+  <item-descriptor name="castoDocFilterTagCategory" display-name="Conseil &amp; forum : Level 1" display-property="tagCatTitle">
+    <table name="casto_doc_filter_tag_cats" type="primary" id-column-name="tag_cat_id">
+      <property name="tagCatId" data-type="string" column-name="tag_cat_id" display-name="Id"/>
+      <property name="tagCatTitle" data-type="string" column-name="tag_cat_title" display-name="Tag category title"/>
+      <property name="tagCatImage" item-type="media" column-name="tag_cat_image" display-name-resource="Tag category image" />
+      <property name="tagCatNumber" data-type="int" column-name="tag_cat_number" display-name="Tag category order number" />
+    </table>
+    <property name="filtersOrder" property-type="com.castorama.commerce.catalog.DocFilterCatFiltersOrderedListPropertyDescriptor" display-name="List of filter tags"  
+    	data-type="map" component-item-type="castoDocFilterTag">
+    	<attribute name="propertySortPriority" value="1" />
+    </property>
+  </item-descriptor>
+
+  <item-descriptor name="castoDocFilterTag" display-name="Conseil &amp; forum : Level 2" display-property="tagTitle">
+    <table name="casto_doc_filter_tags" type="primary" id-column-name="tag_id">
+      <property name="tagId" data-type="string" column-name="tag_id" display-name="Id"/>
+      <property name="tagTitle" data-type="string" column-name="tag_title" display-name="Tag title"/>
+      <property name="promoInformation" item-type="promoInformation" column-name="tag_promo" display-name="Tag bottom promo info" />
+      <property name="tagCategory" item-type="castoDocFilterTagCategory" column-name="tag_category" display-name="Tag category"/>
+      <property name="tagNumber" data-type="int" column-name="tag_number" display-name="Tag order number" />
+    </table>
+    <table name="cast_tag_docs" type="multi" id-column-name="tag_id" multi-column-name="sequence_num">
+      <property name="documentsOrder" data-type="list" component-item-type="castoramaDocument" column-name="document_id" display-name="List of Castorama documents" >
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+    </table>
+  </item-descriptor>
+  
+  <item-descriptor name="castoDocType" display-name="Conseil &amp; forum : Sub type" display-property="typeTitle">
+    <table name="casto_doc_types" type="primary" id-column-name="type_id">
+      <property name="typeId" data-type="string" column-name="type_id" display-name="Id"/>
+      <property name="typeNumber" data-type="int" column-name="type_number" display-name="Type order number" />
+      <property name="typeTitle" data-type="string" column-name="type_title" display-name="Type title"/>
+      <property name="typeDescription" data-type="big string" column-name="type_descr" display-name="Type description"/>
+      <property name="typeDefaultPromoInfo" item-type="promoInformation" column-name="type_def_promo" display-name="Type default promo info" />
+    </table>
+  </item-descriptor>
+  
+  <item-descriptor name="castoDocSubcat" display-name="Castorama document subcategory" display-property="subcatTitle">
+    <table name="casto_doc_subcats" type="primary" id-column-name="subcat_id">
+      <property name="subcatId" data-type="string" column-name="subcat_id" display-name="Id"/>
+      <property name="subcatTitle" data-type="string" column-name="subcat_title" display-name="Subcategory title"/>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="castoramaDocument" display-name-resource="castoramaDocument.itemDescriptorName" display-property="title"
+    id-space-name="castoramaDocument" query-cache-size="1000" hidden="false" content="false" cache-mode="simple" writable="true"
+    id-separator=":" item-cache-size="1000">
+    <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+    
+    <table name="cast_document" type="primary" id-column-name="document_id">
+      <property name="id" data-type="string" column-name="document_id" />
+      <property name="documentType" data-type="enumerated" default="castoramaDocument.idea" column-name="document_type"
+        display-name-resource="castoramaDocument.type">
+        <attribute name="useCodeForValue" value="true" />
+        <option resource="castoramaDocument.idea" code="0" />
+        <option resource="castoramaDocument.rightProduct" code="1" />
+        <option resource="castoramaDocument.howTo" code="2" />
+        <option resource="castoramaDocument.castoche" code="3" />
+      </property>
+      <property name="documentSubType" item-type="castoDocType" column-name="sub_type_id" display-name="Sub Type" category-resource="conseilForum" >
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="documentSubcategory" item-type="castoDocSubcat" column-name="subcat_id" display-name="Document Subcategory" category-resource="conseilForum" >
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="title" data-type="string" column-name="title" display-name-resource="castoramaDocument.title" />
+      <property name="image" item-type="media" column-name="image" display-name-resource="castoramaDocument.image" />
+      <property name="description" data-type="big string" column-name="description" display-name-resource="castoramaDocument.description" />
+      <property name="cfDescription" data-type="big string" column-name="cf_description" display-name="Conseils and Forums description" />
+      <property name="cfRColDisLinkName" data-type="string" column-name="cf_r_col_dis_link_name" display-name="DIS Right column link name" />
+      <property name="relativeURL" data-type="string" column-name="relative_url"
+        display-name-resource="castoramaDocument.relativeURL" />
+      <property name="externalURL" data-type="string" column-name="external_url"
+        display-name-resource="castoramaDocument.externalURL" />
+      <property name="rating" data-type="double" column-name="rating" display-name-resource="castoramaDocument.rating" />
+      <property name="template" display-name-resource="castoramaDocument.template" queryable="true" readable="true" column-name="template_id" item-type="media" hidden="false" expert="false" required="false" cache-mode="inherit" writable="true">
+        <attribute name="references" value="true"/>
+      </property>
+      <property name="promoTemplate" item-type="promoTemplate" display-name-resource="promoTemplate">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>      
+      <property name="pageTitlePattern" column-name="PAGE_TITLE_PATTERN" data-type="string" 
+        display-name-resource="pageTitlePattern" category-resource="seoSupportCategory" default="{title} - CASTORAMA">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+      <property name="metaKeywordsPattern" column-name="META_KEYWORDS_PATTERN" data-type="string" 
+        display-name-resource="metaKeywordsPattern" category-resource="seoSupportCategory" default="{keywords,sep=,}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="metaDescriptionPattern" column-name="META_DESCRIPTION_PATTERN" data-type="string" 
+        display-name-resource="metaDescriptionPattern" category-resource="seoSupportCategory" default="{description}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+    </table>
+    <table shared-table-sequence="1" name="cast_doc_keywrds" multi-column-name="seq_num" type="multi" id-column-name="id">
+      <property name="keywords" display-name-resource="castoramaDocument.keywords" data-type="list" queryable="true" readable="true" column-name="keywords" component-data-type="string" hidden="false" expert="false" required="false" cache-mode="inherit" writable="true">
+      </property>
+    </table>
+    <table name="cast_cat_document" id-column-name="document_id" type="multi" shared-table-sequence="2">
+      <property name="categories" column-name="category_id" data-type="set" component-item-type="category" queryable="true" readable="true" writable="false"  hidden="false"  expert="false" required="false"  cache-mode="disabled"  display-name-resource="castoramaDocument.categories">
+        <attribute name="references" value="true"/>
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+  </item-descriptor>
+  
+
+  <item-descriptor name="promoTemplate" display-name-resource="promoTemplate.displayName"  cache-mode="simple" query-cache-size="500">
+    <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources"/>
+    <table name="cast_promo_template" type="primary" id-column-name="promo_template_id">
+      <property name="id" data-type="string" column-name="promo_template_id" />
+      <property name="layoutType" column-name="layouttype" data-type="enumerated" default="1 big" display-name-resource="promoTemplate.layoutType">
+        <attribute name="useCodeForValue" value="false" />
+        <option resource="promoTemplate.type1" code="0" />
+        <option resource="promoTemplate.type2" code="1" />
+        <option resource="promoTemplate.type3" code="2" />
+        <option resource="promoTemplate.type4" code="3" />
+        <option resource="promoTemplate.type5" code="4" />
+        <option resource="promoTemplate.type6" code="5" />
+        <option resource="promoTemplate.type7" code="6" />
+        <option resource="promoTemplate.type8" code="7" />
+        <option resource="promoTemplate.type9" code="8" />
+        <option resource="promoTemplate.type10" code="9" />
+        <option resource="promoTemplate.type11" code="10" />
+      </property>
+    </table>
+
+    <table name="cast_template_information" type="multi" id-column-name="promo_template_id" multi-column-name="promo_key">
+      <property name="promoInformation" data-type="map" component-item-type="promoInformation" column-name="promo_information_id"
+        display-name-resource="promoTemplate.promoInformation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+  </item-descriptor>
+
+
+  <item-descriptor name="catalog">
+    <table name="cast_catalog_category" type="multi" multi-column-name="sequence_num" id-column-name="catalog_id">
+      <property name="topNavigationCategories" data-type="list" component-item-type="category" column-name="category_id"
+        display-name-resource="topNavigationCategories">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+
+    <table name="CAST_PRODUCT_CHARACTERISTICS" type="multi" multi-column-name="SEQUENCE_NUM" id-column-name="catalog_id">
+      <property name="comparableProperties" data-type="list" component-data-type="string" column-name="CHARACTERISTIC_PROPERTY" display-name-resource="catalog.comparableProperties">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+
+    <table name="cast_catalog_addition_prop" type="auxiliary" id-column-name="catalog_id">
+      <property name="enableProductGlobalSearch" data-type="boolean" default="false" column-name="search_by_product" 
+        display-name-resource="globalSearchByProductDisplayName" category-resource="categoryDocSearchConfig">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="enablePivotCategotyGlobalSearch" data-type="boolean" default="false" column-name="search_by_pivot" 
+        display-name-resource="globalSearchByPivotCategoryDisplayName" category-resource="categoryDocSearchConfig">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="enableRegularCategoryGlobalSearch" data-type="boolean" default="false" column-name="search_by_regular" 
+        display-name-resource="globalSearchByRegularcategoryDisplayName" category-resource="categoryDocSearchConfig">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="bodystyle" data-type="string" default="" column-name="bodystyle" 
+        display-name-resource="bodystyle" category-resource="categoryCatalogUI">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      
+      <property name="ccGenericBannerPromoInfo" column-name="cc_promo_info" item-type="promoInformation" default="prin200000" display-name-resource="ccGenericBannerPromoInfo" category-resource="categoryGeolocation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="0" />
+      </property>
+      <property name="displayBanner" column-name="display_banner" data-type="boolean" default="true" display-name-resource="displayBanner" category-resource="categoryGeolocation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+      <property name="displayStores" column-name="display_stores" data-type="boolean" default="true" display-name-resource="displayStores" category-resource="categoryGeolocation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="2" />
+      </property>
+      <property name="cookieAge" column-name="cookie_age" data-type="int" display-name-resource="cookieAge" category-resource="categoryGeolocation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="popupTitle" column-name="popup_title" data-type="big string" display-name-resource="popupTitle" category-resource="categoryGeolocation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="4" />
+      </property>
+
+      <property name="headerText" column-name="header_text" data-type="big string" display-name-resource="headerText" category-resource="categoryOtherConfig">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="0" />
+      </property>
+      <property name="deliveryTooltip" column-name="delivery_tooltip" data-type="big string" display-name-resource="deliveryTooltip" category-resource="categoryOtherConfig">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+      <property name="ccTooltip" column-name="cc_tooltip" data-type="big string" display-name-resource="ccTooltip" category-resource="categoryOtherConfig">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="2" />
+      </property>
+      
+      <property name="processingFeeNiceWord" column-name="processing_fee_nice_word" data-type="string" display-name-resource="processingFeeNiceWord" category-resource="categoryCheckout">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="0" />
+      </property>
+      <property name="shoppingCartD2HBanner" column-name="shopping_cart_d2h_banner" item-type="promoInformation" display-name-resource="shoppingCartD2HBanner" category-resource="categoryCheckout">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+      <property name="shoppingCartCCBanner" column-name="shopping_cart_cc_banner" item-type="promoInformation" display-name-resource="shoppingCartCCBanner" category-resource="categoryCheckout">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="2" />
+      </property>
+    </table>
+
+  </item-descriptor>
+
+
+  <item-descriptor name="categoryStyle" display-name-resource="categoryStyle.displayName" cache-mode="simple" item-cache-size="10" query-cache-size="500">
+
+    <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+
+    <table name="cast_style" type="primary" id-column-name="style_id">
+      <property name="id" column-name="style_id" display-name-resource="id">
+        <attribute name="propertySortPriority" value="10" />
+      </property>
+      <property name="color" data-type="string" column-name="color" display-name-resource="categoryStyle.color" hidden="true">
+        <attribute name="propertySortPriority" value="20" />
+      </property>
+      <property name="foreground" data-type="string" column-name="foreground" display-name-resource="categoryStyle.foreground" hidden="true">
+        <attribute name="propertySortPriority" value="30" />
+      </property>
+      <property name="dropdownColor" data-type="string" column-name="dropdown_color"
+        display-name-resource="categoryStyle.dropdown_color" hidden="true">
+        <attribute name="propertySortPriority" value="40" />
+      </property>
+      <property name="fontName" data-type="string" column-name="font_name" display-name-resource="categoryStyle.font_name" hidden="true">
+        <attribute name="propertySortPriority" value="50" />
+      </property>
+      <property name="fontSize" data-type="string" column-name="font_size" display-name-resource="categoryStyle.font_size" hidden="true">
+        <attribute name="propertySortPriority" value="60" />
+      </property>
+      <property name="fontWeight" data-type="enumerated" column-name="font_weight" display-name-resource="categoryStyle.font_weight"
+        default="plain" hidden="true">
+        <attribute name="propertySortPriority" value="70" />
+        <attribute name="useCodeForValue" value="false" />
+        <option value="plain" code="0" />
+        <option value="bold" code="1" />
+      </property>
+      <property name="tabStyle" column-name="tab_style" category-resource="StylesCategory" display-name-resource="categoryStyle.tabStyle">
+        <attribute name="propertySortPriority" value="10" />
+      </property>
+      <property name="backgroundStyle" column-name="bg_style" category-resource="StylesCategory" display-name-resource="categoryStyle.bgStyle">
+        <attribute name="propertySortPriority" value="15" />
+      </property>
+      <property name="linkStyle" column-name="link_style" category-resource="StylesCategory" display-name-resource="categoryStyle.linkStyle">
+        <attribute name="propertySortPriority" value="20" />
+      </property>
+      <property name="facetStyle" column-name="facet_style" category-resource="StylesCategory" display-name-resource="categoryStyle.facetStyle">
+        <attribute name="propertySortPriority" value="30" />
+      </property>
+      <property name="breadcrumbsStyle" column-name="breadcrumbs_style" category-resource="StylesCategory" display-name-resource="categoryStyle.breadcrumbsStyle">
+        <attribute name="propertySortPriority" value="40" />
+      </property>
+      <property name="productPromoStyle" column-name="product_promo_style" category-resource="StylesCategory" display-name-resource="categoryStyle.productPromoStyle">
+        <attribute name="propertySortPriority" value="50" />
+      </property>
+      <property name="pagingStyle" column-name="paging_style" category-resource="StylesCategory" display-name-resource="categoryStyle.pagingStyle">
+        <attribute name="propertySortPriority" value="60" />
+      </property>
+      <property name="cloudStyle" column-name="cloud_style" category-resource="StylesCategory" display-name-resource="categoryStyle.cloudStyle">
+        <attribute name="propertySortPriority" value="70" />
+      </property>
+      <property name="rightMenuStyle" column-name="right_menu_style" category-resource="StylesCategory" display-name-resource="categoryStyle.rightMenuStyle">
+        <attribute name="propertySortPriority" value="80" />
+      </property>
+      <property name="listStyle" column-name="list_style" category-resource="StylesCategory" display-name-resource="categoryStyle.listStyle">
+        <attribute name="propertySortPriority" value="80" />
+      </property>
+      <property name="borderStyle" column-name="border_style" category-resource="StylesCategory" display-name-resource="categoryStyle.borderStyle">
+        <attribute name="propertySortPriority" value="90" />
+      </property>
+
+      <property name="listView" data-type="enumerated" column-name="list_view" category-resource="BehaviourCategory" display-name-resource="categoryStyle.listGalerieView" default="gallery" >
+        <attribute name="propertySortPriority" value="100" />
+        <attribute name="useCodeForValue" value="false" />
+        <option value="gallery" code="0" />
+        <option value="list" code="1" />
+      </property>
+
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="category">
+    
+    <table name="dcs_category" type="primary" id-column-name="category_id">
+      <property name="type" data-type="enumerated" column-name="category_type" hidden="true" xml-combine="append">
+        <option value="casto_category" code="1000" />
+        <option value="casto_inspi" code="2000" />
+      </property>
+      <!-- RA: made it not required to import castorama catalog -->
+      <!-- property category="Basics" name="displayName" data-type="string" column-name="display_name" required="true"
+        display-name="Name" hidden="false">    
+      </property>--> 
+    </table>
+
+    <table xml:id="castoCategoryAncestorCategories" name="dcs_cat_ancestors" type="multi" id-column-name="category_id">
+      <property category-resource="categoryCategorization" name="castoAncestorCategories" data-type="set" 
+        component-item-type="category" column-name="anc_cat_id" queryable="true" expert="false" display-name-resource="ancestorCategories" hidden="true">
+        <attribute name="propertySortPriority" value="-11" />
+        <attribute name="references" value="true" />
+      </property>
+    </table>
+
+    <table xml:id="castoCategoryAncestorCategoryIds" name="dcs_cat_ancestors" type="multi" id-column-name="category_id">
+      <property name="castoAncestorCategoryIds" data-type="set" component-data-type="string" column-name="anc_cat_id" queryable="true"
+        writable="false" hidden="true">
+        <attribute name="cloneable" value="false" />
+      </property>
+    </table>
+
+    <table name="cast_category" type="auxiliary" id-column-name="category_id">
+      <property name="promoTemplate" item-type="promoTemplate" display-name-resource="promoTemplate" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="dropDownTemplate" item-type="media" display-name-resource="dropDownTemplate">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      
+      <property name="dropPanePromo" item-type="promoInformation" column-name="dp_promo" display-name="Drop pane promo" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="dropPanePromoWidth" data-type="int" column-name="dp_promo_width" default="100" display-name="Drop pane promo width" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="dropPanePromoHeight" data-type="int" column-name="dp_promo_height" default="100" display-name="Drop pane promo height" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="minNumberOfCategoriesPerColumn" data-type="int" column-name="min_cat_number_per_col" default="6" display-name="Min number of categories per column on drop pane" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      
+      <property name="pivot" data-type="boolean" column-name="pivot" default="false" display-name-resource="category.pivotFlag" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="productsCount" column-name="products_count" data-type="int" hidden="true"/>
+      <property name="featuredProduct" column-name="FEATUREDPRODUCT" item-type="product" display-name-resource="featuredProduct">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>      
+      <property name="metaKeywordsPattern" column-name="META_KEYWORDS_PATTERN" data-type="string" 
+        display-name-resource="metaKeywordsPattern" category-resource="seoSupportCategory" default="{keywords,sep=,}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="metaDescriptionPattern" column-name="META_DESCRIPTION_PATTERN" data-type="string" 
+        display-name-resource="metaDescriptionPattern" category-resource="seoSupportCategory" default="{description}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="pageTitlePattern" column-name="PAGE_TITLE_PATTERN" data-type="string" 
+        display-name-resource="pageTitlePattern" category-resource="seoSupportCategory" default="{displayName} - CASTORAMA">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+      <property name="fixedInfoText" column-name="info_text" data-type="big string"  display-name-resource="category.FixedInfoText" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="5" />
+      </property>
+      <property name="fixedCommerceText" column-name="commerce_text" data-type="big string" display-name-resource="category.FixedCommerceText" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="6" />
+      </property>
+      <property name="freeText" column-name="free_text" data-type="big string" display-name-resource="category.FreeText" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+	   <property name="typeSort" data-type="enumerated" column-name="default_type_sort"
+        writable="true" hidden="false" display-name="Sort by " queryable="true" default="relevance" category-resource="categoryPresentation">
+        <option value="relevance" code="0" />
+        <option value="lowHighPrice" code="1"  />
+        <option value="highLowPrice" code="2" />
+      </property>
+    </table>
+    <table name="cast_cat_document" multi-column-name="sequence_num" id-column-name="category_id" type="multi"
+      shared-table-sequence="1">
+      <property name="castoramaDocuments" column-name="document_id" data-type="list" component-item-type="castoramaDocument" expert="false"  queryable="true" readable="true" required="false" cache-mode="inherit" writable="true" 
+        display-name-resource="category.castoramaDocuments" category-resource="categoryImagesMedia">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="references" value="true"/>
+      </property>
+    </table>
+
+    <table name="cast_category_style" type="auxiliary" id-column-name="category_id">
+      <property name="fixedStyle" column-name="style_id" item-type="categoryStyle" display-name-resource="category.FixedStyle">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="200" />
+      </property>
+    </table>
+
+    <property name="style" item-type="categoryStyle" display-name-resource="category.Style" writable="false">
+      <derivation>
+        <expression>fixedStyle</expression>
+        <expression>parentCategory.style</expression>
+      </derivation>  
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <attribute name="propertySortPriority" value="100" />
+    </property>
+    
+    <property name="infoText" data-type="string" display-name-resource="category.infoText" writable="false">
+      <derivation>
+        <expression>fixedInfoText</expression>
+        <expression>parentCategory.infoText</expression>
+      </derivation>
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <attribute name="propertySortPriority" value="110" />
+    </property>
+    
+    <property name="commerceText" data-type="string" display-name-resource="category.commerceText" writable="false">
+      <derivation>
+        <expression>fixedCommerceText</expression>
+        <expression>parentCategory.commerceText</expression>
+      </derivation>
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <attribute name="propertySortPriority" value="120" />
+    </property>
+
+  </item-descriptor>
+
+  <item-descriptor name="casto_ik_category_type" display-name="InfoKiosk Category Type" display-property="typeName">
+    <table name="casto_ik_category_type" type="primary" id-column-name="type_name">
+      <property name="typeName" data-type="string" column-name="type_name" display-name="Type name"/> 
+    </table>
+  </item-descriptor>
+  <item-descriptor name="casto_category" cache-mode="simple" super-type="category" display-name="Categories Casto"
+    display-property="displayName" item-cache-size="5000" query-cache-size="10000" version-property="version" id-space-name="category"
+    sub-type-value="casto_category">
+    
+    <attribute name="resourceBundle" value="atg.commerce.ProductCatalogTemplateResources"/>
+    
+    <table name="casto_category" type="auxiliary" id-column-name="category_id">  
+
+      <property category="Informations" name="url" data-type="string" column-name="URL_PAGE" display-name="url de la page" />
+      <property name="category_id" data-type="string" hidden="true" column-name="category_id" />
+      <property category="Marques" name="boutiqueMarques" data-type="boolean" default="false" column-name="boutiqueMarques"
+        display-name="boutiqueMarques" />
+      <property category="Presentation" name="ordrePresentation" data-type="string" default="0"
+        column-name="redactionnelFamilleMarque1" display-name="Ordre de presentation" />
+        
+      <property category="Presentation" name="customPageLink" data-type="string" 
+        column-name="custom_page_link" display-name="Custom Page Link" >
+        <attribute name="propertySortPriority" value="-50" />
+      </property>
+      <property category="Presentation" name="productsNumberContent" data-type="string" 
+        column-name="products_number_content" display-name="Custom products number content" >
+        <attribute name="propertySortPriority" value="-50" />
+      </property>
+      <property category="Presentation" name="subcategoriesContent" data-type="big string" 
+        column-name="subcategories_content" display-name="Custom subcategories content" >
+        <attribute name="propertySortPriority" value="-50" />
+      </property>
+
+      <property name="destockage" column-name="destockage" data-type="boolean" />
+
+      <property category="Infos Kiosks" name="ikCatType" item-type="casto_ik_category_type" display-name="Type catégorie" column-name="IK_CATEGORY_TYPE" category-resource="categoryInfokiosk" />
+      <property category="Infos Kiosks" name="ikCatTypeNav" data-type="enumerated" column-name="IK_CATEGORY_TYPE_NAV"
+        display-name="Type navigation" queryable="true" writable="true" hidden="false" default="SEQ" category-resource="categoryInfokiosk" >
+        <attribute name="useCodeForValue" value="false" />
+        <option value="SEQ" code="0" />
+        <option value="ETP" code="1" />
+        <option value="REF" code="2" />
+      </property>
+      <property name="bonnesAffaires" column-name="BONNES_AFFAIRES" data-type="boolean" display-name="Bonnes affaires" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category="Presentation" name="couleursMenu" data-type="enumerated" column-name="redactionnelFamilleMarque2"
+        writable="true" hidden="false" display-name="Couleurs du menu" queryable="true">
+        <option value="test" code="0" />
+        <option value="bricolage" code="1" />
+        <option value="decoration" code="2" />
+        <option value="batiment" code="3" />
+        <option value="jardin" code="4" />
+        <option value="librairie" code="5" />
+      </property>
+
+      <property category="Presentation" name="styleCategorie" data-type="enumerated" column-name="styleCategorie" writable="true"
+        hidden="false" display-name="Style de la catégorie" queryable="true">
+        <option value="test" code="0" />
+        <option value="quincaillerie" code="1" />
+        <option value="electricite" code="2" />
+        <option value="outillage" code="3" />
+        <option value="plomberie" code="4" />
+        <option value="chauffage climatisation" code="5" />
+        <option value="peinture" code="6" />
+        <option value="eclairage" code="7" />
+        <option value="decoration interieure" code="8" />
+        <option value="sol" code="9" />
+        <option value="cuisine" code="10" />
+        <option value="rangement" code="11" />
+        <option value="salle de bains" code="12" />
+        <option value="construction renovation" code="13" />
+        <option value="aménagement exterieur" code="14" />
+        <option value="aménagement interieur" code="15" />
+        <option value="jardin" code="16" />
+        <option value="librairie" code="17" />
+      </property>
+      <property category="Référencement" name="titreReferencement" data-type="string" column-name="titre_referencement"
+        display-name="titre pour le référencement" />
+      <property category="Référencement" name="footer" data-type="string" column-name="footer" display-name="Pied de page"></property>
+
+      <property category="Marques" name="titreBoutiqueMarque" data-type="string" column-name="titreBoutiqueMarque"
+        display-name="titreBoutiqueMarque" />
+      <property category="Couleur" name="couleur" data-type="string" column-name="couleur" display-name="Couleur" hidden="true"/>
+      <property category="Header Page Liste" name="headerPageListe" data-type="enumerated" column-name="header_page_liste"
+        writable="true" hidden="false" display-name="header PageListe" queryable="true">
+        <option value="" code="0" />
+        <option value="tg" code="1" />
+        <option value="aide choix" code="3" />
+        <option value="edito" code="2" />
+      </property>
+
+      <property category="Header Page Liste" name="typeTeteDeGondole" data-type="enumerated" column-name="type_tete_gondole"
+        display-name="Type de la Tete de gondole" queryable="true" writable="true" hidden="false">
+        <option value="" code="0" />
+        <option value="nouveautés" code="1" />
+        <option value="Bonnes affaires" code="2" />
+        <option value="Meilleures ventes" code="3" />
+        <option value="Actualités" code="4" />
+      </property>
+      <property category="Header Page Liste" name="urlEdito" data-type="string" column-name="url_edito" display-name="Url de l'edito" />
+      <property category="Header Page Liste" name="urlAideAuChoix" data-type="string" column-name="url_aide_au_choix"
+        display-name="Url de l'aide au choix" />
+
+      <property category="Comparateur" name="activationComparateur" data-type="enumerated" column-name="activation_comparateur"
+        required="false" display-name="Activation du comparateur" queryable="true" writable="true" hidden="true">
+        <option value="non" code="0" />
+        <option value="oui" code="1" />
+      </property>
+
+      <property category="Descriptif" name="descriptifCategorie" data-type="string" column-name="descriptif_categorie"
+        display-name="Descriptif categorie" />
+      <property category="Descriptif" name="urlInspiration" data-type="string" column-name="url_inspiration"
+        display-name="Url de l'inspiration" />
+
+      <property category="Boutique Evenementielle" name="Boutique_Event" data-type="int" column-name="Boutique_Event"
+        display-name="Boutique_Event">
+      </property>
+      <property category="Image" name="Image_Url" data-type="string" column-name="Image_Url" display-name="Image_Url"></property>
+
+      <property category="PLD" name="CoefFiabilite" data-type="double" column-name="CoefFiabilite"
+        display-name="Coefficient de Fiabilite du stock" default="1" />
+
+      <property category="categoryCategorization" name="nePasAfficher" data-type="boolean" column-name="NE_PAS_AFFICHER"
+        display-name="Ne pas afficher" default="false" />
+
+    </table>
+    <table name="casto_category_inspi" type="multi" id-column-name="category_id" multi-column-name="seq">
+      <property category="categoryCategorization" name="fixedChildInspi" data-type="list" component-item-type="casto_inspi"
+        column-name="inspi_id" queryable="true">
+      </property>
+    </table>
+    <table name="CASTO_CATEGORY_SEQUENCE" type="multi" id-column-names="cat_id" multi-column-name="seq_num">
+      <property name="sequencesFlash" column-names="seq_id" data-type="list" component-data-type="string"
+        display-name="Identifiants des séquences flash" category="Aide au choix" />
+    </table>
+
+    <table name="casto_category_boutique_mag" type="multi" id-column-name="ID_CATEGORY">
+      <property category="Boutique Evenementielle" name="boutiqueMagasins" data-type="set" component-item-type="magasin"
+        repository="/atg/registry/Repository/MagasinGSARepository" display-name="Magasins boutique evenementielle" column-name="ID_MAGASIN" />
+    </table>
+
+  </item-descriptor>
+
+  <item-descriptor name="casto_inspi" super-type="category" display-name="Inspiration" display-property="displayName"
+    item-cache-size="5000" query-cache-size="5000" version-property="version" id-space-name="category" sub-type-value="casto_inspi">
+    <table name="casto_inspi" type="auxiliary" id-column-name="inspi_id">
+      <property name="inspi_id" data-type="string" hidden="true" column-name="inspi_id" />
+    </table>
+
+    <table name="casto_category_esprit" type="multi" id-column-name="inspi_id" multi-column-name="seq">
+      <property category="categoryCategorization" name="fixedChildEsprit" data-type="list" component-item-type="casto_inspi"
+        column-name="esprit_id" queryable="true">
+      </property>
+    </table>
+
+    <table name="casto_inspi_nuancier" type="multi" id-column-name="inspi_id" multi-column-name="seq">
+      <property name="listnuancier" data-type="list" required="false" component-item-type="nuancier" column-name="id"
+        display-name="Nuanciers" />
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="product" sub-type-property="type" item-cache-size="20000" query-cache-size="20000">
+    <table shared-table-sequence="1" name="dcs_prd_prnt_cats" multi-column-name="catalog_id" type="multi" id-column-name="product_id">
+      <property name="parentCategoriesForCatalog" category-resource="categoryBasics"/>
+    </table>
+
+    <table name="cast_product" type="auxiliary" id-column-name="product_id">
+      <property name="rating" data-type="double" column-name="rating" display-name-resource="product.rating">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="castPriority" data-type="int" column-name="cast_priority" display-name-resource="product.priority" category-resource="categoryBasics">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryPromotions" name="productBenefit" data-type="string" column-name="product_benefit" display-name-resource="productBenefit">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryPromotions" name="productPromoDescription" data-type="string" column-name="product_promo_description" display-name-resource="productPromoDescription">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryPromotions" name="promoBackgroundColor" data-type="string" column-name="promo_background_color" display-name-resource="promoBackgroundColor">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryPromotions" name="promoFontColor" data-type="string" column-name="promo_font_color" display-name-resource="promoFontColor">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryPromotions" name="promoStartDate" data-type="timestamp" column-name="promo_start_date" display-name-resource="promoStartDate">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryPromotions" name="promoExpirationDate" data-type="timestamp" column-name="promo_expiration_date" display-name-resource="promoExpirationDate">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="metaKeywordsPattern" column-name="META_KEYWORDS_PATTERN" data-type="string" 
+        display-name-resource="metaKeywordsPattern" category-resource="seoSupportCategory" default="{keywords,sep=,}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="metaDescriptionPattern" column-name="META_DESCRIPTION_PATTERN" data-type="string" 
+        display-name-resource="metaDescriptionPattern" category-resource="seoSupportCategory" default="{description}">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="pageTitlePattern" column-name="PAGE_TITLE_PATTERN" data-type="string" 
+        display-name-resource="pageTitlePattern" category-resource="seoSupportCategory" default="{displayName} - CASTORAMA">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+      <property name="showBrandLinkPDP" column-name="show_brand_link_pdp" data-type="boolean" 
+        display-name-resource="showBrandLinkPDP" category-resource="Reference" default="true">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="flagImage" item-type="media" display-name-resource="flag.image"  category-resource="Flag" column-name="flag_image">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="-10" />
+      </property>
+      <property name="flagText" data-type="string" category-resource="Flag" column-name="flag_text" display-name-resource="flag.text">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="flagBg" data-type="string" category-resource="Flag" column-name="flag_bg" display-name-resource="flag.bg">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="kitchenContentHtml" data-type="string" column-name="kitchen_content_html" display-name-resource="kitchenContent.html" category-resource="categoryBasics">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+
+    <table name="dcs_product" type="primary" id-column-name="product_id">
+      <attribute name="resourceBundle" value="atg.projects.b2cstore.ProductCatalogTemplateResources" />
+      <property name="type" xml-combine="append">
+        <attribute name="useCodeForValue" value="false" />
+        <option value="product" code="0" />
+        <option value="casto_product" code="1000" />
+        <option value="casto-pack" code="5001" />
+        <option value="casto-grouped-product" code="5002" />
+      </property>
+      <property category="Guide d'achat" name="longDescription" data-type="big string" column-name="long_description"
+        display-name="URL Guide">
+      </property>
+      <property name="brand" display-name-resource="brand" data-type="string" queryable="true" readable="true" column-name="brand" hidden="true" category-resource="categoryBasics" expert="false" required="false" cache-mode="inherit" writable="true">
+      </property>
+    </table>
+    
+      
+    <table xml:id="castoProductAncestorCategories" name="dcs_prd_ancestors" type="multi" id-column-name="product_id">
+      <property category-resource="categoryCategorization" name="castoAncestorCategories" data-type="set"
+        component-item-type="category" column-name="anc_cat_id" queryable="true" expert="true" display-name-resource="ancestorCategories" hidden="true">
+        <attribute name="propertySortPriority" value="-5" />
+        <attribute name="references" value="true" />
+      </property>
+    </table>
+    <table xml:id="castoProductAncestorCategoryIds" name="dcs_prd_ancestors" type="multi" id-column-name="product_id">
+      <property category-resource="categoryCategorization" name="castoAncestorCategoryIds" data-type="set"
+        component-data-type="string" column-name="anc_cat_id" queryable="true" writable="false" hidden="true"
+        display-name-resource="ancestorCategoryIds">
+        <attribute name="resourceBundle" value="atg.commerce.ProductCatalogTemplateResources" />
+        <attribute name="cloneable" value="false" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="casto_product" cache-mode="simple" super-type="product" display-name="Produits casto"
+    display-property="displayName" item-cache-size="20000" query-cache-size="20000" version-property="version" id-space-name="product"
+    sub-type-value="casto_product">    
+    <attribute name="resourceBundle" value="atg.commerce.ProductCatalogTemplateResources"/>
+    <table name="casto_product" type="auxiliary" id-column-name="product_id">
+      <property category="Informations" name="url" data-type="string" column-name="URL_PAGE" display-name="url de la page" />
+      <property category="Marques" name="boutiqueMarques" data-type="boolean" default="false" column-name="boutiqueMarques"
+        display-name="boutiqueMarques" />
+      <property category="Tete de gondole" name="FixedTeteGondole" item-type="casto_sku" column-name="product_teteDeGondole"
+        display-name="SKU Casto" />
+      <property category="Up Selling" name="product_fixedRelatedProductUp" item-type="casto_product"
+        column-name="product_fixedRelatedProductUp" display-name="Product UpSelling" />
+      <property category="Couleur" name="couleur" data-type="string" column-name="couleur" display-name="Couleur" hidden="true"/>
+      <property category="Info" name="AffichageArticleComparable" data-type="boolean" default="true"
+        column-name="AFFICHAGE_ARTICLECOMPARABLE" display-name="Affiche un article comparable" />
+      <property category="Presentation" name="chapo_style" data-type="enumerated" column-name="chapo_style" writable="true"
+        hidden="true" display-name="Style Chapo" queryable="true">
+        <option value="" code="0" />
+        <option value="promo" code="1" />
+        <option value="expert" code="2" />
+        <option value="bonAffaire" code="3" />
+        <option value="nouveaute" code="4" />
+      </property>
+      <property category="Presentation" name="chapo_contenu" data-type="string" column-name="chapo_contenu"
+        display-name="Contenu du chapo" hidden="true"/>
+      <property category="Reference" name="MarqueCommerciale" data-type="string" column-name="MarqueCommercial"
+        display-name="Marque Commerciale" />
+
+      <property category="Informations" name="typeAffichagePromo" data-type="enumerated" column-name="type_affichage_promo"
+        writable="true" hidden="false" display-name="affichage du picto promo en" queryable="true">
+        <option value="euros" code="1" />
+        <option value="pourcentage" code="2" />
+      </property>
+
+      <property category="Informations" name="urlVideo" data-type="string" column-name="video_url" display-name="URL de la vidéo" />
+
+      <property category="Tete de gondole" name="natureTg" data-type="enumerated" column-name="nature_tete_gondole" writable="true"
+        hidden="false" display-name="Inclus à la tete de gondole" queryable="true">
+        <option value="" code="0" />
+        <option value="nouveautés" code="1" />
+        <option value="bonnes affaires" code="2" />
+        <option value="meilleures ventes" code="3" />
+      </property>
+
+    </table>
+
+    <table name="CASTO_PRODUCT_QUESTION" type="multi" id-column-name="product_id" multi-column-name="seq">
+      <property category="Aide au choix" name="questionsAffinage" data-type="list" component-item-type="questionAffinage"
+        column-name="question_id" queryable="true" display-name="Questions">
+        <attribute name="propertySortPriority" value="-10" />
+      </property>
+    </table>
+    <table name="CASTO_PRODUCT_AFFINAGE" type="auxiliary" id-column-name="product_id">
+      <property category="Aide au choix" name="affinage" data-type="boolean" default="false" column-name="affinage"
+        display-name="Affinage actif" />
+    </table>
+
+    <table name="CASTO_PRODUCT_LISTE_MULTISKU" type="auxiliary" id-column-name="product_id">
+      <property category-resource="categoryProductSkus" name="libelleListe" data-type="enumerated" column-name="libelle_liste_id"
+        display-name="Intitule du menu multisku" required="false">
+        <attribute name="useCodeForValue" value="false" />
+        <option value="Choisissez votre dimension" code="0" />
+        <option value="Choisissez votre modèle" code="1" />
+        <option value="Choisissez votre taille" code="2" />
+        <option value="Choisissez votre coloris" code="3" />
+        <option value="Choisissez votre contenance" code="4" />
+        <attribute name="resourceBundle" value="atg.commerce.ProductCatalogTemplateResources" />
+        <attribute name="propertySortPriority" value="-3" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="casto-pack" super-type="product" sub-type-value="casto-pack" item-cache-size="1000" id-space-name="casto-pack"
+    display-name="Pack Product" query-cache-size="1000">
+    <attribute name="resourceBundle" value="atg.commerce.ProductCatalogTemplateResources"/>
+  </item-descriptor>
+
+  <item-descriptor name="casto-grouped-product" super-type="product" sub-type-value="casto-grouped-product" item-cache-size="2000"
+    id-space-name="casto-grouped-product" display-name="Grouped Product"  query-cache-size="1000">
+    <attribute name="resourceBundle" value="atg.commerce.ProductCatalogTemplateResources"/>    
+    <table name="cast_grouped_product" type="auxiliary" id-column-name="grouped_product_id">
+      <property name="id" data-type="string" column-name="grouped_product_id">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="groupingType" column-name="groupingtype" data-type="enumerated" default="regular" display-name-resource="groupedProduct.groupingType">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="useCodeForValue" value="false" />
+        <option value="regular" code="0" />
+        <option value="kitchen" code="1" />
+      </property>
+      <property name="promoTemplate" item-type="promoTemplate" display-name-resource="promoTemplate" category="Presentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryPresentation" name="implantaMessage" data-type="string" column-name="IMPLANTA_MESSAGE" display-name="Implanta message" >
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    <table name="cast_grouped_assembly_options" type="multi" id-column-name="grouped_product_id" multi-column-name="sequence_num">
+      <property category="categoryProductSkus" name="assemblyOptions" data-type="list" component-item-type="sku-link" column-name="sku_link_id" display-name-resource="groupedProduct.assemblyOptions">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="sku-link">
+    <table name="cast_sku_link" type="auxiliary" id-column-name="sku_link_id">
+      <property name="tabName" data-type="string" column-name="tabname" display-name-resource="skuLink.tabName">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="sku" sub-type-property="type">
+    <table name="dcs_sku" type="primary" id-column-name="sku_id">
+      <property name="type" data-type="enumerated" column-name="sku_type" hidden="false">
+        <option value="casto_sku" code="1000" />
+      </property>
+      <property category="Basics" name="displayName" data-type="string" column-name="display_name" required="false"
+        display-name-resource="sku.name" hidden="false">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="-3" />
+      </property>
+      <property category="Presentation" name="description" data-type="string" column-name="description" display-name-resource="sku.description"
+        hidden="false">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="-6" />
+      </property>
+    </table>
+    <table name="cast_sku_packs" type="multi" id-column-name="sku_id">
+      <property name="packs" data-type="set" component-item-type="casto-pack" column-name="packs_id" display-name-resource="packs" category-resource="crossSelling">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    <table name="cast_sku" type="auxiliary" id-column-name="sku_id">
+      <property category="Informations" name="messageInformation" data-type="string" column-name="message_information" display-name-resource="messageInformation" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property name="onSaleDiscountDisplay" display-name-resource="onSaleDiscountDisplay" data-type="boolean" queryable="true" readable="true" column-name="on_sale_discount_display" hidden="false" category-resource="categoryPricing" expert="false" required="false" cache-mode="inherit" writable="true" default="false">
+        <attribute name="propertySortPriority" value="-3"/>
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    <table name="cast_sku_instructions" type="multi" id-column-name="sku_id" multi-column-name="instruction_name">
+      <property name="instructions" data-type="map" component-item-type="media" column-name="media_id" display-name-resource="sku.instructions" category-resource="categoryPresentation">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="casto_sku" cache-mode="simple" super-type="sku" display-name="SKU Casto" display-property="CodeArticle"
+    item-cache-size="30000" query-cache-size="30000" version-property="version" id-space-name="sku" sub-type-value="casto_sku">
+    <attribute name="resourceBundle" value="atg.commerce.ProductCatalogTemplateResources"/>  
+    <table name="casto_sku" type="auxiliary" id-column-name="sku_id">
+      <property category="comportement quantité" name="quantiteLimitee" data-type="boolean" column-name="quantite_limitee"
+        display-name="Quantité limitée à l'achat" />
+      <property category="Informations" name="conditionsparticulieres" data-type="boolean" column-name="conditionsparticulieres"
+        display-name="Conditions particulières de pose" />
+      <property category-resource="Informations" name="CodeEAN" data-type="string" column-name="EAN" display-name="CodeEAN"/>
+      <!-- SCENARII-->
+      <property category="Scenario" name="themeSku" data-type="string" column-name="theme_sku" display-name="theme Sku" />
+      <!-- SCENARII-->
+      <property category-resource="categoryReference" name="CodeArticle" data-type="int" column-name="codeArticle" required="true">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryReference" name="Modele" data-type="string" column-name="Modele" display-name="Modele">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="categoryBasics" name="MarqueCommerciale" data-type="string" column-name="MarqueCommercial"
+        display-name="Marque Commerciale">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category="UniteVente (BO)" name="PoidsUV" data-type="int" column-name="PoidsUV" required="false" display-name="Poids" />
+      <property name="LibelleEspaceNouveaute" data-type="string" column-name="libelleclientcourt"
+        display-name="Libelle pour espace nouveaute" category-resource="categoryBasics">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>  
+	  <property name="promotionCommerce" data-type="string" column-name="PROMOTION_COMMERCE"
+	     display-name="Libellé promotion commerce" category-resource="categoryBasics" >
+	     <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		 <attribute name="propertySortPriority" value="4" />
+	  </property>
+	  <property name="colorLibelleCommerce" data-type="string" column-name="COLOR_LIBELLE_COMMERCE" display-name="Background color for libellé promotion commerce" 
+		category-resource="categoryBasics">
+		<attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		 <attribute name="propertySortPriority" value="5" />
+	  </property>
+	  <property name="startDateCommercePromo" data-type="timestamp" column-name="START_PROM_COMMERCE" display-name="Start date libelle commerce " 
+	      category-resource="categoryBasics">
+	      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		   <attribute name="propertySortPriority" value="6" />
+	  </property>
+	  <property name="endDateCommercePromo" data-type="timestamp" column-name="END_PROM_COMMERCE" display-name="End date libelle commerce" 
+	      category-resource="categoryBasics">
+	      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		   <attribute name="propertySortPriority" value="7" />
+	  </property>
+	  
+	  <property name="promotionContenu" data-type="string" column-name="PROMOTION_CONTENU"
+	     display-name="Libellé promotion contenu" category-resource="categoryBasics" >
+	     <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		  <attribute name="propertySortPriority" value="8" />
+	  </property>
+	  <property name="colorLibelleContenu" data-type="string" column-name="COLOR_LIBELLE_CONTENU" display-name="Background color for libellé promotion contenu" 
+		category-resource="categoryBasics">
+		<attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		 <attribute name="propertySortPriority" value="9" />
+	  </property>
+	  <property name="startDateContenuPromo" data-type="timestamp" column-name="START_PROM_CONTENU" display-name="Start date libelle contenu" 
+		category-resource="categoryBasics">
+		<attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		 <attribute name="propertySortPriority" value="10" />
+	  </property>
+	  <property name="endDateContenuPromo" data-type="timestamp" column-name="END_PROM_CONTENU" display-name="End date libelle contenu" 
+		category-resource="categoryBasics">
+		<attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+		 <attribute name="propertySortPriority" value="11" />
+	  </property>
+      <property category="Informations" name="Garantie" data-type="string" column-name="garantie" display-name="Garantie" />
+      
+	  <property name="customDeliveryTerm" data-type="enumerated" column-name="CUSTOM_DELIVERY_TERM" 
+        display-name="Custom delivery term" category-resource="categoryDelivery" >
+        <attribute name="useCodeForValue" value="false" />
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <option value="24 heures" code="0" />
+        <option value="48 heures" code="1" />
+        <option value="72 heures" code="2" />
+        <option value="1 semaine" code="3" />
+        <attribute name="propertySortPriority" value="3" />
+      </property>
+      <property name="customDeliveryStartDate" data-type="date" column-name="CD_START_DATE" 
+        display-name="Custom Delivery Start Date" category-resource="categoryDelivery" >
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="1" />
+      </property>
+      <property name="customDeliveryEndDate" data-type="date" column-name="CD_END_DATE" 
+        display-name="Custom Delivery End Date" category-resource="categoryDelivery" >
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="2" />
+      </property>
+	  
+	  <property name="barometre" data-type="enumerated" column-name="barometre" writable="true" hidden="false"
+        display-name="Barometre" queryable="true">
+        <option value="" code="0" />
+        <option value="Premier prix" code="1" />
+        <option value="Qualité prix" code="2" />
+        <option value="Marque exclusives" code="3" />
+        <option value="Grandes marques" code="4" />
+      </property>
+      <property category="Informations" name="RestrictionsUsage" data-type="string" column-name="RestrictionsUsage"
+        display-name="Restrictions Usage" />
+      <property name="MentionsLegalesObligatoires" data-type="string"
+        column-name="MentionsLegalesObligatoires" display-name="Mentions Legales Obligatoires" category-resource="categoryBasics">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>  
+      <property category="Informations" name="ContraintesUtilisation" data-type="string" column-name="ContraintesUtilisation"
+        display-name="Conseils d'utilisation" />
+      <property category="Informations" name="PlusDuProduit" data-type="string" column-name="PlusDuProduit"
+        display-name="Plus Du Produit" />
+
+      <property category="Presentation" name="chapo_style" data-type="enumerated" column-name="chapo_style" writable="true"
+        hidden="false" display-name="Style Chapo" queryable="true">
+        <option value="" code="0" />
+        <option value="promo" code="1" />
+        <option value="expert" code="2" />
+        <option value="bonAffaire" code="3" />
+        <option value="nouveaute" code="4" />
+      </property>
+      <property category="Presentation" name="chapo_contenu" data-type="string" column-name="chapo_contenu"
+        display-name="Contenu du chapo" />
+      
+      <property category="Informations" name="urlVideo" data-type="string" column-name="video_url" display-name="URL de la vidéo" category-resource="categoryImagesMedia"/>
+      <property category="Informations" name="videoFullSize" data-type="boolean" column-name="video_full_size" required="false" default="false" display-name="Player full size" category-resource="categoryImagesMedia"/>
+      <property category="Informations" name="urlAuxVideo" data-type="big string" column-name="video_aux_url" display-name="URL de la YouTube vidéo" category-resource="categoryImagesMedia"/>
+      <property category="Informations" name="urlExternalApp" data-type="big string" column-name="external_app_url" display-name="URL external app" category-resource="categoryImagesMedia"/>
+      
+      <property category="Informations" name="flash_produit" data-type="string" column-name="flash_produit"
+        display-name="URL du flash produit" />
+      <property category="Informations" name="flash_zoom" data-type="string" column-name="flash_zoom"
+        display-name="URL du flash zoom produit" />
+      <property category="Pricing" name="prixTypeDetail" data-type="enumerated" column-name="prixTypeDetail" writable="true"
+        hidden="false" display-name="Type de prix détaillé" queryable="true">
+        <option value="" code="0" />
+        <option value="Prix au litre" code="1" />
+        <option value="Prix au mètre" code="2" />
+        <option value="Prix au mètre carré" code="3" />
+      </property>
+      <property category="Pricing" name="prixDetail" data-type="float" column-name="prixDetail" display-name="Prix détaillé"
+        hidden="false" />
+      <property category="Identifiant" name="LibelleClientLong" data-type="big string" column-name="LibelleClientLong"
+        display-name="Descriptif" />
+      <property category="Livraison (BO)" name="GeneralementLivreEnHeures" data-type="int" column-name="GeneralementLivreEnHeures"
+        writable="true" queryable="true" display-name="Generalement Livre En" />
+      <property category="Livraison (BO)" name="LivraisonDirecteFournisseur" data-type="boolean" default="false"
+        column-name="LivraisonDirecteFournisseur" display-name="Livraison Directe Fournisseur" />
+      <property category="Livraison (BO)" name="CodeFournisseur" data-type="string" column-name="CodeFournisseur"
+        display-name="Code Fournisseur" />
+      <property category="Livraison (BO)" name="NomFournisseur" data-type="string" column-name="NomFournisseur"
+        display-name="Nom Fournisseur" />
+      <property category="Livraison (BO)" name="horsNormes" data-type="boolean" default="false" column-name="horsNormes"
+        display-name="Hors Norme" />
+      <property category="Livraison (BO)" name="fraisExceptionnel" data-type="float" column-name="fraisExceptionnel" required="false"
+        display-name="Frais Exceptionnel" />
+      <property category="Livraison (BO)" name="exonerationPFE" data-type="boolean" column-name="EXONERATION_PFE" required="false"
+        default="false" display-name="Exoneration de pfe" />
+      <property category="Code (BO)" name="CodeRayon" data-type="int" column-name="CodeRayon" display-name="Code Rayon" hidden="true"/>
+      <property category="Code (BO)" name="CodeFamille" data-type="int" column-name="CodeFamille" display-name="Code Famille" hidden="true"/>
+      <property category="Code (BO)" name="CodeModule" data-type="int" column-name="CodeModule" display-name="Code Module" hidden="true"/>
+      <property category="Prix (BO)" name="tauxTVA" data-type="float" column-name="tauxTVA" required="false" display-name="Taux TVA" >
+        <attribute name="propertySortPriority" value="70" />
+      </property>
+      <property category="Prix (BO)" name="prixVenteTTCFrancs" data-type="float" column-name="prixVenteTTCFrancs" required="false"
+        display-name="Prix TTC Francs" >
+        <attribute name="propertySortPriority" value="65" />
+      </property>
+      <property category="Prix (BO)" name="prixVenteTTCEuro" data-type="float" column-name="prixVenteTTCEuro" required="false"
+        display-name="Prix TTC Euro" >
+        <attribute name="propertySortPriority" value="60" />
+      </property>
+      <property category="Prix (BO)" name="prixVenteHTFrancs" data-type="float" column-name="prixVenteHTFrancs" required="false"
+        display-name="Prix HT Francs" >
+        <attribute name="propertySortPriority" value="50" />
+      </property>
+      <property category="Prix (BO)" name="prixVenteHTEuro" data-type="float" column-name="prixVenteHTEuro" required="false"
+        display-name="Prix HT Euro" >
+        <attribute name="propertySortPriority" value="45" />
+      </property>
+      <property category="Prix (BO)" name="ecoTaxeEnEuro" data-type="float" column-name="ecoTaxeEnEuro" required="false"
+        display-name="Eco taxe D3E en euros" >
+        <attribute name="propertySortPriority" value="30" />
+      </property>	  	      
+	  <property category="Prix (BO)" name="ecoTaxeREPEnEuro" data-type="float" column-name="taxRep" required="false"
+        display-name="Eco taxe REP en euros" >
+        <attribute name="propertySortPriority" value="30" />
+      </property>
+      <property category="Pricing" name="enVente" data-type="boolean" default="false" column-name="enVente" display-name="En vente" />
+      <property category="Identifiant" name="LibelleDescriptifArticle" data-type="big string" column-name="LibelleDescriptifArticle"
+        required="false" display-name="Identifiant" />
+      <property category="UniteVente (BO)" name="uniteUV" data-type="string" column-name="uniteUV" display-name="Unite de vente" />
+      <property category="UniteVente (BO)" name="hauteurUV" data-type="int" column-name="hauteurUV" required="false"
+        display-name="Hauteur" />
+      <property category="UniteVente (BO)" name="largeurUV" data-type="int" column-name="largeurUV" display-name="Largeur" />
+      <property category="UniteVente (BO)" name="profondeurUV" data-type="int" column-name="profondeurUV" display-name="Profondeur" />
+      <property category="Duree de vie" name="dateCreationCodeArticle" data-type="timestamp" column-name="dateCreationCodeArticle"
+        writable="true" display-name="Creation article" hidden="true"/>
+      <property category="Duree de vie" name="dateFinVie" data-type="timestamp" column-name="dateFinVie" writable="true"
+        display-name="Date fin de vie" />
+      <property category="Attributs du SKU Casto" name="champsDynamique" data-type="boolean" default="false"
+        column-name="champsDynamique" display-name="Champs Dynamiques" hidden="true"/>
+      <property category="Normes du SKU Casto" name="normesText" data-type="big string" column-name="normesText"
+        display-name="Normes(txt)" />
+      <property category="Informations" name="cadeau" data-type="boolean" default="false" column-name="cadeau"
+        display-name="Est un cadeau" hidden="true"/>
+      <property category="Informations" name="venteEnMagasinSeulement" data-type="boolean" default="false"
+        column-name="venteEnMagasinSeulement" display-name="Uniquement en vente en magasin" hidden="true"/>
+      <!-- <property category="Couleur" name="couleur" item-type="couleur" column-name="couleur" display-name="Couleur"/> -->
+      <property category="Couleur" name="couleur" data-type="string" column-name="couleur" display-name="Couleur" />
+      <property category="Promotions" name="promotionsExclues" data-type="boolean" column-name="promotionsExclues" writable="true"
+        queryable="true" display-name="Promotions exclues" />
+      <!--****MODIF REMY 290802 Ajout CoefficientDeSatisfaction ***********************************************-->
+      <property category="Informations" name="CoefficientDeSatisfaction" data-type="float" column-name="COEFFICIENTDESATISFACTION"
+        required="false" display-name="Coefficient de satisfaction" />
+      <!--****FIN MODIF REMY 290802 Ajout CoefficientDeSatisfaction ***********************************************-->
+      <property category="Soldes" name="libellePromotionnel" data-type="string" column-name="libellePromotionnel"
+        display-name="Libelle promotionnel" hidden="true"/>
+      <property category="Soldes" name="urlGrandPictoRemise" data-type="string" column-name="urlGrandPictoRemise"
+        display-name="URL grand picto remise" hidden="true"/>
+      <property category="Soldes" name="urlPetitPictoRemise" data-type="string" column-name="urlPetitPictoRemise"
+        display-name="URL petit picto remise" hidden="true"/>
+      <property category="Soldes" name="dateDebutFonctionnelle" data-type="date" column-name="dateDebutFonctionnelle"
+        display-name="Date de debut d'operation fonctionnelle" hidden="true"/>
+      <property category="Soldes" name="dateFinFonctionnelle" data-type="date" column-name="dateFinFonctionnelle"
+        display-name="Date de fin d'operation fonctionnelle" hidden="true"/>
+      <property category="Soldes" name="dateDebutAffichage" data-type="date" column-name="dateDebutAffichage"
+        display-name="Date de debut d'operation affichee" hidden="true"/>
+      <property category="Soldes" name="uniquementSurLeSite" data-type="boolean" default="false" column-name="uniquementSurLeSite"
+        display-name="Uniquement sur le site" />
+      <property category="Soldes" name="listPriceXLS" data-type="double" column-name="listPriceXLS" required="false"
+        display-name="List Price XLS" hidden="true"/>
+      <property category="Livraison" name="typeExpedition" data-type="int" column-name="typeExpedition" display-name="typeExpedition" />
+      <property category="Livraison" name="transporteur" data-type="String" column-name="transporteur" display-name="transporteur" />
+      <property category="Livraison" name="DelaiApproFournisseur" data-type="double" column-name="DelaiApproFournisseur"
+        display-name="DelaiApproFournisseur" />
+
+      <property category="" name="typeArticle" data-type="int" column-name="typeArticle" display-name="typeArticle" />
+      <property category="" name="exonerationPFT" data-type="boolean" column-name="exonerationPFT" display-name="exonerationPFT" />
+      <property category="" name="retraitMomentaneDateDebut" data-type="date" column-name="retraitMomentaneDateDebut"
+        display-name="retraitMomentaneDateDebut"/>
+      <property category="" name="retraitMomentaneDateFin" data-type="date" column-name="retraitMomentaneDateFin"
+        display-name="retraitMomentaneDateFin"/>
+      <property category="" name="retraitMomentaneMotifsCodifies" data-type="int" column-name="retraitMomentaneMotifsCodifies"
+        display-name="retraitMomentaneMotifsCodifies" />
+      <property category="" name="retraitMomentaneUtilisateur" data-type="String" column-name="retraitMomentaneUtilisateur"
+        display-name="retraitMomentaneUtilisateur" hidden="true"/>
+      <property category="" name="CacheSKUCompteur" data-type="double" column-name="CacheSKUCompteur"
+        display-name="Qte art dispo / jr" />
+      <property category="" name="fiabiliteStock" data-type="int" column-name="fiabiliteStock" display-name="Fiabilité du stock" hidden="true"/>
+      <property category="flux article" name="CodeNewModule" data-type="string" column-name="CodeNewModule"
+        display-name="CodeNewModule" hidden="true"/>
+      <property category="flux article" name="SoumisaD3E" data-type="boolean" column-name="SoumisaD3E" display-name="SoumisaD3E" />
+	  <property category="flux article" name="SoumisaREP" data-type="boolean" column-name="SoumisaREP" display-name="SoumisaREP" />
+      <property category="flux article" name="PRMP" data-type="double" column-name="PRMP" display-name="PRMP" hidden="true"/>
+      <property category="Promotions" name="PromotionCarteAtout" data-type="boolean" column-name="PromotionCarteAtout"
+        display-name="PromotionCarteAtout" />
+      <property category="Promotions" name="PurcentPromoCarteAtout" data-type="int" column-name="PurcentPromoCarteAtout"
+        display-name="PurcentPromoCarteAtout" />
+      <property category="Promotions" name="IsPurcent" data-type="boolean" column-name="IsPurcent"
+        display-name="Pourcentage (oui/non) ?" />
+      <property category="Livraison (BO)" name="exclusionLivraisonCorse" data-type="boolean" default="false"
+        column-name="exclusionLivraisonCorse" display-name="Excluxion livraison en Corse" />
+      <property category="Livraison (BO)" name="sommeForfaitaire" data-type="float" column-name="sommeForfaitaire"
+        display-name="Somme forfaitaire" />
+
+      <!-- Destockage -->
+      <property category="Destockage" name="dateDebDestock" data-type="date" column-name="DATE_DEB_DESTOCK"
+        display-name="Date de début de déstockage" />
+      <property category="Destockage" name="dateFinDestock" data-type="date" column-name="DATE_FIN_DESTOCK"
+        display-name="Date de fin de déstockage" />
+      <property category="Destockage" name="dateInitDestock" data-type="date" column-name="DATE_INIT_DESTOCK"
+        display-name="Date d'initialisation de déstockage" />
+      <property category="Destockage" name="valStockDestock" data-type="int" column-name="VAL_STOCK_DESTOCK"
+        display-name="Valeur du stock de déstockage" />
+
+      <property category="Prix (BO)" name="CUV" data-type="string" column-name="CUV" display-name="Code unité de vente" >
+        <attribute name="propertySortPriority" value="15" />
+      </property>
+      <property category="Prix (BO)" name="CUP" data-type="string" column-name="CUP" display-name="Code unité de prix" >
+        <attribute name="propertySortPriority" value="5" />
+      </property>
+      <property name="showM2PriceFirst" data-type="boolean" column-name="show_m2_first" display-name-resource="showMeter" 
+        category-resource="prixBO" default="true">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="10" />
+      </property>
+      <property category="Prix (BO)" name="PUPUV" data-type="float" column-name="PUPUV" display-name="Coefficient CUP/CUV" >
+        <attribute name="propertySortPriority" value="20" />
+      </property>
+      <property category="Prix (BO)" name="PrixRef" data-type="float" column-name="prix_ref" display-name="Prix de référence" >
+        <attribute name="propertySortPriority" value="40" />
+      </property>
+      <property category="Prix (BO)" name="PrixSolde" data-type="float" column-name="prix_solde" display-name="Prix Soldé" >
+        <attribute name="propertySortPriority" value="55" />
+      </property>
+      <property category="Prix (BO)" name="FSolde" data-type="boolean" column-name="f_solde" display-name="Indicateur prix solde" >
+        <attribute name="propertySortPriority" value="35" />
+      </property>
+      <property category="Prix (BO)" name="DateFinSolde" data-type="timestamp" column-name="date_fin_solde" display-name="Date de fin de solde" >
+        <attribute name="propertySortPriority" value="25" />
+      </property>
+      
+      <property category-resource="categoryCastoramaPricing" name="castoramaPriceStartDate" data-type="timestamp" 
+                column-name="castorama_price_start_date" display-name-resource="castoramaPriceStartDate">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources"/>
+        <attribute name="propertySortPriority" value="5" />
+      </property>
+      <property category-resource="categoryCastoramaPricing" name="castoramaPriceEndDate" data-type="timestamp" 
+                column-name="castorama_price_end_date" display-name-resource="castoramaPriceEndDate">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources"/>
+        <attribute name="propertySortPriority" value="10" />
+      </property>
+      <property name="airEmissionLevelImage" display-name-resource="sku.airEmissionLevelImage" item-type="media" queryable="true" readable="true"
+                column-name="emission_level" hidden="false" category-resource="categoryImagesMedia" expert="false" required="false"
+                cache-mode="inherit" writable="true">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources"/>
+      </property>
+      <property category-resource="categoryBasics" name="showCardPrice" data-type="boolean" column-name="show_card_price" 
+                display-name-resource="sku.showCardPrice" hidden="true">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources"/>
+      </property>
+    </table>
+    
+    <property category-resource="categoryCastoramaPricing" name="castoramaPrice" property-type="com.castorama.commerce.pricing.CastoramaPricePropertyDescriptor" 
+              data-type="double"  display-name-resource="castoramaPrice"  queryable="true">
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources"/>
+      <attribute name="propertySortPriority" value="0" />
+    </property>
+
+    <table name="CASTO_SKU_PICTO" type="multi" id-column-names="sku_id" multi-column-name="seq_num">
+      <property name="urlPicto" column-names="url_picto" data-type="array" component-data-type="string"
+        display-name="Urls des pictos" category-resource="categoryImagesMedia"/>
+    </table>
+
+    <table name="casto_sku_related" type="multi" id-column-names="sku_id" shared-table-sequence="3">
+      <!-- [KD] attribute "shared-table-sequence" was added: table casto_sku_related is used 2 times-->
+      <property name="relatedSku" column-names="aux_id" data-type="set" component-item-type="casto_sku" />
+    </table>
+
+    <table name="casto_sku_related" type="multi" id-column-names="aux_id" shared-table-sequence="2">
+      <!-- [KD] attribute "shared-table-sequence" was added: table casto_sku_related is used 2 times-->
+      <property name="relatingSku" column-names="sku_id" data-type="set" component-item-type="casto_sku" writable="false" />
+    </table>
+
+    <table name="casto_sku_cross_selling_assoc" type="multi" id-column-name="sku_id" multi-column-name="sequence_num">
+      <property name="crossSelling" data-type="list" component-item-type="CrossSellingSku"
+        column-name="cross_id" queryable="true" display-name-resource="sku.crossSelling" category-resource="crossSelling">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    
+    <table name="casto_sku_ik_cs_assoc" type="multi" id-column-name="sku_id" multi-column-name="sequence_num">
+      <property name="ikCrossSelling" data-type="list" component-item-type="CrossSellingSku"
+        column-name="cross_id" queryable="true" display-name-resource="sku.ikCrossSelling" category-resource="ikCrossSelling">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    
+    <table name="casto_sku_attr" type="multi" id-column-name="sku_id" multi-column-name="sequence_num">
+      <property category-resource="category.skuAttributs" name="attributes" data-type="list" component-item-type="Attributs Casto"
+        column-name="attribute_id" queryable="true" display-name="Valeurs des attributs">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    <table name="casto_sku_normes" type="multi" id-column-name="sku_id" multi-column-name="sequence_num">
+      <property category="Normes du SKU Casto" name="normes" data-type="list" component-item-type="Normes" column-name="normes_id"
+        queryable="true" display-name="Liste des normes" hidden="true"/>
+    </table>
+    <table name="CASTO_SKU_SERVICE_MAGASIN" type="multi" id-column-name="SKU_ID">
+      <property category="PLD" name="services" data-type="set" component-item-type="magasinServiceAssociation"
+      repository="/atg/registry/Repository/MagasinGSARepository" display-name="Services" column-names="ID_COUPLE"/>
+    </table>
+
+    <table name="CASTO_SKU_MAGASIN" type="multi" id-column-name="SKU_ID" multi-column-name="ID_MAGASIN">
+      <property category="PLD" name="infos" data-type="map" column-name="ID_COUPLE" component-item-type="casto_skus_magasins"
+        cascade="update,delete" />
+    </table>
+
+    <table name="CAST_SKU_IMAGES" type="auxiliary" id-column-name="SKU_ID">
+      <property category-resource="categoryImagesMedia" name="miniatureImage" item-type="media" column-name="MINIATURE_IMAGE_ID"
+        queryable="false" display-name-resource="sku.miniatureImage">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="-5" />
+        <attribute name="references" value="true" />
+      </property>
+      <property category-resource="categoryImagesMedia" name="carouselImage" item-type="media" column-name="CAROUSEL_IMAGE_ID"
+        queryable="false" display-name-resource="sku.carouselImage">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="-4" />
+        <attribute name="references" value="true" />
+      </property>
+      <property category-resource="categoryImagesMedia" name="supportingImage" item-type="media" column-name="SUPPORTING_IMAGE_ID"
+        queryable="false" display-name-resource="sku.supportingImage">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="-3" />
+        <attribute name="references" value="true" />
+      </property>
+      <property category-resource="categoryImagesMedia" name="comparatorImage" item-type="media" column-name="COMPARATOR_IMAGE_ID"
+        queryable="false" display-name-resource="sku.comparatorImage">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        <attribute name="propertySortPriority" value="-2" />
+        <attribute name="references" value="true" />
+      </property>
+    </table>
+
+    <table name="casto_sku_integration" type="auxiliary" id-column-name="sku_id">
+      <property category-resource="skuIntegration.category" name="cybercoach" data-type="boolean"
+         column-name="cybercoach" display-name-resource="skuIntegration.cybercoach" default="false">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="skuIntegration.category" name="ratio" data-type="double" 
+        column-name="ratio" display-name-resource="skuIntegration.ratio">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="skuIntegration.category" name="bornes" data-type="boolean"
+         column-name="bornes" display-name-resource="skuIntegration.bornes" default="false">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+      <property category-resource="skuIntegration.category" name="kitchen_planner" data-type="boolean"
+         column-name="kitchen_planner" display-name-resource="skuIntegration.kitchen_planner" default="false">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <!-- ************* -->
+  <item-descriptor name="media" item-cache-size="245000" query-cache-size="120000">
+    <table name="CASTO_SKU_MEDIA" type="auxiliary" id-column-names="media_id" multi-column-name="qual_id">
+      <property category-resource="categoryBasics" name="qualificatif" column-names="qual_id" data-type="enumerated"
+        display-name="Qualificatif">
+        <option value="Notice utilisation" code="0" />
+        <option value="Notice de montage" code="1" />
+        <option value="Fiche technique" code="2" />
+        <option value="Formulaire" code="3" />
+        <option value="Offre de remboursement" code="4" />
+        <option value="Brochure" code="5" />
+        <option value="Mise à jour" code="6" />
+        <attribute name="propertySortPriority" value="-6" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <!-- raichonak - TO REVISE CACHE -->
+  <item-descriptor name="media-external" item-cache-size="245000" query-cache-size="1000" />
+  <!--********************************************* AFFINAGE DE CHOIX CASTORAMA ********************************************************-->
+  <item-descriptor name="questionAffinage" display-name="Question d'affinage" display-property="libelle" item-cache-size="200"
+    query-cache-size="200">
+    <table name="CASTO_AFFINAGE_QUESTION" type="primary" id-column-name="ID">
+      <property name="id" data-type="string" column-name="ID" required="true" queryable="true" display-name="Identifiant" />
+      <property name="libelle" data-type="string" column-name="libelle" required="true" queryable="true" display-name="Libelle" />
+      <property name="contentGroup" data-type="string" column-name="contentGroup" required="false" queryable="true"
+        display-name="ContentGroup" />
+      <property name="multivalue" data-type="enumerated" default="NON" column-name="multivalue" display-name="Plusieurs valeurs">
+        <attribute name="useCodeForValue" value="false" />
+        <option value="NON" code="0" />
+        <option value="OUI" code="1" />
+      </property>
+      <property name="media" item-type="media" column-name="media_id" display-name="media" />
+    </table>
+    <table name="CASTO_AFFINAGE_QUEST_REP" type="multi" id-column-name="question_id" multi-column-name="sequence_num">
+      <property category="Liste des reponses" name="listeReponses" data-type="list" component-item-type="reponseAffinage"
+        column-name="reponse_id" queryable="true" display-name="Liste des reponses" />
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="reponseAffinage" display-name="Reponse d'affinage" display-property="libelle" item-cache-size="300"
+    query-cache-size="300">
+    <table name="CASTO_AFFINAGE_REPONSE" type="primary" id-column-name="ID">
+      <property name="id" data-type="string" column-name="ID" required="true" queryable="true" display-name="Identifiant" />
+      <property name="libelle" data-type="string" column-name="libelle" required="true" queryable="true" display-name="Libelle" />
+      <property name="contentGroup" data-type="string" column-name="contentGroup" required="false" queryable="true"
+        display-name="ContentGroup" />
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="casto_skus_magasins" display-name="Données du Magasin">
+    <table name="CASTO_DATA_MAGASIN" type="primary" id-column-names="ID_COUPLE">
+      <property name="DelaiApproFournisseur" data-type="double" column-name="DELAI_APPRO_FOURNISSEUR"
+        display-name="Délai d'approvisionnement fournisseur" />
+      <property name="ecoTaxe" data-type="float" column-name="ECO_TAXE" display-name="Eco Taxe" />
+      <property name="SoumisaD3E" data-type="boolean" column-name="SoumisaD3E" display-name="SoumisaD3E" />
+      <property name="CoefficientDeSatisfaction" data-type="float" column-name="CoefficientDeSatisfaction"
+        display-name="Coefficient de Satisfaction" />
+      <property name="PRMP" data-type="float" column-name="PRMP" display-name="PRMP" />
+      <property name="PromoCordre" data-type="int" column-name="PromCordre" display-name="PromCordre" />
+      <property name="PromoFnat" data-type="int" column-name="PromFnat" display-name="PromFnat" />
+      <property name="PrixLivre" data-type="boolean" column-name="PrixLivre" display-name="PrixLivre" />
+      <property name="DdebPromo" data-type="timestamp" column-name="DdebPromo" display-name="Date de début de promotion PLD" />
+      <property name="DfinPromo" data-type="timestamp" column-name="DfinPromo" display-name="Date de fin de promotion PLD" />
+      <property name="Articledetenus" data-type="boolean" column-name="ProduitDetenu" display-name="Produit Detenu" />
+      <property name="prixventeTTCEuro" data-type="float" column-name="prixventeTTCEuro" display-name="prixventeTTCEuro" />
+      <property name="prixventeHTEuro" data-type="float" column-name="prixventeHTEuro" display-name="prixventeHTEuro" />
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="CrossSellingSku" display-name="Cross Selling Sku" display-property="sku" item-cache-size="50000" query-cache-size="2000">
+    <table name="casto_sku_cross_selling" type="primary" id-column-name="cross_id">
+      <property name="sku" item-type="casto_sku" column-name="sku_id" display-name="Sku" />
+      <property name="product" item-type="casto_product" column-name="product_id" display-name="Product" />
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="Attributs Casto" display-name="Attributes Casto" display-property="attr_displayName" item-cache-size="7000" query-cache-size="7000">
+    <table name="casto_sku_attr_value" type="primary" id-column-name="attribute_id">
+      <property name="attr_name" data-type="string" column-name="attribute_name" queryable="true" display-name="Attribute Name" />
+      <property name="attr_displayName" data-type="string" column-name="DisplayName" queryable="true" display-name="Display Name" />
+      <property name="attr_ValueInt" data-type="int" column-name="ValueInteger" queryable="true" display-name="Value Int" />
+      <property name="attr_ValueString" data-type="string" column-name="ValueString" queryable="true" display-name="Value String" />
+      <property name="attr_ValueFloat" data-type="double" column-name="ValueFloat" queryable="true" display-name="Value Float" />
+      <property name="attr_ValueDate" data-type="timestamp" column-name="ValueDate" queryable="true" writable="true"
+        display-name="Value Date" />
+      <property name="attr_ValueBoolean" data-type="boolean" default="false" column-name="ValueBoolean" display-name="Value Boolean"
+        queryable="true" />
+      <property name="attr_Unit" data-type="string" column-name="unit" display-name="Unit" queryable="true" />
+      <property name="attr_Type" data-type="enumerated" column-name="type" writable="true" hidden="false" display-name="Type"
+        queryable="true">
+        <option value="Value Int" code="1" />
+        <option value="Value String" code="2" />
+        <option value="Value Float" code="3" />
+        <option value="Value Date" code="4" />
+        <option value="Value Boolean" code="5" />
+      </property>
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="Normes" display-name="Normes" display-property="nomCourt">
+    <table name="casto_normes" type="primary" id-column-name="normes_id">
+      <property name="URLPictogramme" item-type="media" column-name="URLPictogramme" display-name="Pictogramme" />
+      <property name="URLPage" data-type="string" column-name="URLPage" display-name="URL Page" />
+      <property name="description" data-type="string" column-name="description" display-name="Description" />
+      <property name="nomCourt" data-type="string" column-name="nomCourt" required="true" display-name="Nom Court" />
+    </table>
+  </item-descriptor>
+  <item-descriptor name="themes" display-name="Themes Normes" display-property="name" item-cache-size="100" query-cache-size="100">
+    <table name="casto_themes_normes" type="primary" id-column-name="theme_id">
+      <property category="Theme" name="name" data-type="string" column-name="name" queryable="true" display-name="Libelle" />
+      <property category="Theme" name="description" data-type="big string" column-name="description" queryable="true"
+        display-name="Description" />
+    </table>
+    <table name="casto_themes_normes_assoc" type="multi" id-column-name="Theme_id" multi-column-name="sequence_num">
+      <property category="Liste des normes" name="normes" data-type="list" component-item-type="Normes" column-name="normes_id"
+        queryable="true" display-name="Liste des normes" />
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="marque" display-name="Marques" display-property="name" item-cache-size="1000" query-cache-size="5000">
+    <table name="casto_marque" type="primary" id-column-name="marque_id">
+      <property name="name" data-type="string" column-name="nomMarque" required="true" queryable="true" display-name="Nom Marque" />
+      <property name="description" data-type="big string" column-name="description" queryable="true" display-name="Description" />
+      <property name="mediaMarque" item-type="media" column-name="logoMarque" display-name="Logo Marque" />
+      <!--  Debut modif Elise 11/06 : ajout de colonnes pour le barometre des marques -->
+      <property name="premier_prix" data-type="string" column-name="premier_prix" display-name="Premier prix" />
+      <property name="qualite_prix" data-type="string" column-name="qualite_prix" display-name="Qualite prix" />
+      <property name="selection_exclusive" data-type="string" column-name="selection_exclusive" display-name="Selection exclusive" />
+      <property name="grande_marque" data-type="string" column-name="grande_marque" display-name="Grande marque" />
+      <property name="url" data-type="string" column-name="url" display-name="URL"/>
+      <!--  fin modif Elise 11/06-->
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="couleur" display-name="Couleur" display-property="Nom" item-cache-size="20" query-cache-size="20">
+    <table name="CASTO_COULEUR" type="primary" id-column-name="ID">
+      <property name="couleur" data-type="string" column-name="couleur" required="true" queryable="true" display-name="Couleur" />
+      <property name="nom" data-type="string" column-name="nom" required="true" queryable="true" display-name="Nom" />
+    </table>
+  </item-descriptor>
+
+  <item-descriptor name="nuancier" display-name="Nuanciers" display-property="libelle">
+    <table name="casto_nuancier" type="primary" id-column-name="id">
+      <property name="libelle" column-name="libelle" data-type="string" display-name="Libelle" />
+      <property name="code_couleur" data-type="string" column-name="code_couleur" display-name="Code Couleur" />
+    </table>
+
+
+  </item-descriptor>
+
+  <item-descriptor name="codesUnite" display-property="codeUnite" display-name="Liste des Unites" query-cache-size="300" item-cache-size="300">
+    <table name="CASTO_CODES_UNITE" type="primary" id-column-name="code_Unite">
+      <property name="codeUnite" data-type="string" column-name="CODE_UNITE" display-name="Code unite" />
+      <property name="designation" data-type="string" column-name="DESIGNATION" display-name="Désignation" />
+      <property name="flag" data-type="string" column-name="FLAG_AFFICHAGE_UP" display-name="Flag Affichage UP" />
+      <property name="libelle" data-type="string" column-name="LIBELLE_AFFICHAGE_UP" display-name="Libelle Affichage UP" />
+    </table>
+  </item-descriptor>
+  
+  <item-descriptor name="legacyURL" display-property="uri" display-name-resource="legacyURL.displayName" query-cache-size="5000" item-cache-size="5000">
+    <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+    <table name="CASTO_LEGACY_URL" type="primary" id-column-name="id">
+      <property name="uri" data-type="string" column-name="uri" display-name-resource="legacyURL.URL" required="true">
+        <attribute name="unique" value="true"/>  
+        <attribute name="propertySortPriority" value="10" />      
+      </property>
+      <property name="attachedTo" item-type="category" column-name="category_id" display-name-resource="legacyURL.category" required="true">      
+        <attribute name="propertySortPriority" value="20" />  
+      </property>
+    </table>
+  </item-descriptor>
+
+    <item-descriptor name="thematiqueContainer" display-name-resource="thematique.container" >
+    <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+    <table name="cast_cont_them" type="multi" multi-column-name="sequence_num" id-column-name="container_id">
+      <property name="thematiqueList" data-type="list" component-item-type="thematique" column-name="thematique_id"
+        display-name-resource="thematique.container.list">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    <table name="cast_cont_chapt" type="multi" multi-column-name="sequence_num" id-column-name="container_id">
+      <property name="chapterList" data-type="list" component-item-type="chapterThematique" column-name="chapter_id"
+        display-name-resource="thematique.chapterList">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    <table name="cast_contthem" type="primary" id-column-name="container_id">
+      <property name="id" data-type="string" column-name="container_id">
+        <attribute name="propertySortPriority" value="0" />
+      </property>
+      <property name="title" data-type="string" column-name="title" 
+        display-name-resource="thematique.containerTitle" category="Basics">
+        <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      </property>
+    </table>
+    </item-descriptor>
+    <item-descriptor name="chapterThematique" display-name-resource="thematique.chapter.itemDescriptorName" display-property="title"
+      id-space-name="chapterThematique">
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <table name="cast_chapterthem" type="primary" id-column-name="chapter_id">
+        <property name="title" data-type="string" column-name="title" 
+          display-name-resource="thematique.chapterTitle" category="Basics">
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+        <property name="color" data-type="string" column-name="color" required="true"
+          display-name-resource="thematique.chapterColor" >
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+        <property name="headerImage" item-type="media" display-name-resource="thematique.headerImage" column-name="h_image"
+                  required="true">
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+      </table>
+    </item-descriptor>
+    <item-descriptor name="thematique" display-name-resource="thematique.itemDescriptorName" display-property="title"
+      id-space-name="thematique">
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+
+      <table name="cast_thematique_docs_top" type="multi" multi-column-name="sequence_num" id-column-name="thematique_id">
+        <property name="topDocumentsList" data-type="list" component-item-type="castoramaDocument" column-name="document_id"
+          display-name-resource="thematique.topDocuments" category-resource="trocDocuments">
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="35" />
+        </property>
+      </table>
+      <table name="cast_thematique_docs_bottom" type="multi" multi-column-name="sequence_num" id-column-name="thematique_id">
+        <property name="bottomDocumentsList" data-type="list" component-item-type="castoramaDocument" column-name="document_id"
+          display-name-resource="thematique.bottomDocuments" category-resource="trocDocuments">
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="40" />
+        </property>
+      </table>
+
+      <table name="cast_thematique" type="primary" id-column-name="thematique_id">
+        <property name="title" data-type="string" column-name="title" required="true" 
+          display-name-resource="thematique.title" category="Basics">
+          <attribute name="propertySortPriority" value="0" />
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+        <property name="description" data-type="big string" column-name="description" 
+          display-name-resource="thematique.description" category="Basics">
+          <attribute name="propertySortPriority" value="5" />
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+        <property name="smallImage" item-type="media" display-name-resource="thematique.miniatureImage" column-name="s_image"
+                  required="true">
+          <attribute name="propertySortPriority" value="20" />
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+        <property name="bigImage" item-type="media" display-name-resource="thematique.bigImage" column-name="b_image"
+                  required="true">
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="25" />
+        </property>
+        <property name="bgColor" data-type="string" column-name="bg_color" required="true"
+          display-name-resource="thematique.bgColor" >
+          <attribute name="propertySortPriority" value="10" />
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+        <property name="fontColor" data-type="string" column-name="font_color" default="#FFFFFF"
+          display-name-resource="thematique.fontColor" >
+          <attribute name="propertySortPriority" value="15" />
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+        <property name="topDocsTitle" data-type="string" column-name="top_doc_title"
+          display-name-resource="thematique.topDocsTitle" category-resource="trocDocuments" >
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="45" />
+        </property>
+        <property name="bottomDocsTitle" data-type="string" column-name="bottom_doc_title"
+          display-name-resource="thematique.bottomDocsTitle" category-resource="trocDocuments" >
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="55" />
+        </property>
+        <property name="topDocsDescription" data-type="big string" column-name="top_doc_description"
+          display-name-resource="thematique.topDocsDescription" category-resource="trocDocuments" >
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="50" />
+        </property>
+        <property name="bottomDocsDescription" data-type="big string" column-name="bottom_doc_description"
+          display-name-resource="thematique.bottomDocsDescription" category-resource="trocDocuments" >
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="60" />
+        </property>
+      </table>
+      <table name="cast_thematique_chapt" type="multi" multi-column-name="sequence_num" id-column-name="thematique_id">
+        <property name="chapterList" data-type="list" component-item-type="chapterThematique" column-name="chapter_id"
+          display-name-resource="thematique.chapterList">
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+          <attribute name="propertySortPriority" value="30" />
+        </property>
+      </table>
+    </item-descriptor>
+    
+    
+    <item-descriptor name="guiMenu" display-property="title" display-name-resource="guimenu.displayName" cache-mode="simple" 
+      item-cache-size="100" query-cache-size="200" version-property="version" id-space-name="guiMenu">
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <table name="cast_guimenu" type="primary" id-column-name="menu_id">
+        <property name="id" data-type="string" column-name="menu_id">
+          <attribute name="propertySortPriority" value="0" />
+        </property>
+        <property name="title" data-type="string" display-name-resource="guimenu.title">
+          <attribute name="propertySortPriority" value="5" />
+        </property>
+        <property name="image" item-type="media" display-name-resource="guimenu.image">
+          <attribute name="propertySortPriority" value="10" />
+        </property>
+        <property name="category" item-type="category" column-name="category" display-name-resource="guimenu.category">
+          <attribute name="propertySortPriority" value="60" />
+        </property>
+        <property name="template" item-type="media" column-name="template" display-name-resource="guimenu.menuTemplate">
+          <attribute name="propertySortPriority" value="15" />
+        </property>
+        <property name="version" display-name-resource="version" data-type="int" queryable="true" readable="true" column-name="version" hidden="false" category-resource="categoryInfo" expert="true" required="false" cache-mode="inherit" writable="true">
+          <attribute name="uiwritable" value="false"/>
+          <attribute name="propertySortPriority" value="-1"/>
+        </property>
+      </table>
+      <table name="cast_guimenu_items" type="multi" multi-column-name="sequence_num" id-column-name="menu_id">
+        <property name="menuItemsList" data-type="list" component-item-type="menuItem" column-name="item_id"
+          display-name-resource="guimenu.itemsList">
+          <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+        </property>
+      </table>
+    </item-descriptor>
+
+    <item-descriptor name="menuItem" display-property="title" display-name-resource="guimenu.menuItem.displayName" cache-mode="simple" 
+      item-cache-size="100" query-cache-size="200" version-property="version" id-space-name="menuItem">
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <table name="cast_menuitem" type="primary" id-column-name="item_id">
+        <property name="id" data-type="string" column-name="item_id">
+          <attribute name="propertySortPriority" value="0" />
+        </property>
+        <property name="title" data-type="string" display-name-resource="guimenu.title">
+          <attribute name="propertySortPriority" value="5" />
+        </property>
+        <property name="image" item-type="media" display-name-resource="guimenu.menuitem.image">
+          <attribute name="propertySortPriority" value="15" />
+        </property>
+        <property name="menu" item-type="guiMenu" column-name="menu" display-name-resource="guimenu.menuItem.menu">
+          <attribute name="propertySortPriority" value="60" />
+        </property>
+        <property name="version" display-name-resource="version" data-type="int" queryable="true" readable="true" column-name="version" hidden="false" category-resource="categoryInfo" expert="true" required="false" cache-mode="inherit" writable="true">
+          <attribute name="uiwritable" value="false"/>
+          <attribute name="propertySortPriority" value="-1"/>
+        </property>
+        <property name="template" item-type="media" column-name="template" display-name-resource="guimenu.menuitem.itemTemplate">
+          <attribute name="propertySortPriority" value="20" />
+        </property>
+        <property name="url" data-type="string" column-name="url" display-name-resource="guimenu.menuitem.url">
+          <attribute name="propertySortPriority" value="10" />
+        </property>
+        <property name="inNewTab" data-type="boolean" column-name="new_tab" default="false" display-name-resource="guimenu.menuitem.newTab">
+          <attribute name="propertySortPriority" value="11" />
+        </property>
+      </table>
+    </item-descriptor>
+	<item-descriptor name="footerMenuItem" display-property="title" display-name-resource="footer.menu.links" cache-mode="simple" 
+      item-cache-size="100" query-cache-size="200" version-property="version" id-space-name="footerMenuItem">
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <table name="cast_footer_item" type="primary" id-column-name="link_id">
+        <property name="id" data-type="string" column-name="link_id">
+          <attribute name="propertySortPriority" value="0" />
+        </property>
+		<property name="title" data-type="string" display-name-resource="guimenu.title">
+          <attribute name="propertySortPriority" value="5" />
+        </property>
+       <property name="version" display-name-resource="version" data-type="int" queryable="true" readable="true" column-name="version" hidden="false" category-resource="categoryInfo" expert="true" required="false" cache-mode="inherit" writable="true">
+          <attribute name="uiwritable" value="false"/>
+          <attribute name="propertySortPriority" value="-1"/>
+        </property>
+        <property name="url" data-type="string" column-name="url" display-name-resource="guimenu.menuitem.url">
+          <attribute name="propertySortPriority" value="10" />
+        </property>
+        <property name="isActiveLink" data-type="boolean" column-name="is_active" default="false" display-name-resource="footer.menu.acive">
+          <attribute name="propertySortPriority" value="11" />
+        </property>
+		<property name="position" data-type="int" column-name="position" display-name-resource="Position">
+          <attribute name="propertySortPriority" value="10" />
+        </property>
+	</table>
+    </item-descriptor>
+	
+	<item-descriptor name="nosServicesMenuItem" display-property="title" display-name-resource="footer.nosServices.links" cache-mode="simple" 
+      item-cache-size="100" query-cache-size="200" version-property="version" id-space-name="NosServicesMenuItem">
+      <attribute name="resourceBundle" value="com.castorama.commerce.catalog.CustomProductCatalogResources" />
+      <table name="cast_nos_services_item" type="primary" id-column-name="link_id">
+        <property name="id" data-type="string" column-name="link_id">
+          <attribute name="propertySortPriority" value="0" />
+        </property>
+		<property name="title" data-type="string" display-name-resource="guimenu.title">
+          <attribute name="propertySortPriority" value="5" />
+        </property>
+        <property name="version" display-name-resource="version" data-type="int" queryable="true" readable="true" column-name="version" hidden="false" category-resource="categoryInfo" expert="true" required="false" cache-mode="inherit" writable="true">
+          <attribute name="uiwritable" value="false"/>
+          <attribute name="propertySortPriority" value="-1"/>
+        </property>
+        <property name="url" data-type="string" column-name="url" display-name-resource="guimenu.menuitem.url">
+          <attribute name="propertySortPriority" value="10" />
+        </property>
+        <property name="isActiveLink" data-type="boolean" column-name="is_active" default="false" display-name-resource="footer.menu.acive">
+          <attribute name="propertySortPriority" value="11" />
+        </property>
+		<property name="position" data-type="int" column-name="position" display-name-resource="Position">
+          <attribute name="propertySortPriority" value="10" />
+        </property>
+
+      </table>
+    </item-descriptor>
+
+</gsa-template>

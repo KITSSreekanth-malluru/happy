@@ -1,0 +1,17 @@
+<gsa-template xml-combine="append">
+  <item-descriptor name="promotion" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Item Discount" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Item Discount - Percent Off" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Item Discount - Amount Off" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Item Discount - Fixed Price" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Shipping Discount" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Shipping Discount - Percent Off" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Shipping Discount - Amount Off" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Shipping Discount - Fixed Price" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Order Discount" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Order Discount - Percent Off" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Order Discount - Amount Off" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="Order Discount - Fixed Price" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="closenessQualifier" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="upsellAction" cache-mode="simple"></item-descriptor>
+</gsa-template>

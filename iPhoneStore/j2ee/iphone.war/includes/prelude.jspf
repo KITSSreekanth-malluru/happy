@@ -1,0 +1,18 @@
+<%@ include file="/includes/taglibs.jspf" %>
+
+<dsp:page>
+  <dsp:setxml value="true"/>
+
+  <dsp:importbean var="requestLocale" bean="/atg/dynamo/servlet/RequestLocale" />
+  
+  <fmt:setLocale value="${requestLocale.locale}"/>
+
+  <c:set var="atg.taglib.json.escapeXml" value="${false}" scope="application"/>
+  <dsp:setvalue bean="/atg/dynamo/servlet/RequestLocale.localeString" paramvalue="language"/>
+  <dsp:importbean var="requestLocale" bean="/atg/dynamo/servlet/RequestLocale" />
+  
+  <fmt:setLocale value="${requestLocale.locale}"/>
+  
+  <dsp:importbean var="resources" bean="/com/castorama/mobile/CastMobileWebAppConfiguration" />
+  <fmt:setBundle basename="${resources.resourceBundle}" />
+</dsp:page>

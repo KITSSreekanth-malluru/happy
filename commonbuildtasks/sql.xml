@@ -1,0 +1,89 @@
+<!--
+  This ant runs SQL on the database.
+-->
+<project name="sql" default="createtables" basedir=".">
+
+  <!-- Here we stub out the createtables and droptables tasks so other 
+       submodules don't have to. -->
+
+  <!-- Creates the modules tables. -->
+  <target name="createtables" description="Creates all tables"></target>
+
+  <!-- Drops the modules tables. -->
+  <target name="droptables" description="Drops all tables"></target>
+
+  <!-- Performs an sqlplus statement
+       Needs to be passed these variables
+         sql.ddl.file   - The file name of the sql to run
+         jdbc.user      - The database user name
+         jdbc.password  - The password for the user
+         jdbc.tnsname  - The tnsname of the database server
+  -->
+  <target name="-performsql" description="Runs a DDL against a sql schema and host">
+    <echo message="about to execute ${sql.ddl.file} using ${jdbc.user}/${jdbc.password}@${jdbc.tns}" />
+    <exec executable="${sqlplus.win.cmd}" failonerror="yes" os="Windows 2000,Windows NT,Windows XP,Windows 7">
+      <arg value="${jdbc.user}/${jdbc.password}@${jdbc.tns}" />
+      <arg value="@${sql.ddl.file}" />
+    </exec>
+    <exec executable="${sqlplus.unix.cmd}" failonerror="yes" os="Solaris,Linux">
+      <arg value="${jdbc.user}/${jdbc.password}@${jdbc.tns}" />
+      <arg value="@${sql.ddl.file}" />
+    </exec>
+  </target>
+
+  <!-- Perform an sqlplus statement against the core schema -->
+  <target name="-performcoresql" description="Performs an sqlplus statement against the core schema">
+    <ant target="-performsql">
+      <property name="jdbc.user" value="${jdbc.core.user}" />
+      <property name="jdbc.password" value="${jdbc.core.password}" />
+      <property name="jdbc.tns" value="${jdbc.tnsname}" />
+    </ant>
+  </target>
+  
+  <!-- Perform an sqlplus statement against the core schema -->
+  <target name="-performcoresql_staging" description="Performs an sqlplus statement against the core schema">
+    <ant target="-performsql">
+      <property name="jdbc.user" value="${jdbc.stag_core.user}" />
+      <property name="jdbc.password" value="${jdbc.stag_core.password}" />
+      <property name="jdbc.tns" value="${jdbc.stag_tnsname}" />
+    </ant>
+  </target>
+  
+  <!-- Perform an sqlplus statement against both catalog schemas -->
+  <target name="-performcatalogsql" description="Performs an sqlplus statement against both catalog schemas">
+    <ant target="-performsql">
+      <property name="jdbc.user" value="${jdbc.cataloga.user}" />
+      <property name="jdbc.password" value="${jdbc.cataloga.password}" />
+      <property name="jdbc.tns" value="${jdbc.tnsname}" />
+    </ant>
+    <ant target="-performsql">
+      <property name="jdbc.user" value="${jdbc.catalogb.user}" />
+      <property name="jdbc.password" value="${jdbc.catalogb.password}" />
+      <property name="jdbc.tns" value="${jdbc.tnsname}" />
+    </ant>
+  </target>
+  
+  <!-- Perform an sqlplus statement against both catalog schemas -->
+  <target name="-performcatalogsql_staging" description="Performs an sqlplus statement against both catalog schemas">
+    <ant target="-performsql">
+      <property name="jdbc.user" value="${jdbc.stag_cataloga.user}" />
+      <property name="jdbc.password" value="${jdbc.stag_cataloga.password}" />
+      <property name="jdbc.tns" value="${jdbc.stag_tnsname}" />
+    </ant>
+    <ant target="-performsql">
+      <property name="jdbc.user" value="${jdbc.stag_catalogb.user}" />
+      <property name="jdbc.password" value="${jdbc.stag_catalogb.password}" />
+      <property name="jdbc.tns" value="${jdbc.stag_tnsname}" />
+    </ant>
+  </target>
+
+  <!-- Perform an sqlplus statement against the pub schema -->
+  <target name="-performpubsql" description="Performs a sqlplus statement against the pub schema">
+    <ant target="-performsql">
+      <property name="jdbc.user" value="${jdbc.pub.user}" />
+      <property name="jdbc.password" value="${jdbc.pub.password}" />
+      <property name="jdbc.tns" value="${jdbc.pub_tnsname}" />
+    </ant>
+  </target>
+
+</project>

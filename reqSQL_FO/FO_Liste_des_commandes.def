@@ -1,0 +1,17 @@
+nom:FO_Liste_des_commandes FO
+category:FO
+titre:Liste des commandes FO
+requete:select co.order_id NUMERO_COMMANDE, 
+do.submitted_date DATE_COMMANDE,
+substr(di.catalog_ref_id,6,6) CODE_ARTICLE, 
+di.quantity QUANTITE, 
+(co.MNT_TOTAL_TTC - co.MNT_LIV_NON_REMISE) MONTANT_TOTAL_TTC, 
+co.MNT_LIV_NON_REMISE FRAIS_DE_PORT
+from casto_order co, DCSPP_ORDER_ITEM doi, DCSPP_ITEM di, DCSPP_ORDER do
+
+where doi.order_id = co.order_id and di.commerce_item_id = doi.commerce_items
+and do.order_id = doi.order_id
+
+
+parametre:do.submitted_date|Date de passage de la commande(JJ/MM/AA)|01/04/09|date
+parametre:do.submitted_date|Date de passage de la commande(JJ/MM/AA)|01/05/09|date

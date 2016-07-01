@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <add-item item-descriptor="attributeValue" id="CastoPropertyGroupsResourceBundle">
+            <set-property name="value"><![CDATA[com.castorama.catalog.me.TemplateResources]]></set-property>
+        </add-item>
+        <add-item item-descriptor="attributeValue" id="aMgrCastoBasicsMultiEditCats">
+            <set-property name="value">
+                <![CDATA[categoryBasics,categoryPresentation,trocDocuments,categoryInfokiosk,crossSelling,ikCrossSelling,categoryPublishing,categoryImagesMedia,categoryPromotions,Reference,categoryPricing,categoryCastoramaPricing,prixBO,categoryDelivery,conseilForum,categoryCCConfig]]></set-property>
+        </add-item>
+        <add-item item-descriptor="attributeValue" id="aMgrCastoSEOMultiEditCats">
+            <set-property name="value"><![CDATA[seoSupportCategory]]></set-property>
+        </add-item>
+        <add-item item-descriptor="attributeValue" id="aMgrCastoIntMultiEditCats">
+            <set-property name="value"><![CDATA[skuIntegration.category]]></set-property>
+        </add-item>
+        <add-item item-descriptor="attributeValue" id="aMgrCastoPromoMultiEditCats">
+            <set-property name="value"><![CDATA[categoryPromotions]]></set-property>
+        </add-item>
+        <add-item item-descriptor="attributeValue" id="aMgrCastoMediasMultiEditCats">
+            <set-property name="value"><![CDATA[categoryImagesMedia]]></set-property>
+        </add-item>
+        <add-item item-descriptor="attributeValue" id="aMgrCastoCategorMultiEditCats">
+            <set-property name="value"><![CDATA[categoryCategorization]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmCastoBasicMultiEdit">
+            <set-property name="name"><![CDATA[AssetManager User Media Multi-Edit]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager product color multi-edit]]></set-property>
+            <set-property name="displayName"><![CDATA[propGroup.Basic.properties]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[categorizedGrouping=aMgrCastoBasicsMultiEditCats,resourceBundle=CastoPropertyGroupsResourceBundle]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmCastoSEOMultiEdit">
+            <set-property name="name"><![CDATA[AssetManager User Media Multi-Edit]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager product color multi-edit]]></set-property>
+            <set-property name="displayName"><![CDATA[propGroup.SEO.properties]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[categorizedGrouping=aMgrCastoSEOMultiEditCats,resourceBundle=CastoPropertyGroupsResourceBundle]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmCastoIntMultiEdit">
+            <set-property name="name"><![CDATA[AssetManager User Media Multi-Edit]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager product color multi-edit]]></set-property>
+            <set-property name="displayName"><![CDATA[propGroup.Integration.properties]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[categorizedGrouping=aMgrCastoIntMultiEditCats,resourceBundle=CastoPropertyGroupsResourceBundle]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmPromoMultiEdit">
+            <set-property name="name"><![CDATA[AssetManager User Media Multi-Edit]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager product color multi-edit]]></set-property>
+            <set-property name="displayName"><![CDATA[propGroup.Promotions.properties]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[categorizedGrouping=aMgrCastoPromoMultiEditCats,resourceBundle=CastoPropertyGroupsResourceBundle]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmMediasMultiEdit">
+            <set-property name="name"><![CDATA[AssetManager User Media Multi-Edit]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager product color multi-edit]]></set-property>
+            <set-property name="displayName"><![CDATA[propGroup.Medias.properties]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[categorizedGrouping=aMgrCastoMediasMultiEditCats,resourceBundle=CastoPropertyGroupsResourceBundle]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemViewMapping" id="aMgrIvmCategorMultiEdit">
+            <set-property name="name"><![CDATA[AssetManager User Media Multi-Edit]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager product color multi-edit]]></set-property>
+            <set-property name="displayName"><![CDATA[propGroup.Categorization.properties]]></set-property>
+            <set-property name="attributeValues">
+                <![CDATA[categorizedGrouping=aMgrCastoCategorMultiEditCats,resourceBundle=CastoPropertyGroupsResourceBundle]]></set-property>
+            <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditSku">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description"><![CDATA[AssetManager multi-edit mapping for sku items]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+            <set-property name="itemName"><![CDATA[sku]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="viewMappings">
+                <![CDATA[aMgrIvmCastoBasicMultiEdit,aMgrIvmMediasMultiEdit,aMgrIvmCastoIntMultiEdit]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditProduct">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description">
+                <![CDATA[AssetManager multi-edit mapping for product items]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+            <set-property name="itemName"><![CDATA[product]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="viewMappings">
+                <![CDATA[aMgrIvmCastoBasicMultiEdit,aMgrIvmPromoMultiEdit,aMgrIvmMediasMultiEdit,aMgrIvmCastoSEOMultiEdit]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditCategory">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description">
+                <![CDATA[AssetManager multi-edit mapping for category items]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+            <set-property name="itemName"><![CDATA[category]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="viewMappings">
+                <![CDATA[aMgrIvmCastoBasicMultiEdit,aMgrIvmCastoSEOMultiEdit,aMgrIvmMediasMultiEdit,aMgrIvmCategorMultiEdit]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditThematique">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description">
+                <![CDATA[AssetManager multi-edit mapping for thematique items]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+            <set-property name="itemName"><![CDATA[thematique]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="viewMappings"><![CDATA[aMgrIvmCastoBasicMultiEdit]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditCastoDocument">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description">
+                <![CDATA[AssetManager multi-edit mapping for castorama document items]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+            <set-property name="itemName"><![CDATA[castoramaDocument]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="viewMappings"><![CDATA[aMgrIvmCastoBasicMultiEdit]]></set-property>
+        </add-item>
+        <add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditCastoMagasin">
+            <set-property name="name"><![CDATA[AssetManager]]></set-property>
+            <set-property name="description">
+                <![CDATA[AssetManager multi-edit mapping for castorama magasin items]]></set-property>
+            <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+            <set-property name="itemPath"><![CDATA[/atg/registry/Repository/MagasinGSARepository]]></set-property>
+            <set-property name="itemName"><![CDATA[magasin]]></set-property>
+            <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+            <set-property name="viewMappings"><![CDATA[aMgrIvmCastoBasicMultiEdit]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>
+  

@@ -1,0 +1,23 @@
+<gsa-template xml-combine="append">
+	<item-descriptor name="priceList" version-property="version" id-space-name="priceList"
+		last-modified-property="lastModifiedDate" item-cache-size="5000" query-cache-size="50" display-property="displayName"
+		display-name-resource="itemDescriptorPriceList" cache-mode="simple">
+
+		<table name="dcs_price_list" type="primary" id-column-name="price_list_id">
+			<property name="locale" column-name="locale" data-type="enumerated" default="fr_FR_EURO" required="true"
+				category-resource="priceListBasics" display-name-resource="locale">
+				<attribute name="useCodeForValue" value="false" />
+				<option value="en_US" code="0" />
+				<option value="de_DE_EURO" code="1" />
+				<option value="ja_JP" code="2" />
+				<option value="fr_FR_EURO" code="3" />
+				<attribute name="propertySortPriority" value="3" />
+			</property>
+		</table>
+	</item-descriptor>
+	
+	<item-descriptor name="price" >
+        <attribute name="cacheNullItems" value="true"/> 
+    </item-descriptor>
+  
+</gsa-template>

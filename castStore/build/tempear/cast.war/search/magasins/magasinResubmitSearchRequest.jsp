@@ -1,0 +1,100 @@
+<dsp:page>
+
+  <dsp:importbean bean="/com/castorama/magasin/MagasinSearchFormHandler"/>
+  <dsp:importbean bean="/com/castorama/magasin/MagasinFacetSearchTools"/>
+  <dsp:importbean bean="/com/castorama/commerce/search/refinement/CastFacetTrailDroplet"/>
+  <dsp:importbean bean="/atg/commerce/catalog/CategoryLookup" />
+  <dsp:importbean bean="/atg/dynamo/droplet/IsEmpty"/>
+  
+  <dsp:getvalueof var="magasinCategoryId" param="magasinCategoryId"/>
+  <dsp:getvalueof var="magasinAddFacet" param="magasinAddFacet"/>
+  <dsp:getvalueof var="magasinTrail" param="magasinTrail"/>
+  <dsp:getvalueof var="magasinRemoveFacet" param="magasinRemoveFacet"/>
+  <dsp:getvalueof var="magasinRemoveAllFacets" param="magasinRemoveAllFacets"/>
+  <dsp:getvalueof var="magasinProductListingView" param="magasinProductListingView"/>
+  <dsp:getvalueof var="question" param="question"/>
+  
+  <dsp:getvalueof var="isMultiSearch" param="isMultiSearch"/>
+
+  <dsp:getvalueof var="requestURI" bean="/OriginatingRequest.requestURI"/>
+ 
+ 
+  <dsp:droplet name="/atg/targeting/TargetingFirst">
+    <dsp:param name="howMany" value="1" />
+    <dsp:param name="fireViewItemEvent" value="false"/>
+    <dsp:param name="targeter"
+      bean="/atg/registry/RepositoryTargeters/RefinementRepository/MagasinFacetSetTargeter" />
+    <dsp:oparam name="output">
+      <dsp:getvalueof var="magasinFacetSetId" param="element.repositoryId" />
+      <dsp:getvalueof var="magasinRefineConfigName" param="element.name"/>
+    </dsp:oparam>
+  </dsp:droplet>
+  
+  <dsp:getvalueof var="ajouterMagasinSearchRequest" param="ajouterMagasinSearchRequest"/>
+    
+  <c:if test="${not empty ajouterMagasinSearchRequest && ajouterMagasinSearchRequest}">
+   <dsp:droplet name="/com/castorama/search/droplet/AjouterDocAndMagasinTrailBuilder">
+     <dsp:oparam name="output">
+        <dsp:getvalueof var="ajouterMagasinTrail" param="ajouterTrail"/>
+     </dsp:oparam>
+   </dsp:droplet>
+  </c:if>
+  <dsp:droplet name="IsEmpty">
+  <dsp:param name="value" bean="MagasinSearchFormHandler.searchResponse"/>
+  <dsp:oparam name="true">
+   <c:choose>
+     <c:when test="${not empty magasinAddFacet || not empty magasinTrail || (not empty question && question != ' ')}">
+       <c:choose>
+         <c:when test="${not empty question && question != ' ' && !fn:contains(magasinTrail, 'SRCH')}">
+           <c:set var="magasinAddFacetVar" value="SRCH:${question }"/>
+         </c:when>
+         <c:otherwise>
+           <c:choose>
+             <c:when test="${not empty magasinTrail }">
+               <c:set var="magasinAddFacetVar" value="${magasinTrail }"/>
+             </c:when>
+           </c:choose>
+          </c:otherwise>
+        </c:choose>
+      
+       <c:if test="${empty param.pageNum || param.pageNum == '' }">
+         <dsp:setvalue param="pageNum" value="1"/>
+       </c:if>
+       
+       <dsp:getvalueof var="articlesParPage" param="articlesParPage"/>
+       <c:choose>
+	        <c:when test="${not empty articlesParPage && articlesParPage != ''}">
+	        	<dsp:setvalue bean="MagasinSearchFormHandler.searchRequest.pageSize" value="${articlesParPage}" />
+	        </c:when>
+	        <c:otherwise>
+	          	<dsp:getvalueof var="articlesParPage" bean="/atg/userprofiling/SessionBean.values.articlesParPage"/>
+				 <c:if test="${not empty articlesParPage && articlesParPage != ''}">
+					 <dsp:setvalue bean="MagasinSearchFormHandler.searchRequest.pageSize" value="${articlesParPage}" />
+				 </c:if>
+	        </c:otherwise>
+	   </c:choose>
+      
+       <dsp:setvalue bean="MagasinSearchFormHandler.searchRequest.saveRequest" value="true"/>
+       <dsp:setvalue bean="MagasinSearchFormHandler.searchRequest.refineConfig" value="${magasinRefineConfigName}"/>
+       <dsp:setvalue bean="MagasinSearchFormHandler.errorURL" value="${requestURI}"/>
+       <dsp:setvalue bean="MagasinFacetSearchTools.refineConfig" value="${magasinRefineConfigName}"/>
+     
+       <c:choose>
+          <c:when test="${not empty ajouterMagasinSearchRequest && ajouterMagasinSearchRequest}">
+            <dsp:setvalue bean="MagasinFacetSearchTools.facetTrail" value="${ajouterMagasinTrail }"/>
+          </c:when>
+          <c:otherwise>
+            <dsp:setvalue bean="MagasinFacetSearchTools.facetTrail" value="${magasinAddFacetVar }"/>
+          </c:otherwise>
+       </c:choose>
+           
+         
+       <c:if test="${empty isMultiSearch || !isMultiSearch }">
+        <dsp:setvalue bean="MagasinSearchFormHandler.goToPage" paramvalue="pageNum"  />
+       </c:if>
+      </c:when>
+    </c:choose>
+  </dsp:oparam>
+</dsp:droplet>
+
+</dsp:page>

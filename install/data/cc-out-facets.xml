@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <add-item item-descriptor="refineElement" id="10006">
+            <set-property name="label"><![CDATA[facet.label.ccMode]]></set-property>
+            <set-property name="sort"><![CDATA[value]]></set-property>
+            <set-property name="property"><![CDATA[ccMode]]></set-property>
+            <set-property name="range"><![CDATA[false]]></set-property>
+            <set-property name="propertyType"><![CDATA[integer]]></set-property>
+            <set-property name="priority"><![CDATA[-1]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="refineElement" id="12008">
+            <set-property name="sort"><![CDATA[value]]></set-property>
+            <set-property name="range"><![CDATA[false]]></set-property>
+            <set-property name="property"><![CDATA[availability]]></set-property>
+            <set-property name="label"><![CDATA[facet.label.availability]]></set-property>
+            <set-property name="propertyType"><![CDATA[integer]]></set-property>
+            <set-property name="priority"><![CDATA[-1]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="commerceRefineConfig" id="globalFacetsRC">
+            <set-property name="isGlobal"><![CDATA[true]]></set-property>
+            <set-property name="refineElements"><![CDATA[12008,10001,10002,10003,10004,10006]]></set-property>
+            <set-property name="generatedRefineElements"><![CDATA[10003,10001,12008,10004,10002,10006]]></set-property>
+            <set-property name="refineConfigName"><![CDATA[GLOBAL]]></set-property>
+            <set-property name="type"><![CDATA[commerceRefineConfig]]></set-property>
+        </add-item>
+
+    </import-items>
+</gsa-template>

@@ -1,0 +1,26 @@
+<gsa-template xml-combine="append"> 
+	<item-descriptor name="ecotaxeInfo" item-cache-size="1000" query-cache-size="1000"/>
+	
+	<!-- 
+	query-cache-size = 103 stores * 20000 skus (only max 20K skus may be on discount - according business) * 80% ~ 1600000, but try 40k
+	item-cache-size  = 103 * 20000 * 0.8 ~ 1,6M, but try 40k
+	-->
+    <item-descriptor name="promoInfo" item-cache-size="40000" query-cache-size="40000" />
+
+    <!-- 
+	Only 103 stores 
+	-->
+	<item-descriptor name="processingFee" item-cache-size="110" query-cache-size="110" />
+
+    <!--
+	item-cache-size=  103 local stores * 400 excluded skus with CC mode false
+	-->
+	<item-descriptor name="skuClickCollectFlag" item-cache-size="40000" query-cache-size="40000"/>
+
+    <!-- 
+	item-cache-size=  103 local stores * 400 items on discount
+                      max 400 items may be on discount for one store - info from castorama
+	query-cache-size= 103 stores * 20000 skus (only max 20K skus may be on discount - according business) * 80% ~ 1600000, but try 40000
+	-->
+    <item-descriptor name="discount" item-cache-size="40000" query-cache-size="40000" />
+</gsa-template>

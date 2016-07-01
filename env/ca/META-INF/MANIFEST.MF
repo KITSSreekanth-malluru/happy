@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+ATG-Config-Path: config/config.jar
+ATG-Product: Castorama CA Environment module
+ATG-Required: commerce.castorama.castSearchAdmin 
+ BIZUI 
+ PubPortlet 
+ DafEar.Admin 
+ B2CCommerce.Versioned 
+ DCS.Versioned 
+ DCS-UI 
+ DAF.Search.Versioned 
+ DAF.Search.Routing 
+ SearchAdmin.AdminUI 
+ DCS.Search.Versioned 
+ DCS-UI.Search 
+ DCS.Search.CustomCatalogs.Versioned 
+ DAF.Search.Base.QueryConsole 
+ commerce.castorama.cast.Versioned 
+ commerce.castorama.castMerchandising 
+ commerce.castorama.integrations.Versioned

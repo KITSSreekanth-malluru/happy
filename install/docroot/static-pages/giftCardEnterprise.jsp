@@ -1,0 +1,49 @@
+﻿
+<div class="clientSpace">
+    <div class="formBlock giftPage">
+      <div class="formMainBlock myaccount">
+        
+            <h2>Entreprises et Collectivitées</h2>
+            
+            <div class="giftMainMessage">
+				<!--C'est bientôt la F&ecirc;te des M&egrave;res et la F&ecirc;te des P&egrave;res : -->Offrez tout Casto dans une carte cadeau.<br /><br />              
+				La Carte Cadeau Castorama :<br>
+				La plus belle façon de faire plaisir !
+			</div>
+            
+			<div class="formContent grayCorner grayCornerWhite">
+				<div class="cornerBorder cornerTopLeft"><!--~--></div>
+				<div class="cornerBorder cornerTopRight"><!--~--></div>
+				<div class="cornerBorder cornerBottomLeft"><!--~--></div>
+				<div class="cornerBorder cornerBottomRight"><!--~--></div>
+
+				<div class="cornerOverlay">
+                    <div class="container">
+                    	<!--<img src="/images/gift-banner.gif" alt="Les cartes cadeaux Castorama" /><br />-->
+                      <p><span>Fêtes de fin d’année, départ en retraite, naissance, anniversaire, mariage, fête des pères ou des mères, oeuvres sociales, stimulation de vos équipes commerciales... Pour tous les événements et pour être sûr de faire plaisir, offrez la carte cadeau Castorama !</span></p>
+                      <p class="hackMake3Lines">A vous de choisir le nombre et le montant de vos Cartes Cadeaux Castorama.Selon votre choix, elles peuvent être pré-chargées d'une valeur de 10 €, 15 €,30 €, 50 €, 75 € ou 100 €, avec l'avantage d'être utilisables en une ou plusieurs fois. De plus, elles vous sont livrées gratuitement et sont utilisables dans tous les magasins de France et sur www.castorama.fr.</p>
+                    </div>
+                    <!--  <img src="/store/images/gift.jpg" class="gift-image1" />-->
+                    <img src="/images/gift3.jpg" class="gift-image2" style="right:-5px; right:-10px !important; top: -133px;" />
+				</div>
+			</div>
+			<h2 style="color:#09438B;">Vos Cartes Cadeaux en toute simplicité</h2>
+			<img src="/images/gift4.jpg" style="float:left;" />
+			
+					
+                <div class="grayCorner" style="width:200px; height:230px; padding:10px; float:left; margin:0 0 0 8px;font-size:15px;border:1px solid #C7C7C7;">
+					<div class="cornerBorder cornerTopLeft"><!--~--></div>
+					<div class="cornerBorder cornerTopRight"><!--~--></div>
+					<div class="cornerBorder cornerBottomLeft"><!--~--></div>
+					<div class="cornerBorder cornerBottomRight"><!--~--></div>
+					<p style="color:#09438B;">Pour connaître la liste de tous nos magasins, <a href=""style="font-weight:normal;padding:0;background:none;">cliquez ici !</a></p><br><br>
+					<p style="color:#e95f0e;"><strong>Pour toute demande de renseignements :</strong></p><br>
+					<p style="color:#e95f0e;">• Par email :<br><img src="/images/gift5.gif" alt="Nous contacter par email"/></p><br>
+					<p style="color:#e95f0e;">• Par téléphone : <br>
+					<strong>03 20 16 75 48 </strong><br>
+					du lundi au vendredi.</p><br>
+				</div>
+		   
+  	</div>  
+  </div>
+  </div>

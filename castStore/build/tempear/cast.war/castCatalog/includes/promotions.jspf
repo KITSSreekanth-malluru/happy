@@ -1,0 +1,39 @@
+<dsp:droplet name="CastGetApplicablePromotions">
+  <dsp:param name="item" value="${sku}"/>
+  <dsp:oparam name="output">
+    <div class="offerte floatedImg">
+      <dsp:droplet name="ForEach">
+        <dsp:param name="array" param="promotions"/>
+        <dsp:oparam name="output">
+          <dsp:getvalueof var="description" param="element.description"/>
+          <c:if test="${not empty description}">
+            <dsp:droplet name="ForEach">
+              <dsp:param name="array" param="element.media"/>
+              <dsp:param name="elementName" value="media"/>
+              <dsp:oparam name="output">
+                <dsp:getvalueof var="mediaIrl" param="media.url"/>
+                <dsp:getvalueof var="emptyMedia" value="false"/>
+              </dsp:oparam>
+              <dsp:oparam name="empty">
+                <dsp:getvalueof var="emptyMedia" value="true"/>
+              </dsp:oparam>
+            </dsp:droplet>
+            <div class="offerteRowHide">
+	            <div class="offerteRow">
+	              <c:choose>
+	                <c:when test="${emptyMedia}">
+	                  <img src="${contextPath}/images/icoOfferte.gif"/>
+	                </c:when>
+	                <c:otherwise>
+	                  <img src="${mediaIrl}"/>
+	                </c:otherwise>
+	              </c:choose>
+	              <span><dsp:valueof value="${description}" valueishtml="true"/></span>
+	            </div>
+	         </div>   
+          </c:if>  
+        </dsp:oparam>
+      </dsp:droplet>
+    </div>  
+  </dsp:oparam>
+</dsp:droplet>

@@ -1,0 +1,56 @@
+<div id="orderStatesHelp" class="whitePopupContainer">
+  <div class="whitePopupContent popupFormContainer">
+    <div class="whitePopupHeader">
+      <h1>
+        <fmt:message key="client.order.states.help.title" />
+      </h1>
+      <fmt:message key="castCatalog_label.close" var="fermer" />
+      <a title="${fermer}" class="closeBut" onclick="hidePopup(this)" href="javascript:void(0)"> 
+        <span> <!--~--> </span>${fermer}
+      </a>
+    </div>
+    <div class="clear">
+      <!--~-->
+    </div>
+    <div class="popupContentContainer">
+      <div class="polniy_abzac">
+        <div>
+          <fmt:message key="client.order.states.help.subtitle" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.order.states.help.1" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.order.states.help.1.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.order.states.help.2" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.order.states.help.2.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.order.states.help.3" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.order.states.help.3.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.order.states.help.4" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.order.states.help.4.info" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

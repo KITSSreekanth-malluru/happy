@@ -1,0 +1,6 @@
+<div class="productDetailsPromo">
+  <dsp:include page="/castCommon/promoInformationTargeter.jsp">
+    <dsp:param name="homePagePromoBean" bean="/atg/registry/Slots/ProductDetailsPromoSlot"/>
+    <dsp:param name="flashId" value="ProductDetailsPromoSlot"/>
+  </dsp:include>
+</div>

@@ -1,0 +1,52 @@
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN" 
+"http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+  <header>
+    <name>MotifRepository</name>
+    <author>Peter Tolochko</author>
+  </header>
+
+	<item-descriptor name="Motif" display-name="Motif Repository"  display-property="id">
+	     <table name="MOTIF" type="primary" id-column-name="id">
+	     	<property name="id" column-name="id" data-type="string" />
+	     	<property name="title" column-name="TITLE" data-type="string"/>
+	     	<property name="code" column-name="CODE" data-type="string"/>
+	     </table>     
+	</item-descriptor>
+	
+	
+	<item-descriptor name="ContactUsMotif" display-name="Contact Us Motif"  display-property="id" item-cache-size="100" query-cache-size="100">
+	     <table name="CONTACT_US_MOTIF" type="primary" id-column-name="MOTIF_ID">
+	     	<property name="id" column-name="id" data-type="string" />
+	     	<property name="motif" column-name="MOTIF_ID" item-type="Motif"/>
+	     	<property name="message" column-name="MESSAGE" data-type="string"/>
+			<property name="formType" column-name="FORM_TYPE" data-type="string"/>
+			<property name="sendToCastoDirect" column-name="CASTO_DIRECT" data-type="boolean" default="false" />
+	     </table>	             
+	</item-descriptor>
+	
+	<item-descriptor name="messageMotif" display-name="Motif de Contact"  display-property="cmotif">
+	     <table name="MOTIF" type="primary" id-column-name="id">
+				<property name="title" column-name="TITLE" data-type="string"/>	     	
+	     </table>          
+	     <table name="MESSAGE_MOTIF" type="auxiliary" id-column-name="id">
+	     	<property name="cmotif" column-name="CMOTIF" data-type="short" />
+	     </table>
+	</item-descriptor>
+	
+	<item-descriptor name="messageQuestion" display-name="Question de Contact"  display-property="question">
+	     <table name="MESSAGE_QUESTION" type="primary" id-column-name="id">
+				<property name="question" column-name="QUESTION" data-type="string"/>	     	
+				<property name="instruction" column-name="INSTRUCTION" data-type="string"/>	     	
+				<property name="linktext" column-name="LINKTEXT" data-type="string"/>	     	
+				<property name="linkvalue" column-name="LINKVALUE" data-type="string"/>	     	
+				<property name="message" column-name="MESSAGE" data-type="string"/>	     	
+				<property name="ordre" column-name="ORDRE" data-type="int" category="question">
+			    <attribute name="propertySortPriority" value="10"/>
+				</property>	     	
+	     	<property name="motif" column-name="MOTIF_ID" item-type="messageMotif" />
+	     </table>          
+	</item-descriptor>
+
+</gsa-template>

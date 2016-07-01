@@ -1,0 +1,8 @@
+<DROPLET BEAN="/castorama/droplet/RequestFromVerity">
+<OPARAM NAME="false">
+<a name="haut"></a>
+<droplet src="../../../com/top/frag_bandeauCasto.jhtml"/>
+<droplet src="frag_bandeauOnglets.jhtml"/>
+<droplet src="../../../com/top/frag_bandeauContact.jhtml"/>
+</OPARAM>
+</DROPLET>

@@ -1,0 +1,81 @@
+<dsp:getvalueof var="count" param="count" />
+<dsp:getvalueof var="index" param="index" />
+<dsp:getvalueof var="size" param="size" />
+<dsp:getvalueof var="all_messages" param="all_messages" />
+<tr>
+	<td class="tblSplitter" colspan="4"><div><!--~--></div></td>
+</tr>
+<tr>
+	<dsp:getvalueof var="messageId" param="element.repositoryId" />
+	<c:set var="viewURL" value="${pageContext.request.contextPath}/user/ordersHistory.jsp?orderView=view&messageId=${messageId}" />
+	<dsp:droplet name="MessageStateDroplet" >
+		<dsp:param name="messageId" param="element.repositoryId" />
+		<dsp:oparam name="output">
+			<dsp:getvalueof var="datereaded" param="states.DATEREADED" />
+			<dsp:getvalueof var="is_response_required" param="states.RESPONSE_REQUIRED" />
+			<td  class="orderHistorySPad">
+
+				<c:choose>
+					<c:when test="${null == datereaded}">
+						<c:choose>
+							<c:when test="${is_response_required}">
+								<div class="orderHistoryIcons">
+									<dsp:a href="${viewURL}" >
+										<img class="icoMailOrange" src="../images/blank.gif" alt="" title="" width="16" height="16" />
+									</dsp:a>
+								</div>
+							</c:when>
+							<c:otherwise>
+								<div class="orderHistoryIcons">
+									<dsp:a href="${viewURL}" >
+										<img class="icoMail" src="../images/blank.gif" alt="" title="" width="16" height="16" />
+									</dsp:a>
+								</div>
+							</c:otherwise>
+						</c:choose>
+					</c:when>
+					<c:otherwise>
+						<div class="orderHistoryIcons">
+							<dsp:a href="${viewURL}" >
+								<img class="icoMailOpen" src="../images/blank.gif" alt="" title="" width="16" height="16" />
+							</dsp:a>
+						</div>
+					</c:otherwise>
+				</c:choose>
+
+			</td>
+			<td>
+				<dsp:valueof date="dd/MM/yyyy" param="element.DCONTACT" />
+			</td>
+			<td>
+				<dsp:a href="${viewURL}"  >
+					<dsp:getvalueof var="order_id" param="element.order_id" />
+					<fmt:message key="client.orders.message.castorama" >
+						<fmt:param value="${order_id}" />
+					</fmt:message>
+				</dsp:a>
+			</td>
+			<td class="lastCell center">
+				<dsp:a href="${viewURL}" iclass="darkBlueLink" >
+					<fmt:message key="client.orders.message.read" />
+				</dsp:a>
+				<c:if test="${index==0}">
+					<c:if test="${is_response_required}">
+						<br />
+						<div class="red"><strong>
+							<fmt:message key="client.orders.message.response.required" />
+						</strong></div>
+					</c:if>
+				</c:if>	
+			</td>
+		</dsp:oparam> 
+	</dsp:droplet>
+</tr>
+<tr>
+	<td class="tblSplitter" colspan="4"><div><!--~--></div></td>
+</tr>
+<c:if test="${('true' == all_messages && count < size) || count < 4}" >
+	<tr>
+		<td class="productRowEnd noPadding" colspan="4"><div><!--~--></div></td>
+	</tr>
+</c:if>

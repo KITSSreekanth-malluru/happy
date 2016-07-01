@@ -1,0 +1,75 @@
+<div id="shipmentStatesHelp" class="whitePopupContainer">
+  <div class="whitePopupContent popupFormContainer">
+    <div class="whitePopupHeader">
+      <h1><fmt:message key="client.shipment.states.help.title" /></h1>
+      <fmt:message key="castCatalog_label.close" var="fermer" />
+      <a title="${fermer}" class="closeBut" onclick="hidePopup(this)" href="javascript:void(0)">
+        <span> <!--~--> </span>${fermer}
+      </a>
+    </div>
+    <div class="clear">
+      <!--~-->
+    </div>
+    <div class="popupContentContainer">
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.shipment.states.help.1" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.shipment.states.help.1.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.shipment.states.help.2" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.shipment.states.help.2.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.shipment.states.help.3" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.shipment.states.help.3.info" />
+        </div>
+      </div>
+      <h3 class="popupHeader3">
+        <fmt:message key="client.shipment.states.help.additional" />
+      </h3>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.shipment.states.help.backordered" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.shipment.states.help.backordered.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.shipment.states.help.awaiting.return" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.shipment.states.help.awaiting.return.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.shipment.states.help.outstanding" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.shipment.states.help.outstanding.info" />
+        </div>
+      </div>
+      <div class="polniy_abzac">
+        <div>
+          <strong><fmt:message key="client.shipment.states.help.canceled" /></strong>
+        </div>
+        <div>
+          <fmt:message key="client.shipment.states.help.canceled.info" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

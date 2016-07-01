@@ -1,0 +1,35 @@
+<dsp:getvalueof var="count" param="count" />
+<dsp:getvalueof var="size" param="size" />
+
+
+<tr>
+	<td class="tblSplitter" colspan="4"><div><!--~--></div></td>
+</tr>
+<tr>
+	<td class="alignLeft">
+		<dsp:getvalueof var="motif" param="element.CMOTIF_REMBOURSEMENT_C635" />
+		<strong>
+			<fmt:message key="client.order.refunds.motif.${motif}" />
+		</strong>
+	</td>
+	<td>
+		<dsp:valueof param="element.DREMBOURSEMENT" date="dd/MM/yyyy" />
+	</td>
+	<td class="alignLeft">
+		<dsp:getvalueof var="refundMode" param="element.CMODE_REMBOURSEMENT_C636" />
+		<fmt:message key="client.order.refunds.method.${refundMode}" />
+	</td>
+	<td class="lastCell alignLeft">
+		<strong class="blue">
+			<dsp:valueof param="element.M_REMBOURSEMENT_EFFECTIF" converter="euro" locale="fr_FR" />
+		</strong>
+	</td>
+</tr>
+<tr>
+	<td class="tblSplitter" colspan="4"><div><!--~--></div></td>
+</tr>
+<c:if test="${count < size}" >
+	<tr>
+		<td class="productRowEnd noPadding" colspan="4"><div><!--~--></div></td>
+	</tr>
+</c:if>

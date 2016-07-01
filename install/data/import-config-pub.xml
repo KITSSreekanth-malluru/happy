@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE imports SYSTEM "dynamosystemresource:/atg/dtds/gsa/multi_import_1.0.dtd">
+<imports>
+    <import repository="/atg/registry/Repository/MagasinGSARepository" filename="magasinGSARepository.xml"
+            workspace="initial_00mag" comment="Initial stores import"/>
+    <import repository="/atg/registry/Repository/MagasinGSARepository" filename="store-mapping.xml"
+            workspace="initial_00mag_st" comment="Initial store mapping import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-catalog-media-folders.xml"
+            workspace="initial_00mf" comment="Initial cast catalog media data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-catalog-media-initial.xml"
+            workspace="initial_00mi" comment="Initial cast catalog media data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-catalog-media-templates.xml"
+            workspace="initial_00mt" comment="Initial cast catalog media data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-catalog-promo-templates.xml"
+            workspace="initial_00pt" comment="Initial cast catalog promo data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-catalog-category-styles.xml"
+            workspace="initial_00cs" comment="Initial cast catalog media data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-doc-types.xml" workspace="initial_00cds"
+            comment="Initial cast catalog types data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-doc-subcategories.xml"
+            workspace="initial_00cdsc" comment="Initial cast catalog cubcategories data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast_doc_test.xml" workspace="initial_00dtt"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-data-marques.xml" workspace="initial_00dm"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-catalog.xml" workspace="initial_00tt"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="mth_init.xml" workspace="initial_00th"
+            comment="Initial menu data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-catalog-emission-levels.xml"
+            workspace="initial_00em" comment="Initial air emisiion levels import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-prod-brands.xml"
+            workspace="initial_00brands" comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-packs.xml" workspace="initial_00pp"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-grouped-products.xml"
+            workspace="initial_00grp" comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-cross-sell.xml" workspace="initial_01cs"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-attributes.xml" workspace="initial_00at"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-legacy-urls.xml" workspace="initial_00lu"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="out-code-unite.xml" workspace="initial_00cu"
+            comment="Initial catalog data import"/>
+    <import repository="/atg/search/repository/RefinementRepository" filename="out-facets.xml" workspace="initial_02tt"
+            comment="Initial facets Import"/>
+    <import repository="/atg/commerce/pricing/priceLists/PriceLists" filename="out-pricelists.xml"
+            workspace="initial_04tt" comment="Initial price lists import"/>
+    <import repository="/atg/bizui/viewmapping/ViewMappingRepository" filename="viewmapping.xml"/>
+    <import repository="/atg/bizui/viewmapping/ViewMappingRepository" filename="cast-multiedit.xml"/>
+    <import repository="/atg/searchadmin/SearchAdminRepository" filename="searchadmin-data.xml"/>
+    <import repository="/atg/userprofiling/InternalProfileRepository" filename="searchadmin-profile.xml"/>
+    <import repository="/atg/searchadmin/TopicRepository" filename="topics-data.xml"/>
+    <import repository="/atg/searchadmin/RefinementConfigRepository" filename="cast_doc_facets.xml"/>
+    <import repository="/atg/registry/Repository/CastostageGSARepository" filename="castostageGSARepository.xml"
+            workspace="initial_castostages" comment="Castostage"/>
+    <import repository="/atg/registry/Repository/CatalogueGSARepository" filename="cast-catalogues-initial.xml"
+            workspace="initial_catalogues" comment="Catalogue"/>
+
+    <import repository="/atg/userprofiling/InternalProfileRepository" filename="out_pub_users.xml"
+            workspace="initial_internal_users" comment="Internal Users"/>
+
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="promotions.xml" workspace="initial_promo"/>
+
+
+</imports>

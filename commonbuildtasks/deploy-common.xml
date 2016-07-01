@@ -1,0 +1,339 @@
+<!--
+  This ant file contains tasks common to all deployment modes.
+-->
+<project name="deploy-common">
+
+  <taskdef name="foreach"
+           classname="net.sf.antcontrib.logic.ForEach"
+           classpath="${commonbuildtasks.dir}/lib/ant-contrib.jar"/>
+
+  <!--taskdef name="iseif"
+           classname="ise.antelope.tasks.IfTask"
+           classpath="${buildtools.dir}/lib/atg-ant.jar"/-->
+
+  <patternset id="webapp.pattern.substitution.filter.excludes">
+    <exclude name="META-INF/*.*" />
+    <exclude name="${default.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${default.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${merch.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${merch.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${fo.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${fo.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${loginUser.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${loginUser.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${createUser.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${createUser.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${updateUser.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${updateUser.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${searchClients.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${searchClients.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${forgotPassw.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${forgotPassw.web.app.name}/WEB-INF/*.xml*" />
+	<exclude name="${rest.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${rest.web.app.name}/WEB-INF/*.xml*" />
+  </patternset>
+  
+  <patternset id="webapp.pattern.substitution.filter.includes">
+    <include name="META-INF/**/*.*" />
+    <include name="${default.web.app.name}/META-INF/**/*.*" />
+    <include name="${default.web.app.name}/WEB-INF/*.xml*" />
+    <include name="${merch.web.app.name}/META-INF/**/*.*" />
+    <include name="${merch.web.app.name}/WEB-INF/*.xml*" />
+    <include name="${fo.web.app.name}/META-INF/**/*.*" />
+    <include name="${fo.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${loginUser.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${loginUser.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${createUser.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${createUser.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${updateUser.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${updateUser.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${searchClients.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${searchClients.web.app.name}/WEB-INF/*.xml*" />
+    <exclude name="${forgotPassw.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${forgotPassw.web.app.name}/WEB-INF/*.xml*" />
+	<exclude name="${rest.web.app.name}/META-INF/**/*.*" />
+    <exclude name="${rest.web.app.name}/WEB-INF/*.xml*" />
+  </patternset>
+
+  <patternset id="cast.pattern.substitution.filter.excludes">
+    <exclude name="WEB-INF/web.xml" />
+  </patternset>
+  
+  <patternset id="cast.pattern.substitution.filter.includes">
+    <include name="WEB-INF/web.xml" />
+  </patternset>
+
+  <target name="-copy-estore-webapp" description="Copies the common estore web-app to the temp.ear.dir">
+    <mkdir dir="${temp.ear.dir}" />
+
+    <echo message="In copy-estore-webapp"/>
+    
+    <available file="${j2ee.dir}/${default.web.app.name}" property="default.exists" />
+    <available file="${j2ee.dir}/${merch.web.app.name}" property="merch.exists" />
+    <available file="${j2ee.dir}/${fo.web.app.name}" property="fo.exists" />
+    <available file="${j2ee.dir}/${loginUser.web.app.name}" property="loginUser.exists" />
+    <available file="${j2ee.dir}/${createUser.web.app.name}" property="createUser.exists" />
+    <available file="${j2ee.dir}/${updateUser.web.app.name}" property="updateUser.exists" />
+    <available file="${j2ee.dir}/${searchClients.web.app.name}" property="searchClients.exists" />
+    <available file="${j2ee.dir}/${forgotPassw.web.app.name}" property="forgotPassw.exists" />
+	<available file="${j2ee.dir}/${rest.web.app.name}" property="rest.exists" />
+
+    <if>
+      <equals arg1="${default.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${default.web.app.name}"/>
+      <filter token="default_context_root" value="${default.context.root}"/>
+      
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/${project.name}Store/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/${project.name}Store/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+
+    <if>
+      <equals arg1="${merch.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${merch.web.app.name}"/>
+      <filter token="merch_context_root" value="${merch.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/${project.name}Merchandising/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/${project.name}Merchandising/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+
+    <if>
+      <equals arg1="${fo.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${fo.web.app.name}"/>
+      <filter token="fo_context_root" value="${fo.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/callCenter/castoramaFO/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/callCenter/castoramaFO/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+
+    <if>
+      <equals arg1="${loginUser.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${loginUser.web.app.name}"/>
+      <filter token="loginUser_context_root" value="${loginUser.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+	
+    <if>
+      <equals arg1="${createUser.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${createUser.web.app.name}"/>
+      <filter token="createUser_context_root" value="${createUser.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+
+	<if>
+      <equals arg1="${rest.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${rest.web.app.name}"/>
+      <filter token="rest_context_root" value="${rest.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+
+    <if>
+      <equals arg1="${updateUser.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${updateUser.web.app.name}"/>
+      <filter token="updateUser_context_root" value="${updateUser.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+
+    <if>
+      <equals arg1="${searchClients.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${searchClients.web.app.name}"/>
+      <filter token="searchClients_context_root" value="${searchClients.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+
+    <if>
+      <equals arg1="${forgotPassw.exists}" arg2="true" />
+        <then>
+      <mkdir dir="${temp.ear.dir}/${forgotPassw.web.app.name}"/>
+      <filter token="forgotPassw_context_root" value="${forgotPassw.context.root}"/>
+      <copy todir="${temp.ear.dir}" filtering="true">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.includes" />
+        </fileset>
+      </copy>
+      <copy todir="${temp.ear.dir}" filtering="false">
+        <fileset dir="${global.dir}/castWS/j2ee/">
+          <patternset refid="cast.pattern.substitution.filter.excludes" />
+        </fileset>
+      </copy>
+      </then>
+    </if>
+	</target>
+
+  <target name="-replace-context-root" depends="-copy-estore-webapp" description="Copy J2EE directory and replace
+    context root by substitution.">
+    
+    <filter token="default_context_root"        value="${default.context.root}"/>
+    <filter token="default_web_app_name"        value="${default.web.app.name}"/>
+    <filter token="merch_context_root"          value="${merch.context.root}"/>
+    <filter token="merch_web_app_name"          value="${merch.web.app.name}"/>
+    <filter token="fo_context_root"             value="${fo.context.root}"/>
+    <filter token="fo_web_app_name"             value="${fo.web.app.name}"/>
+    <filter token="loginUser_context_root"      value="${loginUser.context.root}"/>
+    <filter token="loginUser_web_app_name"      value="${loginUser.web.app.name}"/>
+    <filter token="createUser_context_root"     value="${createUser.context.root}"/>
+    <filter token="createUser_web_app_name"     value="${createUser.web.app.name}"/>
+    <filter token="updateUser_context_root"     value="${updateUser.context.root}"/>
+    <filter token="updateUser_web_app_name"     value="${updateUser.web.app.name}"/>
+    <filter token="searchClients_context_root"  value="${searchClients.context.root}"/>
+    <filter token="searchClients_web_app_name"  value="${searchClients.web.app.name}"/>
+    <filter token="forgotPassw_context_root"    value="${forgotPassw.context.root}"/>
+    <filter token="forgotPassw_web_app_name"    value="${forgotPassw.web.app.name}"/>
+	<filter token="rest_context_root"           value="${rest.context.root}"/>
+    <filter token="rest_web_app_name"           value="${rest.web.app.name}"/>
+    
+    <copy description="Copying j2ee files to support filter substitution, excluding jar files"
+          todir="${temp.ear.dir}"
+          verbose="true"
+          filtering="true"
+          overwrite="true">
+      <fileset dir="${j2ee.dir}">
+        <patternset refid="webapp.pattern.substitution.filter.includes" />
+      </fileset>
+    </copy>
+
+    <copy description="Copying JSP and jar files separately without filter substitution"
+          todir="${temp.ear.dir}"
+          verbose="true"
+          filtering="false"
+          overwrite="true">
+      <fileset dir="${j2ee.dir}">
+        <patternset refid="webapp.pattern.substitution.filter.excludes" />
+      </fileset>
+    </copy>
+    
+  </target>
+  
+  <!--
+    Copy tag libraries to WEB-INF subdirectories in all installed modules
+   -->
+  <target name="-copy-taglibs-all-webapps">
+    <!-- Find all the web inf directories -->
+    <path id="web.inf.dirs">
+      <dirset dir="${install.j2ee.dir}/${module.name}">
+        <include name="**/WEB-INF"/>
+      </dirset>
+    </path>
+    
+    <!-- Copy all the tag libraries into each directory we found earlier -->
+    <foreach param="target.webinf.dir" target="-copy-taglibs">
+      <path refid="web.inf.dirs"/>
+    </foreach>
+  </target>
+  
+  <target name="-copy-taglibs">
+    
+    <echo message="Copying Tag Libraries to directory ${target.webinf.dir}" />
+  
+    <!-- Taglib locations -->
+    <property name="das.taglib.tld.dir"  value="${dynamo.root.dir}/DAS/taglib/dspjspTaglib/1.0/tld" />
+    <property name="das.taglib.lib.dir"  value="${dynamo.root.dir}/DAS/taglib/dspjspTaglib/1.0/lib" />
+    <property name="jstl.taglib.tld.dir" value="${dynamo.root.dir}/DAS/taglib/jstl/1.0/tld" />
+    <property name="jstl.taglib.lib.dir" value="${dynamo.root.dir}/DAS/taglib/jstl/1.0/lib" />
+    
+    <copy todir="${target.webinf.dir}/lib" verbose="true">
+      <fileset dir="${das.taglib.lib.dir}" />
+    </copy>    
+
+    <if>
+	<equals arg1="${jsp1.0}" arg2="true" />
+	 <then> 	
+      <copy todir="${target.webinf.dir}/lib" verbose="true">
+        <fileset dir="${jstl.taglib.lib.dir}" />
+      </copy>    
+
+      <copy todir="${target.webinf.dir}/taglib" verbose="true">
+        <fileset dir="${das.taglib.tld.dir}" />
+      </copy>    
+
+      <copy todir="${target.webinf.dir}/taglib" verbose="true">
+        <fileset dir="${jstl.taglib.tld.dir}" />
+      </copy>
+      </then>
+    </if>  
+  </target>
+
+</project>
+

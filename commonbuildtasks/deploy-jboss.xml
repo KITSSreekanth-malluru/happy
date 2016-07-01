@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This build.xml file contains the tasks common to most if not all of the
+  projects.  The basedir is not set here as it is meaningless in this context.
+-->
+<project name="deploy-jboss" default="deploy" basedir=".">
+
+  <!-- Import the targets from the deploy-common.xml file -->
+  <import file="deploy-common.xml"/>
+
+  <property name="server.config.path" value="${global.dir}/${global.server.dir}/${servers.to.assemble}/${appserver.config.dir}" />
+
+
+  <taskdef name="if"
+           classname="net.sf.antcontrib.logic.IfTask"
+           classpath="${commonbuildtasks.dir}/lib/ant-contrib.jar"/>
+
+  
+  <target name="-clean-work-dir"
+          description="delete JBoss's server's 'work' directory so pages will recompile">
+    <!-- Clean the JBoss "work" directory so pages will recompile -->
+    <delete failonerror="false" includeEmptyDirs="true">
+      <fileset dir="${jboss.server.dir}/work"/>
+    </delete>
+  </target>
+
+  <!-- ================================================================= -->
+  <!--                    Some initialization tasks.                     -->
+  <target name="-deployinit">
+    <!-- Create the timestamp -->
+    <tstamp />
+    <echo message=""/>
+    <echo message=""/>
+    <echo message="#############################################################################"/>
+    <echo message=""/>
+    <echo message="${module.parent}.${module.name}: start date = ${DSTAMP}  start time = ${TSTAMP}" />
+    <echo message="JAVA_HOME       = ${env.JAVA_HOME}"/>
+    <echo message="dynamo.home     = ${dynamo.home}" />
+    <echo message="deploy.definition.file = ${deploy.definition.file}"/>
+    <echo message="global.dir      = ${global.dir}" />
+    <echo message=""/>
+    <echo message="#############################################################################"/>
+    <echo message=""/>
+    <echo message=""/>
+  </target>
+
+  <target name="-j2eedirsexist" description="verifies that the j2ee directories exist">
+    <available file="${j2ee.dir}"           property="j2eedir.exists" />
+    <available file="${server.config.path}" property="appserverconfig.exists" />     
+  </target>
+
+  <!-- ================================================================= -->
+  <!--              deploy: Deploys the application.                     -->
+  <target name="deploy" 
+          depends="-deployinit"
+          description="Deploys J2EE application and any 3rd party ears or wars">
+
+    <antcall target="-deploy-application-wars" />
+  </target>
+
+  <!-- =================================================================== -->
+  <!--  -deploy-application-wars: deploy the war built for the application -->
+  <target name="-deploy-application-wars"
+          depends="-j2eedirsexist"
+          if="j2eedir.exists"
+          description="Deploys the J2EE application for the module">
+          
+    <!-- now we can create the exploded app and move it to the ATG install -->
+    <antcall target="-create-exploded-dar" />
+
+  </target>
+  
+  <!-- ================================================================= -->
+  <!--           devdeploy: Deploys the application in dev mode          -->
+  <target name="devdeploy"
+          depends="-deployinit, -j2eedirsexist"
+          if="j2eedir.exists"
+          description="Deploys J2EE application in dev mode by copying the JSPs.">
+
+    <echo message="Install To:   = ${application.ear.install.dir}/${application.ear.filename}"/>
+    <echo message="Install From: = ${j2ee.dir}"/>
+  
+    <copy description="Copying j2ee files to deployment"
+          todir="${application.ear.install.dir}/${application.ear.filename}"
+          verbose="${copy.verbose.bool}">
+      <fileset dir="${j2ee.dir}">
+        <exclude name="META-INF/*.*" />
+        <exclude name="WEB-INF/*.*"  />
+      </fileset>
+    </copy>
+  </target>
+
+  
+  <!-- ================================================================= -->
+  <!--
+    create-ear-file: Creates an ear file by jarring the J2EE directory up.
+    This target depends on the -replace-context-root target which is in the
+    deploy-common.xml.
+  -->
+  <target name="-create-ear-file" depends="-replace-context-root"
+          description="creates the ear file by jarring the ear (j2ee) directory">
+    <mkdir dir="${ear.dir}" />
+    <jar destfile="${ear.dir}/${module.name}.ear">
+      <fileset dir="${temp.ear.dir}">
+        <include name="**/*" />
+      </fileset>
+    </jar>
+  </target>
+
+  <!-- ================================================================= -->
+  <!--
+    create-exploded-dar: Creates an exploded dar file, merging in all
+    the changed files.
+  -->
+  <target name="-create-exploded-dar" depends="-create-ear-file">
+
+    <unjar src="${ear.dir}/${module.name}.ear"
+           dest="${install.j2ee.dir}/${module.name}"/>
+
+    <antcall target="-copy-taglibs-all-webapps"/>
+
+  </target>
+
+  
+  <target name="-deploy-appserver-configs" 
+          depends="-j2eedirsexist"
+          if="appserverconfig.exists"
+          description="Deploys the application server configs">
+    <!-- copy any application server specific configurations 
+         to the appserver install location -->
+    <echo>Copy server specific configurations for server: ${servers.to.assemble}</echo>
+    <echo>Copy appserver configs from ${server.config.path} to ${application.ear.install.dir}</echo>
+    <copy todir="${application.ear.install.dir}" verbose="true" overwrite="true">
+      <fileset dir="${server.config.path}" />
+    </copy>    
+
+    <antcall target="-copylog4j"/>
+    
+    
+  </target>  
+  
+</project>

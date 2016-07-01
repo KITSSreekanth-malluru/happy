@@ -1,0 +1,22 @@
+<droplet src="/com/head/frag_meta.jhtml"></droplet>
+<DROPLET BEAN="/atg/targeting/RepositoryLookup">
+<PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+<PARAM NAME="itemDescriptor" VALUE="region">
+<PARAM NAME="elementName" VALUE="region">
+<PARAM NAME="id" VALUE="param:regionid">
+<OPARAM NAME="output">
+<droplet bean="/castorama/utils/DropletDesaccentuation">
+<param name="chaine_avec_accents_potentiels" value="param:region.nom">
+<oparam name="sortie">
+<meta name="description" content="Castorama region `request.getParameter("sans_accents")`, trouvez le magasin Castorama le plus proche de chez vous sur Castorama.fr : horaires d’ouverture,  coordonnees, plans d’acces et services.">
+<meta name="keywords" content="Castorama region `request.getParameter("sans_accents")`, magasin, france, magasin castorama, magasin bricolage, magasin jardinage, magasin decoration, magasin amenagements, magasin outillage, grande surface bricolage, grande surface bricolage france, decoration, bricolage, jardinage, jardin, castorama">
+</oparam>
+</droplet>
+</OPARAM>
+</DROPLET>
+<DROPLET BEAN="/castorama/droplet/RequestFromVerity">
+<OPARAM NAME="true">
+<META NAME="univers" CONTENT="magasins">
+<META NAME="rubrique" CONTENT="Magasins">
+</OPARAM>
+</DROPLET>

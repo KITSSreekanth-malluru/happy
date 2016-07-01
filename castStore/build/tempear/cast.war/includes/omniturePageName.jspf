@@ -1,0 +1,167 @@
+  <dsp:importbean bean="/com/castorama/stockvisualization/StockModelHolder" />
+  <dsp:importbean bean="/atg/userprofiling/Profile"/>
+  <dsp:importbean bean="/com/castorama/CastPriceRangeDroplet"/>
+  <dsp:getvalueof var="stockVisualizationDisabled" 
+                          bean="/com/castorama/stockvisualization/StockVisualizationManager.stockVisualizationDisabled" />
+  <c:if test="${(empty omniturePageName) && ((not empty currentCategoryId) || fn:contains(requestURI, 'roductDetails.jsp'))}">
+    <fmt:message var="namePart1" key="omniture.pageName.catalogue"/>
+    <c:set var="pageAncestors" value="${namePart1}"/>
+
+    <dsp:getvalueof var="navHistory" bean="CatalogNavHistory.navHistory"/>
+    <dsp:droplet name="ForEach">
+        <dsp:param name="array" value="${navHistory}"/>
+        <dsp:oparam name="output">
+            <dsp:getvalueof var="count" param="count"/>
+            <c:if test="${count == 1}">
+              <dsp:getvalueof var="parentCategory" param="element.parentCategory"/>
+              <dsp:getvalueof var="grandParentCategory" param="parentCategory.parentCategory"/>
+              <c:if test="${not empty grandParentCategory}">
+                <dsp:getvalueof var="firstName" param="parentCategory.displayName"/>
+                <c:set var="pageAncestors" value="${pageAncestors}${firstName}:"/>
+              </c:if>
+            </c:if> 
+            <dsp:getvalueof var="displayName" param="element.displayName"/>
+            <dsp:getvalueof var="elementType" param="element.type"/>
+            <dsp:getvalueof var="size" value="${fn:length(navHistory)}"/>
+            <c:choose>
+            <c:when test="${size == count}">
+              <c:choose>
+                <c:when test="${not empty param.trail}">
+                  
+                  <c:set var="hasTrail" value="${fn:contains(param.trail, ':')}"/>
+                  <c:if test="${hasTrail}">
+                    <c:set var="substring" value="${fn:substringAfter(param.trail, ':')}"/>
+                    <c:choose>
+                      <c:when test="${not empty substring && fn:contains(substring, ':')}">
+                        <c:set var="hasTrail" value="true"/>
+                      </c:when>
+                      <c:otherwise>
+                        <c:set var="hasTrail" value="false"/>
+                      </c:otherwise>
+                    </c:choose>
+                  </c:if>
+                  
+                  <c:choose>
+                    <c:when test="${elementType == 'casto_product'}">
+                      <c:set var="pageAncestors" value="${pageAncestors}:Filtre:${displayName}"/>
+                    </c:when>
+                    <c:otherwise>
+                      <c:set var="pageAncestors" value="${pageAncestors}${displayName}"/>
+                      <c:if test="${hasTrail}">
+                        <c:set var="pageAncestors" value="${pageAncestors}:Filtre"/>
+                      </c:if>
+                    </c:otherwise>
+                  </c:choose>
+                </c:when>
+                <c:otherwise>
+                  <c:set var="pageAncestors" value="${pageAncestors}${displayName}"/>
+                </c:otherwise>
+              </c:choose>
+            <c:if test="${(elementType == 'casto_product' || elementType == 'casto-grouped-product') && empty choosenSkuId}">
+            <dsp:droplet name="CastPriceRangeDroplet">
+              <dsp:param name="productId" param="element.id"/>
+              <dsp:oparam name="output">
+                <dsp:getvalueof var="skuId" param="sku.CodeArticle"/>
+                <c:set var="pageAncestors" value="${pageAncestors}:FicheProduit:${skuId}"/>
+              </dsp:oparam>
+            </dsp:droplet>
+            </c:if>
+            </c:when>
+            <c:otherwise>
+                  <c:set var="pageAncestors" value="${pageAncestors}${displayName}:"/>
+            </c:otherwise>
+          </c:choose>
+        </dsp:oparam>
+    </dsp:droplet>
+    <c:if test="${fn:contains(requestURI, 'roductDetails.jsp')}">   
+      <c:choose>
+        <c:when test="${not empty omnitureProducts && !fn:contains(omnitureProducts, ',')}">
+          <c:set var="omniturePageName" value="FicheProduit:${omnitureProducts}"/>
+        </c:when>
+        <c:otherwise>
+          <c:set var="omniturePageName" value=""/>
+        </c:otherwise>
+      </c:choose>
+    </c:if>
+    <c:if test="${fn:contains(requestURI, 'ategoryTemplate.jsp')}">
+      <c:set var="productOmniturePageName" value="${fn:substringAfter(pageAncestors,'Catalogue:')}" scope="request"/>
+      <c:set var="omniturePageName" value="${pageAncestors}"/>
+    </c:if>
+  </c:if>
+  <c:if test="${(empty channelParam) && ((not empty currentCategoryId) || fn:contains(requestURI, 'roductDetails.jsp'))}">
+  <c:choose>
+    <c:when test="${fn:contains(requestURI, 'productDetails.jsp') || fn:contains(requestURI, 'multiSkuProductDetails.jsp') || fn:contains(requestURI, 'groupedProductDetails.jsp')}">
+      <fmt:message var="omnitureChannel" key="omniture.channel.product"/>
+    </c:when>
+    <c:otherwise>
+      <fmt:message var="omnitureChannel" key="omniture.channel.catalogue"/>
+    </c:otherwise>
+  </c:choose>
+    <c:set var="omnitureChannel" value="${omnitureChannel}" />
+  </c:if>
+  
+  <c:if test="${fn:contains(requestURI, 'azIndex.jsp') }">
+    <fmt:message var="namePart1" key="omniture.pageName.catalogue"/>
+    <fmt:message var="namePart2" key="omniture.azIndex"/>
+    <fmt:message var="omnitureChannel" key="omniture.channel.catalogue"/>
+          
+    <c:set var="omniturePageName" value="${namePart1}${namePart2}"/>
+    <c:set var="omnitureChannel" value="${omnitureChannel}" />
+  </c:if>
+  
+  <c:if test="${!stockVisualizationDisabled 
+                && currentLocalStoreId != 999
+                && ((not empty highlitedProduct || fn:contains(requestURI, 'ocumentTemplate.jsp')) && !storeIsCC 
+                    || fn:contains(requestURI, 'roductDetails.jsp'))}">
+    <dsp:getvalueof var="userFavoriteStoreStock" bean="StockModelHolder.definedStoreStock" />
+    <fmt:message var="available" key="stockVisualization.available" />
+    <fmt:message var="limQuantity" key="stockVisualization.limitedQuantity" />
+    <fmt:message var="notAvailable" key="stockVisualization.notAvailable" />
+    <dsp:setvalue bean="SessionBean.values.stockVisuProdID" value="${highlitedProduct}"/>
+    <dsp:getvalueof var="stockStoreId" value="${userFavoriteStoreStock.storeId}"/>
+    <c:if test="${not empty stockStoreId}">
+      <c:choose>
+        <c:when test="${(not empty userFavoriteStoreStock) and 
+                        ((userFavoriteStoreStock.status == '1') or (userFavoriteStoreStock.status == '2'))}">
+          <c:if test="${userFavoriteStoreStock.status == '1'}">
+            <dsp:getvalueof var="omnitureStockVisuStatus" value="${available}-${stockStoreId}"/>
+          </c:if>
+          <c:if test="${userFavoriteStoreStock.status == '2'}">
+            <dsp:getvalueof var="omnitureStockVisuStatus" value="${limQuantity}-${stockStoreId}"/>
+          </c:if>
+        </c:when>
+        <c:otherwise>
+          <dsp:getvalueof var="omnitureStockVisuStatus" value="${notAvailable}-${stockStoreId}"/>
+        </c:otherwise>
+      </c:choose>
+      
+      <fmt:formatNumber var="omnitureStockVisuProdID" value="${userFavoriteStoreStock.prodId}" type="number" groupingUsed="false"/>
+      
+      <c:choose>
+        <c:when test="${not empty highlitedProduct}">
+          <dsp:getvalueof var="omnitureStockVisuPageType" value="stockCheck:productList"/>
+        </c:when>
+        <c:when test="${fn:contains(requestURI, 'roductDetails.jsp')}">
+          <dsp:getvalueof var="omnitureStockVisuPageType" value="stockCheck:productView"/>
+        </c:when>
+        <c:otherwise>
+          <dsp:getvalueof var="omnitureStockVisuPageType" value="stockCheck:advice"/>
+        </c:otherwise>
+      </c:choose>
+    </c:if>
+  </c:if>
+  
+  <script type="text/javascript">
+  <!--
+  function sendOmnitureInfo(){
+    try {
+      var logLink = $("#magasinId")[0].href;
+      if(logLink.match(/magasinId=\d+/) != null){
+        s_sendOmnitureInfo("","","stockCheck:productView:VisuTab","${omnitureStockVisuProdID}", "${omnitureStockVisuStatus}");
+      }
+    } catch (e){
+      //alert("sendOmnitureInfo() return exception: " + e.message);
+    }
+  }
+  //-->
+  </script>

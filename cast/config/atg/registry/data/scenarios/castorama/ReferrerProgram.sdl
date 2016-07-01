@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE process SYSTEM "dynamosystemresource:/atg/dtds/pdl/pdl_1.0.dtd">
+<process author="admin" creation-time="1251391237833" enabled="true" last-modified-by="admin" modification-time="1256132866133">
+  <segment migrate-from="1251391445730,1251396209034,1254644590523,1255954446094,1256047251861,1256051369554" migrate-subjects="true">
+    <segment-name>Segment 1</segment-name>
+    <!--================================-->
+    <!--== User Has Invited a Friend  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>com.castorama.scenario.Invite</event-name>
+    </event>
+    <!--================================-->
+    <!--== Referrer Program is Active  -->
+    <!--================================-->
+    <condition id="2">
+      <filter operator="ReferrerProgramIsActive"/>
+    </condition>
+    <!--================================-->
+    <!--== Send Coupon To Referee template for Referee notification Castorama Store:/emailTemplates/sendCouponToReferee.jsp template for Referrer validation Castorama Store:/emailTemplates/sendConfirmationReferrer.jsp  -->
+    <!--================================-->
+    <action id="3">
+      <action-name>SendCouponToReferee</action-name>
+      <action-param name="template">
+        <constant>Castorama Store:/emailTemplates/sendCouponToReferee.jsp</constant>
+      </action-param>
+      <action-param name="referrerTemplate">
+        <constant>Castorama Store:/emailTemplates/sendConfirmationReferrer.jsp</constant>
+      </action-param>
+    </action>
+  </segment>
+  <segment migrate-from="1256051369554" migrate-subjects="true">
+    <segment-name>Segment 2</segment-name>
+    <!--================================-->
+    <!--== Castorama Order Has Been Submitted  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>com.castorama.scenario.CastoOrder</event-name>
+    </event>
+    <!--================================-->
+    <!--== Referrer Program is Active  -->
+    <!--================================-->
+    <condition id="2">
+      <filter operator="ReferrerProgramIsActive"/>
+    </condition>
+    <!--================================-->
+    <!--== If It is The User's First Order  -->
+    <!--================================-->
+    <condition id="3">
+      <filter operator="UserFirstOrder"/>
+    </condition>
+    <!--================================-->
+    <!--== Send Coupon To Referrer template for Referrer validation Castorama Store:/emailTemplates/sendCouponToReferrer.jsp  -->
+    <!--================================-->
+    <action id="4">
+      <action-name>SendCouponToReferrer</action-name>
+      <action-param name="template">
+        <constant>Castorama Store:/emailTemplates/sendCouponToReferrer.jsp</constant>
+      </action-param>
+    </action>
+  </segment>
+</process>

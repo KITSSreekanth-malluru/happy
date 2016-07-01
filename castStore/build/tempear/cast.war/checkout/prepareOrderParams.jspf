@@ -1,0 +1,30 @@
+<dsp:getvalueof param="tmpOrder" var="order"/>
+<dsp:getvalueof param="tmpOrderLocal" var="orderLocal"/>
+
+<dsp:getvalueof param="tmpOrder.TotalCommerceItemCount" var="itemsCountWeb"/>
+<dsp:getvalueof param="tmpOrder.ShippingGroups" var="shippingGroups"/>
+<dsp:getvalueof param="tmpOrder.priceInfo.rawSubTotal" var="rawSubTotal"/>
+<dsp:getvalueof param="tmpOrder.priceInfo.total" var="total"/>
+<dsp:getvalueof param="tmpOrder.priceInfo.currencyCode" var="currencyCode" vartype="java.lang.String" />
+<dsp:droplet name="/com/castorama/droplet/ShoppingCartDiscountDroplet">
+  <dsp:param name="order" value="${order}"/>
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="hasProductsWithDiscount" param="hasProductsWithDiscount"/>
+    <dsp:getvalueof var="totalDiscount" param="totalDiscount"/>
+  </dsp:oparam>
+</dsp:droplet>
+<c:if test="${not empty orderLocal}">
+  <dsp:getvalueof param="tmpOrderLocal.TotalCommerceItemCount" var="itemsCountLocal"/>
+  <dsp:getvalueof param="tmpOrderLocal.ShippingGroups" var="shippingGroupsLocal"/>
+  <dsp:getvalueof param="tmpOrderLocal.priceInfo.rawSubTotal" var="rawSubTotalLocal"/>
+  <dsp:getvalueof param="tmpOrderLocal.priceInfo.total" var="totalLocal"/>
+  <dsp:getvalueof param="tmpOrderLocal.priceInfo.currencyCode" var="currencyCodeLocal" vartype="java.lang.String" />
+  <dsp:droplet name="/com/castorama/droplet/ShoppingCartDiscountDroplet">
+      <dsp:param name="order" value="${orderLocal}"/>
+      <dsp:oparam name="output">
+        <dsp:getvalueof var="hasProductsWithDiscountLocal" param="hasProductsWithDiscount"/>
+        <dsp:getvalueof var="totalDiscountLocal" param="totalDiscount"/>
+      </dsp:oparam>
+    </dsp:droplet>
+</c:if>
+<dsp:getvalueof var="itemsCount" value="${itemsCountWeb + itemsCountLocal}" scope="request"/>

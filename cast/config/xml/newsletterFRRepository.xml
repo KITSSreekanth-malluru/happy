@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+	<header>
+		<name>NEWSLETTER Failed requests</name>
+		<author></author>
+		<version></version>
+	</header>
+
+	<!-- FAILED REQUEST NEWSLETTER -->
+	<item-descriptor name="newsletterFaledRequest" display-property="url" display-name="Failed URL" item-expire-timeout="180000" query-expire-timeout="180000" query-cache-size="2000">
+		<attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+		<table name="CASTO_FAILED_NEWSLETTER" type="primary" id-column-name="fr_url">
+			<property category-resource="url" name="url" 
+				data-type="string" column-name="fr_url" display-name-resource="url"/>
+		</table>
+
+	</item-descriptor>
+
+
+</gsa-template>

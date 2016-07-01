@@ -1,0 +1,121 @@
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.prefix" />* :</label>
+    <div class="f-inputs f-radios">
+      <dsp:input bean="CastDeliveryFormHandler.prefix" type="radio" value="miss" priority="2" />
+      <span class="i-radio-lbl"><fmt:message key="msg.address.prefix.miss" /></span>
+      <dsp:input bean="CastDeliveryFormHandler.prefix" type="radio" value="mrs" priority="2" />
+      <span class="i-radio-lbl"><fmt:message key="msg.address.prefix.mrs" /></span> 
+      <dsp:input bean="CastDeliveryFormHandler.prefix" type="radio" value="mr" priority="2" />
+      <span class="i-radio-lbl"><fmt:message key="msg.address.prefix.mr" /></span> 
+      <dsp:input bean="CastDeliveryFormHandler.prefix" type="radio" value="organization" priority="2" />
+      <span class="i-radio-lbl"><fmt:message key="msg.address.prefix.organization" /></span>
+    </div>
+  </div>
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.firstname" />* :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.firstName" 
+      maxlength="30" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.lastname" />* :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.lastName"
+      maxlength="30" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="splitter"><div class="splitterGrayLine"><!--~--></div></div>
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.address1" />* :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.address1"
+      maxlength="100" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="f-row">
+    <label><fmt:message key="msg.address.address2" /> :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.address2"
+      maxlength="100" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="f-row">
+    <label><fmt:message key="msg.address.address3" /> :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.address3"
+      maxlength="100" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="f-row">
+    <label><fmt:message key="msg.address.locality" /> :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.locality"
+      maxlength="100" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.postalCode" />* :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.postalCode"
+      maxlength="16" size="30" type="text" priority="2" iclass="i-postal" />
+    </div>
+  </div>
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.city" />* :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.city"
+      maxlength="64" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.country" />* :</label>
+    <div class="f-inputs">
+      <dsp:select bean="CastDeliveryFormHandler.state" priority="2" iclass="i-select">
+        <dsp:droplet name="/atg/dynamo/droplet/ForEach">
+          <dsp:param name="array" bean="/atg/commerce/util/CountryList_fr.places" />
+          <dsp:param name="elementName" value="country" />
+          <dsp:oparam name="output">
+            <dsp:getvalueof var="countryCode" param="country.code"/>
+            <c:choose>
+              <c:when test="${countryCode == 'F'}">
+                <dsp:option paramvalue="country.code" selected="true">
+                  <dsp:valueof param="country.displayName" />
+                </dsp:option>
+                <dsp:setvalue bean="CastDeliveryFormHandler.country" paramvalue="country.displayName"/>
+              </c:when>
+              <c:otherwise>
+                <dsp:option paramvalue="country.code">
+                  <dsp:valueof param="country.displayName" />
+                </dsp:option>
+                <dsp:setvalue bean="CastDeliveryFormHandler.country" paramvalue="country.displayName"/>
+              </c:otherwise>
+            </c:choose>
+          </dsp:oparam>
+        </dsp:droplet>
+      </dsp:select>
+      <span class="tFieldAdvLotRows">
+        <fmt:message key="msg.delivery.note.not.france" />
+      </span>
+    </div>
+  </div>
+  <div class="splitter"><div class="splitterGrayLine"><!--~--></div></div>
+  <div class="f-row">
+    <label class="required"><fmt:message key="msg.address.phoneNumber" />* :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.phoneNumber"
+      maxlength="13" size="30" type="text" priority="2" iclass="i-text" />
+      <span class="tFieldAdvLotRows">
+        <fmt:message key="msg.address.phoneNumber2.text" />
+      </span>
+    </div>
+  </div>
+  <div class="f-row">
+    <label><fmt:message key="msg.address.phoneNumber2" /> :</label>
+    <div class="f-inputs">
+      <dsp:input bean="CastDeliveryFormHandler.phoneNumber2"
+      maxlength="13" size="30" type="text" priority="2" iclass="i-text" />
+    </div>
+  </div>
+  <div class="splitter"><!--!--></div>
+  <div class="attentionForm">* <fmt:message key="msg.address.remark" /></div> 

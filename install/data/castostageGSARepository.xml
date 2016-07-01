@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <!-- 61 items of type STAGE -->
+
+        <add-item item-descriptor="STAGE" id="1600040">
+            <set-property name="nom"><![CDATA[Je pose du parquet flottant]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Naturel et facile à entretenir, le parquet offre une telle diversité qu'il s'adapte à tous les styles ! Grâce à ce stage, explorez toutes les possibilités qu'il vous offre, du choix des lames au type de pose en passant par les différentes essences de bois proposées. Mise en oeuvre, découpes et finitions, soyez prêts à aborder chaque étape de votre projet tout en apprenant à choisir votre matériau en fonction de la pièce à laquelle il est destiné.]]></set-property>
+            <set-property name="dateStage"><![CDATA[2/28/2009 09:00:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1000016">
+            <set-property name="nom"><![CDATA[L'électricité de base - 2ème partie "pratique"]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Voici l'occasion de mettre en pratique vos connaissances de l'électricité, que vous les ayez acquises lors de la 1ère partie ou non. Cas pratiques et présentation des outils adaptés, ce stage devrait venir à bout de votre appréhension et vous donner les outils et la confiance nécessaires pour aborder votre première installation électrique le plus sereinement possible, et dans le respect des normes en vigueur !]]></set-property>
+            <set-property name="dateStage"><![CDATA[2/9/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600036">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/30/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600026">
+            <set-property name="nom"><![CDATA[L'électricité de base 2ème partie "pratique"]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Voici l'occasion de mettre en pratique vos connaissances de l'électricité, que vous les ayez acquises lors de la 1ère partie ou non. Cas pratiques et présentation des outils adaptés, ce stage devrait venir à bout de votre appréhension et vous donner les outils et la confiance nécessaires pour aborder votre première installation électrique le plus sereinement possible, et dans le respect des normes en vigueur !]]></set-property>
+            <set-property name="dateStage"><![CDATA[6/21/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600028">
+            <set-property name="nom"><![CDATA[Isolation thermique]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Saviez-vous que votre confort pouvait vous permettre de faire des économies tout préservant l'environnement ? Une bonne isolation réduit non seulement vos dépenses en matière de chauffage, mais limite également les émissions de gaz à effet de serre en partie responsables de la pollution. En suivant ce stage, vous découvrirez les différents types d'isolants à votre disposition ainsi leurs spécificités.]]></set-property>
+            <set-property name="dateStage"><![CDATA[7/5/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800023">
+            <set-property name="nom"><![CDATA[Je pose du parquet flottant]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Naturel et facile à entretenir, le parquet offre une telle diversité qu'il s'adapte à tous les styles ! Grâce à ce stage, explorez toutes les possibilités qu'il vous offre, du choix des lames au type de pose en passant par les différentes essences de bois proposées. Mise en oeuvre, découpes et finitions, soyez prêts à aborder chaque étape de votre projet tout en apprenant à choisir votre matériau en fonction de la pièce à laquelle il est destiné.]]></set-property>
+            <set-property name="dateStage"><![CDATA[7/18/2009 14:30:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800031">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/15/2009 14:31:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1300037">
+            <set-property name="nom"><![CDATA[Je pose du papier peint]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Légèrement tombé dans l'oubli ces dernières années, le papier peint opère un retour en force. En lé unique ou sur tout un mur, avec ou sans raccords, il est à nouveau de toutes les tendances et se décline dans des motifs et coloris des plus actuels. Grâce à ce stage, vous apprendrez non seulement les différentes techniques de pose qui existent, mais aussi à créer des effets visuels saisissants !]]></set-property>
+            <set-property name="dateStage"><![CDATA[2/14/2009 10:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600045">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[11/1/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600052">
+            <set-property name="nom"><![CDATA[Je pose du carrelage mural]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Très prisé pour poser autour des points d'eau, le carrelage mural est de plus en plus utilisé en décoration pour créer des effets de couleurs ou de matères. Avec ce stage, Castorama vous accompagne de la préparation des murs à la pose proprement dite en passant en revue les différentes possibilités de fixation selon les supports concernés. Vos murs n'auront plus qu'à se tenir à carreaux !]]></set-property>
+            <set-property name="dateStage"><![CDATA[12/13/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800041">
+            <set-property name="nom"><![CDATA[Je pose du carrelage mural ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Très prisé pour poser autour des points d'eau, le carrelage mural est de plus en plus utilisé en décoration pour créer des effets de couleurs ou de matères. Avec ce stage, Castorama vous accompagne de la préparation des murs à la pose proprement dite en passant en revue les différentes possibilités de fixation selon les supports concernés. Vos murs n'auront plus qu'à se tenir à carreaux !]]></set-property>
+            <set-property name="dateStage"><![CDATA[9/19/2009 14:32:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1300031">
+            <set-property name="nom"><![CDATA[Je pose un bloc porte]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Poser un bloc-porte, c'est aujourd'hui joindre l'utile à l'agréable. Utile car c'est un élément qui vous permet de protéger vos murs des dégradations que peuvent produire les poignées de porte sur vos murs. Agréable car il est devenu un élément de décoration à part entière tant il en existe de différentes formes et de différents styles. Apprenez à tirer parti au maximum des qualités pratiques et esthétiques de vos bloc-portes grâce à ce stage.]]></set-property>
+            <set-property name="dateStage"><![CDATA[2/21/2009 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600021">
+            <set-property name="nom"><![CDATA[Je réalise une terrasse en bois]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Les beaux jours arrivent et avec eux l'envie de prendre la vie côté jardin ! Vous avez toujours rêvé de concilier praticité et esthétisme ? Avec ce stage, Castorama vous invite à laisser parler le paysagiste qui sommeille en vous. Des plans à la conception, vous découvrirez, étape par étape, comment réaliser une terrasse en bois et vous aménager un espace de détente combinant charme et naturel.]]></set-property>
+            <set-property name="dateStage"><![CDATA[3/7/2009 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600037">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[9/6/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600032">
+            <set-property name="nom"><![CDATA[Je rénove un meuble]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Au fil des années, tout le monde finit par se lasser de son mobilier. Passé de mode ou tout simplement plus à votre goût, vous allez apprendre, grâce à ce stage, comment redonner éclat et jeunesse à un meuble que vous pensiez bon pour la poubelle. De la plus classique à la plus extravagante, laissez libre cours à vos envies de décoration tout en remettant vos meubles à la page.]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/2/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600027">
+            <set-property name="nom"><![CDATA[Je pose une alarme]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Votre sécurité, celle de vos proches ou encore de vos biens est primordiale. En matière d'alarme, de systèmes innovants en modèles multiples, il devient de plus en plus difficile de se repérer. Pour vous aider, Castorama a mis sur pied ce stage qui vous éclairera non seulement sur la pose d'une alarme mais aussi sur l'évaluation de vos besoins et les types de produits qui y correspondent.]]></set-property>
+            <set-property name="dateStage"><![CDATA[6/28/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600029">
+            <set-property name="nom"><![CDATA[Maçonnerie]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Construire un muret, sceller des poteaux ou encore couler une dalle sont des travaux simples qui ne demandent que peu d'expérience. Ce stage vous aidera à acquérir le savoir faire de base qui vous permettra de vous lancer sans crainte et vous montrera que finalement, la maçonnerie est autant une question d'organisation que de maîtrise.]]></set-property>
+            <set-property name="dateStage"><![CDATA[7/12/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800029">
+            <set-property name="nom"><![CDATA[J'isole]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Saviez-vous que votre confort pouvait vous permettre de faire des économies tout préservant l'environnement ? Une bonne isolation réduit non seulement vos dépenses en matière de chauffage, mais limite également les émissions de gaz à effet de serre en partie responsables de la pollution. En suivant ce stage, vous découvrirez les différents types d'isolants à votre disposition ainsi leurs spécificités.]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/8/2009 14:31:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800027">
+            <set-property name="nom"><![CDATA[Je pose du carrelage au sol ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Beauté, résistance et durée sont les principaux atouts qui font du carrelage un revêtement de sol très apprécié. Aujourd'hui, variété des couleurs, diversité des formats et choix des matériaux en font un élément décoratif à part entière. Grâce à ce stage, vous saurez non seulement préparer le support, utiliser les outils adéquats et poser votre carrelage, mais également déterminer s'il répond aux contraintes liées à son emplacement (passage, température, etc.). Désormais, vous saurez où vous mettez les pieds !]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/1/2009 14:30:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1200021">
+            <set-property name="nom"><![CDATA[Placards et rangements]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Du couloir à la cuisine en passant par la salle de bains, installer un placard permet de gagner de l'espace pour classer, ranger ou même archiver des papiers. Où installer ce fameux placard ? Comment aménager un rangement à la fois pratique, fonctionnel et esthétique ? Ce stage répondra à toutes vos questions. ]]></set-property>
+            <set-property name="dateStage"><![CDATA[3/22/2008 16:28:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600049">
+            <set-property name="nom"><![CDATA[J'installe ma douche]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Il existe de nombreux modèles différents en matière de douche et presque autant de types de pose. Pour vous aider à y voir plus clair, Castorama a conçu ce stage au cours duquel vous étudierez les techniques d'installation et apprendrez comment tirer le meilleur parti de votre douche dans le respect des normes en vigueur.]]></set-property>
+            <set-property name="dateStage"><![CDATA[11/22/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1700019">
+            <set-property name="nom"><![CDATA[Je pose du carrelage sol]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Beauté, résistance et durée sont les principaux atouts qui font du carrelage un revêtement de sol très apprécié. Aujourd'hui, variété des couleurs, diversité des formats et choix des matériaux en font un élément décoratif à part entière. Grâce à ce stage, vous saurez non seulement préparer le support, utiliser les outils adéquats et poser votre carrelage, mais également déterminer s'il répond aux contraintes liées à son emplacement (passage, température, etc.). Désormais, vous saurez où vous mettez les pieds !]]></set-property>
+            <set-property name="dateStage"><![CDATA[2/7/2009 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800035">
+            <set-property name="nom"><![CDATA[Électricité de base ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[L'électricité est probablement l'un des domaines à aborder avec le plus de précautions en bricolage car il ne s'improvise pas et ne supporte pas l'approximation. Avant de vous jeter à l'eau, ce stage va décrypter pour vous certaines notions et règles obscures. L'étude de cas pratiques et la présentation des outils adaptés devraient venir à bout de votre appréhension et vous donner les clés et la confiance nécessaires pour réussir votre première installation électrique le plus sereinement possible, et dans le respect des normes en vigueur !]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/29/2009 14:31:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600024">
+            <set-property name="nom"><![CDATA[Plomberie de base]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Un système de plomberie correctement installé et suffisamment entretenu est un gage de performance et d'économie d'eau. Pour y parvenir, il suffit de maîtriser les connaissances de base et d'utiliser l'outillage adapté. De la pose aux réparations d'urgence en passant par l'amélioration du système existant, avec ce stage, la plomberie n'aura plus de secrets pour vous !]]></set-property>
+            <set-property name="dateStage"><![CDATA[6/7/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1300032">
+            <set-property name="nom"><![CDATA[Je peins un mur et un plafond + stickers]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Au rouleau ou au tampon, la peinture est un produit décoratif parmi les plus simples et les plus rapides à utiliser tout en offrant une multitude de possibilités. Toutefois, la réussite de votre projet tient essentiellement dans la préparation du support et la mise en pratique de quelques astuces d'application qui vous seront expliquées. En revanche, la personnalisation de votre intérieur ne tient qu'à vous et en maîtrisant la pose des stickers, produits tendance du moment, la décoration n'aura bientôt plus de secret pour vous. Du lessivage aux finitions, des murs au plafond, ce stage a pensé à tout !]]></set-property>
+            <set-property name="dateStage"><![CDATA[3/15/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600025">
+            <set-property name="nom"><![CDATA[L'électricité de base 1ère partie "théorie"]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[L'électricité est probablement l'un des domaines à aborder avec le plus de précautions en bricolage car il ne s'improvise pas et ne supporte pas l'approximation. Avant de vous jeter à l'eau, ce stage va décrypter pour vous certaines notions ou règles obscures et vous donner les clés théoriques pour réussir votre première installation.]]></set-property>
+            <set-property name="dateStage"><![CDATA[6/14/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600048">
+            <set-property name="nom"><![CDATA[L'électricité de base 1ère partie "théorie"]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[L'électricité est probablement l'un des domaines à aborder avec le plus de précautions en bricolage car il ne s'improvise pas et ne supporte pas l'approximation. Avant de vous jeter à l'eau, ce stage va décrypter pour vous certaines notions ou règles obscures et vous donner les clés théoriques pour réussir votre première installation.]]></set-property>
+            <set-property name="dateStage"><![CDATA[11/15/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1300024">
+            <set-property name="nom"><![CDATA[Les peintures à effets et glacis]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[L'un des moyens le plus sûr de personnaliser sa décoration intérieure est le recours aux peintures à effets. Laissez votre imagination prendre le contrôle et détournez les objets de votre quotidien (brosses, éponges, chiffons, etc.) pour un résultat unique. De la préparation du support aux nombreuses finitions possibles, lissé, froissé ou à l'ancienne version glacis, ce stage vous donne les bases d'un effet réussi en vous ouvrant les portes d'un espace infini de possibilités.]]></set-property>
+            <set-property name="dateStage"><![CDATA[2/16/2008 12:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800037">
+            <set-property name="nom"><![CDATA[Je peins mes murs et mes plafonds ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[S'il est vrai que la peinture est un moyen facile et rapide de donner une touche personnelle à votre intérieur, connaître certaines règles de base ne pourra qu'améliorer le résultat final. Murs ou plafonds ? Acrylique ou glycéro ? Quelle finition pour quel support ? Quel type d'application pour quel effet ? Toutes ces questions trouvent leur réponse dans ce stage complet qui fera de vous un peintre averti.]]></set-property>
+            <set-property name="dateStage"><![CDATA[9/5/2009 14:32:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600033">
+            <set-property name="nom"><![CDATA[Je pose des portes de placard]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Coulissante, pliante, pivotante... La porte de placard ne sert plus simplement à dissimuler un espace de rangement. Assortie à votre mobilier pour se fondre dans le décor ou en miroir pour ajouter lumière et espace, elle a plus que jamais un rôle à jouer dans votre décoration. Cependant, pour un effet réussi, la pose doit être d'une précision irréprochable. Ce stage vous donne les clés pour y parvenir !]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/9/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600050">
+            <set-property name="nom"><![CDATA[L'électricité de base 2ème partie "pratique"]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Voici l'occasion de mettre en pratique vos connaissances de l'électricité, que vous les ayez acquises lors de la 1ère partie ou non. Cas pratiques et présentation des outils adaptés, ce stage devrait venir à bout de votre appréhension et vous donner les outils et la confiance nécessaires pour aborder votre première installation électrique le plus sereinement possible, et dans le respect des normes en vigueur !]]></set-property>
+            <set-property name="dateStage"><![CDATA[11/29/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="800080">
+            <set-property name="nom"><![CDATA[Je prépare, soigne et entretiens mon jardin]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Que vous possédiez un jardin potager ou d'agrément, sa beauté se remarquera selon que vous ayez ou non suivi les trois principes de base qui vous seront enseignés lors de ce stage. En premier lieu, il s'agira de connaître et préparer le terrain, puis de soigner les plantes présentant des anomalies et enfin dans un dernier temps d'entretenir vos plantations afin qu'elles reçoivent tout ce dont elles ont besoin pour s'épanouir. Avec les bons outils, les bons produits et les bons conseils, les résultats ne se feront pas attendre.]]></set-property>
+            <set-property name="dateStage"><![CDATA[3/14/2009 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800039">
+            <set-property name="nom"><![CDATA[J'installe placards et rangements ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Du couloir à la cuisine en passant par la salle de bains, installer un placard permet de gagner de l'espace pour classer, ranger ou même archiver des papiers. Où installer ce fameux placard ? Comment aménager un rangement à la fois pratique, fonctionnel et esthétique ? Ce stage répondra à toutes vos questions. ]]></set-property>
+            <set-property name="dateStage"><![CDATA[9/12/2009 14:32:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600023">
+            <set-property name="nom"><![CDATA[Je pose un abri de jardin]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Que votre achat d'abri de jardin soit motivé par un réel besoin ou une simple envie, les critères à prendre en considération sont nombreux. Quelle surface choisir ? Où le placer ? Selon quelle orientation ? Ce stage répondra à toutes vos questions dans le respect de la législation et des normes en vigueur.]]></set-property>
+            <set-property name="dateStage"><![CDATA[5/31/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="800014">
+            <set-property name="nom"><![CDATA[Je pose du carrelage sol]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Beauté, résistance et durée sont les principaux atouts qui font du carrelage un revêtement de sol très apprécié. Aujourd'hui, variété des couleurs, diversité des formats et choix des matériaux en font un élément décoratif à part entière. Grâce à ce stage, vous saurez non seulement préparer le support, utiliser les outils adéquats et poser votre carrelage, mais également déterminer s'il répond aux contraintes liées à son emplacement (passage, température, etc.). Désormais, vous saurez où vous mettez les pieds !]]></set-property>
+            <set-property name="dateStage"><![CDATA[1/24/2009 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600030">
+            <set-property name="nom"><![CDATA[Je pose du placo]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Poser du placo n'est pas fondamentalement difficile, mais quelques éléments de base peuvent vous aider à obtenir un résultat à la fois esthétique et durable. De la prise de mesure aux finitions, ce stage passe en revue chaque étape indispensable à la réalisation de votre projet et vous donne toutes les cartes en main pour vous lancer sans aucune appréhension.]]></set-property>
+            <set-property name="dateStage"><![CDATA[7/19/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600020">
+            <set-property name="nom"><![CDATA[J'installe ma douche]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Il existe de nombreux modèles différents en matière de douche et presque autant de types de pose. Pour vous aider à y voir plus clair, Castorama a conçu ce stage au cours duquel vous étudierez les techniques d'installation et apprendrez comment tirer le meilleur parti de votre douche dans le respect des normes en vigueur.]]></set-property>
+            <set-property name="dateStage"><![CDATA[5/10/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="33">
+            <set-property name="nom"><![CDATA[Je pose ma clôture]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[La pose d'une clôture ne s'envisage pas à la légère. Préserver l'intimité de son habitation est une chose, mais encore faut-il pouvoir le faire de façon esthétique et cohérente. De la préparation du terrain au choix des matériaux en passant par l'installation, ce stage vous révèle toutes les ficelles de ce projet délicat. Finies les clôtures improvisées, vous allez maintenant pouvoir laisser libre cours à votre imagination sans commettre d'impairs.]]></set-property>
+            <set-property name="dateStage"><![CDATA[3/29/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800025">
+            <set-property name="nom"><![CDATA[Je pose ma terrasse en bois ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Les beaux jours arrivent et avec eux l'envie de prendre la vie côté jardin ! Vous avez toujours rêvé de concilier praticité et esthétisme ? Avec ce stage, Castorama vous invite à laisser parler le paysagiste qui sommeille en vous. Des plans à la conception, vous découvrirez, étape par étape, comment réaliser une terrasse en bois et vous aménager un espace de détente combinant charme et naturel.]]></set-property>
+            <set-property name="dateStage"><![CDATA[7/25/2009 14:30:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600042">
+            <set-property name="nom"><![CDATA[Chauffage]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Indispensable au confort et au bien-être de votre famille, le chauffage tient une place prépondérante au sein de la maison. De l'évaluation de vos besoins au choix de votre installation, ce stage éclaircira pour vous toutes les notions et autres normes inhérentes au chauffage. Incontournable à l'approche de l'hiver !]]></set-property>
+            <set-property name="dateStage"><![CDATA[10/11/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600031">
+            <set-property name="nom"><![CDATA[Je peins murs et plafonds]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[S'il est vrai que la peinture est un moyen facile et rapide de donner une touche personnelle à votre intérieur, connaître certaines règles de base ne pourra qu'améliorer le résultat final. Murs ou plafonds ? Acrylique ou glycéro ? Quelle finition pour quel support ? Quel type d'application pour quel effet ? Toutes ces questions trouvent leur réponse dans ce stage complet qui fera de vous un peintre averti.]]></set-property>
+            <set-property name="dateStage"><![CDATA[7/26/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600053">
+            <set-property name="nom"><![CDATA[Je pose du carrelage sol]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Beauté, résistance et durée sont les principaux atouts qui font du carrelage un revêtement de sol très apprécié. Aujourd'hui, variété des couleurs, diversité des formats et choix des matériaux en font un élément décoratif à part entière. Grâce à ce stage, vous saurez non seulement préparer le support, utiliser les outils adéquats et poser votre carrelage, mais également déterminer s'il répond aux contraintes liées à son emplacement (passage, température, etc.). Désormais, vous saurez où vous mettez les pieds !]]></set-property>
+            <set-property name="dateStage"><![CDATA[3/28/2009 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600051">
+            <set-property name="nom"><![CDATA[Je pose une alarme]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Votre sécurité, celle de vos proches ou encore de vos biens est primordiale. En matière d'alarme, de systèmes innovants en modèles multiples, il devient de plus en plus difficile de se repérer. Pour vous aider, Castorama a mis sur pied ce stage qui vous éclairera non seulement sur la pose d'une alarme mais aussi sur l'évaluation de vos besoins et les types de produits qui y correspondent.]]></set-property>
+            <set-property name="dateStage"><![CDATA[12/6/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800033">
+            <set-property name="nom"><![CDATA[J'installe ma douche ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Il existe de nombreux modèles différents en matière de douche et presque autant de types de pose. Pour vous aider à y voir plus clair, Castorama a conçu ce stage au cours duquel vous étudierez les techniques d'installation et apprendrez comment tirer le meilleur parti de votre douche dans le respect des normes en vigueur.]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/22/2009 14:31:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600043">
+            <set-property name="nom"><![CDATA[Isolation]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Saviez-vous que votre confort pouvait vous permettre de faire des économies tout préservant l'environnement ? Une bonne isolation réduit non seulement vos dépenses en matière de chauffage, mais limite également les émissions de gaz à effet de serre en partie responsables de la pollution. En suivant ce stage, vous découvrirez les différents types d'isolants à votre disposition ainsi leurs spécificités.]]></set-property>
+            <set-property name="dateStage"><![CDATA[10/18/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600054">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[12/27/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1300030">
+            <set-property name="nom"><![CDATA[Je pose du parquet flottant]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Naturel et facile à entretenir, le parquet offre une telle diversité qu'il s'adapte à tous les styles ! Grâce à ce stage, explorez toutes les possibilités qu'il vous offre, du choix des lames au type de pose en passant par les différentes essences de bois proposées. Mise en oeuvre, découpes et finitions, soyez prêts à aborder chaque étape de votre projet tout en apprenant à choisir votre matériau en fonction de la pièce à laquelle il est destiné.]]></set-property>
+            <set-property name="dateStage"><![CDATA[1/31/2009 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600039">
+            <set-property name="nom"><![CDATA[Les économies d'énergie]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Vous rêvez d'une maison plus économe et plus écologique ? Vous voulez optimiser votre consommation d'énergie ? Castorama vous propose de découvrir de vraies solutions performantes et respectueuses de l'environnement, pour l'isolation, la ventilation, la régulation, le chauffage, l'éclairage, etc.]]></set-property>
+            <set-property name="dateStage"><![CDATA[9/20/2008 10:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600044">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[10/25/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600038">
+            <set-property name="nom"><![CDATA[Je pose un abri de jardin]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Que votre achat d'abri de jardin soit motivé par un réel besoin ou une simple envie, les critères à prendre en considération sont nombreux. Quelle surface choisir ? Où le placer ? Selon quelle orientation ? Ce stage répondra à toutes vos questions dans le respect de la législation et des normes en vigueur.]]></set-property>
+            <set-property name="dateStage"><![CDATA[9/13/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="800086">
+            <set-property name="nom"><![CDATA[Les économies d'énergie]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Vous rêvez d'une maison plus économe et plus écologique ? Vous voulez optimiser votre consommation d'énergie ? Castorama vous propose de découvrir de vraies solutions performantes et respectueuses de l'environnement, pour l'isolation, la ventilation, la régulation, le chauffage, l'éclairage, etc.]]></set-property>
+            <set-property name="dateStage"><![CDATA[3/8/2008 10:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600022">
+            <set-property name="nom"><![CDATA[Je pose du carrelage mural]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Très prisé pour poser autour des points d'eau, le carrelage mural est de plus en plus utilisé en décoration pour créer des effets de couleurs ou de matères. Avec ce stage, Castorama vous accompagne de la préparation des murs à la pose proprement dite en passant en revue les différentes possibilités de fixation selon les supports concernés. Vos murs n'auront plus qu'à se tenir à carreaux !]]></set-property>
+            <set-property name="dateStage"><![CDATA[5/24/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="800104">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[4/12/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600034">
+            <set-property name="nom"><![CDATA[Enduits et reliefs décoratifs]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[De plus en plus prisés en décoration, les enduits décoratifs se multiplient et proposent toute une palette de textures différentes. Bien plus que de simples revêtements muraux, ils permettent de jouer avec la lumière et la matière et vous garantissent une personnalisation totale de votre intérieur. Ce stage vous apprendra à maîtriser l'application et à choisir votre effet selon la pièce, le support et le style que vous souhaitez donner.]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/16/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800021">
+            <set-property name="nom"><![CDATA[Je pose un bloc-porte ]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Poser un bloc-porte, c'est aujourd'hui joindre l'utile à l'agréable. Utile car c'est un élément qui vous permet de protéger vos murs des dégradations que peuvent produire les poignées de porte sur vos murs. Agréable car il est devenu un élément de décoration à part entière tant il en existe de différentes formes et de différents styles. Apprenez à tirer parti au maximum des qualités pratiques et esthétiques de vos bloc-portes grâce à ce stage.]]></set-property>
+            <set-property name="dateStage"><![CDATA[7/11/2009 14:29:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600041">
+            <set-property name="nom"><![CDATA[Plomberie sans soudure]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Fastidieuse et répondant à une foule de normes très strictes, la plomberie rebute souvent le bricoleur débutant. Avec ce stage, découvrez une nouvelle facette de l'aborder grâce à la plomberie sans soudure. Facile, rapide et adaptée à toutes les installations, qu'il s'agisse de construction ou de rénovation, soyez désormais prêts à effectuer avec brio branchements et transformations sans outils ni connaissances particulières.]]></set-property>
+            <set-property name="dateStage"><![CDATA[10/4/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600046">
+            <set-property name="nom"><![CDATA[Spots à encastrer]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[De plus en plébiscité, l'éclairage indirect est plus que jamais ancré dans la tendance ! Design et originaux, les spots à encastrer sont particulièrement appréciés pour créer une zone lumineuse bien spécifique (plan de travail, bibliothèque, dressing, etc.) mais soumis à certaines normes et règles d'installation. En suivant ce stage, vous obtiendrez toutes les informations nécessaires à la mise en oeuvre de votre projet.]]></set-property>
+            <set-property name="dateStage"><![CDATA[11/8/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="800038">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[4/5/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1600035">
+            <set-property name="nom"><![CDATA[Pas de stage]]></set-property>
+            <set-property name="dateStage"><![CDATA[8/23/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="73">
+            <set-property name="nom"><![CDATA[Je pose des portes de placard]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Coulissante, pliante, pivotante... La porte de placard ne sert plus simplement à dissimuler un espace de rangement. Assortie à votre mobilier pour se fondre dans le décor ou en miroir pour ajouter lumière et espace, elle a plus que jamais un rôle à jouer dans votre décoration. Cependant, pour un effet réussi, la pose doit être d'une précision irréprochable. Ce stage vous donne les clés pour y parvenir !]]></set-property>
+            <set-property name="dateStage"><![CDATA[2/2/2008 11:57:00]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="STAGE" id="1800043">
+            <set-property name="nom"><![CDATA[Je chauffe ma maison]]></set-property>
+            <set-property name="descriptif">
+                <![CDATA[Indispensable au confort et au bien-être de votre famille, le chauffage tient une place prépondérante au sein de la maison. De l'évaluation de vos besoins au choix de votre installation, ce stage éclaircira pour vous toutes les notions et autres normes inhérentes au chauffage. Incontournable à l'approche de l'hiver !]]></set-property>
+            <set-property name="dateStage"><![CDATA[9/26/2009 14:33:00]]></set-property>
+        </add-item>
+
+    </import-items>
+
+</gsa-template>

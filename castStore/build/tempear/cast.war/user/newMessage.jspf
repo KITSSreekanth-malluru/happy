@@ -1,0 +1,178 @@
+<div id="newMessage" class="whitePopupContainer">
+
+
+	<c:set var="instructions" value="var instructions = new Array(" />
+	<c:set var="links" value="var links = new Array(" />
+	<c:set var="linkvalues" value="var linkvalues = new Array(" />
+	<c:set var="templates" value="var templates = new Array(" />
+	<c:set var="codes" value="var codes = new Array(" />
+	<c:set var="faqURL" value="var faqURL= '${pageContext.request.contextPath}/contactUs/faq.jsp?popupName=';" />
+
+	<dsp:getvalueof var="motifs" bean="CastWebOrdersFormHandler.motifs" />
+	<dsp:droplet name="ForEach">
+		<dsp:param name="array" value="${motifs}" />
+		<dsp:oparam name="output">
+			<dsp:getvalueof var="index" param="index" />
+			<c:set var="separator" value="" />
+			<c:if test="${0<index}">
+				<c:set var="separator" value="," />
+			</c:if> 
+			<dsp:getvalueof var="instruction" param="element.instruction" />
+			<dsp:getvalueof var="link" param="element.linktext" />
+			<dsp:getvalueof var="linkvalue" param="element.linkvalue" />
+			<dsp:getvalueof var="template" param="element.message" />
+			<dsp:getvalueof var="code" param="element.motif.cmotif" />
+
+			<c:set var="instructions" value='${instructions}${separator}"${instruction}"' />
+			<c:set var="links" value='${links}${separator}"${link}"' />
+			<c:set var="linkvalues" value='${linkvalues}${separator}"${linkvalue}"' />
+			<c:set var="templates" value='${templates}${separator}"${template}"' />
+			<c:set var="codes" value='${codes}${separator}"${code}"' />
+		</dsp:oparam>
+	</dsp:droplet>
+
+	<c:set var="instructions" value="${instructions});" />
+	<c:set var="links" value="${links});" />
+	<c:set var="linkvalues" value="${linkvalues});" />
+	<c:set var="templates" value="${templates});" />
+	<c:set var="codes" value="${codes});" />
+
+	<script type="text/javascript">
+		${faqURL}${codes}${instructions}${links}${linkvalues}${templates}
+		function changeMotif(sel){
+			var i = sel.selectedIndex;
+			if ( 0 > i ) {
+				i = 0;
+			}
+			var code = sel.options[i].value;
+			for ( j = 0; j < codes.length; j++ ) {
+				if ( code == codes[j] ) {
+					document.getElementById('Motif_instruction').innerHTML=instructions[j] + ' <a href="#' + linkvalues[j] + '" onclick="' + "showQuestionPopup('faq');" + '">' +  links[j] + '</a>';
+					document.getElementById('Motif_template').value=templates[j];
+					break;
+				} 
+			}
+			if (navigator.appName == "Microsoft Internet Explorer") {
+				var height = $("#Motif_select").parents(".cornerOverlay:eq(0)").height();							
+				$("#Motif_select").parents(".formContent:eq(0)").height(height);
+				}	
+		}
+		
+		$(window).load( function(){ changeMotif(document.getElementById('Motif_select')) });
+	</script>
+
+	<div class="whitePopupContent popupFormContainer">
+		<div class="whitePopupHeader">
+			<h1>Demander conseil sur ma commande</h1>
+			<c:choose>
+				<c:when test="${null == orderId}">
+					<c:set var="backURL" value="${originatingRequest.requestURL}" />
+				</c:when>
+				<c:otherwise>
+					<c:set var="backURL" value="${originatingRequest.requestURL}?orderId=${orderId}" />
+				</c:otherwise>
+			</c:choose>
+			<dsp:a href="${backURL}" iclass="closeBut">
+				<span><!--~--></span><fmt:message key="castCatalog_label.close" />
+			</dsp:a>
+		</div>
+		<div class="popupContentContainer">
+			<div class="clear"><!--~--></div>
+
+			<dsp:droplet name="/atg/dynamo/droplet/Switch">
+				<dsp:param name="value" bean="CastWebOrdersFormHandler.formError" />
+				<dsp:oparam name="true">
+				  <div class="errorList">
+							<ul>
+								<dsp:droplet name="/atg/dynamo/droplet/ForEach">
+									<dsp:param name="array" bean="CastWebOrdersFormHandler.formExceptions" />
+									<dsp:oparam name="output">
+										<li>
+											<dsp:valueof param="element.message" valueishtml="true"/>
+										</li>
+									</dsp:oparam>
+								</dsp:droplet>
+							</ul>
+					 </div>
+				</dsp:oparam>
+			</dsp:droplet>
+			
+		
+			<div class="preText">
+				Vous souhaitez faire des remarques sur votre commande : merci de nous donner les informations suivantes afin que nous puissions traiter votre demande.
+			</div>                 
+		
+			<div class="popupContentContainer formMainBlock orderMsgContainer">
+				<dsp:form method="post" name="newMessageForm" id="newMessageForm" >
+					<dsp:input type="hidden" bean="CastWebOrdersFormHandler.successURL" value="${backURL }"  priority="1" />
+					<dsp:input type="hidden" bean="CastWebOrdersFormHandler.cancelURL" value="${backURL}&popup=newMessage"  priority="1" />
+					<dsp:input type="hidden" bean="CastWebOrdersFormHandler.orderId" value="${orderId}"  priority="1" />
+				
+					<div class="formContent grayCorner grayCornerGray">
+						<div class="cornerBorderGrayBg cornerTopLeft"><!--~--></div>
+						<div class="cornerBorderGrayBg cornerTopRight"><!--~--></div>
+						<div class="cornerBorderGrayBg cornerBottomLeft"><!--~--></div>
+						<div class="cornerBorderGrayBg cornerBottomRight"><!--~--></div>
+						<div class="cornerOverlay">	                 				                   
+							<div class="f-row">
+								<label class="required">Motif * :</label>
+								<div class="f-inputs">											
+									<dsp:select name="fname" iclass="i-selectW280" bean="CastWebOrdersFormHandler.messageMotif"  priority="1" onchange="javascript:changeMotif(this);" id="Motif_select">
+										<dsp:droplet name="ForEach">
+											<dsp:param name="array" value="${motifs}" />
+											<dsp:oparam name="output">
+												<dsp:getvalueof var="key" param="element.motif.cmotif" />
+												<dsp:getvalueof var="index" param="index" />
+												<c:choose>
+													<c:when test="${0 == index}">
+														<dsp:option value="${key}" selected="true">
+															<dsp:valueof param="element.question" />
+														</dsp:option>
+													</c:when>
+													<c:otherwise>
+														<dsp:option value="${key}">
+															<dsp:valueof param="element.question" />
+														</dsp:option>
+													</c:otherwise>
+												</c:choose>
+											</dsp:oparam>
+										</dsp:droplet>
+									</dsp:select>    	      
+								</div>
+							</div>
+							<div class="splitter">
+								<div class="splitterGrayLine"></div>
+							</div>
+							<div class="formNotice">
+								<div id="Motif_instruction"></div>
+							</div>
+							<div class="splitter">
+								<div class="splitterGrayLine"></div>
+							</div>
+							<div class="f-row">
+								<label class="required">Votre question * :</label>
+								<div class="f-inputs">											
+									<dsp:textarea bean="CastWebOrdersFormHandler.messageText" name="ftext" iclass="i-textarea" id="Motif_template" priority="1" />
+								</div>
+							</div>
+							<div class="attentionForm noMgAtt">* champs obligatoires</div>																
+						</div>                			
+					</div>
+					<div class="popupGrayBrgBlock">
+						<strong>Mentions CNIL :</strong><br />
+						En regard de la loi 78-17 du 6 Janvier 1978 relative à l'informatique, aux fichiers et aux libertés, vous disposez d'un droit d'accès et de rectification aux données personnelles vous concernant.
+					</div>
+					<div class="formButtons">
+						<span class="inputButton">
+							<dsp:input type="hidden" bean="CastWebOrdersFormHandler.orderId" value="${orderId}" />
+							<dsp:input type="submit" bean="CastWebOrdersFormHandler.newMessage" value="ENVOYER"/>
+						</span>
+					</div>  
+					<div class="clear"></div>            			
+				</dsp:form>
+			</div>
+		</div>
+	</div>
+	
+	
+</div>

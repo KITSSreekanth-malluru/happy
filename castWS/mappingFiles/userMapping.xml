@@ -1,0 +1,15 @@
+<!DOCTYPE item-descriptor SYSTEM "http://www.atg.com/dtds/databinding/itemDescriptorMapping_1.0.dtd">
+<item-descriptor repository-path="/atg/userprofiling/ProfileAdapterRepository" name="user" default-include="true">
+  <!--<property name="homeAddress" include="true">
+      <item-descriptor
+               repository-path="/atg/userprofiling/ProfileAdapterRepository"
+               name="contactInfo"
+               default-include="true">
+      </item-descriptor>
+  </property>
+  <property name="slotInstances" include="false"/>
+  <property name="scenarioInstances" include="false"/>
+  <property name="mailings" include="false"/>
+  <property name="scenarioValues" include="false"/>
+  <property name="firstName" targetName="first_name"/>-->
+</item-descriptor>

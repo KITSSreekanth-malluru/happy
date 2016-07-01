@@ -1,0 +1,2375 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <!-- 507 items of type inventory -->
+
+        <add-item item-descriptor="inventory" id="invCasto532227">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Sticker pour porte de douche Garden]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto532227]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500006">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Seau de 200 vis plaque de plâtre, Ø 3.5 x 55 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500006]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto201168">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Etabli pliant Master 800]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto201168]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto494545">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for  Piscine en bois Moorea, 840 cm x 490 cm x H. 146 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto494545]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto296942">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Coussin fleur Gonzo coloris orange 40 x 40 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto296942]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto538154">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Maison d'enfant Loulou]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto538154]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto525457">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Escabeau 2 marches Workdeck]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto525457]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500002">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for 50 vis plaque de plâtre, Ø 3.5 x 55 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500002]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto624867">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Collecteur filtrant éco gris]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto624867]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516106">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Armature bois diamètre 3,50m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516106]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto538124">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Piscine en bois Finoa Ø 435 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto538124]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto487686">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Lanterne solaire bleue]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto487686]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto526241">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Vis agglo tête fraisée pozi inox A2 Ø 4 x 30 mm ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto526241]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto907512">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Verre Antique jaune 4 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto907512]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto770068">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for 42 doses d'eau de javel ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto770068]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto902061">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Verre Mastercarre 4 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto902061]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto650158">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Portail Bekafor "Résidentiel", coloris vert. Longueur : 3 m ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto650158]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto534658">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Escabeau 4 marches Workdeck]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto534658]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto483752">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Spot rond à encastrer Next coloris bleu]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto483752]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516107">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Armature bois diamètre 3,00m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516107]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto610743">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Garage en bois Courtrai, dimensions 3 m x 5 m ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto610743]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto526243">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Vis agglo tête fraisée pozi inox A2 Ø 4 x 40 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto526243]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto537463">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Verre Thela Laguna 4 mm ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto537463]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto475284">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Peinture vert à tableau et table ping-pong 0L5 ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto475284]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto508862">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cheminée électrique Piccolo 1000/2000 W ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto508862]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto650150">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Portillon prêt a poser]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto650150]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto499608">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cuisine Sarlat meuble 3 portes]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto499608]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto483751">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Spot rond à encastrer Next blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto483751]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518405">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Ventilateur de table Ø30cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518405]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto487688">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Lanterne solaire verte]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto487688]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto558596">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Ampoule LED flamme lisse]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto558596]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto510453">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Absorbeur d'humidité + 1 recharge]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto510453]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto549034">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tournevis sans fil 3,6 V PP360LN Pivot Driver]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto549034]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto991078">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cheminée Sardane 2 Supra sable doré ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto991078]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto101586">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Kit tube crédence 100 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto101586]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500001">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for 100 vis plaque de plâtre, Ø 3.5 x 45 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500001]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto529014">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tournevis sans fil 7,2 V]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto529014]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto601703">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Canisse roseau fendu CASTO' 2 x 5 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto601703]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto430291">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Moquette Gazon Country]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto430291]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto502289">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Pergola pare-soleil 300x250x220]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto502289]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto541786">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Peinture multi-surfaces Everywhere 5 L blanc satin]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto541786]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514601">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Lot de 4 bornes solaire inox]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514601]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto296191">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Parquet contrecollé chêne élégant]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto296191]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto601702">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Canisse roseau fendu CASTO' 1,5 x 5 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto601702]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto507636">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Maison d'enfant Floralie]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto507636]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto546740">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Carport Cara ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto546740]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto543340">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur pour douche Gavarnie Chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto543340]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto870396">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for 2 Piles alcaline plus DX2 LR20]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto870396]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto501750">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tournevis sans fil 3,6 V]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto501750]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto501730">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Etabli multifonction 3 en 1 Master Cut 1200]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto501730]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto100359">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Kit de crédence à suspendre en acier gris argenté]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto100359]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto352286">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Meuble sous-évier 100 cm blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto352286]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto483784">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Set d'éclairage de jardin LED coloris blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto483784]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500307">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Batterie d'arrosage classic GARDENA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500307]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto720051">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Peinture plastique JULIEN 0,5 L bleu provence]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto720051]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto544844">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mastic poly Repar tous joints]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto544844]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto499962">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Ensemble d'arrosage, L. 20 m x Ø 19 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto499962]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto487684">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Lanterne solaire blanche]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto487684]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto770787">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Eau de Javel 2 litres ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto770787]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514157">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Fer à souder 80 W]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514157]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto352287">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Meuble sous-éviers 120 cm coloris blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto352287]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto891552">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Kit satellite numérique Ø 80 métal]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto891552]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto770786">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Eau de Javel 250 ml ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto770786]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto537847">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Piscine en bois, modèle STAR 615 cm x 405 cm H. 120 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto537847]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto517156">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Climatiseur fixe prêt à poser 3670W]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto517156]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto200255">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Etabli pliant Master 600]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto200255]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto352289">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Meuble sous-éviers 3 portes 120 cm coloris Hêtre]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto352289]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514486">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Grilloir fonte + tournebroche]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514486]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto548687">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Parquet chêne 3 frises chocolat 15 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto548687]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto521182">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Collecteur filtrant éco de luxe gris]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto521182]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto432048">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Moquette aiguilletée Malta beige]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto432048]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto974506">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Store pergola bras articulé 3x3m Vert / Blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto974506]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto530547">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cheminée toute prête Antibia bordeaux 9 kW]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto530547]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto535258">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Coussin de sol Bachette 38 x 38 x 8 coloris anis]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto535258]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto538619">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Escabeau 8 marches Décopro]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto538619]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto506597">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Bidon décapant PVC 125 ml]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto506597]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto478087">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Radiateur mobile à bain d'huile RADIA 1500 W ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto478087]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto510103">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Manchon fer cuivre Ø14 mâle 20x27]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto510103]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto891202">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tête universelle Twin 2 sorties]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto891202]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto800953">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Applique Ir Glass inox]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto800953]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto748978">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Peinture sol polyuréthane 2,5 l gris 266]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto748978]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto745483">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Crème de peinture monocouche mat 5L blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto745483]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto537942">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tondeuse thermique MAC 55 THADE]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto537942]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514165">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Fer à souder 30 W]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514165]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto517149">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Climatiseur fixe prêt à poser 2600W]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto517149]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto570575">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Sanicompact Leader]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto570575]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto506250">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Déshumidificateur 20L/j + chauffage 500 W ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto506250]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto299542">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Nettoyeur haute pression eau chaude SCOUT 150 CLASS]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto299542]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto489916">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Peinture acrylique chambre/séjour CASTO' 2,5L]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto489916]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto550726">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Store vénitien bois 110 x 220 cm coloris bois foncé ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto550726]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto472052">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Alcaline LR 6 x 8 HIGH ENERGY Premium]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto472052]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto748979">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Peinture sol polyuréthane 2,5 l bleu 548]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto748979]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto537500">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Store de terrasse coffre motorisé Maldives 4 x 3,5 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto537500]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto529012">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tournevis sans fil 10,8 V Lithium]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto529012]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto550721">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Store vénitien bois 140 x 180 cm coloris bois moyen ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto550721]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516012">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Parasol bois Vert 2,70m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516012]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto993729">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cheminée Orsay SUPRA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto993729]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto478067">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Aspirateur/souffleur/broyeur 2500 AS]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto478067]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto640522">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Chauffage 3 kW spécial piscine hors-sol]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto640522]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto521865">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Escalier pour piscine VAGUE ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto521865]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto546933">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Kit d'installation gaz pour bouteille Butane 6 & 10 kg]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto546933]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto895109">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Applique IR DUBROVNIK blanche]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto895109]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto541980">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Batterie tuyau poreux 20 m + 5 gratuit x Ø 13 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto541980]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto522373">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tournevis sans fil 4,8V POWERMAXX]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto522373]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto535473">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Borne LED en inox]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto535473]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto515875">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Parquet contrecollé chêne fonçé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto515875]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto955542">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Colle Matson, 1 kg]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto955542]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514160">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Fer à souder 40 W PP40SI]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514160]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto535266">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Coussin de sol Bachette 38 x 38 x 8 coloris orange]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto535266]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519887">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tablette de réglage 150 x 50,5 cm l'Esprit Dressing]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519887]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto993730">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cheminée Athéna SUPRA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto993730]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto541957">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Scie à onglet radiale Rage 3 2000 W]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto541957]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294598">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille circulaire 100 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294598]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto601701">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Canisse bambou fendu]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto601701]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto537512">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Store de terrasse coffre motorisé Grenade 6 x 3,5 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto537512]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto538421">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Caisson chêne 50 x 40 cm Tribu]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto538421]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto297949">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Applique murale à détection L535 coloris noir]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto297949]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto499312">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Chilienne en bois de hêtre pour enfant, coloris Rouge]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto499312]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto538422">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Caisson chêne 50 x 60 cm Tribu]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto538422]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519886">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tablette de réglage 100 x 50,5 cm l'Esprit Dressing]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519886]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514162">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Pistolet à souder 100 W PP100PS]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514162]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto101631">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Etagère droite 3 niveaux/finition vernie]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto101631]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto296606">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Parquet chêne clair naturel]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto296606]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto210008">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Escabeau 3 marches Tubclassic 3030]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto210008]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto258408">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Absorbeur Stop Humidité basic]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto258408]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto521187">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Flitre à enterrer]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto521187]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto300019">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Palmier Chamaérops 130/150]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto300019]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto526639">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Ciseaux de chantier 210 mm matériaux souples]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto526639]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto288410">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Climatiseur fixe prêt à poser 4721W]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto288410]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto661463">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Olivier mini-tige]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto661463]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto538156">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Maison d'enfant Louis]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto538156]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto200240">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Chariot de transport]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto200240]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto960990">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Escalier en colimaçon Klan Ø 120 gris/clair ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto960990]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto299135">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Applique Ir Bejing noir/argent portée 12 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto299135]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto663639">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for 3 jacinthes préparées variété Pink Pearl]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto663639]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto560651">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Sauna Ypres]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto560651]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto473046">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Carport structure bois 1 pan]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto473046]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto295916">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine de douche Capri carré 80 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto295916]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto553077">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for 2 potelets solaires 2 x 16 LED]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto553077]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto473968">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Coupon gazon synthétique]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto473968]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto600663">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Abri de jardin en bois, modèle Nilsïa]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto600663]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto537532">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Gazon artificiel ELEGANCE 1 x 4 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto537532]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto537504">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Store de terrasse coffre motorisé Granny 5 x 3,5 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto537504]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto824410">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Platine pour disjoncteur d'abonné EDF]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto824410]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto283094">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Escabeau 4 marches Tubclassic 3040]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto283094]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto992286">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Escalier escamotable de grenier 3 plans CLIC'UP ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto992286]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto549824">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tonnelle métalique à glissière, toile blanche ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto549824]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto299134">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Applique Ir Bejing blanc/or détection 140° portée 12 m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto299134]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto554964">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Escabeau 6 marches M.A. 6]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto554964]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto498148">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cuisine Meursault module évier + rangement]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto498148]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto822800">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Disjoncteur de branchement 15/30/45 A Sélectif]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto822800]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto524573">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Sauna VERHAEGHE Oostende]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto524573]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto907394">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Verre Cathédrale martelé clair 4 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto907394]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto896040">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Balise solaire Globall LED coloris ambre]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto896040]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto511447">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Coude femelle 26/34 Ø 32]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto511447]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto610707">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Abri de jardin en bois, modèle Askola ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto610707]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto526645">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Ciseaux de couture 130 mm précision]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto526645]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto489630">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Applique Calgari]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto489630]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519230">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bloc porte exotique 204x73 4 panneaux gauche]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519230]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514563">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Fauteuil de relaxation multipositions Futura Blanc ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514563]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto515879">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Parquet Merbau]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto515879]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto520753">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tonnelle Azur 3x4 fer forgé adossée]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto520753]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto907941">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Verre Nature rosa 4 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto907941]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto534539">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Chariot pliant 300kg]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto534539]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto662616">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Rosier buisson]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto662616]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto543802">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte pliante blanche 200 x 70 cm droite]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto543802]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516110">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Armature bois FSC diamètre 3,50m]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516110]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto522103">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Ballon géant]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto522103]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto497263">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tourniquet]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto497263]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto498151">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cuisine Meursault table angle réversible]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto498151]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto521185">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Ensemble de jumelage pour cuve]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto521185]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto528175">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Diable porte bûches]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto528175]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto533318">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tonnelle métal à rideaux, 300 x 300 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto533318]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto515513">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Parquet clic chêne fumé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto515513]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto486722">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Kit vidéo surveillance couleur solaire]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto486722]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto499946">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Batterie guipée 15 m x Ø 15 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto499946]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto487678">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Lot de 10 Spots Led Ultra à encastrer coloris bleu]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto487678]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto486558">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Goulotte 250x60 pour coffret électrique]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto486558]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519003">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Moquette bouclée berbère Mont Blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519003]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto555145">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Garage en bois, modèle Somero ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto555145]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto677849">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Conifères variés]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto677849]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto204259">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Diable 250 kg pelle rabattable]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto204259]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto531101">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bloc porte mélaminé Wengé 73 cm gauche]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto531101]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto985875">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Grilloir pour barbecue ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto985875]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514296">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Nettoyeur aspirateur]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514296]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto860218">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Interphone sans fil 2 canaux 975/3 b]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto860218]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto527521">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cadre Dora 33 x 33 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto527521]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto521191">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Set de jumelage DN 100]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto521191]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto292168">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Abri de jardin en bois, modèle Rovaniemi ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto292168]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto555063">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Kit alarme Protexiom 600]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto555063]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto666362">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Palmier Chamaérops 60/80]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto666362]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto475283">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Peinture vert à tableau et table ping-pong 0L25]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto475283]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto234002">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tournevis sans fil 3,6 V IXO]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto234002]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto293345">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Applique Houston en inox et verre]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto293345]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto554118">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Établi Master Compact]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto554118]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto497263">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tourniquet Ø 51 cm en acier pour meuble haut]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto497263]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto505730">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Abris de jardin en bois, modèle 76555]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto505730]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto497466">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Rangement filaire pour demi-colonne de 60 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto497466]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto534541">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Diable multi-fonctions 75kg]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto534541]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto487677">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Lot de 10 Spots Leds Ultra à encastrer coloris blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto487677]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto989111">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Barbecue Florida]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto989111]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto495896">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Voilage Soni 140 x 240 coloris prune]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto495896]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto895110">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Applique IR DUBROVNIK noir/vert]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto895110]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto534953">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Fauteuil de relaxation "Futura", coloris Outdoor ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto534953]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto495188">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Vinyle expansé sur intissé Store coloris beige]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto495188]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto985878">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Grilloir inox]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto985878]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto974507">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Store pergola bras articulé 3x3m bleu / blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto974507]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto570578">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Sanicompact 43 SFA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto570578]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto101585">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Tube de crédence]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto101585]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto499078">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Abri Grill LUOMAN]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto499078]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto620568">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Pompe d'arrosage Marina 800 W]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto620568]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto557977">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Ampoule Power LED]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto557977]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto556716">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Portier vidéo cadre numérique]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto556716]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto555060">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Kit alarme Protexiom 200]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto555060]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto514365">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Barbecue New Jersey]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto514365]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto521190">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Séparateur de feuilles gris]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto521190]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto560649">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Sauna Bruges]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto560649]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto552315">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur de douche ELAN, finition chrome]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto552315]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto257487">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Lampe torche Varta pocket light]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto257487]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto300834">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Parquet chêne brut mosaïque]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto300834]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto270047">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Diable CASTO]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto270047]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto981693">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Grilloir 459 PM]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto981693]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294911">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Voilage Soni 140 x 240 coloris chanvre]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294911]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto498781">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Abri de jardin en bois, modèle Kuru ]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto498781]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto488989">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Kit de vidéosurveillance sans fil Baby couleur]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto488989]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto678435">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for 10 allium variété Purple Sensation]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto678435]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto291798">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Voilage Ashley 105x240cm coloris blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto291798]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto487793">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Tablette en pin massif Concept Genius 80x40cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto487793]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto544720">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur BALMORAL]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto544720]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516808">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 90 cm Style]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516808]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516815">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 80 cm Vita]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516815]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294601">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine  Hydro Flotille carré 80 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294601]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto554194">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine de douche Flotille 2]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto554194]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294626">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hydro Flotille rect porte pivotante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294626]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto572611">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte douche coulissante Phoenix 70 cm sérigraphiée]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto572611]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto485885">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur lavabo compact Tilbury]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto485885]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500132">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Bonde de douche TOURBILLON Ø60mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500132]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto582402">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur à poser LECICO 80x80cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto582402]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto295916">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine de douche Capri carré 80 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto295916]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516807">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 80 cm Style]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516807]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto498540">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur à carreler d'angle 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto498540]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294600">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille carré 80cm porte coulissante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294600]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto552315">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur de douche AQUATECK PLUS, finition chrome/or]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto552315]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto513117">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur Douche Sportive 2 Hansgrohe]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto513117]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto497929">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante Malibu]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto497929]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto582412">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur à encastrer]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto582412]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto520649">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Receveur à poser extra-plat ALTIMA 90X90]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto520649]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294625">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hammam Flotille rect porte coulissant]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294625]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518118">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante  MYKONOS]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518118]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500254">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bonde de douche blanche Twisto Ø90mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500254]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto298764">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Receveur à poser en grès 90 x 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto298764]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto485887">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur douche Tilbury]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto485887]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto295959">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélanger douche mural Fast chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto295959]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto517739">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur douche Cygne chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto517739]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294624">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille 100 cm à recyclage]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294624]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500512">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bonde de douche siphoïde Ø 60 mm horizontale]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500512]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294623">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche circulaire Hydro Flotille carré100cm.]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294623]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500261">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bonde siphoïde Ø 60 à sortie verticale Ø 40]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500261]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518114">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine de douche Hammam Myriade]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518114]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto498539">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur à carreler 90 x 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto498539]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto535943">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 90 cm Galax]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto535943]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto513122">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur Bain-Douche Sportive 2 Hansgrohe]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto513122]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto529826">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine de douche Linéo]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto529826]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516419">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche pivotante Galax largeur 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516419]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto489840">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur d'angle à poser Sete]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto489840]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516816">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 80 cm Vita]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516816]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto582574">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi de douche fixe Liberté profilé blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto582574]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518117">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hydro Odysée 100 x 85]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518117]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto293160">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur de douche RAMSES, finition chrome]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto293160]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto580124">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Receveur à poser ou encastrer extra plat D20068 GB 04]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto580124]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto572614">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche coulissante Phoenix 100 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto572614]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto499893">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante Cocoon]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto499893]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto535942">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 90 cm Galax]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto535942]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516817">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 90 cm Vita]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516817]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519607">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi Walk-in Square 100x90x30 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519607]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516813">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche pivotante extensible (89-101 cm) Vita]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516813]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294599">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine douche Hydro Flotille carrée porte coulissante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294599]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518125">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante Cronos]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518125]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto543340">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur pour douche Gavarnie Chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto543340]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294053">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Thermostat Douche Centostat Hansgrohe]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294053]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto513120">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur Bain-Douche Status Hansgrohe]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto513120]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto296018">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur UNA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto296018]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519614">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur de douche Cuadro]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519614]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518827">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi Walk-in Square 100x30 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518827]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto582413">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur acrylique à encastrer]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto582413]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518116">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante Marbella]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518116]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto544624">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur douche Varna FORM]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto544624]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto535945">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe Konstell 90 cm blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto535945]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518119">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydro accès de face Newport Hydra]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518119]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516408">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi fixe pour douche 80 cm Vizion]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516408]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto485865">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur douche Kéro chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto485865]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516818">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe pour douche 90 cm Vita]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516818]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto296064">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Porte de douche pivotante Sunny]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto296064]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto535944">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe Konstell 80 cm blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto535944]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518113">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante  ODYSSEE HAMMAM]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518113]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516409">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi fixe pour douche 80 cm Galax chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516409]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto474720">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur douche Parme chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto474720]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto583924">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche pliante 80 cm transparente]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto583924]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto485886">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur douche Tilbury chromé/or]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto485886]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516819">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Façade de douche Walk in solo]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516819]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294597">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille circulaire 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294597]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto525436">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur douche Bastide chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto525436]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto489835">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur Sete 80 x 160]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto489835]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto544716">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur VARNA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto544716]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto569663">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi fixe pour douche 80 cm Phoenix]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto569663]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294598">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille circulaire 100cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294598]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518124">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine de douche Hammam  Cyclades]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518124]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto581915">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte battante Sunny Quattro L. 77,5 à 81,5 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto581915]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto489826">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Receveur à encastrer en acrylique 90x90 cm Brest]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto489826]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto523912">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Receveur pour cabine de douche MYKONOS]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto523912]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto569662">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi fixe pour douche 90 cm Phoenix]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto569662]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519547">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche pour baignoire NYMPHEA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519547]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500711">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante New Line]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500711]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500117">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bonde de douche chromée Twisto Ø90mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500117]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294595">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hammam Flotille circulaire 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294595]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto513996">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bonde Twisto Ø 90 mm 150 x 150 mm douche carrelée]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto513996]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518121">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Cabine de douche Hammam Newport]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518121]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518112">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante Lagon]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518112]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto569661">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi fixe pour douche 80 cm Phoenix]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto569661]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294606">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hammam Flotille 90cm porte pivotante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294606]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto540149">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur EPURE]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto540149]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294596">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hydro circulaire Flotille carré 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294596]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294630">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille rectangle porte pivotante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294630]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516809">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche extensible (69-81 cm) pivotante Vita]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516809]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516411">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche coulissante Loft 120 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516411]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto473256">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche accès de face BERMUDES]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto473256]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto519609">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi Walk-in Square 90x30 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto519609]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294605">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille carré 90cm porte coulissante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294605]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto583980">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Receveur grés à encastrer Altora blanc 70 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto583980]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto540471">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur VARNA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto540471]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518123">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hydro Cyclade 100 supra]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518123]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto544133">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur de douche CHEOPE, finition chrome]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto544133]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294593">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hydro Flotille carré 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294593]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516410">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi fixe pour douche 80 cm Galax blanc]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516410]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516795">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Paroi fixe Walk-in Square 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516795]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516803">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche coulissante Urban 140 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516803]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto494316">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur OCEA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto494316]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294604">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine douche Hydro Flotille carrée porte coulissante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294604]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto583981">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Receveur à encastrer 80 x 80  Altora]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto583981]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto485884">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mélangeur douche Oxo chromé]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto485884]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294594">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille carré 90 cm porte pivotante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294594]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518120">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante supra Newport]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518120]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294629">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hydro Flotille rect porte coulissante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294629]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto292714">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Mitigeur de douche ELAN, finition chrome]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto292714]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto582404">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Receveur Lorient 80 x 100]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto582404]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294603">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hammam Flotille 90cm porte coulissant]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294603]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto494315">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur OCEA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto494315]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294628">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Hammam Flotille rect porte pivotante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294628]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto544728">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur VARNA]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto544728]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto582580">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi de douche fixe Liberté profilé chrome]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto582580]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294602">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille carré 80 cm porte pivotante]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294602]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto296037">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche hydromassante Plaisir]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto296037]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto518122">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche circulaire Cyclade hydra]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto518122]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto494314">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur douche Axium]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto494314]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto516810">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Porte de douche pivotante Vita Largeur de 69 à 81 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto516810]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto500253">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Bonde de douche siphoïde TYPHON Ø 60 mm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto500253]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294627">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Cabine de douche Flotille rectangle 90 cm]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294627]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto513119">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur Douche Status Hansgrohe]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto513119]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto569664">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName">
+                <![CDATA[Inventory for Paroi fixe pour douche 90 cm Phoenix]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto569664]]></set-property>
+        </add-item>
+        <add-item item-descriptor="inventory" id="invCasto294070">
+            <set-property name="creationDate"><![CDATA[7/29/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for Mitigeur Douche Avista Hansgrohe]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[Casto294070]]></set-property>
+        </add-item>
+
+        <!-- 3 items of type inventory for grouped products-->
+
+        <add-item item-descriptor="inventory" id="inv10003">
+            <set-property name="creationDate"><![CDATA[9/3/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for 888888]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[sku10021]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="inventory" id="inv10005">
+            <set-property name="creationDate"><![CDATA[9/3/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[Inventory for 666666]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[sku10016]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="inventory" id="inv10007">
+            <set-property name="creationDate"><![CDATA[9/3/2009 11:00:00]]></set-property>
+            <set-property name="stockLevel"><![CDATA[-1]]></set-property>
+            <set-property name="displayName"><![CDATA[IInventory for 777777]]></set-property>
+            <set-property name="catalogRefId"><![CDATA[sku10018]]></set-property>
+        </add-item>
+
+    </import-items>
+
+</gsa-template>

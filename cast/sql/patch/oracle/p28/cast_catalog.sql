@@ -1,0 +1,3 @@
+ALTER TABLE CASTO_SKU ADD external_app_url	VARCHAR2(2000) NULL;
+
+commit;

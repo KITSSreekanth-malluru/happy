@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="codesUnite" id="B1">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 1]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="B4">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 4]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="BA">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[BARQUETTE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="CF">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[COFFRET]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="BV">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 20]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="M2">
+            <set-property name="flag"><![CDATA[O]]></set-property>
+            <set-property name="libelle"><![CDATA[m2]]></set-property>
+            <set-property name="designation"><![CDATA[METRE CARRE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="ML">
+            <set-property name="flag"><![CDATA[O]]></set-property>
+            <set-property name="libelle"><![CDATA[m]]></set-property>
+            <set-property name="designation"><![CDATA[METRE LINEAIRE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="M3">
+            <set-property name="flag"><![CDATA[O]]></set-property>
+            <set-property name="libelle"><![CDATA[m3]]></set-property>
+            <set-property name="designation"><![CDATA[METRE CUBE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="TO">
+            <set-property name="flag"><![CDATA[O]]></set-property>
+            <set-property name="libelle"><![CDATA[t]]></set-property>
+            <set-property name="designation"><![CDATA[TONNE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="FU">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[FUT]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="MC">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[MARGE CONSTANTE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="B2">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 2]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="BF">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[BLISTER FO]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="BX">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 10]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="PL">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[PALETTE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="B6">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 6]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="B5">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 5]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="2D">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[METRE CARRE DIVISION]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="RX">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[ROULEAU]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="BT">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[BOTTE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="LI">
+            <set-property name="flag"><![CDATA[O]]></set-property>
+            <set-property name="libelle"><![CDATA[l]]></set-property>
+            <set-property name="designation"><![CDATA[LITRE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="CO">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[COURONNE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="HR">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[HEURE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="PX">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[PANNEAU]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="LT">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[LOT]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="RG">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[RANG]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="MI">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[LE MILLE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="MD">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[METRE LINEAIRE DIVIS]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="CP">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[COMPOSITION]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="KG">
+            <set-property name="flag"><![CDATA[O]]></set-property>
+            <set-property name="libelle"><![CDATA[kg]]></set-property>
+            <set-property name="designation"><![CDATA[KILOGRAMME]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="PR">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[PAIRE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="B3">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[SACHET 3]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="CT">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[CARTON]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="ST">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[STERE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="PC">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[PIECES]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="UN">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[UNITE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="codesUnite" id="CE">
+            <set-property name="flag"><![CDATA[N]]></set-property>
+            <set-property name="designation"><![CDATA[LE 100]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

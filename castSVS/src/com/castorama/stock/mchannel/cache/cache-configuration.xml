@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jbosscache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="urn:jboss:jbosscache-core:config:3.2">
+
+    <transaction
+            transactionManagerLookupClass="org.jboss.cache.transaction.GenericTransactionManagerLookup"
+            syncRollbackPhase="false" syncCommitPhase="false"/>
+
+    <eviction wakeUpInterval="5000">
+        <default algorithmClass="org.jboss.cache.eviction.LRUAlgorithm"
+                 eventQueueSize="200000"
+                 actionPolicyClass="org.jboss.cache.eviction.DefaultEvictionActionPolicy">
+            <property name="maxNodes" value="10000"/>
+        </default>
+
+        <region name="/PostalCodes"
+                algorithmClass="org.jboss.cache.eviction.NullEvictionAlgorithm">
+        </region>
+
+        <!--region name="/" eventQueueSize="200000" >
+             <property name="maxNodes" value="300"/>
+          </region-->
+        <!--region name="/1" algorithmClass="org.jboss.cache.eviction.LRUAlgorithm" eventQueueSize="200000"
+        actionPolicyClass="org.jboss.cache.eviction.DefaultEvictionActionPolicy">
+            <property name="maxNodes" value="150"/>
+        </region-->
+    </eviction>
+</jbosscache>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.castorama.com/loginUser" xmlns:lu="http://ws.castorama.com/loginUser" attributeFormDefault="unqualified" elementFormDefault="unqualified">
+
+	<xsd:element name="loginUserRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="login" type="xsd:string"/>
+				<xsd:element name="password" type="xsd:string"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

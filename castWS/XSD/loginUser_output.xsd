@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:user="http://ws.castorama.com/user" targetNamespace="http://ws.castorama.com/loginUser" xmlns:lu="http://ws.castorama.com/loginUser" attributeFormDefault="unqualified" elementFormDefault="unqualified">
+
+	<xsd:import namespace="http://ws.castorama.com/user" schemaLocation="user.xsd" />
+	
+	<xsd:element name="loginUserResponse" type="loginUserResponseType" />
+
+	<xsd:complexType name="loginUserResponseType">
+		<xsd:sequence>
+			<xsd:element name="code" type="xsd:string"/>
+			<xsd:element name="description" type="xsd:string"/>
+			<xsd:element name="loggedUser" type="user:userType" minOccurs="0" nillable="true" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>

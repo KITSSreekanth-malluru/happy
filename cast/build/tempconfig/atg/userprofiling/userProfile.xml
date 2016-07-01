@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template xml-combine="append">
+
+	<header xml-combine="replace">
+		<name>Castorama Profile</name>
+		<author>Epam Team</author>
+		<version>1.0</version>
+    </header>
+
+    <item-descriptor name="user" last-modified-property="dateMAJprofil" cache-mode="simple" item-expire-timeout="600000">
+        <attribute name="updateLastModified" value="true"/>
+        <table name="dps_user" type="primary" id-column-name="id">
+            <property name="gender" hidden="true" />
+            <property name="middleName" hidden="true" />
+            <property name="member" hidden="true" />
+            <property name="locale" hidden="true" />
+            <property name="dateOfBirth" hidden="true" />            
+            <property name="receiveEmail" hidden="true" />
+        </table>
+        
+        <table name="dps_user_address" type="auxiliary" id-column-name="id">
+            <property name="homeAddress" hidden="true" />
+        </table>
+
+        <table name="casto_other_billing_addr" type="multi"
+            id-column-name="user_id" multi-column-name="tag">
+            <property
+                category-resource="categoryCommerceAddressAndPhone"
+                name="secondaryBillingAddresses" data-type="map" cascade="update"
+                component-item-type="contactInfo" column-name="address_id"
+                display-name-resource="secondaryBillingAddresses">
+                <attribute name="propertySortPriority" value="-3" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="casto_other_billship_addr" type="multi"
+            id-column-name="user_id" multi-column-name="tag">
+            <property
+                category-resource="categoryCommerceAddressAndPhone"
+                name="secondaryBillingShippingAddresses" data-type="map"
+                cascade="update" component-item-type="contactInfo"
+                column-name="address_id"
+                display-name-resource="secondaryBillingShippingAddresses">
+                <attribute name="propertySortPriority" value="-3" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_USER" type="auxiliary" id-column-name="id">
+            <property category-resource="categoryScenarios" name="dateDerniereCommande"
+                 data-type="timestamp" column-name="date_derniere_commande" 
+                 display-name-resource="dateDerniereCommande" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        
+            <property category-resource="categoryMiscellaneous" name="prospectSince"
+                data-type="timestamp" column-name="prospect_since"
+                display-name-resource="prospectSince" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryMiscellaneous" name="statut"
+                data-type="enumerated" default="prospect" column-name="statut"
+                display-name-resource="statut">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="prospect" code="0" />
+                <option value="client" code="1" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+            
+            <property category-resource="categoryMiscellaneous" name="dateChangeStatut"
+                data-type="timestamp" column-name="date_change_statut"
+                display-name-resource="dateChangeStatut" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryMiscellaneous" name="societe"
+                data-type="string" column-name="societe" display-name-resource="societe" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <!-- property category-resource="categoryMiscellaneous" name="civilite"
+                data-type="enumerated" column-name="civilite"
+                display-name-resource="title">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="Monsieur" code="1" />
+                <option value="Madame" code="2" />
+                <option value="Mlle" code="3" />
+            </property-->
+            
+            <property name="civilite" column-name="CIVILITE" data-type="enumerated"
+                category-resource="categoryBasics"
+                display-name-resource="title">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="miss" code="3"/>
+                <option value="mrs" code="2" />
+                <option value="mr" code="1"/>
+                <option value="organization"  code="5"/>
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryMiscellaneous" name="profession"
+                item-type="profession" column-name="profession_id"
+                display-name-resource="profession" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryMiscellaneous" name="topRobinsonList"
+                data-type="boolean" default="false" column-name="top_robinson_list"
+                display-name-resource="topRobinsonList" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryMiscellaneous" name="nbReclamations"
+                data-type="int" column-name="nb_reclamations"
+                display-name-resource="nbReclamations" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryMiscellaneous" name="nbAppelsCallcenter"
+                data-type="int" column-name="nb_appels_callcenter"
+                display-name-resource="nbAppelsCallcenter" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryMiscellaneous" name="provenanceURL"
+                data-type="string" column-name="provenance_url"
+                display-name-resource="provenanceURL" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryMiscellaneous" name="carteAtout"
+                data-type="boolean" default="false" column-name="carte_atout"
+                display-name-resource="carteAtout" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryMagasin" name="id_magasin_ref"
+                data-type="string" column-name="id_magasin_ref"
+                display-name-resource="id_magasin_ref" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryMiscellaneous" name="numeroCarteAtout"
+                data-type="string" column-name="numeroCarteAtout"
+                display-name-resource="numeroCarteAtout" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryMiscellaneous" name="typeMAJprofil"
+                data-type="enumerated" default="" column-name="typeMAJprofil"
+                display-name-resource="typeMAJprofil">
+                <attribute name="useCodeForValue" value="true" />
+                <option value="Creation" code="0" />
+                <option value="Modification" code="1" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryMiscellaneous" name="dateMAJprofil"
+                data-type="date" column-name="dateMAJprofil"
+                display-name-resource="dateMAJprofil" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryFrontOffice"
+                name="estUtilisateurFo" data-type="boolean" default="false"
+                column-name="acces_fo" display-name-resource="estUtilisateurFo" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryFrontOffice"
+                name="estSupprime" data-type="boolean" default="false"
+                column-name="supprime" display-name-resource="estSupprime" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property category-resource="categoryLogin" name="bloque" data-type="boolean"
+                column-name="bloque" display-name-resource="bloque" cache-mode="disabled" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property name="priceList" category-resource="categoryCommerceGeneral" 
+                item-type="priceList" display-name-resource="priceList"
+                column-name="price_list" repository="/atg/commerce/pricing/priceLists/PriceLists">
+                <attribute name="propertySortPriority" value="0"/>
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property name="salePriceList" category-resource="categoryCommerceGeneral" item-type="priceList"
+                display-name-resource="salePriceList" column-name="sale_price_list"
+                repository="/atg/commerce/pricing/priceLists/PriceLists">
+                <attribute name="propertySortPriority" value="1"/>
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property name="cardPriceList" category-resource="categoryCommerceGeneral" item-type="priceList"
+              display-name-resource="cardPriceList" column-name="card_price_list"
+              repository="/atg/commerce/pricing/priceLists/PriceLists">
+              <attribute name="propertySortPriority" value="2"/>
+              <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property name="localPriceList" category-resource="categoryCommerceGeneral" item-type="priceList"
+              display-name-resource="localPriceList" column-name="local_price_list"
+              repository="/com/castorama/commerce/pricing/repository/StoreLocalPricesRepository">
+              <attribute name="propertySortPriority" value="5"/>
+              <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property name="utilisateurConceptionCuisine"
+                data-type="boolean" column-name="utilisateur_conception_cuisine"
+                display-name="A deja utilise l'application Conception Cuisine" />
+
+            <property category-resource="categoryFrontOffice"
+                name="passwordHashed" data-type="boolean" default="true"
+                column-name="password_hashed" display-name-resource="passwordHashed" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property name="currentLocalStore" category-resource="categoryCommerceGeneral" 
+                item-type="magasin" display-name-resource="currentLocalStore"
+                column-name="current_local_store" repository="/atg/registry/Repository/MagasinGSARepository">
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+            
+            <property name="failedAttempts" data-type="int" column-name="FAILED_ATTEMPTS" cache-mode="disabled" />
+            <property name="firstAttemptDate" data-type="timestamp" column-name="FIRST_ATTEMPT_DATE" cache-mode="disabled" />
+            <property name="lockoutDate" data-type="timestamp" column-name="LOCKOUT_DATE" cache-mode="disabled" />
+            
+        </table>
+        
+        <property name="wrappedCurrentLocalStore" category-resource="categoryCommerceGeneral" display-name-resource="wrappedCurrentLocalStore"
+            item-type="magasin" repository="/atg/registry/Repository/MagasinGSARepository">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        </property>
+        
+        <table name="CASTO_REFERRER_REFEREE" type="multi" id-column-name="REFERRER_ID" shared-table-sequence="1">
+            <property name="referee" column-name="REFEREE_ID" data-type="set" 
+                component-item-type="referee" expert="true" cache-mode="disabled">
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_USER_LISTE_DE_COURSES" type="multi" id-column-name="usr_id">
+            <property category-resource="categoryMesListesDeCourses" name="mesListesDeCourses"
+                data-type="set" component-item-type="listeDeCourses" queryable="true"
+                display-name-resource="mesListesDeCourses" column-name="listeDeCourses_id"
+                cache-mode="disabled">
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_USER_FOGROUPS" type="multi" id-column-name="usr_id">
+            <property category-resource="categoryFrontOffice" name="groups"
+                data-type="set" component-item-type="group" queryable="true"
+                display-name-resource="groups" column-name="group_id" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_IDENTIFICATION_HELPER" type="auxiliary" id-column-name="id">
+            <property category-resource="categoryLogin" name="reminderPassword"
+                data-type="string" column-name="reminder_password"
+                display-name-resource="reminderPassword" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryLogin" name="reponseReminder"
+                data-type="string" column-name="reponse_reminder"
+                display-name-resource="reponseReminder" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+        
+        <table name="CASTO_CLUB_CASTO" type="auxiliary"    id-column-name="id">
+            <property category-resource="categoryClubCasto" name="membreClub"
+                data-type="boolean" default="false" column-name="membre_club"
+                display-name-resource="membreClub" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryClubCasto" name="dateEntreeClub"
+                data-type="timestamp" column-name="date_entree_club"
+                display-name-resource="dateEntreeClub" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryClubCasto" name="dateSortieClub"
+                data-type="timestamp" column-name="date_sortie_club"
+                display-name-resource="dateSortieClub" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryClubCasto" name="topParrain"
+                data-type="boolean" default="false" column-name="top_parrain"
+                display-name-resource="topParrain" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_STAT_LAST_VISIT" type="auxiliary" id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryActivity" name="nbPageLastSession"
+                data-type="int" column-name="nb_page_derniere_session"
+                display-name-resource="nbPageLastSession" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_SCORES" type="auxiliary"    id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryScores" name="codeSegComport1"
+                data-type="int" column-name="code_seg_comport_1"
+                display-name-resource="codeSegComport1" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="potentiel" data-type="int"
+                column-name="potentiel" display-name-resource="potentiel" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="contributionALaMarge"
+                data-type="int" column-name="contribution_a_la_marge"
+                display-name-resource="contributionALaMarge" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="satisfactionClient"
+                data-type="int" column-name="satisfaction_client"
+                display-name-resource="satisfactionClient" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="clubReaders"
+                data-type="boolean" default="false" column-name="club_readers"
+                display-name-resource="clubReaders" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="blackList"
+                data-type="boolean" default="false" column-name="black_list"
+                display-name-resource="blackList" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="nbProjetsEnvoyeAmi"
+                data-type="int" column-name="nb_projets_envoye_ami"
+                display-name-resource="nbProjetsEnvoyeAmi" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="codeRFM" data-type="int"
+                column-name="code_rfm" display-name-resource="codeRFM" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryScores" name="rentabilite"
+                data-type="int" column-name="rentabilite"
+                display-name-resource="rentabilite" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+    
+        <table name="CASTO_MON_NIVEAU_BRICOLAGE" type="auxiliary" id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie1" item-type="niveauBricolage"
+                column-name="niveau_categorie_1_id"
+                display-name-resource="niveauBricolageCategorie1" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie2" item-type="niveauBricolage"
+                column-name="niveau_categorie_2_id"
+                display-name-resource="niveauBricolageCategorie2" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie3" item-type="niveauBricolage"
+                column-name="niveau_categorie_3_id"
+                display-name-resource="niveauBricolageCategorie3" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie4" item-type="niveauBricolage"
+                column-name="niveau_categorie_4_id"
+                display-name-resource="niveauBricolageCategorie4" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie5" item-type="niveauBricolage"
+                column-name="niveau_categorie_5_id"
+                display-name-resource="niveauBricolageCategorie5" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie6" item-type="niveauBricolage"
+                column-name="niveau_categorie_6_id"
+                display-name-resource="niveauBricolageCategorie6" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie7" item-type="niveauBricolage"
+                column-name="niveau_categorie_7_id"
+                display-name-resource="niveauBricolageCategorie7" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie8" item-type="niveauBricolage"
+                column-name="niveau_categorie_8_id"
+                display-name-resource="niveauBricolageCategorie8" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie9" item-type="niveauBricolage"
+                column-name="niveau_categorie_9_id"
+                display-name-resource="niveauBricolageCategorie9" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryNiveauDeBricolage"
+                name="niveauBricolageCategorie10" item-type="niveauBricolage"
+                column-name="niveau_categorie_10_id"
+                display-name-resource="niveauBricolageCategorie10" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+
+        <table name="CASTO_STAT_COMMERCE" type="auxiliary" id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="nbSession" data-type="int" column-name="nb_session"
+                display-name-resource="nbSession" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="nbSessionAvecAchat" data-type="int"
+                column-name="nb_session_avec_achat"
+                display-name-resource="nbSessionAvecAchat" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="nbTotalCommandes" data-type="int"
+                column-name="nb_total_commandes"
+                display-name-resource="nbTotalCommandes" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="montantTotalCommandeHT" data-type="int"
+                column-name="montant_total_commande_ht"
+                display-name-resource="montantTotalCommandeHT" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="montantTotalCommandeTTC" data-type="int"
+                column-name="montant_total_commande_ttc"
+                display-name-resource="montantTotalCommandeTTC" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="montantTotalFactureTTC" data-type="int"
+                column-name="montant_total_facture_ttc"
+                display-name-resource="montantTotalFactureTTC" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="nbArticleCommandeEnPromo" data-type="int"
+                column-name="nb_article_commande_en_promo"
+                display-name-resource="nbArticleCommandeEnPromo" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="montantPromoCumuleTTC" data-type="int"
+                column-name="montant_promo_cumule_ttc"
+                display-name-resource="montantPromoCumuleTTC" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryStatistiquesDeCommerce"
+                name="nbCouponsUtilise" data-type="int"
+                column-name="nb_coupons_utilise"
+                display-name-resource="nbCouponsUtilise" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_RAYONS_UTILISE" type="auxiliary"    id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon1" data-type="int"
+                column-name="compteur_usage_rayon_1"
+                display-name-resource="compteurUsageRayon1" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon2" data-type="int"
+                column-name="compteur_usage_rayon_2"
+                display-name-resource="compteurUsageRayon2" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon3" data-type="int"
+                column-name="compteur_usage_rayon_3"
+                display-name-resource="compteurUsageRayon3" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon4" data-type="int"
+                column-name="compteur_usage_rayon_4"
+                display-name-resource="compteurUsageRayon4" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon5" data-type="int"
+                column-name="compteur_usage_rayon_5"
+                display-name-resource="compteurUsageRayon5" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon6" data-type="int"
+                column-name="compteur_usage_rayon_6"
+                display-name-resource="compteurUsageRayon6" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon7" data-type="int"
+                column-name="compteur_usage_rayon_7"
+                display-name-resource="compteurUsageRayon7">
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon8" data-type="int"
+                column-name="compteur_usage_rayon_8"
+                display-name-resource="compteurUsageRayon8" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon9" data-type="int"
+                column-name="compteur_usage_rayon_9"
+                display-name-resource="compteurUsageRayon9" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon10" data-type="int"
+                column-name="compteur_usage_rayon_10"
+                display-name-resource="compteurUsageRayon10" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon11" data-type="int"
+                column-name="compteur_usage_rayon_11"
+                display-name-resource="compteurUsageRayon11" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryRayonsUtilise"
+                name="compteurUsageRayon12" data-type="int"
+                column-name="compteur_usage_rayon_12"
+                display-name-resource="compteurUsageRayon12" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+
+        <table name="CASTO_LOGEMENT" type="auxiliary" id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryLogement" name="ancienneteLogement"
+                data-type="string" column-name="anciennete_logement"
+                display-name-resource="ancienneteLogement" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryLogement" name="dateEntreeLogement"
+                data-type="timestamp" column-name="date_entree_logement"
+                display-name-resource="dateEntreeLogement" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryLogement" name="situationHabitat"
+                data-type="enumerated" default="proprietaire"
+                column-name="situation_habitat" display-name-resource="situationHabitat">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="proprietaire" code="0" />
+                <option value="locataire" code="1" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+            
+            <property category-resource="categoryLogement" name="jardin"
+                data-type="boolean" default="false" column-name="jardin"
+                display-name-resource="jardin" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryLogement" name="typeLogement"
+                data-type="enumerated" default="maison" column-name="type_logement"
+                display-name-resource="typeLogement">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="maison" code="0" />
+                <option value="appartement" code="1" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+            
+            <property category-resource="categoryLogement" name="balcon"
+                data-type="boolean" default="false" column-name="balcon"
+                display-name-resource="balcon" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_TELEPHONIE" type="auxiliary"    id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryTelephonie" name="telephonePrive"
+                data-type="string" column-name="telephone_prive"
+                display-name-resource="telephonePrive" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryTelephonie" name="telephonePortable"
+                data-type="string" column-name="telephone_portable"
+                display-name-resource="telephonePortable" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryTelephonie" name="telephoneTravail"
+                data-type="string" column-name="telephone_travail"
+                display-name-resource="telephoneTravail" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+                
+            <property category-resource="categoryTelephonie" name="smsAccepted"
+                data-type="boolean" default="false" column-name="sms_accepted"
+                display-name-resource="smsAccepted" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_USER_MAILING" type="auxiliary" id-column-name="id">
+            <property category-resource="categoryEmail" name="emailHTML"
+                data-type="boolean" default="false" column-name="email_html"
+                display-name-resource="emailHTML" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_SITUATION_FAMILIALE" type="auxiliary" id-column-name="id">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categorySituationFamiliale"
+                name="situationFamiliale" data-type="enumerated"
+                default="celibataire" column-name="situation_familiale"
+                display-name-resource="situationFamiliale">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="celibataire" code="0" />
+                <option value="marie" code="1" />
+                <option value="divorce" code="2" />
+                <option value="veuf(ve)" code="3" />
+                <option value="PACS" code="4" />
+                <option value="concubin(e)" code="5" />
+                <option value="autre" code="6" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+            <property category-resource="categorySituationFamiliale" name="nbEnfants"
+                data-type="int" column-name="nb_enfants"
+                display-name-resource="nbEnfants" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_USER_NEWSLETTER" type="auxiliary" id-column-name="id">
+            <property category-resource="categoryAbonnement" name="abonnementNewsletter"
+                repository="/atg/registry/Repository/NewsletterGSARepository"
+                item-type="abonnementNewsletter"
+                column-name="abonnement_newsletter_id" queryable="true"
+                display-name-resource="abonnementNewsletter" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_MES_PAGES_SAUVEGARDEES" type="multi"
+            id-column-name="id" multi-column-name="seq">
+            <property category-resource="categorySauvegardes" name="sauvegardesPage"
+                data-type="list" component-item-type="sauvegardePage"
+                column-name="SAUVEGARDE_ID" queryable="true"
+                display-name-resource="sauvegardesPage" cascade="delete">
+                <attribute name="propertySortPriority" value="-3" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_MES_CREA_SAUVEGARDEES" type="multi"
+            id-column-name="id" multi-column-name="seq">
+            <property category-resource="categorySauvegardes" name="sauvegardesCreation"
+                data-type="list" component-item-type="sauvegardeCreation"
+                column-name="SAUVEGARDE_ID" queryable="true"
+                display-name-resource="sauvegardesCreation" cascade="delete">
+                <attribute name="propertySortPriority" value="-3" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <table name="CASTO_WISHLIST" type="multi" id-column-name="id"
+            multi-column-name="seq">
+            <property category-resource="categoryWishList" name="wishList"
+                data-type="list" component-item-type="casto_sku"
+                repository="/atg/commerce/catalog/ProductCatalog"
+                column-name="SKU_ID" queryable="true" display-name-resource="wishList">
+                <attribute name="propertySortPriority" value="-3" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+        
+        <table name="CASTO_SHOPPINGLIST" type="multi" id-column-name="id"
+            multi-column-name="seq">
+            <property category-resource="categoryShoppingList" name="shoppingList"
+                data-type="list" component-item-type="casto_sku"
+                repository="/atg/commerce/catalog/ProductCatalog"
+                column-name="SKU_ID" queryable="true" display-name-resource="shoppingList">
+                <attribute name="propertySortPriority" value="-3" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+
+        <!-- table name="dps_user" id-column-name="id">
+            <property category-resource="categoryBasics" name="autoLogin"
+                data-type="boolean" default="false" column-name="auto_login"
+                display-name-resource="autoLogin" />
+        </table-->
+        
+        <table name="casto_user_session_tracking" type="multi"
+            id-column-name="id" multi-column-name="seq">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            <property category-resource="categoryTrackIds" name="trackIds"
+                data-type="list" component-item-type="session_tracking"
+                column-name="trackid" display-name-resource="trackId" >
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+        
+        <!-- The following transient properties used to record categories & pages viewed, and recent searches -->
+        <property category-resource="categoryTracking" name="categoriesViewed" display-name-resource="categoriesViewed"
+            data-type="set" component-data-type="String">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        </property>
+        <property category-resource="categoryTracking" name="productsViewed" display-name-resource="productsViewed" data-type="set"
+            component-data-type="String">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        </property>
+        <property category-resource="categoryTracking" name="recentSearches" display-name-resource="recentSearches" data-type="set"
+            component-data-type="String">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        </property>
+
+        <property name="actionUtilisateur" data-type="string"
+            display-name-resource="actionUtilisateur" category-resource="categoryLogin">
+            <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        </property>
+
+        <table name="CAST_APPLLIED_COUPONS" type="multi" id-column-name="user_id">
+            <property category-resource="categoryCommercePromotions" name="appliedCoupons"
+                data-type="set" column-name="PROMOTION_ID" display-name-resource="appliedCoupons" component-data-type="string">
+                <attribute name="propertySortPriority" value="-3" />
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+    
+   <table name="CASTO_TICKET_MAPPING" type="auxiliary" id-column-name="PROFILE_ID">
+      <property name="homeId" data-type="string" column-name="HOME_ID" category-resource="categoryAccountMapping" display-name-resource="homeId">
+         <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+      </property>
+      <property name="sofincoAccount" data-type="string" column-name="SOFINCO_ACCOUNT" category-resource="categoryAccountMapping" display-name-resource="sofincoAccount">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+      </property>
+      <property name="active" data-type="boolean" column-name="ACTIVE" category-resource="categoryAccountMapping" display-name-resource="active">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+      </property>
+      <property name="sofincoName1" data-type="string" column-name="SOFINCO_NAME1" category-resource="categoryAccountMapping" display-name-resource="sofincoName1">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+      </property>
+      <property name="sofincoName2" data-type="string" column-name="SOFINCO_NAME2" category-resource="categoryAccountMapping" display-name-resource="sofincoName2">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+      </property>
+   </table>
+    
+  </item-descriptor>
+
+  <item-descriptor name="contactInfo" display-name-resource="itemDescriptorContactInfo"  cache-mode="simple" item-expire-timeout="600000">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="dps_contact_info" type="primary" id-column-name="id">
+            <property name="firstName" display-name-resource="firstName" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+            <property name="middleName" hidden="true" />
+            <property name="lastName" display-name-resource="lastName" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="20" />
+            </property>
+            <property name="suffix" hidden="true" />
+            <property name="address1" display-name-resource="street" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+            <property name="address2" display-name-resource="apartment" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="20" />
+            </property>
+            <property name="address3" display-name-resource="building" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="30" />
+            </property>
+            <property name="city" display-name-resource="city" category-resource="categoryAddress" property-type="com.castorama.commerce.profile.CityPropertyDescriptor">
+                <attribute name="propertySortPriority" value="50" />
+            </property>
+            <property name="postalCode" display-name-resource="country" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="60" />
+            </property>
+            <property name="jobTitle" hidden="true" />
+            <property name="companyName" hidden="true" />
+        </table>
+
+        <table name="CASTO_CONTACT_INFO" type="auxiliary" id-column-name="id">
+            <property name="locality" column-name="locality" data-type="string" category-resource="categoryAddress"
+                display-name-resource="locality">
+                <attribute name="propertySortPriority" value="40" />
+            </property>
+            <property name="phoneNumber2" column-name="phone_number_2" data-type="string" category-resource="categoryNumbers"
+                display-name-resource="phoneNumber2">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+
+            <property name="civilite" data-type="enumerated"
+                column-name="civilite" display-name-resource="title">
+                <attribute name="useCodeForValue" value="false" />
+                <!-- option value="Monsieur" code="1" />
+                <option value="Madame" code="2" />
+                <option value="Mlle" code="3" /-->
+                <option value="miss" code="3"/>
+                <option value="mrs" code="2" />
+                <option value="mr" code="1"/>
+                <option value="organization" code="5" />
+            </property>
+            <property name="societe" data-type="string"
+                column-name="societe" display-name-resource="societe" />
+                
+            <property category-resource="categoryGLF"
+                name="typeAdresse" data-type="enumerated" column-name="type_adresse"
+                display-name-resource="typeAdresse" queryable="true" writable="true">
+                <option value="Livraison" code="1" />
+                <option value="Facturation" code="2" />
+                <option value="Facturation et livraison" code="3" />
+            </property>
+
+            <property category-resource="categoryNumbers" name="gsm" data-type="string"
+                column-name="TEL_GSM" display-name-resource="gsm" />
+                
+            <property category-resource="categoryNumbers" name="telephonePro"
+                data-type="string" column-name="TEL_PROFESSIONNEL"
+                display-name-resource="telephonePro" />
+                
+            <property name="eMail" data-type="string"
+                column-name="EMAIL" display-name-resource="eMail" />
+
+            <property name="numTva" data-type="string"
+                column-name="numero_tva"
+                display-name-resource="numTva" />
+
+            <property name="infoSms" data-type="string"
+                column-name="infos_sms" display-name-resource="infoSms" />
+
+            <property name="adresseActive" data-type="enumerated"
+                column-name="active_adresse" display-name-resource="adresseActive"
+                 default="non" queryable="true" writable="true">
+                <option value="non" code="0" />
+                <option value="oui" code="1" />
+            </property>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="referee"  cache-mode="simple">
+        <table name="CASTO_REFEREE" type="primary" id-column-name="id">
+            <property name="email"  column-name="EMAIL" data-type="string"/>
+            <property name="couponid" column-name="COUPON_ID" data-type="string"/>
+            <property name="referrerCouponId" column-name="REF_COUPON_ID" data-type="string"/>
+            <property name="applied" column-name="APPLIED" data-type="boolean"/>
+        </table>    
+        <table name="CASTO_REFERRER_REFEREE" type="auxiliary" id-column-name="REFEREE_ID" shared-table-sequence="2">
+            <property name="referrer" column-name="REFERRER_ID" item-type="user">
+                <attribute name="uiwritable" value="false"/>
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="promotionStatus"
+        display-name-resource="itemDescriptorPromotionStatus" display-property="promotion"  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="dcs_usr_promostat" type="primary" id-column-name="status_id">
+            <property name="status_id" writable="false"    display-name-resource="statusId">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="passwordReminder" display-property="libelle"
+         display-name="Questions aide-memoire"  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_QUESTIONS" type="primary" id-column-name="id">
+            <property name="libelle" data-type="string"
+                column-name="libelle" display-name-resource="libelle" />
+            <property name="ordreAffichage" data-type="string"
+                column-name="ordre_affichage" display-name-resource="ordreAffichage" />
+        </table>
+    </item-descriptor>
+
+    <!-- PROFESSIONS [NOT USED. FOR MIGRATION ONLY]-->
+    <item-descriptor name="profession" display-property="libelle" display-name="Profession"  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_PROFESSION" type="primary" id-column-name="id">
+            <property name="libelle" data-type="string"
+                column-name="libelle" display-name-resource="libelle"/>
+        </table>
+    </item-descriptor>
+
+    <!-- NIVEAUX DE BRICOLAGE [NOT USED. FOR MIGRATION ONLY]-->
+    <item-descriptor name="niveauBricolage" display-property="libelle"    display-name="Niveau de bricolage"  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_NIVEAUX_BRICOLAGE" type="primary"
+            id-column-name="id">
+            <property name="libelle" data-type="string"
+                column-name="libelle" display-name-resource="libelle" />
+        </table>
+    </item-descriptor>
+
+    <!-- SAUVEGARDE PAGE [NOT USED. FOR MIGRATION ONLY]-->
+    <item-descriptor name="sauvegardePage" display-property="libelle" display-name="Page"  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_SAUVEGARDE_PAGE" type="primary" id-column-name="id">
+            <property name="libelle" data-type="string"
+                column-name="LIBELLE" display-name-resource="libelle" />
+            <property name="url" data-type="string" column-name="URL"
+                display-name-resource="url" />
+        </table>
+    </item-descriptor>
+
+    <!-- OBJET E DECORATEUR [NOT USED. FOR MIGRATION ONLY]-->
+    <item-descriptor name="objetEDecorateur" display-property="nom"    display-name="Objet Edecorateur"  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_E_DECORATEUR_OBJET" type="primary"
+            id-column-name="id">
+            <property name="nom" data-type="string" column-name="nom"
+                display-name-resource="lastName" />
+            <property name="couleur" data-type="string"
+                column-name="couleur" display-name-resource="color" />
+        </table>
+    </item-descriptor>
+
+    <!-- SAUVEGARDE CREATION [NOT USED. FOR MIGRATION ONLY]-->
+    <item-descriptor name="sauvegardeCreation" display-property="nomSauvegarde"
+        display-name="Creation e-decorateur"  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_SAUVEGARDE_CREATION" type="primary" id-column-name="id">
+            <property name="nomSauvegarde" data-type="string"
+                column-name="nom_sauvegarde" display-name-resource="nomSauvegarde" />
+            <property name="nomPiece" data-type="string"
+                column-name="nom_piece" display-name-resource="nomPiece" />
+            <property name="nomMobilier" data-type="string"
+                column-name="nom_mobilier" display-name-resource="nomMobilier" />
+        </table>
+        <table name="CASTO_LISTE_OBJETS_DECO" type="multi"
+            id-column-name="sauvegarde" multi-column-name="seq">
+            <property name="listeObjets" data-type="list"
+                component-item-type="objetEDecorateur" column-name="objet"
+                queryable="true" display-name-resource="listeObjets" />
+        </table>
+    </item-descriptor>
+
+    <item-descriptor name="session_tracking"
+        display-name="Session tracking" display-property="trackId">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="casto_session_tracking" type="primary"
+            id-column-name="id">
+            <property category-resource="categoryTrackIds" name="trackId"
+                data-type="string" column-name="trackId" display-name-resource="trackId" />
+                
+            <property category-resource="categoryTrackIds" name="date_premiere_visite"
+                data-type="timestamp" column-name="date_premiere_visite"
+                display-name="datePremiereVisite" />
+                
+            <property category-resource="trackIds" name="date_derniere_visite"
+                data-type="timestamp" column-name="date_derniere_visite"
+                display-name="dateDerniereVisite" />
+        </table>
+    </item-descriptor>
+
+    <!-- [NOT USED. FOR MIGRATION ONLY] -->
+    <item-descriptor name="listeDeCourses" cache-mode="simple">
+        <table name="CASTO_LISTE_DE_COURSES" type="primary"
+            id-column-name="id">
+            <property name="listeDeCoursesId" column-name="id"
+                data-type="int" writable="false" />
+            <property name="libelle" column-name="libelle"
+                data-type="string"  />
+            <property name="creationDate" column-name="date_creation"
+                data-type="timestamp"  />
+        </table>
+        <table name="CASTO_LISTE_DE_COURSES_CONTENU" type="multi"
+            id-column-name="LISTE_DE_COURSES_ID">
+            <property name="contenu" data-type="set"
+                component-item-type="casto_sku" queryable="true"
+                display-name="contenu de la liste de courses" column-name="sku_id"
+                repository="/atg/commerce/catalog/ProductCatalog" />
+        </table>
+    </item-descriptor>
+    
+    <item-descriptor name="group" display-property="libelle"  cache-mode="simple">
+        <table name="CASTO_FOGROUPS" type="primary"    id-column-name="id">
+            <property name="groupId" column-name="id" data-type="int"
+                writable="false" />
+            <property name="libelle" column-name="libelle"
+                data-type="string"  />
+            <property name="dateCreation" column-name="date_creation"
+                data-type="timestamp"  />
+        </table>
+
+        <table name="CASTO_FOGROUPS_FOPRIV" type="multi"
+            id-column-name="group_id">
+            <property name="privileges" data-type="set"
+                component-item-type="privilege" queryable="true"
+                display-name="privilege(s)" column-name="priv_id" />
+        </table>
+    </item-descriptor>
+        
+    <item-descriptor name="privilege" display-property="libelle"  cache-mode="simple">
+        <table name="CASTO_FOPRIV" type="primary" id-column-name="id">
+            <property name="privilegeId" column-name="id"
+                data-type="int" writable="false" />
+            <property name="libelle" column-name="libelle"
+                data-type="string"  />
+        </table>
+    </item-descriptor>
+
+    <!-- [NOT USED. FOR MIGRATION ONLY] -->
+    <item-descriptor name="alerteDispo" display-name="alerteDispo"    display-property=""  cache-mode="simple">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_ALERTE_DISPONIBILITE" type="primary"
+            id-column-name="alerte_id">
+            <property name="sku" data-type="string" column-name="sku_id"
+                display-name-resource="sku" />
+                
+            <property name="user" item-type="user"
+                repository="/atg/userprofiling/ProfileAdapterRepository"
+                column-name="user_id" display-name-resource="user" />
+                
+            <property name="etatAlerte" data-type="string"
+                column-name="etat_alerte" display-name-resource="etatAlerte" />
+                
+            <property name="dateCreation" data-type="date"
+                column-name="date_creation_alerte" required="false" queryable="true"
+                display-name-resource="dateCreationAlerte" />
+            <property name="dateEnvoiEmail" data-type="date"
+                column-name="date_envoi_email" required="false" queryable="true"
+                display-name-resource="Date d'envoi de l'email" />
+        </table>
+    </item-descriptor>
+    
+    <item-descriptor name="passwordLink" cache-mode="disabled">
+        <table name="CASTO_PASSWORD_LINK" type="primary" id-column-name="ID">
+            <property name="email" data-types="string" column-names="ID" />
+            <property name="date" data-type="timestamp" column-name="DATE_EXP" />
+            <property name="key" data-type="string" column-name="KEY" />
+        </table>
+    </item-descriptor>
+
+</gsa-template>
+

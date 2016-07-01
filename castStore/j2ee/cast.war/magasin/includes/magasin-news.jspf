@@ -1,0 +1,43 @@
+  <dsp:importbean bean="/atg/dynamo/service/CurrentDate"/>
+  
+  
+  <dsp:droplet name="/atg/dynamo/droplet/ForEach">
+    <dsp:param name="array" param="magasin.listactus"/>
+    <dsp:param name="elementName" value="magasinNews"/>
+    <dsp:oparam name="outputStart">
+
+      
+    </dsp:oparam>       
+    <dsp:oparam name="output">
+    
+      <dsp:getvalueof var="activate" param="magasinNews.activate" />
+      <dsp:getvalueof var="datemin" param="magasinNews.datemin" />
+      <dsp:getvalueof var="datemax" param="magasinNews.datemax" />
+      
+      <dsp:getvalueof var="date" bean="CurrentDate"/>
+      
+      <c:if test="${activate == 'OUI' && not empty datemin && not empty datemax && datemin<=date.timeAsTimestamp && date.timeAsTimestamp<=datemax}">
+      <c:if test="${empty display or !display }">
+	          
+	    <div class="newsTicker">
+	      <h2 class="newsTitle"><fmt:message key="magasin.news.title" /></h2>
+      </c:if>
+      
+      <c:set var="display" value="true" />
+			  <dsp:getvalueof var="contenu" param="magasinNews.contenu" />
+	      <c:if test="${not empty contenu}">                  
+            <p>
+	          <c:out value="${contenu }" escapeXml="false"/>
+	        </p>  
+	      </c:if>
+      </c:if>
+                         
+            
+    </dsp:oparam>
+    <dsp:oparam name="outputEnd">
+    <c:if test="${not empty display and display }">
+    </div>
+    </c:if>
+    </dsp:oparam>
+
+  </dsp:droplet>

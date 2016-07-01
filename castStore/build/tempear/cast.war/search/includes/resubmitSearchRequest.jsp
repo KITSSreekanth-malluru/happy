@@ -1,0 +1,154 @@
+<dsp:page>
+
+  <dsp:importbean bean="/atg/commerce/search/catalog/QueryFormHandler"/>
+  <dsp:importbean bean="/atg/search/repository/FacetSearchTools"/>
+  <dsp:importbean bean="/atg/commerce/search/refinement/CommerceFacetTrailDroplet"/>
+  <dsp:importbean bean="/atg/commerce/catalog/CategoryLookup" />
+  <dsp:importbean bean="/atg/dynamo/droplet/IsEmpty"/>
+  
+  <dsp:getvalueof var="categoryId" param="categoryId"/>
+  <dsp:getvalueof var="addFacet" param="addFacet"/>
+  <dsp:getvalueof var="trail" param="trail"/>
+  <dsp:getvalueof var="question" param="question"/>
+  <dsp:getvalueof var="removeFacet" param="removeFacet"/>
+  <dsp:getvalueof var="sortByValue" param="sortByValue"/>
+  <dsp:getvalueof var="removeAllFacets" param="removeAllFacets"/>
+  <dsp:getvalueof var="productListingView" param="productListingView"/>
+  <dsp:getvalueof var="isMultiSearch" param="isMultiSearch"/>
+ 
+  <dsp:getvalueof var="requestURI" bean="/OriginatingRequest.requestURI"/>
+ 
+  <c:choose>
+   <c:when test="${sortByValue == 'lowHighPrice'}">
+     <c:set var="docSortMode" value="numprop"/>
+     <c:set var="docSortOrder" value="ascending"/>
+     <c:set var="docSortProp" value="price"/>
+     <c:set var="docSortPropVal" value="low"/>
+   </c:when>
+   <c:when test="${sortByValue == 'highLowPrice'}">
+     <c:set var="docSortMode" value="numprop"/>
+     <c:set var="docSortOrder" value="descending"/>
+     <c:set var="docSortProp" value="price"/>
+     <c:set var="docSortPropVal" value="low"/>
+   </c:when>
+   <c:otherwise>
+     <c:set var="docSortMode" value="relevance"/>    
+   </c:otherwise>
+  </c:choose>
+  
+  <dsp:getvalueof var="ajouterSearchRequest" param="ajouterSearchRequest"/>
+  <c:if test="${not empty ajouterSearchRequest && ajouterSearchRequest}">
+   <dsp:droplet name="/com/castorama/search/droplet/AjouterTrailBuilder">
+     <dsp:oparam name="output">
+        <dsp:getvalueof var="ajouterTrail" param="ajouterTrail" scope="request"/>
+       
+     </dsp:oparam>
+   </dsp:droplet>
+  </c:if>
+
+ <dsp:droplet name="IsEmpty">
+  <dsp:param name="value" bean="QueryFormHandler.searchResponse"/>
+  <dsp:oparam name="true">
+     
+   <c:choose>
+     <c:when test="${not empty categoryId || not empty addFacet || not empty trail || (not empty question && question != ' ')|| not empty ajouterTrail}">
+      <dsp:droplet name="/atg/targeting/TargetingFirst">
+        <dsp:param name="howMany" value="1"/>
+        <dsp:param name="fireViewItemEvent" value="false"/>
+        <dsp:param name="targeter" bean="/atg/registry/RepositoryTargeters/RefinementRepository/CategoryFacetTargeter"/>
+        <dsp:oparam name="output">
+           <dsp:getvalueof var="refElRepIdVar" param="element.repositoryId"/>
+           <c:set var="refElRepId" value="${refElRepIdVar }"/>
+        </dsp:oparam>
+       </dsp:droplet>
+     
+      <dsp:droplet name="CommerceFacetTrailDroplet">
+       
+       <dsp:param name="trail" value="${trail }" />
+       
+       
+       <c:choose>
+         <c:when test="${not empty question && question != ' ' && !fn:contains(trail, 'SRCH')}">
+           <c:set var="addFacetVar" value="SRCH:${fn:trim(question)}"/>
+         </c:when>
+         <c:otherwise>
+         <c:choose>
+         <c:when test="${not empty param.addFacet }">
+           <c:set var="addFacetVar" value="${param.addFacet }"/>
+         </c:when>
+         <c:otherwise>
+         <c:choose>
+          <c:when test="${not empty categoryId }">
+           <dsp:droplet name="CategoryLookup">
+                 <dsp:param name="id" param="categoryId" />
+             <dsp:param name="elementName" value="category" />
+             <dsp:oparam name="output">
+               <dsp:getvalueof var="refineConfig" param="element.refineConfig" vartype="java.lang.Object" scope="request"/>
+               <c:set var="refineConfigId" value="${refineConfig.id }"/>
+             </dsp:oparam>
+           </dsp:droplet>
+           <c:set var="addFacetTemp" value="${refElRepId }:${categoryId }"/>
+          
+           <c:if test="${!fn:contains(param.trail, addFacetTemp) }">
+             <c:set var="addFacetVar" value="${refElRepId }:${categoryId }"/>
+           </c:if>
+         </c:when>
+         </c:choose>
+         </c:otherwise>
+         </c:choose>
+        </c:otherwise>
+        </c:choose>
+      
+       <dsp:param name="addFacet" value="${addFacetVar }" />
+       <dsp:param name="removeFacet" param="removeFacet" />
+       <dsp:param name="refineConfig" value="${refineConfig }" />
+         
+       <dsp:oparam name="output">
+         <c:if test="${empty param.pageNum || param.pageNum == '' }">
+           <dsp:setvalue param="pageNum" value="1"/>
+         </c:if>
+
+        <dsp:getvalueof var="articlesParPage" param="articlesParPage"/>
+         <c:choose>
+            <c:when test="${not empty articlesParPage && articlesParPage != ''}">
+                <dsp:setvalue bean="QueryFormHandler.searchRequest.pageSize" value="${articlesParPage}" />
+            </c:when>
+            <c:otherwise>
+                  <dsp:getvalueof var="articlesParPage" bean="/atg/userprofiling/SessionBean.values.articlesParPage"/>
+                 <c:if test="${not empty articlesParPage && articlesParPage != ''}">
+                     <dsp:setvalue bean="QueryFormHandler.searchRequest.pageSize" value="${articlesParPage}" />
+                 </c:if>
+            </c:otherwise>
+        </c:choose>
+         
+         <dsp:setvalue bean="QueryFormHandler.searchRequest.startCategory" value="${categoryId}"/>
+         <dsp:setvalue bean="QueryFormHandler.searchRequest.docSort" value="${docSortMode }"/>
+         <dsp:setvalue bean="QueryFormHandler.searchRequest.docSortOrder" value="${docSortOrder }"/>
+         <dsp:setvalue bean="QueryFormHandler.searchRequest.docSortProp" value="${docSortProp}"/>
+         <dsp:setvalue bean="QueryFormHandler.searchRequest.docSortPropVal" value="${docSortPropVal}"/>
+         <dsp:setvalue bean="QueryFormHandler.searchRequest.saveRequest" value="true"/>
+         <c:choose>
+          <c:when test="${not empty ajouterSearchRequest && ajouterSearchRequest}">
+          
+            <dsp:setvalue bean="FacetSearchTools.facetTrail" value="${ajouterTrail }"/>
+          </c:when>
+          <c:otherwise>
+            <dsp:setvalue bean="FacetSearchTools.facetTrail" paramvalue="facetTrail.trailString"/>
+          </c:otherwise>
+         </c:choose>
+         
+         <dsp:setvalue bean="FacetSearchTools.refineConfig" value="${refineConfigId }"/>
+         <dsp:setvalue bean="QueryFormHandler.errorURL" value="${requestURI}"/>
+         <c:if test="${empty isMultiSearch || !isMultiSearch }">
+          <dsp:setvalue bean="QueryFormHandler.goToPage" paramvalue="pageNum"  />
+         </c:if>
+         </dsp:oparam>
+        </dsp:droplet>
+       </c:when>
+      </c:choose>
+    </dsp:oparam>
+    <dsp:oparam name="false">
+    </dsp:oparam>
+  </dsp:droplet>
+
+</dsp:page>

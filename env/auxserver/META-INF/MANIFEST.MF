@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+ATG-Config-Path: config/config.jar
+ATG-Product: Castorama Aux Environment module
+ATG-Required: 

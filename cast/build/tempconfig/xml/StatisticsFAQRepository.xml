@@ -1,0 +1,48 @@
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN" 
+"http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+  <header>
+    <name>StatisticsFAQRepository</name>
+    <description>
+    	Statistiques pour les formulaires de contacts.
+    </description>
+  </header>
+
+<item-descriptor name="StatisticsFAQRepository" display-property="id">
+     <table name="cast_faq_statistics" type="primary" id-column-name="stat_id">
+     	<property name="id" column-name="stat_id" data-type="string" category="systÐ“Ð?me" writable="false"/>
+     	<property name="type" column-name="TYPE_CONTACT" data-type="string" category="systÐ“Ð?me"/>
+     	<property name="motif" column-name="MOTIF" data-type="string" category="motif"/>
+     	<property name="codeMotif" column-name="code_motif" data-type="string" category="motif"/>
+     	<property name="civilite" column-name="CIVILITE" data-type="string" category="Basics client"/>
+     	<property name="nom" column-name="NOM" data-type="string" category="Basics client"/>
+     	<property name="prenom" column-name="PRENOM" data-type="string" category="Basics client"/>
+     	<property name="email" column-name="EMAIL" data-type="string" category="Basics client"/>
+     	<property name="adresseReponse" column-name="adresse_reponse" data-type="string" category="Basics client"/>
+     	<property name="adresse" column-name="ADRESSE" data-type="string" category="Basics client"/>
+     	<property name="ville" column-name="VILLE" data-type="string" category="Basics client"/>
+     	<property name="codePostal" column-name="CODE_POSTAL" data-type="string" category="Basics client"/>
+     	<property name="telephone" column-name="TELEPHONE" data-type="string" category="Basics client"/>
+     	<property name="message" column-name="MESSAGE" data-type="string"/>
+     	<property name="question" column-name="question" data-type="string"/>
+     	<property name="referenceProduit" column-name="REFERENCE_PRODUIT" data-type="string"/>
+     	<property name="magasin" column-name="MAGASIN" data-type="string" category="machine client"/>
+     	<property name="typeMachine" column-name="TYPE_MACHINE" data-type="string" category="machine client"/>
+     	<property name="typeProcesseur" column-name="TYPE_PROCESSEUR" data-type="string" category="machine client"/>
+     	<property name="systemeExploitation" column-name="SYSTEME_EXPLOIT" data-type="string" category="machine client"/>
+     	<property name="navigateur" column-name="NAVIGUATEUR" data-type="string" category="machine client"/>
+     	<property name="connexion" column-name="CONNEXION" data-type="string" category="machine client"/>
+     	<property name="lundi" column-name="LUNDI" data-type="boolean" category="plages contacts clients"/>
+     	<property name="mardi" column-name="MARDI" data-type="boolean" category="plages contacts clients"/>
+     	<property name="mercredi" column-name="MERCREDI" data-type="boolean" category="plages contacts clients"/>
+     	<property name="jeudi" column-name="JEUDI" data-type="boolean" category="plages contacts clients"/>
+     	<property name="vendredi" column-name="VENDREDI" data-type="boolean" category="plages contacts clients"/>
+     	<property name="matin" column-name="MATIN" data-type="boolean" category="plages contacts clients"/>
+     	<property name="apresMidi" column-name="APRES_MIDI" data-type="boolean" category="plages contacts clients"/>
+     	<property name="dateEnregistrement" column-name="DATE_ENREG" data-type="date" category="systÐ“Ð?me"/>
+     	<property name="profileId" column-name="profile_id" data-type="string" category="systÐ“Ð?me"/>
+     	<property name="orderId" column-name="order_id" data-type="string" category="systÐ“Ð?me"/>     	
+     </table>     
+</item-descriptor>
+</gsa-template>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE process-manager-configuration PUBLIC "-//Art Technology Group, Inc.//DTD Process Manager//EN"
+'http://www.atg.com/dtds/processmanager/processmanager_1.0.dtd'>
+<process-manager-configuration>
+	<grammar-registry>
+		<grammar-extension-class>com.castorama.scenario.CastoramaGrammarExtension</grammar-extension-class>
+	</grammar-registry>
+
+	<action-registry>	
+		
+		<action>
+			<action-name>HandleSearch</action-name>
+			<resource-bundle>com.castorama.scenario.ScenarioResources</resource-bundle>
+			<action-class>com.castorama.scenario.SearchMessageHandlerAction</action-class>
+			<description-resource>searchMessageHandler.description</description-resource>
+			<action-execution-policy>individual</action-execution-policy>
+			<action-error-response>continue</action-error-response>
+			<action-configuration>
+				/com/castorama/scenario/configuration/SearchMessageHandlerConfiguration
+			</action-configuration>	
+		</action>
+
+		<action>
+			<action-name>SendCouponToReferrer</action-name>
+			<resource-bundle>com.castorama.scenario.ScenarioResources</resource-bundle>
+			<action-class>com.castorama.scenario.SendCouponToReferrerAction</action-class>
+			<icon-resource>com/castorama/scenario/images/action-sendmail.gif</icon-resource>
+			<description-resource>coupon.description</description-resource>
+			<display-name-resource>coupon.referrer.displayName</display-name-resource>
+			<action-execution-policy>individual</action-execution-policy>
+			<action-error-response>continue</action-error-response>
+			<action-configuration>
+				/com/castorama/scenario/configuration/SendCouponToReferrerActionConfiguration
+			</action-configuration>					
+			<action-parameter>
+				<action-parameter-name>template</action-parameter-name>
+				<required>true</required>
+				<description-resource>coupon.template.description</description-resource>
+			</action-parameter>			
+		</action>
+
+		<action>
+			<action-name>SendCouponToReferee</action-name>
+			<resource-bundle>com.castorama.scenario.ScenarioResources</resource-bundle>
+			<action-class>com.castorama.scenario.SendCouponToRefereeAction</action-class>
+			<icon-resource>com/castorama/scenario/images/action-sendmail.gif</icon-resource>
+			<description-resource>coupon.description</description-resource>
+			<display-name-resource>coupon.referee.displayName</display-name-resource>
+			<action-execution-policy>individual</action-execution-policy>
+			<action-error-response>continue</action-error-response>	
+			<action-configuration>
+				/com/castorama/scenario/configuration/SendCouponToRefereeActionConfiguration
+			</action-configuration>			
+			<action-parameter>
+				<action-parameter-name>template</action-parameter-name>
+				<required>true</required>
+				<description-resource>coupon.template.description</description-resource>
+			</action-parameter>
+			<action-parameter>
+				<action-parameter-name>referrerTemplate</action-parameter-name>
+				<required>true</required>
+				<description-resource>coupon.referrerTemplate.description</description-resource>
+			</action-parameter>
+		</action>
+	</action-registry>
+
+	<condition-registry>
+		<condition>
+			<condition-name>ReferrerProgramIsActive</condition-name>
+			<filter-class>com.castorama.scenario.ReferrerProgramIsActiveFilter</filter-class>
+			<resource-bundle>com.castorama.scenario.ScenarioResources</resource-bundle>
+			<display-name-resource>referrerProgramFilter.displayName</display-name-resource>
+			<description-resource>referrerProgramFilter.description</description-resource>		
+			<filter-configuration>
+				/com/castorama/scenario/configuration/ReferrerProgramIsActiveConfiguration
+			</filter-configuration>	
+		</condition>
+		
+		<condition>
+			<condition-name>UserHasReferrer</condition-name>
+			<filter-class>com.castorama.scenario.GodFatherFilter</filter-class>
+			<resource-bundle>com.castorama.scenario.ScenarioResources</resource-bundle>
+			<display-name-resource>hasGodFather.displayName</display-name-resource>
+			<description-resource>hasGodFather.description</description-resource>			
+		</condition>
+
+		<condition>
+			<condition-name>UserFirstOrder</condition-name>
+			<filter-class>com.castorama.scenario.FirstOrderFilter</filter-class>
+			<resource-bundle>com.castorama.scenario.ScenarioResources</resource-bundle>
+			<display-name-resource>firstOrder.displayName</display-name-resource>
+			<description-resource>firstOrder.description</description-resource>
+			<filter-configuration>
+				/com/castorama/scenario/configuration/FirstOrderFilterConfiguration
+			</filter-configuration>			
+		</condition>
+	</condition-registry>
+
+	<event-registry>
+		<event>
+			<jms-type>com.castorama.scenario.Invite</jms-type>
+			<message-class>com.castorama.scenario.InviteMessage</message-class>
+			<message-context>request</message-context>
+			<message-scope>individual</message-scope>
+			<resource-bundle>com.castorama.scenario.ScenarioResources</resource-bundle>
+			<description-resource>castorama.invite.description</description-resource>
+			<display-name-resource>castorama.invite.displayName</display-name-resource>
+			<event-parameter>
+				<event-parameter-name>profile</event-parameter-name>
+				<display-name-resource>castorama.invite.referrer</display-name-resource>
+			</event-parameter>
+			<event-parameter>
+				<event-parameter-name>referee</event-parameter-name>
+				<display-name-resource>castorama.invite.referee</display-name-resource>
+			</event-parameter>
+		</event>
+	</event-registry>
+</process-manager-configuration>

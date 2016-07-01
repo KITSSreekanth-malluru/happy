@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+    <header>
+        <name>Rack</name>
+        <author>MK</author>
+        <version>1.0</version>
+    </header>
+
+    <!-- ABONNEMENT NEWSLETTER -->
+    <item-descriptor name="emplacement" display-property="id" display-name="Rack" item-expire-timeout="180000" query-expire-timeout="180000" query-cache-size="8000">
+        <table name="EMPLACEMENT_ILOT" type="primary" id-column-names="CILOT,CETAB,CESCLAVE">
+            <property name="id" column-names="CILOT,CETAB,CESCLAVE" data-types="int,int,int"/>
+            <property name="localisation" item-type="localisation" column-names="CILOT,CETAB" display-name="Localisation"/>
+            <property name="storeId" data-type="int" column-name="CETAB" display-name="Store Id"/>
+            <property name="productId" data-type="int" column-name="CESCLAVE" display-name="Product Id"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="localisation" display-property="id" display-name="Rack" item-expire-timeout="180000" query-expire-timeout="180000" query-cache-size="2000">
+        <table name="LOCALISATION_ILOT" type="primary" id-column-names="CILOT,CETAB">
+            <property name="id" data-types="int,int" column-names="CILOT,CETAB" display-name="Rack Id"/>
+            <property name="storeId" data-type="int" column-name="CETAB" display-name="Store Id"/>
+            <property name="levelCode" data-type="int" column-name="CRITERE1" display-name="Level code"/>
+            <property name="pathNumber" data-type="int" column-name="CRITERE2" display-name="Path Number"/>
+            <property name="sideCode" data-type="int" column-name="CRITERE3" display-name="Side code"/>
+            <property name="localizationCode" data-type="int" column-name="CRITERE4" display-name="Localization code"/>
+            <property name="modificationStatus" data-type="int" default="0" column-name="TMODIFICATION"/>
+        </table>
+    </item-descriptor>
+</gsa-template>

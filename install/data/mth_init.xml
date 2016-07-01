@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+
+    <import-items>
+
+        <add-item item-descriptor="thematique" id="t100001">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_100000,cast_doc_100001,cast_doc_100002,cast_doc_100003]]></set-property>
+            <set-property name="description"><![CDATA[Thematique1 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique1 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100002]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique1 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique1 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[989111_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#61b751]]></set-property>
+            <set-property name="smallImage"><![CDATA[989111_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique1]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique1 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100003,cast_doc_100004,cast_doc_100005]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100002">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_100006,cast_doc_100007,cast_doc_100008]]></set-property>
+            <set-property name="description"><![CDATA[Thematique2 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique2 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100001]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique2 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique2 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[532227_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#b0aa00]]></set-property>
+            <set-property name="smallImage"><![CDATA[532227_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique2]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique2 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100009,cast_doc_1000010,cast_doc_1000011]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100003">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000021,cast_doc_1000023,cast_doc_1000022]]></set-property>
+            <set-property name="description"><![CDATA[Thematique3 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique3 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100001]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique3 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique3 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[533318_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#432e2e]]></set-property>
+            <set-property name="smallImage"><![CDATA[533318_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique3]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique3 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100003,cast_doc_1000025,cast_doc_1000026]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100004">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000027,cast_doc_1000028,cast_doc_1000029]]></set-property>
+            <set-property name="description"><![CDATA[Thematique4 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique4 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique4 Bottom documents Title]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique4 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[293345_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#644b17]]></set-property>
+            <set-property name="smallImage"><![CDATA[293345_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique4]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique4 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_1000030,cast_doc_1000031,cast_doc_1000016]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100005">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000027,cast_doc_1000028,cast_doc_1000029]]></set-property>
+            <set-property name="description"><![CDATA[Thematique5 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique5 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique5 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique5 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[555060_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#007e95]]></set-property>
+            <set-property name="smallImage"><![CDATA[555060_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique5]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique5 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#333333]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100009,cast_doc_100002,cast_doc_1000010]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100006">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000018,cast_doc_1000020,cast_doc_1000014]]></set-property>
+            <set-property name="description"><![CDATA[Thematique6 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique6 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique6 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique6 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[666362_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#004a2c]]></set-property>
+            <set-property name="smallImage"><![CDATA[666362_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique6]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique6 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_1000026,cast_doc_1000030,cast_doc_1000025]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100007">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_100000,cast_doc_100001,cast_doc_100002,cast_doc_100003]]></set-property>
+            <set-property name="description"><![CDATA[Thematique7 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique7 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100002]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique7 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique7 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[989111_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#61b751]]></set-property>
+            <set-property name="smallImage"><![CDATA[989111_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique7]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique7 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100003,cast_doc_100004,cast_doc_100005]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100008">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_100006,cast_doc_100007,cast_doc_100008]]></set-property>
+            <set-property name="description"><![CDATA[Thematique8 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique8 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100001]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique8 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique8 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[532227_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#b0aa00]]></set-property>
+            <set-property name="smallImage"><![CDATA[532227_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique8]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique8 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100009,cast_doc_1000010,cast_doc_1000011]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100009">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000021,cast_doc_1000023,cast_doc_1000022]]></set-property>
+            <set-property name="description"><![CDATA[Thematique9 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique9 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100001]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique9 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique9 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[533318_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#432e2e]]></set-property>
+            <set-property name="smallImage"><![CDATA[533318_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique9]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique9 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100003,cast_doc_1000025,cast_doc_1000026]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100010">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000027,cast_doc_1000028,cast_doc_1000029]]></set-property>
+            <set-property name="description"><![CDATA[Thematique10 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique10 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique10 Bottom documents Title]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique10 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[293345_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#644b17]]></set-property>
+            <set-property name="smallImage"><![CDATA[293345_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique10]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique10 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_1000030,cast_doc_1000031,cast_doc_1000016]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100011">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000027,cast_doc_1000028,cast_doc_1000029]]></set-property>
+            <set-property name="description"><![CDATA[Thematique11 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique11 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique11 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique11 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[555060_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#007e95]]></set-property>
+            <set-property name="smallImage"><![CDATA[555060_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique11]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique11 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#333333]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_100009,cast_doc_100002,cast_doc_1000010]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100012">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000018,cast_doc_1000020,cast_doc_1000014]]></set-property>
+            <set-property name="description"><![CDATA[Thematique12 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique12 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique12 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique12 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[666362_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#004a2c]]></set-property>
+            <set-property name="smallImage"><![CDATA[666362_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique12]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique12 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_1000026,cast_doc_1000030,cast_doc_1000025]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100013">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000018,cast_doc_1000020,cast_doc_1000014]]></set-property>
+            <set-property name="description"><![CDATA[Thematique13 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique13 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003,ct100004]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique13 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique13 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[666362_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#004a2c]]></set-property>
+            <set-property name="smallImage"><![CDATA[666362_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique13]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique13 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_1000026,cast_doc_1000030,cast_doc_1000025]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100014">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000018,cast_doc_1000020,cast_doc_1000014]]></set-property>
+            <set-property name="description"><![CDATA[Thematique14 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique14 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003,ct100004]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique14 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique14 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[666362_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#004a2c]]></set-property>
+            <set-property name="smallImage"><![CDATA[666362_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique14]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique14 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_1000026,cast_doc_1000030,cast_doc_1000025]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="thematique" id="t100015">
+            <set-property name="bottomDocumentsList">
+                <![CDATA[cast_doc_1000018,cast_doc_1000020,cast_doc_1000014]]></set-property>
+            <set-property name="description"><![CDATA[Thematique15 Description]]></set-property>
+            <set-property name="bottomDocsDescription">
+                <![CDATA[Thematique15 Bottom documents Description]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100003,ct100005]]></set-property>
+            <set-property name="topDocsDescription"><![CDATA[Thematique15 Top documents Description]]></set-property>
+            <set-property name="topDocsTitle"><![CDATA[Thematique15 Top documents Title]]></set-property>
+            <set-property name="bigImage"><![CDATA[666362_w270]]></set-property>
+            <set-property name="bgColor"><![CDATA[#004a2c]]></set-property>
+            <set-property name="smallImage"><![CDATA[666362_w125]]></set-property>
+            <set-property name="title"><![CDATA[Thematique15]]></set-property>
+            <set-property name="bottomDocsTitle"><![CDATA[Thematique15 Bottom documents Title]]></set-property>
+            <set-property name="fontColor"><![CDATA[#ffffff]]></set-property>
+            <set-property name="topDocumentsList">
+                <![CDATA[cast_doc_1000026,cast_doc_1000030,cast_doc_1000025]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="media-external" id="m320042">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/lv_menu_title_deco.png]]></set-property>
+            <set-property name="path"><![CDATA[/images/troc/lv_menu_title_deco.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[/images/troc/lv_menu_title_deco.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320043">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/lv_menu_title_brico.png]]></set-property>
+            <set-property name="path"><![CDATA[/images/troc/lv_menu_title_brico.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[/images/troc/lv_menu_title_brico.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320048">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/lv_menu_title_amen.png]]></set-property>
+            <set-property name="path"><![CDATA[/images/troc/lv_menu_title_amen.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[/images/troc/lv_menu_title_amen.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320045">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/lv_menu_title_jardin.png]]></set-property>
+            <set-property name="path"><![CDATA[/images/troc/lv_menu_title_jardin.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[/images/troc/lv_menu_title_jardin.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320046">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/lv_menu_title_constr.png]]></set-property>
+            <set-property name="path"><![CDATA[/images/troc/lv_menu_title_constr.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[/images/troc/lv_menu_title_constr.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="chapterThematique" id="ct100001">
+            <set-property name="color"><![CDATA[#a50038]]></set-property>
+            <set-property name="title"><![CDATA[déco]]></set-property>
+            <set-property name="headerImage"><![CDATA[m320042]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="chapterThematique" id="ct100002">
+            <set-property name="color"><![CDATA[#006561]]></set-property>
+            <set-property name="title"><![CDATA[brico]]></set-property>
+            <set-property name="headerImage"><![CDATA[m320043]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="chapterThematique" id="ct100003">
+            <set-property name="color"><![CDATA[#ea5f0e]]></set-property>
+            <set-property name="title"><![CDATA[aménagement]]></set-property>
+            <set-property name="headerImage"><![CDATA[m320048]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="chapterThematique" id="ct100004">
+            <set-property name="color"><![CDATA[#6c8b16]]></set-property>
+            <set-property name="title"><![CDATA[jardin]]></set-property>
+            <set-property name="headerImage"><![CDATA[m320045]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="chapterThematique" id="ct100005">
+            <set-property name="color"><![CDATA[#885a0d]]></set-property>
+            <set-property name="title"><![CDATA[construction]]></set-property>
+            <set-property name="headerImage"><![CDATA[m320046]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="thematiqueContainer" id="tc100001">
+            <set-property name="title"><![CDATA[Menu thematique container]]></set-property>
+            <set-property name="thematiqueList">
+                <![CDATA[t100001,t100002,t100003,t100004,t100005,t100006,t100007,t100008,t100009,t100010,t100011,t100012,t100013,t100014,t100015]]></set-property>
+            <set-property name="chapterList"><![CDATA[ct100001,ct100002,ct100003,ct100004,ct100005]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="media-external" id="m480042">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/lancez-vous.png]]></set-property>
+            <set-property name="path"><![CDATA[/lancez-vous]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[lancez-vous]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320044">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <set-property name="url"><![CDATA[LVSubDropPane.jsp]]></set-property>
+            <set-property name="path"><![CDATA[LV Sub Drop Pane]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[LV Sub Drop Pane]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="media-external" id="m310047">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/les_projets_castoche.png]]></set-property>
+            <set-property name="path"><![CDATA[/les_projets_castoche.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[les_projets_castoche.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320053">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/troc_heures.png]]></set-property>
+            <set-property name="path"><![CDATA[/troc_heures.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[troc_heures.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320056">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/troc_solutions.png]]></set-property>
+            <set-property name="path"><![CDATA[/troc_solutions.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[troc_solutions.png]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="menuItem" id="200002">
+            <set-property name="menu"><![CDATA[300004]]></set-property>
+            <set-property name="image"><![CDATA[m480042]]></set-property>
+            <set-property name="title"><![CDATA[Lancez-vous item]]></set-property>
+            <set-property name="template"><![CDATA[m320044]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="200004">
+            <set-property name="menu"><![CDATA[300006]]></set-property>
+            <set-property name="image"><![CDATA[m310047]]></set-property>
+            <set-property name="title"><![CDATA[Les projets castoche]]></set-property>
+            <set-property name="template"><![CDATA[m320044]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300002">
+            <set-property name="url">
+                <![CDATA[http://www.castorama.fr/store/castCatalog/wrapPageContent.jsp?promoId=weekendscastoche]]></set-property>
+            <set-property name="title"><![CDATA[Voir les vidéos]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300004">
+            <set-property name="url"><![CDATA[/store/conseils-et-forums.jsp]]></set-property>
+            <set-property name="title"><![CDATA[Voir les vidéos]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300006">
+            <set-property name="menu"><![CDATA[300010]]></set-property>
+            <set-property name="image"><![CDATA[m320053]]></set-property>
+            <set-property name="title"><![CDATA[Troc heures]]></set-property>
+            <set-property name="template"><![CDATA[m320044]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300008">
+            <set-property name="menu"><![CDATA[300013]]></set-property>
+            <set-property name="image"><![CDATA[m320056]]></set-property>
+            <set-property name="title"><![CDATA[Troc conseils]]></set-property>
+            <set-property name="template"><![CDATA[m320044]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300010">
+            <set-property name="inNewTab"><![CDATA[true]]></set-property>
+            <set-property name="url"><![CDATA[http://www.lestrocheures.fr/]]></set-property>
+            <set-property name="title"><![CDATA[En savoir plus]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300012">
+            <set-property name="inNewTab"><![CDATA[true]]></set-property>
+            <set-property name="url"><![CDATA[/store/]]></set-property>
+            <set-property name="title"><![CDATA[Forum Brico]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300014">
+            <set-property name="inNewTab"><![CDATA[true]]></set-property>
+            <set-property name="url"><![CDATA[/store/BONNES-AFFAIRES-cat250002.htm?navAction=jump]]></set-property>
+            <set-property name="title"><![CDATA[Forum Déco]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="media-external" id="m470042">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <set-property name="url"><![CDATA[TrocCategoryDropPane.jsp?menuId=300002&nim=5]]></set-property>
+            <set-property name="path"><![CDATA[LV Drop Pane]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[LV Drop Pane]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320047">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <set-property name="url"><![CDATA[TrocCategoryDropPane.jsp?menuId=300008&nim=6]]></set-property>
+            <set-property name="path"><![CDATA[LV Drop Pane]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[LV Drop Pane]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="catalog" id="masterCatalog">
+            <set-property name="topNavigationCategories">
+                <![CDATA[cat10003,cat10004,cat10005,cat10006,cat510005,cat510004,cat250002]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="casto_category" id="cat510005">
+            <set-property name="displayName"><![CDATA[Lancez-vous]]></set-property>
+            <set-property name="dropDownTemplate"><![CDATA[m470042]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="casto_category" id="cat510004">
+            <set-property name="displayName"><![CDATA[TROC communaute]]></set-property>
+            <set-property name="dropDownTemplate"><![CDATA[m320047]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="media-external" id="m310044">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/lancez-vous_bg.png]]></set-property>
+            <set-property name="path"><![CDATA[/lancez-vous_bg.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[lancez-vous_bg.png]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="guiMenu" id="300002">
+            <set-property name="menuItemsList"><![CDATA[200002,200004]]></set-property>
+            <set-property name="image"><![CDATA[m310044]]></set-property>
+            <set-property name="title"><![CDATA[Lancez-vous]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="guiMenu" id="300004">
+            <set-property name="menuItemsList"><![CDATA[300004]]></set-property>
+            <set-property name="title"><![CDATA[Lancez-vous submenu]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m330044">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/ban_pc.png]]></set-property>
+            <set-property name="path"><![CDATA[/ban_pc.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[ban_pc.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="guiMenu" id="300006">
+            <set-property name="menuItemsList"><![CDATA[300002]]></set-property>
+            <set-property name="image"><![CDATA[m330044]]></set-property>
+            <set-property name="title"><![CDATA[Les projets castoche submenu]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m320050">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/troc_bg.png]]></set-property>
+            <set-property name="path"><![CDATA[/troc_bg.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[troc_bg.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="guiMenu" id="300008">
+            <set-property name="menuItemsList"><![CDATA[300006,300008]]></set-property>
+            <set-property name="image"><![CDATA[m320050]]></set-property>
+            <set-property name="title"><![CDATA[Troc communaute]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m330047">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/ban_th.png]]></set-property>
+            <set-property name="path"><![CDATA[/ban_th.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[ban_th.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="guiMenu" id="300010">
+            <set-property name="menuItemsList"><![CDATA[300010]]></set-property>
+            <set-property name="image"><![CDATA[m330047]]></set-property>
+            <set-property name="title"><![CDATA[Troc communaute heures submenu]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="m330050">
+            <set-property name="parentFolder"><![CDATA[imageFolder]]></set-property>
+            <set-property name="url"><![CDATA[/images/troc/ban_tc.png]]></set-property>
+            <set-property name="path"><![CDATA[/ban_tc.png]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[ban_tc.png]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="guiMenu" id="300013">
+            <set-property name="menuItemsList"><![CDATA[300012,300014]]></set-property>
+            <set-property name="image"><![CDATA[m330050]]></set-property>
+            <set-property name="title"><![CDATA[Troc communaute conseils submenu]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="promoInformation" id="1200032">
+            <set-property name="htmlUrl"><![CDATA[/banners/troc/LancezVousBottomBanner.html]]></set-property>
+            <set-property name="title"><![CDATA[990x153]]></set-property>
+            <set-property name="url"><![CDATA[#]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoTemplate" id="500022">
+            <set-property name="layoutType"><![CDATA[1.3 big in one line]]></set-property>
+            <set-property name="promoInformation"><![CDATA[1=1200032]]></set-property>
+        </add-item>
+
+    </import-items>
+</gsa-template>

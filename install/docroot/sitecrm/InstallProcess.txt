@@ -1,0 +1,105 @@
+Project: http://www.castorama.fr/ - SiteCRM
+ProjectID: casrmscfrq49
+
+
+Below is the procedure to activate the project: 
+
+
+Procedure To Set The Codes For Launch >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>. 
+
+Step: 1 --->
+
+	Please find attached sitecrm.zip (Survey Code Package). 
+	Unzip-The survey codes contains a folder: sitecrm  
+
+
+Step: 2 --->
+	Mention the installed directory path on the sitecrm2.js file on line no 5
+
+	var maindirurlpopcrm="http://?????????.???/sitecrm" Replace the ??? with the installed path of the Sitecrm folder
+
+
+
+Step: 3 --->
+
+	Upload the sitecrm folder to the root directory of http://www.castorama.fr/..  website. 
+
+
+Step: 4 --->
+
+	To activate the Survey Invitation Application (Survey), place the JavaScript source tag code within ***********
+	signs between end </head> and start <body> tag of the webpage.
+
+
+
+	//***************************** 
+
+		<script language="javascript" type="text/javascript" src="http://www.castorama.fr/sitecrm/sitecrm2.js">//</script>
+
+	//****************************** 
+
+
+	Webpages to be tagged with JavaScript survey code… 
+
+	All the pages of the website.
+
+
+
+Step: 5 --->
+	
+	If you have any flash on you website please make sure that you have the following parameter value included
+	
+		<param name="wmode" value="opaque" />  OR  <param name="wmode" value="transparent" />
+	
+	we include this parameter on the embeded flash object, so that we can give a focus on the popup over any flash objects.
+
+Step: 6 --->
+
+	To test the popin on the Pre-Production sites, change the following variables as below in the 'sitecrm2.js' file Line no 9 to 11.
+
+	var exit=100;     //Enter percent
+	var entry=0;    //Enter percent
+	var nosurvey=0; //Enter percent
+	
+	
+	once you have competed your test, pl put back the earlier variables as it was before.
+	verify with crmmetrix, the working of the popin.	
+	
+	When all the above steps are successful, the popin is ready to go live.
+
+
+Here is a brief explanation about the popup working at our end.
+----------------------------------------------------------------
+
+	1> stealth.htm
+
+	This is the stealth window (minimized). This functions as a tracker for the Exit Survey.
+	This stealth window will originate from the sitecrm directory on http://www.castorama.fr/sitecrm/...
+	This window works in stealth mode and is not visible to the user in expanded form. Once the code
+	in this window detects the time specified on the intercept.js is reached, it will self
+	destruct and display the Exit Survey Invitation Window (exit.htm).
+
+	2> exit.htm 
+
+	This is the invitation for exit survey. exit.htm window will originate from the sitecrm directory on 
+	http://www.castorama.fr/sitecrm/. When the user clicks 'Take Survey' , the survey will originate from
+	crmmetrix Server and managed at our end.
+
+	3>intercep.js
+	This Javascript file contains of necessary informations to activate the popin, the interception rate and the size of the window.
+
+
+If you have any questions or require further assistance, feel free to contact Albert ZACHARIAS ((33) 1 41 05 90 19) or email: azacharias@crmmetrix.com.
+
+
+
+DEMO STAGED AT TEST BED
+-----------------------
+
+	http://www.crmmetrix.fr/projects/2009/sc/casrmscfrq49/popuptest.asp
+
+
+	You can see the survey codes in action by visiting the above testbed url. We have replicated the same type of
+	scenario as above. Once you are on the above webpage, based on the random numbers assigned, you will see the
+	entry survey, exit survey or nothing. Please delete cookies and it will refresh the page until you are
+	intercepted with Minimized Window. 

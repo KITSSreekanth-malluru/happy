@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<popupmenu position="TL" autosize="0" _bgimg="fond_buttons.png" arrowsrc="xbutton_miniarrow_right.png" direction="right" left="15" top="28" right="0" bottom="0" bgcolor="0xFFFFFF" bgover="0xe2e9f1" bgalpha="100" border="1" bordercolor="0xffffff" borderalpha="100" spacex="-1" spacey="-1" width="140" height="18" marginleft="3" marginright="3" margintop="3" marginbottom="3">
+	<textformat font="verdana" textsize="10" textcolor="0x00000" textalign="center"/>
+	<item direction="bottom" event="gotopage" value="2" left="100" autosize="0" width="140" height="18" local="1" >
+		<textformat local="1" font="verdana" textsize="10" textcolor="0x00000" textalign="center"/>		
+		<l><![CDATA[          SOMMAIRE]]></l>
+		<a><![CDATA[Item 01]]></a>
+		<i></i>
+		
+		
+		<item event="gotopage" value="4">			
+			<l><![CDATA[Concrétisez vos projets !]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		
+		
+		<item event="gotopage" value="4">			
+			<l><![CDATA[Les Chèques Fidélité]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		<item event="gotopage" value="5">			
+			<l><![CDATA[Des opportunités toute l'année]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		
+		</item>
+		
+		
+		
+		
+		<item event="gotopage" value="6">			
+			<l><![CDATA[Facilitez-vous la vie !]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		
+		
+		
+		
+		<item event="gotopage" value="6">			
+			<l><![CDATA[Des garanties exclusives offertes]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		<item event="gotopage" value="8">			
+			<l><![CDATA[www.castorama.fr]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		
+		</item>
+		
+		
+		
+		
+		
+		
+		
+		<item event="gotopage" value="10">			
+			<l><![CDATA[Financez vos achats !]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+	
+		
+		
+		
+		<item event="gotopage" value="10">			
+			<l><![CDATA[La réserve d'argent]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		<item event="gotopage" value="11">			
+			<l><![CDATA[Comptant, petites mensualités, 3 mois]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		<item event="gotopage" value="12">			
+			<l><![CDATA[5, 10 ou 20 mois]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		<item event="gotopage" value="13">			
+			<l><![CDATA[Prêt Projet]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		
+			</item>
+		
+		
+		
+		
+		<item event="gotopage" value="14">			
+			<l><![CDATA[Profitez des facilités]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+	
+		
+		
+		
+		
+		
+		
+		<item event="gotopage" value="14">			
+			<l><![CDATA[Le retrait express d’argent]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		<item event="gotopage" value="15">			
+			<l><![CDATA[La demande de virement]]></l>
+			<a><![CDATA[]]></a>
+			<i></i>
+		</item>
+		
+			</item>
+		
+		
+		
+	</item>
+</popupmenu>

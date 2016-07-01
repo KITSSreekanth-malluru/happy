@@ -1,0 +1,66 @@
+  <dsp:importbean bean="/atg/dynamo/droplet/ForEach"/>
+   	
+  <dsp:getvalueof bean="/atg/commerce/ShoppingCart.current.TotalCommerceItemCount" var="size"/>  
+
+	<c:set var="productsList" value=""/>
+
+	<dsp:droplet name="ForEach">
+    <dsp:param name="array" bean="/atg/commerce/ShoppingCart.current.ShippingGroups"/>
+    <dsp:param name="elementName" value="ShippingGroup"/>
+    <dsp:oparam name="output">
+      <dsp:droplet name="ForEach">
+        <dsp:param name="array" param="ShippingGroup.CommerceItemRelationships"/>
+        <dsp:param name="elementName" value="CiRelationship"/>
+        <dsp:getvalueof var="count" param="count"/>
+        <dsp:oparam name="output">
+				  <dsp:getvalueof var="refNumber" param="CiRelationship.commerceItem.auxiliaryData.catalogRef.CodeArticle"/>
+				  <c:set var="productsList" value="${productsList};${refNumber}"/>
+				  <c:if test="${omnPageType eq 'payment'}">
+				  	<dsp:getvalueof var="quantity" param="CiRelationship.commerceItem.quantity"/>
+				  	<dsp:getvalueof var="itemAmount" param="CiRelationship.commerceItem.priceInfo.amount"/>
+				  	<c:set var="productsList" value="${productsList};${quantity};${itemAmount}"/>
+				  </c:if>
+				  <c:if test="${size != count}"><c:set var="productsList" value="${productsList},"/></c:if>
+        </dsp:oparam>
+      </dsp:droplet>
+    </dsp:oparam>
+  </dsp:droplet>
+    
+    
+  <c:choose>
+    <c:when test="${omnPageType eq 'cart'}">
+      <fmt:message var="omniturePageName" key="omniture.pageName.purchase.cart"/>
+			<fmt:message var="omnitureChannel" key="omniture.channel.purchase"/>
+			<c:set var="omnitureEventType" value="scView" scope="request"/>
+    </c:when>
+    <c:when test="${omnPageType eq 'delivery'}">
+    	<fmt:message var="omniturePageName" key="omniture.pageName.purchase.delivery"/>
+			<fmt:message var="omnitureChannel" key="omniture.channel.purchase"/>
+			<c:set var="omnitureEventType" value="scCheckout" scope="request"/>
+    </c:when>
+    <c:when test="${omnPageType eq 'payment'}">
+    	<fmt:message var="omniturePageName" key="omniture.pageName.purchase.payment"/>
+			<fmt:message var="omnitureChannel" key="omniture.channel.purchase"/>
+			<c:set var="omniturePurchaseID" value="${order.id}" scope="request"/>
+			<c:set var="omnitureEventType" value="purchase" scope="request"/>
+    </c:when>
+    <c:when test="${omnPageType eq 'precart' }">
+      <fmt:message var="omniturePageName" key="omniture.pageName.precart"/>
+      <fmt:message var="omnitureChannel" key="omniture.channel.purchase"/>
+      <dsp:getvalueof var="totalCommerceItemCount" bean="/atg/commerce/ShoppingCart.totalCommerceItemCount"/>
+      <dsp:getvalueof var="lastItemQuantity" bean="/atg/commerce/ShoppingCart.lastAddedCommerceItem.quantity"/>
+      
+      <c:choose>
+        <c:when test="${totalCommerceItemCount==lastItemQuantity }">
+          <c:set var="omnitureEventType" value="scOpen,scAdd" scope="request"/>
+        </c:when>
+        <c:otherwise>
+          <c:set var="omnitureEventType" value="scAdd" scope="request"/>
+        </c:otherwise>
+      </c:choose>      
+    </c:when>
+  </c:choose>
+        	
+	<c:set var="omniturePageName" value="${omniturePageName}" scope="request"/>
+	<c:set var="omnitureChannel" value="${omnitureChannel}" scope="request"/>
+	<c:set var="omnitureProducts" value="${productsList}" scope="request"/>

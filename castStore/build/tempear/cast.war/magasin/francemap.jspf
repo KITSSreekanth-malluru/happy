@@ -1,0 +1,68 @@
+<img class="image_carte"
+	src="/images-dynamiques/img-carte-france-1.gif"
+	usemap="#france" border="0" />
+<map id="france" name="france">
+	<area shape="poly"
+		coords="114,20,114,6,125,5,131,2,132,10,137,12,139,10,143,16,146,17,149,18,151,20,157,22,157,25,157,28,157,31,150,31,145,31,139,31,135,30,127,27,122,25,114,21"
+		href="magasin-carte-region.jsp?regionId=16&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="92,47,89,43,93,36,102,33,113,29,116,36,116,42,117,49,116,53,112,57,110,63,106,65,100,65,94,59,92,53,90,50"
+		href="magasin-carte-region.jsp?regionId=10&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="112,27,114,20,132,29,157,30,160,31,157,39,157,47,151,48,151,54,148,60,140,55,130,53,117,52"
+		href="magasin-carte-region.jsp?regionId=18&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="148,60,147,69,147,74,151,81,157,86,164,83,169,82,174,90,177,94,183,91,189,85,191,83,185,78,178,70,172,65,173,55,173,49,174,43,177,39,167,32,169,29,164,33,158,31"
+		href="magasin-carte-region.jsp?regionId=8&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="207,86,192,82,184,76,174,65,174,47,178,39,184,42,191,43,195,42,202,48,206,51,208,59,211,62,211,71"
+		href="magasin-carte-region.jsp?regionId=14&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="213,51,221,52,228,53,222,66,220,78,219,86,216,95,213,95,210,89,207,85,212,73,211,62,207,55"
+		href="magasin-carte-region.jsp?regionId=1&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="59,66,66,65,58,58,59,50,57,45,55,37,60,38,65,38,64,43,65,47,69,45,76,48,81,48,89,45,94,58,98,63,102,67,101,72,99,75,92,72,85,71,77,72,71,69"
+		href="magasin-carte-region.jsp?regionId=4&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="46,97,42,93,35,89,24,88,18,84,15,81,11,83,5,78,14,76,14,72,10,67,7,70,8,64,14,62,22,63,27,61,33,60,39,66,47,68,49,65,55,66,60,66,76,71,73,73,70,82,65,91,53,92"
+		href="magasin-carte-region.jsp?regionId=6&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="75,126,72,125,67,128,59,125,54,117,49,112,50,103,44,100,55,92,65,91,72,80,74,73,85,73,99,74,101,82,97,89,90,95,88,102,88,108,82,107,76,107,73,108,73,116"
+		href="magasin-carte-region.jsp?regionId=17&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="89,108,89,98,95,92,100,86,101,81,101,76,101,72,103,69,104,66,107,65,112,60,117,71,121,76,128,75,131,80,137,79,140,81,139,89,137,93,139,103,140,111,140,116,136,118,131,122,127,124,122,124,116,126,107,127,103,119,98,112"
+		href="magasin-carte-region.jsp?regionId=7&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="139,80,133,77,126,74,122,74,118,68,114,62,112,57,120,53,128,53,136,56,143,59,147,62,145,71,142,76"
+		href="magasin-carte-region.jsp?regionId=11&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="142,116,142,108,139,99,139,90,140,86,139,79,145,74,150,79,153,85,158,88,163,84,167,83,172,91,174,95,181,95,182,101,180,108,183,115,181,123,175,121,173,128,166,130,161,132,155,132,156,126,154,121,151,117,147,117"
+		href="magasin-carte-region.jsp?regionId=5&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="195,126,182,126,183,118,181,109,182,104,182,97,182,93,188,88,191,82,202,84,207,88,210,93,209,101,203,110,197,120"
+		href="magasin-carte-region.jsp?regionId=9&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="65,141,68,137,64,129,72,126,77,126,74,116,74,108,87,109,96,113,102,119,105,127,101,131,101,136,97,144,91,152,84,158,78,160,70,151"
+		href="magasin-carte-region.jsp?regionId=19&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="102,141,101,135,106,128,114,128,123,124,130,130,130,137,130,145,129,153,124,161,118,165,110,162,109,150,101,147"
+		href="magasin-carte-region.jsp?regionId=13&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="123,165,125,171,132,167,136,164,139,170,143,165,149,164,153,168,157,168,162,161,166,158,162,151,158,152,155,148,152,142,153,134,157,129,153,120,146,117,138,119,133,122,128,126,131,130,132,142,132,149,127,153"
+		href="magasin-carte-region.jsp?regionId=3&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="156,168,159,181,170,182,177,182,187,183,191,182,187,178,191,172,196,166,202,164,200,156,208,155,215,150,209,140,212,134,207,129,206,124,199,126,196,131,191,128,183,126,180,124,175,124,175,128,163,130,155,132,153,137,157,149,163,153,163,162"
+		href="magasin-carte-region.jsp?regionId=21&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="63,170,61,166,64,147,76,163,85,158,93,149,101,145,104,149,107,152,109,158,110,163,110,169,104,174,101,180,100,187,89,190,81,191,80,196,81,203,81,210,77,217,73,220,64,215,53,211,52,203,58,189"
+		href="magasin-carte-region.jsp?regionId=2&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="79,217,83,211,85,203,82,195,87,192,96,191,102,186,102,180,107,175,112,171,112,163,116,167,123,166,123,171,129,171,136,168,139,171,143,183,146,189,143,194,138,199,134,203,130,206,123,206,116,206,120,212,123,220,124,225,116,230,109,224,103,218,94,221,90,223,80,221"
+		href="magasin-carte-region.jsp?regionId=15&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="143,230,142,222,145,214,149,208,158,203,165,201,171,197,174,191,172,182,163,181,158,180,158,171,153,167,147,165,144,167,140,170,144,183,147,189,144,197,132,205,115,207,123,217,124,222,123,227,118,232,127,232"
+		href="magasin-carte-region.jsp?regionId=12&fromSVContext=${fromSVContext}" alt="Description" />
+	<area shape="poly"
+		coords="190,182,190,173,195,168,200,165,206,160,211,163,214,169,213,176,216,181,220,183,228,184,227,190,224,194,214,203,204,211,187,211,180,202,173,203,170,200,174,189,172,183"
+		href="magasin-carte-region.jsp?regionId=20&fromSVContext=${fromSVContext}" alt="Description" />	
+</map>

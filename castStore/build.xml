@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="castorama-store" default="all" basedir=".">
+  
+  <!-- Set properties needed by included XML files -->
+  <property name="global.dir" value="${basedir}/.."/>
+
+  <!-- Import global defaults and settings and common tasks -->
+  <import file="${global.dir}/commonbuildtasks/common.xml"/>
+  
+  <!-- Import compress settings and common tasks -->
+  <import file="${global.dir}/commonbuildtasks/compress.xml"/>
+    
+  <!-- Define the all task. -->
+  <target name="all"
+          depends="clean,set-build-number,build,install,deploy,compress_js_css,installdocroot,deploy-images"
+          description="Cleans, builds, and installs the project."/>
+
+  <!-- This will update build number in about.jsp -->
+  <target name="set-build-number">
+	<replace file="j2ee/cast.war/about.jsp" value="Build ???" propertyFile="${global.dir}/version.properties">
+	  <replacefilter token="@BuildNumber@" property="build.number"/>
+	</replace>
+  </target>
+
+  <!-- This will clean the webserver root if you have set clean.deletes.serverroot-->
+  <target name="clean-images"
+      if="clean.deletes.serverroot"
+      description="Deletes the webserver root directory if ${clean.deletes.serverroot} is defined">
+    <delete dir="${webserver.root.dir}" />
+  </target>
+
+  <!-- Deploys html assets and images to the target webserver. -->
+  <target name="deploy-images"
+      if="deploy.images"
+      description="copies images and html to webserver root">
+
+    <echo message="dynamo root = ${dynamo.root.dir}" />
+    <echo message="webserver root = ${webserver.root.dir}" />
+    <mkdir dir="${webserver.root.dir}" />
+    <copy todir="${webserver.root.dir}" preservelastmodified="true">
+      <fileset dir="${html.dir}"/>
+    </copy>
+
+    <!--
+      Make sure that all the permissions on the files are set correctly.
+      This prevents umask hiccups.
+    -->
+    <chmod perm="g+rw" dir="${webserver.root.dir}" type="both"/>
+  </target>
+
+  <!-- Copied docroot directory to install tree. -->
+  <target name="installdocroot"
+      description="copies images to install tree">
+
+    <mkdir dir="${install.dir}/docroot" />
+    <copy todir="${install.dir}/docroot" preservelastmodified="true">
+      <fileset dir="${basedir}/docroot"/>
+    </copy>
+  </target>
+  
+  <!-- Compress js and css in cast.war . -->
+  <target name="compress_js_css">
+	<ant target="compress_all" />
+  </target>
+  
+</project>
+

@@ -1,0 +1,10 @@
+#reinsuranceSection{position:relative;z-index:1;display:block;height:100px;padding:10px 10px 10px 245px;background-color:#f2f3f1;color:#0078d7;font-weight:bold}
+#reinsuranceSection dt{position:absolute;z-index:1;left:35px;top:10px;display:block;width:200px;height:25px;padding:15px 0 0 2px;font-size:10px;letter-spacing:0px;font-weight:bold;}
+#reinsuranceSection dt p{padding-top:5px !important;color:#0078d7 !important;line-height:11px}
+#reinsuranceSection dd{display:block;float:left;width:181px;height:100px;padding:0 0 0 1px;border-left:1px #CCC solid}
+#reinsuranceSection dd a{display:block;float:left;width:182px;height:92px;padding:8px 0 0;text-align:center;text-decoration:none}
+#reinsuranceSection dd a:hover{color:#58585a;text-decoration:none}
+#reinsuranceSection dd a img{display:inline-block}
+#reinsuranceSection dd a span{display:inline-block;margin:8px 0 0;padding:0 0 0 16px;background:rgba(0, 0, 0, 0) url("/store/images/link_icons.gif") no-repeat scroll 0 -8px}
+#reinsuranceSection dd a:hover span{text-decoration:none;background:rgba(0, 0, 0, 0) url("/store/images/link_icons.gif") no-repeat scroll 0 -8px}
+/*ced*/#reinsuranceSection .reinsuranceLogo{position:absolute;left:140px;top:0px;display:none}

@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="install-castorama" default="all" basedir=".">
+
+  <property environment="env" />
+  <!-- global.dir is used to resolve dev environment resources such as 
+       checkstyle libraries, custom ant tasks, etc..  Essentially stuff 
+       we don't want to stick directly into our module structure. -->
+  <property name="global.dir" value=".."/>
+  <property name="commonbuildtasks.dir" value="${global.dir}/commonbuildtasks"/>
+  <property name="script.servers.dir" value="./servers"/>
+  
+  <property file="${global.dir}/userenv.properties" />
+  <property file="${global.dir}/topology.properties" />
+  <property file="${global.dir}/package.properties" />
+  
+  <property file="${commonbuildtasks.dir}/build.properties" />
+
+  <import file="package.xml"/>
+  
+  <import file="${commonbuildtasks.dir}/common.xml"/>
+  <import file="${commonbuildtasks.dir}/data.xml"/>
+
+
+  <target name="all"
+          description="Basic setup">
+    <input message="WARNING: All data is going to be deleted from DB. ALL tables will be dropped, recreated and initial xml data will be imported. Continue?" validargs="y,n" addproperty="do.delete"/>
+    
+    <condition property="do.abort">
+      <equals arg1="n" arg2="${do.delete}"/>
+    </condition>
+    <fail if="do.abort">Build aborted by user.</fail>
+    
+    <ant target="droptables"/>
+    <ant target="createtables"/>
+    <ant target="importxmldata"/>
+    <ant target="importpubxmldata"/>
+
+  </target>
+	
+	<target name="all_staging"
+	          description="Basic setup">
+	    <input message="WARNING: All data is going to be deleted from DB. ALL tables will be dropped, recreated and initial xml data will be imported. Continue?" validargs="y,n" addproperty="do.delete"/>
+	    
+	    <condition property="do.abort">
+	      <equals arg1="n" arg2="${do.delete}"/>
+	    </condition>
+	    <fail if="do.abort">Build aborted by user.</fail>
+	    
+	    <ant target="droptables_staging"/>
+	    <ant target="createtables_staging"/>
+	    <ant target="importxmldata_staging"/>
+	  </target>
+
+  <!-- Import xml data for production and publishing schemas -->
+  <target name="importallxmldata"
+          description="uses startSQLRepository to import data" depends="importxmldata,importpubxmldata">
+  </target>
+
+  <target name="-copysql">
+    <copytemplate srcdir="sql/sql_templates" destdir="sql/sql_run"/>
+  </target>
+ 
+
+  <!-- Create tables for all schemas: core, cata, catb and pub -->
+  <target name="createtables" depends="-copysql">
+    
+    <ant target="createcoretables"/>
+    <ant target="createcatalogtables"/>
+    <ant target="createpubtables"/>
+    <!--ant target="createdwtables"/-->
+  
+  </target>
+  
+  <!-- Create tables for schemas: core, cata, catb for staging -->
+  <target name="createtables_staging" depends="-copysql">    
+    <ant target="createcoretables_staging"/>
+    <ant target="createcatalogtables_staging"/> 
+    <!--ant target="createdwtables_staging"/-->
+  </target>
+
+  <!-- Drops the modules tables -->
+  <target name="droptables" description="Drops all tables">
+    <ant target="dropcoretables"/>
+    <ant target="dropcatalogtables"/>
+    <ant target="droppubtables"/>
+    <!--ant target="dropdwtables"/-->
+  </target>
+  
+  <!-- Drops the modules tables -->
+  <target name="droptables_staging" description="Drops all tables">
+    <ant target="dropcoretables_staging"/>
+    <ant target="dropcatalogtables_staging"/>   
+  	<!--ant target="dropdwtables_staging"/-->
+  </target>
+ 
+  <!-- Create core tables -->
+  <target name="createcoretables" depends="-copysql">
+    <ant target="-performcoresql">
+      <property name="sql.ddl.file" value="sql/sql_run/create_core_tables.sql" />
+    </ant>
+  </target>
+	
+  <!-- Create core tables for staging-->
+  <target name="createcoretables_staging" depends="-copysql">
+    <ant target="-performcoresql_staging">
+      <property name="sql.ddl.file" value="sql/sql_run/create_core_tables.sql" />
+    </ant>
+  </target>
+
+  <!-- Create pub tables -->
+  <target name="createpubtables" depends="-copysql">
+    <ant target="-performpubsql">
+      <property name="sql.ddl.file" value="sql/sql_run/create_pub_tables.sql" />
+    </ant>
+  </target>
+  
+  <!-- Create cata and catb tables -->
+  <target name="createcatalogtables" depends="-copysql">
+    <ant target="-performcatalogsql">
+      <property name="sql.ddl.file" value="sql/sql_run/create_catalog_tables.sql" />
+    </ant>
+  </target>
+  
+  <!-- Create cata and catb tables for staging-->
+  <target name="createcatalogtables_staging" depends="-copysql">
+    <ant target="-performcatalogsql_staging">
+      <property name="sql.ddl.file" value="sql/sql_run/create_catalog_tables.sql" />
+    </ant>
+  </target>
+
+  <!-- Drop pub tables -->
+  <target name="droppubtables">
+    <ant target="-performpubsql">
+      <property name="sql.ddl.file" value="sql/drop_all_tables.sql"/>
+    </ant>
+  </target>
+
+  <!-- Drop core tables -->
+  <target name="dropcoretables">
+    <ant target="-performcoresql">
+      <property name="sql.ddl.file" value="sql/drop_all_tables.sql" />
+    </ant>
+  </target>
+	
+  <!-- Drop core tables -->
+  <target name="dropcoretables_staging">
+    <ant target="-performcoresql_staging">
+      <property name="sql.ddl.file" value="sql/drop_all_tables.sql" />
+    </ant>
+  </target>
+	
+
+  <!-- Drop cata and catb tables -->
+  <target name="dropcatalogtables">
+    <ant target="-performcatalogsql">
+      <property name="sql.ddl.file" value="sql/drop_all_tables.sql" />
+    </ant>
+  </target>
+  
+   <!-- Drop cata and catb tables -->
+  <target name="dropcatalogtables_staging">
+    <ant target="-performcatalogsql_staging">
+      <property name="sql.ddl.file" value="sql/drop_all_tables.sql" />
+    </ant>
+  </target>
+
+  <!-- Drop search tables -->
+  <target name="dropsearchtables">
+    <ant target="-performsearchsql">
+      <property name="sql.ddl.file" value="sql/drop_all_tables.sql" />
+    </ant>
+  </target>
+
+  <!-- Imports data into storefront -->
+  <target name="importxmldata" depends="install-script-servers" description="uses startSQLRepository to import data">
+    <delete dir="${dynamo.home}/localconfig/atg" />
+    <copy todir="${dynamo.home}/localconfig">
+      <fileset dir="${dynamo.home}/servers/${storefront.scripts.server.name}/localconfig"/>
+    </copy>
+    <exec executable="bin/install_core.bat"
+          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+          failonerror="yes">
+    </exec>
+    <exec executable="bin/install_core.sh"
+          os="Solaris,Linux"
+          failonerror="yes">
+    </exec>
+    
+    <!-- To reduce the imort time multi-import capability is used. See ./data/import-config.xml for details." -->
+    <ant target="startsqlrepositorymulti">
+      <property name="import.scripts.server.name" value="${storefront.scripts.server.name}"/>
+      <property name="modules.for.import" value="${storefront.modules.for.import}"/>
+      <property name="import.data.file" value="${basedir}/data/import-config.xml"/>
+      <property name="import.startDir" value="${basedir}/data"/>
+    </ant>
+    
+    <delete dir="${dynamo.home}/localconfig/atg" />
+  </target>
+	
+	<target name="importxmldata_staging" depends="install-script-servers" description="uses startSQLRepository to import data">
+	    <delete dir="${dynamo.home}/localconfig/atg" />
+	    <copy todir="${dynamo.home}/localconfig">
+	      <fileset dir="${dynamo.home}/servers/${staging.scripts.server.name}/localconfig"/>
+	    </copy>
+	    <exec executable="bin/install_core.bat"
+	          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+	          failonerror="yes">
+	    </exec>
+	    <exec executable="bin/install_core.sh"
+	          os="Solaris,Linux"
+	          failonerror="yes">
+	    </exec>
+	
+	    <!-- To reduce the imort time multi-import capability is used. See ./data/import-stag-config.xml for details." -->
+	    <ant target="startsqlrepositorymulti">
+	      <property name="import.scripts.server.name" value="${staging.scripts.server.name}"/>
+	      <property name="modules.for.import" value="${staging.modules.for.import}"/>
+	      <property name="import.data.file" value="${basedir}/data/import-stag-config.xml"/>
+	      <property name="import.startDir" value="${basedir}/data"/>
+	    </ant>
+	    
+	    <delete dir="${dynamo.home}/localconfig/atg" />
+	  </target>
+  
+  <target name="migratecastxmldata" depends="install-script-servers" description="uses startSQLRepository to import data">
+    <delete dir="${dynamo.home}/localconfig/atg" />
+    <copy todir="${dynamo.home}/localconfig">
+      <fileset dir="${dynamo.home}/servers/${storefront.scripts.server.name}/localconfig"/>
+    </copy>
+    <exec executable="bin/install_core.bat"
+          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+          failonerror="yes">
+    </exec>
+    <exec executable="bin/install_core.sh"
+          os="Solaris,Linux"
+          failonerror="yes">
+    </exec>
+
+    <!-- To reduce the imort time multi-import capability is used. See ./data/import-config.xml for details." -->
+    <ant target="startsqlrepositorymulti">
+      <property name="import.scripts.server.name" value="${storefront.scripts.server.name}"/>
+      <property name="modules.for.import" value="${storefront.modules.for.import}"/>
+      <property name="import.data.file" value="${migrate.config.file}"/>
+      <property name="import.startDir" value="${migrate.base.dir}"/>
+    </ant>    
+    <delete dir="${dynamo.home}/localconfig/atg" />
+  </target>	
+	
+  <target name="importmultipub">
+      <ant target="startsqlrepositorymulti">
+      		<property name="import.scripts.server.name" value="${publishing.scripts.server.name}"/>
+      		<property name="modules.for.import" value="${publishing.modules.for.import}"/>
+      		<property name="import.data.file" value="${basedir}/data/import-config-pub.xml"/>
+      		<property name="import.startDir" value="${basedir}/data"/>
+    	</ant>
+  </target>
+  
+  <target name="importmulti">
+      <ant target="startsqlrepositorymulti">
+        <property name="import.scripts.server.name" value="${storefront.scripts.server.name}"/>
+        <property name="modules.for.import" value="${storefront.modules.for.import}"/>
+        <property name="import.data.file" value="${basedir}/data/import-config.xml"/>
+        <property name="import.startDir" value="${basedir}/data"/>
+      </ant>
+  </target>
+  
+  <!-- Imports data into publishing -->
+  <target name="importpubxmldata" depends="install-script-servers" description="uses startSQLRepository to import data">
+  
+    <delete dir="${dynamo.home}/localconfig/atg" />
+    <copy todir="${dynamo.home}/localconfig">
+          <fileset dir="${dynamo.home}/servers/${publishing.scripts.server.name}/localconfig" />
+    </copy>
+    <exec executable="bin/install_ca.bat"
+          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+          failonerror="yes">
+    </exec>
+    <exec executable="bin/install_ca.sh"
+          os="Solaris,Linux"
+          failonerror="yes">
+    </exec>
+
+  <!--  To reduce the imort time multi-import capability is used. See ./data/import-config-pub.xml for details." -->
+    <ant target="startsqlrepositorymulti">
+      <property name="import.scripts.server.name" value="${publishing.scripts.server.name}"/>
+      <property name="modules.for.import" value="${publishing.modules.for.import}"/>
+      <property name="import.data.file" value="${basedir}/data/import-config-pub.xml"/>
+      <property name="import.startDir" value="${basedir}/data"/>
+    </ant>
+
+    <ant target="importfileassetstopub"/>
+
+    <ant target="startsqlrepositorymulti">
+      <property name="import.scripts.server.name" value="${publishing.scripts.server.name}"/>
+      <property name="modules.for.import" value="${publishing.modules.for.import}"/>
+      <property name="import.data.file" value="${basedir}/data/import-config-pub-site.xml"/>
+      <property name="import.startDir" value="${basedir}/data"/>
+    </ant>
+
+    <delete dir="${dynamo.home}/localconfig/atg" />
+  </target>
+  
+  <target name="migratecastpubxmldata" depends="install-script-servers" description="uses startSQLRepository to import data">
+  
+    <delete dir="${dynamo.home}/localconfig/atg" />
+    <copy todir="${dynamo.home}/localconfig">
+          <fileset dir="${dynamo.home}/servers/${publishing.scripts.server.name}/localconfig" />
+    </copy>
+    <exec executable="bin/install_ca.bat"
+          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+          failonerror="yes">
+    </exec>
+    <exec executable="bin/install_ca.sh"
+          os="Solaris,Linux"
+          failonerror="yes">
+    </exec>
+
+  <!--  To reduce the imort time multi-import capability is used. See ./data/import-config-pub.xml for details." -->
+    <ant target="startsqlrepositorymulti">
+      <property name="import.scripts.server.name" value="${publishing.scripts.server.name}"/>
+      <property name="modules.for.import" value="${publishing.modules.for.import}"/>
+      <property name="import.data.file" value="${migrate.pub.config.file}"/>
+      <property name="import.startDir" value="${migrate.pub.base.dir}"/>
+    </ant>
+
+    <ant target="importfileassetstopub"/>
+
+    <ant target="startsqlrepositorymulti">
+      <property name="import.scripts.server.name" value="${publishing.scripts.server.name}"/>
+      <property name="modules.for.import" value="${publishing.modules.for.import}"/>
+      <property name="import.data.file" value="${basedir}/data/import-config-pub-site.xml"/>
+      <property name="import.startDir" value="${basedir}/data"/>
+    </ant>
+
+    <delete dir="${dynamo.home}/localconfig/atg" />
+  </target>
+  
+  <!--
+      ///////////////////////////////////////////////////////////
+        Imports file assets
+      ///////////////////////////////////////////////////////////
+      -->
+   <target name="importfileassetstopub" depends="install-script-servers">
+      <delete dir="${dynamo.home}/localconfig/atg" />
+      <copy todir="${dynamo.home}/localconfig">
+        <fileset dir="${dynamo.home}/servers/${publishing.scripts.server.name}/localconfig"/>
+      </copy>
+      
+      <ant target="-importfileassets"/>
+      <ant target="-installCleanUp"/>
+
+      <delete dir="${dynamo.home}/localconfig/atg" />
+   </target>
+
+   <target name="importfileassetstopub-staging">
+      <delete dir="${dynamo.home}/localconfig/atg" />
+      <copy todir="${dynamo.home}/localconfig">
+        <fileset dir="${dynamo.home}/servers/${staging.publishing.scripts.server.name}/localconfig"/>
+      </copy>
+      
+      <ant target="-importfileassets"/>
+      <ant target="-installCleanUp"/>
+
+      <delete dir="${dynamo.home}/localconfig/atg" />
+   </target>
+      
+   <target name="importfileassetstopub-production">
+      <delete dir="${dynamo.home}/localconfig/atg" />
+      <copy todir="${dynamo.home}/localconfig">
+        <fileset dir="${dynamo.home}/servers/${publishing.scripts.server.name}/localconfig"/>
+      </copy>
+      
+      <ant target="-importfileassets"/>
+      <ant target="-installCleanUp"/>
+
+      <delete dir="${dynamo.home}/localconfig/atg" />
+   </target>
+      
+      
+   <target name="-importfileassets">
+     <exec executable="cp" os="Solaris,Linux">
+       <arg value="${dynamo.home}/../Publishing/base/bin/startRepositoryLoader"/>
+       <arg value="${dynamo.home}/bin"/>
+     </exec>
+
+    <copy file="${dynamo.home}/../Publishing/base/bin/startRepositoryLoader.bat" todir="${dynamo.home}/bin"/>
+
+    <delete dir="${basedir}/../cast/build/tempFileAssets"/>
+    <mkdir dir="${basedir}/../cast/build/tempFileAssets"/>
+    <mkdir dir="${basedir}/../cast/build/tempFileAssets/atg/registry/RepositoryTargeters"/>
+    <mkdir dir="${basedir}/../cast/build/tempFileAssets/atg/registry/Slots"/>
+     
+
+    <copy todir="${basedir}/../cast/build/tempFileAssets/atg/registry/RepositoryTargeters">
+      <fileset dir="${basedir}/../cast/build/tempconfig/atg/registry/RepositoryTargeters"/>
+    </copy>
+    
+    <copy todir="${basedir}/../cast/build/tempFileAssets/atg/registry/Slots">
+      <fileset dir="${basedir}/../cast/build/tempconfig/atg/registry/Slots"/>
+    </copy>
+    
+    <copy todir="${basedir}/../cast/build/tempFileAssets/atg/registry/data/scenarios/castorama">
+      <fileset dir="${basedir}/../cast/build/tempconfig/atg/registry/data/scenarios/castorama"/>
+    </copy>
+    
+    <ant target="-startRepositoryLoader"/>
+
+    <delete dir="${basedir}/../cast/build/tempFileAssets"/>
+    <delete file="${dynamo.home}/bin/startRepositoryLoader"/>
+    <delete file="${dynamo.home}/bin/startRepositoryLoader.bat"/>
+
+   </target>
+
+  <target name="-installCleanUp">
+    <exec executable="${dynamo.home}/../Publishing/base/bin/executeSQL.bat"
+          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+          failonerror="yes">
+      <arg value="-m"/>
+      <arg value="Publishing.base"/>
+      <arg value="-f"/>
+      <arg value="${dynamo.home}/../Publishing/base/install/install-cleanup.sql"/>
+    </exec>
+    
+    <exec executable="${dynamo.home}/../Publishing/base/bin/executeSQL"
+          os="Solaris,Linux"
+          failonerror="yes">
+      <arg value="-m"/>
+      <arg value="Publishing.base"/>
+      <arg value="-f"/>
+      <arg value="${dynamo.home}/../Publishing/base/install/install-cleanup.sql"/>
+     </exec>
+  </target>
+
+  <target name="-startRepositoryLoader">
+     <exec executable="${dynamo.home}/bin/startRepositoryLoader.bat"
+          os="Windows NT:Windows 2000:Windows XP:Windows 2003:Windows 7"
+          failonerror="yes">
+      <arg value="-m"/>
+      <arg value="Publishing.base"/>
+      <arg value="-initialService"/>
+      <arg value="/atg/dynamo/service/loader/RLInitial"/>
+      <arg value="-dir"/>
+      <arg value="${basedir}/../${project.name}/build/tempFileAssets"/>
+      <arg value="-update"/>
+      <arg value="-filemapping"/>
+      <arg value="/atg/epub/file/typemappers/TargeterTypeMapping"/>
+      <arg value="-foldermapping"/>
+      <arg value="/atg/epub/file/typemappers/FileFolderTypeMapping"/>
+      </exec>
+    
+   <exec executable="${dynamo.home}/bin/startRepositoryLoader"
+          os="Solaris,Linux"
+          failonerror="yes">
+      <arg value="-m"/>
+      <arg value="Publishing.base"/>
+      <arg value="-initialService"/>
+      <arg value="/atg/dynamo/service/loader/RLInitial"/>
+      <arg value="-dir"/>
+      <arg value="${basedir}/../${project.name}/build/tempFileAssets"/>
+      <arg value="-update"/>
+      <arg value="-filemapping"/>
+      <arg value="/atg/epub/file/typemappers/TargeterTypeMapping"/>
+      <arg value="-foldermapping"/>
+      <arg value="/atg/epub/file/typemappers/FileFolderTypeMapping"/>
+     </exec>
+  </target>
+    
+    
+   <target name="install-script-servers" 
+          depends="-clean-script-servers" 
+          description="Installs script server specific configurations for import">
+            
+    <echo>Copying server configs from ${script.servers.dir} to ${dynamo.home}/servers</echo>
+    
+    <filter token="jdbc_server"            value="${jdbc.server}"/>
+    <filter token="jdbc_port"              value="${jdbc.port}"/>
+    <filter token="jdbc_dbname"            value="${jdbc.dbname}"/>
+    <filter token="jdbc_tnsname"           value="${jdbc.tnsname}"/>
+    <filter token="jdbc_cataloga_user"     value="${jdbc.cataloga.user}"/>
+    <filter token="jdbc_cataloga_password" value="${jdbc.cataloga.password}"/>
+    <filter token="jdbc_catalogb_user"     value="${jdbc.catalogb.user}"/>
+    <filter token="jdbc_catalogb_password" value="${jdbc.catalogb.password}"/>
+    <filter token="jdbc_core_user"         value="${jdbc.core.user}"/>
+    <filter token="jdbc_core_password"     value="${jdbc.core.password}"/>
+	<filter token="jdbc_local_pr_user"         value="${jdbc.local.pr.user}"/>
+    <filter token="jdbc_local_pr_password"     value="${jdbc.local.pr.password}"/>
+
+    <filter token="jdbc_user_pub"          value="${jdbc.pub.user}"/>
+    <filter token="jdbc_password_pub"      value="${jdbc.pub.password}"/>
+    <filter token="jdbc_server_pub"            value="${jdbc.pub_server}"/>
+    <filter token="jdbc_port_pub"              value="${jdbc.pub_port}"/>
+    <filter token="jdbc_dbname_pub"            value="${jdbc.pub_dbname}"/>
+    <filter token="jdbc_tnsname_pub"      value="${jdbc.pub_tnsname}"/>
+    
+    <!--filter token="jdbc_dw_user"           value="${jdbc.dw.user}"/>
+    <filter token="jdbc_dw_password"       value="${jdbc.dw.password}"/-->
+   	
+   	<filter token="jdbc_stag_server"            value="${jdbc.stag_server}"/>
+   	<filter token="jdbc_stag_port"              value="${jdbc.stag_port}"/>
+   	<filter token="jdbc_stag_dbname"            value="${jdbc.stag_dbname}"/>
+   	<filter token="jdbc_stag_tnsname"           value="${jdbc.stag_tnsname}"/>
+   	<filter token="jdbc_stag_cataloga_user"     value="${jdbc.stag_cataloga.user}"/>
+    	<filter token="jdbc_stag_cataloga_password" value="${jdbc.stag_cataloga.password}"/>
+   	<filter token="jdbc_stag_catalogb_user"     value="${jdbc.stag_catalogb.user}"/>
+   	<filter token="jdbc_stag_catalogb_password" value="${jdbc.stag_catalogb.password}"/>
+   	<filter token="jdbc_stag_core_user"         		value="${jdbc.stag_core.user}"/>
+   	<filter token="jdbc_stag_core_password"     		value="${jdbc.stag_core.password}"/>
+   	<!--filter token="jdbc_stag_dw_user"           value="${jdbc.stag_dw.user}"/>
+   	<filter token="jdbc_stag_dw_password"       value="${jdbc.stag_dw.password}"/-->
+   	
+    <copy todir="${dynamo.home}/servers" verbose="true" filtering="true">
+      <fileset dir="${script.servers.dir}"/>
+    </copy>
+  </target>
+
+  <target name="-clean-script-servers" 
+          description="Cleans dynamo servers configurations">
+    <echo>Cleans ${dynamo.home}/servers</echo>
+    <delete dir="${dynamo.home}/servers/${project.name}-core-scripts"/>
+    <delete dir="${dynamo.home}/servers/${project.name}-pub-scripts"/>
+  	<delete dir="${dynamo.home}/servers/${project.name}-stg-scripts"/>
+  </target>
+  
+   <!-- generates workflows that use the latest target in pub database -->
+  
+  <target name="configureWorkflows">
+    <!-- select highest (latest) target by default -->
+    <sql driver="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@${jdbc.server}:${jdbc.port}:${jdbc.dbname}" userid="${jdbc.pub.user}" password="${jdbc.pub.password}" print="yes" showheaders="false" showtrailers="false" output="target.temp">
+      <classpath>
+        <pathelement location="${jdbc.driver.path}"/>
+      </classpath>
+      SELECT MAX(target_id) FROM epub_target;
+    </sql>
+    
+    <!-- load sql result and strip line breaks -->
+    <loadfile property="target_id" srcFile="target.temp">
+      <filterchain>
+        <striplinebreaks/>
+      </filterchain>
+    </loadfile>
+  
+    <!-- wait for confirmation from user (can't ever be too sure with workflow stuff) -->
+    <echo />
+    <input message="Setting default deployment target as ${target_id} in ${dynamo.home}/servers/${topology.ca.instanceName}/localconfig/, continue? [Y/N]" validargs="y,Y,n,N" addproperty="continue_target" />
+    
+    <if>
+      <or>
+        <equals arg1="${continue_target}" arg2="y" />
+        <equals arg1="${continue_target}" arg2="Y" />
+      </or>
+      <then>
+        <copy todir="temp_workflow_templates" overwrite="true">
+          <fileset dir="workflow_templates/"/>
+        </copy>       
+        <replace dir="temp_workflow_templates" token="TARGET_NAME" value="${target_id}" />
+        <move todir="${dynamo.home}/servers/${topology.ca.instanceName}/localconfig/" overwrite="true">
+          <fileset dir="temp_workflow_templates/"/>
+        </move>
+      </then>
+    </if>
+    
+    <delete file="target.temp" />
+  </target>
+</project>
+

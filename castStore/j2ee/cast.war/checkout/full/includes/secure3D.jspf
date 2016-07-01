@@ -1,0 +1,36 @@
+<div id="secure3D" class="whitePopupContainer">
+  <div class="whitePopupContent popupFormContainer longWidthPopup">
+    <div class="whitePopupHeader">
+      <a href="javascript:void(0)" onclick="hidePopup(this)" class="closeBut"> 
+        <span> <!--~--> </span> <fmt:message key="castCatalog_label.close" />
+      </a>
+      <a href="javascript:void(0)" onclick="window.print();" iclass="imprimer" title="imprimer">
+        <span> <!--~--> </span> <fmt:message key="castCatalog_label.print" />
+      </a>
+    </div>
+    <div class="clear">
+      <!--~-->
+    </div>
+    <div class="popupContentContainer">
+      <div id="secure_code" scrolling="auto">
+        <p><img alt="3DSecure code" src="${originatingRequest.contextPath}/images/cclogos/secure_codePopUp.png" /></p>
+        <p><fmt:message key="secure3d.1" /></p>
+        <p><fmt:message key="secure3d.2" /></p>
+        <ul class="secureList">
+          <li><fmt:message key="secure3d.list.1" /></li>
+          <li><fmt:message key="secure3d.list.2" /></li>
+          <li><fmt:message key="secure3d.list.3" /></li>
+        </ul>
+        <p><fmt:message key="secure3d.3" /></p>
+        <p><fmt:message key="secure3d.4" /></p>
+        <p><fmt:message key="secure3d.attention" /></p>
+        <p><fmt:message key="secure3d.payment.1" /></p>
+        <p><fmt:message key="secure3d.payment.2" /></p>
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+    </div>
+  </div>
+</div>

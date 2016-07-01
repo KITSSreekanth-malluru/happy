@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+  PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN"
+         "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+         
+<gsa-template>
+<header>
+   	<name>Export Journalizing</name>
+	<author/>
+</header>
+<item-descriptor name="EXPORT_JOURNALISATION">
+	<table name="CASTO_EXPORT_JOURNALISATION" type="primary" id-column-name="ID">
+		<property name="TYPE_DE_FLUX" data-type="string" column-name="TYPE_DE_FLUX" required="true"/>
+		<property name="NUMERO_DE_SEQUENCE" data-type="long" column-name="NUMERO_DE_SEQUENCE" required="true"/>
+		<property name="DATE_CREATION" data-type="date" column-name="DATE_CREATION" required="true">
+			<attribute name="useNowForDefault" value="true"/>
+		</property>
+		<property name="DATE_INTEGRATION" data-type="date" column-name="DATE_INTEGRATION">
+			<attribute name="useNowForDefault" value="true"/>
+		</property>
+		<property name="DATE_RECEPTION" data-type="date" column-name="DATE_RECEPTION">
+			<attribute name="useNowForDefault" value="true"/>
+		</property>
+		<property name="REPRISEMANUELLE" data-type="string" column-name="REPRISEMANUELLE"/>
+		<property name="RESULTAT" data-type="string" column-name="RESULTAT"/>
+		<property name="NB_BLOCKS_ACQUITES" data-type="long" column-name="NB_BLOCKS_ACQUITES"/>
+		<property name="MODE_EXPORT" data-type="string" column-name="MODE_EXPORT"/>
+		<property name="CODE_RETOUR" data-type="short" column-name="CODE_RETOUR"/>
+	</table>
+</item-descriptor>
+</gsa-template>
+         

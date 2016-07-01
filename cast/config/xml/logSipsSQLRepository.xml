@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+
+<gsa-template>
+
+<item-descriptor name="logsips" display-name="Log SIPS" display-property="order_id">
+  <table name="CASTO_SIPS_LOG" type="primary" id-column-name="id">
+    <property name="id" data-type="int" column-name="id" display-name="id"/>
+    <property name="order_id" data-type="string" column-name="order_id" display-name="Commande"/>
+    <property name="response_code" data-type="string" column-name="response_code" display-name="Code reponse SIPS"/>
+    <property name="libelle" data-type="string" column-name="libelle" display-name="Libelle reponse SIPS"/>
+    <property name="montant" data-type="int" column-name="montant" display-name="Montant de la transaction"/>
+    <property name="transaction_id" data-type="string" column-name="transaction_id" display-name="Transaction id"/>
+    <property name="authorisation_id" data-type="string" column-name="authorisation_id" display-name="Authorisation id"/>
+    <property name="payment_means" data-type="string" column-name="payment_means" display-name="Mode de paiement choisi"/>
+    <property name="card_number" data-type="string" column-name="card_number" display-name="Numero de carte"/>
+    <property name="payment_certificate" data-type="string" column-name="payment_certificate" display-name="Certificat de paiement"/>
+    <property name="payment_time" data-type="string" column-name="payment_time" display-name="Heure de la transaction"/>
+    <property name="payment_date" data-type="string" column-name="payment_date" display-name="Date de la transaction"/>
+    <property name="devise" data-type="string" column-name="devise" display-name="Devise"/>
+    <property name="profile_id" data-type="string" column-name="profile_id" display-name="Profile id"/>
+    <property name="date_trans_expire" data-type="string" column-name="date_trans_expire" display-name="Date limite de validite de la transaction"/>
+    <property name="transaction_identificator" data-type="string" column-name="transaction_identificator" display-name="Transaction identificateur"/>
+    <property name="payment_system" data-type="string" column-name="payment_system" display-name="Système de paiements"/>
+    <property name="abonnement" data-type="string" column-name="abonnement" display-name="Numero de aBonnement"/>
+    <property name="transaction_index" data-type="string" column-name="transaction_index" display-name="Numero de la transaction"/>
+    <property name="request_url" data-type="string" column-name="request_url" display-name="Request URL"/>
+  </table>
+</item-descriptor>
+
+
+</gsa-template>

@@ -1,0 +1,364 @@
+A IMG {
+	border: 0;
+}
+
+.moncasto {  
+	color :#0000FF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	}
+
+A.moncasto	
+{
+	color :#0000FF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+A:link.moncasto	{
+	color :#0000FF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+A:visited.moncasto
+ {
+	color :#0000FF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	}
+
+A:hover.moncasto 
+{
+	color :#CC0033;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+A:active.moncasto {
+	color :#CC0033;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.boutique {  
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+A.boutique	
+{
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:link.boutique	{
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:visited.boutique
+ {
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+
+A:hover.boutique 
+{
+	color :#FFC700;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:active.boutique {
+	color :#FFC700;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.nouveaute {  
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	}
+
+A.nouveaute	
+{
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+A:link.nouveaute	{
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+A:visited.nouveaute
+ {
+	color :#FFFFFF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+	}
+
+A:hover.nouveaute 
+{
+	color :#FFC700;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+A:active.nouveaute {
+	color :#FFC700;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.form {  
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+A.form	
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+A:link.form	{
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+A:visited.form
+ {
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #FFFFFF;
+	text-decoration: none;
+	}
+
+
+A:hover.form 
+{
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #FFC700;
+	text-decoration: none;
+}
+
+A:active.form {
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	font-weight: bold; 
+	color: #FFC700;
+	text-decoration: none;
+}
+
+.marques { 
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-weight: bold; 
+color: #003399; 
+font-style: normal
+}
+
+A.marques	
+{
+	color :#003399;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:link.marques	{
+	color :#003399;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:visited.marques
+ {
+	color :#003399;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+
+A:hover.marques 
+{
+	color :#CC0033;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:active.marques {
+	color :#CC0033;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}	
+
+.lexique { 
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 12px; 
+font-weight: bold; 
+color: #003399; 
+font-style: normal
+}
+
+A.lexique	
+{
+	color :#003399;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:link.lexique	{
+	color :#003399;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:visited.lexique
+ {
+	color :#003399;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+A:hover.lexique 
+{
+	color :#CC0033;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+A:active.lexique {
+	color :#CC0033;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}	
+
+.titre {  
+	color :#0000FF;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	text-decoration: underline;
+	}
+
+.textebleu {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal ; color: #003399}
+.textebleu2 {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal ; color: #003399; text-decoration: none;}
+.prix {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold ; color: #CC0033}	
+.prix2 {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: bold ; color: #CC0033}	
+.texte {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal ; color: #000000}
+.texteb {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: bold ; color: #000000}
+.titresbleu { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: bold; color: #003399; font-style: normal}
+.titresblc {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; text-decoration: none; font-weight: bold; color: #FFFFFF}
+.txbbleu { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #003399; font-style: normal}
+.texteg { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #000000; font-style: normal}
+.bleuf { font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold; color: #003399; text-decoration: none;}
+.etoile {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; font-weight: normal ; color: #000000; }
+.articles { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #FF9900; font-style: normal; text-decoration: underline;}
+.prixgris {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: bold ; color: #9A9A9A}	
+.articles2 { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #FF9900; font-style: normal; text-decoration: none;}
+.articles3 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; color: #FF9900; font-style: normal; text-decoration: none;}
+.prixgris2 {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold ; color: #9A9A9A}
+.texteb2 {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold ; color: #000000}	
+.texterou {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal ; color: #CC0033}
+.bandeau {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: bold ; color: #FEE21A;text-decoration: none;}
+.inscription {  font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 20px; font-style: normal; font-weight: bold ; color: #003399}
+
+.chooseCC {
+	overflow: hidden;
+}
+
+.chooseCC LI {
+	background: #ffffff url(../html/img/bg-card-type.png) no-repeat 0 0;
+	width: 109px;
+	height: 100px;
+	padding: 4px 1px 0px 1px;
+	float: left;
+	margin: 0 10px 0 10px;
+	display: inline-block;
+}
+#divContent2 {background: url("../html/img/payment/bg-clatout.jpg") no-repeat 100% 0%;}
+

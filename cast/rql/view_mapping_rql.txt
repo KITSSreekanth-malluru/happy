@@ -1,0 +1,252 @@
+Go to /dyn/admin/nucleus/atg/bizui/viewmapping/ViewMappingRepository/ on BO server and run :
+
+<add-item item-descriptor="attributeValue" id="aMgrAvPropertyGroupsResourceBundle">
+  <set-property name="value"><![CDATA[atg.commerce.web.WebAppResources]]></set-property>
+</add-item>
+
+<add-item item-descriptor="attributeValue" id="aMgrAvCatBasicsPresMultiEditCats">
+  <set-property name="value"><![CDATA[categoryBasics,categoryPresentation]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewAttributeDefinition" id="rows84">
+  <set-property name="description"><![CDATA[Maximum number of rows in the custom big string field]]></set-property>
+  <set-property name="defaultValue"><![CDATA[84]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewAttributeDefinition" id="cols450">
+  <set-property name="description"><![CDATA[Maximum number of rows in the custom big string field]]></set-property>
+  <set-property name="defaultValue"><![CDATA[450]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewAttributeDefinition" id="length2000">
+  <set-property name="description"><![CDATA[Maximum length of the data in the field]]></set-property>
+  <set-property name="defaultValue"><![CDATA[2000]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyView" id="PlusDuProduitPV">
+  <set-property name="description"><![CDATA[Plus Du Produit property view of Casto-SKU item descriptor]]></set-property>
+  <set-property name="attributes"><![CDATA[inputFieldSize=aMgrPvadEDefSize,inputFieldMaxlength=length2000]]></set-property>
+  <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="uri"><![CDATA[/assetEditor/property/defaultEditor.jsp]]></set-property>
+  <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+  <set-property name="type"><![CDATA[string]]></set-property>
+  <set-property name="name"><![CDATA[Plus du produit promotion commerce property view]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyView" id="LibelleClientLongPV">
+  <set-property name="description"><![CDATA[Libelle Client Long property view of Casto-SKU item descriptor]]></set-property>
+  <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84,inputFieldMaxlength=length2000]]></set-property>
+  <set-property name="isDefault"><![CDATA[true]]></set-property>
+  <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+  <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+  <set-property name="type"><![CDATA[big string]]></set-property>
+  <set-property name="name"><![CDATA[Libelle client long property view]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyView" id="LibelleDescriptifArticlePV">
+ <set-property name="description"><![CDATA[Libele descriptif article property view of Casto-SKU item descriptor]]></set-property>
+ <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84]]></set-property>
+   <set-property name="isDefault"><![CDATA[true]]></set-property>
+   <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+  <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+  <set-property name="type"><![CDATA[big string]]></set-property>
+    <set-property name="name"><![CDATA[Libele descriptif article property view]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyView" id="normesTextPV">
+ <set-property name="description"><![CDATA[Normes(txt)  property view of Casto-SKU item descriptor]]></set-property>
+ <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84]]></set-property>
+   <set-property name="isDefault"><![CDATA[true]]></set-property>
+   <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+  <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+  <set-property name="type"><![CDATA[big string]]></set-property>
+    <set-property name="name"><![CDATA[Normes(txt) property view]]></set-property>
+ </add-item>
+
+<add-item item-descriptor="propertyView" id="subcategoriesContentPV">
+ <set-property name="description"><![CDATA[Subcategories content property view of product item descriptor]]></set-property>
+ <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84]]></set-property>
+ <set-property name="isDefault"><![CDATA[false]]></set-property>
+ <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+ <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+ <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+ <set-property name="type"><![CDATA[big string]]></set-property>
+ <set-property name="name"><![CDATA[Subcategories content property view]]></set-property>
+ </add-item>
+  
+<add-item item-descriptor="propertyView" id="freeTextPV">
+ <set-property name="description"><![CDATA[Free text  property view of product item descriptor]]></set-property>
+ <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84]]></set-property>
+ <set-property name="isDefault"><![CDATA[false]]></set-property>
+ <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+ <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+ <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+ <set-property name="type"><![CDATA[big string]]></set-property>
+ <set-property name="name"><![CDATA[Free text  property property view]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyView" id="fixedInfoTextPV">
+ <set-property name="description"><![CDATA[Fixed Info Area property view of product item descriptor]]></set-property>
+ <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84]]></set-property>
+ <set-property name="isDefault"><![CDATA[false]]></set-property>
+ <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+ <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+ <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+ <set-property name="type"><![CDATA[big string]]></set-property>
+ <set-property name="name"><![CDATA[Fixed Info Area property view]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyView" id="fixedCommerceTextPV">
+ <set-property name="description"><![CDATA[Fixed Commerce area property view of Casto-SKU item descriptor]]></set-property>
+ <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84]]></set-property>
+ <set-property name="isDefault"><![CDATA[false]]></set-property>
+ <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+ <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+ <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+ <set-property name="type"><![CDATA[big string]]></set-property>
+ <set-property name="name"><![CDATA[Fixed Commerce area property view]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyView" id="longDescriptionPV">
+ <set-property name="description"><![CDATA[Long Description  property view of product item descriptor]]></set-property>
+ <set-property name="attributes"><![CDATA[columns=cols450,rows=rows84]]></set-property>
+   <set-property name="isDefault"><![CDATA[true]]></set-property>
+   <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="uri"><![CDATA[/assetEditor/property/bigStringEditor.jsp]]></set-property>
+  <set-property name="applicationName"><![CDATA[AssetManager]]></set-property>
+  <set-property name="type"><![CDATA[big string]]></set-property>
+    <set-property name="name"><![CDATA[Long Description  property view]]></set-property>
+ </add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="PlusDuProduitPVM">
+  <set-property name="propertyView"><![CDATA[PlusDuProduitPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="LibelleClientLongPVM">
+  <set-property name="propertyView"><![CDATA[LibelleClientLongPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="LibelleDescriptifArticlePVM">
+    <set-property name="propertyView"><![CDATA[LibelleDescriptifArticlePV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="normesTextPVM">
+    <set-property name="propertyView"><![CDATA[normesTextPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="subcategoriesContentPVM">
+  <set-property name="propertyView"><![CDATA[subcategoriesContentPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="freeTextPVM">
+  <set-property name="propertyView"><![CDATA[freeTextPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="fixedInfoTextPVM">
+  <set-property name="propertyView"><![CDATA[fixedInfoTextPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="fixedCommerceTextPVM">
+  <set-property name="propertyView"><![CDATA[fixedCommerceTextPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="propertyViewMapping" id="longDescriptionPVM">
+    <set-property name="propertyView"><![CDATA[longDescriptionPV]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemViewMapping" id="castoSkuItemViewMapping">
+  <set-property name="description"><![CDATA[AssetManager Casto-sku basics view]]></set-property>
+  <set-property name="propertyMappings"><![CDATA[LibelleEspaceNouveaute=LibelleEspaceNouveautePVM,RestrictionsUsage=RestrictionsUsagePVM,MentionsLegalesObligatoires=MentionsLegalesObligatoiresPVM,ContraintesUtilisation=ContraintesUtilisationPVM,promotionContenu=LibellePromotionContenuPVM,promotionCommerce=LibellePromotionCommercePVM,PlusDuProduit=PlusDuProduitPVM,LibelleClientLong=LibelleClientLongPVM,LibelleDescriptifArticle=LibelleDescriptifArticlePVM,normesText=normesTextPVM]]></set-property>
+  <set-property name="attributeValues"><![CDATA[categorizedGrouping=aMgrAvSkuBasicsCats,showNewProperties=aMgrAvSkuBasicsShowNew,resourceBundle=aMgrAvSkuBasicsResourceBundle,excludedProperties=aMgrAvSkuBasicsExc]]></set-property>
+  <set-property name="displayName"><![CDATA[aMgrIvmSkuBasics.displayName]]></set-property>
+  <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager Casto-Sku Basics View]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemViewMapping" id="aMgrIvmPrdtBasics">
+  <set-property name="description"><![CDATA[AssetManager product basics view]]></set-property>
+  <set-property name="propertyMappings"><![CDATA[longDescription=longDescriptionPVM]]></set-property>
+  <set-property name="attributeValues"><![CDATA[excludedProperties=aMgrAvPrdtBasicsExc,additionalColumnFragment=aMgrAvPrdtBasicsAddColumnFragment,additionalColumnImagePropertyName=aMgrAvPrdtBasicsAddColumnImagePropName,additionalColumnFragmentContext=aMgrAvPrdtBasicsAddColumnContext,resourceBundle=aMgrAvPrdtBasicsResourceBundle,showNewProperties=aMgrAvPrdtBasicsShowNew,categorizedGrouping=aMgrAvPrdtBasicsCats,additionalColumnFragmentCategoryName=aMgrAvPrdtBasicsAddColumnCategory,excludedCategories=aMgrAvPrdtBasicsExcCats]]></set-property>
+  <set-property name="displayName"><![CDATA[aMgrIvmPrdtBasics.displayName]]></set-property>
+  <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager Product Basics View]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemViewMapping" id="aMgrIvmCatBasicsEdit">
+  <set-property name="description"><![CDATA[AssetManager category basics view]]></set-property>
+  <set-property name="propertyMappings"><![CDATA[childCategoryGroup=aMgrPvmEContGrp,relatedCategoryGroup=aMgrPvmEContGrp,subcategoriesContent=subcategoriesContentPVM,longDescription=longDescriptionPVM,freeText=freeTextPVM,fixedInfoText=fixedInfoTextPVM,fixedCommerceText=fixedCommerceTextPVM]]></set-property>
+  <set-property name="attributeValues"><![CDATA[excludedProperties=aMgrAvCatBasicsExc,resourceBundle=aMgrAvCatBasicsResourceBundle,showNewProperties=aMgrAvCatBasicsShowNew,categorizedGrouping=aMgrAvCatBasicsCats]]></set-property>
+  <set-property name="displayName"><![CDATA[aMgrIvmCatBasics.displayName]]></set-property>
+  <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager CategoryBasicsView]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemMapping" id="aMgrImEditPrdt">
+  <set-property name="itemName"><![CDATA[product]]></set-property>
+  <set-property name="description"><![CDATA[AssetManager editable mapping for product items]]></set-property>
+  <set-property name="attributes"><![CDATA[atgPreviewURL=aMgrImEditPrdtPreviewUrl]]></set-property>
+  <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="viewMappings"><![CDATA[aMgrIvmPrdtBasics,aMgrIvmPrdtMediaEdit,aMgrIvmPrdtSkus,aMgrIvmPrdtCrossEdit,aMgrIvmPrdtPlst,aMgrIvmPrdtAdvanced]]></set-property>
+  <set-property name="formHandler"><![CDATA[aMgrFhProdSkuPlstAssets]]></set-property>
+  <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemMapping" id="castoSkuItemMapping">
+  <set-property name="itemName"><![CDATA[casto_sku]]></set-property>
+  <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="formHandler"><![CDATA[aMgrFhProdSkuPlstAssets]]></set-property>
+  <set-property name="viewMappings"><![CDATA[castoSkuItemViewMapping,aMgrIvmSkuMediaEdit,aMgrIvmSkuPrice,aMgrIvmSkuPlst,aMgrIvmSkuInfo]]></set-property>
+  <set-property name="isReadOnly"><![CDATA[false]]></set-property>
+  <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemMapping" id="aMgrImEditCat">
+  <set-property name="itemName"><![CDATA[category]]></set-property>
+  <set-property name="description"><![CDATA[AssetManager editable mapping for category items]]></set-property>
+  <set-property name="attributes"><![CDATA[atgPreviewURL=aMgrImEditCatPreviewUrl]]></set-property>
+  <set-property name="mode"><![CDATA[aMgrMmEdit]]></set-property>
+  <set-property name="viewMappings"><![CDATA[aMgrIvmCatBasicsEdit,aMgrIvmCatMediaEdit,aMgrIvmCatPrdtsEdit,aMgrIvmCatAdvanced,fctSrchIvmCatFacet,fctSrchIvmCatFacet]]></set-property>
+  <set-property name="formHandler"><![CDATA[aMgrFhRepCatAssets]]></set-property>
+  <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager]]></set-property>
+</add-item>
+
+<add-item item-descriptor="attributeValue" id="aMgrCastoBasicsMultiEditCats">
+  <set-property name="value"><![CDATA[categoryBasics,categoryPresentation,trocDocuments,categoryInfokiosk,crossSelling,ikCrossSelling,categoryPublishing,categoryImagesMedia,categoryPromotions,Reference,categoryPricing,categoryCastoramaPricing,prixBO,categoryDelivery,conseilForum,categoryCCConfig,Informations,Identifiant]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemViewMapping" id="aMgrIvmCastoBasicMultiEdit">
+  <set-property name="description"><![CDATA[AssetManager product color multi-edit]]></set-property>
+  <set-property name="propertyMappings"><![CDATA[LibelleEspaceNouveaute=LibelleEspaceNouveautePVM,RestrictionsUsage=RestrictionsUsagePVM,MentionsLegalesObligatoires=MentionsLegalesObligatoiresPVM,ContraintesUtilisation=ContraintesUtilisationPVM, PromotionContenu=LibellePromotionContenuPVM, PromotionCommerce=LibellePromotionCommercePVM,PlusDuProduit=PlusDuProduitPVM,LibelleClientLong=LibelleClientLongPVM,LibelleDescriptifArticle=LibelleDescriptifArticlePVM, NormesText=normesTextPVM,longDescription=longDescriptionPVM,subcategoriesContent=subcategoriesContentPVM,freeText=freeTextPVM,fixedInfoText=fixedInfoTextPVM,fixedCommerceText=fixedCommerceTextPVM]]></set-property>
+  <set-property name="attributeValues"><![CDATA[categorizedGrouping=aMgrCastoBasicsMultiEditCats,resourceBundle=CastoPropertyGroupsResourceBundle]]></set-property>
+  <set-property name="displayName"><![CDATA[propGroup.Basic.properties]]></set-property>
+  <set-property name="view"><![CDATA[aMgrIvRep]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager User Media Multi-Edit]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditSku">
+<set-property name="name"><![CDATA[AssetManager]]></set-property>
+  <set-property name="description"><![CDATA[AssetManager multi-edit mapping for sku items]]></set-property>
+  <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+  <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+  <set-property name="itemName"><![CDATA[sku]]></set-property>
+  <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+  <set-property name="viewMappings"><![CDATA[aMgrIvmCastoBasicMultiEdit,aMgrIvmCastoIntMultiEdit]]></set-property>
+</add-item>
+
+<add-item item-descriptor="itemMapping" id="aMgrImCastoMultiEditProduct">
+  <set-property name="itemName"><![CDATA[product]]></set-property>
+  <set-property name="description"><![CDATA[AssetManager multi-edit mapping for product items]]></set-property>
+  <set-property name="mode"><![CDATA[aMgrMmMultiEdit]]></set-property>
+  <set-property name="viewMappings"><![CDATA[aMgrIvmCastoBasicMultiEdit,aMgrIvmCastoSEOMultiEdit]]></set-property>
+  <set-property name="formHandler"><![CDATA[aMgrFhRep]]></set-property>
+  <set-property name="itemPath"><![CDATA[/atg/commerce/catalog/ProductCatalog]]></set-property>
+  <set-property name="name"><![CDATA[AssetManager]]></set-property>
+</add-item>
+
+Then run method invalidateCaches in /dyn/admin/nucleus/atg/bizui/viewmapping/ViewMappingRepository/

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE java-wsdl-mapping PUBLIC "-//IBM Corporation, Inc.//DTD J2EE JAX-RPC mapping 1.0//EN" "http://www.ibm.com/webservices/dtd/j2ee_jaxrpc_mapping_1_0.dtd">
+<java-wsdl-mapping>
+<package-mapping>
+<package-type>webservices</package-type>
+<namespaceURI>http://www.atg.com/webservices</namespaceURI>
+</package-mapping>
+<package-mapping>
+<package-type>atg.security</package-type>
+<namespaceURI>http://www.atg.com/atg.security</namespaceURI>
+</package-mapping>
+</java-wsdl-mapping>

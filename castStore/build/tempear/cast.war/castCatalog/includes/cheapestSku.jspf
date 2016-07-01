@@ -1,0 +1,17 @@
+<dsp:droplet name="CastPriceRangeDroplet">
+  <dsp:param name="productId" param="productId"/>
+  <dsp:getvalueof var="empty" value="false"/> 
+  <dsp:oparam name="empty">
+    <div class="price">
+      <dsp:getvalueof var="isEmpty" value="true"/>
+    </div>
+  </dsp:oparam>
+  <dsp:oparam name="output">
+    <c:if test="${!isEmpty}">
+      <div class="priceContent multiSkuMessage">
+        <fmt:message key="castCatalog_productTemplate.from"/>
+      </div>
+    </c:if>
+    <dsp:getvalueof var="sku" param="sku"/>
+  </dsp:oparam>
+</dsp:droplet> 

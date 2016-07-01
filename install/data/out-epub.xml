@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <!-- 1 items of type topologyDef -->
+
+        <add-item item-descriptor="topologyDef" id="900002">
+            <set-property name="targets"><![CDATA[tar101]]></set-property>
+        </add-item>
+
+        <!-- 1 items of type targetDef -->
+
+        <add-item item-descriptor="targetDef" id="tar101">
+            <set-property name="agents"><![CDATA[900002]]></set-property>
+            <set-property name="displayName"><![CDATA[Castorama-Site(Local Dev environment)]]></set-property>
+            <set-property name="creationTime"><![CDATA[8/3/2009 20:05:03]]></set-property>
+            <set-property name="destinations">
+                <![CDATA[/atg/commerce/claimable/ClaimableRepository=/atg/commerce/claimable/ClaimableRepository_production,/atg/userprofiling/PersonalizationRepository=/atg/userprofiling/PersonalizationRepository_production,/atg/registry/Repository/MagasinGSARepository=/atg/registry/Repository/MagasinGSARepository_production,/atg/registry/Repository/MessageRegionRepository=/atg/registry/Repository/MessageRegionRepository_production,/atg/commerce/catalog/ProductCatalog=/atg/commerce/catalog/ProductCatalog_production,/atg/commerce/pricing/priceLists/SecurePriceLists=/atg/commerce/pricing/priceLists/PriceLists_production,/atg/search/repository/RefinementRepository=/atg/search/repository/RefinementRepository_production,/atg/registry/Repository/CastostageGSARepository=/atg/registry/Repository/CastostageGSARepository_production,/atg/registry/Repository/CatalogueGSARepository=/atg/registry/Repository/CatalogueGSARepository_production]]></set-property>
+        </add-item>
+
+        <!-- 1 items of type transportDef -->
+
+        <add-item item-descriptor="transportDef" id="900002">
+            <set-property name="rmiURI"><![CDATA[rmi://localhost:10160/atg/epub/AgentTransport]]></set-property>
+        </add-item>
+
+        <!-- 1 items of type agentDef -->
+
+        <add-item item-descriptor="agentDef" id="900002">
+            <set-property name="includeAssetDestinations"><![CDATA[/atg/epub/file/ConfigFileSystem]]></set-property>
+            <set-property name="excludeAssetDestinations"><![CDATA[/atg/epub/file/WWWFileSystem]]></set-property>
+            <set-property name="displayName"><![CDATA[Castorama-Site-Agent]]></set-property>
+            <set-property name="creationTime"><![CDATA[8/3/2009 20:05:03]]></set-property>
+            <set-property name="transport"><![CDATA[900002]]></set-property>
+            <set-property name="principalAssets"><![CDATA[REPOSITORY]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

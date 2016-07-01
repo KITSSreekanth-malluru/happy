@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+
+        <add-item item-descriptor="Motif" id="motif1">
+            <set-property name="id"><![CDATA[motif1]]></set-property>
+            <set-property name="title"><![CDATA[Aide au choix]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif2">
+            <set-property name="id"><![CDATA[motif2]]></set-property>
+            <set-property name="title"><![CDATA[Délai de livraison]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif3">
+            <set-property name="id"><![CDATA[motif3]]></set-property>
+            <set-property name="title"><![CDATA[Indisponibilité]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif4">
+            <set-property name="id"><![CDATA[motif4]]></set-property>
+            <set-property name="title"><![CDATA[Exclusif web]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif5">
+            <set-property name="id"><![CDATA[motif5]]></set-property>
+            <set-property name="title"><![CDATA[Frais de livraison]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif6">
+            <set-property name="id"><![CDATA[motif6]]></set-property>
+            <set-property name="title"><![CDATA[Lieu de livraison]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif7">
+            <set-property name="id"><![CDATA[motif7]]></set-property>
+            <set-property name="title"><![CDATA[Prix]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif8">
+            <set-property name="id"><![CDATA[motif8]]></set-property>
+            <set-property name="title"><![CDATA[Disponibilité en magasin]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif9">
+            <set-property name="id"><![CDATA[motif9]]></set-property>
+            <set-property name="title"><![CDATA[Erreur sur la fiche produit]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif10">
+            <set-property name="id"><![CDATA[motif10]]></set-property>
+            <set-property name="title"><![CDATA[Notice d'utilisation]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif11">
+            <set-property name="id"><![CDATA[motif11]]></set-property>
+            <set-property name="title"><![CDATA[S.A.V./Garantie]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif12">
+            <set-property name="id"><![CDATA[motif12]]></set-property>
+            <set-property name="title"><![CDATA[Livraison en magasin]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif13">
+            <set-property name="id"><![CDATA[motif13]]></set-property>
+            <set-property name="title"><![CDATA[Modalités de paiement]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif14">
+            <set-property name="id"><![CDATA[motif14]]></set-property>
+            <set-property name="title"><![CDATA[Produit introuvable]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif15">
+            <set-property name="id"><![CDATA[motif15]]></set-property>
+            <set-property name="title"><![CDATA[Pose du produit]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif16">
+            <set-property name="id"><![CDATA[motif16]]></set-property>
+            <set-property name="title"><![CDATA[Obtenir un catalogue papier]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif17">
+            <set-property name="id"><![CDATA[motif17]]></set-property>
+            <set-property name="title"><![CDATA[Constater un "bug"]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif18">
+            <set-property name="id"><![CDATA[motif18]]></set-property>
+            <set-property name="title"><![CDATA[Désabonnement newsletter]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif19">
+            <set-property name="id"><![CDATA[motif19]]></set-property>
+            <set-property name="title"><![CDATA[Participation & résultats de jeux en ligne]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif20">
+            <set-property name="id"><![CDATA[motif20]]></set-property>
+            <set-property name="title"><![CDATA[Frais de livraison]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif21">
+            <set-property name="id"><![CDATA[motif21]]></set-property>
+            <set-property name="title"><![CDATA[Je ne reçois pas la newsletter]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif22">
+            <set-property name="id"><![CDATA[motif22]]></set-property>
+            <set-property name="title"><![CDATA[Achat en magasin]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif23">
+            <set-property name="id"><![CDATA[motif23]]></set-property>
+            <set-property name="title"><![CDATA[Appel en magasin]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif24">
+            <set-property name="id"><![CDATA[motif24]]></set-property>
+            <set-property name="title"><![CDATA[Télécharger l'application sur votre iphone]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif25">
+            <set-property name="id"><![CDATA[motif25]]></set-property>
+            <set-property name="title"><![CDATA[Utiliser l'application]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif26">
+            <set-property name="id"><![CDATA[motif26]]></set-property>
+            <set-property name="title"><![CDATA[Signaler une anomalie]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="motif27">
+            <set-property name="id"><![CDATA[motif27]]></set-property>
+            <set-property name="title"><![CDATA[Faire une suggestion]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="Motif" id="conMotif22">
+            <set-property name="id"><![CDATA[conMotif22]]></set-property>
+            <set-property name="title"><![CDATA[l'utilisation de votre Carte l'Atout]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif23">
+            <set-property name="id"><![CDATA[conMotif23]]></set-property>
+            <set-property name="title"><![CDATA[les points fid&eacute;lit&eacute;]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif24">
+            <set-property name="id"><![CDATA[conMotif24]]></set-property>
+            <set-property name="title"><![CDATA[les garanties exclusives Carte l'Atout]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif25">
+            <set-property name="id"><![CDATA[conMotif25]]></set-property>
+            <set-property name="title"><![CDATA[les offres exclusives Carte l'Atout]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif26">
+            <set-property name="id"><![CDATA[conMotif26]]></set-property>
+            <set-property name="title"><![CDATA[votre relev&eacute; de compte]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif27">
+            <set-property name="id"><![CDATA[conMotif27]]></set-property>
+            <set-property name="title"><![CDATA[les offres de financement]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif28">
+            <set-property name="id"><![CDATA[conMotif28]]></set-property>
+            <set-property name="title"><![CDATA[votre magasin Castorama]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif29">
+            <set-property name="id"><![CDATA[conMotif29]]></set-property>
+            <set-property name="title"><![CDATA[un changement d'adresse]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif30">
+            <set-property name="id"><![CDATA[conMotif30]]></set-property>
+            <set-property name="title"><![CDATA[un changement de coordonn&eacute;es bancaires]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif31">
+            <set-property name="id"><![CDATA[conMotif31]]></set-property>
+            <set-property name="title"><![CDATA[la r&eacute;siliation de votre Carte l'Atout]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif32">
+            <set-property name="id"><![CDATA[conMotif32]]></set-property>
+            <set-property name="title"><![CDATA[la perte ou le vol de votre Carte l'Atout]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif33">
+            <set-property name="id"><![CDATA[conMotif33]]></set-property>
+            <set-property name="title"><![CDATA[l'oubli des codes d'acc&egrave;s &agrave; votre compte]]></set-property>
+        </add-item>
+        <add-item item-descriptor="Motif" id="conMotif34">
+            <set-property name="id"><![CDATA[conMotif34]]></set-property>
+            <set-property name="title"><![CDATA[l'oubli de votre code confidentiel]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="ContactUsMotif" id="motif2">
+            <set-property name="id"><![CDATA[motif2]]></set-property>
+            <set-property name="motif"><![CDATA[motif2]]></set-property>
+            <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+            <set-property name="message">
+                <![CDATA[Pour connaître le délai de livraison d'un article il vous faut ajouter de 1 à 5 jours (hors week-end et jours fériés) au délai d'expédition affiché sur la fiche article.]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif3">
+            <set-property name="id"><![CDATA[motif3]]></set-property>
+            <set-property name="motif"><![CDATA[motif3]]></set-property>
+            <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+            <set-property name="message">
+                <![CDATA[Les articles avec le caractère épuisé sont des produits qui ne seront plus vendus ; les articles avec le caractère « en vente en magasin » sont actuellement en rupture sur le site et pourront éventuellement faire l'objet d'un réapprovisionnement futur.]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif6">
+            <set-property name="id"><![CDATA[motif6]]></set-property>
+            <set-property name="motif"><![CDATA[motif6]]></set-property>
+            <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+            <set-property name="message">
+                <![CDATA[Les livraisons s'effectuent exclusivement en France Métropolitaine et en Principauté de Monaco. Les livraisons en Corse peuvent faire l'objet de conditions particulières. Ces conditions vous sont communiquées soit directement sur le site après avoir saisi votre code postal de livraison dans la page "Livraison" (étape 1) ou bien avant l'expédition de votre commande.]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="ContactUsMotif" id="motif16">
+            <set-property name="id"><![CDATA[motif16]]></set-property>
+            <set-property name="motif"><![CDATA[motif16]]></set-property>
+            <set-property name="formType"><![CDATA[WEB_MASTER]]></set-property>
+            <set-property name="message">
+                <![CDATA[<p><strong>Pour recevoir les catalogues papier Castorama ou les feuilleter en ligne, <a href="/catalog/catalogs.jsp">Cliquez ici</a>.</strong></p>]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif18">
+            <set-property name="id"><![CDATA[motif18]]></set-property>
+            <set-property name="motif"><![CDATA[motif18]]></set-property>
+            <set-property name="formType"><![CDATA[WEB_MASTER]]></set-property>
+            <set-property name="message">
+                <![CDATA[<p><strong>Pour vous désabonner, il suffit de vous rendre sur cette page : <a href="/user/myNewsletters1.jsp">Cliquez ici</a>.</strong></p>]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif20">
+            <set-property name="id"><![CDATA[motif20]]></set-property>
+            <set-property name="motif"><![CDATA[motif20]]></set-property>
+            <set-property name="formType"><![CDATA[WEB_MASTER]]></set-property>
+            <set-property name="message">
+                <![CDATA[Quand vous vous trouvez sur la fiche article, cliquez sur &laquo; ajouter au panier &raquo; une pop up apparaît vous proposant de voir votre panier ; cliquez sur le lien cela ne vous engage aucunement, dans le panier vous pourrez voir les frais de livraison.]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif22">
+            <set-property name="id"><![CDATA[motif22]]></set-property>
+            <set-property name="motif"><![CDATA[motif22]]></set-property>
+            <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif23">
+            <set-property name="id"><![CDATA[motif23]]></set-property>
+            <set-property name="motif"><![CDATA[motif23]]></set-property>
+            <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="ContactUsMotif" id="motif24">
+            <set-property name="id"><![CDATA[motif24]]></set-property>
+            <set-property name="motif"><![CDATA[motif24]]></set-property>
+            <set-property name="formType"><![CDATA[IPHONE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif25">
+            <set-property name="id"><![CDATA[motif25]]></set-property>
+            <set-property name="motif"><![CDATA[motif25]]></set-property>
+            <set-property name="formType"><![CDATA[IPHONE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif26">
+            <set-property name="id"><![CDATA[motif26]]></set-property>
+            <set-property name="motif"><![CDATA[motif26]]></set-property>
+            <set-property name="formType"><![CDATA[IPHONE]]></set-property>
+        </add-item>
+        <add-item item-descriptor="ContactUsMotif" id="motif27">
+            <set-property name="id"><![CDATA[motif27]]></set-property>
+            <set-property name="motif"><![CDATA[motif27]]></set-property>
+            <set-property name="formType"><![CDATA[IPHONE]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="messageMotif" id="motif1001">
+            <set-property name="title"><![CDATA[Retard de livraison ANQ]]></set-property>
+            <set-property name="cmotif"><![CDATA[1]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1002">
+            <set-property name="title"><![CDATA[Casse Refus signalé sur bon de livraison]]></set-property>
+            <set-property name="cmotif"><![CDATA[2]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1003">
+            <set-property name="title"><![CDATA[Erreur dans le contenu de la commande]]></set-property>
+            <set-property name="cmotif"><![CDATA[3]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1004">
+            <set-property name="title"><![CDATA[Chgt d'avis / bon de retour / Enlèvement]]></set-property>
+            <set-property name="cmotif"><![CDATA[4]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1005">
+            <set-property name="title"><![CDATA[Livraison incomplète]]></set-property>
+            <set-property name="cmotif"><![CDATA[5]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1009">
+            <set-property name="title"><![CDATA[Panne SAV]]></set-property>
+            <set-property name="cmotif"><![CDATA[9]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1011">
+            <set-property name="title"><![CDATA[Adresse facture/livraison]]></set-property>
+            <set-property name="cmotif"><![CDATA[11]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1012">
+            <set-property name="title"><![CDATA[Problème site]]></set-property>
+            <set-property name="cmotif"><![CDATA[12]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1017">
+            <set-property name="title"><![CDATA[Annulation de commande]]></set-property>
+            <set-property name="cmotif"><![CDATA[17]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1018">
+            <set-property name="title"><![CDATA[Modification d'OL]]></set-property>
+            <set-property name="cmotif"><![CDATA[18]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1019">
+            <set-property name="title"><![CDATA[Paiement]]></set-property>
+            <set-property name="cmotif"><![CDATA[19]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1020">
+            <set-property name="title"><![CDATA[Casse constatée après déballage]]></set-property>
+            <set-property name="cmotif"><![CDATA[20]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1021">
+            <set-property name="title"><![CDATA[Expédié mais non livré]]></set-property>
+            <set-property name="cmotif"><![CDATA[21]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1022">
+            <set-property name="title"><![CDATA[Article incomplet]]></set-property>
+            <set-property name="cmotif"><![CDATA[22]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1007">
+            <set-property name="title"><![CDATA[Retour sauvage]]></set-property>
+            <set-property name="cmotif"><![CDATA[7]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1010">
+            <set-property name="title"><![CDATA[Insatisfaction livraison (Aide/RDV/Etage)]]></set-property>
+            <set-property name="cmotif"><![CDATA[10]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1013">
+            <set-property name="title"><![CDATA[Demande geste commercial]]></set-property>
+            <set-property name="cmotif"><![CDATA[13]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1014">
+            <set-property name="title"><![CDATA[Attente remboursement / Diff prix]]></set-property>
+            <set-property name="cmotif"><![CDATA[14]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1023">
+            <set-property name="title"><![CDATA[Conditions de livraison particulières]]></set-property>
+            <set-property name="cmotif"><![CDATA[23]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1024">
+            <set-property name="title"><![CDATA[CGV, pmt, pfe, livraison, retour, garantie]]></set-property>
+            <set-property name="cmotif"><![CDATA[24]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1025">
+            <set-property name="title"><![CDATA[Notices]]></set-property>
+            <set-property name="cmotif"><![CDATA[25]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1026">
+            <set-property name="title"><![CDATA[Duplicata facture /Pb facturation]]></set-property>
+            <set-property name="cmotif"><![CDATA[26]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1027">
+            <set-property name="title"><![CDATA[souci dans Mon compte]]></set-property>
+            <set-property name="cmotif"><![CDATA[27]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1028">
+            <set-property name="title"><![CDATA[Qualité produit]]></set-property>
+            <set-property name="cmotif"><![CDATA[28]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1029">
+            <set-property name="title"><![CDATA[Envoi de documents/photos]]></set-property>
+            <set-property name="cmotif"><![CDATA[29]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1030">
+            <set-property name="title"><![CDATA[Pas compris délai / 48H]]></set-property>
+            <set-property name="cmotif"><![CDATA[30]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1031">
+            <set-property name="title"><![CDATA[Suivi de commande]]></set-property>
+            <set-property name="cmotif"><![CDATA[31]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1032">
+            <set-property name="title"><![CDATA[Retard en PREPA]]></set-property>
+            <set-property name="cmotif"><![CDATA[32]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1033">
+            <set-property name="title"><![CDATA[Retard LDF]]></set-property>
+            <set-property name="cmotif"><![CDATA[33]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1034">
+            <set-property name="title"><![CDATA[Responsable]]></set-property>
+            <set-property name="cmotif"><![CDATA[34]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1035">
+            <set-property name="title"><![CDATA[Réponse]]></set-property>
+            <set-property name="cmotif"><![CDATA[35]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1050">
+            <set-property name="title"><![CDATA[Confirmation prise en compte]]></set-property>
+            <set-property name="cmotif"><![CDATA[50]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1051">
+            <set-property name="title"><![CDATA[Code avantage]]></set-property>
+            <set-property name="cmotif"><![CDATA[51]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1052">
+            <set-property name="title"><![CDATA[Code avantage - PGT]]></set-property>
+            <set-property name="cmotif"><![CDATA[52]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1053">
+            <set-property name="title"><![CDATA[Justificatifs]]></set-property>
+            <set-property name="cmotif"><![CDATA[53]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1054">
+            <set-property name="title"><![CDATA[Justificatifs - Bien reçu]]></set-property>
+            <set-property name="cmotif"><![CDATA[54]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1055">
+            <set-property name="title"><![CDATA[Justificatifs - Explications]]></set-property>
+            <set-property name="cmotif"><![CDATA[55]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1056">
+            <set-property name="title"><![CDATA[Justificatifs - Relance]]></set-property>
+            <set-property name="cmotif"><![CDATA[56]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1057">
+            <set-property name="title"><![CDATA[Justificatifs - Autre format d'envoi]]></set-property>
+            <set-property name="cmotif"><![CDATA[57]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1058">
+            <set-property name="title"><![CDATA[Justificatifs - Annulation non reçu]]></set-property>
+            <set-property name="cmotif"><![CDATA[58]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1059">
+            <set-property name="title"><![CDATA[Complément d'adresse]]></set-property>
+            <set-property name="cmotif"><![CDATA[59]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1060">
+            <set-property name="title"><![CDATA[=Complément d'adresse - bien reçu]]></set-property>
+            <set-property name="cmotif"><![CDATA[60]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1061">
+            <set-property name="title"><![CDATA[N° téléphone]]></set-property>
+            <set-property name="cmotif"><![CDATA[61]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1062">
+            <set-property name="title"><![CDATA[N° téléphone - bien reçu]]></set-property>
+            <set-property name="cmotif"><![CDATA[62]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1063">
+            <set-property name="title"><![CDATA[N° téléphone - Relance]]></set-property>
+            <set-property name="cmotif"><![CDATA[63]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1064">
+            <set-property name="title"><![CDATA[Surcoût Corse]]></set-property>
+            <set-property name="cmotif"><![CDATA[64]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1065">
+            <set-property name="title"><![CDATA[Surcoût Corse - explications]]></set-property>
+            <set-property name="cmotif"><![CDATA[65]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1066">
+            <set-property name="title"><![CDATA[Etranger - procedure récup TVA]]></set-property>
+            <set-property name="cmotif"><![CDATA[66]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1067">
+            <set-property name="title"><![CDATA[Carte l'Atout - dispo insuffisant]]></set-property>
+            <set-property name="cmotif"><![CDATA[67]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1068">
+            <set-property name="title"><![CDATA[Carte l'Atout - opposition]]></set-property>
+            <set-property name="cmotif"><![CDATA[68]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1069">
+            <set-property name="title"><![CDATA[Carte l'Atout - erreur de numéro]]></set-property>
+            <set-property name="cmotif"><![CDATA[69]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1070">
+            <set-property name="title"><![CDATA[Carte l'Atout - option de paiement]]></set-property>
+            <set-property name="cmotif"><![CDATA[70]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1071">
+            <set-property name="title"><![CDATA[Carte l'Atout - porteur différent]]></set-property>
+            <set-property name="cmotif"><![CDATA[71]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1072">
+            <set-property name="title"><![CDATA[Epuisé (annulation + gesteco)]]></set-property>
+            <set-property name="cmotif"><![CDATA[72]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1073">
+            <set-property name="title"><![CDATA[Epuisé et proposition de remplacement]]></set-property>
+            <set-property name="cmotif"><![CDATA[73]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1074">
+            <set-property name="title"><![CDATA[Epuisé et demande maintien]]></set-property>
+            <set-property name="cmotif"><![CDATA[74]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1075">
+            <set-property name="title"><![CDATA[Epuisé et changement de gamme]]></set-property>
+            <set-property name="cmotif"><![CDATA[75]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1076">
+            <set-property name="title"><![CDATA[Indispo suite soldes (annulation)]]></set-property>
+            <set-property name="cmotif"><![CDATA[76]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1077">
+            <set-property name="title"><![CDATA[Epuisé - confirm annul + rembst]]></set-property>
+            <set-property name="cmotif"><![CDATA[77]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1078">
+            <set-property name="title"><![CDATA[Délai au fournisseur - Demande]]></set-property>
+            <set-property name="cmotif"><![CDATA[78]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1079">
+            <set-property name="title"><![CDATA[Délai au fournisseur - Confirmation]]></set-property>
+            <set-property name="cmotif"><![CDATA[79]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1080">
+            <set-property name="title"><![CDATA[Délai - Information au client]]></set-property>
+            <set-property name="cmotif"><![CDATA[80]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1081">
+            <set-property name="title"><![CDATA[Délai - Nouveau délai]]></set-property>
+            <set-property name="cmotif"><![CDATA[81]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1082">
+            <set-property name="title"><![CDATA[Scission - d'office]]></set-property>
+            <set-property name="cmotif"><![CDATA[82]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1083">
+            <set-property name="title"><![CDATA[Scission - Proposition]]></set-property>
+            <set-property name="cmotif"><![CDATA[83]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1084">
+            <set-property name="title"><![CDATA[Scission - Confirmation]]></set-property>
+            <set-property name="cmotif"><![CDATA[84]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1085">
+            <set-property name="title"><![CDATA[Confirmation modification et rembst]]></set-property>
+            <set-property name="cmotif"><![CDATA[85]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1086">
+            <set-property name="title"><![CDATA[Confirmation annulation et rembst]]></set-property>
+            <set-property name="cmotif"><![CDATA[86]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1087">
+            <set-property name="title"><![CDATA[Commande en prépa]]></set-property>
+            <set-property name="cmotif"><![CDATA[87]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1088">
+            <set-property name="title"><![CDATA[SOUFFRANCE SERNAM]]></set-property>
+            <set-property name="cmotif"><![CDATA[88]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1089">
+            <set-property name="title"><![CDATA[Livraison étage / autre adresse]]></set-property>
+            <set-property name="cmotif"><![CDATA[89]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1090">
+            <set-property name="title"><![CDATA[Photos]]></set-property>
+            <set-property name="cmotif"><![CDATA[90]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1091">
+            <set-property name="title"><![CDATA[Photos - bien reçu]]></set-property>
+            <set-property name="cmotif"><![CDATA[91]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1092">
+            <set-property name="title"><![CDATA[LDF plusieurs livraisons]]></set-property>
+            <set-property name="cmotif"><![CDATA[92]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1093">
+            <set-property name="title"><![CDATA[PAS LIVRE POSTE : enquête]]></set-property>
+            <set-property name="cmotif"><![CDATA[93]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1094">
+            <set-property name="title"><![CDATA[Bien livré]]></set-property>
+            <set-property name="cmotif"><![CDATA[94]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1095">
+            <set-property name="title"><![CDATA[Retour à la charge du CLIENT  => Rembst]]></set-property>
+            <set-property name="cmotif"><![CDATA[95]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1096">
+            <set-property name="title"><![CDATA[Retour par COLISSIMO => Rembst]]></set-property>
+            <set-property name="cmotif"><![CDATA[96]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1097">
+            <set-property name="title"><![CDATA[Retour par COLISSIMO => Relivraison]]></set-property>
+            <set-property name="cmotif"><![CDATA[97]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1098">
+            <set-property name="title"><![CDATA[Retour par SERNAM => Rembst sans  PFE]]></set-property>
+            <set-property name="cmotif"><![CDATA[98]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1099">
+            <set-property name="title"><![CDATA[Retour par SERNAM => Relivraison]]></set-property>
+            <set-property name="cmotif"><![CDATA[99]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1100">
+            <set-property name="title"><![CDATA[Reprise ancien système]]></set-property>
+            <set-property name="cmotif"><![CDATA[100]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1101">
+            <set-property name="title"><![CDATA[Relivraison sans reprise]]></set-property>
+            <set-property name="cmotif"><![CDATA[101]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1102">
+            <set-property name="title"><![CDATA[Remboursement sans reprise SANS PFE]]></set-property>
+            <set-property name="cmotif"><![CDATA[102]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1103">
+            <set-property name="title"><![CDATA[Ordre d'enlèvement non reçu]]></set-property>
+            <set-property name="cmotif"><![CDATA[103]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1104">
+            <set-property name="title"><![CDATA[GESTE CO et conserver le produit]]></set-property>
+            <set-property name="cmotif"><![CDATA[104]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1105">
+            <set-property name="title"><![CDATA[Besoin détail/ manquant/ panne/ N°série]]></set-property>
+            <set-property name="cmotif"><![CDATA[105]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1106">
+            <set-property name="title"><![CDATA[DEVIS]]></set-property>
+            <set-property name="cmotif"><![CDATA[106]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1107">
+            <set-property name="title"><![CDATA[Confirmation rembst - Carte Bancaire]]></set-property>
+            <set-property name="cmotif"><![CDATA[107]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1108">
+            <set-property name="title"><![CDATA[Confirmation rembst - Carte L'Atout]]></set-property>
+            <set-property name="cmotif"><![CDATA[108]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1109">
+            <set-property name="title"><![CDATA[Confirmation rembst - Chèque]]></set-property>
+            <set-property name="cmotif"><![CDATA[109]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1110">
+            <set-property name="title"><![CDATA[Erreur manifeste]]></set-property>
+            <set-property name="cmotif"><![CDATA[110]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1111">
+            <set-property name="title"><![CDATA[Dossier]]></set-property>
+            <set-property name="cmotif"><![CDATA[111]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1112">
+            <set-property name="title"><![CDATA[SOUFFRANCE HEPPNER]]></set-property>
+            <set-property name="cmotif"><![CDATA[112]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1113">
+            <set-property name="title"><![CDATA[Retour par HEPPNER => Rembst sans  PFE]]></set-property>
+            <set-property name="cmotif"><![CDATA[113]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageMotif" id="motif1114">
+            <set-property name="title"><![CDATA[Retour par HEPPNER => Relivraison]]></set-property>
+            <set-property name="cmotif"><![CDATA[114]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="messageQuestion" id="question1019">
+            <set-property name="motif"><![CDATA[motif1019]]></set-property>
+            <set-property name="question"><![CDATA[J'ai une question concernant le paiement.]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Pour plus d'information nous vous invitons à consulter notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[Le paiement de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q2]]></set-property>
+            <set-property name="message">
+                <![CDATA[J'ai une question concernant\nle paiement de ma commande:]]></set-property>
+            <set-property name="ordre"><![CDATA[1]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1012">
+            <set-property name="motif"><![CDATA[motif1012]]></set-property>
+            <set-property name="question"><![CDATA[Mon offre promotionnel n'a pas fonctionné]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Vérifiez bien les conditions et les dates de validité de l'offre promotionnelle. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[Mon offre promotionnelle]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q9]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je souhaite bénéficier de l'offre promotionnelle suivante :\n- Voici la référence de l'offre promotionnelle :\n- Valable jusqu'au :]]></set-property>
+            <set-property name="ordre"><![CDATA[2]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1011">
+            <set-property name="motif"><![CDATA[motif1011]]></set-property>
+            <set-property name="question"><![CDATA[Je souhaite modifier une adresse]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Si votre commande est déjà en cours de préparation ou d'expédition, il n'est plus possible de modifier l'adresse de livraison. Sinon contactez nos conseillers au 0810.104.104 (prix appel local - du lundi au samedi de 8 h à 20h). Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La modification de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q7]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je souhaite modifier une adresse sur ma commande :\n- Ceci concerne l'adresse de facturation (Oui/Non) :\n- Ceci concerne l'adresse de livraison (Oui/Non) :\n- Nouvelle adresse :\n- Civilité : M./Mme/Mlle\n- Nom :\n- Prénom : \n- Adresse : \n- Code postal : \n- Ville :\n- N° Téléphone (obligatoire) :]]></set-property>
+            <set-property name="ordre"><![CDATA[3]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1018">
+            <set-property name="motif"><![CDATA[motif1018]]></set-property>
+            <set-property name="question"><![CDATA[Je souhaite modifier le contenu de ma commande]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Si votre commande est déjà en cours de préparation ou d'expédition, il n'est plus possible de modifier les quantités commandées. Sinon contactez nos conseillers au 0810.104.104 (prix appellocal - du lundi au samedi de 8 h à 20h). Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La modification de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q7]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je souhaite supprimer des articles de ma commande.\nCeci concerne l'ordre de livraison Nº :\n- Référence de l'article (6 chiffres) :\n- Désignation :\n- Quantités commandées :\n- Quantités souhaitées :]]></set-property>
+            <set-property name="ordre"><![CDATA[4]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1001">
+            <set-property name="motif"><![CDATA[motif1001]]></set-property>
+            <set-property name="question"><![CDATA[Je souhaite connaître le délai de livraison]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Votre commande fait peut-être l'objet de plusieurs livraisons. Dans ce cas, merci de nous préciser le numéro d'ordre de livraison concerné. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[Le délai et la livraison]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q8]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je souhaite connaître le délai de livraison pour ma commande.\nCeci concerne l'ordre de livraison Nº :]]></set-property>
+            <set-property name="ordre"><![CDATA[5]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1017">
+            <set-property name="motif"><![CDATA[motif1017]]></set-property>
+            <set-property name="question"><![CDATA[Je souhaite annuler ma commande]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Si votre commande est déjà en cours de préparation ou d'expédition, il n'est plus possible de l'annuler. Sinon contactez nos conseillers au 0810.104.104 (prix appel local - du lundi au samedi de 8 h à 20h). Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La modification de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q7]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je souhaite annuler ma commande.\nCeci concerne l'ordre de livraison Nº :]]></set-property>
+            <set-property name="ordre"><![CDATA[6]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1021">
+            <set-property name="motif"><![CDATA[motif1021]]></set-property>
+            <set-property name="question"><![CDATA[Ma commande est expédiée mais non reçue]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Après expédition, le délai de livraison généralement constaté est de 1 à 5 jours. Cliquez sur le numéro d'envoi pour suivre votre colis. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[Le délai et la livraison]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q8]]></set-property>
+            <set-property name="message">
+                <![CDATA[Ma commande est expédiée depuis plus de 5 jours mais je ne l'ai toujours pas reçue.\nCeci concerne l'ordre de livraison Nº :]]></set-property>
+            <set-property name="ordre"><![CDATA[7]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1004">
+            <set-property name="motif"><![CDATA[motif1004]]></set-property>
+            <set-property name="question"><![CDATA[Je souhaite vous retourner un article]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Si l'article vous a été livré depuis plus de 7 jours, votre demande ne pourra être acceptée. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext">
+                <![CDATA[La garantie &quot;satisfait, échangé, remboursé&quot;]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q5]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je souhaite vous retourner un article de ma commande.\nCeci concerne l'ordre de livraison Nº:\n- Référence de l'article (6 chiffres) :\n- Désignation :\n- Quantités commandées :\n- Quantités à retourner :]]></set-property>
+            <set-property name="ordre"><![CDATA[8]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1020">
+            <set-property name="motif"><![CDATA[motif1020]]></set-property>
+            <set-property name="question">
+                <![CDATA[Après déballage, je constate qu'un article est cassé]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Merci de nous indiquer le maximum d'informations sur les conditions de livraison de votre commande. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La réception de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q6]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je viens de recevoir ma commande mais 1 ou plusieurs articles sont cassés.\n- Ceci concerne l'ordre de livraison Nº :\n- Référence de l'article (chiffres) :\n- Désignation :\n- Quantité commandée :\n- Quantité cassée :\n- défaut constaté :\n- Réserves émises sur le bon de livraison :\n- Date de réception de la marchandise :]]></set-property>
+            <set-property name="ordre"><![CDATA[9]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1002">
+            <set-property name="motif"><![CDATA[motif1002]]></set-property>
+            <set-property name="question"><![CDATA[J'ai refusé toute ma commande car abimée]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Merci de nous indiquer le maximum d'informations sur les conditions de livraison de votre commande. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La réception de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q6]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je viens de refuser partiellement ma commande au transporteur car 1 ou plusieurs articles sont cassés.\nCeci concerne l'ordre de livraison Nº :\nVoici le ou les articles refusés :\n- Référence de l'article (6 chiffres) :\n- Désignation :\n-  Réserves émises sur le bon de livraison :\n- Date de refus de la marchandise :\n- Je souhaite un remboursement :\n- Je souhaite une nouvelle livraison :]]></set-property>
+            <set-property name="ordre"><![CDATA[10]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1023">
+            <set-property name="motif"><![CDATA[motif1002]]></set-property>
+            <set-property name="question"><![CDATA[J'ai refusé une partie de ma commande car abimée]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Merci de nous indiquer le maximum d'informations sur les conditions de livraison de votre commande. Plus d'infos ? Consultez notre AIDE (FAQ) sur ]]></set-property>
+            <set-property name="linktext"><![CDATA[La réception de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q6]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je viens de refuser partiellement ma commande au transporteur car 1 ou plusieurs articles sont cassés.\n Ceci concerne l'ordre de livraison Nº :\n Voici le ou les articles refusés :\n - Référence de l'article (6 chiffres) :\n - Désignation :\n - Réserves émises sur le bon de livraison :\n - Date de refus de la marchandise :\n - Je souhaite un remboursement :\n - Je souhaite une nouvelle livraison :]]></set-property>
+            <set-property name="ordre"><![CDATA[11]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1003">
+            <set-property name="motif"><![CDATA[motif1003]]></set-property>
+            <set-property name="question"><![CDATA[J'ai reçu un article différent de celui commandé]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Votre commande fait peut-être l'objet de plusieurs livraisons. Celles-ci figurent dans le détail de votre commande. De plus, toute demande nous parvenant au delà d'un délai de 2 jours ouvrés après réception de la commande ne pourra être acceptée. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La réception de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q6]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je viens de recevoir ma commande mais 1 article est différent de celui commandé. \n- Ceci concerne l'ordre de livraison N° :\n- Référence de l'article commandé (6 chiffres) :\n- Désignation de l'article commandé :\n- Référence de l'article reçu (6 chiffres) :\n- Désignation de l'article reçu :\n- Code barre du produit reçu :\n- Nom du préparateur de la commande :\n- Commentaires :\n- je souhaite un échange :\n- je souhaite un remboursement :]]></set-property>
+            <set-property name="ordre"><![CDATA[12]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1022">
+            <set-property name="motif"><![CDATA[motif1022]]></set-property>
+            <set-property name="question"><![CDATA[J'ai reçu ma commande mais un article est incomplet]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Toute demande nous parvenant au-delà d'un délai de 2 jours ouvrés après réception de la commande ne pourra être acceptée. Merci de nous décrire très précisément l'élément manquant. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La réception de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q6]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je viens de recevoir mon article : il manque un accessoire ou un élément.\n- Ceci concerne l'ordre de livraison Nº :\n- Référence de l'article (6 chiffres) :\n- Désignation de l'article :\n- Désignation de l'élément ou de l'accessoire manquant :\n- Code barre du produit reçu:\n- Référence de la pièce manquante (Voir la notice) :\n- Nom du préparateur de la commande :]]></set-property>
+            <set-property name="ordre"><![CDATA[13]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1005">
+            <set-property name="motif"><![CDATA[motif1005]]></set-property>
+            <set-property name="question"><![CDATA[J'ai reçu ma commande mais elle est incomplète]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Votre commande fait peut-être l'objet de plusieurs livraisons. Celles-ci figurent dans le détail de votre commande. De plus, toute demande nous parvenant au delà d'un délai de 2 jours ouvrés après réception de la commande ne pourra être acceptée. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[La réception de ma commande]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q6]]></set-property>
+            <set-property name="message">
+                <![CDATA[Je viens de recevoir ma commande et il manque 1 ou plusieurs articles.\n- Ceci concerne l'ordre de livraison Nº :\n- Référence de l'article (6 chiffres) :\n- Désignation de l'article :\n- Quantité commandée :\n- Quantité reçue :\n- Quantité manquante :\n- Nom du préparateur de la commande :\n- Je souhaite un échange :\n- Je souhaite un remboursement :]]></set-property>
+            <set-property name="ordre"><![CDATA[14]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="messageQuestion" id="question1009">
+            <set-property name="motif"><![CDATA[motif1009]]></set-property>
+            <set-property name="question"><![CDATA[Mon produit est défaillant]]></set-property>
+            <set-property name="instruction">
+                <![CDATA[Tout produit retourné donne lieu à une expertise technique. Si l'état du produit retourné ne correspond pas à votre description de la panne, nous ne prendronspas en charge la réparation sous garantie (réparation payante). Merci de vous référer à la notice pour décrire la panne constatée. Plus d'infos ? Consultez notre AIDE (FAQ) sur]]></set-property>
+            <set-property name="linktext"><![CDATA[Le Service Après Vente]]></set-property>
+            <set-property name="linkvalue"><![CDATA[q12]]></set-property>
+            <set-property name="message">
+                <![CDATA[Mon produit est défaillant.\n- Ceci concerne l'ordre de livraison Nº :\n- Date de l'achat :\n- Utilisé la première fois le :\n- Date de la panne constatée :\n- Référence de l'article (6 chiffres) :\n- Désignation de l'article :\n- Marque :\n- Numéro de série:\n- Code barre :\n- Détail de la panne constatée :]]></set-property>
+            <set-property name="ordre"><![CDATA[15]]></set-property>
+        </add-item>
+
+    </import-items>
+
+
+    <update-item item-descriptor="Motif" id="conMotif22">
+        <set-property name="id"><![CDATA[conMotif22]]></set-property>
+        <set-property name="title"><![CDATA[l'utilisation de votre Carte Castorama]]></set-property>
+    </update-item>
+    <update-item item-descriptor="Motif" id="conMotif24">
+        <set-property name="id"><![CDATA[conMotif24]]></set-property>
+        <set-property name="title"><![CDATA[les garanties exclusives Carte Castorama]]></set-property>
+    </update-item>
+    <update-item item-descriptor="Motif" id="conMotif25">
+        <set-property name="id"><![CDATA[conMotif25]]></set-property>
+        <set-property name="title"><![CDATA[les offres exclusives Carte Castorama]]></set-property>
+    </update-item>
+    <update-item item-descriptor="Motif" id="conMotif31">
+        <set-property name="id"><![CDATA[conMotif31]]></set-property>
+        <set-property name="title"><![CDATA[la r&eacute;siliation de votre Carte Castorama]]></set-property>
+    </update-item>
+    <update-item item-descriptor="Motif" id="conMotif32">
+        <set-property name="id"><![CDATA[conMotif32]]></set-property>
+        <set-property name="title"><![CDATA[la perte ou le vol de votre Carte Castorama]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="messageMotif" id="motif1067">
+        <set-property name="title"><![CDATA[Carte Castorama - dispo insuffisant]]></set-property>
+        <set-property name="cmotif"><![CDATA[67]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="messageMotif" id="motif1068">
+        <set-property name="title"><![CDATA[Carte Castorama - opposition]]></set-property>
+        <set-property name="cmotif"><![CDATA[68]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="messageMotif" id="motif1069">
+        <set-property name="title"><![CDATA[Carte Castorama - erreur de numéro]]></set-property>
+        <set-property name="cmotif"><![CDATA[69]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="messageMotif" id="motif1070">
+        <set-property name="title"><![CDATA[Carte Castorama - option de paiement]]></set-property>
+        <set-property name="cmotif"><![CDATA[70]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="messageMotif" id="motif1071">
+        <set-property name="title"><![CDATA[Carte Castorama- porteur différent]]></set-property>
+        <set-property name="cmotif"><![CDATA[71]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="messageMotif" id="motif1108">
+        <set-property name="title"><![CDATA[Confirmation rembst - Carte Castorama]]></set-property>
+        <set-property name="cmotif"><![CDATA[108]]></set-property>
+    </update-item>
+
+    <update-item item-descriptor="ContactUsMotif" id="motif1">
+        <set-property name="id"><![CDATA[motif1]]></set-property>
+        <set-property name="motif"><![CDATA[motif1]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        <set-property name="sendToCastoDirect"><![CDATA[true]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif4">
+        <set-property name="id"><![CDATA[motif4]]></set-property>
+        <set-property name="motif"><![CDATA[motif4]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        <set-property name="message">
+            <![CDATA[Ces produits sont uniquement en vente sur le site Internet et non vendus en magasin Castorama.]]></set-property>
+        <set-property name="sendToCastoDirect"><![CDATA[true]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif5">
+        <set-property name="id"><![CDATA[motif5]]></set-property>
+        <set-property name="motif"><![CDATA[motif5]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        <set-property name="message">
+            <![CDATA[Quand vous vous trouvez sur la fiche article, cliquez sur &laquo; ajouter au panier &raquo; une pop up apparaît vous proposant de voir votre panier ; cliquez sur le lien cela ne vous engage aucunement, dans le panier vous pourrez voir les frais de livraison.]]></set-property>
+        <set-property name="sendToCastoDirect"><![CDATA[true]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif7">
+        <set-property name="id"><![CDATA[motif7]]></set-property>
+        <set-property name="motif"><![CDATA[motif7]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif8">
+        <set-property name="id"><![CDATA[motif8]]></set-property>
+        <set-property name="motif"><![CDATA[motif8]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif9">
+        <set-property name="id"><![CDATA[motif9]]></set-property>
+        <set-property name="motif"><![CDATA[motif9]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        <set-property name="sendToCastoDirect"><![CDATA[true]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif10">
+        <set-property name="id"><![CDATA[motif10]]></set-property>
+        <set-property name="motif"><![CDATA[motif10]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        <set-property name="sendToCastoDirect"><![CDATA[true]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif11">
+        <set-property name="id"><![CDATA[motif11]]></set-property>
+        <set-property name="motif"><![CDATA[motif11]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif12">
+        <set-property name="id"><![CDATA[motif12]]></set-property>
+        <set-property name="motif"><![CDATA[motif12]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif13">
+        <set-property name="id"><![CDATA[motif13]]></set-property>
+        <set-property name="motif"><![CDATA[motif13]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif14">
+        <set-property name="id"><![CDATA[motif14]]></set-property>
+        <set-property name="motif"><![CDATA[motif14]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+        <set-property name="sendToCastoDirect"><![CDATA[true]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif15">
+        <set-property name="id"><![CDATA[motif15]]></set-property>
+        <set-property name="motif"><![CDATA[motif15]]></set-property>
+        <set-property name="formType"><![CDATA[PRODUCT]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif17">
+        <set-property name="id"><![CDATA[motif17]]></set-property>
+        <set-property name="motif"><![CDATA[motif17]]></set-property>
+        <set-property name="formType"><![CDATA[WEB_MASTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif21">
+        <set-property name="id"><![CDATA[motif21]]></set-property>
+        <set-property name="motif"><![CDATA[motif21]]></set-property>
+        <set-property name="formType"><![CDATA[WEB_MASTER]]></set-property>
+    </update-item>
+    <update-item item-descriptor="ContactUsMotif" id="motif19">
+        <set-property name="id"><![CDATA[motif19]]></set-property>
+        <set-property name="motif"><![CDATA[motif19]]></set-property>
+        <set-property name="formType"><![CDATA[WEB_MASTER]]></set-property>
+    </update-item>
+
+</gsa-template>

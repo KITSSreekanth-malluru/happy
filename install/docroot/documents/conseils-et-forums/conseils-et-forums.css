@@ -1,0 +1,33 @@
+.conseils-et-forums #agencer-et-concevoir {display:block;clear:both;width:950px;height:250px;background-color:#fff;}
+	.conseils-et-forums #agencer-et-concevoir  .contenu {float:left;margin-right:46px;border:1px solid #ddd;width:283px;height:246px;position:relative;}
+	.conseils-et-forums #agencer-et-concevoir  .dernier {margin-right:0;}
+		.conseils-et-forums #agencer-et-concevoir  .contenu h3 {font-weight:bold;padding:20px 10px 10px 10px;color:#4b575f;font-size:14px;text-transform:uppercase;margin: 0;}
+		.conseils-et-forums #agencer-et-concevoir  .contenu p {font-style:normal;color:#4b575f;padding:10px;}
+		.conseils-et-forums #agencer-et-concevoir  .contenu p.puce {position:absolute;bottom:5px;display:block;width:90%;}
+		.conseils-et-forums #agencer-et-concevoir  .contenu p.puce a {font-weight:bold;color:#4b575f;background:transparent url('/documents/conseils-et-forums/img/puce.gif') scroll no-repeat 0 4px;}
+		
+.conseils-et-forums #apprendre-a-faire-soi-meme{display:block;clear:both;width:950px;height:250px;background-color:#fff;}
+	.conseils-et-forums #apprendre-a-faire-soi-meme  .contenu {float:left;margin-right:46px;border:1px solid #ddd;width:283px;height:246px;position:relative;}
+	.conseils-et-forums #apprendre-a-faire-soi-meme  .dernier {margin-right:0;}
+		.conseils-et-forums #apprendre-a-faire-soi-meme .contenu h3 {font-weight:bold;padding:20px 10px 10px 10px;color:#4b575f;font-size:14px;text-transform:uppercase;margin: 0;}
+		.conseils-et-forums #apprendre-a-faire-soi-meme  .contenu p {font-style:normal;color:#4b575f;padding:10px;}
+		.conseils-et-forums #apprendre-a-faire-soi-meme  .contenu p.puce {position:absolute;bottom:5px;display:block;width:90%;}
+		.conseils-et-forums #apprendre-a-faire-soi-meme  .contenu p.puce a {font-weight:bold;color:#4b575f;background:transparent url('/documents/conseils-et-forums/img/puce.gif') scroll no-repeat 0 4px;}
+		
+.conseils-et-forums #trouver-de-l-aide{display:block;clear:both;width:950px;height:290px;background-color:#fff;}
+	.conseils-et-forums #trouver-de-l-aide .contenu {float:left;margin-right:15px;border:1px solid #ddd;width:223px;height:275px;position:relative;}
+	.conseils-et-forums #trouver-de-l-aide  .dernier {margin-right:0;}
+		.conseils-et-forums #trouver-de-l-aide .contenu h3 {font-weight:bold;padding:20px 10px 10px 10px;color:#4b575f;font-size:14px;text-transform:uppercase;margin: 0;}
+		.conseils-et-forums #trouver-de-l-aide  .contenu p {font-style:normal;color:#4b575f;padding:10px;}
+		.conseils-et-forums #trouver-de-l-aide .contenu p.puce {position:absolute;bottom:5px;display:block;width:90%;}
+		.conseils-et-forums #trouver-de-l-aide  .contenu p.puce a {font-weight:bold;color:#4b575f;background:transparent url('/documents/conseils-et-forums/img/puce.gif') scroll no-repeat 0 4px;}
+		.conseils-et-forums #trouver-de-l-aide  .contenu .logo {position:absolute;top:0;right:0;}
+		.conseils-et-forums #trouver-de-l-aide .contenu img{display:block;width:100%}
+			
+.conseils-et-forums #lancez-vous{display:block;clear:both;width:950px;height:250px;background-color:#fff;}
+	.conseils-et-forums #lancez-vous  .contenu {float:left;margin-right:46px;border:1px solid #ddd;width:283px;height:246px;position:relative;}
+	.conseils-et-forums #lancez-vous  .dernier {margin-right:0;}
+		.conseils-et-forums #lancez-vous .contenu h3 {font-weight:bold;padding:20px 10px 10px 10px;color:#4b575f;font-size:14px;text-transform:uppercase;margin: 0;}
+		.conseils-et-forums #lancez-vous  .contenu p {font-style:normal;color:#4b575f;padding:10px;}
+		.conseils-et-forums #lancez-vous .contenu p.puce {position:absolute;bottom:5px;display:block;width:90%;}
+		.conseils-et-forums #lancez-vous  .contenu p.puce a {font-weight:bold;color:#4b575f;background:transparent url('/documents/conseils-et-forums/img/puce.gif') scroll no-repeat 0 4px;}

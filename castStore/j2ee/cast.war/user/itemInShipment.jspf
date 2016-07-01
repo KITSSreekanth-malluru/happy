@@ -1,0 +1,120 @@
+<dsp:getvalueof var="index" param="shipment_index" />
+<dsp:getvalueof var="size" param="size" />
+
+<tr>
+	<td class="tblSplitter" colspan="4"><div><!--~--></div></td>
+</tr>
+<tr>
+	
+	<dsp:droplet name="SKUFindDroplet" >
+		<dsp:param name="code" param="shipment_item.CESCLAVE" />
+		<dsp:oparam name="empty">
+			<td class="alignLeft">
+				<dsp:getvalueof var="productName" param="shipment_item.LARTICLE_COMP"/>
+				<dsp:droplet name="/com/castorama/droplet/ProductNameDroplet">
+					<dsp:param name="url" value="" />
+					<dsp:param name="name" value="${productName}" />
+					<dsp:oparam name="output">
+			    	<dsp:getvalueof var="ImageURL"    param="outURL"/>
+			    	<dsp:getvalueof var="productName" param="outName"/>
+					</dsp:oparam>
+				</dsp:droplet>
+				<div class="productItemImage">
+                    <div class="productItemImageAlignMiddle">
+                        <img height="43" width="43" title="${productName}" src="${ImageURL}"/>
+                    </div>
+				</div>
+				<div class="productItemDescription">
+					<h3>
+						${productName}
+					</h3>
+					<div class="refNum"><fmt:message key="msg.cart.ref" /><dsp:valueof param="shipment_item.CESCLAVE" /></div>
+				</div>
+			</td>
+            <td>
+                <dsp:valueof param="shipment_item.QTE_SAISI" number="0"/>
+            </td>
+            <td>
+                <dsp:valueof param="shipment_item.QQTE" number="0"/>
+            </td>
+            <td class="lastCell">
+                <dsp:valueof param="shipment_item.QTE_SORTIE_REEL" number="0"/>
+            </td>
+		</dsp:oparam>
+		<dsp:oparam name="output">
+			<td class="alignLeft">
+				<dsp:getvalueof var="ImageURL" param="sku.miniatureImage.url" />
+				<dsp:getvalueof var="productName" param="sku.displayName" />
+				<c:if test="${null == productName}">
+					<dsp:getvalueof var="productName" param="shipment_item.LARTICLE_COMP"/>
+				</c:if>
+				<dsp:droplet name="/com/castorama/droplet/ProductNameDroplet">
+					<dsp:param name="url" value="${ImageURL}" />
+					<dsp:param name="name" value="${productName}" />
+					<dsp:oparam name="output">
+			    	<dsp:getvalueof var="ImageURL"    param="outURL"/>
+			    	<dsp:getvalueof var="productName" param="outName"/>
+					</dsp:oparam>
+				</dsp:droplet>
+				
+				<dsp:droplet name="Range">
+					<dsp:param name="array" param="sku.parentProducts" />
+					<dsp:param name="elementName" value="product" />
+					<dsp:param name="howMany" value="1" />
+					<dsp:oparam name="output">
+						<dsp:getvalueof var="productId" param="product.repositoryId" />
+						<dsp:getvalueof var="template" param="product.template.url" />
+						<div class="productItemImage">
+							<dsp:a href="${pageContext.request.contextPath}${template}">
+								<img height="43" width="43" title="${productName}" alt="${productName}" src="${ImageURL}"/>
+								<dsp:param name="productId" value="${productId}" />
+							</dsp:a>
+						</div>
+						<div class="productItemDescription">
+							<h3>
+								<dsp:a href="${pageContext.request.contextPath}${template}">
+									<dsp:valueof param="sku.displayName" />
+									<dsp:param name="productId" value="${productId}" />
+								</dsp:a>
+							</h3>
+							<div class="refNum">R&eacute;f&nbsp;<dsp:valueof param="shipment_item.CESCLAVE" /></div>
+						</div>
+					</dsp:oparam>
+				</dsp:droplet>
+			</td>
+			<td>
+				<dsp:valueof param="shipment_item.QTE_SAISI" number="0" />
+			</td>
+			<td>
+				<c:if test="${2 != shippment_type}">
+					<dsp:getvalueof var="wanted" param="shipment_item.QTE_SAISI" />
+			    <dsp:getvalueof var="reserved" param="shipment_item.QQTE" />
+			   	<c:if test="${null == reserved}"	>
+			   		<c:set var="reserved" value="0" />
+			   	</c:if>
+			    <c:choose>
+			      <c:when test="${reserved < wanted}">
+			      	<dsp:valueof value="${reserved}" number="0" /><br />
+			      	<span class="red">
+			      		(<dsp:valueof value="${wanted - reserved}" number="0" /> <fmt:message key="client.order.items.reserved" />)
+			      	</span>
+			      </c:when>
+			      <c:otherwise>
+			      	${reserved}
+			      </c:otherwise>
+			    </c:choose>
+				</c:if>
+			</td>
+			<td class="lastCell">
+				<dsp:valueof param="shipment_item.QTE_SORTIE_REEL" number="0" />
+			</td>
+		</dsp:oparam>
+	</dsp:droplet>
+</tr>
+
+<tr>
+	<td class="tblSplitter" colspan="4"><div><!--~--></div></td>
+</tr>
+<tr>
+	<td class="productRowEnd noPadding" colspan="4"><div><!--~--></div></td>
+</tr>

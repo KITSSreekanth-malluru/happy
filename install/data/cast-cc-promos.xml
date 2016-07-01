@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="promoInformation" id="prin200000">
+            <set-property name="title">
+                <![CDATA[Click & Collect: Generic popup banner promotion information]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/cc_banners/generic_banner.html]]></set-property>
+        </add-item>
+        <add-item item-descriptor="promoInformation" id="prin200107">
+            <set-property name="title">
+                <![CDATA[Click & Collect: Dardilly popup banner promotion information]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/cc_banners/specific_banner_Dardilly.html]]></set-property>
+        </add-item>
+        <add-item item-descriptor="promoInformation" id="1400037">
+            <set-property name="title"><![CDATA[Shopping Cart D2H Banner]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/cc_banners/shopping_cart_d2h_banner.html]]></set-property>
+        </add-item>
+        <add-item item-descriptor="promoInformation" id="1400038">
+            <set-property name="title"><![CDATA[Shopping Cart C&C Banner]]></set-property>
+            <set-property name="htmlUrl"><![CDATA[/html/cc_banners/shopping_cart_cc_banner.html]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+	<item-descriptor name="catalogue" display-property="title" display-name="Catalogue"  query-cache-size="10" item-cache-size="20">
+		<table name="CAST_CATALOGUE" type="primary" id-column-name="id">
+	     	<property name="title" data-type="string" column-name="TITLE" required="true" display-name="Catalogue title"/>
+	     	<property name="description" data-type="string" column-name="DESCRIPTION" required="true" display-name="Catalogue description"/>
+	     	<property name="promoMessage" data-type="string" column-name="PROMO_MESSAGE" required="false" display-name="Promotion message"/>
+	     	<property name="active" data-type="boolean" column-name="ACTIVE" display-name="Catalogue is active"/>
+	     	<property name="featured" data-type="boolean" column-name="FEATURED" display-name="Particular catalogue is featured"/>
+	     	<property name="bookable" data-type="boolean" column-name="BOOKABLE" display-name="catalogue can be booked"/>
+	     	<property name="image" item-type="media" column-name="IMAGE" required="true" display-name="Catalogue image" repository="/atg/commerce/catalog/ProductCatalog"/>
+	     	<property name="browse_url" data-type="string" column-name="BROWSE_URL" display-name="Catalogue URL for browsing it on-line"/>
+	     	<property name="catalogWrapId" item-type="promoInformation" column-name="CATALOG_WRAP_ID" display-name="Catalog Wrap Id" repository="/atg/commerce/catalog/ProductCatalog" />
+			<property name="displayOrder" data-type="int" column-name="DISPLAY_ORDER" display-name="Display Order for catalog"/>
+			<property name="releaseDate" data-type="date" column-name="RELEASE_DATE" display-name="Release date"/>
+			<property name="availableCoppies" data-type="int" column-name="AVAILABLE_COPIES" display-name="Number of the available coppies of the catalog"/>		     		     	
+	   </table>
+	</item-descriptor>
+</gsa-template>

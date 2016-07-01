@@ -1,0 +1,2053 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <!-- *** FOLDERS *** -->
+        <add-item item-descriptor="priceListFolder" id="PriceListFolder">
+            <set-property name="name"><![CDATA[Price Lists]]></set-property>
+            <set-property name="childItems"><![CDATA[listPrices,salePrices]]></set-property>
+        </add-item>
+
+        <!-- *** PRICE LISTS *** -->
+        <add-item item-descriptor="priceList" id="listPrices">
+            <set-property name="displayName"><![CDATA[List Prices]]></set-property>
+            <set-property name="locale"><![CDATA[fr_FR_EURO]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="salePrices">
+            <set-property name="displayName"><![CDATA[Sale Prices]]></set-property>
+            <set-property name="locale"><![CDATA[fr_FR_EURO]]></set-property>
+        </add-item>
+        <add-item item-descriptor="priceList" id="cardPrices">
+            <set-property name="displayName"><![CDATA[Castorama Card Prices]]></set-property>
+            <set-property name="locale"><![CDATA[fr_FR_EURO]]></set-property>
+        </add-item>
+
+        <!-- *** PRICES *** -->
+        <add-item item-descriptor="price" id="lpxCasto532227">
+            <set-property name="skuId"><![CDATA[Casto532227]]></set-property>
+            <set-property name="listPrice"><![CDATA[32.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto532227">
+            <set-property name="skuId"><![CDATA[Casto532227]]></set-property>
+            <set-property name="listPrice"><![CDATA[30.60]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500006">
+            <set-property name="skuId"><![CDATA[Casto500006]]></set-property>
+            <set-property name="listPrice"><![CDATA[4.85]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto201168">
+            <set-property name="skuId"><![CDATA[Casto201168]]></set-property>
+            <set-property name="listPrice"><![CDATA[109.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto494545">
+            <set-property name="skuId"><![CDATA[Casto494545]]></set-property>
+            <set-property name="listPrice"><![CDATA[8999.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto296942">
+            <set-property name="skuId"><![CDATA[Casto296942]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto538154">
+            <set-property name="skuId"><![CDATA[Casto538154]]></set-property>
+            <set-property name="listPrice"><![CDATA[339.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto525457">
+            <set-property name="skuId"><![CDATA[Casto525457]]></set-property>
+            <set-property name="listPrice"><![CDATA[14.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500002">
+            <set-property name="skuId"><![CDATA[Casto500002]]></set-property>
+            <set-property name="listPrice"><![CDATA[2.25]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto624867">
+            <set-property name="skuId"><![CDATA[Casto624867]]></set-property>
+            <set-property name="listPrice"><![CDATA[13.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto624867">
+            <set-property name="skuId"><![CDATA[Casto624867]]></set-property>
+            <set-property name="listPrice"><![CDATA[11.81]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516106">
+            <set-property name="skuId"><![CDATA[Casto516106]]></set-property>
+            <set-property name="listPrice"><![CDATA[25.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto538124">
+            <set-property name="skuId"><![CDATA[Casto538124]]></set-property>
+            <set-property name="listPrice"><![CDATA[2190.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto487686">
+            <set-property name="skuId"><![CDATA[Casto487686]]></set-property>
+            <set-property name="listPrice"><![CDATA[16.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpx5Casto26241">
+            <set-property name="skuId"><![CDATA[Casto526241]]></set-property>
+            <set-property name="listPrice"><![CDATA[18.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto907512">
+            <set-property name="skuId"><![CDATA[Casto907512]]></set-property>
+            <set-property name="listPrice"><![CDATA[65.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto770068">
+            <set-property name="skuId"><![CDATA[Casto770068]]></set-property>
+            <set-property name="listPrice"><![CDATA[4.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto902061">
+            <set-property name="skuId"><![CDATA[Casto902061]]></set-property>
+            <set-property name="listPrice"><![CDATA[85.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto650158">
+            <set-property name="skuId"><![CDATA[Casto650158]]></set-property>
+            <set-property name="listPrice"><![CDATA[739.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto650158">
+            <set-property name="skuId"><![CDATA[Casto650158]]></set-property>
+            <set-property name="listPrice"><![CDATA[472.96]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto534658">
+            <set-property name="skuId"><![CDATA[Casto534658]]></set-property>
+            <set-property name="listPrice"><![CDATA[114.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto483752">
+            <set-property name="skuId"><![CDATA[Casto483752]]></set-property>
+            <set-property name="listPrice"><![CDATA[29.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516107">
+            <set-property name="skuId"><![CDATA[Casto516107]]></set-property>
+            <set-property name="listPrice"><![CDATA[12.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto610743">
+            <set-property name="skuId"><![CDATA[Casto610743]]></set-property>
+            <set-property name="listPrice"><![CDATA[1499.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto526243">
+            <set-property name="skuId"><![CDATA[Casto526243]]></set-property>
+            <set-property name="listPrice"><![CDATA[21.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto537463">
+            <set-property name="skuId"><![CDATA[Casto537463]]></set-property>
+            <set-property name="listPrice"><![CDATA[79.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto475284">
+            <set-property name="skuId"><![CDATA[Casto475284]]></set-property>
+            <set-property name="listPrice"><![CDATA[15.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto508862">
+            <set-property name="skuId"><![CDATA[Casto508862]]></set-property>
+            <set-property name="listPrice"><![CDATA[89.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto508862">
+            <set-property name="skuId"><![CDATA[Casto508862]]></set-property>
+            <set-property name="listPrice"><![CDATA[85.40]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto650150">
+            <set-property name="skuId"><![CDATA[Casto650150]]></set-property>
+            <set-property name="listPrice"><![CDATA[210.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto499608">
+            <set-property name="skuId"><![CDATA[Casto499608]]></set-property>
+            <set-property name="listPrice"><![CDATA[1759.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto483751">
+            <set-property name="skuId"><![CDATA[Casto483751]]></set-property>
+            <set-property name="listPrice"><![CDATA[29.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518405">
+            <set-property name="skuId"><![CDATA[Casto518405]]></set-property>
+            <set-property name="listPrice"><![CDATA[14.4]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto487688">
+            <set-property name="skuId"><![CDATA[Casto487688]]></set-property>
+            <set-property name="listPrice"><![CDATA[16.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto558596">
+            <set-property name="skuId"><![CDATA[Casto558596]]></set-property>
+            <set-property name="listPrice"><![CDATA[11.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto510453">
+            <set-property name="skuId"><![CDATA[Casto510453]]></set-property>
+            <set-property name="listPrice"><![CDATA[6.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto549034">
+            <set-property name="skuId"><![CDATA[Casto549034]]></set-property>
+            <set-property name="listPrice"><![CDATA[45.2]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto549034">
+            <set-property name="skuId"><![CDATA[Casto549034]]></set-property>
+            <set-property name="listPrice"><![CDATA[30.74]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto991078">
+            <set-property name="skuId"><![CDATA[Casto991078]]></set-property>
+            <set-property name="listPrice"><![CDATA[1190.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto101586">
+            <set-property name="skuId"><![CDATA[Casto101586]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500001">
+            <set-property name="skuId"><![CDATA[Casto500001]]></set-property>
+            <set-property name="listPrice"><![CDATA[5.3]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto529014">
+            <set-property name="skuId"><![CDATA[Casto529014]]></set-property>
+            <set-property name="listPrice"><![CDATA[49.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto601703">
+            <set-property name="skuId"><![CDATA[Casto601703]]></set-property>
+            <set-property name="listPrice"><![CDATA[23.6]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto430291">
+            <set-property name="skuId"><![CDATA[Casto430291]]></set-property>
+            <set-property name="listPrice"><![CDATA[5.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto502289">
+            <set-property name="skuId"><![CDATA[Casto502289]]></set-property>
+            <set-property name="listPrice"><![CDATA[790.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto541786">
+            <set-property name="skuId"><![CDATA[Casto541786]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto541786">
+            <set-property name="skuId"><![CDATA[Casto541786]]></set-property>
+            <set-property name="listPrice"><![CDATA[28.33]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514601">
+            <set-property name="skuId"><![CDATA[Casto514601]]></set-property>
+            <set-property name="listPrice"><![CDATA[14.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto296191">
+            <set-property name="skuId"><![CDATA[Casto296191]]></set-property>
+            <set-property name="listPrice"><![CDATA[64.29]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto601702">
+            <set-property name="skuId"><![CDATA[Casto601702]]></set-property>
+            <set-property name="listPrice"><![CDATA[17.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto507636">
+            <set-property name="skuId"><![CDATA[Casto507636]]></set-property>
+            <set-property name="listPrice"><![CDATA[329.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto546740">
+            <set-property name="skuId"><![CDATA[Casto546740]]></set-property>
+            <set-property name="listPrice"><![CDATA[1749.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto543340">
+            <set-property name="skuId"><![CDATA[Casto543340]]></set-property>
+            <set-property name="listPrice"><![CDATA[47.6]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto870396">
+            <set-property name="skuId"><![CDATA[Casto870396]]></set-property>
+            <set-property name="listPrice"><![CDATA[5.1]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto501750">
+            <set-property name="skuId"><![CDATA[Casto501750]]></set-property>
+            <set-property name="listPrice"><![CDATA[26.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto501750">
+            <set-property name="skuId"><![CDATA[Casto501750]]></set-property>
+            <set-property name="listPrice"><![CDATA[25.55]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto501730">
+            <set-property name="skuId"><![CDATA[Casto501730]]></set-property>
+            <set-property name="listPrice"><![CDATA[119.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto100359">
+            <set-property name="skuId"><![CDATA[Casto100359]]></set-property>
+            <set-property name="listPrice"><![CDATA[59.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto352286">
+            <set-property name="skuId"><![CDATA[Casto352286]]></set-property>
+            <set-property name="listPrice"><![CDATA[62.51]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpx483784">
+            <set-property name="skuId"><![CDATA[Casto483784]]></set-property>
+            <set-property name="listPrice"><![CDATA[150.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500307">
+            <set-property name="skuId"><![CDATA[Casto500307]]></set-property>
+            <set-property name="listPrice"><![CDATA[18.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto720051">
+            <set-property name="skuId"><![CDATA[Casto720051]]></set-property>
+            <set-property name="listPrice"><![CDATA[16.6]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto544844">
+            <set-property name="skuId"><![CDATA[Casto544844]]></set-property>
+            <set-property name="listPrice"><![CDATA[12.2]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto499962">
+            <set-property name="skuId"><![CDATA[Casto499962]]></set-property>
+            <set-property name="listPrice"><![CDATA[43.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto499962">
+            <set-property name="skuId"><![CDATA[Casto499962]]></set-property>
+            <set-property name="listPrice"><![CDATA[41.33]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto487684">
+            <set-property name="skuId"><![CDATA[Casto487684]]></set-property>
+            <set-property name="listPrice"><![CDATA[16.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto770787">
+            <set-property name="skuId"><![CDATA[Casto770787]]></set-property>
+            <set-property name="listPrice"><![CDATA[2.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514157">
+            <set-property name="skuId"><![CDATA[Casto514157]]></set-property>
+            <set-property name="listPrice"><![CDATA[14.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto352287">
+            <set-property name="skuId"><![CDATA[Casto352287]]></set-property>
+            <set-property name="listPrice"><![CDATA[74.85]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto891552">
+            <set-property name="skuId"><![CDATA[Casto891552]]></set-property>
+            <set-property name="listPrice"><![CDATA[79.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto770786">
+            <set-property name="skuId"><![CDATA[Casto770786]]></set-property>
+            <set-property name="listPrice"><![CDATA[0.65]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto537847">
+            <set-property name="skuId"><![CDATA[Casto537847]]></set-property>
+            <set-property name="listPrice"><![CDATA[2990.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto517156">
+            <set-property name="skuId"><![CDATA[Casto517156]]></set-property>
+            <set-property name="listPrice"><![CDATA[711.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto517156">
+            <set-property name="skuId"><![CDATA[Casto517156]]></set-property>
+            <set-property name="listPrice"><![CDATA[540.74]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto200255">
+            <set-property name="skuId"><![CDATA[Casto200255]]></set-property>
+            <set-property name="listPrice"><![CDATA[84.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto352289">
+            <set-property name="skuId"><![CDATA[Casto352289]]></set-property>
+            <set-property name="listPrice"><![CDATA[78.66]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514486">
+            <set-property name="skuId"><![CDATA[Casto514486]]></set-property>
+            <set-property name="listPrice"><![CDATA[239.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto548687">
+            <set-property name="skuId"><![CDATA[Casto548687]]></set-property>
+            <set-property name="listPrice"><![CDATA[71.86]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto521182">
+            <set-property name="skuId"><![CDATA[Casto521182]]></set-property>
+            <set-property name="listPrice"><![CDATA[26.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto432048">
+            <set-property name="skuId"><![CDATA[Casto432048]]></set-property>
+            <set-property name="listPrice"><![CDATA[1.45]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto974506">
+            <set-property name="skuId"><![CDATA[Casto974506]]></set-property>
+            <set-property name="listPrice"><![CDATA[568.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto530547">
+            <set-property name="skuId"><![CDATA[Casto530547]]></set-property>
+            <set-property name="listPrice"><![CDATA[3239.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto530547">
+            <set-property name="skuId"><![CDATA[Casto530547]]></set-property>
+            <set-property name="listPrice"><![CDATA[2915.10]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto535258">
+            <set-property name="skuId"><![CDATA[Casto535258]]></set-property>
+            <set-property name="listPrice"><![CDATA[8.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto538619">
+            <set-property name="skuId"><![CDATA[Casto538619]]></set-property>
+            <set-property name="listPrice"><![CDATA[119.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto506597">
+            <set-property name="skuId"><![CDATA[Casto506597]]></set-property>
+            <set-property name="listPrice"><![CDATA[6.75]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto478087">
+            <set-property name="skuId"><![CDATA[Casto478087]]></set-property>
+            <set-property name="listPrice"><![CDATA[50.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto510103">
+            <set-property name="skuId"><![CDATA[Casto510103]]></set-property>
+            <set-property name="listPrice"><![CDATA[3.15]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto891202">
+            <set-property name="skuId"><![CDATA[Casto891202]]></set-property>
+            <set-property name="listPrice"><![CDATA[45.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto800953">
+            <set-property name="skuId"><![CDATA[Casto800953]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto748978">
+            <set-property name="skuId"><![CDATA[Casto748978]]></set-property>
+            <set-property name="listPrice"><![CDATA[44.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto748978">
+            <set-property name="skuId"><![CDATA[Casto748978]]></set-property>
+            <set-property name="listPrice"><![CDATA[36.37]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto745483">
+            <set-property name="skuId"><![CDATA[Casto745483]]></set-property>
+            <set-property name="listPrice"><![CDATA[49.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto537942">
+            <set-property name="skuId"><![CDATA[Casto537942]]></set-property>
+            <set-property name="listPrice"><![CDATA[539.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514165">
+            <set-property name="skuId"><![CDATA[Casto514165]]></set-property>
+            <set-property name="listPrice"><![CDATA[10.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto517149">
+            <set-property name="skuId"><![CDATA[Casto517149]]></set-property>
+            <set-property name="listPrice"><![CDATA[629.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto570575">
+            <set-property name="skuId"><![CDATA[Casto570575]]></set-property>
+            <set-property name="listPrice"><![CDATA[395.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto506250">
+            <set-property name="skuId"><![CDATA[Casto506250]]></set-property>
+            <set-property name="listPrice"><![CDATA[259.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto299542">
+            <set-property name="skuId"><![CDATA[Casto299542]]></set-property>
+            <set-property name="listPrice"><![CDATA[899.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto489916">
+            <set-property name="skuId"><![CDATA[Casto489916]]></set-property>
+            <set-property name="listPrice"><![CDATA[14.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto489916">
+            <set-property name="skuId"><![CDATA[Casto489916]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.09]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto550726">
+            <set-property name="skuId"><![CDATA[Casto550726]]></set-property>
+            <set-property name="listPrice"><![CDATA[134.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto472052">
+            <set-property name="skuId"><![CDATA[Casto472052]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.39]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto748979">
+            <set-property name="skuId"><![CDATA[Casto748979]]></set-property>
+            <set-property name="listPrice"><![CDATA[44.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto537500">
+            <set-property name="skuId"><![CDATA[Casto537500]]></set-property>
+            <set-property name="listPrice"><![CDATA[1418.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto529012">
+            <set-property name="skuId"><![CDATA[Casto529012]]></set-property>
+            <set-property name="listPrice"><![CDATA[69.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto550721">
+            <set-property name="skuId"><![CDATA[Casto550721]]></set-property>
+            <set-property name="listPrice"><![CDATA[109.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516012">
+            <set-property name="skuId"><![CDATA[Casto516012]]></set-property>
+            <set-property name="listPrice"><![CDATA[27.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto993729">
+            <set-property name="skuId"><![CDATA[Casto993729]]></set-property>
+            <set-property name="listPrice"><![CDATA[1599.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto993729">
+            <set-property name="skuId"><![CDATA[Casto993729]]></set-property>
+            <set-property name="listPrice"><![CDATA[1407.12]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto478067">
+            <set-property name="skuId"><![CDATA[Casto478067]]></set-property>
+            <set-property name="listPrice"><![CDATA[89.99]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto640522">
+            <set-property name="skuId"><![CDATA[Casto640522]]></set-property>
+            <set-property name="listPrice"><![CDATA[489.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto521865">
+            <set-property name="skuId"><![CDATA[Casto521865]]></set-property>
+            <set-property name="listPrice"><![CDATA[499.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto546933">
+            <set-property name="skuId"><![CDATA[Casto546933]]></set-property>
+            <set-property name="listPrice"><![CDATA[29.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto895109">
+            <set-property name="skuId"><![CDATA[Casto895109]]></set-property>
+            <set-property name="listPrice"><![CDATA[49.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto541980">
+            <set-property name="skuId"><![CDATA[Casto541980]]></set-property>
+            <set-property name="listPrice"><![CDATA[29.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto522373">
+            <set-property name="skuId"><![CDATA[Casto522373]]></set-property>
+            <set-property name="listPrice"><![CDATA[72.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto535473">
+            <set-property name="skuId"><![CDATA[Casto535473]]></set-property>
+            <set-property name="listPrice"><![CDATA[34.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto535473">
+            <set-property name="skuId"><![CDATA[Casto535473]]></set-property>
+            <set-property name="listPrice"><![CDATA[26.87]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto515875">
+            <set-property name="skuId"><![CDATA[Casto515875]]></set-property>
+            <set-property name="listPrice"><![CDATA[51.6]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto955542">
+            <set-property name="skuId"><![CDATA[Casto955542]]></set-property>
+            <set-property name="listPrice"><![CDATA[14.15]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514160">
+            <set-property name="skuId"><![CDATA[Casto514160]]></set-property>
+            <set-property name="listPrice"><![CDATA[6.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto535266">
+            <set-property name="skuId"><![CDATA[Casto535266]]></set-property>
+            <set-property name="listPrice"><![CDATA[7.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519887">
+            <set-property name="skuId"><![CDATA[Casto519887]]></set-property>
+            <set-property name="listPrice"><![CDATA[47.12]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto993730">
+            <set-property name="skuId"><![CDATA[Casto993730]]></set-property>
+            <set-property name="listPrice"><![CDATA[1830.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto541957">
+            <set-property name="skuId"><![CDATA[Casto541957]]></set-property>
+            <set-property name="listPrice"><![CDATA[269.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294598">
+            <set-property name="skuId"><![CDATA[Casto294598]]></set-property>
+            <set-property name="listPrice"><![CDATA[918.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto294598">
+            <set-property name="skuId"><![CDATA[Casto294598]]></set-property>
+            <set-property name="listPrice"><![CDATA[587.52]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto601701">
+            <set-property name="skuId"><![CDATA[Casto601701]]></set-property>
+            <set-property name="listPrice"><![CDATA[11.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto537512">
+            <set-property name="skuId"><![CDATA[Casto537512]]></set-property>
+            <set-property name="listPrice"><![CDATA[1716.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto538421">
+            <set-property name="skuId"><![CDATA[Casto538421]]></set-property>
+            <set-property name="listPrice"><![CDATA[59.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto297949">
+            <set-property name="skuId"><![CDATA[Casto297949]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto499312">
+            <set-property name="skuId"><![CDATA[Casto499312]]></set-property>
+            <set-property name="listPrice"><![CDATA[27.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto538422">
+            <set-property name="skuId"><![CDATA[Casto538422]]></set-property>
+            <set-property name="listPrice"><![CDATA[75.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519886">
+            <set-property name="skuId"><![CDATA[Casto519886]]></set-property>
+            <set-property name="listPrice"><![CDATA[33.52]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514162">
+            <set-property name="skuId"><![CDATA[Casto514162]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto514162">
+            <set-property name="skuId"><![CDATA[Casto514162]]></set-property>
+            <set-property name="listPrice"><![CDATA[6.43]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto101631">
+            <set-property name="skuId"><![CDATA[Casto101631]]></set-property>
+            <set-property name="listPrice"><![CDATA[42.4]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto296606">
+            <set-property name="skuId"><![CDATA[Casto296606]]></set-property>
+            <set-property name="listPrice"><![CDATA[62.72]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto210008">
+            <set-property name="skuId"><![CDATA[Casto210008]]></set-property>
+            <set-property name="listPrice"><![CDATA[18.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto258408">
+            <set-property name="skuId"><![CDATA[Casto258408]]></set-property>
+            <set-property name="listPrice"><![CDATA[14.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto521187">
+            <set-property name="skuId"><![CDATA[Casto521187]]></set-property>
+            <set-property name="listPrice"><![CDATA[329.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto300019">
+            <set-property name="skuId"><![CDATA[Casto300019]]></set-property>
+            <set-property name="listPrice"><![CDATA[149.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto526639">
+            <set-property name="skuId"><![CDATA[Casto526639]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.65]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto288410">
+            <set-property name="skuId"><![CDATA[Casto288410]]></set-property>
+            <set-property name="listPrice"><![CDATA[799.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto288410">
+            <set-property name="skuId"><![CDATA[Casto288410]]></set-property>
+            <set-property name="listPrice"><![CDATA[751.06]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto661463">
+            <set-property name="skuId"><![CDATA[Casto661463]]></set-property>
+            <set-property name="listPrice"><![CDATA[11.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto538156">
+            <set-property name="skuId"><![CDATA[Casto538156]]></set-property>
+            <set-property name="listPrice"><![CDATA[499.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto200240">
+            <set-property name="skuId"><![CDATA[Casto200240]]></set-property>
+            <set-property name="listPrice"><![CDATA[24.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto960990">
+            <set-property name="skuId"><![CDATA[Casto960990]]></set-property>
+            <set-property name="listPrice"><![CDATA[1290.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto299135">
+            <set-property name="skuId"><![CDATA[Casto299135]]></set-property>
+            <set-property name="listPrice"><![CDATA[27.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto663639">
+            <set-property name="skuId"><![CDATA[Casto663639]]></set-property>
+            <set-property name="listPrice"><![CDATA[4.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto560651">
+            <set-property name="skuId"><![CDATA[Casto560651]]></set-property>
+            <set-property name="listPrice"><![CDATA[2390.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto473046">
+            <set-property name="skuId"><![CDATA[Casto473046]]></set-property>
+            <set-property name="listPrice"><![CDATA[1510.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto473046">
+            <set-property name="skuId"><![CDATA[Casto473046]]></set-property>
+            <set-property name="listPrice"><![CDATA[1434.50]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto295916">
+            <set-property name="skuId"><![CDATA[Casto295916]]></set-property>
+            <set-property name="listPrice"><![CDATA[239.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto553077">
+            <set-property name="skuId"><![CDATA[Casto553077]]></set-property>
+            <set-property name="listPrice"><![CDATA[59.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto473968">
+            <set-property name="skuId"><![CDATA[Casto473968]]></set-property>
+            <set-property name="listPrice"><![CDATA[21.01]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto600663">
+            <set-property name="skuId"><![CDATA[Casto600663]]></set-property>
+            <set-property name="listPrice"><![CDATA[2190.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto537532">
+            <set-property name="skuId"><![CDATA[Casto537532]]></set-property>
+            <set-property name="listPrice"><![CDATA[129.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto537504">
+            <set-property name="skuId"><![CDATA[Casto537504]]></set-property>
+            <set-property name="listPrice"><![CDATA[1576.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto824410">
+            <set-property name="skuId"><![CDATA[Casto824410]]></set-property>
+            <set-property name="listPrice"><![CDATA[20.3]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto283094">
+            <set-property name="skuId"><![CDATA[Casto283094]]></set-property>
+            <set-property name="listPrice"><![CDATA[18.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto283094">
+            <set-property name="skuId"><![CDATA[Casto283094]]></set-property>
+            <set-property name="listPrice"><![CDATA[17.95]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto992286">
+            <set-property name="skuId"><![CDATA[Casto992286]]></set-property>
+            <set-property name="listPrice"><![CDATA[99.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto549824">
+            <set-property name="skuId"><![CDATA[Casto549824]]></set-property>
+            <set-property name="listPrice"><![CDATA[399.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto299134">
+            <set-property name="skuId"><![CDATA[Casto299134]]></set-property>
+            <set-property name="listPrice"><![CDATA[27.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto554964">
+            <set-property name="skuId"><![CDATA[Casto554964]]></set-property>
+            <set-property name="listPrice"><![CDATA[79.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto498148">
+            <set-property name="skuId"><![CDATA[Casto498148]]></set-property>
+            <set-property name="listPrice"><![CDATA[769.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto822800">
+            <set-property name="skuId"><![CDATA[Casto822800]]></set-property>
+            <set-property name="listPrice"><![CDATA[99.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto524573">
+            <set-property name="skuId"><![CDATA[Casto524573]]></set-property>
+            <set-property name="listPrice"><![CDATA[1690.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto907394">
+            <set-property name="skuId"><![CDATA[Casto907394]]></set-property>
+            <set-property name="listPrice"><![CDATA[48.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto907394">
+            <set-property name="skuId"><![CDATA[Casto907394]]></set-property>
+            <set-property name="listPrice"><![CDATA[45.60]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto896040">
+            <set-property name="skuId"><![CDATA[Casto896040]]></set-property>
+            <set-property name="listPrice"><![CDATA[12.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto511447">
+            <set-property name="skuId"><![CDATA[Casto511447]]></set-property>
+            <set-property name="listPrice"><![CDATA[10.8]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto610707">
+            <set-property name="skuId"><![CDATA[Casto610707]]></set-property>
+            <set-property name="listPrice"><![CDATA[1190.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto526645">
+            <set-property name="skuId"><![CDATA[Casto526645]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.65]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto489630">
+            <set-property name="skuId"><![CDATA[Casto489630]]></set-property>
+            <set-property name="listPrice"><![CDATA[29.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519230">
+            <set-property name="skuId"><![CDATA[Casto519230]]></set-property>
+            <set-property name="listPrice"><![CDATA[113.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514563">
+            <set-property name="skuId"><![CDATA[Casto514563]]></set-property>
+            <set-property name="listPrice"><![CDATA[161.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto515879">
+            <set-property name="skuId"><![CDATA[Casto515879]]></set-property>
+            <set-property name="listPrice"><![CDATA[51.6]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto515879">
+            <set-property name="skuId"><![CDATA[Casto515879]]></set-property>
+            <set-property name="listPrice"><![CDATA[40.25]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto520753">
+            <set-property name="skuId"><![CDATA[Casto520753]]></set-property>
+            <set-property name="listPrice"><![CDATA[329.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto907941">
+            <set-property name="skuId"><![CDATA[Casto907941]]></set-property>
+            <set-property name="listPrice"><![CDATA[129.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto534539">
+            <set-property name="skuId"><![CDATA[Casto534539]]></set-property>
+            <set-property name="listPrice"><![CDATA[49.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto662616">
+            <set-property name="skuId"><![CDATA[Casto662616]]></set-property>
+            <set-property name="listPrice"><![CDATA[6.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto543802">
+            <set-property name="skuId"><![CDATA[Casto543802]]></set-property>
+            <set-property name="listPrice"><![CDATA[299.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516110">
+            <set-property name="skuId"><![CDATA[Casto516110]]></set-property>
+            <set-property name="listPrice"><![CDATA[75.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto522103">
+            <set-property name="skuId"><![CDATA[Casto522103]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto497263">
+            <set-property name="skuId"><![CDATA[Casto497263]]></set-property>
+            <set-property name="listPrice"><![CDATA[54.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto497263">
+            <set-property name="skuId"><![CDATA[Casto497263]]></set-property>
+            <set-property name="listPrice"><![CDATA[37.88]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto498151">
+            <set-property name="skuId"><![CDATA[Casto498151]]></set-property>
+            <set-property name="listPrice"><![CDATA[459.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto521185">
+            <set-property name="skuId"><![CDATA[Casto521185]]></set-property>
+            <set-property name="listPrice"><![CDATA[10.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto528175">
+            <set-property name="skuId"><![CDATA[Casto528175]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto533318">
+            <set-property name="skuId"><![CDATA[Casto533318]]></set-property>
+            <set-property name="listPrice"><![CDATA[229.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto515513">
+            <set-property name="skuId"><![CDATA[Casto515513]]></set-property>
+            <set-property name="listPrice"><![CDATA[67.8]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto486722">
+            <set-property name="skuId"><![CDATA[Casto486722]]></set-property>
+            <set-property name="listPrice"><![CDATA[199.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto499946">
+            <set-property name="skuId"><![CDATA[Casto499946]]></set-property>
+            <set-property name="listPrice"><![CDATA[6.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto487678">
+            <set-property name="skuId"><![CDATA[Casto487678]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto487678">
+            <set-property name="skuId"><![CDATA[Casto487678]]></set-property>
+            <set-property name="listPrice"><![CDATA[28.33]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto486558">
+            <set-property name="skuId"><![CDATA[Casto486558]]></set-property>
+            <set-property name="listPrice"><![CDATA[102.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519003">
+            <set-property name="skuId"><![CDATA[Casto519003]]></set-property>
+            <set-property name="listPrice"><![CDATA[16.6]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto555145">
+            <set-property name="skuId"><![CDATA[Casto555145]]></set-property>
+            <set-property name="listPrice"><![CDATA[4990.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto677849">
+            <set-property name="skuId"><![CDATA[Casto677849]]></set-property>
+            <set-property name="listPrice"><![CDATA[6.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto204259">
+            <set-property name="skuId"><![CDATA[Casto204259]]></set-property>
+            <set-property name="listPrice"><![CDATA[89.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto531101">
+            <set-property name="skuId"><![CDATA[Casto531101]]></set-property>
+            <set-property name="listPrice"><![CDATA[149.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto985875">
+            <set-property name="skuId"><![CDATA[Casto985875]]></set-property>
+            <set-property name="listPrice"><![CDATA[60.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514296">
+            <set-property name="skuId"><![CDATA[Casto514296]]></set-property>
+            <set-property name="listPrice"><![CDATA[59.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto514296">
+            <set-property name="skuId"><![CDATA[Casto514296]]></set-property>
+            <set-property name="listPrice"><![CDATA[56.05]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto860218">
+            <set-property name="skuId"><![CDATA[Casto860218]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto527521">
+            <set-property name="skuId"><![CDATA[Casto527521]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto521191">
+            <set-property name="skuId"><![CDATA[Casto521191]]></set-property>
+            <set-property name="listPrice"><![CDATA[49.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto292168">
+            <set-property name="skuId"><![CDATA[Casto292168]]></set-property>
+            <set-property name="listPrice"><![CDATA[7990.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto555063">
+            <set-property name="skuId"><![CDATA[Casto555063]]></set-property>
+            <set-property name="listPrice"><![CDATA[1349.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto666362">
+            <set-property name="skuId"><![CDATA[Casto666362]]></set-property>
+            <set-property name="listPrice"><![CDATA[29.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto475283">
+            <set-property name="skuId"><![CDATA[Casto475283]]></set-property>
+            <set-property name="listPrice"><![CDATA[10.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto234002">
+            <set-property name="skuId"><![CDATA[Casto234002]]></set-property>
+            <set-property name="listPrice"><![CDATA[50.15]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto234002">
+            <set-property name="skuId"><![CDATA[Casto234002]]></set-property>
+            <set-property name="listPrice"><![CDATA[43.63]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto293345">
+            <set-property name="skuId"><![CDATA[Casto293345]]></set-property>
+            <set-property name="listPrice"><![CDATA[24.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto554118">
+            <set-property name="skuId"><![CDATA[Casto554118]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto497263">
+            <set-property name="skuId"><![CDATA[Casto497263]]></set-property>
+            <set-property name="listPrice"><![CDATA[54.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto505730">
+            <set-property name="skuId"><![CDATA[Casto505730]]></set-property>
+            <set-property name="listPrice"><![CDATA[2149.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto497466">
+            <set-property name="skuId"><![CDATA[Casto497466]]></set-property>
+            <set-property name="listPrice"><![CDATA[189.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto534541">
+            <set-property name="skuId"><![CDATA[Casto534541]]></set-property>
+            <set-property name="listPrice"><![CDATA[24.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto487677">
+            <set-property name="skuId"><![CDATA[Casto487677]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto989111">
+            <set-property name="skuId"><![CDATA[Casto989111]]></set-property>
+            <set-property name="listPrice"><![CDATA[169.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto989111">
+            <set-property name="skuId"><![CDATA[Casto989111]]></set-property>
+            <set-property name="listPrice"><![CDATA[131.82]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto495896">
+            <set-property name="skuId"><![CDATA[Casto495896]]></set-property>
+            <set-property name="listPrice"><![CDATA[20.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto895110">
+            <set-property name="skuId"><![CDATA[Casto895110]]></set-property>
+            <set-property name="listPrice"><![CDATA[49.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto534953">
+            <set-property name="skuId"><![CDATA[Casto534953]]></set-property>
+            <set-property name="listPrice"><![CDATA[159.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto495188">
+            <set-property name="skuId"><![CDATA[Casto495188]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto985878">
+            <set-property name="skuId"><![CDATA[Casto985878]]></set-property>
+            <set-property name="listPrice"><![CDATA[199.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto974507">
+            <set-property name="skuId"><![CDATA[Casto974507]]></set-property>
+            <set-property name="listPrice"><![CDATA[418.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto570578">
+            <set-property name="skuId"><![CDATA[Casto570578]]></set-property>
+            <set-property name="listPrice"><![CDATA[619.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto101585">
+            <set-property name="skuId"><![CDATA[Casto101585]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto101585">
+            <set-property name="skuId"><![CDATA[Casto101585]]></set-property>
+            <set-property name="listPrice"><![CDATA[9.01]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto499078">
+            <set-property name="skuId"><![CDATA[Casto499078]]></set-property>
+            <set-property name="listPrice"><![CDATA[1490.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto620568">
+            <set-property name="skuId"><![CDATA[Casto620568]]></set-property>
+            <set-property name="listPrice"><![CDATA[159.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto557977">
+            <set-property name="skuId"><![CDATA[Casto557977]]></set-property>
+            <set-property name="listPrice"><![CDATA[15.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto556716">
+            <set-property name="skuId"><![CDATA[Casto556716]]></set-property>
+            <set-property name="listPrice"><![CDATA[299.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto555060">
+            <set-property name="skuId"><![CDATA[Casto555060]]></set-property>
+            <set-property name="listPrice"><![CDATA[499.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto514365">
+            <set-property name="skuId"><![CDATA[Casto514365]]></set-property>
+            <set-property name="listPrice"><![CDATA[2490.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto521190">
+            <set-property name="skuId"><![CDATA[Casto521190]]></set-property>
+            <set-property name="listPrice"><![CDATA[44.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto560649">
+            <set-property name="skuId"><![CDATA[Casto560649]]></set-property>
+            <set-property name="listPrice"><![CDATA[4490.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto560649">
+            <set-property name="skuId"><![CDATA[Casto560649]]></set-property>
+            <set-property name="listPrice"><![CDATA[4265.50]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto552315">
+            <set-property name="skuId"><![CDATA[Casto552315]]></set-property>
+            <set-property name="listPrice"><![CDATA[144.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto257487">
+            <set-property name="skuId"><![CDATA[Casto257487]]></set-property>
+            <set-property name="listPrice"><![CDATA[4.99]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto300834">
+            <set-property name="skuId"><![CDATA[Casto300834]]></set-property>
+            <set-property name="listPrice"><![CDATA[37.76]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto270047">
+            <set-property name="skuId"><![CDATA[Casto270047]]></set-property>
+            <set-property name="listPrice"><![CDATA[34.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto981693">
+            <set-property name="skuId"><![CDATA[Casto981693]]></set-property>
+            <set-property name="listPrice"><![CDATA[195.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294911">
+            <set-property name="skuId"><![CDATA[Casto294911]]></set-property>
+            <set-property name="listPrice"><![CDATA[20.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto498781">
+            <set-property name="skuId"><![CDATA[Casto498781]]></set-property>
+            <set-property name="listPrice"><![CDATA[19990.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto488989">
+            <set-property name="skuId"><![CDATA[Casto488989]]></set-property>
+            <set-property name="listPrice"><![CDATA[130.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto488989">
+            <set-property name="skuId"><![CDATA[Casto488989]]></set-property>
+            <set-property name="listPrice"><![CDATA[84.50]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto678435">
+            <set-property name="skuId"><![CDATA[Casto678435]]></set-property>
+            <set-property name="listPrice"><![CDATA[4.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto291798">
+            <set-property name="skuId"><![CDATA[Casto291798]]></set-property>
+            <set-property name="listPrice"><![CDATA[15.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto487793">
+            <set-property name="skuId"><![CDATA[Casto487793]]></set-property>
+            <set-property name="listPrice"><![CDATA[12.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto544720">
+            <set-property name="skuId"><![CDATA[Casto544720]]></set-property>
+            <set-property name="listPrice"><![CDATA[149.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516808">
+            <set-property name="skuId"><![CDATA[Casto516808]]></set-property>
+            <set-property name="listPrice"><![CDATA[259.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516815">
+            <set-property name="skuId"><![CDATA[Casto516815]]></set-property>
+            <set-property name="listPrice"><![CDATA[199.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294601">
+            <set-property name="skuId"><![CDATA[Casto294601]]></set-property>
+            <set-property name="listPrice"><![CDATA[648.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto554194">
+            <set-property name="skuId"><![CDATA[Casto554194]]></set-property>
+            <set-property name="listPrice"><![CDATA[749.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto554194">
+            <set-property name="skuId"><![CDATA[Casto554194]]></set-property>
+            <set-property name="listPrice"><![CDATA[629.16]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294626">
+            <set-property name="skuId"><![CDATA[Casto294626]]></set-property>
+            <set-property name="listPrice"><![CDATA[1011.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto572611">
+            <set-property name="skuId"><![CDATA[Casto572611]]></set-property>
+            <set-property name="listPrice"><![CDATA[279.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto485885">
+            <set-property name="skuId"><![CDATA[Casto485885]]></set-property>
+            <set-property name="listPrice"><![CDATA[96.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500132">
+            <set-property name="skuId"><![CDATA[Casto500132]]></set-property>
+            <set-property name="listPrice"><![CDATA[17.35]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto582402">
+            <set-property name="skuId"><![CDATA[Casto582402]]></set-property>
+            <set-property name="listPrice"><![CDATA[64.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto295916">
+            <set-property name="skuId"><![CDATA[Casto295916]]></set-property>
+            <set-property name="listPrice"><![CDATA[239.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516807">
+            <set-property name="skuId"><![CDATA[Casto516807]]></set-property>
+            <set-property name="listPrice"><![CDATA[249.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto498540">
+            <set-property name="skuId"><![CDATA[Casto498540]]></set-property>
+            <set-property name="listPrice"><![CDATA[265.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto498540">
+            <set-property name="skuId"><![CDATA[Casto498540]]></set-property>
+            <set-property name="listPrice"><![CDATA[180.20]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294600">
+            <set-property name="skuId"><![CDATA[Casto294600]]></set-property>
+            <set-property name="listPrice"><![CDATA[540.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto552315">
+            <set-property name="skuId"><![CDATA[Casto552315]]></set-property>
+            <set-property name="listPrice"><![CDATA[144.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto513117">
+            <set-property name="skuId"><![CDATA[Casto513117]]></set-property>
+            <set-property name="listPrice"><![CDATA[105.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto497929">
+            <set-property name="skuId"><![CDATA[Casto497929]]></set-property>
+            <set-property name="listPrice"><![CDATA[269.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto582412">
+            <set-property name="skuId"><![CDATA[Casto582412]]></set-property>
+            <set-property name="listPrice"><![CDATA[104.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto520649">
+            <set-property name="skuId"><![CDATA[Casto520649]]></set-property>
+            <set-property name="listPrice"><![CDATA[232.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294625">
+            <set-property name="skuId"><![CDATA[Casto294625]]></set-property>
+            <set-property name="listPrice"><![CDATA[1729.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518118">
+            <set-property name="skuId"><![CDATA[Casto518118]]></set-property>
+            <set-property name="listPrice"><![CDATA[460.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto518118">
+            <set-property name="skuId"><![CDATA[Casto518118]]></set-property>
+            <set-property name="listPrice"><![CDATA[437.00]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500254">
+            <set-property name="skuId"><![CDATA[Casto500254]]></set-property>
+            <set-property name="listPrice"><![CDATA[32.1]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto298764">
+            <set-property name="skuId"><![CDATA[Casto298764]]></set-property>
+            <set-property name="listPrice"><![CDATA[75.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto485887">
+            <set-property name="skuId"><![CDATA[Casto485887]]></set-property>
+            <set-property name="listPrice"><![CDATA[42.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto295959">
+            <set-property name="skuId"><![CDATA[Casto295959]]></set-property>
+            <set-property name="listPrice"><![CDATA[59.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto517739">
+            <set-property name="skuId"><![CDATA[Casto517739]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294624">
+            <set-property name="skuId"><![CDATA[Casto294624]]></set-property>
+            <set-property name="listPrice"><![CDATA[3190.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500512">
+            <set-property name="skuId"><![CDATA[Casto500512]]></set-property>
+            <set-property name="listPrice"><![CDATA[10.4]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294623">
+            <set-property name="skuId"><![CDATA[Casto294623]]></set-property>
+            <set-property name="listPrice"><![CDATA[1061.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto294623">
+            <set-property name="skuId"><![CDATA[Casto294623]]></set-property>
+            <set-property name="listPrice"><![CDATA[721.48]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500261">
+            <set-property name="skuId"><![CDATA[Casto500261]]></set-property>
+            <set-property name="listPrice"><![CDATA[24.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518114">
+            <set-property name="skuId"><![CDATA[Casto518114]]></set-property>
+            <set-property name="listPrice"><![CDATA[999.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto498539">
+            <set-property name="skuId"><![CDATA[Casto498539]]></set-property>
+            <set-property name="listPrice"><![CDATA[239.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto535943">
+            <set-property name="skuId"><![CDATA[Casto535943]]></set-property>
+            <set-property name="listPrice"><![CDATA[199.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto513122">
+            <set-property name="skuId"><![CDATA[Casto513122]]></set-property>
+            <set-property name="listPrice"><![CDATA[126.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto529826">
+            <set-property name="skuId"><![CDATA[Casto529826]]></set-property>
+            <set-property name="listPrice"><![CDATA[259.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516419">
+            <set-property name="skuId"><![CDATA[Casto516419]]></set-property>
+            <set-property name="listPrice"><![CDATA[149.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto489840">
+            <set-property name="skuId"><![CDATA[Casto489840]]></set-property>
+            <set-property name="listPrice"><![CDATA[104.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto489840">
+            <set-property name="skuId"><![CDATA[Casto489840]]></set-property>
+            <set-property name="listPrice"><![CDATA[88.40]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516816">
+            <set-property name="skuId"><![CDATA[Casto516816]]></set-property>
+            <set-property name="listPrice"><![CDATA[220.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto582574">
+            <set-property name="skuId"><![CDATA[Casto582574]]></set-property>
+            <set-property name="listPrice"><![CDATA[203.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518117">
+            <set-property name="skuId"><![CDATA[Casto518117]]></set-property>
+            <set-property name="listPrice"><![CDATA[999.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto293160">
+            <set-property name="skuId"><![CDATA[Casto293160]]></set-property>
+            <set-property name="listPrice"><![CDATA[99.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto580124">
+            <set-property name="skuId"><![CDATA[Casto580124]]></set-property>
+            <set-property name="listPrice"><![CDATA[338.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto572614">
+            <set-property name="skuId"><![CDATA[Casto572614]]></set-property>
+            <set-property name="listPrice"><![CDATA[366.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto499893">
+            <set-property name="skuId"><![CDATA[Casto499893]]></set-property>
+            <set-property name="listPrice"><![CDATA[449.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto535942">
+            <set-property name="skuId"><![CDATA[Casto535942]]></set-property>
+            <set-property name="listPrice"><![CDATA[179.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto535942">
+            <set-property name="skuId"><![CDATA[Casto535942]]></set-property>
+            <set-property name="listPrice"><![CDATA[130.67]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516817">
+            <set-property name="skuId"><![CDATA[Casto516817]]></set-property>
+            <set-property name="listPrice"><![CDATA[220.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519607">
+            <set-property name="skuId"><![CDATA[Casto519607]]></set-property>
+            <set-property name="listPrice"><![CDATA[503.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516813">
+            <set-property name="skuId"><![CDATA[Casto516813]]></set-property>
+            <set-property name="listPrice"><![CDATA[330.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294599">
+            <set-property name="skuId"><![CDATA[Casto294599]]></set-property>
+            <set-property name="listPrice"><![CDATA[648.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518125">
+            <set-property name="skuId"><![CDATA[Casto518125]]></set-property>
+            <set-property name="listPrice"><![CDATA[1099.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto543340">
+            <set-property name="skuId"><![CDATA[Casto543340]]></set-property>
+            <set-property name="listPrice"><![CDATA[47.6]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294053">
+            <set-property name="skuId"><![CDATA[Casto294053]]></set-property>
+            <set-property name="listPrice"><![CDATA[199.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto513120">
+            <set-property name="skuId"><![CDATA[Casto513120]]></set-property>
+            <set-property name="listPrice"><![CDATA[165.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto513120">
+            <set-property name="skuId"><![CDATA[Casto513120]]></set-property>
+            <set-property name="listPrice"><![CDATA[146.85]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto296018">
+            <set-property name="skuId"><![CDATA[Casto296018]]></set-property>
+            <set-property name="listPrice"><![CDATA[139.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519614">
+            <set-property name="skuId"><![CDATA[Casto519614]]></set-property>
+            <set-property name="listPrice"><![CDATA[127.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518827">
+            <set-property name="skuId"><![CDATA[Casto518827]]></set-property>
+            <set-property name="listPrice"><![CDATA[360.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto582413">
+            <set-property name="skuId"><![CDATA[Casto582413]]></set-property>
+            <set-property name="listPrice"><![CDATA[129.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518116">
+            <set-property name="skuId"><![CDATA[Casto518116]]></set-property>
+            <set-property name="listPrice"><![CDATA[359.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto544624">
+            <set-property name="skuId"><![CDATA[Casto544624]]></set-property>
+            <set-property name="listPrice"><![CDATA[64.9]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto535945">
+            <set-property name="skuId"><![CDATA[Casto535945]]></set-property>
+            <set-property name="listPrice"><![CDATA[139.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518119">
+            <set-property name="skuId"><![CDATA[Casto518119]]></set-property>
+            <set-property name="listPrice"><![CDATA[739.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto518119">
+            <set-property name="skuId"><![CDATA[Casto518119]]></set-property>
+            <set-property name="listPrice"><![CDATA[450.79]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516408">
+            <set-property name="skuId"><![CDATA[Casto516408]]></set-property>
+            <set-property name="listPrice"><![CDATA[235.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto485865">
+            <set-property name="skuId"><![CDATA[Casto485865]]></set-property>
+            <set-property name="listPrice"><![CDATA[13.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516818">
+            <set-property name="skuId"><![CDATA[Casto516818]]></set-property>
+            <set-property name="listPrice"><![CDATA[230.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto296064">
+            <set-property name="skuId"><![CDATA[Casto296064]]></set-property>
+            <set-property name="listPrice"><![CDATA[159.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto535944">
+            <set-property name="skuId"><![CDATA[Casto535944]]></set-property>
+            <set-property name="listPrice"><![CDATA[125.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518113">
+            <set-property name="skuId"><![CDATA[Casto518113]]></set-property>
+            <set-property name="listPrice"><![CDATA[1290.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516409">
+            <set-property name="skuId"><![CDATA[Casto516409]]></set-property>
+            <set-property name="listPrice"><![CDATA[190.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto474720">
+            <set-property name="skuId"><![CDATA[Casto474720]]></set-property>
+            <set-property name="listPrice"><![CDATA[47.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto474720">
+            <set-property name="skuId"><![CDATA[Casto474720]]></set-property>
+            <set-property name="listPrice"><![CDATA[38.54]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto583924">
+            <set-property name="skuId"><![CDATA[Casto583924]]></set-property>
+            <set-property name="listPrice"><![CDATA[309.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto485886">
+            <set-property name="skuId"><![CDATA[Casto485886]]></set-property>
+            <set-property name="listPrice"><![CDATA[67.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516819">
+            <set-property name="skuId"><![CDATA[Casto516819]]></set-property>
+            <set-property name="listPrice"><![CDATA[399.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294597">
+            <set-property name="skuId"><![CDATA[Casto294597]]></set-property>
+            <set-property name="listPrice"><![CDATA[756.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto525436">
+            <set-property name="skuId"><![CDATA[Casto525436]]></set-property>
+            <set-property name="listPrice"><![CDATA[84.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto489835">
+            <set-property name="skuId"><![CDATA[Casto489835]]></set-property>
+            <set-property name="listPrice"><![CDATA[175.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto544716">
+            <set-property name="skuId"><![CDATA[Casto544716]]></set-property>
+            <set-property name="listPrice"><![CDATA[126.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto569663">
+            <set-property name="skuId"><![CDATA[Casto569663]]></set-property>
+            <set-property name="listPrice"><![CDATA[208.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto569663">
+            <set-property name="skuId"><![CDATA[Casto569663]]></set-property>
+            <set-property name="listPrice"><![CDATA[126.88]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294598">
+            <set-property name="skuId"><![CDATA[Casto294598]]></set-property>
+            <set-property name="listPrice"><![CDATA[918.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518124">
+            <set-property name="skuId"><![CDATA[Casto518124]]></set-property>
+            <set-property name="listPrice"><![CDATA[1519.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto581915">
+            <set-property name="skuId"><![CDATA[Casto581915]]></set-property>
+            <set-property name="listPrice"><![CDATA[239.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto489826">
+            <set-property name="skuId"><![CDATA[Casto489826]]></set-property>
+            <set-property name="listPrice"><![CDATA[94.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto523912">
+            <set-property name="skuId"><![CDATA[Casto523912]]></set-property>
+            <set-property name="listPrice"><![CDATA[169.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto569662">
+            <set-property name="skuId"><![CDATA[Casto569662]]></set-property>
+            <set-property name="listPrice"><![CDATA[235.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519547">
+            <set-property name="skuId"><![CDATA[Casto519547]]></set-property>
+            <set-property name="listPrice"><![CDATA[1590.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500711">
+            <set-property name="skuId"><![CDATA[Casto500711]]></set-property>
+            <set-property name="listPrice"><![CDATA[890.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto500711">
+            <set-property name="skuId"><![CDATA[Casto500711]]></set-property>
+            <set-property name="listPrice"><![CDATA[845.50]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500117">
+            <set-property name="skuId"><![CDATA[Casto500117]]></set-property>
+            <set-property name="listPrice"><![CDATA[27.8]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294595">
+            <set-property name="skuId"><![CDATA[Casto294595]]></set-property>
+            <set-property name="listPrice"><![CDATA[1720.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto513996">
+            <set-property name="skuId"><![CDATA[Casto513996]]></set-property>
+            <set-property name="listPrice"><![CDATA[44.95]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518121">
+            <set-property name="skuId"><![CDATA[Casto518121]]></set-property>
+            <set-property name="listPrice"><![CDATA[1395.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518112">
+            <set-property name="skuId"><![CDATA[Casto518112]]></set-property>
+            <set-property name="listPrice"><![CDATA[389.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto569661">
+            <set-property name="skuId"><![CDATA[Casto569661]]></set-property>
+            <set-property name="listPrice"><![CDATA[225.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294606">
+            <set-property name="skuId"><![CDATA[Casto294606]]></set-property>
+            <set-property name="listPrice"><![CDATA[1612.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto540149">
+            <set-property name="skuId"><![CDATA[Casto540149]]></set-property>
+            <set-property name="listPrice"><![CDATA[79.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto540149">
+            <set-property name="skuId"><![CDATA[Casto540149]]></set-property>
+            <set-property name="listPrice"><![CDATA[54.51]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294596">
+            <set-property name="skuId"><![CDATA[Casto294596]]></set-property>
+            <set-property name="listPrice"><![CDATA[919.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294630">
+            <set-property name="skuId"><![CDATA[Casto294630]]></set-property>
+            <set-property name="listPrice"><![CDATA[864.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516809">
+            <set-property name="skuId"><![CDATA[Casto516809]]></set-property>
+            <set-property name="listPrice"><![CDATA[240.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516411">
+            <set-property name="skuId"><![CDATA[Casto516411]]></set-property>
+            <set-property name="listPrice"><![CDATA[299.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto473256">
+            <set-property name="skuId"><![CDATA[Casto473256]]></set-property>
+            <set-property name="listPrice"><![CDATA[69.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto519609">
+            <set-property name="skuId"><![CDATA[Casto519609]]></set-property>
+            <set-property name="listPrice"><![CDATA[360.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294605">
+            <set-property name="skuId"><![CDATA[Casto294605]]></set-property>
+            <set-property name="listPrice"><![CDATA[616.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto583980">
+            <set-property name="skuId"><![CDATA[Casto583980]]></set-property>
+            <set-property name="listPrice"><![CDATA[69.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto583980">
+            <set-property name="skuId"><![CDATA[Casto583980]]></set-property>
+            <set-property name="listPrice"><![CDATA[51.75]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto540471">
+            <set-property name="skuId"><![CDATA[Casto540471]]></set-property>
+            <set-property name="listPrice"><![CDATA[155.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518123">
+            <set-property name="skuId"><![CDATA[Casto518123]]></set-property>
+            <set-property name="listPrice"><![CDATA[1199.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto544133">
+            <set-property name="skuId"><![CDATA[Casto544133]]></set-property>
+            <set-property name="listPrice"><![CDATA[94.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294593">
+            <set-property name="skuId"><![CDATA[Casto294593]]></set-property>
+            <set-property name="listPrice"><![CDATA[811.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516410">
+            <set-property name="skuId"><![CDATA[Casto516410]]></set-property>
+            <set-property name="listPrice"><![CDATA[170.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516795">
+            <set-property name="skuId"><![CDATA[Casto516795]]></set-property>
+            <set-property name="listPrice"><![CDATA[199.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516803">
+            <set-property name="skuId"><![CDATA[Casto516803]]></set-property>
+            <set-property name="listPrice"><![CDATA[769.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto494316">
+            <set-property name="skuId"><![CDATA[Casto494316]]></set-property>
+            <set-property name="listPrice"><![CDATA[61.5]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto494316">
+            <set-property name="skuId"><![CDATA[Casto494316]]></set-property>
+            <set-property name="listPrice"><![CDATA[39.97]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294604">
+            <set-property name="skuId"><![CDATA[Casto294604]]></set-property>
+            <set-property name="listPrice"><![CDATA[811.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto583981">
+            <set-property name="skuId"><![CDATA[Casto583981]]></set-property>
+            <set-property name="listPrice"><![CDATA[69.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto485884">
+            <set-property name="skuId"><![CDATA[Casto485884]]></set-property>
+            <set-property name="listPrice"><![CDATA[74.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294594">
+            <set-property name="skuId"><![CDATA[Casto294594]]></set-property>
+            <set-property name="listPrice"><![CDATA[618.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518120">
+            <set-property name="skuId"><![CDATA[Casto518120]]></set-property>
+            <set-property name="listPrice"><![CDATA[1090.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294629">
+            <set-property name="skuId"><![CDATA[Casto294629]]></set-property>
+            <set-property name="listPrice"><![CDATA[1011.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto292714">
+            <set-property name="skuId"><![CDATA[Casto292714]]></set-property>
+            <set-property name="listPrice"><![CDATA[236.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto582404">
+            <set-property name="skuId"><![CDATA[Casto582404]]></set-property>
+            <set-property name="listPrice"><![CDATA[84.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto582404">
+            <set-property name="skuId"><![CDATA[Casto582404]]></set-property>
+            <set-property name="listPrice"><![CDATA[63.84]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294603">
+            <set-property name="skuId"><![CDATA[Casto294603]]></set-property>
+            <set-property name="listPrice"><![CDATA[1612.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto494315">
+            <set-property name="skuId"><![CDATA[Casto494315]]></set-property>
+            <set-property name="listPrice"><![CDATA[103.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294628">
+            <set-property name="skuId"><![CDATA[Casto294628]]></set-property>
+            <set-property name="listPrice"><![CDATA[1731.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto544728">
+            <set-property name="skuId"><![CDATA[Casto544728]]></set-property>
+            <set-property name="listPrice"><![CDATA[172.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto582580">
+            <set-property name="skuId"><![CDATA[Casto582580]]></set-property>
+            <set-property name="listPrice"><![CDATA[205.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294602">
+            <set-property name="skuId"><![CDATA[Casto294602]]></set-property>
+            <set-property name="listPrice"><![CDATA[540.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto296037">
+            <set-property name="skuId"><![CDATA[Casto296037]]></set-property>
+            <set-property name="listPrice"><![CDATA[999.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto518122">
+            <set-property name="skuId"><![CDATA[Casto518122]]></set-property>
+            <set-property name="listPrice"><![CDATA[799.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="spxCasto518122">
+            <set-property name="skuId"><![CDATA[Casto518122]]></set-property>
+            <set-property name="listPrice"><![CDATA[711.11]]></set-property>
+            <set-property name="priceList"><![CDATA[salePrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto494314">
+            <set-property name="skuId"><![CDATA[Casto494314]]></set-property>
+            <set-property name="listPrice"><![CDATA[99.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto516810">
+            <set-property name="skuId"><![CDATA[Casto516810]]></set-property>
+            <set-property name="listPrice"><![CDATA[255.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto500253">
+            <set-property name="skuId"><![CDATA[Casto500253]]></set-property>
+            <set-property name="listPrice"><![CDATA[28.55]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294627">
+            <set-property name="skuId"><![CDATA[Casto294627]]></set-property>
+            <set-property name="listPrice"><![CDATA[864.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto513119">
+            <set-property name="skuId"><![CDATA[Casto513119]]></set-property>
+            <set-property name="listPrice"><![CDATA[148.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto569664">
+            <set-property name="skuId"><![CDATA[Casto569664]]></set-property>
+            <set-property name="listPrice"><![CDATA[217.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+        <add-item item-descriptor="price" id="lpxCasto294070">
+            <set-property name="skuId"><![CDATA[Casto294070]]></set-property>
+            <set-property name="listPrice"><![CDATA[101.0]]></set-property>
+            <set-property name="priceList"><![CDATA[listPrices]]></set-property>
+        </add-item>
+
+    </import-items>
+</gsa-template>

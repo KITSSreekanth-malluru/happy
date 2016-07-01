@@ -1,0 +1,33 @@
+<dsp:droplet name="/atg/dynamo/droplet/Cache">
+	<dsp:param name="key" value="magasinDynamicStyles.jspf" />
+	<dsp:param name="cacheCheckSeconds" bean="/com/castorama/CastConfiguration.cacheCheckSecondsLong" />	
+	<dsp:oparam name="output">
+		<dsp:droplet name="/atg/dynamo/droplet/RQLQueryForEach">
+			<dsp:param name="queryRQL" value="entite.adresse.departement.numero != 999" />
+			<dsp:param name="repository" bean="/atg/registry/Repository/MagasinGSARepository" />
+			<dsp:param name="itemDescriptor" value="magasin" />
+			<dsp:param name="elementName" value="magasinRQL" />
+			<dsp:param name="sortProperties" value="+entite.adresse.departement.numero,+nom" />
+			<dsp:oparam name="outputStart">
+				<style type="text/css">
+			</dsp:oparam>
+			<dsp:oparam name="output">
+				<dsp:getvalueof var="id" param="magasinRQL.id" />
+				<dsp:getvalueof var="position_top" param="magasinRQL.position_top" />
+				<dsp:getvalueof var="position_left" param="magasinRQL.position_left" />
+				#magasin_${id}
+				{				
+						position:absolute;
+						top: <c:out value="${position_top}" />px;
+						left: <c:out value="${position_left + 52}" />px;
+						z-index: 10;
+						display: inline-block;
+				}
+				 
+			</dsp:oparam>
+			<dsp:oparam name="outputEnd">
+				</style>
+			</dsp:oparam>
+		</dsp:droplet>		
+	</dsp:oparam>
+</dsp:droplet>

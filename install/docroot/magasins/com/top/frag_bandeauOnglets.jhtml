@@ -1,0 +1,15 @@
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td bgcolor="#1D4498"><img src="/com/img/1pixel.gif" width="1" height="4"></td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr bgcolor="#1D4498">
+<td align="center" valign="bottom" background="/com/img/fond_haut.gif" nowrap><img src="/com/img/1pixel.gif" width="18" height="22"><img src="/com/img/1pixel.gif" width="72" height="1"></td>
+<droplet src="frag_onglets.jhtml"/>
+<droplet src="../../../com/top/frag_appletPanier.jhtml"/>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td bgcolor="#1D4498"><img src="/com/img/1pixel.gif" width="1" height="2"></td></tr>
+</table>

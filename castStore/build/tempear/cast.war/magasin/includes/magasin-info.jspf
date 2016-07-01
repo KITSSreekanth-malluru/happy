@@ -1,0 +1,32 @@
+<dsp:getvalueof var="horaires" param="magasin.horaires" /> 
+<c:if test="${not empty horaires}">
+	<h2><fmt:message key="magasin.working.hours" /></h2>
+	<p>           				
+	<c:out value="${horaires }"  escapeXml="false"/>           					            					
+	</p>
+</c:if>
+
+<h2><fmt:message key="magasin.contact.info" /></h2>
+<p>
+	<dsp:getvalueof var="tel" param="magasin.entite.adresse.tel" />
+	<c:if test="${not empty tel}">
+		<strong><fmt:message key="magasin.contact.phone" /></strong>           					
+		<c:out value="${tel }" escapeXml="false"/><br />
+	</c:if>
+	
+	<dsp:getvalueof var="fax" param="magasin.entite.adresse.fax" />
+	<c:if test="${not empty fax}">
+		<strong><fmt:message key="magasin.contact.fax" /></strong>							
+		<c:out value="${fax }" escapeXml="false"/><br />
+	</c:if>
+	
+	<dsp:getvalueof var="rue" param="magasin.entite.adresse.rue" />
+	<dsp:getvalueof var="cp" param="magasin.entite.adresse.cp" />
+	<dsp:getvalueof var="ville" param="magasin.entite.adresse.ville" />
+	<c:if test="${not empty rue || not empty cp || not empty ville}">
+		<strong><fmt:message key="magasin.contact.address" /></strong><br />							
+		<c:out value="${rue }" escapeXml="false"/><br />
+		<c:out value="${cp }"/>&nbsp;
+		<c:out value="${ville }" escapeXml="false"/>          					
+	</c:if>
+</p>

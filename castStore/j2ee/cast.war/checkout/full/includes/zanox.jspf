@@ -1,0 +1,11 @@
+<dsp:page>
+  <dsp:getvalueof var="mail" bean="/atg/userprofiling/Profile.eMail" />
+  <dsp:getvalueof id="price" bean="/atg/commerce/ShoppingCart.zanoxPrice"/>  
+  <dsp:getvalueof id="orderId" bean="/atg/commerce/ShoppingCart.last.id"/>  
+  <dsp:importbean var="originatingRequest" bean="/OriginatingRequest"/>
+
+<!-- (Le code HTML zanox-affiliate ne peut pas être modifié pour préserver une fonctionnalité parfaite !)-->
+<SCRIPT TYPE="text/javascript" src="https://ad.zanox.com/pps/?2759C2145138928&mode=[[1]]&CustomerID=[[${mail}]]&OrderID=[[${orderId}]]&CurrencySymbol=[[EUR]]&TotalPrice=[[<fmt:formatNumber value="${price}" maxFractionDigits="2" groupingUsed="false" />]]&PartnerID=[[${originatingRequest.session.id}]]"></SCRIPT>
+<NOSCRIPT><IMG src="https://ad.zanox.com/pps/?2759C2145138928&mode=[[2]]&CustomerID=[[${mail}]]&OrderID=[[${orderId}]]&CurrencySymbol=[[EUR]]&TotalPrice=[[<fmt:formatNumber value="${price}" maxFractionDigits="2" groupingUsed="false" />]]&PartnerID=[[${originatingRequest.session.id}]]" width="1" height="1"></NOSCRIPT>
+<!-- FIN du code HTML zanox-affiliate -->
+</dsp:page>

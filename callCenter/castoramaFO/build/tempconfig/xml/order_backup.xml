@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<!-- 
+	Logica - 19/09/2008 - Descripteur du repository de sauvegarde des commandes pré paiement
+	
+	Objectif : Permettre à Leslie Laire de pouvoir "rattrapper" les commandes "inexistantes" du site
+	
+	Ce repository se remplit au niveau du panier recap par une droplet classique en fin de page :
+		>	1 Ligne par commande.
+		>	La purge se fera par un SQL
+-->
+<gsa-template>
+
+	<!-- Ce repository permet de stocker les informations sur les paiements en cas de commande inexistante -->
+	<item-descriptor name="order_backup" display-name="order backup" display-property="order_id" item-expire-timeout="180000" query-expire-timeout="180000">
+	</item-descriptor>	
+		
+	<!-- Ce repository permet de stocker les informations sur les articles de la commande inexistante -->
+	<item-descriptor name="commerce_item_backup" display-name="commerce item backup" display-property="COMMERCE_ITEM_ID"  item-expire-timeout="180000" query-expire-timeout="180000">
+	</item-descriptor>
+</gsa-template>

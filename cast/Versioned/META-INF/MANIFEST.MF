@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+ATG-Product: Castorama store - Versioned Repository Extensions
+ATG-Client-Class-Path: lib/classes.jar
+ATG-Class-Path: lib/classes.jar
+ATG-Config-Path: config/config.jar
+ATG-StagingConfig-Path: configlayers/stagingandprod/config.jar
+ATG-Required: DCS-UI.management DCS-UI.Search B2CCommerce.Versioned DCS.DynamicCustomCatalogs.Versioned @install_unit@.@module_root_parent@.cast

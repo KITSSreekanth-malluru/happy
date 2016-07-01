@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+ATG-Config-Path: config
+ATG-Product: Castorama Store Environment module
+ATG-Required: commerce.castorama.env.ca commerce.castorama.castIphone.Versioned

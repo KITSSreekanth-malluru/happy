@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+        
+<gsa-template>
+    <header>
+        <name>default</name>
+        <author/>
+    </header>
+    <item-descriptor name="departement" display-name="Departements Casto" content="false" folder="false" use-id-for-path="false" display-property="nom" hidden="false" expert="false" writable="true" cache-mode="simple" id-space-name="departement" id-separator=":" query-cache-size="50">
+        <table name="CASTO_DEPARTEMENT" type="primary" id-column-name="id">
+            <property name="depart_id" column-name="id" data-type="string" display-name="Id" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="numero" column-name="numero" data-type="int" display-name="Numero" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="nom" column-name="nom" data-type="string" display-name="Nom" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="region" column-name="region_id" item-type="region" display-name="Region" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="region" display-name="Regions Casto" content="false" folder="false" use-id-for-path="false" display-property="nom" hidden="false" expert="false" writable="true" cache-mode="simple" id-space-name="region" id-separator=":" query-cache-size="50">
+        <table name="CASTO_REGION" type="primary" id-column-name="id">
+            <property name="id" column-name="id" data-type="string" display-name="Id" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="nom" column-name="nom" data-type="string" display-name="Nom" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="img" column-name="url_img_region" data-type="string" display-name="Image des magasins de la region (url)" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="ordreAffichage" column-name="ordre_affichage" data-type="string" display-name="Ordre d'affichage" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+        <table name="CASTO_REGION_MESSAGES" type="multi" id-column-name="region_id">
+            <property name="messages" column-name="message_ID" data-type="set" component-item-type="messageRegionRepository" display-name="Messages" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" repository="/atg/registry/Repository/MessageRegionRepository" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="adresse" display-name="Adresses Casto" content="false" folder="false" use-id-for-path="false" display-property="cp" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_ADRESSE" type="primary" id-column-name="id">
+            <property name="id" column-name="id" data-type="string" display-name="Id" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="ville" column-name="ville" data-type="string" display-name="Ville" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="cp" column-name="cp" data-type="string" display-name="Code Postal" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="rue" column-name="rue" data-type="string" display-name="Rue" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="tel" column-name="tel" data-type="string" display-name="Telephone" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="fax" column-name="fax" data-type="string" display-name="Fax" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="departement" column-name="departementId" item-type="departement" display-name="Departement" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="commentaire" column-name="commentaire" data-type="string" display-name="Commentaire" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="entite" display-name="Entites Casto" content="false" folder="false" use-id-for-path="false" display-property="nom" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_ENTITE" type="primary" id-column-name="id">
+            <property name="nom" column-name="nom" data-type="string" display-name="Nom" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="login" column-name="login_admin" data-type="string" display-name="Login admin" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="pass" column-name="pass_admin" data-type="string" display-name="Password admin" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="email" column-name="email" data-type="string" display-name="Email" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="adresse" column-name="adresseId" item-type="adresse" display-name="Adresse" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="magasin" display-name="Magasins Casto" default="true" content="false" folder="false" use-id-for-path="false" display-property="nom" hidden="false" expert="false" writable="true" cache-mode="simple" id-space-name="magasin" id-separator=":" query-cache-size="300" item-cache-size="120">
+        <table name="CASTO_MAGASIN" type="primary" id-column-name="id">
+            <property name="id" column-name="id" data-type="string" display-name="Id" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="storeId" column-name="store_id" data-type="string" display-name="Identifiant magasin Castorama" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="entite" column-name="entite_id" item-type="entite" display-name="Entite" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="nom" column-name="nom" data-type="string" display-name="Nom" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="imgplan" column-name="url_img_plan" data-type="string" display-name="Image du plan d'acces (url)" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="pdfplan" column-name="url_pdf_plan" data-type="string" display-name="PDF du plan d'acces(url)" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="accesroute" column-name="acces_route" data-type="string" display-name="Acces route" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="accesroute2" column-name="acces_route2" data-type="string" display-name="Acces route (bis)" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="accesautoroute" column-name="acces_autoroute" data-type="string" display-name="Acces autoroute" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="accestransportcommun" column-name="acces_transport_commun" data-type="string" display-name="Acces transports en communs" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="horaires" column-name="horaires" data-type="string" display-name="Horaires" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="nom_secondaire" column-name="nom_secondaire" data-type="string" display-name="Nom secondaire" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="url_img_plan_masse" column-name="url_img_plan_masse" data-type="string" display-name="Image plan de masse" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="url_pdf_plan_masse" column-name="url_pdf_plan_masse" data-type="string" display-name="PDF plan de masse" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="url_photo" column-name="url_photo" data-type="string" display-name="Photo" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="position_top" column-name="position_top" data-type="int" display-name="Position top" required="true" readable="true" writable="true" queryable="true" default="0" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="position_left" column-name="position_left" data-type="int" display-name="Position left" required="true" readable="true" writable="true" queryable="true" default="0" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="description" column-name="description" data-type="string" display-name="description" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="keywords" column-name="keywords" data-type="string" display-name="keywords" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="storeUrl" column-name="store_url" data-type="string" display-name="Store URL" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <!--* LOGICA 17/01/2008
+                *
+                * Prototype PLD-->
+            <property name="delai_preparation" column-name="delai_preparation" data-type="double" display-name="Delai de préparation (en Heures)" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="delai_livraison" column-name="delai_livraison" data-type="double" display-name="Delai de livraison (en Jours)" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <!-- EPAM team: add local price lists reference to the store-->
+            <property name="localPriceList" category-resource="categoryCommerceGeneral" item-type="priceList"
+                display-name-resource="localPriceList" column-name="local_price_list"
+                repository="/com/castorama/commerce/pricing/repository/StoreLocalPricesRepository">
+                <attribute name="propertySortPriority" value="2"/>
+                <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+            </property>
+
+            <property name="retraitMagasin" data-type="boolean" default="false" column-name="retrait_magasin" display-name-resource="magasin.retrait" category-resource="categoryCCConfig" >
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="0"/>
+            </property>
+            <property name="localPrix" data-type="boolean" default="false" column-name="local_prix" display-name-resource="magasin.localPrix" category-resource="categoryCCConfig" >
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="1"/>
+            </property>
+            <property name="ccDelayPeriodUnit" data-type="enumerated" default="cc.deplay.period.hours" column-name="cc_delay_period_unit" display-name-resource="cc.deplay.period.unit"
+                category-resource="categoryCCConfig">
+                <attribute name="useCodeForValue" value="true" />
+                <option resource="cc.deplay.period.hours" code="0" />
+                <option resource="cc.deplay.period.days" code="1" />
+                <attribute name="propertySortPriority" value="2"/>
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+            </property>
+            <property name="ccDelayPeriod" data-type="int" column-name="cc_delay_period" display-name-resource="cc.deplay.period"
+                category-resource="categoryCCConfig">
+                <attribute name="propertySortPriority" value="3"/>
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+            </property>
+            <property name="ccSpecificBannerPromoInfo" column-name="cc_promo_info" item-type="promoInformation" display-name-resource="ccSpecificBannerPromoInfo" category-resource="categoryCCConfig" repository="/atg/commerce/catalog/ProductCatalog">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="4"/>
+            </property>
+            <property name="ccTopBannerPromoInfo" column-name="cc_top_promo_info" item-type="promoInformation" display-name-resource="ccTopBannerPromoInfo" category-resource="categoryCCConfig" repository="/atg/commerce/catalog/ProductCatalog">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="5"/>
+            </property>
+            <property name="ccDeliveryMessage" column-name="cc_delivery_message" data-type="big string" display-name-resource="ccDeliveryMessage" category-resource="categoryCCConfig">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="6"/>
+            </property>
+            <property name="ccPhone" column-name="cc_phone" data-type="string" display-name-resource="ccPhone" category-resource="categoryStoreContacts">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="0"/>
+            </property>
+            
+            <property name="pbxSite" column-name="pbx_site" data-type="string" display-name-resource="pbxSite" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="1"/>
+            </property>
+            <property name="pbxRang" column-name="pbx_rang" data-type="string" display-name-resource="pbxRang" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="2"/>
+            </property>
+            <property name="pbxIdentifiant" column-name="pbx_identifiant" data-type="string" display-name-resource="pbxIdentifiant" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="3"/>
+            </property>
+			<property name="pbxSecretKey" column-name="pbx_secret_key" data-type="string" display-name-resource="pbxSecretKey" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="4"/>
+            </property>
+            <property name="pbxSiteSofinco" column-name="pbx_site_sofinco" data-type="string" display-name-resource="pbxSiteSofinco" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="5"/>
+            </property>
+            <property name="pbxRangSofinco" column-name="pbx_rang_sofinco" data-type="string" display-name-resource="pbxRangSofinco" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="6"/>
+            </property>
+            <property name="pbxIdentifiantSofinco" column-name="pbx_identifiant_sofinco" data-type="string" display-name-resource="pbxIdentifiantSofinco" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="7"/>
+            </property>
+            <property name="pbxSecretKeySofinco" column-name="pbx_secret_key_sofinco" data-type="string" display-name-resource="pbxSecretKeySofinco" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="8"/>
+            </property>
+            <property name="pbxDirectPlusKey" column-name="pbx_direct_plus_key" data-type="string" display-name-resource="pbxDirectPlusKey" category-resource="paymentConfigInfo">
+                <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+                <attribute name="propertySortPriority" value="8"/>
+            </property>
+        </table>
+        <table name="CAST_STORE_GEOLOCATION" type="auxiliary" id-column-name="id">
+          <property category="Geo Location" name="longitude" data-type="double" column-name="longitude" display-name-resource="store.longitude">
+             <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+          </property>
+          <property category="Geo Location" name="latitude" data-type="double" column-name="latitude" display-name-resource="store.latitude">
+            <attribute name="resourceBundle" value="com.castorama.magasin.CastoMagasinResources" />
+          </property>
+        </table>
+        <table name="CASTO_MAGASIN_SERVICE" multi-column-name="seq" type="multi" id-column-name="magasin_id">
+            <property name="listservices" column-name="service_id" data-type="list" component-item-type="service" display-name="Services du magasins" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+        <table name="CASTO_OFFRE_MAGASIN" multi-column-name="seq" type="multi" id-column-name="magasin_id">
+            <property name="listoffres" column-name="offre_id" data-type="list" component-item-type="offre" display-name="Offres du magasins" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+        <table name="CASTO_MAGASINS_ACTU" multi-column-name="seq" type="multi" id-column-name="magasin_id">
+            <property name="listactus" column-name="actu_id" data-type="list" component-item-type="actualite" display-name="Actualites du magasins" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+        <table name="CASTO_MAGASIN_IMAGE_AUX" multi-column-name="seq" type="multi" id-column-name="magasin_id">
+            <property name="listimageaux" column-name="image_aux_id" data-type="list" component-item-type="image_aux" display-name="Images auxiliaires du magasin" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+        <table name="CASTO_MAGASIN_OUVERTURE_EXCEP" multi-column-name="seq" type="multi" id-column-name="magasin_id">
+            <property name="listouvexc" column-name="id" data-type="list" component-item-type="ouverture_excep" display-name="Ouverture exceptionnelle" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+        <table name="CASTO_MAGASIN_PROCHE" multi-column-name="seq" type="multi" id-column-name="magasin_ref">
+            <property name="listmagproche" column-name="magasin_proche" data-type="list" component-item-type="magasin" display-name="Magasins proches" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+        <!--* Unilog, le 19/12/2007
+            *
+            * Prototype PLD-->
+        <table name="CASTO_MAGASIN_COMM_SERVICE" type="multi" id-column-name="ID_MAGASIN">
+            <property name="services" column-name="ID_SERVICE" data-type="set" component-item-type="serviceL" display-name="Services" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="service" display-name="Services Casto" content="false" folder="false" use-id-for-path="false" display-property="nom" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_SERVICE" type="primary" id-column-name="id">
+            <property name="nom" column-name="nom" data-type="string" display-name="Nom" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="offre" display-name="Offres Casto" content="false" folder="false" use-id-for-path="false" display-property="reference" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_OFFRE" type="primary" id-column-name="id">
+            <property name="reference" column-name="reference" data-type="string" display-name="Reference" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="titre" column-name="titre" data-type="string" display-name="Titre" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="datemin" column-name="datemin" data-type="date" display-name="Date de debut" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="datemax" column-name="datemax" data-type="date" display-name="Date de fin" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="description" column-name="description" data-type="string" display-name="Description" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="activate" column-name="activate" data-type="enumerated" display-name="Active" required="false" readable="true" writable="true" queryable="true" default="NON" hidden="false" expert="false" cache-mode="inherit">
+                <attribute name="useCodeForValue" value="false"/>
+                <option value="NON" code="0"/>
+                <option value="OUI" code="1"/>
+            </property>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="actualite" display-name="Actualites Casto" content="false" folder="false" use-id-for-path="false" display-property="titre" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_ACTUALITE" type="primary" id-column-name="id">
+            <property name="id" column-name="id" data-type="string" display-name="Id" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="titre" column-name="titre" data-type="string" display-name="Titre" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="datemin" column-name="datemin" data-type="date" display-name="Date de debut" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="datemax" column-name="datemax" data-type="date" display-name="Date de fin" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="contenu" column-name="contenu" data-type="string" display-name="Contenu" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="activate" column-name="activate" data-type="enumerated" display-name="Active" required="false" readable="true" writable="true" queryable="true" default="NON" hidden="false" expert="false" cache-mode="inherit">
+                <attribute name="useCodeForValue" value="false"/>
+                <option value="NON" code="0"/>
+                <option value="OUI" code="1"/>
+            </property>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="ope_speciale" display-name="Operation Speciale Magasin" content="false" folder="false" use-id-for-path="false" display-property="titre_hp" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_OPERATION_SPECIALE" type="primary" id-column-name="id">
+            <property name="titre_hp" column-name="titre_hp" data-type="string" display-name="Titre en homepage magasin" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="libelle_lien" column-name="libelle_lien" data-type="string" display-name="Libelle du lien en homepage magasin" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="titre" column-name="titre" data-type="string" display-name="Titre" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="introduction" column-name="introduction" data-type="string" display-name="Introduction" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="dateDebutMiseEnLigne" column-name="date_debut" data-type="date" display-name="Date de debut de mise en ligne" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="dateFinMiseEnLigne" column-name="date_fin" data-type="date" display-name="Date de fin de mise en ligne" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="activate" column-name="activate" data-type="enumerated" display-name="Active" required="false" readable="true" writable="true" queryable="true" default="NON" hidden="false" expert="false" cache-mode="inherit">
+                <attribute name="useCodeForValue" value="false"/>
+                <option value="NON" code="0"/>
+                <option value="OUI" code="1"/>
+            </property>
+        </table>
+        <table name="CASTO_OPERATION_MAGASIN" multi-column-name="seq" type="multi" id-column-name="id">
+            <property name="magasins" column-name="magasin_id" data-type="list" component-item-type="magasin" display-name="Les magasins de cette operation" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cascade="insert,update,delete" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="image_aux" display-name="Image auxiliaire magasin" content="false" folder="false" use-id-for-path="false" display-property="small_image_url" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_IMAGE_AUX" type="primary" id-column-name="image_aux_id">
+            <property name="image_aux_id" column-name="image_aux_id" data-type="string" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="magasin_id" column-name="magasin_id" data-type="string" display-name="ID magasin" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="small_image_url" column-name="small_image_url" data-type="string" display-name="Small image url" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="large_image_url" column-name="large_image_url" data-type="string" display-name="Large image url" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <item-descriptor name="ouverture_excep" display-name="Ouverture exceptionnelle" content="false" folder="false" use-id-for-path="false" display-property="libelle" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_OUVERTURE_EXCEP" type="primary" id-column-name="id">
+            <property name="id" column-name="id" data-type="string" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="libelle" column-name="libelle" data-type="string" display-name="Libelle" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="date_fin_validite" column-name="date_fin_validite" data-type="timestamp" display-name="Date fin validite" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="magasin_id" column-name="magasin_id" data-type="string" display-name="ID magasin" required="false" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+    <!--* LOGICA, le 19/12/2007
+        *
+        * Prototype PLD-->
+    <item-descriptor name="serviceL" display-name="Services magasins" content="false" folder="false" use-id-for-path="false" display-property="libelle" hidden="false" expert="false" writable="true" cache-mode="simple" id-separator=":">
+        <table name="CASTO_COMMANDE_SERVICE" type="primary" id-column-name="ID_SERVICE">
+            <property name="libelle" column-name="LIBELLE" data-type="string" display-name="Libellé" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="url" column-name="URL_BOUTON" data-type="string" display-name="Url" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="shippingGroup" column-name="SHIPPING_GROUP_NAME" data-type="string" display-name="Shipping Group" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>   
+    <item-descriptor name="magasinServiceAssociation" display-name="Associtation magasins et services" cache-mode="simple">
+        <table name="CASTO_MAGAS_COUPLE_SERVICE" type="primary" id-column-name="ID_COUPLE">
+            <property name="idCouple" column-name="ID_COUPLE" data-type="string"  required="true" display-name="idCouple" />
+            <property name="idService" column-name="ID_SERVICE" item-type="serviceL" display-name="service" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+            <property name="idMagasin" column-name="ID_MAGASIN" item-type="magasin" display-name="magasin" required="true" readable="true" writable="true" queryable="true" hidden="false" expert="false" cache-mode="inherit"/>
+        </table>
+    </item-descriptor>
+</gsa-template>

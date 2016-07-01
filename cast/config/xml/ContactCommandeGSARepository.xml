@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE gsa-template
+  PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN"
+         "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+<header>
+   	<name>FAQCommande</name>
+   	<author>Sylvain Deroullers</author>
+   	<description>
+		Ce repository est le résultat du mapping du schéma lié à la FAQ Commande.
+	</description>
+</header>
+
+<!-- *********** FAQ COMMANDE ************************************************************ -->
+<item-descriptor name="THEME">
+<table name="THEME" type="primary" id-column-name="IDTHEME">
+	<property name="IDTHEME"	column-name="IDTHEME" data-type="string" required="true" />
+	<property name="LIBELLE"	column-name="LIBELLE" data-type="string" required="true" />
+</table>
+<table name="SOUS_THEME" type="multi" id-column-name="IDTHEME">
+	<property name="SOUS_THEMES" column-name="IDSOUSTHEME" data-type="set" component-item-type="SOUS_THEME"/> 
+</table> 
+</item-descriptor>
+
+<item-descriptor name="SOUS_THEME">
+<table name="SOUS_THEME" type="primary" id-column-name="IDSOUSTHEME">
+	<property name="IDSOUS_THEME"			column-name="IDSOUSTHEME" 			data-type="string" />
+	<property name="LIBELLESOUSTHEME" 		column-name="LIBELLESOUSTHEME" 		data-type="string" required="true" />
+	<property name="IDTHEME"				column-name="IDTHEME" 				data-type="string" />
+</table>
+<table name="QUESTION_REPONSE" type="multi" id-column-name="IDSOUSTHEME"> 
+	<property name="QUESTIONS_REPONSES" column-name="IDQR" data-type="set" component-item-type="QUESTION_REPONSE"/> 
+</table>
+</item-descriptor>
+
+<item-descriptor name="CASTO_CONTACT">
+<table name="CASTO_CONTACT" type="primary" id-column-name="IDCONTACT">
+	<property name="IDCONTACT"				column-name="IDCONTACT" 			data-type="string"	required="true" />
+	<property name="IDORDER"				column-name="IDORDER" 				data-type="string"	required="true" />	
+	<property name="NUMCONTACT"				column-name="NUMCONTACT" 			data-type="int"	   	/>
+	<property name="NUMDOSSIER"				column-name="NUMDOSSIER" 			data-type="int" 	/>
+	<property name="INITIATEURCONTACT_C659"	column-name="INITIATEURCONTACT_C659" data-type="short" 	required="true"/>
+	<property name="TYPECONTACT_C632"		column-name="TYPECONTACT_C632" 		data-type="short" 	required="true"/>
+	<property name="CONTENU"				column-name="CONTENU" 				data-type="string"  required="true" />
+	<property name="DATECONTACT"			column-name="DATECONTACT" 			data-type="timestamp" 	required="true" />
+	<property name="DATEENVOYEBO"			column-name="DATEENVOYEBO" 			data-type="date" />
+	<property name="DATELECTURECLIENT"		column-name="DATELECTURECLIENT" 	data-type="timestamp"  />
+	<property name="CMOTIF_C618"			column-name="CMOTIF_C618" 			data-type="short" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="QUESTION_REPONSE">
+<table name="QUESTION_REPONSE" type="primary" id-column-name="IDQR">
+	<property name="IDQR"				column-name="IDQR" 				data-type="string" required="true" />
+	<property name="IDSOUSTHEME"		column-name="IDSOUSTHEME" 		data-type="string" required="true" />	
+	<property name="LIBELLE_QUESTION"	column-name="LIBELLE_QUESTION" 	data-type="string" required="true" />
+	<property name="LIBELLE_REPONSE"	column-name="LIBELLE_REPONSE" 	data-type="string" required="true" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="CASTO_CONTACT_STATUS">
+<table name="CASTO_CONTACT_STATUS" type="primary" id-column-name="STATUS_ID">
+	<property name="STATUS_ID"				column-name="STATUS_ID" 				data-type="string" required="true" />
+	<property name="IDCONTACT"		column-name="IDCONTACT" 		data-type="string" />	
+	<property name="IDORDER"	column-name="IDORDER" 	data-type="string" />
+	<property name="NUMCONTACT"	column-name="NUMCONTACT" 	data-type="int" />
+	<property name="CVENTE"	column-name="CVENTE" 	data-type="int" />
+	<property name="DATEREADED"	column-name="DATEREADED" 	data-type="timestamp" />
+	<property name="DATEREPLIED"	column-name="DATEREPLIED" 	data-type="timestamp" />
+</table>
+</item-descriptor>
+
+</gsa-template>

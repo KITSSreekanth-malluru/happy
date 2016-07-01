@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="castorama-main" default="all" basedir=".">
+
+  <property environment="env" />
+  <!-- global.dir is used to resolve dev environment resources such as 
+       checkstyle libraries, custom ant tasks, etc..  Essentially stuff 
+       we don't want to stick directly into our module structure. -->
+  <property name="global.dir" value="${basedir}"/>
+  <property name="commonbuildtasks.dir" value="${global.dir}/commonbuildtasks"/>
+
+  <property file="${global.dir}/userenv.properties" />
+  <property file="${commonbuildtasks.dir}/build.properties" />
+  
+
+  <!--
+    The modules in order of dependency, i.e. the most dependant module is
+    built last.
+  -->
+  <filelist id="module.files" dir="${basedir}" files="${modules.build.order}" />
+
+  <!--
+    The modules in reversed order.
+  -->
+  <filelist id="reversed.module.files" dir="${basedir}" files="${reverse.build.order}" />
+
+
+  <target name="-init" description="displays initialization info">
+    <!-- Create a text list that shows us which modules we are building. -->
+    <pathconvert pathsep=" " dirsep="/" property="module.files.string" refid="module.files">
+      <map from="${basedir}" to="."/>
+    </pathconvert>
+    <echo>${module.files.string}</echo>
+  </target>
+
+  <!--
+    Create a quick macro to call all the sub projects so we don't have to
+    repeat ourselves...
+  -->
+  <macrodef name="call-subant">
+    <!-- target is the ant target we want to invoke in the subant task -->
+    <attribute name="target"/>
+    <sequential>
+      <subant target="@{target}">
+        <filelist refid="module.files"/>
+      </subant>
+    </sequential>
+  </macrodef>
+
+  <!-- TASKS COMMON TO ALL SUBMODULES -->
+  <target name="all" depends="-init" description="Runs all projects.">
+    <call-subant target="all"/>
+    
+    <!-- Install any servers -->
+    <antcall target="install-servers"/>
+
+  </target>
+<target name="allConfigureserverModules">
+    <call-subant target="all"/>
+    <ant target="deploy-instances" antfile="${basedir}/install/build.xml"/>
+  </target>
+
+  <target name="clean" depends="-init" description="Cleans all projects.">
+    <call-subant target="clean"/>
+    <antcall target="clean-work-dir" />
+  </target>
+
+  <target name="build" depends="-init" description="Builds all projects.">
+    <call-subant target="build"/>
+  </target>
+
+  <target name="install" depends="-init" description="Installs all projects.">
+    <call-subant target="install"/>
+    <!-- Install any server specific configs -->       
+    <antcall target="install-servers"/>
+  </target>
+
+  <target name="deploy" depends="-init" description="Deploys all projects.">
+    <call-subant target="deploy"/>
+    <!-- Now we invoke the assembler task -->
+    <antcall target="assemble-big-ear" />
+  </target>
+
+  <target name="devdeploy" depends="-init" description="Deploys all projects in development mode.">
+    <call-subant target="devdeploy"/>
+  </target>
+    
+  <target name="devconfig" depends="-init" description="Jars the config files and copies them to install.">
+    <call-subant target="devconfig"/>
+  </target>
+
+  <target name="junit" depends="-init" description="Runs junit tests on all the projects.">
+    <call-subant target="junit"/>
+  </target>
+
+  <target name="cactus" depends="-init" description="Runs cactus tests on all the projects.">
+    <echo message="If the cactus target fails, ensure that the cactus.properties file has
+                   the proper contextURL set." />
+    <call-subant target="cactus"/>
+  </target>
+  
+  <target name="webservices" depends="-init" description="Builds the webservice stubs for all projects.">
+    <echo>          Not implemented at this level, there is no guarantee that all 
+        modules import the webservice tasks.  Please call at the appropriate submodule 
+        level.</echo>
+  </target>
+  
+    <!-- TASKS SPECIFIC TO THE ENTIRE ENVIRONMENT -->
+    
+  <target name="-check-server-dir">
+    <available file="${global.server.dir}" property="server.configs.exist"/>
+  </target>
+
+  <target name="install-servers" 
+          depends="-check-server-dir" 
+          description="Installs any server specific configurations" 
+          if="server.configs.exist">
+            
+    <echo>Copying server configs from ${global.server.dir} to ${dynamo.home}/servers</echo>
+    
+    <!-- Property used configure Scenario Manager component-->
+    <filter token="hostname"         value="${env.COMPUTERNAME}"/>
+
+    <copy todir="${dynamo.home}/servers" verbose="true" filtering="true">
+      <fileset dir="${global.server.dir}" >
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="clean-servers" 
+          description="Cleans dynamo servers configurations">
+    <echo>Cleans ${dynamo.home}/servers</echo>
+    <delete includeEmptyDirs="true">
+      <!--fileset dir="${dynamo.home}/servers" >
+        <exclude name="original/**" />
+      </fileset-->
+    </delete>
+  </target>
+  
+  <target name="clean-work-dir" 
+          description="Cleans the 'work' directory of the JBoss server">
+
+    <ant target="-clean-work-dir" antfile="${commonbuildtasks.dir}/${deploy.definition.file}" />
+  </target>
+
+  <!--target name="-clean-jboss"
+             description="Clean Jboss work and tmp dirs.">
+    <iseif name="clean.jboss.dirs" value="true">
+     <echo>${application.ear.install.dir}</echo>
+     <delete dir="${application.ear.install.dir}/../tmp"/>
+     <delete dir="${application.ear.install.dir}/../work"/> 
+     <delete dir="${application.ear.install.dir}/../log"/>
+    </iseif>
+  </target-->
+
+</project>

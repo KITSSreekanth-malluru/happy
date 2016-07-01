@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+
+        <add-item item-descriptor="user" id="internal-admin">
+            <set-property name="password"><![CDATA[21232f297a57a5a743894a0e4a801fc3]]></set-property>
+            <set-property name="login"><![CDATA[internalAdmin]]></set-property>
+            <set-property name="parentOrganization"><![CDATA[root]]></set-property>
+            <set-property name="roles"><![CDATA[epubAdmin,portal-admin,epubManager]]></set-property>
+            <set-property name="lastName"><![CDATA[User]]></set-property>
+            <set-property name="firstName"><![CDATA[Internal (Robot)]]></set-property>
+        </add-item>
+
+
+    </import-items>
+</gsa-template>

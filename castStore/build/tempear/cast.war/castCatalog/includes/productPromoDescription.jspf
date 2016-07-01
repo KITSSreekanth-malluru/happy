@@ -1,0 +1,32 @@
+<c:choose>
+  <c:when test="${not empty promoBackgroundColor}">
+    <c:set var="bgColor" value="${promoBackgroundColor}"/>
+  </c:when>
+  <c:otherwise>
+    <c:set var="bgColor" value="${productPromoColor}"/>
+  </c:otherwise>
+</c:choose>
+
+<c:if test="${view=='galeryView'}">
+  <c:if test="${(not empty printVersion) and printVersion}">
+    <div class="printVersion">
+      <dsp:getvalueof var="contextPath" bean="/OriginatingRequest.contextPath"/>
+      <dsp:img src="${contextPath}/images/prodH.gif" iclass="${productPromoColor}"/>
+  </c:if>
+  <div class="prodHighlight ${bgColor}" style="color: ${promoFontColor}">
+    <span class="prodHighlightContent">
+      <dsp:valueof value="${productPromoDescription}"/>
+    </span>
+  </div>
+  <c:if test="${(not empty printVersion) and printVersion}">
+    </div><!--end for .printVersion-->
+  </c:if>
+</c:if>
+
+<c:if test="${view=='listView'}">
+  <span class="${bgColor}">
+    <strong>
+      <dsp:valueof value="${productPromoDescription}<br/>" valueishtml="true"/>
+    </strong>
+  </span>
+</c:if>

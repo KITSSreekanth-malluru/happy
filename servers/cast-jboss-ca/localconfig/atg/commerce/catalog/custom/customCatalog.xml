@@ -1,0 +1,21 @@
+<gsa-template xml-combine="append">
+  <item-descriptor name="catalog" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="category" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="category-info" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="product" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="product-info" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="sku" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="sku-info" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="sku-link" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="configurableSku" cache-mode="simple"></item-descriptor> 
+  <item-descriptor name="folder" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="genericFolder" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="catalogFolder" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="configurableProperty" cache-mode="simple"></item-descriptor> 
+  <item-descriptor name="configurationOption" cache-mode="simple"></item-descriptor> 
+  <item-descriptor name="foreignCatalog" cache-mode="simple"></item-descriptor> 
+  <item-descriptor name="media" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="media-external" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="media-internal-binary" cache-mode="simple"></item-descriptor>
+  <item-descriptor name="media-internal-text" cache-mode="simple"></item-descriptor>
+</gsa-template>

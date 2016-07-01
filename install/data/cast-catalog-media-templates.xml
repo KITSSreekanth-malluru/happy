@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="media-external" id="mPivotTemplate">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[4]]></set-property>  m595625 -->
+            <set-property name="creationDate"><![CDATA[7/6/2009 16:24:04]]></set-property>
+            <set-property name="url"><![CDATA[/castCatalog/basicPivotCategoryTemplate.jsp]]></set-property>
+            <set-property name="path"><![CDATA[/Basic Pivot Category Template]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Basic Pivot Category Template]]></set-property>
+        </add-item>
+
+        <!-- Templates -->
+        <add-item item-descriptor="media-external" id="mBaseCategoryDropPane">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[6/24/2009 12:04:29]]></set-property>
+            <set-property name="url"><![CDATA[baseCategoryDropPane.jsp]]></set-property>
+            <set-property name="path"><![CDATA[/categoryTemplate]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Base Category Drop Pane]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="mMultiSKUPrdTemplate">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[4/11/2000 11:46:05]]></set-property>
+            <set-property name="url"><![CDATA[/castCatalog/multiSkuProductDetails.jsp]]></set-property>
+            <set-property name="path"><![CDATA[Multi Sku Product Template]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Multi Sku Product Template]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="mEcoStyleDropPane">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[6/24/2009 12:06:52]]></set-property>
+            <set-property name="url"><![CDATA[ecoStyleCategoryDropPane.jsp]]></set-property>
+            <set-property name="path"><![CDATA[/categoryTemplate]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Eco Style Category Drop Pane]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="mHouseStyleDropPane">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[6/24/2009 12:06:52]]></set-property>
+            <set-property name="url"><![CDATA[houseStyleCategoryDropPane.jsp]]></set-property>
+            <set-property name="path"><![CDATA[/categoryTemplate]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[House Style Category Drop Pane]]></set-property>
+        </add-item>
+
+
+        <add-item item-descriptor="media-external" id="mGrpdProdTemplate">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[5/10/2000 17:39:54]]></set-property>
+            <set-property name="url"><![CDATA[/castCatalog/groupedProductDetails.jsp]]></set-property>
+            <set-property name="path"><![CDATA[Grouped Product Template]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Grouped Product Template]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="mBasicProdTemplate">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[2]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[5/17/2000 17:55:29]]></set-property>
+            <set-property name="url"><![CDATA[/castCatalog/productDetails.jsp]]></set-property>
+            <set-property name="path"><![CDATA[Regular Product Template]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Regular Product Template]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="mBasicCategoryTemplate">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[4]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[7/6/2009 16:16:43]]></set-property>
+            <set-property name="url"><![CDATA[/castCatalog/basicCategoryTemplate.jsp]]></set-property>
+            <set-property name="path"><![CDATA[/Basic Category Template]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Basic Category Template]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="mLaMaisonStyleCategoryTemplate">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[4]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[7/6/2009 16:16:43]]></set-property>
+            <set-property name="url"><![CDATA[/navigation/laMaisonPage.jsp]]></set-property>
+            <set-property name="path"><![CDATA[/La Maison Style Category Template]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[La Maison Style Category Template]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="media-external" id="mDocTemplate">
+            <set-property name="parentFolder"><![CDATA[templateFolder]]></set-property>
+            <!-- export is false   <set-property name="version"><![CDATA[4]]></set-property>  -->
+            <set-property name="creationDate"><![CDATA[7/6/2009 16:16:43]]></set-property>
+            <set-property name="url"><![CDATA[/document/documentTemplate.jsp]]></set-property>
+            <set-property name="path"><![CDATA[/Document Template]]></set-property>
+            <set-property name="type"><![CDATA[external]]></set-property>
+            <set-property name="name"><![CDATA[Document Template]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

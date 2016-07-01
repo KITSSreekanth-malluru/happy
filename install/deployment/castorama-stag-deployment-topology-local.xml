@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE publishing-deployment-topology SYSTEM
+        "http://www.atg.com/dtds/publishing_deployment/publishing_deployment_1.0.dtd">
+
+<publishing-deployment-topology>
+    <target>
+        <target-name>Castorama-Site-Stg(Local Dev environment)</target-name>
+        <agent>
+            <agent-name>Castorama-Site-Agent-Stg</agent-name>
+            <principal-asset>ALL</principal-asset>
+            <exclude-asset-destination>/atg/epub/file/WWWFileSystem</exclude-asset-destination>
+            <include-asset-destination>/atg/epub/file/ConfigFileSystem</include-asset-destination>
+            <transport>
+                <transport-type>RMI</transport-type>
+                <rmi-uri>rmi://localhost:10360/atg/epub/AgentTransport</rmi-uri>
+            </transport>
+        </agent>
+
+        <repository-mapping>
+            <source-repository>/atg/commerce/claimable/ClaimableRepository</source-repository>
+            <destination-repository>/atg/commerce/claimable/ClaimableRepository_staging</destination-repository>
+        </repository-mapping>
+        <repository-mapping>
+            <source-repository>/atg/commerce/catalog/ProductCatalog</source-repository>
+            <destination-repository>/atg/commerce/catalog/ProductCatalog_staging</destination-repository>
+        </repository-mapping>
+        <repository-mapping>
+            <source-repository>/atg/commerce/pricing/priceLists/SecurePriceLists</source-repository>
+            <destination-repository>/atg/commerce/pricing/priceLists/PriceLists_staging</destination-repository>
+        </repository-mapping>
+        <repository-mapping>
+            <source-repository>/atg/search/repository/RefinementRepository</source-repository>
+            <destination-repository>/atg/search/repository/RefinementRepository_staging</destination-repository>
+        </repository-mapping>
+        <repository-mapping>
+            <source-repository>/atg/registry/Repository/MagasinGSARepository</source-repository>
+            <destination-repository>/atg/registry/Repository/MagasinGSARepository_staging</destination-repository>
+        </repository-mapping>
+        <repository-mapping>
+            <source-repository>/atg/registry/Repository/MessageRegionRepository</source-repository>
+            <destination-repository>/atg/registry/Repository/MessageRegionRepository_staging</destination-repository>
+        </repository-mapping>
+
+        <repository-mapping>
+            <source-repository>/atg/registry/Repository/CastostageGSARepository</source-repository>
+            <destination-repository>/atg/registry/Repository/CastostageGSARepository_staging</destination-repository>
+        </repository-mapping>
+        <repository-mapping>
+            <source-repository>/atg/registry/Repository/CatalogueGSARepository</source-repository>
+            <destination-repository>/atg/registry/Repository/CatalogueGSARepository_staging</destination-repository>
+        </repository-mapping>
+    </target>
+
+</publishing-deployment-topology>

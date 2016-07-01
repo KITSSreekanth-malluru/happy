@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE item PUBLIC "-//Art Technology Group, Inc.//DTD Repository Ouput Specifier 1.0//EN" "http://www.atg.com/dtds/search/indexing-dependency-schema.dtd">
+
+<item item-descriptor-name="product" repository-path="/atg/commerce/catalog/ProductCatalog" is-document="true">
+  <title property-name="displayName"/>
+  <meta-properties>
+    <property name="$repositoryId" type="string" store-as-meta-index="true"/>
+    <property name="displayName" type="string" />
+    <property name="type" type="string" />
+    <property name="rating" type="float" />
+    <property name="castPriority" type="integer"/>
+    <property name="stockLevel" type="integer" property-accessor="null" is-non-repository-property="true"/>
+    <property name="cardPriceAvailable" type="boolean" property-accessor="null" is-non-repository-property="true" />
+    <property name="brand" type="string" property-accessor="brandPropertyAccessor" is-non-repository-property="true"/>
+    <property name="availability" type="integer" property-accessor="null" is-non-repository-property="true"/>
+    <property name="ccMode" type="integer" property-accessor="null" is-non-repository-property="true"/>
+  </meta-properties>
+  <text-properties>
+    <property name="$repositoryId" />
+    <property name="displayName" />
+    <property name="brand" property-accessor="brandPropertyAccessor" is-non-repository-property="true"/>
+  </text-properties>
+  
+ <item property-name="childSKUs" is-multi="true">
+    <meta-properties>
+      <property name="$repositoryId" type="string" />
+      <!--<property name="venteEnMagasinSeulement" type="boolean" subtype="casto_sku"/> --> 
+      <property name="listPrice" type="float" property-accessor="pricePropertyAccessor" is-non-repository-property="true"/>
+    </meta-properties>
+    <text-properties>
+      <property name="$repositoryId" />
+      <property name="displayName" />
+      <property name="CodeArticle" subtype="casto_sku"/>
+      <property name="LibelleClientLong" subtype="casto_sku"/>
+      <property name="listPrice" property-accessor="pricePropertyAccessor" is-non-repository-property="true"/> 
+    </text-properties>
+  </item>
+
+  <item property-name="ancestorCategories" is-multi="true" property-accessor="accessorCategories">
+    <meta-properties>
+      <property name="$repositoryId" type="string"/>
+      <property name="displayName" type="string"/>
+    </meta-properties>
+    <text-properties>
+      <property name="displayName"/>
+    </text-properties>
+  </item>
+ 
+  <item property-name="catalogs" is-multi="true" property-accessor="customCatalog">
+    <meta-properties>
+      <property name="$repositoryId" type="string"/>
+    </meta-properties>
+  </item>
+</item>

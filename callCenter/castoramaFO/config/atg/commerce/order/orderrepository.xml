@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template xml-combine="append">
+
+  <header xml-combine="replace">
+    <name>Castorama Custom Order</name>
+    <author>Epam Team</author>
+    <version>1.0</version>
+  </header>
+
+<!-- Code Review : Changement du  cache-mode-->
+<item-descriptor name="order" cache-mode="simple" item-expire-timeout="180000" query-expire-timeout="180000">
+</item-descriptor>
+
+<item-descriptor name="paymentGroup" sub-type-property="type" version-property="version" cache-mode="simple" item-expire-timeout="180000" query-expire-timeout="180000">
+	
+</item-descriptor>
+
+<item-descriptor name="creditCard" super-type="paymentGroup" sub-type-value="creditCard"  version-property="version" cache-mode="simple">
+	
+</item-descriptor> 
+
+<item-descriptor name="commerceItem" sub-type-property="type" version-property="version" display-name="Commerce Item" item-expire-timeout="180000" query-expire-timeout="180000">
+
+</item-descriptor>
+
+<!-- Code Review : Changement du  cache-mode-->
+<item-descriptor name="hardgoodShippingGroup" super-type="shippingGroup" sub-type-value="hardgoodShippingGroup"
+              cache-mode="simple" display-name="Hardgood Shipping Group" item-expire-timeout="180000" query-expire-timeout="180000">
+   
+</item-descriptor>
+
+<item-descriptor name="poids" display-property="prixAuKg" display-name="Poids" cache-mode="simple">
+
+</item-descriptor>
+
+<item-descriptor name="grillePoidsPreparationDeCommande" display-property="montant" display-name="Grille de poids - Preparation">
+
+</item-descriptor>
+
+<item-descriptor name="codespostaux_PFE" display-property="code_postal" display-name="Code postal">
+
+</item-descriptor>
+
+
+<!-- Fiche mantis 820 : J.R. modification de la taille du cache -->
+<item-descriptor sub-type-value="preparationPriceInfo" name="preparationPriceInfo" folder="false" display-name="Preparation Price Info" use-id-for-path="false" super-type="amountInfo" hidden="false" content="false" expert="false" cache-mode="simple" default="false" item-cache-size="10000">
+
+</item-descriptor>
+
+<!-- Fiche mantis 820 : J.R. modification de la taille du cache -->
+<item-descriptor name="amountInfo" item-cache-size="10000" item-expire-timeout="180000" query-expire-timeout="180000">
+
+</item-descriptor>
+
+<!-- Fiche mantis 820 : J.R. modification de la taille du cache -->
+<item-descriptor name="orderPriceInfo" item-cache-size="10000" item-expire-timeout="180000" query-expire-timeout="180000">
+
+</item-descriptor>
+
+<!-- Fiche mantis 820 : J.R. modification de la taille des caches -->
+<item-descriptor name="itemPriceInfo" super-type="amountInfo" sub-type-value="itemPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorItemPriceInfo" >
+</item-descriptor>
+
+<item-descriptor name="taxPriceInfo" super-type="amountInfo" sub-type-value="taxPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorTaxPriceInfo" >
+</item-descriptor>
+
+<item-descriptor name="shippingPriceInfo" super-type="amountInfo" sub-type-value="shippingPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorShippingPriceInfo" >
+</item-descriptor>
+
+<item-descriptor name="detailedItemPriceInfo" super-type="amountInfo" sub-type-value="detailedItemPriceInfo"
+              item-cache-size="10000" cache-mode="simple" display-name-resource="itemDescriptorDetailedItemPriceInfo" >
+</item-descriptor>
+
+<item-descriptor name="pricingAdjustment" version-property="version" cache-mode="simple"
+              item-cache-size="10000" display-name-resource="itemDescriptorPricingAdjustment" item-cache-timeout="180000">
+</item-descriptor>
+
+
+
+
+
+</gsa-template>

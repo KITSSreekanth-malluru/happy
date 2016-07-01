@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+
+<gsa-template>
+
+<item-descriptor name="order_transaction" display-name="order transaction" display-property="order_id">
+     	
+    <table name="CASTO_ORDER_TRANSACTION" type="primary" id-column-name="id">
+     	
+     	<property name="id" data-type="int" column-name="id" display-name="id"/>
+     	<property name="order_id" data-type="string" column-name="order_id" display-name="Commande"/>
+		<property name="date_trans_expire" data-type="date" column-name="date_trans_expire" display-name="Date limite de validite de la transaction"/>
+		<property name="authorisation_id" data-type="string" column-name="authorisation_id" display-name="Authorisation id"/>
+	
+     </table>
+
+</item-descriptor>
+
+</gsa-template>

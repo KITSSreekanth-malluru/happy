@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="promoTemplate" id="300007">
+            <set-property name="promoInformation"><![CDATA[1=600016]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoTemplate" id="300009">
+            <set-property name="layoutType"><![CDATA[1 big in one line]]></set-property>
+            <set-property name="promoInformation"><![CDATA[1=600015]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoTemplate" id="300011">
+            <set-property name="layoutType"><![CDATA[3.5+2.5(on 2 lines)]]></set-property>
+            <set-property name="promoInformation"><![CDATA[2=600019,1=600017]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoTemplate" id="300013">
+            <set-property name="layoutType"><![CDATA[3.5+2.5(one 1 line)]]></set-property>
+            <set-property name="promoInformation"><![CDATA[2=600020,1=600018]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoTemplate" id="300015">
+            <set-property name="layoutType"><![CDATA[3.5+2 banners (each line)]]></set-property>
+            <set-property name="promoInformation"><![CDATA[3=600021,2=600021,1=600017]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoTemplate" id="300017">
+            <set-property name="layoutType"><![CDATA[3.5+4 small banners]]></set-property>
+            <set-property name="promoInformation">
+                <![CDATA[3=600014,5=600014,2=600014,4=600014,1=600017]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="promoTemplate" id="300019">
+            <set-property name="layoutType"><![CDATA[3.5+2 banners]]></set-property>
+            <set-property name="promoInformation"><![CDATA[3=600022,2=600022,1=600017]]></set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

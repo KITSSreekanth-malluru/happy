@@ -1,0 +1,25 @@
+<div class="magservices">	            					
+	<h2>Les services de ce magasin</h2>
+	<dsp:droplet name="/atg/dynamo/droplet/ForEach">
+	  <dsp:param name="array" param="magasin.listservices"/>
+	  <dsp:param name="elementName"	value="magasinService"/>					  
+	  <dsp:oparam name="output">
+		<dsp:getvalueof var="index" param="index"/>
+		<dsp:getvalueof var="size" param="size"/>
+		<c:if test="${index == ((size - (size mod 2)) div 2 + (size mod 2)) }">
+			</ul>									  		
+			<ul>
+		</c:if>									  								  
+		<li>
+			<dsp:getvalueof var="nom" param="magasinService.nom" />
+			<c:out value="${nom }" escapeXml="false"/>							  		
+		</li>										
+	  </dsp:oparam>
+	   <dsp:oparam name="outputStart">
+		<ul>
+	   </dsp:oparam>
+	   <dsp:oparam name="outputEnd">
+		</ul>
+	   </dsp:oparam>
+	</dsp:droplet>	            					
+</div>

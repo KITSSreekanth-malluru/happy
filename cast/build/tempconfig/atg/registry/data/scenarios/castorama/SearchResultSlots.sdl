@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE process SYSTEM "dynamosystemresource:/atg/dtds/pdl/pdl_1.0.dtd">
+<process author="admin" creation-time="960358497000" enabled="true" last-modified-by="admin"
+         modification-time="1247646940795">
+    <segment migrate-from="959803685582" migrate-subjects="true">
+        <segment-name>Segment 1</segment-name>
+        <!--================================-->
+        <!--== Items requested by slot SearchResultHeaderSlot  -->
+        <!--================================-->
+        <event id="1" recurring="true">
+            <event-name>atg.dss.SlotItemRequest</event-name>
+            <filter operator="eq">
+                <event-property>
+                    <property-name>slotName</property-name>
+                </event-property>
+                <constant>/atg/registry/Slots/SearchResultHeaderSlot</constant>
+            </filter>
+        </event>
+        <!--================================-->
+        <!--== Add items to slot named SearchResultHeaderSlot from targeter SearchResultTargeter  -->
+        <!--================================-->
+        <action id="2">
+            <action-name>fillSlot</action-name>
+            <action-param name="slot">
+                <nucleus-property>
+                    <nucleus-path>/atg/registry/Slots/SearchResultHeaderSlot</nucleus-path>
+                </nucleus-property>
+            </action-param>
+            <action-param name="targeter">
+                <nucleus-property>
+                    <nucleus-path>/atg/registry/RepositoryTargeters/ProductCatalog/SearchResultTargeter</nucleus-path>
+                </nucleus-property>
+            </action-param>
+        </action>
+    </segment>
+</process>

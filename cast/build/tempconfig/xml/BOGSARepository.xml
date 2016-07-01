@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template
+  PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Security//EN"
+         "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+<header>
+    <name>importBO</name>
+   	<author>Sylvain Deroullers</author>
+   	<description>
+   		Ce repository est le résultat du mapping du schéma "castorama_import", 
+   		il s'agit des données temporaires importées du BackOffice .
+	</description>
+</header>
+
+
+<item-descriptor name="BO_SCD_CONTACT">
+<property name="order_id" data-type="string" hidden="true" />
+<table name="SCD_CONTACT" type="primary" id-column-name="CCONTACT">
+    <property description="code_etablissement"			name="CETAB" 				column-name="CETAB" 					data-type="short"/>
+	<property description="cclient"						name="CCLIENT"				column-name="CCLIENT"					data-type="long"/>
+	<property description="cvente"						name="CVENTE"				column-name="CVENTE"					data-type="long"/>
+	<property description="nom_utilisateur" 			name="CUTILISATEUR"			column-name="CUTILISATEUR" 				data-type="string" required="true"/>
+	<property description="date_contact" 				name="DCONTACT" 			column-name="DCONTACT"					data-type="timestamp" required="true"/>
+	<property description="type_contact" 				name="CTYPE_CONTACT_C632"	column-name="CTYPE_CONTACT_C632" 		data-type="short" required="true"/>
+	<property description="support_contact" 			name="CSUPPORT_CONTACT_C633" column-name="CSUPPORT_CONTACT_C633" 	data-type="short" />
+	<property description="initiateur_contact" 			name="CINITIATEUR_C619" 	column-name="CINITIATEUR_C619" 			data-type="short"/>
+	<property description="type_gestion" 				name="TGESTION"				column-name="TGESTION" 					data-type="byte"/>
+	<property description="code_transporteur" 			name="CTRANSPORTEUR" 		column-name="CTRANSPORTEUR" 			data-type="int"/>
+	<property description="type_transporteur" 			name="CTYPE_LIVREUR_C007" 	column-name="CTYPE_LIVREUR_C007" 		data-type="short"/>
+	<property description="nb_relances" 				name="NRELANCE" 			column-name="NRELANCE" 					data-type="int"/>
+	<property description="code_reclamation" 			name="CRECLAMATION" 		column-name="CRECLAMATION" 				data-type="int"/>
+	<property description="code_question" 				name="CQUESTION" 			column-name="CQUESTION" 				data-type="int"/>
+	<property description="date_creation" 				name="DCREATION" 			column-name="DCREATION" 				data-type="timestamp" required="true"/>
+	<property description="date_modification" 			name="DMODIFICATION" 		column-name="DMODIFICATION" 			data-type="timestamp"/>
+	<property description="type_modification" 			name="TMODIFICATION" 		column-name="TMODIFICATION" 			data-type="byte" required="true"/>
+	<property description="date_transfert" 				name="DTRANSFERT" 			column-name="DTRANSFERT" 				data-type="timestamp"/>
+	<property description="date_fin_contact" 			name="DFIN_CONTACT" 		column-name="DFIN_CONTACT" 				data-type="timestamp"/>
+	<property description="etblissement_origine" 		name="CETAB_ORIGINE_CONTACT" column-name="CETAB_ORIGINE_CONTACT" 	data-type="short"/>
+	<property description="code_categorie_1" 			name="CCATEGORIE_1" 		column-name="CCATEGORIE_1" 				data-type="short"/>
+	<property description="code_categorie_2" 			name="CCATEGORIE_2" 		column-name="CCATEGORIE_2" 				data-type="short"/>
+	<property description="code_categorie_3" 			name="CCATEGORIE_3" 		column-name="CCATEGORIE_3" 				data-type="short"/>
+	<property description="code_motif_contact" 			name="CMOTIF_CONTACT_C618" 	column-name="CMOTIF_CONTACT_C618" 		data-type="short"/>
+	<property description="sens_contact" 				name="CSENS_CONTACT_C659" 	column-name="CSENS_CONTACT_C659" 		data-type="short"/>
+	<property description="code_contact_site" 			name="CONTACT_ID" 			column-name="CONTACT_ID" 				data-type="string"/>
+	<property description="contenu_contact" 			name="LCONTACT" 			column-name="LCONTACT" 					data-type="string"/>
+	<property description="commentaire_interne" 		name="LCOMMENTAIRE_INTERNE" column-name="LCOMMENTAIRE_INTERNE" 		data-type="string"/>
+	<property description="date_lecture_client" 		name="DLECTURE_CLIENT"		column-name="DLECTURE_CLIENT" 			data-type="timestamp"/>
+	<property description="date_lecture_casto" 			name="DLECTURE_CASTO" 		column-name="DLECTURE_CASTO" 			data-type="timestamp"/>
+	<property description="date_relance_si_non_lu" 		name="DRELANCE_SI_NON_LU"	column-name="DRELANCE_SI_NON_LU" 		data-type="timestamp"/>
+	<property description="date_relance_effective"		name="DRELANCE_EFFECTIVE"	column-name="DRELANCE_EFFECTIVE" 		data-type="timestamp"/>
+	<property description="flag_relance_auto" 			name="FRELANCE_AUTO"		column-name="FRELANCE_AUTO" 			data-type="boolean" />
+	<property description="flag_reponse_client_attendue" name="FREPONSE_CLIENT_ATTENDUE" column-name="FREPONSE_CLIENT_ATTENDUE" data-type="boolean" />
+	<property description="motif_echec_contact" 		name="CMOTIF_ECHEC_C664"	column-name="CMOTIF_ECHEC_C664" 		data-type="short"/>
+	<property description="flag_reponse_immediate" 		name="FREPONSE_IMMEDIATE"	column-name="FREPONSE_IMMEDIATE" 		data-type="boolean"/>
+	<property description="date_cloture" 				name="DCLOTURE"				column-name="DCLOTURE" 					data-type="timestamp"/>
+	<property description="utilisateur_lecture" 		name="CUTILISATEUR_LECTURE"	column-name="CUTILISATEUR_LECTURE" 		data-type="string"/>
+	<property description="utilisateur_cloture" 		name="CUTILISATEUR_CLOTURE"	column-name="CUTILISATEUR_CLOTURE" 		data-type="string"/>
+	<property description="emailed" 		name="EMAILED"	column-name="EMAILED" 		data-type="date"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_FACTURE_AVOIR_LIGNE">
+<table name="SCD_FACTURE_AVOIR_LIGNE" type="primary" id-column-name="CLIGNE_FACTURE_ID">
+	<property description="cligne"					name="CLIGNE"				column-name="CLIGNE" 					data-type="int"/>
+	<property description="cfacture_avoir" 			name="CFACTURE_AVOIR"		column-name="CFACTURE_AVOIR" 			data-type="long"/>
+	<property description="type_facture_avoir" 		name="TFACTURE_AVOIR_C600"	column-name="TFACTURE_AVOIR_C600" 		data-type="short"/>
+	<property description="code_etab" 				name="CETAB"				column-name="CETAB" 					data-type="short" required="true"/>
+	<property description="code_article" 			name="CARTICLE"				column-name="CARTICLE" 					data-type="long"/>
+	<property description="designation_article" 	name="LARTICLE"				column-name="LARTICLE" 					data-type="string"/>
+	<property description="type_article" 			name="TARTICLE"				column-name="TARTICLE" 					data-type="byte"/>
+	<property description="QUNITE_VENTE?" 			name="QUNITE_VENTE"			column-name="QUNITE_VENTE" 				data-type="float"/>
+	<property description="prix_vente_unitaire_HT" 	name="MPV_HT"				column-name="MPV_HT" 					data-type="float"/>
+	<property description="prix_vente_TTC" 			name="MPV_TTC"				column-name="MPV_TTC" 					data-type="float"/>
+	<property description="taux_tva" 				name="MTAUX_TVA"			column-name="MTAUX_TVA" 				data-type="float"/>
+	<property description="total_tva" 				name="MTOTAL_TVA"			column-name="MTOTAL_TVA" 				data-type="float"/>
+	<property description="total_ttc" 				name="MPV_TOTAL_TTC"		column-name="MPV_TOTAL_TTC" 			data-type="float"/>
+	<property description="date_creation" 			name="DCREATION"			column-name="DCREATION" 				data-type="timestamp" required="true"/>
+	<property description="date_modification" 		name="DMODIFICATION"		column-name="DMODIFICATION" 			data-type="timestamp"/>
+	<property description="type_modification" 		name="TMODIFICATION"		column-name="TMODIFICATION" 			data-type="byte" required="true"/>
+	<property description="date_transfert" 			name="DTRANSFERT"			column-name="DTRANSFERT" 				data-type="timestamp"/>
+	<property description="prix_vente_HT_net" 		name="MPV_HT_NET"			column-name="MPV_HT_NET" 				data-type="float"/>
+	<property description="prix_vente_TTC_net"	 	name="MPV_TTC_NET"			column-name="MPV_TTC_NET" 				data-type="float"/>
+	<property description="total_tva_net" 			name="MTOTAL_TVA_NET"		column-name="MTOTAL_TVA_NET" 			data-type="float"/>
+	<property description="montant_remise" 			name="M_REMISE"				column-name="M_REMISE" 					data-type="float"/>
+	<property description="type_remise" 			name="TREMISE_C102"			column-name="TREMISE_C102" 				data-type="short"/>
+	<property description="TAXD3E" 				name="TAXD3E"				column-name="TAXD3E" 					data-type="float"/>
+	<property description="TAXREP" 				name="TAXREP"				column-name="TAXREP" 					data-type="float"/>
+	<property description="LTAXD3E" 			name="LTAXD3E"				column-name="LTAXD3E" 					data-type="string"/>
+	<property description="LTAXREP" 			name="LTAXREP"				column-name="LTAXREP" 					data-type="string"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_FACTURE_AVOIR">
+<table name="SCD_FACTURE_AVOIR" type="primary" id-column-name="CFACTURE_AVOIR">
+	<property description="type_facture_avoir" 			name="TFACTURE_AVOIR_C600"	column-name="TFACTURE_AVOIR_C600" 		data-type="short"/>
+	<property description="code_etab" 					name="CETAB"				column-name="CETAB" 					data-type="short"/>
+	<property description="nom_prenom_destinataire"		name="LNOM_FACTURE"			column-name="LNOM_FACTURE" 				data-type="string" required="true"/>
+	<property description="numero_commande_client"		name="NCOMMANDE_CLIENT"		column-name="NCOMMANDE_CLIENT" 			data-type="string" required="true"/>
+	<property description="cclient" 					name="CCLIENT"				column-name="CCLIENT" 					data-type="string" required="true"/>
+	<property description="cenlevement" 				name="CENLEVEMENT"			column-name="CENLEVEMENT" 				data-type="int"/>
+    <property description="adresse_1_facture" 			name="LADRESSE_1_FACTURE"	column-name="LADRESSE_1_FACTURE" 		data-type="string"/>
+	<property description="adresse_2_facture" 			name="LADRESSE_2_FACTURE"	column-name="LADRESSE_2_FACTURE" 		data-type="string"/>
+	<property description="adresse_3_facture" 			name="LADRESSE_3_FACTURE"	column-name="LADRESSE_3_FACTURE" 		data-type="string"/>
+    <property description="code_postal_facture" 		name="CODE_POSTAL_FACTURE"	column-name="CODE_POSTAL_FACTURE" 		data-type="long" required="true"/>
+    <property description="ville_facture" 				name="LVILLE_FACTURE"		column-name="LVILLE_FACTURE" 			data-type="string" required="true"/>
+	<property description="code_pays_facture" 			name="CPAYS_FACTURE"		column-name="CPAYS_FACTURE" 			data-type="int" required="true"/>
+	<property description="date_facture" 				name="DFACTURE_AVOIR"		column-name="DFACTURE_AVOIR" 			data-type="timestamp" required="true"/>
+	<property description="date_reprise_avoir" 			name="DREPRISE_AVOIR"		column-name="DREPRISE_AVOIR" 			data-type="timestamp"/>
+	<property description="date_emission_avoir_JDV" 	name="DAVOIR_EMIS_JDV"		column-name="DAVOIR_EMIS_JDV" 			data-type="timestamp"/>
+	<property description="date_reprise_avoir_JDV" 		name="DAVOIR_REPRIS_JDV"	column-name="DAVOIR_REPRIS_JDV" 		data-type="timestamp"/>
+	<property description="nom_prenom_livraison" 		name="LNOM_LIVRAISON"		column-name="LNOM_LIVRAISON" 			data-type="string"/>
+	<property description="adresse_1_livraison" 		name="LADRESSE_1_LIVRAISON"	column-name="LADRESSE_1_LIVRAISON" 		data-type="string"/>
+	<property description="adresse_2_livraison" 		name="LADRESSE_2_LIVRAISON"	column-name="LADRESSE_2_LIVRAISON" 		data-type="string"/>
+	<property description="adresse_3_livraison" 		name="LADRESSE_3_LIVRAISON"	column-name="LADRESSE_3_LIVRAISON" 		data-type="string"/>
+	<property description="code_postal_livraison" 		name="CODE_POSTAL_LIVRAISON" column-name="CODE_POSTAL_LIVRAISON" 	data-type="int"/>
+	<property description="ville_livraison" 			name="LVILLE_LIVRAISON"		column-name="LVILLE_LIVRAISON" 			data-type="string"/>
+	<property description="code_pays_livraison" 		name="CPAYS_LIVRAISON"		column-name="CPAYS_LIVRAISON" 			data-type="byte"/>
+	<property description="code_deivse" 				name="CDEVISE"				column-name="CDEVISE" 					data-type="short" required="true"/>
+	<property description="mode_reglement" 				name="TMODE_REGLEMENT_C601"	column-name="TMODE_REGLEMENT_C601" 		data-type="short" required="true"/>
+	<property description="total_HT" 					name="MTOTAL_HT"			column-name="MTOTAL_HT" 				data-type="float"/>
+	<property description="total_TTC" 					name="MTOTAL_TTC"			column-name="MTOTAL_TTC" 				data-type="float"/>
+	<property description="total_TVA" 					name="MTOTAL_TVA"			column-name="MTOTAL_TVA" 				data-type="float"/>
+	<property description="mention_obligatoire_facture" name="LMENTION_OBLIGATOIRE"	column-name="LMENTION_OBLIGATOIRE" 		data-type="string" required="true"/>
+	<property description="numero_cheque" 				name="LCODE_CHEQUE"			column-name="LCODE_CHEQUE" 				data-type="string"/>
+	<property description="commentaire" 				name="LCOMMENTAIRE"			column-name="LCOMMENTAIRE" 				data-type="string"/>
+	<property description="flag_livraison_directe" 		name="FLIVRAISON_DIRECTE_FOURNISSEUR" column-name="FLIVRAISON_DIRECTE_FOURNISSEUR" data-type="boolean" />
+	<property description="flag cadeau" 				name="FCADEAU"				column-name="FCADEAU" 					data-type="boolean" />
+	<property description="commentaire_cadeau" 			name="LCOMMENTAIRE_CADEAU"	column-name="LCOMMENTAIRE_CADEAU" 		data-type="string"/>
+	<property description="flag_email_envoye" 			name="FEMAIL_ENVOYE"		column-name="FEMAIL_ENVOYE" 			data-type="boolean"/>
+	<property description="date_creation" 				name="DCREATION"			column-name="DCREATION" 				data-type="timestamp" required="true"/>
+	<property description="date_modification" 			name="DMODIFICATION"		column-name="DMODIFICATION" 			data-type="timestamp"/>
+	<property description="type_modification" 			name="TMODIFICATION"		column-name="TMODIFICATION" 			data-type="byte" required="true"/>
+	<property description="date_transfert" 				name="DTRANSFERT"			column-name="DTRANSFERT" 				data-type="timestamp"/>
+	<property description="montant_remise" 				name="M_REMISE"				column-name="M_REMISE" 					data-type="float"/>
+	<property description="type_client" 				name="TCLIENT_FACTURE_C003"	column-name="TCLIENT_FACTURE_C003" 		data-type="short"/>
+</table>
+<table name="SCD_FACTURE_AVOIR_LIGNE" type="multi" id-column-name="CFACTURE_AVOIR">
+	<property name="LIGNES" column-name="CLIGNE_FACTURE_ID" data-type="set" component-item-type="BO_SCD_FACTURE_AVOIR_LIGNE"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_RECLAMATION">
+<table name="SCD_RECLAMATION" type="primary" id-column-name="CRECLAMATION">
+	<property description="code_etab" 				name="CETAB"					column-name="CETAB" 					data-type="short" required="true"/>
+	<property description="type_reclamation" 		name="CTYPE_RECLAMATION_C62X"	column-name="CTYPE_RECLAMATION_C62X" 	data-type="short"/>
+	<property description="origine_reclamation" 	name="CORIGINE_RECLAMATION"		column-name="CORIGINE_RECLAMATION" 		data-type="short"/>
+	<property description="date_reclamation" 		name="DRECLAMATION"				column-name="DRECLAMATION" 				data-type="timestamp" required="true"/>
+	<property description="code_contact" 			name="CCONTACT"					column-name="CCONTACT" 					data-type="int" required="true"/>
+	<property description="utilisateur_createur" 	name="CUTILISATEUR_CREATION"	column-name="CUTILISATEUR_CREATION" 	data-type="string"/>
+	<property description="motif_reclamation" 		name="CMOTIF_RECLAMATION_C618"	column-name="CMOTIF_RECLAMATION_C618" 	data-type="short" required="true"/>
+	<property description="date_cloture" 			name="DCLOTURE"					column-name="DCLOTURE" 					data-type="timestamp"/>
+	<property description="utilisateur_cloture" 	name="CUTILISATEUR_CLOTURE"		column-name="CUTILISATEUR_CLOTURE" 		data-type="string"/>
+	<property description="montant_geste" 			name="MGESTE_COMMERCIAL"		column-name="MGESTE_COMMERCIAL" 		data-type="float"/>
+	<property description="code_coupon" 			name="LCOUPON"					column-name="LCOUPON" 					data-type="string"/>
+	<property description="date_emission" 			name="DCOUPON"					column-name="DCOUPON" 					data-type="timestamp"/>
+	<property description="flag_prevision_retour" 	name="FPREVISION_RETOUR"		column-name="FPREVISION_RETOUR" 		data-type="boolean"/>
+	<property description="commentaire_reclamation" name="LRECLAMATION"				column-name="LRECLAMATION" 				data-type="string"/>
+	<property description="date_creation" 			name="DCREATION"				column-name="DCREATION" 				data-type="timestamp" required="true" />
+	<property description="date_modification" 		name="DMODIFICATION"			column-name="DMODIFICATION" 			data-type="timestamp"/>
+	<property description="type_modification" 		name="TMODIFICATION"			column-name="TMODIFICATION" 			data-type="byte" required="true" />
+	<property description="date_transfert" 			name="DTRANSFERT"				column-name="DTRANSFERT" 				data-type="timestamp"/>
+	<property description="utilisateur_responsable" name="CUTILISATEUR_RESPONSABLE"	column-name="CUTILISATEUR_RESPONSABLE" data-type="string"/>
+	<property description="date_suivi" 				name="DSUIVI_RECLAMATION"		column-name="DSUIVI_RECLAMATION" 		data-type="timestamp"/>
+	<property description="type_cloture_auto" 		name="TYPE_CLOTURE_AUTO_C661"	column-name="TYPE_CLOTURE_AUTO_C661" 	data-type="short"/>
+	<property description="etat_reclamation" 		name="TETAT_RECLAMATION_C660"	column-name="TETAT_RECLAMATION_C660" 	data-type="short"/>
+	<property description="flag_cloture_si_expedition" name="FCLOTURE_SI_EXPEDITION" column-name="FCLOTURE_SI_EXPEDITION"  	data-type="boolean" />
+	<property description="type_colis_recus" 		name="TCOLIS_RECUS_C662"		column-name="TCOLIS_RECUS_C662" 		data-type="short"/>
+	<property description="nb_colis_recus" 			name="NB_COLIS_RECUS"			column-name="NB_COLIS_RECUS" 			data-type="int"/>
+	<property description="type_geste_commercial" 	name="TGESTE_COMMERCIAL_C665"	column-name="TGESTE_COMMERCIAL_C665" 	data-type="short"/>
+	<property description="reserves_client_emises" 	name="LRESERVE_CLIENT_EMISES"	column-name="LRESERVE_CLIENT_EMISES" 	data-type="string"/>
+	<property description="flag_cloture_si_validation" name="FCLOTURE_SI_VALIDATION" column-name="FCLOTURE_SI_VALIDATION" data-type="boolean"/>
+	<property description="type_emballage_recus" 	name="TEMBALLAGES_RECUS_C663"	column-name="TEMBALLAGES_RECUS_C663" 	data-type="short"/>
+	<property description="date_validite_coupon" 	name="DVALIDITE_COUPON"			column-name="DVALIDITE_COUPON" 			data-type="timestamp"/>
+	<property description="type_coupon" 			name="TCOUPON_C666"				column-name="TCOUPON_C666" 				data-type="short"/>
+	<property description="date_prise_en_charge"	name="DPRISE_EN_CHARGE"			column-name="DPRISE_EN_CHARGE" 			data-type="timestamp"/>
+	<property description="cvente" 					name="CVENTE"					column-name="CVENTE" 					data-type="long" required="true" />
+</table>
+<table name="SCD_CONTACT" type="multi" id-column-name="CRECLAMATION">
+	<property name="CONTACTS" column-name="CCONTACT" data-type="set" component-item-type="BO_SCD_CONTACT"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_REMBOURSEMENT_LIGNE">
+<table name="SCD_REMBOURSEMENT_LIGNE" type="primary" id-column-name="NLIGNE">
+	<property description="code_etab" 				name="CETAB"					column-name="CETAB" 				data-type="short"/>
+	<property description="code_remboursement"		name="CREMBOURSEMENT"			column-name="CREMBOURSEMENT" 		data-type="int"/>
+	<property description="numero_ligne" 			name="NLIGNE_RETOUR"			column-name="NLIGNE_RETOUR" 		data-type="int" />
+	<property description="cvente" 					name="CVENTE"					column-name="CVENTE" 				data-type="long" />
+	<property description="cvente_ligne" 			name="CVENTE_LIGNE"				column-name="CVENTE_LIGNE" 			data-type="int" />
+	<property description="code_article" 			name="CESCLAVE"					column-name="CESCLAVE" 				data-type="int" required="true" />
+	<property description="quantite_a_rembourser" 	name="QTE_A_REMBOURSER"			column-name="QTE_A_REMBOURSER" 		data-type="float" required="true" />
+	<property description="montant_PV_a_rembourser" name="MPV_A_REMBOURSER"			column-name="MPV_A_REMBOURSER" 		data-type="float" />
+	<property description="PFT_a_rembourser" 		name="PFT_A_REMBOURSER"			column-name="PFT_A_REMBOURSER"	 	data-type="float" />
+	<property description="PFL_a_rembourser" 		name="PFL_A_REMBOURSER"			column-name="PFL_A_REMBOURSER" 		data-type="float" />
+	<property description="motif_remboursement" 	name="CMOTIF_REMBOURSEMENT_C656" column-name="CMOTIF_REMBOURSEMENT_C656" data-type="short" />
+	<property description="nom_utilisateur" 		name="CUTILISATEUR"				column-name="CUTILISATEUR" 			data-type="string" />
+	<property description="date_creation" 			name="DCREATION"				column-name="DCREATION" 			data-type="timestamp" />
+	<property description="date_modification" 		name="DMODIFICATION"			column-name="DMODIFICATION" 		data-type="timestamp" />
+	<property description="type_modification" 		name="TMODIFICATION"			column-name="TMODIFICATION" 		data-type="byte" />
+	<property description="date_transfert" 			name="DTRANSFERT"				column-name="DTRANSFERT" 			data-type="timestamp" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_REMBOURSEMENT">
+<table name="SCD_REMBOURSEMENT" type="primary" id-column-name="CREMBOURSEMENT">
+	<property description="code_etab" 					name="CETAB"					column-name="CETAB" 					data-type="short"/>
+	<property description="cclient" 					name="CCLIENT"					column-name="CCLIENT" 					data-type="long" required="true" />
+	<property description="cvente" 						name="CVENTE"					column-name="CVENTE" 					data-type="long" required="true" />
+	<property description="code_reclamation" 			name="CRECLAMATION"				column-name="CRECLAMATION" 				data-type="int" />
+	<property description="code_retour" 				name="CRETOUR"					column-name="CRETOUR" 					data-type="int" />
+ 	<property description="data_demande_remboursement" 	name="DDEMANDE_REMBOURSEMENT" 	column-name="DDEMANDE_REMBOURSEMENT" 	data-type="timestamp" />
+	<property description="montant_demande" 			name="M_REMBOURSEMENT_DEMANDE"	column-name="M_REMBOURSEMENT_DEMANDE" 	data-type="float" />
+	<property description="date_remboursement" 			name="DREMBOURSEMENT"			column-name="DREMBOURSEMENT" 			data-type="timestamp" />
+	<property description="montant remboursement" 		name="M_REMBOURSEMENT_EFFECTIF"	column-name="M_REMBOURSEMENT_EFFECTIF" 	data-type="float" />
+	<property description="motif_remboursement" 		name="CMOTIF_REMBOURSEMENT_C635" column-name="CMOTIF_REMBOURSEMENT_C635" data-type="short" />
+	<property description="type_facture_avoir" 			name="TFACTURE_AVOIR_C600"		column-name="TFACTURE_AVOIR_C600" 		data-type="short" />
+	<property description="cfacture_avoir" 				name="CFACTURE_AVOIR"			column-name="CFACTURE_AVOIR" 			data-type="long" />
+	<property description="code_utilisateur"			name="CUTILISATEUR"				column-name="CUTILISATEUR" 				data-type="string" />
+    <property description="libelle_cheque" 				name="LCHEQUE"					column-name="LCHEQUE" 					data-type="string" />
+	<property description="utilisateur_remboursement" 	name="CUTILISATEUR_REMBOURSEMENT"	column-name="CUTILISATEUR_REMBOURSEMENT" data-type="string" />
+	<property description="date_integration_jdv" 		name="DINTEGRATION_JDV"			column-name="DINTEGRATION_JDV" 			data-type="timestamp" />
+	<property description="date_creation" 				name="DCREATION"				column-name="DCREATION" 				data-type="timestamp" />
+	<property description="date_modification" 			name="DMODIFICATION"			column-name="DMODIFICATION" 			data-type="timestamp" />
+	<property description="date_transfert" 				name="DTRANSFERT"				column-name="DTRANSFERT" 				data-type="timestamp" />
+	<property description="type_modification" 			name="TMODIFICATION"			column-name="TMODIFICATION" 			data-type="byte" />
+	<property description="mode_remboursement" 			name="CMODE_REMBOURSEMENT_C636" column-name="CMODE_REMBOURSEMENT_C636"	data-type="short" />
+	<property description="Libellé du remboursement"	name="LREMBOURSEMENT"			column-name="LREMBOURSEMENT"			data-type="string" />
+</table>
+<table name="SCD_REMBOURSEMENT_LIGNE" type="multi" id-column-name="CREMBOURSEMENT">
+	<property name="LIGNES" column-name="NLIGNE" data-type="set" component-item-type="BO_SCD_REMBOURSEMENT_LIGNE"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_RETOUR_LIGNE">
+<table name="SCD_RETOUR_LIGNE" type="primary" id-column-name="CLIGNE_RETOUR_ID">
+	<property description="NLIGNE" 					name="NLIGNE"					column-name="NLIGNE" 				data-type="int"/>
+	<property description="code_etab"				name="CETAB"					column-name="CETAB" 				data-type="short" required="true" />
+	<property description="code_prevision_retour" 	name="CRETOUR"					column-name="CRETOUR"				data-type="int"/>
+	<property description="code_article" 			name="CESCLAVE"					column-name="CESCLAVE" 				data-type="int" required="true"/>
+	<property description="PRMP" 					name="PRMP"						column-name="PRMP" 					data-type="float" required="true"/>
+	<property description="montant_PFE_ligne"		name="M_PFE_LIGNE"				column-name="M_PFE_LIGNE" 			data-type="float" />
+	<property description="quantite prevue_retour"	name="QPREVUE_RETOUR"			column-name="QPREVUE_RETOUR" 		data-type="float" />
+	<property description="quantite_a_relivrer" 	name="QARELIVRER"				column-name="QARELIVRER" 			data-type="float" />
+	<property description="quantite_a_rembourser" 	name="QAREMBOURSER"				column-name="QAREMBOURSER"			data-type="float" />
+	<property description="quantite_retournee" 		name="QRETOUR"					column-name="QRETOUR" 				data-type="float" />
+	<property description="quantite_a_reintegrer_stock" name="QAREINTEGRER_EN_STOCK" column-name="QAREINTEGRER_EN_STOCK" data-type="float" />
+	<property description="code_conformite" 		name="CCONFORMITE_C637"			column-name="CCONFORMITE_C637" 		data-type="short" />
+	<property description="quantite_demarque" 		name="QDEMARQUE"				column-name="QDEMARQUE" 			data-type="float" />
+	<property description="motif_retour_donne" 		name="CMOTIF_RETOUR_DONNE_C640"	column-name="CMOTIF_RETOUR_DONNE_C640" data-type="short" />
+	<property description="motif_retour_sur_bon"	name="CMOTIF_RETOUR_SUR_BON_C640" column-name="CMOTIF_RETOUR_SUR_BON_C640" data-type="short" />
+	<property description="quantite_livree" 		name="QLIVREE"					column-name="QLIVREE" 				data-type="float" />
+	<property description="commentaire_CRM"			name="LCOMMENTAIRE_CRM"			column-name="LCOMMENTAIRE_CRM" 		data-type="string" />
+	<property description="commentaire_LOG"			name="LCOMMENTAIRE_LOG"			column-name="LCOMMENTAIRE_LOG" 		data-type="string" />
+	<property description="num_ordre_MVT"			name="NORDRE_MVT"				column-name="NORDRE_MVT" 			data-type="long" />
+	<property description="date_creation" 			name="DCREATION"				column-name="DCREATION" 			data-type="timestamp" required="true"/>
+	<property description="date_modification"		name="DMODIFICATION"			column-name="DMODIFICATION" 		data-type="timestamp" />
+	<property description="type_modification"		name="TMODIFICATION"			column-name="TMODIFICATION" 		data-type="byte" required="true"/>
+	<property description="date_transfert"			name="DTRANSFERT"				column-name="DTRANSFERT" 			data-type="timestamp" />
+	<property description="quantite_SAV"			name="QSAV"						column-name="QSAV" 					data-type="float" />
+	<property description="quantite_sans_retour"	name="QSANS_RETOUR"				column-name="QSANS_RETOUR" 			data-type="float" />
+	<property description="flag_PFL_a_rembourser" 	name="FPFL_A_REMBOURSER"		column-name="FPFL_A_REMBOURSER" 	data-type="boolean" />
+	<property description="flag_PFT_a_rembourser" 	name="FPFT_A_REMBOURSER"		column-name="FPFT_A_REMBOURSER" 	data-type="boolean" />
+	<property description="quantite_litige_transport" name="QLITIGE_TRANSPORT"		column-name="QLITIGE_TRANSPORT" 	data-type="float" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_VENTE_LIGNE">
+<table name="SCD_VENTE_LIGNE" type="primary" id-column-name="CVENTE_LIGNE">
+	<property description="cvente"							name="CVENTE"						column-name="CVENTE" 						data-type="long"/>
+	<property description="code_etab" 						name="CETAB"						column-name="CETAB" 						data-type="short" required="true"/>
+	<property description="type_facture_avoir" 				name="TFACTURE_AVOIR_C400"			column-name="TFACTURE_AVOIR_C400" 			data-type="short" />
+	<property description="cfacture_avoir" 					name="CFACTURE_AVOIR"				column-name="CFACTURE_AVOIR" 				data-type="long" />
+	<property description="CLIGNE ?" 						name="CLIGNE"						column-name="CLIGNE" 						data-type="int" />
+	<property description="code_article" 					name="CESCLAVE"						column-name="CESCLAVE" 						data-type="int" />
+	<property description="quantite_commandee_initiale" 	name="QUNITE_VENTE"					column-name="QUNITE_VENTE" 					data-type="float" />
+	<property description="delai_expedition_annonce" 		name="DELAI_EXPEDITION_ANNONCE" 	column-name="DELAI_EXPEDITION_ANNONCE" 		data-type="int" />
+	<property description="date_premiere_expedition_reelle" name="DPREMIERE_EXPEDITION_REELLE" 	column-name="DPREMIERE_EXPEDITION_REELLE" 	data-type="timestamp" />
+	<property description="numero_ligne_initiale" 			name="NLIGNE_INITIALE"				column-name="NLIGNE_INITIALE" 				data-type="int" />
+	<property description="pv_initial" 						name="PV_INITIAL"					column-name="PV_INITIAL" 					data-type="float" />
+	<property description="poids_site" 						name="MMASSE"						column-name="MMASSE" 						data-type="long" />
+	<property description="poids_PFL" 						name="MMASSE_PFL"					column-name="MMASSE_PFL" 					data-type="float" />
+	<property description="poids_PFT" 						name="MMASSE_PFT"					column-name="MMASSE_PFT" 					data-type="float" />
+	<property description="PFL_initiale" 					name="PFL_INITIALE"					column-name="PFL_INITIALE" 					data-type="float" />
+	<property description="flag_exoneration_PFT" 			name="FEXONERATION_PFT"				column-name="FEXONERATION_PFT" 				data-type="boolean" />
+	<property description="flag_exoneration_PFL" 			name="FEXONERATION_PFL"				column-name="FEXONERATION_PFL" 				data-type="boolean" />
+	<property description="PFT_initiale" 					name="PFT_INITIALE"					column-name="PFT_INITIALE" 					data-type="float" />
+	<property description="PFL_a_payer" 					name="PFL_A_PAYER"					column-name="PFL_A_PAYER" 					data-type="float" />
+	<property description="PFT_a_payer" 					name="PFT_A_PAYER"					column-name="PFT_A_PAYER" 					data-type="float" />
+	<property description="code_motif_ligne" 				name="CMOTIF_LIGNE_C652"			column-name="CMOTIF_LIGNE_C652" 			data-type="short" />
+	<property description="date_creation" 					name="DCREATION"					column-name="DCREATION" 					data-type="timestamp" />
+	<property description="date_modification" 				name="DMODIFICATION"				column-name="DMODIFICATION" 				data-type="timestamp" />
+	<property description="type_modification" 				name="TMODIFICATION"				column-name="TMODIFICATION" 				data-type="byte" />
+	<property description="date_transfert" 					name="DTRANSFERT"					column-name="DTRANSFERT" 					data-type="timestamp" />
+	<property description="etat_appro_ligne" 				name="CETAT_APPRO_C667"				column-name="CETAT_APPRO_C667" 				data-type="short" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_RETOUR">
+<table name="SCD_RETOUR" type="primary" id-column-name="CRETOUR">
+	<property description="code_etab" 					name="CETAB"					column-name="CETAB" 				data-type="short"/>
+	<property description="code_reclamation" 			name="CRECLAMATION"				column-name="CRECLAMATION" 			data-type="int" />
+	<property description="cclient" 					name="CCLIENT"					column-name="CCLIENT" 				data-type="long" />
+	<property description="cvente" 						name="CVENTE"					column-name="CVENTE" 				data-type="long" />
+	<property description="montant_a_rembourser" 		name="M_AREMBOURSER"			column-name="M_AREMBOURSER" 		data-type="float" />
+	<property description="montant_PFE_a_rembourser" 	name="M_PFE_A_REMBOURSER"		column-name="M_PFE_A_REMBOURSER" 	data-type="float" />
+	<property description="flag_enlevement_a_realiser" 	name="FENLEVEMENT_A_ORGANISER" 	column-name="FENLEVEMENT_A_ORGANISER" data-type="boolean" />
+	<property description="date_mandat_transporteur" 	name="DMANDAT_AU_TRANSPORTEUR"	column-name="DMANDAT_AU_TRANSPORTEUR" data-type="timestamp" />
+	<property description="type_gestion"				name="TGESTION"					column-name="TGESTION" 				data-type="byte" />
+	<property description="code_transporteur_mandate"	name="CTRANSPORTEUR_MANDATE"	column-name="CTRANSPORTEUR_MANDATE" data-type="int" />
+	<property description="code_type_livreur"			name="CTYPE_LIVREUR_C007"		column-name="CTYPE_LIVREUR_C007" 	data-type="short" />
+	<property description="nom_personne_ayant_mandate" 	name="LNOM_PERSONNE_AYANT_MANDATE" column-name="LNOM_PERSONNE_AYANT_MANDATE" data-type="string" />
+	<property description="flag_colissimo_a_anvoyer" 	name="FCOLISSIMO_A_ENVOYER"		column-name="FCOLISSIMO_A_ENVOYER" 	data-type="boolean" />
+	<property description="num_colissimo_envoye"		name="NCOLISSIMO_ENVOYE"		column-name="NCOLISSIMO_ENVOYE" 	data-type="string" />
+	<property description="commentaire" 				name="LCOMMENTAIRE"				column-name="LCOMMENTAIRE" 			data-type="string" />
+	<property description="commentaire_au_transporteur" name="LCOMMENTAIRE_AU_TRANSPORTEUR" column-name="LCOMMENTAIRE_AU_TRANSPORTEUR" data-type="string" />
+	<property description="libelle_colisage" 			name="LCOLISAGE"				column-name="LCOLISAGE" 			data-type="string" />
+	<property description="date_retrait_souhaite"		name="DRETRAIT_SOUHAITEE"		column-name="DRETRAIT_SOUHAITEE" 	data-type="timestamp" />
+	<property description="poids_estime" 				name="MMASSE_ESTIMEE"			column-name="MMASSE_ESTIMEE" 		data-type="float" />
+	<property description="date_retour_marchandise" 	name="DRETOUR_MARCHANDISE"		column-name="DRETOUR_MARCHANDISE" 	data-type="timestamp" />
+	<property description="date_validation_retour"		name="DVALIDATION_RETOUR"		column-name="DVALIDATION_RETOUR" 	data-type="timestamp" />
+	<property description="date_refus_retour"			name="DREFUS_RETOUR"			column-name="DREFUS_RETOUR" 		data-type="timestamp" />
+	<property description="date_envoi_mail_prev_retour" name="DENVOI_MAIL_PREV_RETOUR" 	column-name="DENVOI_MAIL_PREV_RETOUR" data-type="timestamp" />
+	<property description="date_creation" 				name="DCREATION"				column-name="DCREATION" 			data-type="timestamp" required="true" />
+	<property description="date_modification" 			name="DMODIFICATION"			column-name="DMODIFICATION" 		data-type="timestamp" />
+	<property description="type_modification" 			name="TMODIFICATION"			column-name="TMODIFICATION" 		data-type="byte" required="true" />
+	<property description="date_transfert" 				name="DTRANSFERT"				column-name="DTRANSFERT" 			data-type="timestamp" />
+	<property description="num_relivraison_creee"		name="NRELIVRAISON_CREEE"		column-name="NRELIVRAISON_CREEE" 	data-type="int" />
+	<property description="type_facture_avoir"			name="TFACTURE_AVOIR_C600"		column-name="TFACTURE_AVOIR_C600" 	data-type="short" />
+	<property description="cfacture_avoir" 				name="CFACTURE_AVOIR"			column-name="CFACTURE_AVOIR" 		data-type="long" />
+	<property description="flag_anticipe_action"		name="FANTICIPE_ACTION"			column-name="FANTICIPE_ACTION" 		data-type="boolean"/>
+</table>
+<table name="SCD_RETOUR_LIGNE" type="multi" id-column-name="CRETOUR">
+	<property name="LIGNES" column-name="CLIGNE_RETOUR_ID" data-type="set" component-item-type="BO_SCD_RETOUR_LIGNE"/>
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_VTE_VENTE">
+<table name="VTE_VENTE" type="primary" id-column-name="CVENTE">
+	<property description="code_etab" 				name="CETAB"					column-name="CETAB" 					data-type="short" required="true" />
+	<property description="cclient" 				name="CCLIENT"					column-name="CCLIENT" 					data-type="long" required="true" />
+	<property description="code_devis"				name="CDEVIS"					column-name="CDEVIS" 					data-type="int" />
+	<property description="nom_utilisateur"			name="CUTILISATEUR"				column-name="CUTILISATEUR" 				data-type="string" required="true" />
+	<property description="date_vente"				name="DVENTE"					column-name="DVENTE" 					data-type="timestamp" />
+	<property description="commentaire"				name="LVENTE_COMP"				column-name="LVENTE_COMP" 				data-type="string" />
+	<property description="situtation"				name="TSITUATION_C104"			column-name="TSITUATION_C104" 			data-type="short" />
+	<property description="commentaire_suspend" 	name="LSUSPENDU"				column-name="LSUSPENDU" 				data-type="string" />
+	<property description="acompte_prevu" 			name="M_ACOMPTE_VERSE_PREVU"	column-name="M_ACOMPTE_VERSE_PREVU" 	data-type="float" />
+	<property description="acompte_reel" 			name="M_ACOMPTE_VERSE_REEL"		column-name="M_ACOMPTE_VERSE_REEL" 		data-type="float" />
+	<property description="date_cloture"			name="DCLOTURE"					column-name="DCLOTURE" 					data-type="timestamp" />
+	<property description="dat_mise_a_jour"			name="DMAJ"						column-name="DMAJ" 						data-type="timestamp" />
+	<property description="flag_pose" 				name="FPOSE"					column-name="FPOSE" 					data-type="boolean" />
+	<property description="poids_site"				name="MMASSE"					column-name="MMASSE" 					data-type="long" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_TYPE_LISTE_LANGUE">
+<table name="TYPE_LISTE_LANGUE" type="primary" id-column-name="ID">
+	<property name="CLISTE"			column-name="CLISTE"        	data-type="short" required="true" />
+	<property name="CLISTE_DETAIL"	column-name="CLISTE_DETAIL" 	data-type="short" required="true" />
+	<property name="CLANGUE"		column-name="CLANGUE" 		 	data-type="string" required="true" />
+	<property name="LLISTE_DETAIL"	column-name="LLISTE_DETAIL" 	data-type="string" required="true" />
+	<property name="DCREATION"		column-name="DCREATION" 	  	data-type="timestamp" required="true" />
+	<property name="DMODIFICATION"	column-name="DMODIFICATION" 	data-type="timestamp" />
+	<property name="TMODIFICATION"	column-name="TMODIFICATION" 	data-type="byte" required="true" />
+    	<property name="DTRANSFERT"	column-name="DTRANSFERT"        data-type="timestamp" />
+	<property name="CMNEMO_LISTE_DETAIL"	column-name="CMNEMO_LISTE_DETAIL" data-type="string" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_RESERVATION_ARTICLE">
+<table name="RESERVATION_ARTICLE" type="primary" id-column-name="CIDENTIFIANT2_RESERVATION">
+	<property name="CETAB"			column-name="CETAB" 		data-type="short" 	required="true" />
+	<property name="CNATURE"		column-name="CNATURE" 	    data-type="short"   required="true" />
+	<property name="CARTICLE"		column-name="CARTICLE"		data-type="int" 	required="true" />
+	<property name="DMVTSTOCK"		column-name="DMVTSTOCK" 	data-type="timestamp" 	required="true" />
+	<property name="QQTE"			column-name="QQTE" 			data-type="float" 	required="true" />
+	<property name="DFIN"			column-name="DFIN" 	    	data-type="timestamp"   />
+	<property name="PDEVALUATION"	column-name="PDEVALUATION"	data-type="float" 	/>
+	<property name="DMODIFICATION"	column-name="DMODIFICATION" data-type="timestamp" 	required="true" />
+	<property name="TMODIFICATION"	column-name="TMODIFICATION" 	data-type="int" 	/>
+	<property name="DTRANSFERT_ODS"	column-name="DTRANSFERT_ODS" 	data-type="timestamp"  />
+	<property name="CORIGINE_RESERVATION_C610"	column-name="CORIGINE_RESERVATION_C610" data-type="short"   />
+	<property name="CIDENTIFIANT1_RESERVATION"	column-name="CIDENTIFIANT1_RESERVATION"	data-type="int"  />
+
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_VTE_VENTE_LIGNE">
+<table name="VTE_VENTE_LIGNE" type="primary" id-column-name="CVENTE_LIGNE">
+	<property description="cvente"					name="CVENTE"					column-name="CVENTE" 					data-type="long"/>
+	<property description="code_etab"				name="CETAB"					column-name="CETAB" 					data-type="short" required="true"/>
+	<property description="code_article"			name="CESCLAVE"					column-name="CESCLAVE" 					data-type="int" required="true" />
+	<property description="cenlevement"				name="CENLEVEMENT"				column-name="CENLEVEMENT" 				data-type="int" />
+	<property description="utilisateur_createur"	name="CUTILISATEUR_CREATION"	column-name="CUTILISATEUR_CREATION" 	data-type="string" required="true" />
+	<property description="utilisateur_modification" name="CUTILISATEUR_MODIF"		column-name="CUTILISATEUR_MODIF" 		data-type="string" />
+	<property description="dimension_1"				name="QDIM1_SAISI"				column-name="QDIM1_SAISI" 				data-type="float" />
+	<property description="dimension_2"				name="QDIM2_SAISI"				column-name="QDIM2_SAISI" 				data-type="float" />
+	<property description="dimension_3"				name="QDIM3_SAISI"				column-name="QDIM3_SAISI" 				data-type="float" />
+	<property description="quantite_a_livrer"		name="QTE_SAISI"				column-name="QTE_SAISI" 				data-type="float" />
+	<property description="stock_dispo"		  		name="STOCK_DISPO"				column-name="STOCK_DISPO" 				data-type="float" />
+	<property description="prix_vente_fichier"	  	name="M_PV_FICHIER"				column-name="M_PV_FICHIER" 				data-type="float" />
+	<property description="prix_vente"		  		name="M_PV_SAISI"				column-name="M_PV_SAISI" 				data-type="float" />
+	<property description="type_remise"		  		name="TREMISE_C102"				column-name="TREMISE_C102" 				data-type="short" />
+	<property description="prix_remise"		  		name="M_REMISE"					column-name="M_REMISE" 					data-type="float" />
+	<property description="pourcentage_remise"	  	name="PREMISE"					column-name="PREMISE" 					data-type="float" />
+	<property description="PRMP"			  		name="M_PRMP"					column-name="M_PRMP" 					data-type="float" />
+	<property description="lib_article_comp"        name="LARTICLE_COMP"			column-name="LARTICLE_COMP" 			data-type="string" />
+	<property description="date_expedition_prevue"  name="DDISPO_PREVU"				column-name="DDISPO_PREVU" 				data-type="timestamp" />
+	<property description="quantite_sortie_reelle"  name="QTE_SORTIE_REEL"			column-name="QTE_SORTIE_REEL" 			data-type="float" />
+	<property description="flag_cde_fournisseur"    name="FCDE_FOUR"				column-name="FCDE_FOUR" 				data-type="boolean" />
+	<property description="flag_commande_speciale" 	name="FCDE_SPEC"				column-name="FCDE_SPEC" 				data-type="boolean" />
+	<property description="flag_bon_preparation" 	name="FBON_PREPA"				column-name="FBON_PREPA" 				data-type="boolean" />
+	<property description="situation"				name="TSITUATION_C104"			column-name="TSITUATION_C104" 			data-type="short" />
+	<property description="date_mise_a_jour"		name="DMAJ"						column-name="DMAJ" 						data-type="timestamp" />
+	<property description="code_fournisseur"		name="CFOUR"					column-name="CFOUR" 					data-type="int" />
+	<property description="ref_fournisseur"			name="LREFFOUR"					column-name="LREFFOUR" 					data-type="string" />
+	<property description="code_ticket"				name="CTICKET"					column-name="CTICKET" 					data-type="int" />
+	<property description="date_journee_vente"		name="DJOURNEE_VENTE"			column-name="DJOURNEE_VENTE" 			data-type="timestamp" />
+	<property description="code_alveole"			name="CALVEOLE"					column-name="CALVEOLE" 					data-type="short" />
+	<property description="quantite_alveole"		name="QTE_ALVEOLE"				column-name="QTE_ALVEOLE" 				data-type="float" />
+	<property description="date_mvt_alveole"		name="DMVT_ALVEOLE"				column-name="DMVT_ALVEOLE" 				data-type="timestamp" />
+	<property description="nombre_colis"			name="NB_COLIS"					column-name="NB_COLIS" 					data-type="byte" />
+	<property description="poids_site"				name="MMASSE"					column-name="MMASSE" 					data-type="long" />
+	<property description="flag_HN_PFE"				name="FHORS_NORMES_PFE"			column-name="FHORS_NORMES_PFE"  		data-type="boolean" />
+	<property description="flag_exo_PFE" 			name="FEXONERATION_PFE"			column-name="FEXONERATION_PFE" 			data-type="boolean" />
+</table>
+<table name="SCD_VENTE_LIGNE" type="auxiliary" id-column-name="CVENTE_LIGNE">
+	<property name="QUNITE_VENTE"/>
+	<property name="CMOTIF_LIGNE_C652"/>
+	<property name="PFT_A_PAYER"/>
+	<property name="PFL_A_PAYER"/>
+	<property name="CETAT_APPRO_C667"/>
+</table>
+<table name="RESERVATION_ARTICLE" type="auxiliary" id-column-name="CIDENTIFIANT2_RESERVATION">
+	<property name="QQTE" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_VTE_ENLEVEMENT">
+<table name="VTE_ENLEVEMENT" type="primary" id-column-name="CENLEVEMENT">
+	<property description="cvente" 					name="CVENTE"					column-name="CVENTE" 					data-type="long" required="true" />
+	<property description="code_etab" 				name="CETAB"					column-name="CETAB" 					data-type="short" required="true"/>
+	<property description="cclient" 				name="CCLIENT"					column-name="CCLIENT" 					data-type="long" />
+	<property description="code_utilisateur"		name="CUTILISATEUR"				column-name="CUTILISATEUR" 				data-type="string" required="true" />
+	<property description="date_sortie_prevue"		name="DSORTIE_PREVU"			column-name="DSORTIE_PREVU" 			data-type="timestamp" />
+	<property description="date_sortie_reelle"		name="DSORTIE_REEL"				column-name="DSORTIE_REEL" 				data-type="timestamp" />
+	<property description="acompte_repris_prevu"	name="M_ACOMPTE_REPRIS_PREVU"	column-name="M_ACOMPTE_REPRIS_PREVU" 	data-type="float" />
+	<property description="acompte_repris_reel"		name="M_ACOMPTE_REPRIS_REEL"	column-name="M_ACOMPTE_REPRIS_REEL" 	data-type="float" />
+	<property description="libelle_enlevement"		name="LENLEVEMENT_COMP"			column-name="LENLEVEMENT_COMP" 			data-type="string" />
+	<property description="type_enlevement"			name="TENLEVEMENT_C105"			column-name="TENLEVEMENT_C105" 			data-type="short" />
+	<property description="type_livraison"			name="TLIVRAISON_C006"			column-name="TLIVRAISON_C006" 			data-type="short" />
+	<property description="flag_enlevement_prepare" name="FENLEVEMENT_PREPARE"		column-name="FENLEVEMENT_PREPARE" 		data-type="boolean" />
+	<property description="nb_palette"				name="NB_PALETTE"				column-name="NB_PALETTE" 				data-type="float" />
+	<property description="code_adresse"			name="CADRESSE"					column-name="CADRESSE" 					data-type="int" />
+	<property description="code_secteur_livraison"	name="CSECTEUR_LIVRAISON"		column-name="CSECTEUR_LIVRAISON" 		data-type="int" />
+	<property description="code_jour"				name="CJOUR"					column-name="CJOUR" 					data-type="byte" />
+	<property description="code_plage"				name="CPLAGE"					column-name="CPLAGE" 					data-type="int" />
+	<property description="date_mise_a_jour"		name="DMAJ"						column-name="DMAJ" 						data-type="timestamp" />
+	<property description="code_st_deporte"			name="CST_DEPORTE"				column-name="CST_DEPORTE" 				data-type="short" />
+	<property description="code_retour"				name="CRETOUR"					column-name="CRETOUR" 					data-type="int" />
+	<property description="date_validation"			name="DVALIDATION"				column-name="DVALIDATION" 				data-type="timestamp" />
+	<property description="utilisateur_validation"	name="CUTILISATEUR_VALIDATION"	column-name="CUTILISATEUR_VALIDATION" 	data-type="string" />
+	<property description="utilisateur_creation"	name="CUTILISATEUR_CREATION"	column-name="CUTILISATEUR_CREATION" 	data-type="string" />
+	<property description="MAX_delai_annonce"		name="MAX_DELAI_ANNONCE"		column-name="MAX_DELAI_ANNONCE" 		data-type="int" />
+	<property description="date_limite_annoncee"	name="DATE_LIMITE_ANNONCEE"		column-name="DATE_LIMITE_ANNONCEE" 		data-type="timestamp" />
+	<property description="date_confirmee"			name="DCONFIRMEE"				column-name="DCONFIRMEE" 				data-type="timestamp" />
+	<property description="utilisateur_confiramtion" name="CUTILISATEUR_CONFIRMATION" column-name="CUTILISATEUR_CONFIRMATION" data-type="string" />
+	<property description="type_OL"					name="CTYPE_OL_C650"			column-name="CTYPE_OL_C650" 			data-type="short" />
+	<property description="code_expedition"			name="CEXPEDITION_C657"			column-name="CEXPEDITION_C657" 			data-type="short" />
+	<property description="code_fournisseur"		name="CFOUR"					column-name="CFOUR" 					data-type="int" />
+	<property description="date_envoi_preparation"	name="DATE_ENVOI_PREPA"			column-name="DATE_ENVOI_PREPA" 			data-type="timestamp" />
+	<property description="etat_OL"					name="CETAT_OL_C651"			column-name="CETAT_OL_C651" 			data-type="short" />
+	<property description="OL_origine"				name="ORIGINE_OL"				column-name="ORIGINE_OL" 				data-type="int" />
+	<property description="enlevement_origine"		name="ENLEVEMENT_D_ORIGINE"		column-name="ENLEVEMENT_D_ORIGINE" 		data-type="long" />
+	<property description="date_expedition_prevue"	name="DDISPO_PREVU"				column-name="DDISPO_PREVU" 				data-type="timestamp" />
+	<property description="num_rattachement_precommande" name="NRATTACHEMENT_PRECOMMANDE" column-name="NRATTACHEMENT_PRECOMMANDE" data-type="int" />
+	<property description="date_expedition_reelle"	name="DATE_EXPEDITION_REELLE"	column-name="DATE_EXPEDITION_REELLE" 	data-type="timestamp" />
+	<property description="transporteur"			name="TRANSPORTEUR"				column-name="TRANSPORTEUR" 				data-type="string" />
+	<property description="num_colis_transporteur" 	name="NCOLIS_TRANSPORTEUR"		column-name="NCOLIS_TRANSPORTEUR" 		data-type="string" />
+	<property description="url_transporteur"		name="URL_TRANSPORTEUR"			column-name="URL_TRANSPORTEUR" 			data-type="string" />
+	<property description="date_TDV"				name="DENVOI_JDV"				column-name="DENVOI_JDV" 				data-type="timestamp" />
+	<property description="date_suspend"			name="DSUSPEND"					column-name="DSUSPEND" 					data-type="timestamp" />
+	<property description="motif_suspend"			name="CMOTIF_SUSPEND"			column-name="CMOTIF_SUSPEND" 			data-type="byte" />
+	<property description="utilisateur_suspend"		name="CUTILISATEUR_SUSPEND"		column-name="CUTILISATEUR_SUSPEND" 		data-type="string" />
+	<property description="nb_colis"				name="NBR_COLIS"				column-name="NBR_COLIS" 				data-type="int" />
+	<property description="nom_prenom_livraison"	name="LNOM_LIVRAISON"			column-name="LNOM_LIVRAISON" 			data-type="string" />
+	<property description="adresse_1_livraison"		name="LADRESSE_1_LIVRAISON"		column-name="LADRESSE_1_LIVRAISON" 		data-type="string" />
+	<property description="adresse_2_livraison" 	name="LADRESSE_2_LIVRAISON"		column-name="LADRESSE_2_LIVRAISON" 		data-type="string" />
+	<property description="adresse_3_livraison" 	name="LADRESSE_3_LIVRAISON"		column-name="LADRESSE_3_LIVRAISON" 		data-type="string" />
+	<property description="code_pays_livraison"		name="CPAYS_LIVRAISON"			column-name="CPAYS_LIVRAISON" 			data-type="byte" />
+	<property description="code_postal_livraison"	name="CODE_POSTAL_LIVRAISON"	column-name="CODE_POSTAL_LIVRAISON" 	data-type="int" />
+	<property description="date_modification"		name="DMODIFICATION"			column-name="DMODIFICATION" 			data-type="timestamp" />
+	<property description="num_tel_livraison"		name="NTEL_LIVRAISON"			column-name="NTEL_LIVRAISON" 			data-type="string" />
+</table>
+<table name="VTE_VENTE_LIGNE" type="multi" id-column-name="CENLEVEMENT">
+	<property name="VTE_LIGNES" column-name="CVENTE_LIGNE" data-type="set" component-item-type="BO_VTE_VENTE_LIGNE"/>
+</table>
+<table name="SCD_FACTURE_AVOIR" type="auxiliary" id-column-name="CENLEVEMENT">
+	<property name="CFACTURE_AVOIR" />
+</table>
+</item-descriptor>
+
+<item-descriptor name="BO_SCD_VENTE_WEB">
+<table name="SCD_VENTE_WEB" type="primary" id-column-name="CVENTE">
+	<property description="NCOMMANDE_CLIENT" 				name="NCOMMANDE_CLIENT"				column-name="NCOMMANDE_CLIENT" 			data-type="string"/>
+	<property description="code_etab" 						name="CETAB"						column-name="CETAB" 					data-type="short"/>
+	<property description="code_client_web" 				name="CCLIENT_WEB"					column-name="CCLIENT_WEB" 				data-type="string" required="true" />
+	<property description="code_adresse_facture" 			name="CADRESSE_FACTURE"				column-name="CADRESSE_FACTURE" 			data-type="int" required="true" />
+	<property description="cclient_livraison" 				name="CCLIENT_LIVRAISON"			column-name="CCLIENT_LIVRAISON" 		data-type="long" />
+	<property description="code_adresse_livraison" 			name="CADRESSE_LIVRAISON"			column-name="CADRESSE_LIVRAISON" 		data-type="int" />
+	<property description="mode_paiement" 					name="CMODE_PAIEMENT_C607"			column-name="CMODE_PAIEMENT_C607" 		data-type="short" required="true" />
+	<property description="mode_livraison" 					name="CMODE_LIVRAISON_C609"			column-name="CMODE_LIVRAISON_C609" 		data-type="short" required="true" />
+	<property description="code_transaction_bancaire" 		name="CTRANSACTION_BANCAIRE"		column-name="CTRANSACTION_BANCAIRE" 	data-type="string" />
+	<property description="date_limite_autorisation" 		name="DLIMITE_AUTORISATION"			column-name="DLIMITE_AUTORISATION" 		data-type="timestamp" />
+	<property description="etat_commande"					name="TETAT_COMMANDE_C602"			column-name="TETAT_COMMANDE_C602" 		data-type="short" required="true" />
+	<property description="date_envoi" 						name="DENVOI"						column-name="DENVOI" 					data-type="timestamp" />
+	<property description="date_expedition" 				name="DEXPEDITION"					column-name="DEXPEDITION" 				data-type="timestamp" />
+	<property description="date_envoi_JDV" 					name="DENVOI_JDV"					column-name="DENVOI_JDV" 				data-type="timestamp" />
+	<property description="date_paiement" 					name="DPAIEMENT"					column-name="DPAIEMENT" 				data-type="timestamp" />
+	<property description="date_suppression" 				name="DSUPPRESSION"					column-name="DSUPPRESSION" 				data-type="timestamp" />
+	<property description="code_devise"						name="CDEVISE"						column-name="CDEVISE" 					data-type="int" required="true" />
+	<property description="montant_total_HT"				name="MTOTAL_HT"					column-name="MTOTAL_HT" 				data-type="float" required="true" />
+	<property description="montant_total_TVA" 				name="MTOTAL_TVA"					column-name="MTOTAL_TVA" 				data-type="float" required="true" />
+	<property description="montant_total_TTC" 				name="MTOTAL_TTC"					column-name="MTOTAL_TTC" 				data-type="float" required="true" />
+	<property description="flag_cadeau" 					name="FCADEAU"						column-name="FCADEAU" 					data-type="boolean" required="true"/>
+	<property description="code_utilisateur"				name="CUTILISATEUR"					column-name="CUTILISATEUR" 				data-type="string" />
+	<property description="nb_lignes_hors_norme" 			name="NB_LIGNES_HORS_NORME"			column-name="NB_LIGNES_HORS_NORME" 		data-type="int" required="true" />
+	<property description="nb_lignes_LDF" 					name="NB_LIGNES_LDF"				column-name="NB_LIGNES_LDF" 			data-type="int" required="true" />
+	<property description="type_controle_email"				name="TCONTROLE_EMAIL_C611"			column-name="TCONTROLE_EMAIL_C611" 		data-type="short" />
+	<property description="commentaire_cadeau" 				name="LCOMMENTAIRE_CADEAU"			column-name="LCOMMENTAIRE_CADEAU" 		data-type="string" />
+	<property description="commentaire" 					name="LCOMMENTAIRE"					column-name="LCOMMENTAIRE" 				data-type="string" />
+	<property description="date_creation"					name="DCREATION"					column-name="DCREATION" 				data-type="timestamp" required="true" />
+	<property description="date_modification" 				name="DMODIFICATION"				column-name="DMODIFICATION" 			data-type="timestamp" />
+	<property description="type_modification" 				name="TMODIFICATION"				column-name="TMODIFICATION" 			data-type="int" />
+	<property description="date_transfert" 					name="DTRANSFERT"					column-name="DTRANSFERT" 				data-type="timestamp" />
+	<property description="date_envoi_ldf" 					name="DENVOI_LDF"					column-name="DENVOI_LDF" 				data-type="timestamp" />
+	<property description="code_tel_livraison" 				name="CTEL_LIVRAISON"				column-name="CTEL_LIVRAISON" 			data-type="int" />
+	<property description="montant_transaction_bancaire" 	name="M_TRANSACTION_BANCAIRE"		column-name="M_TRANSACTION_BANCAIRE" 	data-type="float" />
+	<property description="reference_bancaire" 				name="LREFERENCE_BANCAIRE"			column-name="LREFERENCE_BANCAIRE" 		data-type="string" />
+	<property description="certificat_bancaire" 			name="LCERTIFICAT_BANCAIRE"			column-name="LCERTIFICAT_BANCAIRE" 		data-type="string" />
+	<property description="date_transaction_bancaire" 		name="DTRANSACTION_BANCAIRE"		column-name="DTRANSACTION_BANCAIRE" 	data-type="timestamp" />
+	<property description="libelle_code_cheque" 			name="LCODE_CHEQUE"					column-name="LCODE_CHEQUE" 				data-type="string" />
+	<property description="libelle_banque_cheque" 			name="LBANQUE_CHEQUE"				column-name="LBANQUE_CHEQUE" 			data-type="string" />
+	<property description="montant_valeur_cheque"			name="M_VALEUR_CHEQUE"				column-name="M_VALEUR_CHEQUE" 			data-type="float" />
+	<property description="code_carte_atout"				name="CCARTE_ATOUT"					column-name="CCARTE_ATOUT" 				data-type="long" />
+	<property description="date_fin_validite_atout"			name="DFIN_VALIDITE_ATOUT"			column-name="DFIN_VALIDITE_ATOUT" 		data-type="timestamp" />
+	<property description="code_option_paiement_atout" 		name="COPTION_PAIEMENT_ATOUT_C613" 	column-name="COPTION_PAIEMENT_ATOUT_C613" data-type="short" />
+	<property description="montant_remise"					name="M_REMISE"						column-name="M_REMISE" 					data-type="float" />
+	<property description="libelle_coupon"					name="LCOUPON"						column-name="LCOUPON" 					data-type="string" />
+	<property description="commentaire_transporteur" 		name="LCOMMENTAIRE_TRANSPORT"		column-name="LCOMMENTAIRE_TRANSPORT" 	data-type="string" />
+	<property description="nom_transporteur" 				name="LNOM_TRANSPORTEUR"			column-name="LNOM_TRANSPORTEUR" 		data-type="string" />
+	<property description="reference_transporteur" 			name="LREFERENCE_TRANSPORTEUR"		column-name="LREFERENCE_TRANSPORTEUR" 	data-type="string" />
+	<property description="code_transporteur"  				name="CTRANSPORTEUR"				column-name="CTRANSPORTEUR" 			data-type="string" />
+	<property description="libelle_bon_livraison" 			name="LBON_LIVRAISON"				column-name="LBON_LIVRAISON" 			data-type="string" />
+	<property description="poids_site" 						name="MMASSE"						column-name="MMASSE" 					data-type="int" />
+	<property description="libelle_colis" 					name="LCOLIS"						column-name="LCOLIS" 					data-type="string" />
+	<property description="date_validation"					name="DVALIDATION"					column-name="DVALIDATION" 				data-type="timestamp" />
+	<property description="type_vente"						name="TVENTE_C638"					column-name="TVENTE_C638" 				data-type="short" />
+	<property description="code_vente_origine" 				name="CVENTE_ORIGINE"				column-name="CVENTE_ORIGINE" 			data-type="long" />
+	<property description="code_motif_suppression"			name="CMOTIF_SUPPRESSION_C642"		column-name="CMOTIF_SUPPRESSION_C642" 	data-type="short" />
+	<property description="montant_paiement_atout" 			name="M_PAIEMENT_ATOUT"				column-name="M_PAIEMENT_ATOUT" 			data-type="float" />
+	<property description="code_vague" 						name="CVAGUE"						column-name="CVAGUE" 					data-type="int" />
+	<property description="code_lieu_expedition" 			name="CLIEU_EXPEDITION"				column-name="CLIEU_EXPEDITION" 			data-type="short" />
+	<property description="date_debut_preparation" 			name="DDEBUT_PREPARATION"			column-name="DDEBUT_PREPARATION" 		data-type="timestamp" />
+	<property description="date_fin_preparation" 			name="DFIN_PREPARATION"				column-name="DFIN_PREPARATION" 			data-type="timestamp" />
+	<property description="utilisateur_preparation"		 	name="CUTILISATEUR_PREPARATION"		column-name="CUTILISATEUR_PREPARATION" 	data-type="string" />
+	<property description="date_livraison_calculee" 		name="DLIVRAISON_CALCULEE"			column-name="DLIVRAISON_CALCULEE" 		data-type="timestamp" />
+	<property description="date_livraison_prevue" 			name="DLIVRAISON_PREVUE"			column-name="DLIVRAISON_PREVUE" 		data-type="timestamp" />
+	<property description="date_controle" 					name="DCONTROLE"					column-name="DCONTROLE" 				data-type="timestamp" />
+	<property description="type_validation"					name="TVALIDATION_C643"				column-name="TVALIDATION_C643" 			data-type="short" />
+	<property description="date_suspend" 					name="DSUSPEND"						column-name="DSUSPEND" 					data-type="timestamp" />
+	<property description="motif_suspend" 					name="CMOTIF_SUSPEND_C653"			column-name="CMOTIF_SUSPEND_C653" 		data-type="short" />
+	<property description="montant_remise_initiale" 		name="MREMISE_INITIALE"				column-name="MREMISE_INITIALE" 			data-type="float" />
+	<property description="total_PFE_payee" 				name="MPFE_PAYEE"					column-name="MPFE_PAYEE" 				data-type="float" />
+	<property description="total_PFT_payee"					name="MPFT_PAYEE"					column-name="MPFT_PAYEE" 				data-type="float" />
+	<property description="total_PFE" 						name="TOTAL_PFE"					column-name="TOTAL_PFE" 				data-type="float" />
+	<property description="total_PFT"						name="TOTAL_PFT"					column-name="TOTAL_PFT" 				data-type="float" />
+	<property description="date_expedition_differee" 		name="DEXPEDITION_DIFFEREE"			column-name="DEXPEDITION_DIFFEREE" 		data-type="timestamp" />
+	<property description="utilisateur_suspend" 			name="CUTILISATEUR_SUSPEND"			column-name="CUTILISATEUR_SUSPEND" 		data-type="string" />
+	<property description="utilisateur_suppression" 		name="CUTILISATEUR_SUPPRESSION"		column-name="CUTILISATEUR_SUPPRESSION" 	data-type="string" />
+	<property description="utilisateur_validation" 			name="CUTILISATEUR_VALIDATION"		column-name="CUTILISATEUR_VALIDATION" 	data-type="string" />
+	<property description="utilisateur_expedition_differee" name="CUTILISATEUR_EXPE_DIFFEREE" 	column-name="CUTILISATEUR_EXPE_DIFFEREE" data-type="string" />
+	<property description="traceur_web" 					name="CTRACEUR_WEB"					column-name="CTRACEUR_WEB" 				data-type="string" />
+	<property description="date_transfert_fo" 				name="DTRANSFERT_FO"				column-name="DTRANSFERT_FO" 			data-type="timestamp" />
+</table>
+<table name="VTE_ENLEVEMENT" type="multi" id-column-name="CVENTE">
+	<property name="OLS" column-name="CENLEVEMENT" data-type="set" component-item-type="BO_VTE_ENLEVEMENT"/>
+</table>
+<table name="SCD_RETOUR" type="multi" id-column-name="CVENTE">
+	<property name="RETOURS" column-name="CRETOUR" data-type="set" component-item-type="BO_SCD_RETOUR"/>
+</table>
+<table name="SCD_REMBOURSEMENT" type="multi" id-column-name="CVENTE">
+	<property name="REMBOURSEMENTS" column-name="CREMBOURSEMENT" data-type="set" component-item-type="BO_SCD_REMBOURSEMENT"/>
+</table>
+<table name="SCD_RECLAMATION" type="multi" id-column-name="CVENTE">
+	<property name="RECLAMATIONS" column-name="CRECLAMATION" data-type="set" component-item-type="BO_SCD_RECLAMATION"/>
+</table>
+</item-descriptor>
+
+</gsa-template>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/callCenter/castoramaCommon/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/callCenter/castoramaCommon/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/callCenter/castoramaFO/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/callCenter/castoramaFO/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/cast/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cast/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/cast/Production/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cast/Production/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/cast/Versioned/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cast/Versioned/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/castMerchandising/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castMerchandising/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearch/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearch/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearch/Production/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearch/Production/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearch/Versioned/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearch/Versioned/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearchAdmin/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castSearchAdmin/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/castStore/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castStore/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/castSVS/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castWS/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/castWS/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/env/auxserver/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/env/auxserver/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/env/ca/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/env/ca/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/env/callCenter/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/env/callCenter/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/env/commerce/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/env/commerce/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/env/integration/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/env/integration/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/env/iphone/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/env/ws/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/env/ws/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/integrations/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/integrations/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/iPhone/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iPhone/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/iPhoneStore/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/iPhoneStore/config" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/templates/module/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/templates/module/config" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="ATGLIBRARY" level="project" />
+  </component>
+</module>

@@ -1,0 +1,31 @@
+<p>
+  <strong><fmt:message key="email.confirmation.faq.title"/></strong>
+</p>
+<p>
+  <fmt:message key="email.confirmation.faq.content">
+    <fmt:param>
+      <a href="${httpLink}/contactUs/faq.jsp"><font face="Arial" color="#09438b">
+        <fmt:message key="email.link.faq"/>
+      </font></a>
+    </fmt:param>
+    <fmt:param>
+      <a href="${httpLink }/user/clientSpaceHome.jsp"><font face="Arial" color="#09438b">
+        <fmt:message key="email.link.clientspace"/>
+      </font></a>
+    </fmt:param>
+  </fmt:message>
+</p>
+
+<ul>
+  <li>
+    <fmt:message key="email.confirmation.faq.contact.us.site">
+      <fmt:param>
+        <a href="${httpLink }/user/clientSpaceHome.jsp"><font face="Arial" color="#09438b">
+          <fmt:message key="email.link.clientspace"/>
+        </font></a>
+      </fmt:param>
+    </fmt:message>
+  </li>
+  <li><fmt:message key="email.confirmation.faq.contact.us.phone"/></li>
+  <li><fmt:message key="email.confirmation.faq.contact.us.post"/></li>
+</ul> 

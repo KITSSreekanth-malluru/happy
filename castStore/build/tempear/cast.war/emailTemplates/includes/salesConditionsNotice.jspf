@@ -1,0 +1,17 @@
+<tr>
+  <td align="center">
+    <font size="2" face="Arial" color="#323232">
+      <br/>
+      <fmt:message key="email.confirmation.common.general.conditions">
+        <fmt:param>
+          <a href="${httpLink}/contactUs/legal-notice.jsp">
+            <font face="Arial" color="#09438b"><fmt:message key="email.link.click.here.hyphen"/></font>
+          </a>
+        </fmt:param>
+      </fmt:message>
+      <br/>
+      <br/>
+      <br/>
+    </font>
+  </td>
+</tr>

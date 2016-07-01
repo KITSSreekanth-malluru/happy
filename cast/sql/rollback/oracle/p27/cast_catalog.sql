@@ -1,0 +1,13 @@
+ALTER TABLE cast_grouped_product DROP COLUMN IMPLANTA_MESSAGE;
+
+ALTER TABLE casto_category DROP COLUMN custom_page_link;
+ALTER TABLE casto_category DROP COLUMN products_number_content;
+ALTER TABLE casto_category DROP COLUMN subcategories_content;
+
+ALTER TABLE casto_sku DROP COLUMN CUSTOM_DELIVERY_TERM;
+ALTER TABLE casto_sku DROP COLUMN CD_START_DATE;
+ALTER TABLE casto_sku DROP COLUMN CD_END_DATE;
+
+ALTER TABLE CAST_CATALOGUE DROP COLUMN CATALOG_WRAP_ID;
+
+commit;

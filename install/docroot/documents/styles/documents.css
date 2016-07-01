@@ -1,0 +1,292 @@
+body {
+	margin: 0;
+	padding: 0; 
+	background : url(/documents/images/fond.jpg) repeat-y top center;
+	}
+
+	img{
+	border: 0;
+	}
+
+/****************************************************************/
+
+
+#global {
+	width: 990px; 
+	margin : 0px auto 0px auto;
+}
+
+#flash {
+	width: 990px; 
+	height : 270px;
+	margin : 10px 0px 10px 0px;
+}
+
+
+/****************************************************************/
+
+
+
+
+#apDiv1, #apDiv2, #apDiv3, #apDiv4, #apDiv5, #apDiv6, #apDiv7{
+	position:absolute;
+	top:109px;
+	visibility : hidden;
+	z-index:1;
+}
+
+
+#apDivLayoutProfil{
+	position:absolute;
+	top:10px;
+	left : 0px;
+	visibility : hidden;
+	z-index:1;
+}
+
+div.item {
+	float : left;
+	width : 151px;
+	height : 312px;
+}
+
+div.lotefiltre {
+	margin : 80px 5px 0px 15px;
+}
+
+
+p.visufiltre{
+	font-size : 11px;
+	font-family : arial;
+	display : none;
+	margin : 0px 0px 0px 0px;
+}
+
+p.visufiltre a{
+	color : #8c1630;
+	text-decoration : none;
+}
+
+
+
+
+
+/****************************************************************/
+
+
+
+p.art{
+	font-size : 11px;
+	font-family : arial;
+	margin : 25px 0px 0px 45px;
+	font-weight : bold;
+}
+
+p.cour{
+	font-size : 11px;
+	font-family : arial;
+	margin : 2px 0px 0px 45px;
+}
+
+p.pan a, p.art a, p.cour a{
+	color : #3c66ae;
+	text-decoration : none;
+}
+
+
+
+
+
+/****************************************************************/
+
+
+td.menu_liste_filtre {
+	font-size : 11px;
+	font-family : arial;
+	vertical-align : top;
+	text-align : left;
+}
+
+td.menu_liste_filtre p{
+	font-weight : bold;
+	margin : 0px 0px 0px 15px;
+}
+
+td.menu_liste_filtre ul{
+	margin : 0px 0px 10px 15px;	
+	padding : 0px 0px 0px 0px;
+}
+
+td.menu_liste_filtre ul li{
+	margin : 0px 0px 0px 0px;
+	padding : 0px 0px 0px 0px;
+	list-style : none;
+}
+
+td.menu_liste_filtre ul li.on {
+	display : none;
+	
+}
+
+td.menu_liste_filtre ul li a{
+	text-decoration : none;
+}
+
+td.menu_liste_filtre ul li.off a{
+	text-decoration : none;
+	color : black;
+	background : url(/documents/images/03A/uncheck.jpg) no-repeat center left;
+	padding-left : 20px;
+}
+
+td.menu_liste_filtre ul li.on a{
+	text-decoration : none;
+	color : #8c1731;
+	background : url(/documents/images/03A/check.jpg) no-repeat center left;
+	padding-left : 20px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+div.caroussel{
+	width : 990px;
+	height : 176px;
+}
+
+
+
+/****************************************************************/
+
+p.prixFirst{
+	margin : 65px 20px 38px 0px;
+	padding : 0px 0px 0px 0px;
+	font-family : arial;
+	font-weight : bold;
+	color : #88112f;
+	text-align : right;
+	font-size : 13px;
+}
+
+
+
+p.prix{
+	margin : 10px 20px 0px 0px;
+	padding : 0px 0px 0px 0px;
+	font-family : arial;
+	font-weight : bold;
+	color : #88112f;
+	text-align : right;
+	font-size : 13px;
+}
+
+
+p.foform{
+	margin : 10px 20px 0px 10px;
+	padding : 0px 0px 0px 0px;
+}
+
+
+
+
+p.prixTotal{
+	margin : 18px 20px 0px 0px;
+	padding : 0px 0px 0px 0px;
+	font-family : arial;
+	font-weight : bold;
+	color : #88112f;
+	text-align : right;
+	font-size : 18px;
+}
+
+
+
+
+
+
+
+
+p.formParFirst{
+	margin : 88px 20px 15px 320px;
+	padding : 0px 0px 0px 0px;
+}
+
+p.formPar{
+	margin : 8px 20px 0px 320px;
+	padding : 0px 0px 0px 0px;
+}
+p.formParSecond{
+	margin : 47px 20px 0px 320px;
+	padding : 0px 0px 0px 0px;
+}
+
+p.formParSecond2{
+	margin : 49px 20px 0px 320px;
+	padding : 0px 0px 0px 0px;
+}
+
+p.formParTroise{
+	margin : 20px 20px 0px 320px;
+	padding : 0px 0px 0px 0px;
+}
+
+p.formParCheck1{
+	margin : 90px 20px 0px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+p.formParCheck{
+	margin : 0px 20px 0px 20px;
+	padding : 0px 0px 0px 0px;
+}
+
+
+p.formPar input, p.formParSecond input, p.formParSecond2 input, p.formParTroise input{
+	font-size : 10px;
+	width : 200px;
+}
+
+p.formPar input.moite{
+	
+	width : 100px;
+}
+
+p.formPar input.plouf{
+	width : 10px;
+}
+
+p.formParFirst input{
+	margin-right : 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<desktop bgcolor="0xFFFFFF" alpha="0" debug="1" minwidth="600" minheight="500">
+	<preloader source="initial_preload.swf" bgcolor="0xFFFFFF" bgalpha="100" mintime="10" animation="page_loader.swf"/>
+	<catalog id="1" left="0" top="0" right="0" bottom="0" bgcolor="0xFFFFFF" alpha="0" pagespath="data/" res="res/" lang="fr">	
+		<javascriptdata js="updatedata" />
+		<_tracker source="TrackerGoogleV5.swf" config="trackerGoogle.xml"/>
+		<_basket file="basket.viewer.swf" conector="conector.swf" refresh="7" addtocart="http://aaaaaaaaaaaa/addtocart.aspx" infocart="http://aaaaaaaaaaaa/getcartcount.aspx" _targets="shop|fav"/>
+		<disablebackground bgcolor="0x000000" bgalpha="30"/>
+		<videoconfig>
+			<videostyle id="id1" playerSkin="videoskin1.swf" />
+		</videoconfig>		
+		<windowstyles>
+			<windowstyle id="annotation" bgcolor="0xFEFF81" bgalpha="100" imgbg="bg_postit.swf" rect="14|25|216|206"/>
+			<windowstyle id="panelgeneral" bgcolor="0xffffff" bgalpha="100" imgbg="bg_panel_general.png" rect="22|53|15|31"/>
+			<windowstyle id="panelmap" bgcolor="0x737D8A" bgalpha="100" imgbg="bg_panel_map.swf" rect="20|26|27|20"/>
+			<windowstyle id="alttext" bgcolor="0xffffe1" bgalpha="100" imgbg="bg_alttext.png" rect="8|8|43|10"/>
+			<windowstyle id="alert" bgcolor="0xffffff" bgalpha="100" imgbg="bg_alertmanager.png" rect="15|11|260|97" />
+			<windowstyle id="diaporamathumb" bgalpha="100" imgbg="bg_diaporama_thumbs.png" bgcolor="0x7a90a5" rect="3|3|3|3" />
+			<windowstyle id="diaporamathumb_on" bgalpha="100" imgbg="bg_diaporama_thumbs_on.png" bgcolor="0xacb9bf" rect="3|3|3|3" />
+			<windowstyle id="pdfselection" bgalpha="0" imgbg="bg_pdfselection_thumbs.png" bgcolor="0x5b5b5b" rect="3|3|3|3" />
+		</windowstyles>
+		<alertstyles>
+			<alertstyle type="alert" windowstyle="alert">
+				<textfield left="-17" top="20" w="300" h="80" font="verdana" textsize="11" textcolor="0x000000" textalign="center" border="false" />
+				<xbutton position="BC" left="0" top="0" right="20" bottom="15" src="alert_continue.png" event="alert.yes"/>
+			</alertstyle>
+			<alertstyle type="confirm" windowstyle="alert">
+				<textfield left="-17" top="25" w="300" h="20" font="verdana" textsize="11" textcolor="0x000000" textalign="center" />
+				<xbutton position="BC" left="-47" top="0" right="0" bottom="16" src="alert_yes.png" event="alert.yes"/>
+				<xbutton position="BC" left="6" top="0" right="0" bottom="16" src="alert_no.png" event="alert.no"/>
+				
+			</alertstyle>
+		</alertstyles>
+		<optionstyles >
+			<optionstyle id="option01" imgbg="optionset01.png" rect="0|0|19|19"/>
+		</optionstyles>
+		<sliderstyles>
+			<sliderstyle id="sliderV01" imgbg="slider_v01.png" coords="15|27|34|121"/>
+		</sliderstyles>
+		<textformatmanager />
+		<background left="0" top="0" right="0" bottom="0" bgcolor="0xFFFFFF" alpha="0">
+			<_image  left="0" top="0" right="0" bottom="0" src="page0.png" position="TL"/>
+		</background>
+		<backgroundtop left="0" top="0" right="0" bottom="0" bgcolor="0xFF0000" alpha="0">			
+			<image  left="0" top="0" right="0" bottom="0" src="background.png" position="TL"/>
+		</backgroundtop>
+		<thumbs width="90" height="130" bgcolor="0xFF55585E" />
+		<doublepage  left="307" top="70" right="27" bottom="70" bgcolor="0x55585E" pagesrcwidth="786" pagesrcheight="1138" blocflip="2"><!--  mousewheel="0" -->
+			<doublepageclick type="2" action="zoompagesimple" />
+			<disablebackground bgcolor="0x000000" bgalpha="20"/>
+			<pages startpage="1" firstpage="1" lastpage="16" offsetpage="0" loadcookie="1"/>
+			<flip flipcornerzone="50" flipspeed="20" ratiox="0.5" ratioy="0.3" deceleration="1.5"/>
+			<gradient alpharight="20" alphaleft="10" ratio="50"/>
+			<doublepagenumleft _position="BL" left="0" top="0" right="0" bottom="0" font="verdana" textsize="9" textcolor="0x000000" textalignleft="center" textalignright="center" verticalposition="bottom" anchor="desktop"/>
+			<doublepagenumright _position="BR" left="0" top="0" right="0" bottom="0" font="verdana" textsize="9" textcolor="0x000000" textalignleft="center" textalignright="center" verticalposition="bottom" anchor="desktop"/>	
+			<doublepageshadow imgbg="page_shadow.png" rect="12|12|741|941" alpha="100"/>
+			<flipshadow imgbg="page_shadow.png" rect="12|12|741|941" alpha="100"/>
+			<image position="CC" left="0" top="0" right="4" bottom="0" width="95" src="pagefirst.swf" page="first" autohide="1"/>
+		</doublepage>
+		<xbutton tradid="x-" position="TR" left="0" top="0" right="20" bottom="0" src="x-.png" event="desktop.screennormalbrowser" />			
+		<xbutton tradid="x+" position="TR" left="0" top="0" right="0" bottom="0" src="x+.png" event="desktop.screenfullbrowser" />
+		<xbutton position="BR" left="0" top="0" right="-20" bottom="-20" src="progressbar.swf" anchor="doublepage" event="progressbar" noroll="1"/>
+		<menu position="TL" left="0" top="0" right="0" bottom="0" size="60" imgbg="menubar_bg.png">			
+			<xbutton position="TL" left="0" top="0" right="0" bottom="0" src="xbutton_logo.png" event="gotohomepage" internalevents="0"/>
+			<xbutton position="TL" left="162" top="641" right="0" bottom="0" src="xbutton_help.png" event="showhelp"/>
+			<xbutton position="TL" left="16" top="340" right="0" bottom="0" src="xbutton_lecture_simple.png" event="zoomlist"/>			
+			<xbutton position="TL" left="92" top="641" right="0" bottom="0" src="bars.png" noroll="1"/>
+			<xbutton position="TL" left="16" top="188" right="0" bottom="0" src="xbutton_gotopage.png" event="gotopage" noroll="1">
+				<textfield left="16" top="29" width="80" height="16" font="verdana" textsize="10" textcolor="0x000000" textalign="center" _bgcolor="0x2B2C32" _linecolor="0xFFFFFF"/>
+			</xbutton>
+			<xbutton position="TL" left="16" top="264" right="0" bottom="0" src="xbutton_diaporama.png" event="diaporama"/>
+			<xbutton position="TL" left="16" top="111" right="0" bottom="0" src="xbutton_submenu.png" event="submenu" noroll="1">
+				<popupmenu id="01" position="TL" left="0" top="0" right="0" bottom="0" />
+			</xbutton>
+			<xbutton position="TL" left="16" top="416" right="0" bottom="0" src="xbutton_print.png" event="print.show"/>
+			<xbutton position="TL" left="16" top="492" right="0" bottom="0" src="xbutton_download.png" event="pdf.show"/>
+			<xbutton position="TL" left="16" top="568" right="0" bottom="0" src="xbutton_mailto.png" event="sendtofriend.show"/>
+			<xbutton position="TL" left="17" top="81" right="0" bottom="0" src="xbutton_historyp.png" event="history.back" tradid="historyprevious"/>
+			<xbutton position="TL" left="18" top="644" right="0" bottom="0" src="xbutton_newsletter.png" event="geturl" value="https://www.castorama.fr/store/html/identification/panier-login.jsp;jsessionid=3A3KYFZ2SAV4LQFI22LCFE4AVDTRKIV4?_requestid=2080260" tradid="newsletter"/>
+			<xbutton position="TL" left="100" top="644" right="0" bottom="0" src="xbutton_contact.png" event="geturl" value="http://www.castorama.fr/store/html/contact/contact-remarque-site.jsp" tradid="contact"/>
+		</menu>
+		
+		<xbutton position="BR" left="0" top="0" right="-2" bottom="0" src="btn_corner_BR.swf" anchor="doublepage" event="turnpagebottomright"/>
+		<xbutton position="BL" left="0" top="0" right="0" bottom="-1" src="btn_corner_BL.swf" anchor="doublepage" event="turnpagebottomleft"/>
+		<xbutton position="TR" left="0" top="0" right="-1" bottom="0" src="btn_corner_TR.swf" anchor="doublepage" event="turnpagetopright"/>
+		<xbutton position="TL" left="0" top="0" right="0" bottom="0" src="btn_corner_TL.swf" anchor="doublepage" event="turnpagetopleft"/>
+		
+		<xbutton position="BL" left="0" top="0" right="0" bottom="-40" src="xbutton_zoom_left.png" anchor="doublepage" event="zoompageleft"/>
+		<xbutton position="BR" left="0" top="0" right="0" bottom="-40" src="xbutton_zoom_right.png" anchor="doublepage" event="zoompageright"/>
+	
+
+
+		<xbutton position="CL" left="-25" top="0" right="0" bottom="0" src="xbutton_arrow_left.png" event="turnpagebottomleft" anchor="doublepage">
+			<doublethumbinfo  page="-2" left="-10" top="10" right="0" bottom="0" target="doublepage" position="TL"/>
+		</xbutton>
+
+
+		<xbutton position="CR" left="0" top="0" right="-25" bottom="0" src="xbutton_arrow_right.png" event="turnpagebottomright"  anchor="doublepage">
+			<doublethumbinfo  page="+2" left="0" top="10" right="-10" bottom="0" target="doublepage" position="TR"/>
+		</xbutton>
+		<annotation windowstyle="annotation" max="3" font="verdana" textsize="10" textcolor="0x000000" textalign="left" minwidth="200" minheight="200" maxwidth="389" maxheight="294" alerttype="confirm" alertid="alert.annotation.delete">
+			<xbutton position="TR" left="0" top="6" right="12" bottom="0" src="#close" event="window.close"/>
+			<_xbutton position="TR" left="0" top="6" right="27" bottom="0" src="#minimize" event="window.minimize"/>
+		</annotation>
+		<panelmap windowstyle="panelgeneral" optionstyle="option01" sliderstyle="sliderV01" width="800" height="600" minwidth="760" minheight="480">
+			<title font="verdana" textsize="10" textcolor="0xFFFFFF" textalign="left"/>
+			<panelmultilink left="0" top="0" right="0" bottom="0" bgcolor="0xFFFFFF" bgalpha="100"/>
+			<xbutton position="TR" left="6" top="6" right="12" bottom="0" src="#close" event="hidepanelmap" tradid="hidepanelmap"/>
+			<xbutton position="BL" left="29" top="0" right="0" bottom="15" src="xbutton_print.swf" event="panelmapurl"/>
+			<xbutton position="BL" left="150" top="0" right="0" bottom="15" src="xbutton_print.swf" event="panelmappdf"/>										
+			<xbutton position="BL" left="300" top="0" right="0" bottom="15" src="xbutton_print.swf" event="panelmapgoto"/>			
+			<xbutton position="BL" left="450" top="0" right="0" bottom="15" src="xbutton_print.swf" event="panelmapldc"/>				
+			<xbutton position="BL" left="600" top="0" right="0" bottom="15" src="xbutton_print.swf" event="panelmapall"/>			
+			<_panelzoomzoom left="0" top="0" right="0" bottom="0" bgcolor="0x737D8A" bgalpha="100"/>
+		</panelmap>
+		<panelgeneral windowstyle="panelgeneral" optionstyle="option01" sliderstyle="sliderV01" width="800" height="600" minwidth="640" minheight="480">
+			<title font="verdana" textsize="12" textcolor="0xFFFFFF" textalign="left"/>
+			<textformat font="verdana" textsize="12" textcolor="0xFF0000" textalign="left" />
+			<xbutton position="TR" left="0" top="0" right="4" bottom="0" src="xbutton_stf_close.png" event="hidepanelgeneral"/>
+			<xbutton position="TL" left="13" top="17" right="0" bottom="0" src="panel_p.swf" event="print.show"/>
+			<xbutton position="TL" left="151" top="17" right="0" bottom="0" src="panel_d.swf" event="pdf.show"/>
+			<!-- ##PRINTPANEL -->
+			<panelprint left="0" top="0" right="0" bottom="0" bgcolor="0x000000" bgalpha="0" excludepage="">
+				
+				<xbutton position="TL" left="5" top="20" right="0" bottom="0" src="panel/print/fr/left.png" event="print.panel.left.show"/>
+				<xbutton position="TL" left="5" top="45" right="0" bottom="0" src="panel/print/fr/right.png" event="print.panel.right.show"/>
+				<xbutton position="TL" left="5" top="70" right="0" bottom="0" src="panel/print/fr/double.png" event="print.panel.double.show"/>
+
+				<image position="TL" src="panel/panel_menu_bg.png" left="230" top="0" right="0" bottom="0" />
+
+				<printleft left="240" top="10" right="0" bottom="10" bgcolor="0xFFFFFF" bgalpha="100" alignement="TC|BC|CL|CR">
+					<xbutton position="BC" left="0" top="0" right="0" bottom="10" src="xbutton_pdf_print.png" event="print.print"/>
+					<textformat id="txtformat.optionlabel" font="verdana" textsize="12" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+					<printorientation textformat="txtformat.optionlabel" />
+				</printleft>
+				<printright left="240" top="10" right="0" bottom="10" bgcolor="0xFFFFFF" bgalpha="100" alignement="TC|BC|CL|CR">
+					<xbutton position="BC" left="0" top="0" right="0" bottom="10" src="xbutton_pdf_print.png" event="print.print"/>
+					<printorientation textformat="txtformat.optionlabel" />
+				</printright>
+				<printdoublepage left="240" top="10" right="0" bottom="10" bgcolor="0xFFFFFF" bgalpha="100" alignement="TC|BC|CL|CR">
+					<xbutton position="BC" left="0" top="0" right="0" bottom="10" src="xbutton_pdf_print.png" event="print.print" />
+					<printorientation textformat="txtformat.optionlabel" />
+				</printdoublepage>
+			</panelprint>
+			<!-- ##PDFPANEL -->
+			<panelpdf left="0" top="0" right="0" bottom="0" bgcolor="0x000000" bgalpha="0" excludepage="">
+				
+				<xbutton position="TL" left="5" top="20" right="0" bottom="0" src="panel/pdf/fr/left.png" event="pdf.panel.left.show" />
+				<xbutton position="TL" left="5" top="45" right="0" bottom="0" src="panel/pdf/fr/right.png" event="pdf.panel.right.show"/>
+				<xbutton position="TL" left="5" top="70" right="0" bottom="0" src="panel/pdf/fr/catalog.png" event="pdf.panel.catalog.show"/>
+				<xbutton position="TL" left="5" top="95" right="0" bottom="0" src="panel/pdf/fr/selection.png" event="pdf.panel.selection.show"/>
+
+				<image position="TL" src="panel/panel_menu_bg.png" left="230" top="0" right="0" bottom="0" />
+
+				<pdfleft left="230" top="0" right="0" bottom="0" bgcolor="0xff0000" bgalpha="0">
+					<thumb position="TC" left="0" top="15" right="0" bottom="0" w="320" />
+					<xbutton position="TC" left="10" top="490" right="0" bottom="0" src="xbutton_pdf_download.png" event="pdf.panel.left.download"/>
+					<pdfskin cornerimg="panel/pdf/skin/pdf_corner.png" logoimg="panel/pdf/skin/pdf_logo.png" left="20" />
+				</pdfleft>
+				<pdfright left="230" top="0" right="0" bottom="0" bgcolor="0xff0000" bgalpha="0">
+					<thumb position="TC" left="0" top="15" right="0" bottom="0" w="320" />
+					<xbutton position="TC" left="10" top="490" right="0" bottom="0" src="xbutton_pdf_download.png" event="pdf.panel.right.download"/>
+					<pdfskin cornerimg="panel/pdf/skin/pdf_corner.png" logoimg="panel/pdf/skin/pdf_logo.png" left="20" />
+				</pdfright>
+				<pdfcatalog left="230" top="0" right="0" bottom="0" bgcolor="0xff0000" bgalpha="0">
+					<thumb position="TC" left="0" top="15" right="0" bottom="0" w="310" file="catalogue.pdf" />
+					<textformat id="pdf.catalog.size" font="verdana" align="center" textsize="9" textstyle="italic" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+					<textfield position="TC" left="10" top="470" w="350" h="70" id="pdf.catalog.size" textformat="pdf.catalog.size" />
+					<xbutton position="TC" left="10" top="490" right="0" bottom="0" src="xbutton_pdf_download.png" event="pdf.panel.catalog.download"/>
+					<pdfskin cornerimg="panel/pdf/skin/pdf_corner.png" logoimg="panel/pdf/skin/pdf_logo.png" left="20" />
+				</pdfcatalog>
+				<pdfselection left="230" top="0" right="0" bottom="0" bgcolor="0xff0000" bgalpha="0" windowstyle="pdfselection" urlbase="http://www.interactifpdf.com/K7214.castorama.atout.guideaccueil.250309.16p/externals/pdfselection/buildpdf.php" alerttype="alert" alertid="alert.pdf.select.nopages">
+					<thumbslayer left="10" top="40" right="10" bottom="10" />
+					<textformat id="pdfselection.checkbox" font="verdana" textsize="10" align="center" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+					<thumb w="100" h="160" left="5" top="10" right="10" bottom="5" spacex="10" spacey="10" textformat="pdfselection.checkbox" />
+					<xbutton position="TR" left="0" top="7" right="7" bottom="0" src="xbutton_pdf_download.png" event="pdf.panel.selection.download" alerttype="alert" alertid="alert.pdf.select.nopages"/>
+					<xbutton position="TL" left="10" top="7" right="7" bottom="0" src="xbutton_pdf_selectall.png" event="pdf.panel.selection.selectall"/>
+					<xbutton position="TL" left="110" top="8" right="7" bottom="0" src="xbutton_pdf_selectnone.png" event="pdf.panel.selection.selectnone"/>
+					<pdfskin cornerimg="panel/pdf/skin/pdf_corner_selection.png" logoimg="panel/pdf/skin/pdf_logo_selection.png" left="10" />
+				</pdfselection>
+			</panelpdf>
+			<!-- ##SEARCHPANEL -->
+			<panelsearch left="0" top="0" right="0" bottom="0" bgcolor="0x000000" bgalpha="0" exitmode="0" showdescription="1">
+				<resultlayer left="10" top="60" right="10" bottom="20" />
+				<textformat id="txtformat.title" font="verdana" textsize="12" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.noresult" font="verdana" textsize="12" textcolor="0xFF0000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.option1" font="verdana" textsize="12" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.option2" font="verdana" textsize="12" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.input" font="verdana" textsize="12" textcolor="0x000000" selectable="true" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.search.title" font="verdana" textsize="12" bold="true" textcolor="0x000000" textcolorover="0xff0000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.search.title.hl" font="verdana" textsize="12" bold="true" textcolor="0xff0000" textcolorover="0xff0000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.search.textresult" font="verdana" textsize="12" textcolor="0x000000" align="left" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.search.textresult.hl" font="verdana" textsize="12" textcolor="0xFF0000" align="left" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<input left="10" top="10" />
+				<checkbox left="350" top="15" />
+				<xbutton position="TL" left="315" top="35" right="0" bottom="0" src="xbutton_reset_search.png" event="search.panel.reset"/>
+				<resultline>
+					<thumb left="0" top="0" right="0" bottom="0" spacex="10" tradid="search.panel.gotopage" />
+					<title left="110" top="0" right="5" bottom="0" textformat="txtformat.search.title|txtformat.search.title.hl" />
+					<textresult h="100" left="110" top="30" right="5" bottom="0" textformat="txtformat.search.textresult|txtformat.search.textresult.hl" />
+					<xbutton position="TL" left="125" top="90" right="7" bottom="0" src="panel/search/fr/gotopage.png" event="search.panel.gotopage" frames="2"/>
+					<xbutton position="TL" left="125" top="115" right="0" bottom="0" src="panel/search/fr/printpage.png" event="search.panel.printpage" frames="2"/>
+					<separator bgcolor="0xff0000" top="130" />
+				</resultline>
+			</panelsearch>
+			<!-- ##XTRASEARCHPANEL -->
+			<panelxtrasearch left="0" top="0" right="0" bottom="0" bgcolor="0x000000" bgalpha="0" exitmode="0">
+				<separator bgcolor="0xff0000" />
+				<textformat id="txtformat.title" font="verdana" textsize="12" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.noresult" font="verdana" textsize="12" textcolor="0xFF0000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.result" font="verdana" textsize="10" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />				
+				<textformat id="txtformat.option1" font="verdana" textsize="12" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.option2" font="verdana" textsize="12" textcolor="0x000000" selectable="false" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+				<textformat id="txtformat.input" font="verdana" textsize="12" textcolor="0x000000" selectable="true" wordwrap="true" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+			</panelxtrasearch>
+			<!-- ##LEXIC -->
+			<panellexic left="0" top="0" right="0" bottom="0" bgcolor="0xFF0000" bgalpha="0" exitmode="0" extralexic="0">
+				<menu defaultColour="0xFFFF00" overColour="0xFF0000" pressedColour="0x000000" txtDefaultColour="0x000000" txtOverColour="0xFFFFFF" txtPressedColour="0xFFFFFF" ></menu>
+			</panellexic>
+			<!-- ##ANNOTATIONSPANEL -->
+			<panelannotations left="0" top="0" right="0" bottom="0" bgcolor="0xFF0000" bgalpha="0" alerttype="alert" alertid="alert.noannotation">
+				<annotationslayer left="5" top="5" right="5" bottom="5" />
+				<annotationsline h="120" left="50" top="0" right="0" bottom="0" spacex="0" spacey="20">
+					<textformat id="anno.txtformat1" font="verdana" textsize="10" textcolor="0x737d8a" selectable="true" wordwrap="true" paddingleft="5" paddingtop="5" paddingright="5" paddingbottom="5" />
+					<textformat id="anno.txtformat2" font="verdana" textsize="10" textcolor="0x737d8a" textcolorover="0xffffff" align="center" wordwrap="false" paddingleft="0" paddingtop="0" paddingright="0" paddingbottom="0" />
+					<textformat id="anno.txtformat3" font="verdana" textsize="9" textcolor="0xff0000" textcolorover="0x000000" align="right" wordwrap="false" paddingleft="0" paddingtop="1" paddingright="15" paddingbottom="0" />
+					<thumbs left="10" top="0" right="0" bottom="0" spacex="0" spacey="0" />
+					<background textformat="anno.txtformat1" h="101" left="5" top="17" right="" bottom="0" spacex="0" spacey="0" source="bg_annotationline.png" bgcolor="0xfeff81" rect="4|4|2|2" />
+					<tab textformat="anno.txtformat2" source="panelanno_tab.swf" position="TL" left="220" top="0" right="0" bottom="0" spacex="2" spacey="0" />
+					<delete textformat="anno.txtformat3" id="panelanno.btn.delete" source="panelanno_delete.swf" position="BR" left="0" top="0" right="0" bottom="5" spacex="0" spacey="0" alerttype="confirm" alertid="alert.annotation.delete"/>
+				</annotationsline>
+			</panelannotations>
+		</panelgeneral>
+		<!-- ##DIAPORAMA -->
+		<diaporama left="280" top="10" right="10" bottom="10" bgcolor="0xFF0000" bgalpha="0" sliderstyle="sliderV01">
+			<textformat id="diaporama.pagenumbers" font="verdana" textsize="10" textcolor="0x000000" textcolorover="0x000000" align="center" />			
+			<diaporamathumb w="200" h="160" left="10" top="10" right="10" bottom="10" spacex="20" spacey="20" windowstyle="diaporamathumb" zoom="117" loading="diapo_thumb_loading.swf" duration="1" bordercolor="0x000000|0xFFFFFF" textformat="diaporama.pagenumbers" />
+			<marker src="btn_marker.swf" scale="75" position="TR" />
+			<xbutton position="TR" left="0" top="0" right="-5" bottom="0" src="xbutton_back.png" event="diaporama.close"/>
+		</diaporama>
+		<zoompage left="315" right="30" top="33" bottom="30" zoomfactor="83" slidespeed="500" clicktodrag="0"/>
+		<zoomlist left="290" right="35" top="30" bottom="30"  spacery="20" sliderstyle="sliderV01" ratiozoom="100" ratiozoommin="10" ratiozoommax="100" ratiozoomstep="10" selectioncolour="0x000000" selectcolour="0xFFFFFF">
+			<xbutton position="TR" left="0" top="-25" right="-30" bottom="0" src="xbutton_back.png" event="zoomlist.close"/>
+			<xbutton position="BL" left="5" top="0" right="0" bottom="-25" src="xbutton_zoomlist_zoomin.png" event="zoomlist.zoomin"/>
+			<xbutton position="BR" left="0" top="0" right="-30" bottom="-25" src="xbutton_zoomlist_zoomout.png" event="zoomlist.zoomout"/>
+			<doublethumbinfo  page="0" left="0" top="0" right="0" bottom="0" target="zoomlist" position="TR" delay="300"/>
+		</zoomlist>
+		<doublethumb left="10" right="10" top="10" bottom="10" bgcolor="0xFFFFFF" bgalpha="90"/>
+		<altmanager windowstyle="alttext" font="verdana" textsize="9" textcolor="0x000000" textalign="left"/>
+		<alertmanager windowstyle="alert" optionstyle="option01" font="verdana" textsize="9" textcolor="0x666666" textalign="left" width="291" height="121" minwidth="291" minheight="121" />
+		<infomanager autostart="0" windowstyle="panelgeneral" font="verdana" textsize="10" textcolor="0x002470" textalign="left" width="485" height="300" minwidth="485" minheight="300">
+			<xbutton position="TL" left="17" top="8" right="0" bottom="0" src="#title"/>
+			<xbutton position="TR" left="0" top="8" right="17" bottom="0" src="#close" event="window.close" tradid="hidepanelgeneral"/>				
+			<xbutton position="BL" left="29" top="0" right="0" bottom="15" src="#active" event="infos.active" noroll="1" tradid="infosactive">
+			<xlabel position="TL" left="40" top="5" right="0" bottom="0" tradid="infos.active.label" font="verdana" textsize="12" textcolor="0x5A7EB0"/>
+			</xbutton>
+			<xbutton position="BR" left="0" top="0" right="70" bottom="15" src="#previous" event="infos.previous" tradid="infosprevious"/>
+			<xbutton position="BR" left="0" top="0" right="35" bottom="15" src="#next" event="infos.next" tradid="infosnext"/>			
+		</infomanager>			
+		<markerbar>
+			<markerprev position="TL" left="0" right="0" direction="right" offset="23" anchor="doublepage" src="btn_marker.swf" tradid="markergo">
+				<doublethumbinfo  page="" left="-10" top="10" right="0" bottom="0" target="doublepage" position="TL"/>
+			</markerprev>
+			<markernext position="TR" left="0" right="4" direction="left" offset="23" anchor="doublepage" src="btn_marker.swf" tradid="markergo">
+				<doublethumbinfo  page="" left="0" top="10" right="-10" bottom="0" target="doublepage" position="TR"/>
+			</markernext>
+			<markercurrent position="TC" anchor="doublepage" src="btn_marker_current.swf" tradid="markeradd" _rangepage="1_30"/>
+		</markerbar>
+		<!-- ##STF -->
+		<sendtofriend bgimg="bgsendtofriend.png" urlbase="http://www.interactifpdf.com/K7214.castorama.atout.guideaccueil.250309.16p/externals/sendtofriend/index.php" >
+		    <textformat id="txtformat.stf.message" font="verdana" textsize="12" align="center" textcolor="0x000000" selectable="false" wordwrap="true" />
+			<textformat id="txtformat.stf.credits" font="verdana" textsize="9" align="left" textcolor="0x000000" selectable="false" wordwrap="true" />
+			<inputstyle w="217" h="19" border="1" bordercolor="0x8093b1" bgalpha="100" bgcolor="0xffffff" textcolor="0x000000" errorbordercolor="0xff0000" errortextcolor="0xff0000" labelwidth="120" labelposition="CL" labelcolor="0x000000" labelwordwrap="true"  _bold="true" textsize="10" font="arial" textalign="left" wordwrap="false" defaultvalue="false" shadowcolor="0x002470" />
+			<input left="385" top="82" id="input.firstname" validation="text" alerttype="alert" alertid="alert.stf.nofirstname" /> <!-- text, email, multiemail -->
+			<input left="385" top="106" id="input.lastname" validation="text" alerttype="alert" alertid="alert.stf.nolastname" />
+			<input left="385" top="130" id="input.from" validation="email" alerttype="alert" alertid="alert.stf.noemail" />
+			<input left="385" top="230" id="input.to" validation="multiemail" alerttype="alert" alertid="alert.stf.noemail" />
+			<input left="385" top="254" id="inpu1.to" validation="optional" alerttype="alert" alertid="alert.stf.noemail" />
+			<input left="385" top="278" id="inpu2.to" validation="optional" alerttype="alert" alertid="alert.stf.noemail" />
+			<input left="30" top="350" h="70" w="600" id="input.message" wordwrap="true" multiline="true"/>
+			<textfield left="25" top="428" w="600" h="46" id="stf.credits" textalign="left" textformat="txtformat.stf.credits"/>
+			<xbutton position="TR" left="0" top="0" right="7" bottom="0" src="xbutton_stf_close.png" event="sendtofriend.hide" />
+			<xbutton position="BR" left="0" top="20" right="33" bottom="30" src="xbutton_stf_submit.png" event="sendtofriend.submit" />
+			<image src="stf_img_message.png" left="37" top="321" />
+			<image src="stf_img_coord.png" left="264" top="61" />
+			<image src="stf_img_envoyer.png" left="265" top="205" />
+			<message left="180" top="240" w="450" h="60" textformat="txtformat.stf.message" />
+		</sendtofriend>
+		<help img="aide.png" />
+		<urlmanager/>
+		<gmapmanager/>
+		<highlightmanager color="0xFF0000" alpha="50" delayon="1000" delayoff="500" noanim="0"/>
+		<!-- <xbutton position="CL" left="0" top="0" right="0" bottom="0" src="highlightcontroler.swf" event="highlightcontroler"/> -->
+		<spritemanager/>
+		<zonemanager defaulttype="internal|url|zoom|goto|xurl|pdf|popup|ldc|multi" executeafterzoomout="goto" zoomclick="1" autozoomsize="0" ratiozoom="200" stepmax="5" zoomzoomborder="0" multizoom="0" autozoomin="0" autozoomout="1" delaystartborder="20" placeontop="1">
+			<mapicons src="mapicons.swf" />			
+			<iconposition pdf="BL" popup="BL" ldc="BR" multi="TR" url="TR" zoom="TL" xurl="BR" goto="BR" internal="BL"/>
+			<usemapalt>			
+				<url icons="url" />				
+			</usemapalt>
+			<iconvisibility defaultvisibility="zoom|goto|url|xurl|pdf|popup|ldc|multi|internal" zoomvisibility="zoom|goto|url|xurl|pdf|popup|ldc|multi|internal">
+				<goto defaultvisibility="" zoomvisibility="" />
+				<zoom defaultvisibility="" zoomvisibility="" />																												
+				<!-- <xurl defaultvisibility="" zoomvisibility="" /> -->
+			</iconvisibility>
+			<zoomzoom bgcolor="0x000000" bgalpha="0"/>
+			<zonestyle type="zoom" linewidth="1" linecolor="0xff0000" linealpha="100" bgcolor="0xc73032" bgalpha="40"/>
+			<zonestyle type="goto" linewidth="1" linecolor="0x0000FF" linealpha="100" bgcolor="0x0000FF" bgalpha="40"/>
+			<zonestyle type="url" linewidth="1" linecolor="0xFE7E29" linealpha="100" bgcolor="0xFE7E29" bgalpha="40"/>
+			<zonestyle type="multi" linewidth="1" linecolor="0x00FF00" linealpha="100" bgcolor="0x00FF00" bgalpha="40"/>		
+			<zonestyle type="internal" linewidth="1" linecolor="0xFF0000" linealpha="100" bgcolor="0xFF0000" bgalpha="40"/>									
+			<!-- <zonestyle type="xurl" linewidth="1" linecolor="0xFF0000" linealpha="0" bgcolor="0xFF0000" bgalpha="0"/> -->		
+			<action type="zoomzoom"/>
+		</zonemanager>
+		<stickermanager alwaysvisible="0" position="TC" resize="false">
+			<_sticker id="sticker01" src="sticker01.swf" alwaysvisible="0" position="TC" resize="false" />			
+			<_sticker id="sticker02" src="sticker02.swf" alwaysvisible="0" position="TC" resize="false" />			
+		</stickermanager>		
+		<refmanager defaulttype="url">
+			<reftype type="xurl">
+				<urlbase >##url</urlbase>
+			</reftype>
+		
+			<reftype type="url">
+				<urlbase mode="js" name="openArticle">##url</urlbase>
+			</reftype>
+			<reftype type="ldc" extraparams="" extension="" infosbase="http://www.xxxxxxxxxxxxxxxxxxxxxx.fr/aaaaaaa.aspx?produitId=">
+				<urlbase>http://www.xxxxxxxxxxxx.fr/##url</urlbase>
+			</reftype>
+			<reftype type="pdf">
+				<urlbase>data/##url</urlbase>
+			</reftype>
+			<reftype type="direct" infosbase="data/RefInfos##ID.xml">
+				<urlbase>##url</urlbase>
+			</reftype>
+		</refmanager>
+		<eprintshop>
+			<product file="eprintshop.product.swf"/>			
+		</eprintshop>
+		<popups>
+			<popup id="popup1" bgimg="formulaire_recommander.swf" modal="1" autostart="0" rangepage="0" _rangepage="1_3|6_10" autostartcount="2" />
+			<popup id="popup2" bgimg="formulaire_recommander.swf" modal="1" autostart="0" rangepage="0" _rangepage="1_3|6_10" autostartcount="2" />			
+			<popup id="popup10" bgimg="audio.swf" modal="1">
+				<src>data/audio/aaa.mp3</src>
+				<title>aaaaaa</title>
+			</popup>
+			<popup id="popup20" bgimg="video.swf" modal="1">
+				<src>data/video/aaa.flv</src>
+			</popup>
+		</popups>
+	</catalog>
+	<version id="v.5.0" revision="4124bc0a9335c27f086f24ba207a4912" />
+</desktop>

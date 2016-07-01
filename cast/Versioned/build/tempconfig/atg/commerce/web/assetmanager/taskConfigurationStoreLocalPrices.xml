@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE task-configuration
+        PUBLIC "-//Art Technology Group, Inc.//DTD Commerce Web Asset Manager//EN"
+        'http://www.atg.com/dtds/web/assetmanager/taskConfiguration_1.0.dtd'>
+
+<task-configuration>
+
+	<default-activity>
+		<tabs>
+			<tab id="browse">
+				<views>
+					<view-order xml-combine="append-without-matching">
+						<view-id>storeLocalPrices</view-id>
+					</view-order>
+					<view id="storeLocalPrices">
+						<resource-bundle>com.castorama.ui.MerchandisingResources</resource-bundle>
+						<display-name-resource>browseTab.view.storeLocalPrices</display-name-resource>
+						<page>/browse/list.jsp</page>
+						<configuration>/atg/commerce/web/assetmanager/StoreLocalPricesConfigsBrowseTabConfiguration</configuration>
+					</view>
+				</views>
+			</tab>
+			<tab id="search">
+				<views>
+					<view id="form">
+						<item-types xml-combine="append-without-matching">
+							<item-type>/com/castorama/commerce/pricing/repository/StoreLocalPricesRepository:priceList</item-type>
+						</item-types>
+					</view>
+				</views>
+			</tab>
+		</tabs>
+	</default-activity>
+
+	<task id="/Commerce/adminCommerceSearch.wdl">
+		<workflow-name>/Commerce/adminCommerceSearch.wdl</workflow-name>
+		<tabs>
+			<tab id="browse">
+				<views>
+					<view-order xml-combine="append-without-matching">
+						<view-id combine="remove">storeLocalPrices</view-id>
+					</view-order>
+				</views>
+			</tab>
+			<tab id="search">
+				<views>
+					<view id="form">
+						<item-types xml-combine="append-without-matching">
+							<item-type combine="remove">/com/castorama/commerce/pricing/repository/StoreLocalPricesRepository:priceList</item-type>
+						</item-types>
+					</view>
+				</views>
+			</tab>
+		</tabs>
+	</task>
+
+</task-configuration>

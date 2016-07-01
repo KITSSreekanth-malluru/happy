@@ -1,0 +1,7 @@
+ATG-Product: The Castorama front office Module
+Manifest-Version: 1.0
+ATG-Client-Class-Path: lib/classes.jar
+ATG-Class-Path: lib/classes.jar
+ATG-Config-Path: config/config.jar
+ATG-Required: commerce.castorama.cast.Production
+ATG-Web-Module: j2ee-apps/castoramaFO/callcenter.war

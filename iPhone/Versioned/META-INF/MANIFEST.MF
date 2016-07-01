@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+ATG-Product: Castorama store - Versioned Repository Extensions
+ATG-Config-Path: config/config.jar
+ATG-Required: @install_unit@.@module_root_parent@.castIphone commerce.castorama.cast.Versioned
+ATG-Class-Path: lib/classes.jar
+ATG-Client-Class-Path: lib/classes.jar
+
+Name: lib/classes.jar
+ATG-Client-Update-File: true
+

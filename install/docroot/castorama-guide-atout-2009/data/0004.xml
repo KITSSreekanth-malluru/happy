@@ -1,0 +1,23 @@
+<page>
+  <zone rec="107|122|562|424" id="13" layer="1" ratiozoom="300">
+    <id>1</id>
+  </zone>
+  <zone rec="404|834|321|208" id="15" layer="3" ratiozoom="300">
+    <id>3</id>
+  </zone>
+  <zone rec="62|1061|715|61" id="16" layer="4" ratiozoom="300">
+    <id>4</id>
+  </zone>
+  <zone rec="814|145|731|484" id="20" layer="5" ratiozoom="300">
+    <id>5</id>
+  </zone>
+  <zone rec="825|638|720|456" id="21" layer="6" ratiozoom="300">
+    <id>6</id>
+  </zone>
+  <zone rec="107|545|562|276" id="22" layer="7" ratiozoom="300">
+    <id>7</id>
+  </zone>
+  <zone rec="42|811|355|247" id="67" layer="2" ratiozoom="300">
+    <id>2</id>
+  </zone>
+</page>

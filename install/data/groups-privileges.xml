@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+        <add-item item-descriptor="group" id="10">
+            <set-property name="libelle">Admin_Habilitations_Utilisateurs</set-property>
+            <set-property name="dateCreation"><![CDATA[9/28/2009 10:00:00]]></set-property>
+            <set-property name="privileges" value="10"/>
+        </add-item>
+        <add-item item-descriptor="group" id="20">
+            <set-property name="libelle">TMA</set-property>
+            <set-property name="dateCreation"><![CDATA[9/28/2009 10:00:00]]></set-property>
+            <set-property name="privileges" value="20,100004"/>
+        </add-item>
+        <add-item item-descriptor="group" id="30">
+            <set-property name="libelle">Admin_OutilsCasto_Catalogue</set-property>
+            <set-property name="dateCreation"><![CDATA[9/28/2009 10:00:00]]></set-property>
+            <set-property name="privileges" value="30"/>
+        </add-item>
+        <add-item item-descriptor="group" id="40">
+            <set-property name="libelle">Admin_OutilsCasto_Promotions</set-property>
+            <set-property name="dateCreation"><![CDATA[9/28/2009 10:00:00]]></set-property>
+            <set-property name="privileges" value="40"/>
+        </add-item>
+        <add-item item-descriptor="group" id="100002">
+            <set-property name="libelle">Groupe des administrateurs front-office</set-property>
+            <set-property name="dateCreation"><![CDATA[9/28/2009 10:00:00]]></set-property>
+            <set-property name="privileges" value="100002,100004,100006,100008,100010"/>
+        </add-item>
+        <add-item item-descriptor="group" id="100003">
+            <set-property name="libelle">Groupe des comptes call center</set-property>
+            <set-property name="dateCreation"><![CDATA[9/28/2009 10:00:00]]></set-property>
+            <set-property name="privileges" value="100004,100010"/>
+        </add-item>
+        <!-- priviliges-->
+        <add-item item-descriptor="privilege" id="10">
+            <set-property name="libelle">user_manager_privilege</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="20">
+            <set-property name="libelle">informatique-privilege</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="30">
+            <set-property name="libelle">Admin_OutilsCasto_Catalogue</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="40">
+            <set-property name="libelle">Admin_OutilsCasto_Promotions</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="100002">
+            <set-property name="libelle">cheques-privilege</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="100004">
+            <set-property name="libelle">commerce-csr-orders-privilege</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="100006">
+            <set-property name="libelle">atout-privilege</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="100008">
+            <set-property name="libelle">validation-commandes-privilege</set-property>
+        </add-item>
+        <add-item item-descriptor="privilege" id="100010">
+            <set-property name="libelle">commerce-csr-profiles-privilege</set-property>
+        </add-item>
+    </import-items>
+</gsa-template>

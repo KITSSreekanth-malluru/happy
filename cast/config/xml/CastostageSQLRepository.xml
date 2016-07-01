@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+
+<gsa-template>
+
+	<item-descriptor name="STAGE" display-name="Casto Stages" display-property="nom" query-cache-size="10">
+	     <table name="CASTO_STAGE" type="primary" id-column-name="id">
+	     	<property name="id" data-type="int" column-name="id" display-name="Id"/>
+	     	<property name="nom" data-type="string" column-name="nom" display-name="Nom"/>
+	     	<property name="descriptif" data-type="string" column-name="descriptif" display-name="Descriptif"/>
+	     	<property name="dateStage" data-type="timestamp" column-name="datestage" display-name="Date"/>
+	     	<property name="horaires" data-type="string" column-name="horaires" display-name="Horaires"/>     	
+		    <property name="video_url" data-type="string" column-name="video_url" display-name="URL Video"/>
+		 </table>
+	</item-descriptor>
+
+</gsa-template>

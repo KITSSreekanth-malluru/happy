@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE imports SYSTEM "dynamosystemresource:/atg/dtds/gsa/multi_import_1.0.dtd">
+<imports>
+    <!-- Should be imported after file assets -->
+    <import repository="/atg/epub/PublishingRepository" filename="out-epub.xml"/>
+    <import repository="/atg/searchadmin/RefinementConfigRepository" filename="out-refine-configs.xml"/>
+</imports>

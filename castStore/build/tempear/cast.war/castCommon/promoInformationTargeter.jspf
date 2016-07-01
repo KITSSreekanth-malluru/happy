@@ -1,0 +1,135 @@
+<dsp:droplet name="IsEmpty">
+  <dsp:param name="value" param="promoInformation.image"/>
+  <dsp:oparam name="false">
+    <dsp:getvalueof var="videoUrl" param="promoInformation.videoUrl"/>
+    <dsp:getvalueof var="url" param="promoInformation.url"/>
+    <dsp:getvalueof var="image" param="promoInformation.image.url"/> 
+    <dsp:getvalueof var="title" param="promoInformation.title" />
+    <dsp:getvalueof var="wrapPage" param="promoInformation.wrapPage" />
+    
+    <dsp:getvalueof var="urlLink" param="url"/>
+    
+    <c:choose>
+      <c:when test="${not empty urlLink}">
+      	 <dsp:a href="${urlLink}" rel="nofollow" >
+        	<img src="${image}" width="${width}" height="${height}" alt="${title}" title="${title}"/>              
+         </dsp:a>
+      </c:when>
+      <c:when test="${not empty url}">
+        <dsp:droplet name="/com/castorama/droplet/WrapPageLinkDroplet">
+			<dsp:param name="id" param="promoInformation.repositoryId"/>
+			<dsp:param name="contextPath" value="${contextPath}"/>
+			<dsp:oparam name="output">
+				<dsp:getvalueof var="link" param="url"/>
+			</dsp:oparam>
+		</dsp:droplet>
+        <dsp:a href="${link}" rel="nofollow" >
+        	<img src="${image}" width="${width}" height="${height}" alt="${title}" title="${title}"/>              
+        </dsp:a>
+      </c:when>
+      <c:otherwise>
+        <c:choose>
+          <c:when test="${not empty videoUrl}">
+            <dsp:getvalueof var="paramToLoad" value="${contextPath}/castCatalog/includes/video_popup.jsp?url=${videoUrl}"/>
+            <a href="javascript:void(0)" onclick="showVideoPopup('product_video', '${paramToLoad}');" class="controlVideo">
+               <img src="${image}" width="${width}" height="${height}" alt="${title}" title="${title}"/>  
+            </a>
+            <div id="product_video" class="whitePopupContainer"></div>
+          </c:when>
+          <c:otherwise>
+            <img src="${image}" width="${width}" height="${height}" alt="${title}" title="${title}"/>
+          </c:otherwise>
+        </c:choose>
+      </c:otherwise>
+    </c:choose>
+  </dsp:oparam>
+  <dsp:oparam name="true">
+    <dsp:droplet name="IsEmpty">
+      <dsp:param name="value" param="promoInformation.flash"/>
+      <dsp:oparam name="false">
+        <dsp:getvalueof var="flash" param="promoInformation.flash"/>
+        <div id="${flashId}" class="homeBannersTop">
+        </div>
+        <script language="javascript">
+          $('#${flashId}').flash({
+            src: '${flash}',
+            width: '${width}',
+            height: '${height}',
+            wmode: 'opaque'
+          });
+        </script>
+      </dsp:oparam>
+      <dsp:oparam name="true">
+        <dsp:droplet name="IsEmpty">
+          <dsp:param name="value" param="promoInformation.htmlUrl"/>
+          <dsp:oparam name="false">
+            <dsp:getvalueof var="htmlUrl" param="promoInformation.htmlUrl"/>
+            <dsp:getvalueof var="staticContentPath" bean="/com/castorama/CastConfiguration.staticContentPath" />
+            <c:import url="${staticContentPath}${htmlUrl}" charEncoding="utf-8"/>
+          </dsp:oparam>
+          <dsp:oparam name="true">
+            <dsp:droplet name="IsEmpty">
+              <dsp:param name="value" param="promoInformation.document"/>
+              <dsp:oparam name="false">
+                <dsp:getvalueof var="documentId" param="promoInformation.document.id"/>
+                <dsp:getvalueof var="documentTemplate" param="promoInformation.document.template.url"/>
+                <c:set var="url" value="${contextPath}${documentTemplate }?documentId=${documentId}&navAction=jump"/>
+                <dsp:getvalueof var="image" param="promoInformation.document.image.url"/>
+                <dsp:getvalueof var="title" param="promoInformation.document.title" />
+                <a href="${url}">
+                  <img src="${image}" width="${width}" height="${height}" alt="${title}" title="${title}"/>
+                </a>
+              </dsp:oparam>
+              <dsp:oparam name="true">
+                <dsp:droplet name="IsEmpty">
+                  <dsp:param name="value" param="promoInformation.product"/>
+                  <dsp:oparam name="false">
+                    <dsp:droplet name="CastProductLinkDroplet">
+                      <dsp:param name="productId" param="promoInformation.product.repositoryId"/>
+                      <dsp:param name="categoryId" param="promoInformation.product.parentCategory.repositoryId"/>
+                      <dsp:param name="navAction" value="jump"/>
+                      <dsp:param name="isFeaturedProduct" value="true"/>
+                      <dsp:oparam name="output">
+                        <dsp:getvalueof var="template" param="url"/>
+                      </dsp:oparam>
+                    </dsp:droplet>
+                    <dsp:getvalueof var="url" value="${contextPath}${template}"/>
+                    <dsp:getvalueof var="image" param="promoInformation.product.largeImage.url"/>
+                    <dsp:getvalueof var="title" param="promoInformation.product.displayName" />
+                    <dsp:a href="${url}">
+                      <img src="${image}" width="${width}" height="${height}" alt="${title}" title="${title}"/>
+                    </dsp:a>
+                  </dsp:oparam>
+                  <dsp:oparam name="true">
+                    <dsp:droplet name="IsEmpty">
+                      <dsp:param name="value" param="promoInformation.category"/>
+                      <dsp:oparam name="false">
+                        <dsp:droplet name="CastCategoryLinkDroplet">
+                          <dsp:param name="categoryId" param="promoInformation.category.repositoryId"/>
+                          <dsp:param name="navCount" bean="CatalogNavHistory.navCount"/>
+                          <dsp:param name="navAction" value="jump"/>
+                          <dsp:oparam name="output">
+                            <dsp:getvalueof var="template" param="url"/>
+                          </dsp:oparam>
+                        </dsp:droplet>
+                        <dsp:getvalueof var="url" value="${contextPath}${template}"/>
+                        <dsp:getvalueof var="image" param="promoInformation.category.largeImage.url"/>
+                        <dsp:getvalueof var="title" param="promoInformation.category.displayName" />
+                        <a href="${url}">
+                          <img src="${image}" width="${width}" height="${height}" alt="${title}" title="${title}"/>
+                        </a>
+                      </dsp:oparam>
+                      <dsp:oparam name="true">
+                        <div class="emptyBanner"></div>
+                      </dsp:oparam>
+                    </dsp:droplet> 
+                  </dsp:oparam>
+                </dsp:droplet>
+              </dsp:oparam>
+            </dsp:droplet>
+          </dsp:oparam>
+        </dsp:droplet>
+      </dsp:oparam>
+    </dsp:droplet>
+  </dsp:oparam>
+</dsp:droplet>

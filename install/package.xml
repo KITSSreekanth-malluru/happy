@@ -1,0 +1,114 @@
+<project name="package" default="-package-full" basedir=".">
+
+  <taskdef name="pack-ear"
+         classname="atg.appassembly.ant.PackEarFileTask"
+         classpath="${dynamo.home}/lib/assembler.jar"/>
+
+  <!-- Initializes the packaging by updating the build number file from 
+       source control and assigning names to the upcoming build 
+       file -->
+  <target name="-init">
+
+    <echo message=""/>
+    <echo message=""/>
+    <echo message="#############################################################################"/>
+    <echo message=""/>
+    <echo message="JAVA_HOME       = ${env.JAVA_HOME}"/>
+    <echo message="dynamo.home     = ${dynamo.home}" />
+    <echo message="global.dir      = ${global.dir}" />
+    <echo message=""/>
+    <echo message="pack-ear destination = ${package.dir}/${application.ear.filename}"/>
+    <echo message=""/>
+    <echo message="#############################################################################"/>
+    <echo message=""/>
+    <echo message=""/>
+  
+    <!-- build out the working directories where we will 
+         package up the build and archive it-->
+    <delete dir="${package.dir}" />
+    <mkdir dir="${package.dir}" />
+  </target>
+
+  
+  <target name="-package-full" 
+          depends="-init" 
+          description="produces build zip file for deployment">    
+   <antcall target="-package-big-ear"/>
+   <antcall target="-package-archives"/>
+  </target>
+
+  <target name="-package-big-ear" 
+          description="Creates ear file">    
+     
+    <!-- call these targets to set the var -->
+    <antcallback target="getCommerceModules" return="commerce.assemble.modules" />
+    <antcallback target="getAuxServerModules" return="auxserver.assemble.modules" />
+    <antcallback target="getCaModules" return="ca.assemble.modules" />
+    
+    <var name="assemble.modules" value="commerce.castorama.${project.name}.ServerModules.commerce,commerce.castorama.${project.name}.ServerModules.auxserver,commerce.castorama.${project.name}.ServerModules.ca" />
+    <var name="assemble.modules" value="${assemble.modules},${commerce.assemble.modules},${auxserver.assemble.modules},${ca.assemble.modules}" />
+    
+    <!-- this takes the list of modules and replaces all spaces with a semi-colon -->
+    <loadresource property="bigEarModules">
+      <propertyresource name="assemble.modules" />
+      <filterchain>
+        <replacestring from=" " to="," />
+      </filterchain>
+    </loadresource>
+     
+     
+     <!-- Pack up big ear. -->
+     <echo message=""/>
+     <echo message=""/>
+     <echo message="Assembling big ear...."/>
+
+     <ant target="-run-j2ee-assembler" antfile="${buildtools.dir}/${deploy.definition.file}">
+        <property name="application.ear.install.dir" value="${package.dir}" />
+        <property name="application.ear.filename" value="${release.ear.filename}" />
+        <property name="assemble.standalone.ear" value="true" />
+        <property name="distributable" value="true" />
+        <property name="modules.to.assemble" value="${bigEarModules}" />
+     </ant>
+     
+     <!--echo message=""/-->
+     <!--echo message=""/-->
+     <!--echo message="Pack up big ear...."/-->
+
+     <!-- Pack up the ear file -->
+     <!--pack-ear sourceFile="${package.dir}/temp/${release.ear.filename}"
+               destinationFile="${package.dir}/${release.ear.filename}"/-->
+
+    <!--delete dir="${package.dir}/temp" /-->
+  </target>
+
+  
+  <target name="-package-archives" 
+          description="Produces archives for deployment">    
+
+   <!--antcall target="-package-static-content"/-->
+
+  </target>
+
+  <target name="-package-static-content" 
+          description="Creates static content archive">    
+    <tar tarfile="${package.dir}/static_content.tar.gz" basedir="${buildtools.dir}/../ngsstore/docroot" compression="gzip"/>
+  </target>
+  
+  <target name="-package-incremental" depends="-init">
+    <!-- this is a place holder to remind that incremental builds are possible,
+         though the nature and requirements have not been defined for us. -->
+  </target>
+
+  <!-- Example for automating moving the build file to a server -->
+  <target name="-package-deploy">
+    <scp file="${archive.dir}/${build.zip}"
+         todir="${user.name}@${deploy.host}:${deploy.directory}"
+         keyfile="/home/${user.name}/.ssh/identity"
+         passphrase="" />
+    <sshexec user="${user.name}"
+             host="${deploy.host}"
+             command="cd ${deploy.directory}; unzip ${build.zip}"
+             keyfile="/home/${user.name}/.ssh/identity" />
+  </target>
+  
+</project>

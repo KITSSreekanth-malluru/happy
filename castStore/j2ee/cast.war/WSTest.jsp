@@ -1,0 +1,41 @@
+<soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Body>
+        <ShowInventoryBalance releaseID="1.0" languageCode="EN" xmlns="http://www.kingfisher.com/oagis/9" xmlns:oa="http://www.openapplications.org/oagis/9">
+            <oa:ApplicationArea>
+                <oa:CreationDateTime>2014-01-20T17:04:25+02:00</oa:CreationDateTime>
+                <oa:BODID>20140120170425</oa:BODID>
+            </oa:ApplicationArea>
+            <DataArea>
+                <oa:Get/>
+                <oa:Show>
+                    <oa:Expression>/ShowInventoryBalance/DataArea/InventoryBalance</oa:Expression>
+                    <oa:ActionExpression expressionLanguage="xpath"/>
+                </oa:Show>
+                <InventoryBalance>
+                    <ProductItem>
+                        <oa:UPCID>497263</oa:UPCID>
+                    </ProductItem>
+                    <oa:AvailableQuantity>50</oa:AvailableQuantity>
+                </InventoryBalance>
+                <InventoryBalance>
+                    <ProductItem>
+                        <oa:UPCID>499946</oa:UPCID>
+                    </ProductItem>
+                    <oa:AvailableQuantity>29</oa:AvailableQuantity>
+                </InventoryBalance>
+                <InventoryBalance>
+                    <ProductItem>
+                        <oa:UPCID>519607</oa:UPCID>
+                    </ProductItem>
+                    <oa:AvailableQuantity>2</oa:AvailableQuantity>
+                </InventoryBalance>
+                <InventoryBalance>
+                    <ProductItem>
+                        <oa:UPCID>521182</oa:UPCID>
+                    </ProductItem>
+                    <oa:AvailableQuantity>32</oa:AvailableQuantity>
+                </InventoryBalance>
+            </DataArea>
+        </ShowInventoryBalance>
+    </soapenv:Body>
+</soapenv:Envelope>

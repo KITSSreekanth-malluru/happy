@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+
+<gsa-template>
+
+<item-descriptor name="casto_coupons" display-name="Coupons Castorama" display-property="code_coupon">
+     <table name="CASTO_COUPONS" type="primary" id-column-name="id">
+     	<property name="order_id" data-type="string" column-name="order_id" display-name="Commande"/>
+     	<property name="code_coupon" data-type="string" column-name="code_coupon" display-name="Code coupon"/>
+     	<property name="date_usage" data-type="timestamp" column-name="date_usage" display-name="Date d'usage"/>
+     </table>
+</item-descriptor>
+
+</gsa-template>

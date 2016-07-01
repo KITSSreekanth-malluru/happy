@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE idgenerator
+  PUBLIC "-//Art Technology Group, Inc.//DTD Dynamo Id Generator//EN"
+  'http://www.atg.com/dtds/idgen/idgenerator_1.0.dtd'>
+
+<id-spaces>  
+  <id-space seed="1" batch-size="10000" name="order" prefix="o" xml-combine="remove"/>	
+  <id-space seed="1" batch-size="10000" name="product" prefix="prod" xml-combine="remove"/>  
+  
+  <id-space name="product"               	seed="1"  	batch-size="10000" 	prefix="PRD"/>
+  <id-space name="casto_product" 		 	seed="1"	batch-size="10000" 	prefix="PRD"/>  
+  <id-space name="casto-pack" 		 		seed="1"	batch-size="10000" 	prefix="PRDmPK"/> 
+  <id-space name="casto-grouped-product" 	seed="1"	batch-size="10000" 	prefix="PRDmGP"/> 
+
+  <id-space name="user" 					seed="1000000000000"	batch-size="10000"/> 
+  <id-space name="contactInfo" 				seed="10000000000"		batch-size="10000"/> 
+  <id-space name="group"	 				seed="200000"			batch-size="100"/> 
+  <id-space name="privilege" 				seed="200000"			batch-size="100"/> 
+
+  <id-space name="order" 					seed="400000000" 		batch-size="500"	prefix="C"/> 
+  <id-space name="logsips" 					seed="1000000000"		batch-size="10000"/> 
+  
+
+</id-spaces>

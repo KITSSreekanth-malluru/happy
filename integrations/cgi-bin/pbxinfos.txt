@@ -1,0 +1,7 @@
+PBX_SITE=1999888
+PBX_RANG=05
+PBX_IDENTIFIANT=101750099
+PBX_DEVISE=978
+PBX_RETOUR=montant:M;ref:R;auto:A;trans:T;idtrans:S;carte:C;BIN6:N;abonnement:B;validity:D;erreur:E;sign:K
+PBX_PAYBOX=https://tpeweb1.paybox.com/cgi/MYchoix_pagepaiement.cgi
+PBX_BACKUP1=https://tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi

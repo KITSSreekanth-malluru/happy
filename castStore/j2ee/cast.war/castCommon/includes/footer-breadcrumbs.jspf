@@ -1,0 +1,62 @@
+<div class="footerBreadcrumbs">
+  <c:set var="homeIcoUrl" value="${pageContext.request.contextPath}/images/icoHomeGray.gif"/>
+  <div id="homeIcoUrl" style="display: none;">${homeIcoUrl}</div>
+  <div>
+    <a href="${pageContext.request.contextPath}" title="Accueil">
+      <img src="${homeIcoUrl}" width="11" height="11" alt="Accueil"/>
+    </a>
+  </div>
+  <c:choose>
+    <c:when test="${not empty param.question}">
+      <b>&gt;</b> <span><strong>Recherche "<dsp:valueof param="question"/>"</strong></span>
+    </c:when>
+    <c:when test="${not empty footerBreadcrumb}">
+      <input type="hidden" id="sameBreadcrumsOnPage" value="true"/>	
+    </c:when>
+    <c:when test="${(not empty categoryId) or (not empty productId)}">
+      <dsp:getvalueof var="productOmniturePageName" value="" scope="request"/>
+      <dsp:getvalueof var="storeId" bean="/atg/userprofiling/Profile.currentLocalStore.id"/>
+      <dsp:getvalueof var="key" value="${categoryId}_${productId}_${isRobot}_${storeId}"/>
+      <dsp:droplet name="/atg/dynamo/droplet/Cache">
+        <dsp:param name="key" value="footer_${key}"/>
+        <dsp:param name="cacheCheckSeconds" bean="/com/castorama/CastConfiguration.cacheCheckSeconds"/>
+        <dsp:oparam name="output">
+          <dsp:droplet name="FooterInfoDroplet">
+            <dsp:param name="productId" value="${productId}" />
+            <dsp:param name="categoryId" value="${categoryId}" />
+            <dsp:param name="action" value="beadcrumbs" />
+            <dsp:oparam name="output">
+              <dsp:droplet name="ForEach">
+                <dsp:param name="array" param="beadcrumbs" />
+                <dsp:param name="elementName" value="category" />
+                <dsp:oparam name="output">
+                  <dsp:getvalueof id="size" param="size"/>
+                  <dsp:getvalueof id="count" param="count"/>
+                  <dsp:getvalueof var="index" param="index"/>
+                  <b>&nbsp;&gt;&nbsp;</b>
+                  <dsp:getvalueof var="catDispName" param="category.displayName"/>
+                  <c:choose>
+                    <c:when test="${count == size}">
+                      <span><strong><dsp:valueof param="category.displayName"/></strong></span>
+                      <dsp:getvalueof var="productOmniturePageName" value="${productOmniturePageName}${catDispName}:" scope="request"/>
+                    </c:when>
+                    <c:otherwise>
+                      <dsp:getvalueof var="productOmniturePageName" value="${productOmniturePageName}${catDispName}:" scope="request"/>
+                      <dsp:include page="/castCatalog/categoryLink.jsp" >
+                        <dsp:param name="category" param="category"/>
+                        <dsp:param name="navAction" value="pop" />
+                      </dsp:include>
+                    </c:otherwise>
+                  </c:choose>
+                </dsp:oparam>
+              </dsp:droplet>
+            </dsp:oparam>
+          </dsp:droplet>	
+        </dsp:oparam>
+      </dsp:droplet>
+    </c:when>
+    <c:otherwise>
+      <input type="hidden" id="sameBreadcrumsOnPage" value="true"/>
+    </c:otherwise>
+  </c:choose>
+</div>

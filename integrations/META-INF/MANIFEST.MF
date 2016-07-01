@@ -1,0 +1,6 @@
+ATG-Product: The Castorama Integration Module
+Manifest-Version: 1.0
+ATG-Client-Class-Path: lib/classes.jar lib/jsch-0.1.41.jar lib/javatar-2.5.jar lib/poi-3.7-20101029.jar
+ATG-Class-Path: lib/classes.jar lib/jsch-0.1.41.jar lib/javatar-2.5.jar lib/poi-3.7-20101029.jar
+ATG-Config-Path: config/config.jar
+ATG-Required: @install_unit@.@module_root_parent@.cast

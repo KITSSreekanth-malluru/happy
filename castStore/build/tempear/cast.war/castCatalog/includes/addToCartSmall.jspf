@@ -1,0 +1,87 @@
+<dsp:droplet name="InventoryLookup">
+  <dsp:param name="itemId" value="${skuId }"/>
+  <dsp:oparam name="output">
+    <dsp:getvalueof var="stockLevel" param="inventoryInfo.stockLevel"/>
+  </dsp:oparam>
+</dsp:droplet> 
+
+<dsp:getvalueof var="showUnavailableMessage" value="${false}"/>
+<dsp:getvalueof var="showButtonForm" value="${true}"/>
+<dsp:getvalueof var="addToCartMode" value=""/>
+<dsp:getvalueof var="prodIdS" param="prod.repositoryId"/>
+<dsp:getvalueof var="addWebStock" value="${0}"/>
+<dsp:getvalueof var="addLocalStock" value="${0}"/>
+
+<dsp:droplet name="/com/castorama/droplet/StockAvailabilityDroplet">
+  <dsp:param name="product" param="prod"/>
+  <dsp:param name="store" bean="Profile.currentLocalStore" />
+  <dsp:param name="svAvailableMap" value="${svAvailableMap}" />
+  <dsp:oparam name="immidiateWithdrawal"><!-- SAS ${prodIdS} IW -->
+    <dsp:getvalueof var="showUnavailableMessage" value="${true}"/>
+    <dsp:getvalueof var="showButtonForm" value="${false}"/>
+  </dsp:oparam>
+  <dsp:oparam name="remainingStock"><!-- SAS ${prodIdS} RS -->
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+  </dsp:oparam>
+  <dsp:oparam name="soldOnlyInStore"><!-- SAS ${prodIdS} SOIS -->
+    <dsp:getvalueof var="showButtonForm" value="${false}"/>
+  </dsp:oparam>
+  <dsp:oparam name="deliveryTime"><!-- SAS ${prodIdS} DT -->
+    <dsp:getvalueof var="addToCartMode" value="web"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccRemainingStock"><!-- SAS ${prodIdS} CCRS -->
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccSoldOnlyInStore"><!-- SAS ${prodIdS} CCSOIS -->
+    <dsp:getvalueof var="addToCartMode" value="local"/>
+  </dsp:oparam>
+  <dsp:oparam name="ccDeliveryTime"><!-- SAS ${prodIdS} CCDT -->
+    <dsp:getvalueof var="addToCartMode" value="both"/>
+  </dsp:oparam>
+</dsp:droplet>
+<!-- draw price block for add to cart small start for ${prodIdS} -->
+<c:if test="${showUnavailableMessage}">
+  <form>
+    <div class="buttonCartContainer" >
+      <input class="buttonCart grey" type="submit" value="${cartAdd}" disabled="disabled"/>
+    </div>
+  </form>
+</c:if>
+<c:if test="${not empty addToCartMode}">
+  <dsp:form method="post">
+    <dsp:input type="hidden" bean="CastShoppingCartFormHandler.webStockToAdd" value="${addWebStock}"/>
+    <dsp:input type="hidden" bean="CastShoppingCartFormHandler.localStockToAdd" value="${addLocalStock}"/>
+    <dsp:input bean="CastShoppingCartFormHandler.productId" type="hidden" value="${productId}"/>
+    <dsp:input bean="CastShoppingCartFormHandler.quantity" type="hidden" value="1"/>
+    <dsp:input bean="CastShoppingCartFormHandler.catalogRefIds" type="hidden" value="${skuId}" />
+    <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderErrorURL" type="hidden"  value="${requestURIwithQueryString}" />
+    <dsp:input bean="CastShoppingCartFormHandler.addItemToOrderSuccessURL" type="hidden" value="${contextPath}/checkout/preshopping.jsp" />
+    <div class="buttonCartContainer">
+      <dsp:input bean="CastShoppingCartFormHandler.addItemToOrder" type="submit" value="${cartAdd}" iclass="buttonCart" onclick="disableButton(this)"/>
+      <dsp:input bean="CastShoppingCartFormHandler.addToBoth" type="hidden" value="${addToCartMode}"/>
+      <c:if test="${empty showDeliveryMsg or showDeliveryMsg}">
+        <c:if test="${addToCartMode == 'web' || addToCartMode == 'both'}">
+          <c:choose>
+            <c:when test="${empty multiDeliveryMsg or multiDeliveryMsg}">
+              <dsp:getvalueof var="productDeliverySkusIds" value="${productDeliverySkusIds},${skuId}" scope="request"/>
+            </c:when>
+            <c:otherwise>
+              <input type="hidden" value="${skuId}" id="deliverySkuId${skuId}"/>
+              <input type="hidden" value="1" id="quantityValue${skuId}"/>
+              <script type="text/javascript">
+                $(document).ready(function(){
+                  var obj = $("#quantityValue${skuId}");
+                  delivery('${skuId}', obj);
+                });
+              </script>
+            </c:otherwise>
+          </c:choose>
+        </c:if>
+
+        <%@include file="deliverOrCCwr.jsp" %>
+
+      </c:if>
+    </div>
+  </dsp:form>
+</c:if>
+<!-- draw price block for add to cart small end for ${prodIdS} -->

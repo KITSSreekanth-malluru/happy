@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:user="http://ws.castorama.com/user" targetNamespace="http://ws.castorama.com/updateUser" xmlns:uu="http://ws.castorama.com/updateUser" attributeFormDefault="unqualified" elementFormDefault="unqualified">
+
+	<xsd:import namespace="http://ws.castorama.com/user" schemaLocation="user.xsd"/>
+	
+	<xsd:element name="updateUserRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+			
+				<xsd:element name="typeAcces">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="web"/>
+							<xsd:enumeration value="magasin"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+				
+				<xsd:element name="updatedUser" type="user:userType" />
+				
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

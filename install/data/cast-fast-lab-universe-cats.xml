@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <!-- prod/preprod
+        -->
+        <add-item item-descriptor="catalog" id="masterCatalog">
+            <set-property name="topNavigationCategories">
+                <![CDATA[cat_id_432,cat_id_162,cat_id_1,cat_id_maisoneco,cat_id_ba,cat510005]]></set-property>
+        </add-item>
+
+        <!-- test servers
+        <add-item item-descriptor="catalog" id="masterCatalog">
+          <set-property name="topNavigationCategories"><![CDATA[cat10003,cat10004,cat10005,cat10006,cat250002,cat510005]]></set-property>
+        </add-item>
+        -->
+
+        <add-item item-descriptor="casto_category" id="cat510005">
+            <set-property name="dropDownTemplate"><![CDATA[__NULL__]]></set-property>
+            <set-property name="template"><![CDATA[__NULL__]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="menuItem" id="300004">
+            <set-property name="url"><![CDATA[/store/lancez-vous.jsp]]></set-property>
+        </add-item>
+
+
+    </import-items>
+</gsa-template>

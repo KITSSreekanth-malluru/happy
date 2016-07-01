@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:user="http://ws.castorama.com/user" targetNamespace="http://ws.castorama.com/user" attributeFormDefault="unqualified" elementFormDefault="unqualified">
+	<xsd:complexType name="userType">
+		<xsd:sequence>
+			<xsd:element name="id" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="email" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="password" type="xsd:string" nillable="true" minOccurs="0"/>			
+			<xsd:element name="civilite" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="nom" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="prenom" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="societe" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="codePostal" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="adresse" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="complement" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="ville" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="pays" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="dateMAJProfil" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="dateNaissance" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="magasinReference" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="dateInscription" type="xsd:string" nillable="true" minOccurs="0"/>
+			<xsd:element name="inscriptionNewsletter" type="xsd:boolean" nillable="true" minOccurs="0"/>
+			<xsd:element name="inscriptionNewsletterPartenaires" type="xsd:boolean" nillable="true" minOccurs="0"/>
+			<xsd:element name="acceptRecontact" nillable="true" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:int">
+						<xsd:minInclusive value="0"/>
+						<xsd:maxInclusive value="2"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

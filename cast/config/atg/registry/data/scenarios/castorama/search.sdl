@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE process SYSTEM "dynamosystemresource:/atg/dtds/pdl/pdl_1.0.dtd">
+<process author="admin" creation-time="1253793631360" enabled="true" last-modified-by="admin" modification-time="1253793690922">
+  <segment migrate-subjects="true">
+    <segment-name>Segment 1</segment-name>
+    <!--================================-->
+    <!--== User Ran Search  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>com.castorama.scenario.CastoSearch</event-name>
+    </event>
+    <!--================================-->
+    <!--== HandleSearch  -->
+    <!--================================-->
+    <action id="2">
+      <action-name>HandleSearch</action-name>
+    </action>
+  </segment>
+</process>

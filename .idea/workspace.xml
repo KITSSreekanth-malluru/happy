@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="100d35c9-5ed7-4def-814e-ccca1150e140" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/lib/ant-contrib.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/lib/yuicompressor-2.4.2.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/classes/com/castorama/mobile/CastMobileWebAppConfiguration.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/ear/castStoreIphone.ear" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/lib/classes.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/src.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/lib/dspjspTaglib1_0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/lib/json-taglib-0.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/lib/jstl.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/lib/standard.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/lib/trimflt.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/lib/dspjspTaglib1_0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/lib/json-taglib-0.4.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/lib/jstl.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/lib/standard.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/lib/trimflt.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/lib/classes.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build/lib/classes.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/Constants.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ExportManagerBase.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ImportCastoAbonementNewsletterManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/IntegrationBase$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/IntegrationBase$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/IntegrationBase.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/WebOrdersManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/ArrayItemIterator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/BeanStringWriter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/CCARecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/CCERecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/CCLRecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/CCPRecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/CCRRecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/CCZRecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/COERecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/COLRecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/COZRecord.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/ExportOrderManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/ExportOrderMessageManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/LogSipsLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/MessagesLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/OrderCouponsLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/OrderDetailsLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/OrderLoader$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/OrderLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/OrderPaymentLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/PayboxDirectPlusManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/RecordFactory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/RecordParsingException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/exp/UtilFormat.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/ChunkProperties.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/ImportItemManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/ImportItemManager2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/ImportOrderManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/ImportUserManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/MigrationOrderManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/ProjectProperties.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/backoffice/imp/SkuComparator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/AccessCredentials.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/CategoryProductFeed.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/Const.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/DataFeedWriter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/FeedLoader$CategoryProductIterator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/FeedLoader$DocumentIterator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/FeedLoader$ProductIterator.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/FeedLoader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/ProductFeed.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/RatingReview.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/RatingReviewFeedManager$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/RatingReviewFeedManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/RatingReviewWriter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/RatingReviewXMLHandler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/RatingReviewXMLHandler1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/SetupDataFeedManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bddcc/ExportClient.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bddcc/ExportClientManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bornes/ExportProductManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/cloud/CloudManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/codepostal/ImportCodePostalManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/cybercoach/ExportProductManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/experian/ExportNewsletterManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/experian/UnsubscribeBadEmailManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/google/GoogleLocalDataManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/infokiosk/ExportProductManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/infokiosk/ImportProductManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/infokiosk/InfoKioskCategory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/journal/JournalItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/journal/ProcessingJournalService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/kelkoo/ExportProductManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/kelkoo/KelkooWeightShippingCalculatorImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/localStores/cleanup/LocalStoresCleanupManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/localStores/common/ImportLocalPricesManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/localStores/common/ImportLocalStoresInfoManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/localStores/common/Store.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/localStores/discount/ImportLocalStoresDiscountManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/localStores/util/LocalStoresUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/order/RemoveOrdersScheduler.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/order/exp/ExportOrderManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/order/exp/ExportOrderTools.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/order/exp/ObjectStringWriter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/order/exp/OrderInfoToExport.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/order/exp/StrDoublePair.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/planner/ExportProductManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/stock/ImportGeoMappingManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/stock/ImportInventoryManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/stock/SizeLimiterInputStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/stock/UncompressInputStream.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/ImportTicketManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/NotificationPurgeTicketsManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/ParseHeaderObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/ParseMappingObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/ParseTicketObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/ParseTicketObjectFactory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/ParseTicketable.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/PurgeTicketManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/TicketHeaderObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/TicketLineObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/TicketMappingObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/TicketMethodObject.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/util/MiscUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/webservice/inventory/RequestExportAdminServlet.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/webservice/inventory/RequestsExportManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/xml/DoneException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/xml/ImportFileParser.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/xml/ImportItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/migration/MigrationTools.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/sftp/SftpService$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/sftp/SftpService$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/sftp/SftpService$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/sftp/SftpService$4.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/sftp/SftpService$5.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/sftp/SftpService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/lib/classes.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/lib/javatar-2.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/lib/jsch-0.1.41.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/lib/poi-3.7-20101029.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/src.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/cgi-bin/pubkey_pem.mht" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/lib/javatar-2.5.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/lib/jsch-0.1.41.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/lib/poi-3.7-20101029.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/castMerchandising/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/build.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/common.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/compress.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/data.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/deploy-common.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/deploy-jboss.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commonbuildtasks/sql.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/classes/com/castorama/resources/CastMobileWebAppResources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/classes/com/castorama/resources/CastMobileWebAppResources_fr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/lib/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempconfig/atg/commerce/search/FacetLookupDroplet.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempconfig/atg/dynamo/servlet/Initial.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempconfig/atg/dynamo/servlet/dafpipeline/JsonConverterServlet.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempconfig/com/castorama/mobile/CastMobileWebAppConfiguration.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempconfig/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/META-INF/application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/tags/cast/castFunction.tld" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/tags/cast/pageContainer.tag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/tags/mobile/jsonObject.tag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/WEB-INF/web.xml.jboss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/about.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/augmentedReality/augmentedRealityCategoriesList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/augmentedReality/augmentedRealitySkusList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/catalog/includes/price.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/catalog/includes/productDelivery.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/catalog/product.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/catalog/productByBarcode.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/catalog/productByCodeArticle.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/catalog/productComplementaries.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/catalog/sku.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/includes/prelude.jspf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/includes/taglibs.jspf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/location/product.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/search.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/search/product.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/store.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/store/store.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/store/storeByGeoLocation.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/store/storeList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/storeProduct.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/test/includes/searchTest.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/test/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/test/test.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/video/videoURL.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/config/atg/commerce/search/FacetLookupDroplet.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/config/atg/dynamo/servlet/Initial.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/config/atg/dynamo/servlet/dafpipeline/JsonConverterServlet.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/config/com/castorama/mobile/CastMobileWebAppConfiguration.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/config/readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/META-INF/application.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/tags/cast/castFunction.tld" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/tags/cast/pageContainer.tag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/tags/mobile/jsonObject.tag" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/WEB-INF/web.xml.jboss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/about.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/augmentedReality/augmentedRealityCategoriesList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/augmentedReality/augmentedRealitySkusList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/catalog/includes/price.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/catalog/includes/productDelivery.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/catalog/product.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/catalog/productByBarcode.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/catalog/productByCodeArticle.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/catalog/productComplementaries.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/catalog/sku.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/includes/prelude.jspf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/includes/taglibs.jspf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/location/product.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/search.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/search/product.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/store.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/store/store.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/store/storeByGeoLocation.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/store/storeList.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/storeProduct.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/test/includes/searchTest.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/test/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/test/test.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/video/videoURL.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/iPhoneStore/src/com/castorama/resources/CastMobileWebAppResources_fr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/Initial.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/atg/registry/ContentRepositories.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/atg/registry/Repository/StockAvailabilityRepository.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/ImportCastoAbonementNewsletterManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/backoffice/WebOrdersManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/backoffice/exp/ExportOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/backoffice/exp/ExportOrderMessageManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/backoffice/exp/PayboxDirectPlusManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/backoffice/imp/ImportOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/bazaarvoice/SetupDataFeedManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/bddcc/ExportClientManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/bornes/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/cloud/CloudManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/codepostal/ImportCodePostalManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/cybercoach/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/experian/ExportNewsletterManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/experian/UnsubscribeBadEmailManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/google/CastInventoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/google/CastPackXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/google/GoogleLocalDataManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/google/GoogleProductsConstraints.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/google/GoogleProductsQueryRequest.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/google/ProductCatalogParserOptions.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/google/StartCategoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/infokiosk/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/journal/ProcessingJournalService.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/CastInventoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/CastPackXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/KelkooConstraints.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/KelkooQueryRequest.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/KelkooWeightShippingCalculator.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/ProductCatalogParserOptions.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/kelkoo/StartCategoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/localStores/ImportLocalPricesManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/localStores/ImportLocalStoresDiscountManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/localStores/ImportLocalStoresInfoManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/localStores/LocalStoresCleanupManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/localStores/util/LocalStoresUtils.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/order/RemoveOrdersScheduler.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/order/exp/ExportOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/planner/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/stock/ImportGeoMappingManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/stock/ImportInventoryManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/stock/RemoteStockCacheAccessor.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/ticket/ImportTicketManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/ticket/NotificationPurgeTicketsManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/ticket/PurgeTicketManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/integration/webservice/inventory/RequestsExportManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/migration/MigrationOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/com/castorama/migration/MigrationProfileManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/build/tempconfig/xml/stockAvailabilityRepository.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/Initial.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/atg/registry/ContentRepositories.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/atg/registry/Repository/StockAvailabilityRepository.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/ImportCastoAbonementNewsletterManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/backoffice/WebOrdersManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/backoffice/exp/ExportOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/backoffice/exp/ExportOrderMessageManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/backoffice/exp/PayboxDirectPlusManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/backoffice/imp/ImportOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/bazaarvoice/SetupDataFeedManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/bddcc/ExportClientManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/bornes/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/cloud/CloudManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/codepostal/ImportCodePostalManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/cybercoach/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/experian/ExportNewsletterManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/experian/UnsubscribeBadEmailManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/google/CastInventoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/google/CastPackXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/google/GoogleLocalDataManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/google/GoogleProductsConstraints.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/google/GoogleProductsQueryRequest.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/google/ProductCatalogParserOptions.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/google/StartCategoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/infokiosk/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/journal/ProcessingJournalService.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/CastInventoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/CastPackXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/KelkooConstraints.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/KelkooQueryRequest.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/KelkooWeightShippingCalculator.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/ProductCatalogParserOptions.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/kelkoo/StartCategoryXMLConstraint.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/localStores/ImportLocalPricesManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/localStores/ImportLocalStoresDiscountManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/localStores/ImportLocalStoresInfoManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/localStores/LocalStoresCleanupManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/localStores/util/LocalStoresUtils.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/order/RemoveOrdersScheduler.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/order/exp/ExportOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/planner/ExportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/stock/ImportGeoMappingManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/stock/ImportInventoryManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/stock/RemoteStockCacheAccessor.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/ticket/ImportTicketManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/ticket/NotificationPurgeTicketsManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/ticket/PurgeTicketManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/integration/webservice/inventory/RequestsExportManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/migration/MigrationOrderManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/com/castorama/migration/MigrationProfileManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Production/config/xml/stockAvailabilityRepository.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build/tempconfig/Initial.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build/tempconfig/com/castorama/integration/backoffice/imp/ImportItemManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build/tempconfig/com/castorama/integration/backoffice/imp/ImportItemManager2.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build/tempconfig/com/castorama/integration/bazaarvoice/RatingReviewFeedManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build/tempconfig/com/castorama/integration/infokiosk/ImportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/build/tempstagconfig/com/castorama/integration/backoffice/imp/ImportItemManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/config/Initial.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/config/com/castorama/integration/backoffice/imp/ImportItemManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/config/com/castorama/integration/backoffice/imp/ImportItemManager2.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/config/com/castorama/integration/bazaarvoice/RatingReviewFeedManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/config/com/castorama/integration/infokiosk/ImportProductManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/Versioned/configlayers/stagingandprod/com/castorama/integration/backoffice/imp/ImportItemManager.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/productFeed.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/google/statusFile.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/infokiosk/logBody.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/infokiosk/logHeader.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/planner/MailConceptionCuisineResources_fr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/stock/StockAvailabilityResources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/ticket/MailTickets_fr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/classes/com/castorama/mobile/store/StoreCatalogResources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/tempconfig/com/castorama/integration/bazaarvoice/AccessCredentials.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/build/tempconfig/xml/magasinSQLRepository.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/cgi-bin/modulev3.cgi" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/cgi-bin/pbxinfos.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/cgi-bin/printenv.pl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/config/com/castorama/integration/bazaarvoice/AccessCredentials.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/config/xml/magasinSQLRepository.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/order/sql/shipment.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/alter_core_tables.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/clear_core_schema.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/clear_duplicated_users.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/create_migration_schema.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/create_migration_tables.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/drop_migration_schema.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/migration.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/migration2.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/migration3.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/restore_email_addresses.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/update_sequences.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/validate_migrated_data.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/migration/profile/sql/validate_migration_tables.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/Constants.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ExportManagerBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ImportCastoAbonementNewsletterManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/IntegrationBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/WebOrdersManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/ArrayItemIterator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/BeanStringWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/CCARecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/CCERecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/CCLRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/CCPRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/CCRRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/CCZRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/COERecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/COLRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/COZRecord.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/ExportOrderManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/ExportOrderMessageManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/LogSipsLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/MessagesLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/OrderCouponsLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/OrderDetailsLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/OrderLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/OrderPaymentLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/PayboxDirectPlusManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/RecordFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/RecordParsingException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/exp/UtilFormat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/ChunkProperties.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/ImportItemManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/ImportItemManager2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/ImportOrderManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/ImportUserManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/MigrationOrderManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/ProjectProperties.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/backoffice/imp/SkuComparator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/AccessCredentials.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/CategoryProductFeed.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/Const.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/DataFeedWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/FeedLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/ProductFeed.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/RatingReview.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/RatingReviewFeedManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/RatingReviewWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/RatingReviewXMLHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/RatingReviewXMLHandler1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/SetupDataFeedManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bazaarvoice/productFeed.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bddcc/ExportClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bddcc/ExportClientManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/bornes/ExportProductManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/cloud/CloudManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/codepostal/ImportCodePostalManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/cybercoach/ExportProductManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/experian/ExportNewsletterManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/experian/UnsubscribeBadEmailManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/google/GoogleLocalDataManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/google/statusFile.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/infokiosk/ExportProductManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/infokiosk/ImportProductManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/infokiosk/InfoKioskCategory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/infokiosk/logBody.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/infokiosk/logHeader.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/journal/JournalItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/journal/ProcessingJournalService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/kelkoo/ExportProductManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/kelkoo/KelkooWeightShippingCalculatorImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/localStores/cleanup/LocalStoresCleanupManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/localStores/common/ImportLocalPricesManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/localStores/common/ImportLocalStoresInfoManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/localStores/common/Store.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/localStores/discount/ImportLocalStoresDiscountManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/localStores/util/LocalStoresUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/order/RemoveOrdersScheduler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/order/exp/ExportOrderManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/order/exp/ExportOrderTools.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/order/exp/ObjectStringWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/order/exp/OrderInfoToExport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/planner/ExportProductManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/planner/MailConceptionCuisineResources_fr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/stock/ImportGeoMappingManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/stock/ImportInventoryManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/stock/SizeLimiterInputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/stock/StockAvailabilityResources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/stock/UncompressInputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/ImportTicketManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/MailTickets_fr.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/NotificationPurgeTicketsManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/ParseHeaderObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/ParseMappingObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/ParseTicketObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/ParseTicketObjectFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/ParseTicketable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/PurgeTicketManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/TicketHeaderObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/TicketLineObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/TicketMappingObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/ticket/TicketMethodObject.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/util/MiscUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/webservice/inventory/RequestExportAdminServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/webservice/inventory/RequestsExportManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/xml/DoneException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/xml/ImportFileParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/integration/xml/ImportItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/migration/MigrationTools.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/mobile/store/StoreCatalogResources.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/integrations/src/com/castorama/sftp/SftpService.java" />
+    </list>
+    <ignored path="branches.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="branches" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/libraries/ATGLIBRARY.xml" />
+        <option value="$PROJECT_DIR$/build.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="886" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="branches" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build.xml" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="branches" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="100d35c9-5ed7-4def-814e-ccca1150e140" name="Default" comment="" />
+      <created>1467359902733</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1467359902733</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.035714287" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25787964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.035714287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25787964" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+    <buildFile url="file://$PROJECT_DIR$/build.xml">
+      <expanded value="true" />
+    </buildFile>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/ATGLIBRARY.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/castStore/j2ee/cast.war/about.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cast/src/com/castorama/commerce/profile/CastProfileFormHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="101" column="13" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ATG9.4/DAS/lib/classes.jar!/atg/nucleus/naming/ParameterName.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ATG9.4/DAS/lib/classes.jar!/atg/servlet/DynamoHttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="90" column="13" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../ATG9.4/DAS/lib/classes.jar!/atg/servlet/DynamoServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cast/src/com/castorama/droplet/AddressDroplet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iPhoneStore/build/tempear/iphone.war/about.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iPhoneStore/j2ee/iphone.war/about.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/integrations/build/classes/com/castorama/integration/bazaarvoice/AccessCredentials.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#1153#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>branches</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>ATGLIBRARY</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

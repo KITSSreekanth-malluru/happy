@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+    <header>
+        <name>NEWSLETTER</name>
+        <author></author>
+        <version></version>
+    </header>
+
+    <!-- ABONNEMENT NEWSLETTER -->
+    <item-descriptor name="abonnementNewsletter" display-property="email" display-name="Abonnement" last-modified-property="dateDerniereModification" item-expire-timeout="180000" query-expire-timeout="180000" query-cache-size="2000">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <attribute name="updateLastModified" value="true"/>
+        <table name="CASTO_ABONNEMENT_NEWSLETTER" type="primary" id-column-name="email">
+            <property category-resource="categoryAbonnement" name="email" 
+                data-type="string" column-name="email" display-name-resource="email"/>
+
+            <property category-resource="categoryAbonnement" name="profile" data-type="string"
+                 column-name="PROFILE_ID" display-name-resource="profile"/>
+
+            <property category-resource="categoryAbonnement" name="nom" data-type="string"
+                 column-name="nom" display-name-resource="lastName"/>
+
+            <property category-resource="categoryAbonnement" name="prenom" data-type="string"
+                 column-name="prenom" display-name-resource="firstName"/>
+
+            <property category-resource="categoryAbonnement" name="format" data-type="enumerated" 
+                default="html" column-name="format"    display-name-resource="format">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="texte" code="0" />
+                <option value="html" code="1" />
+            </property>
+
+            <property category-resource="categoryAbonnement" name="dateCreation" data-type="timestamp"
+                 column-name="dateCreation"    display-name-resource="dateCreation">
+                 <attribute name="useNowForDefault" value="true"/>
+            </property>
+
+            <property category-resource="categoryOptions" name="accesPartenairesCasto" data-type="boolean"
+                 column-name="acces_partenaires_casto" display-name-resource="accesPartenairesCasto"/>
+
+            <property name="id_magasin_ref" column-name="MAGASIN" item-type="magasin" category-resource="categoryCastoramaInfo"
+                display-name-resource="prefStore" repository="/atg/registry/Repository/MagasinGSARepository"/>
+
+            <property category-resource="categoryOptions" name="isTest"
+                data-type="boolean" default="false" column-name="is_test" display-name-resource="isTest"/>
+
+            <property category-resource="categoryOptions" name="isValid"
+                data-type="boolean" default="false" column-name="valid" display-name-resource="isValid"/>
+
+            <property category-resource="categoryOptions" name="receiveEmail"
+                data-type="enumerated" column-name="receive_email" display-name-resource="receiveEmail">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="" code="0" />
+                <option value="true" code="1" />
+                <option value="false" code="2" />
+            </property>
+
+            <property name="reseiveOffers" data-type="enumerated" column-name="reseive_offers"
+                category-resource="categoryOptions" display-name-resource="reseiveOffers">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="" code="0" />
+                <option value="true" code="1" />
+                <option value="false" code="2" />
+            </property>
+
+            <property name="acceptRecontact" data-type="enumerated" column-name="accept_recontact"
+                category-resource="categoryOptions" display-name-resource="acceptRecontact">
+                <option value="false" code="0" />
+                <option value="true" code="1" />
+                <option value="trueFromApp" code="2" />
+            </property>
+
+            <property category-resource="categoryOptions" name="emailStatus"
+                data-type="enumerated" default="valid" column-name="email_status" display-name-resource="emailStatus">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="unknown" code="0" />
+                <option value="valid" code="1" />
+                <option value="invalid" code="2" />
+            </property>
+
+            <property category-resource="categoryOptions" name="locale"
+                data-type="enumerated" column-name="locale" display-name-resource="locale" default="fr_FR_EURO">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="unset" code="0" />
+                <option value="en_US" code="1" />
+                <option value="fr_FR_EURO" code="2" />
+                <option value="ja_JP" code="3" />
+                <option value="de_DE" code="4" />
+            </property>
+
+            <property category-resource="categoryOptions" name="nbEmailFailure"
+                data-type="int" column-name="nbEmailFailure" display-name-resource="nbEmailFailure"/>
+
+            <property category-resource="categoryOptions" name="lastFailureDate"
+                data-type="date" column-name="lastFailureDate" display-name-resource="lastFailureDate"/>
+
+            <property category-resource="categoryAbonnement" name="civilite"
+                data-type="enumerated" column-name="civilite" display-name-resource="title">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="Monsieur" code="0" />
+                <option value="Madame" code="1" />
+                <option value="Mlle" code="2" />
+                <option value="Société" code="5" />
+            </property>
+
+            <property category-resource="categoryAbonnement" name="codePostal"
+                data-type="string" column-name="codePostal"
+                display-name-resource="codePostal"/>
+
+            <property category-resource="categoryAbonnement" name="ville"
+                data-type="string" column-name="ville" display-name-resource="city"/>
+
+            <property category-resource="categoryAbonnement" name="pays"
+                data-type="string" column-name="pays" display-name-resource="pays"/>
+
+            <property category-resource="categoryEsprits" name="contemporain"
+                data-type="boolean" column-name="ESPRIT_CONTEMPORAIN" display-name-resource="contemporain"/>
+
+            <property category-resource="categoryEsprits" name="technicolor"
+                data-type="boolean" column-name="ESPRIT_TECHNICOLOR" display-name-resource="technicolor"/>
+
+            <property category-resource="categoryEsprits" name="charme"
+                data-type="boolean" column-name="ESPRIT_CHARME" display-name-resource="charme"/>
+
+            <property category-resource="categoryEsprits" name="authentique"
+                data-type="boolean" column-name="ESPRIT_AUTHENTIQUE" display-name-resource="authentique"/>
+
+            <property category-resource="categoryAbonnement" name="age"
+                data-type="enumerated" column-name="age" display-name-resource="age">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="-25 ans" code="0" />
+                <option value="25-40 ans" code="1" />
+                <option value="41-55 ans" code="2" />
+                <option value="+55 ans" code="3" />
+            </property>
+
+            <property name="dateOfBirth" column-name="DATE_OF_BIRTH" data-type="date" required="false"
+                 category-resource="categoryAbonnement" display-name-resource="dateOfBirth"/>
+
+            <property category-resource="categoryAbonnement" name="carteAtout"
+                data-type="boolean" column-name="carteAtout" display-name-resource="castCardOwner"/>
+
+            <property category-resource="categoryLogement" name="proprietaire_locataire"
+                data-type="enumerated" column-name="proprietaire_locataire" display-name-resource="status">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="Owner" />
+                <option value="Tenant" />
+            </property>
+
+            <property category-resource="categoryLogement" name="maisonCampagne"
+                data-type="boolean" column-name="maisonCampagne" display-name-resource="maisonCampagne"/>
+
+            <property category-resource="categoryLogement" name="maison"
+                data-type="boolean" column-name="maison" display-name-resource="homeType"/>
+                
+            <property category-resource="categoryLogement" name="appartement"
+                data-type="boolean" column-name="appartement" display-name-resource="appartement"/>
+
+            <property category-resource="categoryLogement" name="jardin"
+                data-type="boolean" column-name="jardin" display-name-resource="garden"/>
+
+            <property category-resource="categoryLogement" name="nbPersonnes"
+                data-type="enumerated" column-name="nbPersonnes" display-name-resource="householdPeople">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="1" code="1" />
+                <option value="2" code="2" />
+                <option value="3" code="3" />
+                <option value="4 and more" code="4" />
+            </property>
+
+            <property category-resource="categoryAbonnement" name="origine"
+                data-type="string" column-name="canalInscription" display-name-resource="origine"/>
+
+            <property category-resource="categoryAbonnement" name="dateInscription" data-type="timestamp"
+                column-name="dateInscription" display-name-resource="dateInscription"/>
+                
+            <property category-resource="categoryAbonnement" name="dateOffersInscription" data-type="timestamp"
+                column-name="DATE_OFFERS_INSCRIPTION" display-name-resource="dateOffersInscription"/>
+
+            <property category-resource="categoryAbonnement"
+                name="dateDerniereModification" data-type="timestamp"
+                column-name="dateDerniereModification" display-name-resource="dateDerniereModification"/>
+
+            <property category-resource="categoryDesinscription"
+                name="dateOffersDesincrption" data-type="timestamp"
+                column-name="DATE_OFFERS_DESINCRPTION" display-name-resource="dateOffersUnsubscribe"/>
+
+            <property category-resource="categoryDesinscription" name="dateDesincrption"
+                data-type="date" column-name="dateDesincrption" display-name-resource="dateDesincrption"/>
+
+            <property category-resource="categoryDesinscription" name="canalDesinscription" data-type="string"
+                column-name="canalDesinscription" display-name-resource="canalDesinscription"/>
+
+            <property category-resource="categoryDesinscription" name="QuestionDes1"
+                data-type="string" column-name="QuestionDes1" display-name-resource="QuestionDes1"/>
+
+            <property category-resource="categoryDesinscription" name="QuestionDes2"
+                data-type="string" column-name="QuestionDes2" display-name-resource="QuestionDes2"/>
+
+            <property category-resource="categoryDesinscription" name="QuestionDes3"
+                data-type="string" column-name="QuestionDes3" display-name-resource="QuestionDes3"/>
+
+            <property category-resource="categoryDesinscription" name="QuestionDes4"
+                data-type="string" column-name="QuestionDes4" display-name-resource="QuestionDes4"/>
+
+            <property category-resource="categoryDesinscription" name="QuestionDes5"
+                data-type="string" column-name="QuestionDes5" display-name-resource="QuestionDes5"/>
+
+            <property category-resource="categoryDesinscription" name="RemarqueDes"
+                data-type="string" column-name="RemarqueDes"
+                display-name-resource="RemarqueDes"/>
+
+            <property category-resource="categoryOther" name="B2B" data-type="string"
+                column-name="B2B" display-name-resource="B2B"/>
+
+            <property category-resource="categoryOther" name="Magasin"
+                data-type="string" column-name="Magasin" display-name-resource="magasin">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="yes" code="1" />
+                <option value="no" code="0" />
+            </property>
+
+            <property category-resource="categoryOther" name="Joueur"
+                data-type="boolean" column-name="Joueur" display-name-resource="Joueur"/>
+
+            <property category-resource="categoryLEN" name="dateReponseEnqueteMagasin"
+                data-type="timestamp" column-name="date_reponse_enquete_magasin"
+                display-name-resource="dateReponseEnqueteMagasin"/>
+
+            <property category-resource="categoryLEN" name="reponseLoiLEN"
+                data-type="enumerated" column-name="reponse_loi_len" display-name-resource="reponseLoiLEN">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="castorama" code="1" />
+                <option value="castoramaPartenaires" code="0" />
+            </property>
+
+            <property category-resource="categoryLEN" name="dateReponseLoiLEN"
+                data-type="timestamp" column-name="date_reponse_loi_len" display-name-resource="dateReponseLoiLEN"/>
+
+            <property category-resource="sourceInscription" name="sourceInscription" 
+                data-type="string" column-name="source_inscription" display-name-resource="sourceInscription"/>
+				
+			<property category-resource="categoryOther" name="lastBDDCCExtraction"
+                data-type="date" column-name="LAST_BDDCC_EXTRACTION" display-name-resource="lastBDDCCExtraction"/>
+				
+        </table>
+
+        <!-- THEME FAVORIS NEWSLETTER -->
+        <table name="CASTO_THEME_FAVORIS_NEWSLETTER" type="multi" multi-column-name="seq" id-column-name="id">
+            <property category-resource="categoryThemes" name="themesFavoris"
+                required="true" column-name="theme_favori_id" data-type="array"
+                component-data-type="string" display-name-resource="themesFavoris"/>
+        </table>
+    </item-descriptor>
+
+    <!-- PARAGRAPHE NEWSLETTER obsolete -->
+    <item-descriptor name="paragrapheNewsletter" display-property="titre" display-name="Paragraphe">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_PARAGRAPHE_NEWSLETTER" type="primary" id-column-name="id">
+            <property category-resource="categoryRedactionnel" name="titre"
+                data-type="string" column-name="titre" display-name-resource="titre">
+            </property>
+            <property category-resource="categoryRedactionnel" name="contenu"
+                data-type="string" column-name="contenu" display-name-resource="contenu">
+            </property>
+            <property category-resource="categoryImage" name="urlImage"
+                data-type="string" column-name="url_image" display-name-resource="urlImage">
+            </property>
+            <property category-resource="categoryThemes" name="themeTraite"
+                data-type="String" required="true" column-name="theme_traite_id"
+                queryable="true" display-name-resource="themeTraite">
+            </property>
+        </table>
+    </item-descriptor>
+
+    <!-- ARCHIVE NEWSLETTER obsolete -->
+    <item-descriptor name="archiveNewsletter" display-property="titre" display-name="Archive">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_ARCHIVE_NEWSLETTER" type="primary" id-column-name="id">
+            <property category-resource="categoryInfos" name="emailExpediteur"
+                data-type="string" column-name="email_expediteur" display-name-resource="emailExpediteur"/>
+            <property category-resource="categoryInfos" name="date" data-type="string"
+                column-name="date_creation" display-name-resource="dateCreation"/>
+            <property category-resource="categoryRedactionnel" name="titre"
+                data-type="string" column-name="titre" display-name-resource="titre"/>
+            <property category-resource="categoryRedactionnel" name="introduction"
+                data-type="string" column-name="introduction" display-name-resource="introduction"/>
+            <property category-resource="categoryRedactionnel" name="divers"
+                data-type="string" column-name="divers" display-name-resource="divers"/>
+            <property category-resource="categoryOptions" name="toSend"
+                data-type="boolean" default="false" column-name="to_send" display-name-resource="toSend"/>
+        </table>
+
+        <!-- PARAGRAPHES DE LA NEWSLETTER -->
+        <table name="CASTO_ARCHIVE_CONT_PARAGRAPHE" type="multi" multi-column-name="seq" id-column-name="id">
+            <property category-resource="categoryRedactionnel" required="true"
+                name="paragraphes" column-name="paragraphe_contenu_id"
+                data-type="list" component-item-type="paragrapheNewsletter"
+                display-name-resource="paragraphes"/>
+        </table>
+    </item-descriptor>
+
+    <!-- THEME NEWSLETTER obsolete -->
+    <item-descriptor name="themeNewsletter" display-property="id" display-name="Theme">
+        <attribute name="resourceBundle" value="com.castorama.commerce.profile.UserProfileTemplateResources" />
+        <table name="CASTO_THEME_NEWSLETTER" type="primary" id-column-name="id">
+            <property name="id" data-type="string" column-name="id" display-name-resource="idThemeNL"/>
+        </table>
+    </item-descriptor>
+
+    <!-- MAILING obsolete -->
+    <item-descriptor name="mailing" display-name="Mailing">
+        <table name="casto_newsletter_mailing" type="primary" id-column-name="id">
+            <property name="id" />
+            <property name="name" data-type="string" column-name="name" />
+            <property name="subject" data-type="string" column-name="subject" />
+            <property name="uniqServerId" data-type="string" column-name="uniq_server_id" />
+            <property name="from" data-type="string" column-name="from_address" />
+            <property name="replyto" data-type="string" column-name="replyto" />
+            <property name="template" data-type="string" column-name="template_URL" />
+            <property name="sendAsHtml" data-type="enumerated"
+                default="yes" column-name="send_as_html">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="yes" code="1" />
+                <option value="no" code="0" />
+            </property>
+            <property name="sendAsText" data-type="enumerated"
+                default="yes" column-name="send_as_text">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="yes" code="1" />
+                <option value="no" code="0" />
+            </property>
+            <property name="params" data-type="binary" />
+            <property name="startTime" data-type="timestamp"
+                column-name="start_time" />
+            <property name="endTime" data-type="timestamp"
+                column-name="end_time" />
+            <property name="status" data-type="enumerated"
+                default="pending" column-name="status">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="pending" code="0" />
+                <option value="inprogress" code="1" />
+                <option value="canceled" code="2" />
+                <option value="completed" code="3" />
+                <option value="failed" code="4" />
+            </property>
+            <property name="numToSend" data-type="int"
+                column-name="num_profiles" />
+            <property name="numSent" data-type="int"
+                column-name="num_sent" />
+            <property name="numBounces" data-type="int"
+                column-name="num_bounces" />
+            <property name="numErrors" data-type="int"
+                column-name="num_errors" />
+            <property name="fillFromTemplate" data-type="boolean"
+                column-name="fill_from_templ" />
+        </table>
+
+        <table name="casto_newsletter_user_mailing" type="multi"
+            id-column-name="mailing_id" multi-column-name="idx">
+            <property name="recipients" data-type="list"
+                component-item-type="abonnementNewsletter" column-name="user_id" />
+        </table>
+
+    </item-descriptor>
+    
+    
+    <!-- EXPERIAN REQUEST -->
+    <item-descriptor name="experianRequest" display-property="login" display-name="Login" item-expire-timeout="180000" query-expire-timeout="180000" query-cache-size="2000">
+        <attribute name="resourceBundle" value="com.castorama.integration.experian.ExperianTemplateResources" />
+        <table name="CASTO_EXPERIAN_REQUESTS" type="primary" id-column-name="id">
+            <property category-resource="categoryAbonnement" name="civilite"
+                data-type="enumerated" column-name="CIVILITE" display-name-resource="title">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="miss" code="3"/>
+                <option value="mrs" code="2" />
+                <option value="mr" code="1"/>
+                <option value="organization"  code="5"/>
+            </property>
+            <property category-resource="categoryAbonnement" name="firstName" data-type="string"
+                 column-name="FIRST_NAME" display-name-resource="firstName"/>
+            <property category-resource="categoryAbonnement" name="lastName" data-type="string"
+                 column-name="LAST_NAME" display-name-resource="lastName"/>
+            <property name="login" display-name-resource="login" data-type="string" queryable="true" readable="true" column-name="EMAIL" category-resource="email">
+              <attribute name="unique" value="true"/>
+              <attribute name="propertySortPriority" value="-7"/>
+            </property>
+            <property name="address1" column-name="ADDRESS1" display-name-resource="street" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+            <property name="address2" column-name="ADDRESS2" display-name-resource="apartment" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="20" />
+            </property>
+            <property name="address3" column-name="ADDRESS3" display-name-resource="building" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="30" />
+            </property>
+            <property name="locality" column-name="ADDRESS4" display-name-resource="dummy" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="30" />
+            </property>
+            <property name="postalCode" column-name="POSTAL_CODE" display-name-resource="postalCode" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="60" />
+            </property>
+            <property name="city" column-name="CITY" display-name-resource="city" category-resource="categoryAddress" property-type="com.castorama.commerce.profile.CityPropertyDescriptor">
+                <attribute name="propertySortPriority" value="50" />
+            </property>
+            <property category-resource="categoryAbonnement" name="country"
+                data-type="string" column-name="PAYS" display-name-resource="country"/>
+            <property category-resource="categoryOptions" name="receiveEmail"
+                data-type="enumerated" column-name="RECEIVE_EMAIL" display-name-resource="receiveEmail">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="" code="0" />
+                <option value="true" code="1" />
+                <option value="false" code="2" />
+            </property>
+            <property name="reseiveOffers" data-type="enumerated" column-name="RESEIVE_OFFERS"
+                category-resource="categoryOptions" display-name-resource="reseiveOffers">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="" code="0" />
+                <option value="true" code="1" />
+                <option value="false" code="2" />
+            </property>
+            <property category-resource="categoryAbonnement" name="sourceInscription"
+                data-type="string" column-name="SOURCE_INSCRIPTION" display-name-resource="sourceInscription"/>
+            <property category-resource="categoryAbonnement" name="dateInscription" data-type="timestamp"
+                column-name="DATEINSCRIPTION" display-name-resource="dateInscription"/>
+            <property category-resource="categoryDesinscription" name="dateDesincrption"
+                data-type="date" column-name="DATEDESINCRIPTION" display-name-resource="dateDesincrption"/>
+            <property category-resource="categoryAbonnement" name="dateOffersInscription" data-type="timestamp"
+                column-name="DATE_OFFERS_INSCRIPTION" display-name-resource="dateOffersInscription"/>
+            <property category-resource="categoryDesinscription"
+                name="dateOffersDesincrption" data-type="timestamp"
+                column-name="DATE_OFFERS_DESINCRPTION" display-name-resource="dateOffersUnsubscribe"/>
+            <property name="phoneNumber" display-name-resource="phoneNumber" data-type="string" column-name="PHONE_NUMBER" category-resource="phone">
+              <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="phoneNumber2" column-name="PHONE_NUMBER_2" data-type="string" category-resource="phone2"
+                display-name-resource="phoneNumber2">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+            <property category-resource="dummy" name="customerCasto"
+                data-type="boolean" column-name="CUSTOMER_CASTO" display-name-resource="customerCasto">
+            </property>
+            <property category-resource="dummy" name="storeReference"
+                data-type="string" column-name="STORE_REFERENCE" display-name-resource="storeReference"/>
+            <property category-resource="categoryAbonnement" name="carteAtout"
+                data-type="boolean" column-name="CARTEATOUT" display-name-resource="castCardOwner"/>
+            <property category-resource="categoryLogement" name="jardin"
+                data-type="boolean" column-name="JARDIN" display-name-resource="garden"/>
+            <property category-resource="categoryLogement" name="maison"
+                data-type="boolean" column-name="MAISON" display-name-resource="homeType"/>
+            <property category-resource="categoryLogement" name="proprietaire_locataire"
+                data-type="enumerated" column-name="PROPRIETAIRE_LOCATAIRE" display-name-resource="status">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="Owner" />
+                <option value="Tenant" />
+            </property>
+            <property category-resource="categoryLogement" name="maisonCampagne"
+                data-type="boolean" column-name="MAISONCAMPAGNE" display-name-resource="maisonCampagne"/>
+            <property category-resource="categoryLogement" name="nbPersonnes"
+                data-type="enumerated" column-name="NBPERSONNES" display-name-resource="householdPeople">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="1" code="1" />
+                <option value="2" code="2" />
+                <option value="3" code="3" />
+                <option value="4 and more" code="4" />
+            </property>
+            <property name="id" display-name-resource="userId" category-resource="userId" column-name="USER_ID">
+            </property>
+            <property name="dateOfBirth" display-name-resource="dateOfBirth" data-type="date" column-name="DATE_OF_BIRTH" category-resource="categoryBasics" >
+                <attribute name="propertySortPriority" value="50"/>
+            </property>
+            <property name="registrationDate" display-name-resource="registrationDate" data-type="timestamp" column-name="REGISTRATION_DATE" category-resource="categoryActivity" >
+                <attribute name="propertySortPriority" value="-1"/>
+            </property>
+            <property category-resource="categoryMiscellaneous" name="DATEMAJPROFIL"
+                data-type="date" column-name="dateMAJprofil"
+                display-name-resource="dateMAJprofil" >
+            </property>
+            <property category-resource="categoryMiscellaneous" name="typeMAJprofil"
+                data-type="enumerated" default="" column-name="TYPEMAJPROFIL"
+                display-name-resource="typeMAJprofil">
+                <attribute name="useCodeForValue" value="true" />
+                <option value="Creation" code="0" />
+                <option value="Modification" code="1" />
+            </property>
+            <property category-resource="requestSource" name="requestSource"
+                data-type="enumerated" default="" column-name="REQUEST_SOURCE"
+                display-name-resource="requestSource">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="web" code="0" />
+                <option value="full" code="1" />
+                <option value="mass" code="2" />
+                <option value="web_serv" code="3" />
+            </property>
+        </table>
+    </item-descriptor>
+    
+    <!-- EXPERIAN REQUEST HISTORY -->
+    <item-descriptor name="experianRequestHistory" display-property="login" display-name="Login" item-expire-timeout="180000" query-expire-timeout="180000" query-cache-size="2000">
+        <attribute name="resourceBundle" value="com.castorama.integration.experian.ExperianTemplateResources" />
+        <table name="CASTO_EXPERIAN_HISTORY" type="primary" id-column-name="id">
+            <property name="exportDate" data-type="date" column-name="EXPORT_DATE" >
+            </property>
+            <property category-resource="categoryAbonnement" name="civilite"
+                data-type="enumerated" column-name="CIVILITE" display-name-resource="title">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="miss" code="3"/>
+                <option value="mrs" code="2" />
+                <option value="mr" code="1"/>
+                <option value="organization"  code="5"/>
+            </property>
+            <property category-resource="categoryAbonnement" name="firstName" data-type="string"
+                 column-name="FIRST_NAME" display-name-resource="firstName"/>
+            <property category-resource="categoryAbonnement" name="lastName" data-type="string"
+                 column-name="LAST_NAME" display-name-resource="lastName"/>
+            <property name="login" display-name-resource="login" data-type="string" queryable="true" readable="true" column-name="EMAIL" category-resource="email">
+              <attribute name="unique" value="true"/>
+              <attribute name="propertySortPriority" value="-7"/>
+            </property>
+            <property name="address1" column-name="ADDRESS1" display-name-resource="street" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+            <property name="address2" column-name="ADDRESS2" display-name-resource="apartment" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="20" />
+            </property>
+            <property name="address3" column-name="ADDRESS3" display-name-resource="building" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="30" />
+            </property>
+            <property name="locality" column-name="ADDRESS4" display-name-resource="dummy" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="30" />
+            </property>
+            <property name="postalCode" column-name="POSTAL_CODE" display-name-resource="postalCode" category-resource="categoryAddress">
+                <attribute name="propertySortPriority" value="60" />
+            </property>
+            <property name="city" column-name="CITY" display-name-resource="city" category-resource="categoryAddress" property-type="com.castorama.commerce.profile.CityPropertyDescriptor">
+                <attribute name="propertySortPriority" value="50" />
+            </property>
+            <property category-resource="categoryAbonnement" name="country"
+                data-type="string" column-name="PAYS" display-name-resource="country"/>
+            <property category-resource="categoryOptions" name="receiveEmail"
+                data-type="enumerated" column-name="RECEIVE_EMAIL" display-name-resource="receiveEmail">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="" code="0" />
+                <option value="true" code="1" />
+                <option value="false" code="2" />
+            </property>
+            <property name="reseiveOffers" data-type="enumerated" column-name="RESEIVE_OFFERS"
+                category-resource="categoryOptions" display-name-resource="reseiveOffers">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="" code="0" />
+                <option value="true" code="1" />
+                <option value="false" code="2" />
+            </property>
+            <property category-resource="categoryAbonnement" name="sourceInscription"
+                data-type="string" column-name="SOURCE_INSCRIPTION" display-name-resource="sourceInscription"/>
+            <property category-resource="categoryAbonnement" name="dateInscription" data-type="timestamp"
+                column-name="DATEINSCRIPTION" display-name-resource="dateInscription"/>
+            <property category-resource="categoryDesinscription" name="dateDesincrption"
+                data-type="date" column-name="DATEDESINCRIPTION" display-name-resource="dateDesincrption"/>
+            <property category-resource="categoryAbonnement" name="dateOffersInscription" data-type="timestamp"
+                column-name="DATE_OFFERS_INSCRIPTION" display-name-resource="dateOffersInscription"/>
+            <property category-resource="categoryDesinscription"
+                name="dateOffersDesincrption" data-type="timestamp"
+                column-name="DATE_OFFERS_DESINCRPTION" display-name-resource="dateOffersUnsubscribe"/>
+            <property name="phoneNumber" display-name-resource="phoneNumber" data-type="string" column-name="PHONE_NUMBER" category-resource="phone">
+              <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="phoneNumber2" column-name="PHONE_NUMBER_2" data-type="string" category-resource="phone2"
+                display-name-resource="phoneNumber2">
+                <attribute name="propertySortPriority" value="10" />
+            </property>
+            <property category-resource="dummy" name="customerCasto"
+                data-type="boolean" column-name="CUSTOMER_CASTO" display-name-resource="customerCasto">
+            </property>
+            <property category-resource="dummy" name="storeReference"
+                data-type="string" column-name="STORE_REFERENCE" display-name-resource="storeReference"/>
+            <property category-resource="categoryAbonnement" name="carteAtout"
+                data-type="boolean" column-name="CARTEATOUT" display-name-resource="castCardOwner"/>
+            <property category-resource="categoryLogement" name="jardin"
+                data-type="boolean" column-name="JARDIN" display-name-resource="garden"/>
+            <property category-resource="categoryLogement" name="maison"
+                data-type="boolean" column-name="MAISON" display-name-resource="homeType"/>
+            <property category-resource="categoryLogement" name="proprietaire_locataire"
+                data-type="enumerated" column-name="PROPRIETAIRE_LOCATAIRE" display-name-resource="status">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="Owner" />
+                <option value="Tenant" />
+            </property>
+            <property category-resource="categoryLogement" name="maisonCampagne"
+                data-type="boolean" column-name="MAISONCAMPAGNE" display-name-resource="maisonCampagne"/>
+            <property category-resource="categoryLogement" name="nbPersonnes"
+                data-type="enumerated" column-name="NBPERSONNES" display-name-resource="householdPeople">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="1" code="1" />
+                <option value="2" code="2" />
+                <option value="3" code="3" />
+                <option value="4 and more" code="4" />
+            </property>
+            <property name="id" display-name-resource="userId" category-resource="userId" column-name="USER_ID">
+            </property>
+            <property name="dateOfBirth" display-name-resource="dateOfBirth" data-type="date" column-name="DATE_OF_BIRTH" category-resource="categoryBasics" >
+                <attribute name="propertySortPriority" value="50"/>
+            </property>
+            <property name="registrationDate" display-name-resource="registrationDate" data-type="timestamp" column-name="REGISTRATION_DATE" category-resource="categoryActivity" >
+                <attribute name="propertySortPriority" value="-1"/>
+            </property>
+            <property category-resource="categoryMiscellaneous" name="DATEMAJPROFIL"
+                data-type="date" column-name="dateMAJprofil"
+                display-name-resource="dateMAJprofil" >
+            </property>
+            <property category-resource="categoryMiscellaneous" name="typeMAJprofil"
+                data-type="enumerated" default="" column-name="TYPEMAJPROFIL"
+                display-name-resource="typeMAJprofil">
+                <attribute name="useCodeForValue" value="true" />
+                <option value="Creation" code="0" />
+                <option value="Modification" code="1" />
+            </property>
+            <property category-resource="requestSource" name="requestSource"
+                data-type="enumerated" default="" column-name="REQUEST_SOURCE"
+                display-name-resource="requestSource">
+                <attribute name="useCodeForValue" value="false" />
+                <option value="web" code="0" />
+                <option value="full" code="1" />
+                <option value="mass" code="2" />
+                <option value="web_serv" code="3" />
+            </property>
+        </table>
+    </item-descriptor>
+
+    <!-- BDDCC EXECUTION -->
+    <item-descriptor name="bddccExecution" display-property="id" display-name="Login" item-expire-timeout="180000" query-expire-timeout="180000" query-cache-size="20">
+        <attribute name="resourceBundle" value="com.castorama.integration.bddcc.BDDCCTemplateResources" />
+        <table name="CASTO_BDDCC_EXECUTION" type="primary" id-column-name="execution_id">
+          <property name="id" data-type="string" column-name="execution_id" display-name-resource="id" >
+            <attribute name="propertySortPriority" value="0" />
+          </property>
+          <property name="startDate" data-type="timestamp" column-name="START_DATE" display-name-resource="startDate" >
+            <attribute name="propertySortPriority" value="5" />
+          </property>
+          <property name="endDate" data-type="timestamp" column-name="END_DATE" display-name-resource="endDate" >
+            <attribute name="propertySortPriority" value="10" />
+          </property>
+          <property name="selectedClients" data-type="int" column-name="SELECTED_CLIENTS" display-name-resource="selectedClients" >
+            <attribute name="propertySortPriority" value="15" />
+          </property>
+          <property name="processedClients" data-type="int" column-name="PROCESSED_CLIENTS" display-name-resource="processedClients" >
+            <attribute name="propertySortPriority" value="20" />
+          </property>
+        </table>
+    </item-descriptor>
+    
+    <!-- cgv info for confirmation emails -->
+    <item-descriptor name="cgv_info" display-name="cgv_info" cache-mode="disabled" >
+        <table name="CASTO_CGV_INFO" type="primary" id-column-name="id">
+          <property name="id" data-type="string" column-name="ID" />
+          <property name="lastModifiedDate" data-type="timestamp" column-name="LAST_MODIFIED_DATE" />
+        </table>
+    </item-descriptor>
+    
+</gsa-template>

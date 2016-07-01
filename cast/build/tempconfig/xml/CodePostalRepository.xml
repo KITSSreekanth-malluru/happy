@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<!DOCTYPE gsa-template
+        PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+
+  <header>
+    <name>CASTORAMA DIRECT 2003 CODES POSTAUX</name>
+    <author>Alain MONIER : Getinor</author>
+    <version></version>
+  </header>
+
+
+
+<!-- temps de visite -->
+  <item-descriptor name="code_postal" display-property="code_postal" display-name="Code Postal" query-cache-size="500">
+	<table name="CASTO_CODES_POSTAUX" type="primary" id-column-name="repositoryId">
+		<property name="code_postal" data-type="string" column-name="code_postal" display-name="Code Postal"/>
+		<property name="ville" data-type="string" column-name="ville" display-name="Ville"/>
+	</table>
+  </item-descriptor>
+
+</gsa-template>

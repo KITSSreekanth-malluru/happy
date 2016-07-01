@@ -1,0 +1,34 @@
+<p>
+  <fmt:message key="email.confirmation.header.attention">
+    <fmt:param>
+      <strong>
+        <dsp:droplet name="/atg/dynamo/droplet/Switch">
+          <dsp:param name="value" param="user.civilite"/>
+          <dsp:oparam name="miss"><fmt:message key="msg.address.prefix.miss"/>&nbsp;</dsp:oparam>
+          <dsp:oparam name="mrs"><fmt:message key="msg.address.prefix.mrs"/>&nbsp;</dsp:oparam>
+          <dsp:oparam name="mr"><fmt:message key="msg.address.prefix.mr"/>&nbsp;</dsp:oparam>
+        </dsp:droplet> ${prenom}&nbsp;${nom}
+      </strong>
+    </fmt:param>
+  </fmt:message>
+</p>
+<p>
+  <dsp:droplet name="/atg/dynamo/droplet/Switch">
+    <dsp:param name="value" param="user.civilite"/>
+    <dsp:oparam name="miss">
+      <fmt:message key="email.confirmation.header.dear.female">
+        <fmt:param><fmt:message key="msg.address.prefix.full.miss" /></fmt:param>
+      </fmt:message>
+    </dsp:oparam>
+    <dsp:oparam name="mrs">
+      <fmt:message key="email.confirmation.header.dear.female">
+        <fmt:param><fmt:message key="msg.address.prefix.full.mrs" /></fmt:param>
+      </fmt:message>
+    </dsp:oparam>
+    <dsp:oparam name="mr">
+      <fmt:message key="email.confirmation.header.dear.male">
+        <fmt:param><fmt:message key="msg.address.prefix.full.mr" /></fmt:param>
+      </fmt:message>
+    </dsp:oparam>
+  </dsp:droplet>
+</p>

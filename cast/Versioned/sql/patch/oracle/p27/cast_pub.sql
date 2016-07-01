@@ -1,0 +1,13 @@
+ALTER TABLE cast_grouped_product ADD IMPLANTA_MESSAGE VARCHAR2(50) DEFAULT 'Selon implantation type';
+
+ALTER TABLE casto_category ADD custom_page_link VARCHAR2(250) NULL;
+ALTER TABLE casto_category ADD products_number_content VARCHAR2(50) NULL;
+ALTER TABLE casto_category ADD subcategories_content VARCHAR2(500) NULL;
+
+ALTER TABLE casto_sku ADD CUSTOM_DELIVERY_TERM NUMBER NULL;
+ALTER TABLE casto_sku ADD CD_START_DATE DATE NULL;
+ALTER TABLE casto_sku ADD CD_END_DATE DATE NULL;
+
+ALTER TABLE CAST_CATALOGUE ADD CATALOG_WRAP_ID VARCHAR2(250) NULL;
+
+commit;

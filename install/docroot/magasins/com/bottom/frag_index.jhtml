@@ -1,0 +1,5 @@
+<DROPLET BEAN="/castorama/droplet/RequestFromVerity">
+<OPARAM NAME="false">
+<droplet src="../../../com/bottom/frag_index.jhtml"></droplet>
+</OPARAM>
+</DROPLET>

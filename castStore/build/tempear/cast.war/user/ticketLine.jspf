@@ -1,0 +1,123 @@
+  <dsp:droplet name="/com/castorama/droplet/SKUFindDroplet">
+    <dsp:param name="code" param="line.productId" />
+    <dsp:param name="creationDate" param="ticket.ticketDate" />
+    
+    <dsp:oparam name="output">
+      <dsp:getvalueof var="skuExists"   value="true" vartype="java.lang.Boolean"/>
+      <dsp:getvalueof var="imageURL"    param="sku.miniatureImage.url" />
+      <c:if test="${empty imageURL}">
+        <dsp:getvalueof var="imageURL"    value="/images/Product_Not_Available.gif" />
+      </c:if>
+      <dsp:getvalueof var="productName" param="sku.displayName" />
+
+      <dsp:getvalueof var="set" param="sku.parentProducts.updatedValue"/>
+      <dsp:param name="list" value="${castCollection:list(set)}"/>
+      
+      <dsp:droplet name="/com/castorama/droplet/CastProductLinkDroplet">
+        <dsp:param name="productId" param="list[0].repositoryId"/>
+        <dsp:param name="categoryId" param="list[0].parentCategory.repositoryId"/>
+        <dsp:param name="navAction" value="jump"/>
+        <dsp:param name="navCount" value="0"/>
+        <dsp:oparam name="output">
+          <dsp:getvalueof var="templateUrl" param="url"/>
+        </dsp:oparam>
+      </dsp:droplet>
+      
+      
+    </dsp:oparam>
+    <dsp:oparam name="empty">
+      <dsp:getvalueof var="skuExists"   value="false" vartype="java.lang.Boolean"/>
+      <dsp:getvalueof var="imageURL"    value="/images/Product_Not_Available.gif" />
+      <dsp:getvalueof var="productName" param="line.productLabel" />
+    </dsp:oparam>
+  </dsp:droplet>
+
+
+<tr name="<dsp:valueof param="ticket.repositoryId"/>_top" style="${display_style}">
+  <td class="tblSplitter"><div><!--~--></div></td>
+  <td class="tblSplitter" colspan="3"><div><!--~--></div></td>
+  <td class="tblSplitter"><div><!--~--></div></td>
+</tr>
+
+    <tr name="<dsp:valueof param="ticket.repositoryId"/>_body" style="${display_style}">
+      <td colspan="2">
+        <c:choose>
+          <c:when test="${skuExists}">
+            <div name="<dsp:valueof param="ticket.repositoryId"/>_image" class="productItemImage">
+              <dsp:a page="${templateUrl}" title="${productName}" target="_blank">
+                <dsp:img src="${imageURL}" alt="" title="${productName}" height="43" width="43" />
+              </dsp:a>
+            </div>
+            <div class="productItemDescription">
+              <h3>
+                <dsp:a page="${templateUrl}" title="${productName}" target="_blank">
+                  ${productName}
+                </dsp:a>
+              </h3>
+              <%-- 0001975: [Purchase History] Don't display word 'Ref' if product id isn't existing in ticket line  --%>
+              <dsp:droplet name="IsEmpty">
+                <dsp:param name="value" param="line.productId"/>
+                <dsp:oparam name="false">
+                  <div class="refNum">
+                    <fmt:message key="client.store.orders.product.ref"/>&nbsp; <dsp:valueof param="line.productId"/>
+                  </div>
+                </dsp:oparam>
+              </dsp:droplet>
+              <div>
+                <fmt:message key="client.store.orders.price"/>&nbsp;<fmt:message key="common.colon"/>&nbsp;<strong><dsp:valueof param="line.unitPriceTTC" converter="number" format="0.00"/>&nbsp;&euro;</strong>
+                <fmt:message key="client.store.orders.x"/>&nbsp;<fmt:message key="client.store.orders.quantity"/>&nbsp;<fmt:message key="common.colon"/>&nbsp;<dsp:valueof param="line.productQuantity" converter="number" format="0.####"/>
+              </div>
+            </div>
+          </c:when>
+          <c:otherwise>
+            <div class="productItemImage">
+              <dsp:img src="${imageURL}" alt="" title="${productName}" height="43" width="43" />
+            </div>
+            <div class="productItemDescription">
+              <h3>${productName}</h3>
+              <dsp:droplet name="IsEmpty">
+                <dsp:param name="value" param="line.productId"/>
+                <dsp:oparam name="false">
+                  <div class="refNum">
+                    <fmt:message key="client.store.orders.product.ref"/>&nbsp; <dsp:valueof param="line.productId"/>
+                  </div>
+                </dsp:oparam>
+              </dsp:droplet>
+              <div>
+                <fmt:message key="client.store.orders.price"/>&nbsp;<fmt:message key="common.colon"/>&nbsp;<strong><dsp:valueof param="line.unitPriceTTC" converter="number" format="0.00"/>&nbsp;&euro;</strong>
+                <fmt:message key="client.store.orders.x"/>&nbsp;<fmt:message key="client.store.orders.quantity"/>&nbsp;<fmt:message key="common.colon"/>&nbsp;<dsp:valueof param="line.productQuantity" converter="number" format="0.####"/>
+              </div>
+            </div>
+          </c:otherwise>
+        </c:choose>
+      </td>
+      <td>
+        <dsp:getvalueof var="priceTTC" param="line.unitPriceTTC" />
+        <dsp:getvalueof var="quantity" param="line.productQuantity" />
+        
+        <fmt:message key="client.store.orders.product.total"/>&nbsp;<fmt:message key="common.colon"/>&nbsp;<strong><dsp:valueof value="${priceTTC * quantity}" converter="number" format="0.00"/>&nbsp;&euro;&nbsp;<fmt:message key="client.store.orders.TTC" /></strong>
+      </td>
+      <td colspan="2" class="lastCell center">
+        <c:if test="${skuExists}">
+          
+            <dsp:a page="${templateUrl}" title="${productName}" target="_blank"> 
+              <div class="productLinkArrow"><img style="float:right;padding: 1px 5px 0px 0px" src="/images/icoBlueArrow.png"/></div>
+              <div class="productLinkText"><strong><fmt:message key="client.store.orders.product.link1"/></strong><br/><fmt:message key="client.store.orders.product.link2"/></div>
+            </dsp:a>
+          
+        </c:if>
+      </td>
+  </tr>	
+
+
+<tr name="<dsp:valueof param="ticket.repositoryId"/>_bottom" style="${display_style}">
+  <td class="tblSplitter"><div><!--~--></div></td>
+  <td class="tblSplitter" colspan="3"><div><!--~--></div></td>
+  <td class="tblSplitter"><div><!--~--></div></td>
+</tr>
+
+<tr name="<dsp:valueof param="ticket.repositoryId"/>_productRow" style="${display_style}">
+  <td/>
+  <td class="productRowEnd noPadding" colspan="3"><div><!--~--></div></td>
+  <td/>
+</tr>

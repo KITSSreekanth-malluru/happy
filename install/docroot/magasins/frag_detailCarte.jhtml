@@ -1,0 +1,254 @@
+<DECLAREPARAM NAME="strUrlMagasin" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="strUrl" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="multi" CLASS="java.lang.String" DESCRIPTION="">
+<DECLAREPARAM NAME="magasinid" CLASS="java.lang.Integer" DESCRIPTION="">
+<DECLAREPARAM NAME="regionid" CLASS="java.lang.Integer" DESCRIPTION="">
+<java>
+	String strUrl3 = "monMagasin.jhtml?magasinid=" + request.getParameter("magasinid") +"&regionid=" + request.getParameter("regionid");
+	request.setParameter("strUrlMagasin",strUrl3);
+</java>
+<DROPLET BEAN="/atg/dynamo/droplet/Switch">
+<param NAME="value" VALUE="param:magasinid">
+	<OPARAM NAME="default">
+		<DROPLET BEAN="/atg/dynamo/droplet/Redirect">
+		<param NAME="url" VALUE="param:strUrlMagasin">
+		</DROPLET>
+	</OPARAM>
+	<OPARAM NAME="unset">
+	</OPARAM>
+</DROPLET>
+<table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td class="t">&nbsp;&nbsp;<span class="t">Vous &ecirc;tes ici :</span>
+    	<DROPLET BEAN="/atg/targeting/RepositoryLookup">
+    		<param NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+    		<param NAME="fireContentEvent" VALUE="false">
+    		<param NAME="fireContentTypeEvent" VALUE="false">
+    		<param NAME="itemDescriptor" VALUE="region">
+    		<param NAME="id" VALUE="param:regionid">
+    		<param NAME="elementName" VALUE="region">
+    			<OPARAM NAME="output">
+    			<img src="/com/img/fleche_bleue.gif" width="12" height="7" alt="" border="0" /><a href="index.jhtml" target="_top">La carte des magasins > France</a> > R&eacute;gion <valueof param="region.nom"/>
+    			</OPARAM>
+    	</DROPLET>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<droplet src="/com/frag_linkRetour.jhtml"/>
+<table cellpadding="0" cellspacing="0" border="0" width="90%">
+  <tbody>
+    <tr>
+      <td class="t">
+        Avec plus de 90 magasins Castorama en France, où que vous soyez, il y a toujours un magasin Castorama pr&egrave;s de chez vous.
+        <br />
+        Id&eacute;es, conseils, produits et services... retrouvez-nous vite dans votre magasin Castorama !
+        <br />
+        <br />
+      </td>
+    </tr>
+  <DROPLET BEAN="/atg/dynamo/droplet/Switch">
+  <param NAME="value" VALUE="param:multi">
+  	<OPARAM NAME="1">
+    <tr>
+      <td class="tr">
+        <b>Il existe plusieurs magasins pour cette ville, veuillez en choisir un dans le menu d&eacute;roulant.</b>
+        <br />
+      </td>
+    </tr>
+  	</OPARAM>
+  	<OPARAM NAME="unset">
+  	</OPARAM>
+  </DROPLET>
+  </tbody>
+</table>
+<table border="0" width="85%" cellpadding="0" cellspacing="5">
+  <tbody>
+    <tr>
+      <td class="t" valign="top" width="50%"><nobr><span class="stibl"><b>ACC&Egrave;S G&Eacute;N&Eacute;RAL par la carte</b></span></nobr>
+        <br /><img src="/com/img/px_jaune.gif" width="220" height="1" alt="" border="0" />
+        <br /><img src="/com/img/1pixel.gif" height="5" alt="" border="0" />
+        <br />Cliquer sur la r&eacute;gion de votre choix
+      </td>
+      <td class="t" valign="top" width="50%"><nobr><span class="stibl"><b>ACC&Egrave;S RAPIDE par le menu d&eacute;roulant</b></span></nobr>
+        <br /><img src="/com/img/px_jaune.gif" width="220" height="1" alt="" border="0" />
+        <br /><img src="/com/img/1pixel.gif" height="5" alt="" border="0" />
+        <br />S&eacute;lectionner le magasin de votre choix &agrave; l'aide du menu d&eacute;roulant ci-dessous.
+      </td>
+    </tr>
+    <tr>
+    	<DROPLET BEAN="/atg/targeting/RepositoryLookup">
+    		<param NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+    		<param NAME="fireContentEvent" VALUE="false">
+    		<param NAME="fireContentTypeEvent" VALUE="false">
+    		<param NAME="itemDescriptor" VALUE="region">
+    		<param name="id" value="param:regionid">
+    		<param name="elementName" value="region">
+    			<OPARAM NAME="output">
+      <td class="t"><img src="param:region.img" border=0 usemap="#carteregion"></td>
+    			</OPARAM>
+    	</DROPLET>
+          <form name="form" method="post" action="detailCarte.jhtml">
+          <input type="hidden" name="regionid" value="param:regionid">
+      <td align="center" valign="top" class="t">&nbsp;<br>
+          <select name="magasinid" class="formCom" onchange="if(this.selectedIndex>0)go(document.form);">
+          <option value="default">Choisissez un magasin</option>
+          <DROPLET BEAN="/atg/dynamo/droplet/SQLQueryForEach">
+          <param NAME="queryBean" VALUE="bean:/castorama/SQLQueryMagasin">
+          <OPARAM NAME="output">
+          <option value="param:element.column[2]"><valueof param="element.column[0]"/>-<valueof param="element.column[1]"/></option>
+          </OPARAM>
+          </DROPLET>
+        </select>
+      </td>
+      </form>
+    </tr>
+  </tbody>
+</table>
+<br />
+
+<DROPLET BEAN="/atg/dynamo/droplet/Switch">
+	<param NAME="value" VALUE="param:regionid">
+	<OPARAM NAME="1">
+    <map NAME="carteregion">
+    <area shape="poly" coords="89,82, 154,82, 154,96, 118,96, 118,105, 105,105, 105,96, 88,96" href="monMagasin.jhtml?magasinid=1000010&regionid=1" target="" alt="Dunkerque" />
+        <area shape="poly" coords="34,161, 86,161, 86,174, 66,174, 66,182, 54,182, 54,174, 35,174, 32,174" href="monMagasin.jhtml?magasinid=47&regionid=1" target="" alt="Darnetal" />
+        <area shape="poly" coords="43,207, 58,207, 58,198, 72,198, 72,206, 96,206, 96,220, 40,220, 40,207, 46,207, 52,207" href="monMagasin.jhtml?magasinid=1&regionid=1" target="" alt="Barentin" />
+        <area shape="poly" coords="2,189, 54,189, 54,202, 24,202, 24,209, 11,209, 11,201, 2,201" href="monMagasin.jhtml?magasinid=8&regionid=1" target="" alt="Le Havre" />
+        <area shape="poly" coords="137,167, 151,167, 151,176, 212,176, 212,188, 114,188, 114,177, 137,177" href="monMagasin.jhtml?magasinid=121&regionid=1" target="" alt="Henin-Beaumont" />
+        <area shape="rect" coords="268,16,325,41" href="monMagasin.jhtml?magasinid=78&regionid=1" target="" alt="Bondue" />
+        <area shape="rect" coords="244,64,289,87" href="monMagasin.jhtml?magasinid=92&regionid=1" target="" alt="Englos" />
+        <area shape="poly" coords="274,104, 274,91, 307,91, 307,83, 332,83, 332,93, 369,93, 369,107, 274,107" href="monMagasin.jhtml?magasinid=114&regionid=1" target="" alt="Hellemmes" />
+    </map>
+	</OPARAM>
+	
+	<OPARAM NAME="2">
+    <map NAME="carteregion">
+    <area shape="rect" coords="268,36,315,62" href="monMagasin.jhtml?magasinid=700002&regionid=2" target="" alt="Terville" />
+        <area shape="rect" coords="181,52,222,76" href="monMagasin.jhtml?magasinid=122&regionid=2" target="" alt="Reims" />
+        <area shape="rect" coords="285,68,327,85" href="monMagasin.jhtml?magasinid=65&regionid=2" target="" alt="Metz" />
+        <area shape="rect" coords="239,108,313,131" href="monMagasin.jhtml?magasinid=102&regionid=2" target="" alt="Vandoeuvre" />
+        <area shape="rect" coords="320,95,388,120" href="monMagasin.jhtml?magasinid=100&regionid=2" target="" alt="Lappertheim" />
+        <area shape="rect" coords="323,123,370,145" href="monMagasin.jhtml?magasinid=101&regionid=2" target="" alt="Colmar" />
+        <area shape="rect" coords="312,150,384,172" href="monMagasin.jhtml?magasinid=55&regionid=2" target="" alt="Kingersheim" />
+        <area shape="rect" coords="237,149,309,173" href="monMagasin.jhtml?magasinid=74&regionid=2" target="" alt="Montb&eacute;liard" />
+        <area shape="rect" coords="182,171,217,197" href="monMagasin.jhtml?magasinid=105&regionid=2" target="" alt="Marsannay-la-C&ocirc;te" />
+        <area shape="rect" coords="235,180,294,205" href="monMagasin.jhtml?magasinid=44&regionid=2" target="" alt="Besan&ccedil;on" />
+    
+    </map>
+	</OPARAM>
+	
+	<OPARAM NAME="3">
+    <map NAME="carteregion">
+    <area SHAPE="poly" ALT="Cap Malo" COORDS="159,133, 146,133, 146,109, 202,109, 202,124, 159,124" HREF="monMagasin.jhtml?magasinid=1800004&regionid=3">
+    <area shape="rect" coords="167,80,232,103" href="monMagasin.jhtml?magasinid=52&regionid=3" target="" alt="H&eacute;rouville" />
+        <area shape="rect" coords="14,97,52,119" href="monMagasin.jhtml?magasinid=64&regionid=3" target="" alt="Brest" />
+        <area shape="rect" coords="34,123,88,146" href="detailCarte.jhtml?multi=1&regionid=3" target="" alt="Quimper" />
+        <area shape="rect" coords="103,133,161,144" href="monMagasin.jhtml?magasinid=125&regionid=3" target="" alt="Rennes" />
+        <area shape="rect" coords="186,126,236,146" href="monMagasin.jhtml?magasinid=51&regionid=3" target="" alt="Le Mans" />
+        <area shape="rect" coords="89,153,132,171" href="monMagasin.jhtml?magasinid=66&regionid=3" target="" alt="Vannes" />
+        <area shape="rect" coords="175,147,217,169" href="monMagasin.jhtml?magasinid=63&regionid=3" target="" alt="Angers" />
+        <area shape="rect" coords="53,175,126,188" href="monMagasin.jhtml?magasinid=53&regionid=3" target="" alt="St Nazaire" />
+        <area shape="rect" coords="72,197,126,208" href="monMagasin.jhtml?magasinid=62&regionid=3" target="" alt="Nantes" />
+        <area shape="rect" coords="131,196,186,208" href="monMagasin.jhtml?magasinid=95&regionid=3" target="" alt="Orvault" />
+        <area shape="rect" coords="169,174,287,195" href="monMagasin.jhtml?magasinid=76&regionid=3" target="" alt="Chambrey Les Tours" />
+    </map>
+	</OPARAM>
+	
+	<OPARAM NAME="4">
+    <map NAME="carteregion">
+    <area shape="poly" alt="Ormesson" coords="286,257, 286,286, 352,286, 352,268, 303,268, 303,257" href="monMagasin.jhtml?magasinid=17&regionid=4">
+    <area shape="poly" alt="Villetaneuse" coords="214,149, 214,179, 293,179, 293,160, 231,160, 231,149" href="monMagasin.jhtml?magasinid=30&regionid=4">
+    <area shape="rect" alt="Villemomble" coords="281,192,368,212" href="monMagasin.jhtml?magasinid=123&regionid=4">
+    <area shape="rect" alt="Paris Nation" coords="236,212,278,236" href="monMagasin.jhtml?magasinid=6&regionid=4">
+    <area shape="rect" alt="Paris Clichy" coords="196,189,246,206" href="monMagasin.jhtml?magasinid=28&regionid=4">
+    <area shape="rect" alt="Gonesse" coords="255,130,318,151" href="monMagasin.jhtml?magasinid=14&regionid=4">
+    <area shape="rect" alt="Claye Souilly" coords="338,133,384,175" href="monMagasin.jhtml?magasinid=800002&regionid=4">
+    <area shape="rect" alt="Pontault Combault" coords="323,229,381,266" href="monMagasin.jhtml?magasinid=1300007&regionid=4">
+    <area shape="rect" alt="Créteil" coords="226,247,272,274" href="monMagasin.jhtml?magasinid=40&regionid=4">
+    <area shape="rect" alt="Fresnes" coords="204,278,254,308" href="monMagasin.jhtml?magasinid=116&regionid=4">
+    <area shape="rect" alt="Montgeron" coords="255,309,325,340" href="monMagasin.jhtml?magasinid=48&regionid=4">
+    <area shape="rect" alt="Corbeil" coords="255,365,304,396" href="monMagasin.jhtml?magasinid=118&regionid=4">
+    <area shape="rect" alt="Melun" coords="317,414,355,444" href="monMagasin.jhtml?magasinid=12&regionid=4">
+    <area shape="rect" alt="Ballainvilliers" coords="122,327,205,354" href="monMagasin.jhtml?magasinid=19&regionid=4">
+    <area shape="rect" alt="Vélizy" coords="149,253,188,281" href="monMagasin.jhtml?magasinid=20&regionid=4">
+    <area shape="rect" alt="Nanterre" coords="108,195,165,220" href="monMagasin.jhtml?magasinid=13&regionid=4">
+    <area shape="rect" alt="Olivet" coords="37,412,78,460" href="monMagasin.jhtml?magasinid=500002&regionid=4">
+    <area shape="rect" alt="Coignieres" coords="37,281,103,311" href="monMagasin.jhtml?magasinid=18&regionid=4">
+    <area shape="rect" alt="Chambourcy" coords="27,187,102,212" href="monMagasin.jhtml?magasinid=109&regionid=4">
+    <area shape="rect" alt="Flins" coords="19,149,50,177" href="monMagasin.jhtml?magasinid=68&regionid=4">
+    <area shape="rect" alt="Sartrouville" coords="87,151,158,176" href="monMagasin.jhtml?magasinid=29&regionid=4">
+    <area shape="rect" alt="Eragny" coords="110,102,156,126" href="monMagasin.jhtml?magasinid=31&regionid=4">
+    <area shape="rect" alt="Ezanville" coords="217,97,273,122" href="monMagasin.jhtml?magasinid=2&regionid=4">
+    <area shape="rect" alt="Creil Saint Maximin" coords="263,30,352,75" href="monMagasin.jhtml?magasinid=3&regionid=4">
+    <area shape="rect" alt="Les Clayes sous Bois" coords="23,218,89,261" href="monMagasin.jhtml?magasinid=113&regionid=4">
+    </map>
+	</OPARAM>
+	
+	<OPARAM NAME="6">
+    <map NAME="carteregion">
+    <area shape="rect" coords="142,63,215,91" href="monMagasin.jhtml?magasinid=22&regionid=6" target="" alt="Villefranche-sur-Sa&ocirc;ne" />
+        <area shape="poly" coords="229,57, 292,57, 292,79, 255,79, 255,90, 241,90, 241,80, 228,80" href="monMagasin.jhtml?magasinid=21&regionid=6" target="" alt="Châlon-sur-Saône" />
+        <area shape="rect" coords="242,114,343,128" href="monMagasin.jhtml?magasinid=106&regionid=6" target="" alt="Rillieux la Pape" />
+        <area shape="rect" coords="185,94,240,109" href="monMagasin.jhtml?magasinid=16&regionid=6" target="" alt="Roanne" />
+        <area shape="rect" coords="275,85,374,108" href="monMagasin.jhtml?magasinid=5&regionid=6" target="" alt="Bourg-en-Bresse" />
+        <area shape="rect" coords="166,117,223,131" href="monMagasin.jhtml?magasinid=107&regionid=6" target="" alt="Dardilly" />
+        <area shape="rect" coords="86,97,142,130" href="monMagasin.jhtml?magasinid=119&regionid=6" target="" alt="Clermond-Ferrand" />
+        <area shape="rect" coords="307,129,371,150" href="monMagasin.jhtml?magasinid=87&regionid=6" target="" alt="Metz Tessy" />
+        <area shape="rect" coords="282,172,352,182" href="monMagasin.jhtml?magasinid=97&regionid=6" target="" alt="Chambery" />
+        <area shape="rect" coords="107,152,178,167" href="monMagasin.jhtml?magasinid=39&regionid=6" target="" alt="Saint Etienne" />
+        <area shape="rect" coords="201,147,242,170" href="monMagasin.jhtml?magasinid=24&regionid=6" target="" alt="Givors" />
+        <area shape="rect" coords="247,139,289,151" href="monMagasin.jhtml?magasinid=43&regionid=6" target="" alt="Bron" />
+        <area shape="rect" coords="243,184,298,209" href="monMagasin.jhtml?magasinid=23&regionid=6" target="" alt="Grenoble" />
+    	<area shape="rect" coords="253,156,360,170" href="monMagasin.jhtml?magasinid=1200006&regionid=6" target="" alt="Bourgoin Jailleu" />
+    	<area SHAPE="rect" ALT="Valence" COORDS="166,204,231,221" HREF="monMagasin.jhtml?magasinid=86&regionid=6">
+    </map>
+	</OPARAM>
+	
+	<OPARAM NAME="7">
+    <map NAME="carteregion">
+        <area shape="rect" coords="111,47,169,62" href="monMagasin.jhtml?magasinid=58&regionid=7" target="" alt="Poitiers" />
+        <area shape="rect" coords="11,47,82,70" href="monMagasin.jhtml?magasinid=4&regionid=7" target="" alt="Aytre" />
+        <area shape="poly" coords="87,62, 101,62, 101,69, 120,69, 120,82, 87,82" href="monMagasin.jhtml?magasinid=49&regionid=7" target="" alt="Niort" />
+        <area shape="rect" coords="121,82,185,98" href="monMagasin.jhtml?magasinid=112&regionid=7" target="" alt="Limoges-Feytiat" />
+        <area shape="rect" coords="77,100,144,124" href="monMagasin.jhtml?magasinid=57&regionid=7" target="" alt="Angoul&egrave;me" />
+        <area shape="rect" coords="10,132,77,168" href="monMagasin.jhtml?magasinid=59&regionid=7" target="" alt="Bordeaux Villenave d'Ornon" />
+        <area shape="rect" coords="80,133,139,167" href="monMagasin.jhtml?magasinid=91&regionid=7" target="" alt="Bordeaux M&eacute;rignac" />
+        <area shape="rect" coords="105,174,153,190" href="monMagasin.jhtml?magasinid=104&regionid=7" target="" alt="Agen" />
+        <area shape="rect" coords="23,182,66,207" href="monMagasin.jhtml?magasinid=37&regionid=7" target="" alt="Anglet" />
+        <area shape="rect" coords="88,198,124,212" href="monMagasin.jhtml?magasinid=26&regionid=7" target="" alt="Pau" />
+    </map>
+	</OPARAM>
+	
+	<OPARAM NAME="8">
+    <map NAME="carteregion">
+        <area SHAPE="rect" COORDS="284,192,332,205" HREF="monMagasin.jhtml?magasinid=2000005&regionid=8" ALT="Fr&eacute;jus">
+        <area shape="rect" coords="173,135,268,155" href="monMagasin.jhtml?magasinid=36&regionid=8" target="" alt="Aix-en-Provence" />
+        <area shape="rect" coords="181,161,241,173" href="monMagasin.jhtml?magasinid=34&regionid=8" target="" alt="Vitrolles" />
+        <area shape="rect" coords="201,194,283,205" href="monMagasin.jhtml?magasinid=103&regionid=8" target="" alt="La Valentine" />
+        <area shape="poly" coords="204,180, 131,180, 131,202, 194,202, 194,191, 204,191" href="monMagasin.jhtml?magasinid=10&regionid=8" target="" alt="Plan de Campagne" />
+        <area shape="rect" coords="156,211,219,224" href="monMagasin.jhtml?magasinid=42&regionid=8" target="" alt="Toulon la Seyne" />
+        <area shape="poly" coords="224,220, 224,229, 206,229, 206,242, 249,242, 249,228, 236,228, 236,220" href="monMagasin.jhtml?magasinid=27&regionid=8" target="" alt="Toulon la Garde" />
+        <area shape="rect" coords="292,177,362,188" href="monMagasin.jhtml?magasinid=15&regionid=8" target="" alt="Mandelieu" />
+        <area shape="rect" coords="321,159,387,169" href="monMagasin.jhtml?magasinid=96&regionid=8" target="" alt="Le Cannet" />
+        <area shape="rect" coords="330,137,376,157" href="monMagasin.jhtml?magasinid=11&regionid=8" target="" alt="Antibes" />
+    </map>
+	</OPARAM>
+	
+	<OPARAM NAME="9">
+    <map NAME="carteregion">
+        <area shape="poly" coords="154,144, 154,135, 122,135, 122,113, 178,113, 178,126, 167,126, 167,146, 154,146" href="monMagasin.jhtml?magasinid=94&regionid=9" target="" alt="Toulouse l'Union" />
+        <area SHAPE="rect" ALT="Blagnac" COORDS="95,142,152,156" HREF="monMagasin.jhtml?magasinid=1800003&regionid=9">
+        <area shape="rect" coords="95,152,159,176" href="monMagasin.jhtml?magasinid=56&regionid=9" target="" alt="Portet-sur-Garonne" />
+        <area shape="rect" coords="165,152,217,173" href="monMagasin.jhtml?magasinid=25&regionid=9" target="" alt="Saint-Orens" />
+        <area shape="rect" coords="151,207,212,230" href="monMagasin.jhtml?magasinid=80&regionid=9" target="" alt="Perpignan" />
+        <area shape="rect" coords="183,176,234,191" href="monMagasin.jhtml?magasinid=88&regionid=9" target="" alt="Béziers" />
+        <area shape="rect" coords="215,143,224,152" href="monMagasin.jhtml?magasinid=60&regionid=9" target="" alt="Lattes" />
+        <area shape="rect" coords="225,143,234,154" href="monMagasin.jhtml?magasinid=79&regionid=9" target="" alt="Saint Cl&eacute;ment de Rivi&egrave;re" />
+        <area shape="rect" coords="219,109,258,132" href="monMagasin.jhtml?magasinid=124&regionid=9" target="" alt="N&icirc;mes" />
+        <area shape="rect" coords="260,100,311,120" href="monMagasin.jhtml?magasinid=41&regionid=9" target="" alt="Avignon" />
+    </map>
+	</OPARAM>
+</DROPLET>
+<droplet src="/com/frag_linkRetourHaut.jhtml"/>

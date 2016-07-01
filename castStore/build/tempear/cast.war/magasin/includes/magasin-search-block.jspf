@@ -1,0 +1,72 @@
+        <dsp:getvalueof var="regionId" param="regionId"/>
+        <dsp:getvalueof var="departamentId" param="departamentId"/>
+        <div class="karte-right">
+        	<form>
+
+                <p><fmt:message key="stockVisualization.myMagasinCasorama" /></p>
+
+        		<div class="ddWrapper">
+                  <label><fmt:message key="stockVisualization.byMagasinSearch" /></label>
+
+                  <%@ include file="/magasin/cities.jspf" %>
+				
+                  <input type="button" class="buttonOK"  onclick="javascript:showMagasin('${fromSVContext}')">
+				<div class="clear"></div>
+				</div>
+
+        		<div class="ddWrapper">
+        		  <label><fmt:message key="stockVisualization.byDepartmentSearch" /></label>
+
+				  <%@ include file="/magasin/departments.jspf" %>
+				
+				  <input type="button" class="buttonOK" onclick="javascript:showDepartament('${fromSVContext}')"/>
+				<div class="clear"></div>
+				</div>
+
+        	</form>
+
+		  <dsp:getvalueof var="stockVisualizationDisabled" 
+                          bean="/com/castorama/stockvisualization/StockVisualizationManager.stockVisualizationDisabled" />
+
+          <c:if test="${!stockVisualizationDisabled}">
+            <dsp:include page="/svTest/magasinSearchForm.jsp" >
+              <dsp:param name="fromSVContext" value="${fromSVContext}" />
+            </dsp:include>
+          </c:if>
+
+				<div class="lightBg">
+				  <a href="/magasins/zip/Magasins-Castorama_fr.zip" class="arrowedLink darkBlue_whiteArrow"><fmt:message key="magasin.download.gps" /></a>
+				</div>    						
+        
+        </div>
+         <script type="text/javascript">
+
+         function showDepartament(fromSVContext) {
+         	var departament = document.getElementById('departament');
+         	var departamentId=departament.options[departament.selectedIndex].value;
+         	if (departamentId != null && departamentId != "") {
+              if (fromSVContext) {
+				goToURL('magasin-carte-region.jsp?fromSVContext=true&departamentId=' + departamentId 
+         			+ '&regionId=${regionId}');
+              } else {
+         		goToURL('magasin-carte-region.jsp?departamentId=' + departamentId 
+         			+ '&regionId=${regionId}');
+         	}
+         }
+         }
+         function showMagasin(fromSVContext) {         
+         	var magasin = document.getElementById('cities');
+         	var magasinId=magasin.options[magasin.selectedIndex].value;         	
+         	if (magasinId != null && magasinId != "") {
+              if (fromSVContext) {         	  
+				goToURL('magasin-fiche.jsp?fromSVContext=true&magasinId=' + magasinId 
+         		 + '&departamentId=${departamentId}&regionId=${regionId}');
+              } else {
+         		goToURL('magasin-fiche.jsp?magasinId=' + magasinId 
+            		 + '&departamentId=${departamentId}&regionId=${regionId}');
+         	}
+         }
+         }
+         </script>
+        
+        

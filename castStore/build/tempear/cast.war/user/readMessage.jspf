@@ -1,0 +1,141 @@
+<div id="readMessage" class="whitePopupContainer">
+	<dsp:getvalueof var="messageId" param="messageId" />
+	
+	<dsp:getvalueof var="orderView" param="orderView" />
+	<c:if test="${'view' == orderView}">
+	
+	<dsp:droplet name="MessageDetailsDroplet">
+		<dsp:param name="messageId" value="${messageId}" />
+		<dsp:oparam name="output">
+	<dsp:form method="post" name="readMessage" id="readMessage" >
+		<div class="whitePopupContent popupFormContainer longWidthPopup">
+			<div class="whitePopupHeader">
+				<h1>Lecture d'un message</h1>
+				<c:choose>
+					<c:when test="${null == orderId}">
+						<c:set var="backURL" value="${originatingRequest.requestURL}" />
+					</c:when>
+					<c:otherwise>
+						<c:set var="backURL" value="${originatingRequest.requestURL}?orderId=${orderId}" />
+					</c:otherwise>
+				</c:choose>
+				<a href="${backURL}" class="closeBut" >
+					<span><!--~--></span><fmt:message key="castCatalog_label.close" />
+				</a>
+				
+			</div>
+			<dsp:input type="hidden" bean="CastWebOrdersFormHandler.successURL" value="${backURL}" />
+			<dsp:input type="hidden" bean="CastWebOrdersFormHandler.cancelURL" value="${backURL}" />
+			<dsp:input type="hidden" bean="CastWebOrdersFormHandler.messageId" value="${messageId}" />
+			
+			<div class="clear"><!--~--></div>                     
+			<div class="popupContentContainer">
+				<div class="popupPdnR">
+					<div class="popupGrayBrgBlock">
+						<div class="clear"></div>
+						<div class="t_row">
+							<div class="t_cell alignRight">Émetteur :</div>
+							<div class="t_cell">
+								<dsp:valueof param="from" />
+							</div>
+						</div>
+						<div class="t_row">
+							<div class="t_cell alignRight">Numéro de la commande :</div>
+							<div class="t_cell">
+								<dsp:valueof param="order.NCOMMANDE_CLIENT" />
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="t_row">
+							<div class="t_cell alignRight">Destinataire :</div>
+							<div class="t_cell">
+								<dsp:valueof param="to" />
+							</div>
+						</div>
+						<div class="t_row">
+							<div class="t_cell alignRight">Date de la commande :</div>
+							<div class="t_cell">
+								<dsp:valueof param="order.DENVOI" date="dd/MM/yyyy" />
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="t_row">
+							<div class="t_cell alignRight">Date du message :</div>
+							<div class="t_cell">
+								<dsp:valueof param="message.DCONTACT" date="dd/MM/yyyy"/>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="popupWhiteBrgBlock">
+						<div class="clear"></div>
+						<div class="t_row">
+							<div class="t_cell alignRight">Motif :</div>
+							<div class="t_cell">
+								<span class="red">
+									<dsp:valueof param="motif" />
+								</span>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="t_row">
+							<div class="t_cell alignRight">Mode de contact :</div>
+							<div class="t_cell">
+								<dsp:valueof param="mode" />
+							</div>
+						</div>							
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="popupPdnR">
+					<label class="fCustomLabel">
+						Message
+						<dsp:getvalueof var="is_response_required" param="responseRequired" />
+						<c:if test="${is_response_required}" >
+							&nbsp;<span class="red">(Réponse attendue)</span>
+						</c:if>
+					</label>
+					<div class="i-textarea fWidthTxtar">
+						<dsp:setvalue param="ddd" paramvalue="message.LCONTACT" />
+							<dsp:valueof param="ddd"  valueishtml="true" />
+					</div>
+				</div>
+				<div class="formButtons">
+					<span class="inputButton">
+						<input type="button" onclick="javascript:window.location='${pageContext.request.contextPath}/user/ordersHistory.jsp#orderMessages';" value="VOIR TOUS MES MESSAGES"/>
+					</span>
+					<dsp:getvalueof var="canResend" param="canResend" />
+					<c:if test="${canResend}" >
+						<span class="inputButton">
+						<dsp:input type="submit" bean="CastWebOrdersFormHandler.copyMessage" value="RELANCER"/>
+						</span>
+					</c:if>
+					<dsp:getvalueof var="canReplay" param="canReplay" />
+					<c:if test="${canReplay}" >
+						<span class="inputButton">
+						<c:choose>
+							<c:when test="${null == orderId}">
+								<input type="button" onclick="javascript:window.location='${originatingRequest.requestURL}?orderView=replay&messageId=${messageId}';" value="Répondre"/>
+							</c:when>
+							<c:otherwise>
+								<input type="button" onclick="javascript:window.location='${originatingRequest.requestURL}?orderView=replay&messageId=${messageId}&orderId=${orderId}';" value="Répondre"/>							
+							</c:otherwise>
+						</c:choose>
+						</span>
+					</c:if>
+					<dsp:getvalueof var="order_id" param="order.NCOMMANDE_CLIENT" />
+					<span class="inputButton">
+						<input type="button" onclick="javascript:window.location='${pageContext.request.contextPath}/user/order.jsp?orderId=${order_id}#orderMessages';" value="Contacter le service client"/>
+					</span>
+				</div>  
+				<div class="clear"></div>
+			</div>
+		</div>
+	</dsp:form>
+		
+		</dsp:oparam>
+	</dsp:droplet>
+	
+	</c:if>
+		
+</div>

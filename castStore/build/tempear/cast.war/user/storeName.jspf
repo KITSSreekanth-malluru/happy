@@ -1,0 +1,12 @@
+<dsp:droplet name="/atg/dynamo/droplet/RQLQueryRange">
+  <dsp:param name="queryRQL" value="storeId EQUALS :ticket.storeId"/>
+  <dsp:param name="repository" value="/atg/registry/Repository/MagasinGSARepository"/>
+  <dsp:param name="itemDescriptor" value="magasin"/>
+  <dsp:param name="howMany" value="1"/>
+  <dsp:param name="elementName" value="magasin"/>
+  <dsp:oparam name="output">
+   <dsp:valueof param="magasin.nom"/>
+  </dsp:oparam>
+  <dsp:oparam name="empty">
+  </dsp:oparam>
+</dsp:droplet>

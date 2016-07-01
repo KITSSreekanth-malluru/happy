@@ -1,0 +1,56 @@
+<dsp:getvalueof var="regionId" param="regionId"/>
+<dsp:getvalueof var="query" value="numero >= 0 and numero != 999"/>
+<c:if test="${not empty regionId}">
+	<dsp:getvalueof var="query" value="region.id = ${regionId}"/>
+</c:if>
+<dsp:getvalueof var="departamentId" param="departamentId"/>
+<select id="departament" class="i-selectW220">
+	<dsp:droplet name="/atg/dynamo/droplet/RQLQueryForEach">
+		<dsp:param name="queryRQL" value="${query}" />
+		<dsp:param name="repository" bean="/atg/registry/Repository/MagasinGSARepository" />
+		<dsp:param name="itemDescriptor" value="departement" />
+		<dsp:param name="elementName" value="department" />
+		<dsp:param name="sortProperties" value="+numero,+nom" />
+	
+		<dsp:oparam name="outputStart">
+			<c:choose>
+				<c:when test="${not empty departamentId}">
+					<option value="">
+				</c:when>
+				<c:otherwise>
+				<option value="" selected="selected">
+				</c:otherwise>					
+			</c:choose>			 
+				<fmt:message key="magasin-carte-france.selection.menu" />
+			</option>
+		</dsp:oparam>
+	
+		<dsp:oparam name="output">
+		<dsp:getvalueof var="currDepId" param="department.numero"/>
+		<dsp:getvalueof var="currDepNom" param="department.nom"/>
+		<dsp:getvalueof var="magasinQuery" value="entite.adresse.departement.numero = ${currDepId}"/>
+		<dsp:droplet name="/atg/dynamo/droplet/RQLQueryRange">
+			<dsp:param name="queryRQL" value="${magasinQuery}" />
+			<dsp:param name="repository" bean="/atg/registry/Repository/MagasinGSARepository" />
+			<dsp:param name="itemDescriptor" value="magasin" />
+			<dsp:param name="howMany" value="1" />				
+			
+			<dsp:oparam name="output">		
+			
+			<c:choose>
+				<c:when test="${not empty departamentId && currDepId == departamentId}">
+					<option value="${currDepId }" selected="selected">
+				</c:when>
+				<c:otherwise>
+					<option value="${currDepId }">
+				</c:otherwise>					
+			</c:choose>			
+				<c:out value="${currDepId}"/> - <c:out value="${currDepNom}"/>
+			</option>
+			
+			</dsp:oparam>
+		</dsp:droplet>
+			
+		</dsp:oparam>
+	</dsp:droplet>
+</select>

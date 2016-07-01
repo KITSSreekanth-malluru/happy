@@ -1,0 +1,83 @@
+<droplet src="/com/frag_linkRetour.jhtml"/>
+<droplet bean="/castorama/magasin/DropletOperationsSpecialesMagasin">
+	<param name="homePage" value="false">
+	<param name="operationId" value="param:operationId">
+	<param name="elementNameTitre" value="titre">
+	<param name="elementNameLibelle" value="introduction">
+	<param name="elementNameRegionNom" value="regionNom">
+	<param name="elementNameRegionId" value="regionId">
+	<param name="elementNameMagasinNom" value="magasinNom">
+	<param name="elementNameMagasinIdm" value="magasinId">
+	<param name="numColonneEnumRegion" value="3">
+	<param name="numColonne" value="3">
+	<oparam name="outputStart">
+		<table cellpadding="0" cellspacing="0" border="0" width="90%">
+		<tr><td align="center" class="tibl">&nbsp;<br><b><valueof param="titre"/></b></td></tr>
+		</table>
+		<table cellpadding="0" cellspacing="0" border="0" width="90%">
+		<tr><td align="center" class="t"><br><b><valueof param="introduction" valueishtml/></b></td></tr>
+		</table>
+		<br>
+	</oparam>
+	<oparam name="outputStartEnumRegion">
+		<table cellpadding="0" cellspacing="0" border="0" width="90%">
+	</oparam>
+	<oparam name="outputRowStartEnumRegion">
+		<tr>
+	</oparam>
+	<oparam name="outputEnumRegion">
+		<droplet bean="/atg/dynamo/droplet/IsEmpty">
+			<param name="value" value="param:regionNom">
+			<oparam name="false">
+				<td class="t" align="left><img src="/com/img/fleche_bleue.gif" border="0"><a href="#<%=request.getParameter("regionId")%>"><valueof param="regionNom"/></a></td>
+			</oparam>
+			<oparam name="true">
+				<td class="t" align="left" width="33%">&nbsp;</td>
+			</oparam>
+		</droplet>
+	</oparam>
+	<oparam name="outputRowEndEnumRegion">
+		</tr>
+	</oparam>
+	<oparam name="outputEndEnumRegion">
+		</table>
+		<br>
+	</oparam>
+	<oparam name="outputStartRegion">
+		<table width="90%" cellpadding="0" cellspacing="0" border="0" bgcolor="bean:/castorama/config/Configuration.couleurUniversMagasin">
+			<tr>
+				<td valign="top"><a name="<%=request.getParameter("regionId")%>"></a><img src="/com/img/coing_univers.gif" border="0"></td>
+				<td align="left" valign="middle" class="stibc" width="100%" colspan="3"><b>R&eacute;gion <valueof param="regionNom"/></b></td>
+				<td valign="bottom" align="right"><img src="/com/img/coind_univers.gif" border="0"></td>
+			</tr>
+		</table>
+		<table cellpadding="0" cellspacing="0" border="0" width="90%">
+	</oparam>
+	<oparam name="outputRowStart">
+		<tr>
+	</oparam>
+	<oparam name="output">
+		<droplet bean="/atg/dynamo/droplet/IsEmpty">
+			<param name="value" value="param:magasinNom">
+			<oparam name="false">
+				<td class="t" align="left" width="33%"><img src="/com/img/fleche_bleue.gif" border="0"><a href="monMagasin.jhtml"><param name="magasinid" value="param:magasinId"><param name="regionid" value="param:regionId"><valueof param="magasinNom"/></a></td>
+			</oparam>
+			<oparam name="true">
+				<td class="t" align="left" width="33%">&nbsp;</td>
+			</oparam>
+		</droplet>
+	</oparam>
+	<oparam name="outputRowEnd">
+		</tr>
+	</oparam>
+	<oparam name="outputEndRegion">
+		</table>
+		<br>
+		<br>
+	</oparam>
+	<oparam name="outputEnd">
+	</oparam>
+	<oparam name="empty">
+	</oparam>
+</droplet>
+<droplet src="/com/frag_linkRetourHaut.jhtml"/>

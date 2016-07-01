@@ -1,0 +1,24 @@
+${productName}
+<c:if test="${productName == null}">
+	
+	<dsp:getvalueof var="skuLinks" param="sku.bundleLinks"/>
+	<dsp:getvalueof var="size" value="${fn:length(skuLinks)}"/>
+	
+	<!-- Compose name of the pack -->
+	<c:set var="descriptionTmp" value=""/>
+	
+	<dsp:droplet name="/atg/dynamo/droplet/ForEach">
+		<dsp:param name="array" param="sku.bundleLinks"/>
+		<dsp:param name="elementName" value="skuLink"/>
+		<dsp:getvalueof var="count" param="count"/>		
+			<dsp:oparam name="output">
+				<dsp:getvalueof var="quantity" param="skuLink.quantity"/>
+				<dsp:getvalueof var="displayName" param="skuLink.item.displayName"/>
+				<c:if test="${quantity > 1}"><c:set var="descriptionTmp" value="${descriptionTmp} ${quantity}"/></c:if> 
+				<c:set var="descriptionTmp" value="${descriptionTmp} ${displayName}"/>
+				<c:if test="${size != count}"><c:set var="descriptionTmp" value="${descriptionTmp} + "/></c:if>	
+			</dsp:oparam>
+	</dsp:droplet>
+	
+	<c:out value="${descriptionTmp}"/>
+</c:if>

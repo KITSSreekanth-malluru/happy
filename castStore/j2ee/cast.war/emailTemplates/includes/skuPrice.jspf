@@ -1,0 +1,4 @@
+<dsp:getvalueof var="itemAmount"   param="ci.priceInfo.amount"/>
+<dsp:getvalueof var="itemQuantity" param="ci.quantity"/>
+<dsp:getvalueof var="itemPrice"    value="${itemAmount/itemQuantity}"/>
+<fmt:formatNumber value="${itemPrice}" pattern="0.00#"/>

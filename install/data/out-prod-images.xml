@@ -1,0 +1,2216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <update-item item-descriptor="casto_product" id="prod10022">
+        <set-property name="smallImage"><![CDATA[546933_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[546933_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150009">
+        <set-property name="smallImage"><![CDATA[537500_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537500_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10021">
+        <set-property name="smallImage"><![CDATA[511447_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[511447_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90002">
+        <set-property name="smallImage"><![CDATA[500307_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[500307_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150058">
+        <set-property name="smallImage"><![CDATA[234002_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[234002_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120009">
+        <set-property name="smallImage"><![CDATA[553077_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[553077_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470017">
+        <set-property name="smallImage"><![CDATA[473968_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[473968_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10023">
+        <set-property name="smallImage"><![CDATA[506250_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[506250_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130012">
+        <set-property name="smallImage"><![CDATA[515513_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[515513_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150004">
+        <set-property name="smallImage"><![CDATA[494545_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[494545_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10027">
+        <set-property name="smallImage"><![CDATA[530547_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[530547_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150020">
+        <set-property name="smallImage"><![CDATA[748978_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[748978_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10026">
+        <set-property name="smallImage"><![CDATA[640522_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[640522_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100001">
+        <set-property name="smallImage"><![CDATA[537942_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537942_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10012">
+        <set-property name="smallImage"><![CDATA[486558_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[486558_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150003">
+        <set-property name="smallImage"><![CDATA[538124_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[538124_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120016">
+        <set-property name="smallImage"><![CDATA[535473_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[535473_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10034">
+        <set-property name="smallImage"><![CDATA[544844_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[544844_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150056">
+        <set-property name="smallImage"><![CDATA[514162_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514162_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90008">
+        <set-property name="smallImage"><![CDATA[521191_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[521191_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70004">
+        <set-property name="smallImage"><![CDATA[294598_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[294598_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150021">
+        <set-property name="smallImage"><![CDATA[720051_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[720051_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120017">
+        <set-property name="smallImage"><![CDATA[299135_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[299135_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70013">
+        <set-property name="smallImage"><![CDATA[538422_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[538422_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100012">
+        <set-property name="smallImage"><![CDATA[870396_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[870396_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10039">
+        <set-property name="smallImage"><![CDATA[292168_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[292168_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150051">
+        <set-property name="smallImage"><![CDATA[528175_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[528175_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150052">
+        <set-property name="smallImage"><![CDATA[204259_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[204259_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150042">
+        <set-property name="smallImage"><![CDATA[554964_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[554964_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470011">
+        <set-property name="smallImage"><![CDATA[296191_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[296191_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150059">
+        <set-property name="smallImage"><![CDATA[549034_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[549034_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470033">
+        <set-property name="smallImage"><![CDATA[745483_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[745483_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90009">
+        <set-property name="smallImage"><![CDATA[521182_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[521182_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150044">
+        <set-property name="smallImage"><![CDATA[538619_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[538619_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150022">
+        <set-property name="smallImage"><![CDATA[293345_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[293345_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150057">
+        <set-property name="smallImage"><![CDATA[529012_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[529012_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470035">
+        <set-property name="smallImage"><![CDATA[489916_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[489916_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470019">
+        <set-property name="smallImage"><![CDATA[519003_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[519003_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10015">
+        <set-property name="smallImage"><![CDATA[891552_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[891552_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120019">
+        <set-property name="smallImage"><![CDATA[800953_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[800953_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod60002">
+        <set-property name="smallImage"><![CDATA[532227_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[532227_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150034">
+        <set-property name="smallImage"><![CDATA[555145_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[555145_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120024">
+        <set-property name="smallImage"><![CDATA[527521_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[527521_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90018">
+        <set-property name="smallImage"><![CDATA[537532_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537532_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130006">
+        <set-property name="smallImage"><![CDATA[981693_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[981693_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470015">
+        <set-property name="smallImage"><![CDATA[430291_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[430291_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120025">
+        <set-property name="smallImage"><![CDATA[296942_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[296942_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140007">
+        <set-property name="smallImage"><![CDATA[499312_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[499312_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120028">
+        <set-property name="smallImage"><![CDATA[516110_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[516110_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140005">
+        <set-property name="smallImage"><![CDATA[538156_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[538156_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10007">
+        <set-property name="smallImage"><![CDATA[497466_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[497466_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10017">
+        <set-property name="smallImage"><![CDATA[860218_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[860218_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150036">
+        <set-property name="smallImage"><![CDATA[548687_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[548687_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10049">
+        <set-property name="smallImage"><![CDATA[531101_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[531101_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140004">
+        <set-property name="smallImage"><![CDATA[538154_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[538154_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90014">
+        <set-property name="smallImage"><![CDATA[992286_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[992286_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10040">
+        <set-property name="smallImage"><![CDATA[498781_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[498781_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70006">
+        <set-property name="smallImage"><![CDATA[291798_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[291798_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150008">
+        <set-property name="smallImage"><![CDATA[537512_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537512_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140003">
+        <set-property name="smallImage"><![CDATA[508862_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[508862_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70007">
+        <set-property name="smallImage"><![CDATA[495896_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[495896_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150007">
+        <set-property name="smallImage"><![CDATA[560651_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[560651_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150055">
+        <set-property name="smallImage"><![CDATA[514165_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514165_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120011">
+        <set-property name="smallImage"><![CDATA[896040_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[896040_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10008">
+        <set-property name="smallImage"><![CDATA[101585_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[101585_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130003">
+        <set-property name="smallImage"><![CDATA[985875_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[985875_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150035">
+        <set-property name="smallImage"><![CDATA[610743_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[610743_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70008">
+        <set-property name="smallImage"><![CDATA[495188_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[495188_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100002">
+        <set-property name="smallImage"><![CDATA[620568_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[620568_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150006">
+        <set-property name="smallImage"><![CDATA[560649_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[560649_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120029">
+        <set-property name="smallImage"><![CDATA[520753_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[520753_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90020">
+        <set-property name="smallImage"><![CDATA[257487_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[257487_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120026">
+        <set-property name="smallImage"><![CDATA[516107_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[516107_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90022">
+        <set-property name="smallImage"><![CDATA[555060_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[555060_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150045">
+        <set-property name="smallImage"><![CDATA[525457_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[525457_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod370005">
+        <set-property name="smallImage"><![CDATA[552315_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[552315_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10032">
+        <set-property name="smallImage"><![CDATA[955542_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[955542_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10047">
+        <set-property name="smallImage"><![CDATA[907941_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[907941_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150050">
+        <set-property name="smallImage"><![CDATA[534539_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[534539_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10042">
+        <set-property name="smallImage"><![CDATA[505730_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[505730_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70001">
+        <set-property name="smallImage"><![CDATA[570578_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[570578_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120004">
+        <set-property name="smallImage"><![CDATA[526241_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[526241_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150015">
+        <set-property name="smallImage"><![CDATA[677849_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[677849_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130002">
+        <set-property name="smallImage"><![CDATA[533318_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[533318_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120023">
+        <set-property name="smallImage"><![CDATA[535258_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[535258_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10016">
+        <set-property name="smallImage"><![CDATA[891202_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[891202_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10033">
+        <set-property name="smallImage"><![CDATA[258408_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[258408_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150013">
+        <set-property name="smallImage"><![CDATA[974507_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[974507_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10048">
+        <set-property name="smallImage"><![CDATA[519230_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[519230_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90013">
+        <set-property name="smallImage"><![CDATA[521865_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[521865_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150030">
+        <set-property name="smallImage"><![CDATA[610707_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[610707_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150029">
+        <set-property name="smallImage"><![CDATA[601701_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[601701_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140006">
+        <set-property name="smallImage"><![CDATA[507636_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[507636_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150028">
+        <set-property name="smallImage"><![CDATA[601702_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[601702_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90011">
+        <set-property name="smallImage"><![CDATA[521190_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[521190_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130001">
+        <set-property name="smallImage"><![CDATA[549824_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[549824_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10014">
+        <set-property name="smallImage"><![CDATA[824410_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[824410_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10013">
+        <set-property name="smallImage"><![CDATA[822800_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[822800_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90023">
+        <set-property name="smallImage"><![CDATA[488989_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[488989_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130008">
+        <set-property name="smallImage"><![CDATA[499078_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[499078_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120005">
+        <set-property name="smallImage"><![CDATA[770068_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[770068_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10044">
+        <set-property name="smallImage"><![CDATA[537463_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537463_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90017">
+        <set-property name="smallImage"><![CDATA[662616_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[662616_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150048">
+        <set-property name="smallImage"><![CDATA[270047_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[270047_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10043">
+        <set-property name="smallImage"><![CDATA[902061_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[902061_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70009">
+        <set-property name="smallImage"><![CDATA[294911_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[294911_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90012">
+        <set-property name="smallImage"><![CDATA[521187_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[521187_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90024">
+        <set-property name="smallImage"><![CDATA[486722_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[486722_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120003">
+        <set-property name="smallImage"><![CDATA[500006_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[500006_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470009">
+        <set-property name="smallImage"><![CDATA[515875_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[515875_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10006">
+        <set-property name="smallImage"><![CDATA[497263_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[497263_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10020">
+        <set-property name="smallImage"><![CDATA[510103_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[510103_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150014">
+        <set-property name="smallImage"><![CDATA[666362_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[666362_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470021">
+        <set-property name="smallImage"><![CDATA[432048_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[432048_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150041">
+        <set-property name="smallImage"><![CDATA[283094_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[283094_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150016">
+        <set-property name="smallImage"><![CDATA[661463_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[661463_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10003">
+        <set-property name="smallImage"><![CDATA[352289_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[352289_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470007">
+        <set-property name="smallImage"><![CDATA[296606_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[296606_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90019">
+        <set-property name="smallImage"><![CDATA[678435_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[678435_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150047">
+        <set-property name="smallImage"><![CDATA[200240_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[200240_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90016">
+        <set-property name="smallImage"><![CDATA[663639_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[663639_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130009">
+        <set-property name="smallImage"><![CDATA[498148_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[498148_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150033">
+        <set-property name="smallImage"><![CDATA[546740_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[546740_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150046">
+        <set-property name="smallImage"><![CDATA[534658_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[534658_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150011">
+        <set-property name="smallImage"><![CDATA[502289_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[502289_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70005">
+        <set-property name="smallImage"><![CDATA[543340_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[543340_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120027">
+        <set-property name="smallImage"><![CDATA[516012_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[516012_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150053">
+        <set-property name="smallImage"><![CDATA[514157_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514157_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90021">
+        <set-property name="smallImage"><![CDATA[556716_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[556716_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130005">
+        <set-property name="smallImage"><![CDATA[514486_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514486_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150012">
+        <set-property name="smallImage"><![CDATA[974506_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[974506_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100004">
+        <set-property name="smallImage"><![CDATA[522103_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[522103_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10009">
+        <set-property name="smallImage"><![CDATA[497263_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[497263_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70010">
+        <set-property name="smallImage"><![CDATA[557977_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[557977_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100031">
+        <set-property name="smallImage"><![CDATA[554118_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[554118_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120006">
+        <set-property name="smallImage"><![CDATA[770786_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[770786_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140002">
+        <set-property name="smallImage"><![CDATA[991078_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[991078_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90015">
+        <set-property name="smallImage"><![CDATA[960990_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[960990_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120020">
+        <set-property name="smallImage"><![CDATA[895110_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[895110_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120008">
+        <set-property name="smallImage"><![CDATA[514601_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514601_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70011">
+        <set-property name="smallImage"><![CDATA[558596_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[558596_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10004">
+        <set-property name="smallImage"><![CDATA[100359_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[100359_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150049">
+        <set-property name="smallImage"><![CDATA[534541_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[534541_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120007">
+        <set-property name="smallImage"><![CDATA[487684_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[487684_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150010">
+        <set-property name="smallImage"><![CDATA[537504_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537504_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470023">
+        <set-property name="smallImage"><![CDATA[517149_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[517149_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120022">
+        <set-property name="smallImage"><![CDATA[514563_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514563_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120021">
+        <set-property name="smallImage"><![CDATA[534953_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[534953_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90010">
+        <set-property name="smallImage"><![CDATA[624867_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[624867_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10002">
+        <set-property name="smallImage"><![CDATA[352287_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[352287_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150054">
+        <set-property name="smallImage"><![CDATA[514160_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514160_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100028">
+        <set-property name="smallImage"><![CDATA[200255_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[200255_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100030">
+        <set-property name="smallImage"><![CDATA[501730_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[501730_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10046">
+        <set-property name="smallImage"><![CDATA[907394_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[907394_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod140001">
+        <set-property name="smallImage"><![CDATA[300834_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[300834_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10035">
+        <set-property name="smallImage"><![CDATA[510453_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[510453_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130010">
+        <set-property name="smallImage"><![CDATA[499608_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[499608_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70003">
+        <set-property name="smallImage"><![CDATA[295916_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[295916_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150023">
+        <set-property name="smallImage"><![CDATA[489630_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[489630_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10037">
+        <set-property name="smallImage"><![CDATA[550726_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[550726_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150060">
+        <set-property name="smallImage"><![CDATA[522373_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[522373_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100005">
+        <set-property name="smallImage"><![CDATA[514296_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514296_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10031">
+        <set-property name="smallImage"><![CDATA[541957_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[541957_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90004">
+        <set-property name="smallImage"><![CDATA[499962_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[499962_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130004">
+        <set-property name="smallImage"><![CDATA[985878_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[985878_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150062">
+        <set-property name="smallImage"><![CDATA[529014_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[529014_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120018">
+        <set-property name="smallImage"><![CDATA[297949_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[297949_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70002">
+        <set-property name="smallImage"><![CDATA[570575_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[570575_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120015">
+        <set-property name="smallImage"><![CDATA[483784_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[483784_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150064">
+        <set-property name="smallImage"><![CDATA[526639_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[526639_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150063">
+        <set-property name="smallImage"><![CDATA[526645_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[526645_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120013">
+        <set-property name="smallImage"><![CDATA[483751_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[483751_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90006">
+        <set-property name="smallImage"><![CDATA[541980_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[541980_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10030">
+        <set-property name="smallImage"><![CDATA[299542_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[299542_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10019">
+        <set-property name="smallImage"><![CDATA[506597_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[506597_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10036">
+        <set-property name="smallImage"><![CDATA[550721_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[550721_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100013">
+        <set-property name="smallImage"><![CDATA[472052_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[472052_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150032">
+        <set-property name="smallImage"><![CDATA[473046_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[473046_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10005">
+        <set-property name="smallImage"><![CDATA[101586_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[101586_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150061">
+        <set-property name="smallImage"><![CDATA[501750_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[501750_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10018">
+        <set-property name="smallImage"><![CDATA[555063_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[555063_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100006">
+        <set-property name="smallImage"><![CDATA[537942_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537942_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10050">
+        <set-property name="smallImage"><![CDATA[543802_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[543802_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10045">
+        <set-property name="smallImage"><![CDATA[907512_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[907512_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100003">
+        <set-property name="smallImage"><![CDATA[478067_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[478067_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470025">
+        <set-property name="smallImage"><![CDATA[288410_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[288410_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70017">
+        <set-property name="smallImage"><![CDATA[519887_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[519887_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150019">
+        <set-property name="smallImage"><![CDATA[475283_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[475283_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150026">
+        <set-property name="smallImage"><![CDATA[650150_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[650150_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150002">
+        <set-property name="smallImage"><![CDATA[537847_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[537847_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90007">
+        <set-property name="smallImage"><![CDATA[521185_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[521185_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150031">
+        <set-property name="smallImage"><![CDATA[600663_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[600663_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70016">
+        <set-property name="smallImage"><![CDATA[101631_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[101631_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10028">
+        <set-property name="smallImage"><![CDATA[993729_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[993729_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10025">
+        <set-property name="smallImage"><![CDATA[518405_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[518405_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470005">
+        <set-property name="smallImage"><![CDATA[515879_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[515879_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod130011">
+        <set-property name="smallImage"><![CDATA[498151_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[498151_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470031">
+        <set-property name="smallImage"><![CDATA[541786_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[541786_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod90005">
+        <set-property name="smallImage"><![CDATA[499946_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[499946_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod470027">
+        <set-property name="smallImage"><![CDATA[517156_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[517156_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150040">
+        <set-property name="smallImage"><![CDATA[210008_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[210008_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150027">
+        <set-property name="smallImage"><![CDATA[650158_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[650158_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150005">
+        <set-property name="smallImage"><![CDATA[524573_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[524573_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod100029">
+        <set-property name="smallImage"><![CDATA[201168_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[201168_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod120012">
+        <set-property name="smallImage"><![CDATA[487677_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[487677_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10029">
+        <set-property name="smallImage"><![CDATA[993730_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[993730_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod10024">
+        <set-property name="smallImage"><![CDATA[478087_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[478087_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150024">
+        <set-property name="smallImage"><![CDATA[514365_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[514365_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150017">
+        <set-property name="smallImage"><![CDATA[300019_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[300019_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod150025">
+        <set-property name="smallImage"><![CDATA[989111_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[989111_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_product" id="prod70012">
+        <set-property name="smallImage"><![CDATA[487793_w180]]></set-property>
+        <set-property name="largeImage"><![CDATA[487793_w270]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto532227">
+        <set-property name="miniatureImage"><![CDATA[532227_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[532227_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[532227_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[532227_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto500006">
+        <set-property name="miniatureImage"><![CDATA[500006_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[500006_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[500006_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[500006_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto201168">
+        <set-property name="miniatureImage"><![CDATA[201168_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[201168_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[201168_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[201168_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto494545">
+        <set-property name="miniatureImage"><![CDATA[494545_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[494545_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[494545_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[494545_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296942">
+        <set-property name="miniatureImage"><![CDATA[296942_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[296942_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[296942_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[296942_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538154">
+        <set-property name="miniatureImage"><![CDATA[538154_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[538154_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[538154_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[538154_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto525457">
+        <set-property name="miniatureImage"><![CDATA[525457_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[525457_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[525457_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[525457_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto500002">
+        <set-property name="miniatureImage"><![CDATA[500002_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[500002_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[500002_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[500002_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto624867">
+        <set-property name="miniatureImage"><![CDATA[624867_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[624867_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[624867_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[624867_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516106">
+        <set-property name="miniatureImage"><![CDATA[516106_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[516106_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[516106_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[516106_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538124">
+        <set-property name="miniatureImage"><![CDATA[538124_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[538124_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[538124_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[538124_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487686">
+        <set-property name="miniatureImage"><![CDATA[487686_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[487686_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[487686_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[487686_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto526241">
+        <set-property name="miniatureImage"><![CDATA[526241_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[526241_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[526241_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[526241_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto907512">
+        <set-property name="miniatureImage"><![CDATA[907512_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[907512_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[907512_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[907512_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto770068">
+        <set-property name="miniatureImage"><![CDATA[770068_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[770068_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[770068_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[770068_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto902061">
+        <set-property name="miniatureImage"><![CDATA[902061_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[902061_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[902061_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[902061_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto650158">
+        <set-property name="miniatureImage"><![CDATA[650158_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[650158_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[650158_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[650158_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534658">
+        <set-property name="miniatureImage"><![CDATA[534658_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[534658_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[534658_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[534658_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto483752">
+        <set-property name="miniatureImage"><![CDATA[483752_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[483752_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[483752_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[483752_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516107">
+        <set-property name="miniatureImage"><![CDATA[516107_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[516107_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[516107_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[516107_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto610743">
+        <set-property name="miniatureImage"><![CDATA[610743_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[610743_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[610743_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[610743_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto526243">
+        <set-property name="miniatureImage"><![CDATA[526243_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[526243_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[526243_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[526243_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537463">
+        <set-property name="miniatureImage"><![CDATA[537463_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[537463_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[537463_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[537463_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto475284">
+        <set-property name="miniatureImage"><![CDATA[475284_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[475284_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[475284_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[475284_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto508862">
+        <set-property name="miniatureImage"><![CDATA[508862_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[508862_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[508862_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[508862_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto650150">
+        <set-property name="miniatureImage"><![CDATA[650150_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[650150_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[650150_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[650150_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499608">
+        <set-property name="miniatureImage"><![CDATA[499608_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[499608_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[499608_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[499608_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto483751">
+        <set-property name="miniatureImage"><![CDATA[483751_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[483751_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[483751_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[483751_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto518405">
+        <set-property name="miniatureImage"><![CDATA[518405_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[518405_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[518405_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[518405_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487688">
+        <set-property name="miniatureImage"><![CDATA[487688_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[487688_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[487688_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[487688_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto558596">
+        <set-property name="miniatureImage"><![CDATA[558596_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[558596_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[558596_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[558596_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto510453">
+        <set-property name="miniatureImage"><![CDATA[510453_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[510453_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[510453_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[510453_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto549034">
+        <set-property name="miniatureImage"><![CDATA[549034_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[549034_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[549034_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[549034_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto991078">
+        <set-property name="miniatureImage"><![CDATA[991078_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[991078_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[991078_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[991078_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto101586">
+        <set-property name="miniatureImage"><![CDATA[101586_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[101586_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[101586_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[101586_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto500001">
+        <set-property name="miniatureImage"><![CDATA[500001_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[500001_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[500001_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[500001_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto529014">
+        <set-property name="miniatureImage"><![CDATA[529014_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[529014_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[529014_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[529014_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto601703">
+        <set-property name="miniatureImage"><![CDATA[601703_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[601703_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[601703_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[601703_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto430291">
+        <set-property name="miniatureImage"><![CDATA[430291_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[430291_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[430291_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[430291_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto502289">
+        <set-property name="miniatureImage"><![CDATA[502289_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[502289_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[502289_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[502289_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto541786">
+        <set-property name="miniatureImage"><![CDATA[541786_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[541786_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[541786_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[541786_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514601">
+        <set-property name="miniatureImage"><![CDATA[514601_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514601_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514601_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514601_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296191">
+        <set-property name="miniatureImage"><![CDATA[296191_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[296191_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[296191_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[296191_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto601702">
+        <set-property name="miniatureImage"><![CDATA[601702_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[601702_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[601702_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[601702_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto507636">
+        <set-property name="miniatureImage"><![CDATA[507636_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[507636_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[507636_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[507636_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto546740">
+        <set-property name="miniatureImage"><![CDATA[546740_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[546740_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[546740_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[546740_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto543340">
+        <set-property name="miniatureImage"><![CDATA[543340_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[543340_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[543340_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[543340_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto870396">
+        <set-property name="miniatureImage"><![CDATA[870396_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[870396_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[870396_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[870396_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto501750">
+        <set-property name="miniatureImage"><![CDATA[501750_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[501750_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[501750_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[501750_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto501730">
+        <set-property name="miniatureImage"><![CDATA[501730_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[501730_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[501730_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[501730_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto100359">
+        <set-property name="miniatureImage"><![CDATA[100359_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[100359_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[100359_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[100359_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto352286">
+        <set-property name="miniatureImage"><![CDATA[352286_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[352286_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[352286_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[352286_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto483784">
+        <set-property name="miniatureImage"><![CDATA[483784_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[483784_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[483784_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[483784_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto500307">
+        <set-property name="miniatureImage"><![CDATA[500307_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[500307_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[500307_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[500307_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto720051">
+        <set-property name="miniatureImage"><![CDATA[720051_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[720051_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[720051_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[720051_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto544844">
+        <set-property name="miniatureImage"><![CDATA[544844_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[544844_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[544844_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[544844_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499962">
+        <set-property name="miniatureImage"><![CDATA[499962_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[499962_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[499962_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[499962_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487684">
+        <set-property name="miniatureImage"><![CDATA[487684_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[487684_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[487684_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[487684_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto770787">
+        <set-property name="miniatureImage"><![CDATA[770787_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[770787_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[770787_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[770787_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514157">
+        <set-property name="miniatureImage"><![CDATA[514157_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514157_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514157_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514157_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto352287">
+        <set-property name="miniatureImage"><![CDATA[352287_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[352287_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[352287_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[352287_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto891552">
+        <set-property name="miniatureImage"><![CDATA[891552_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[891552_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[891552_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[891552_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto770786">
+        <set-property name="miniatureImage"><![CDATA[770786_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[770786_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[770786_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[770786_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537847">
+        <set-property name="miniatureImage"><![CDATA[537847_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[537847_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[537847_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[537847_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto517156">
+        <set-property name="miniatureImage"><![CDATA[517156_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[517156_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[517156_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[517156_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto200255">
+        <set-property name="miniatureImage"><![CDATA[200255_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[200255_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[200255_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[200255_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto352289">
+        <set-property name="miniatureImage"><![CDATA[352289_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[352289_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[352289_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[352289_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514486">
+        <set-property name="miniatureImage"><![CDATA[514486_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514486_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514486_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514486_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto548687">
+        <set-property name="miniatureImage"><![CDATA[548687_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[548687_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[548687_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[548687_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521182">
+        <set-property name="miniatureImage"><![CDATA[521182_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[521182_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[521182_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[521182_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto432048">
+        <set-property name="miniatureImage"><![CDATA[432048_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[432048_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[432048_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[432048_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto974506">
+        <set-property name="miniatureImage"><![CDATA[974506_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[974506_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[974506_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[974506_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto530547">
+        <set-property name="miniatureImage"><![CDATA[530547_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[530547_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[530547_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[530547_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535258">
+        <set-property name="miniatureImage"><![CDATA[535258_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[535258_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[535258_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[535258_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538619">
+        <set-property name="miniatureImage"><![CDATA[538619_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[538619_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[538619_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[538619_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto506597">
+        <set-property name="miniatureImage"><![CDATA[506597_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[506597_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[506597_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[506597_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto478087">
+        <set-property name="miniatureImage"><![CDATA[478087_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[478087_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[478087_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[478087_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto510103">
+        <set-property name="miniatureImage"><![CDATA[510103_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[510103_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[510103_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[510103_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto891202">
+        <set-property name="miniatureImage"><![CDATA[891202_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[891202_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[891202_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[891202_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto800953">
+        <set-property name="miniatureImage"><![CDATA[800953_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[800953_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[800953_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[800953_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto748978">
+        <set-property name="miniatureImage"><![CDATA[748978_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[748978_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[748978_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[748978_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto745483">
+        <set-property name="miniatureImage"><![CDATA[745483_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[745483_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[745483_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[745483_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537942">
+        <set-property name="miniatureImage"><![CDATA[537942_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[537942_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[537942_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[537942_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514165">
+        <set-property name="miniatureImage"><![CDATA[514165_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514165_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514165_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514165_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto517149">
+        <set-property name="miniatureImage"><![CDATA[517149_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[517149_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[517149_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[517149_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto570575">
+        <set-property name="miniatureImage"><![CDATA[570575_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[570575_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[570575_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[570575_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto506250">
+        <set-property name="miniatureImage"><![CDATA[506250_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[506250_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[506250_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[506250_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto299542">
+        <set-property name="miniatureImage"><![CDATA[299542_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[299542_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[299542_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[299542_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto489916">
+        <set-property name="miniatureImage"><![CDATA[489916_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[489916_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[489916_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[489916_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto550726">
+        <set-property name="miniatureImage"><![CDATA[550726_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[550726_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[550726_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[550726_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto472052">
+        <set-property name="miniatureImage"><![CDATA[472052_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[472052_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[472052_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[472052_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto748979">
+        <set-property name="miniatureImage"><![CDATA[748979_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[748979_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[748979_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[748979_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537500">
+        <set-property name="miniatureImage"><![CDATA[537500_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[537500_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[537500_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[537500_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto529012">
+        <set-property name="miniatureImage"><![CDATA[529012_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[529012_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[529012_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[529012_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto550721">
+        <set-property name="miniatureImage"><![CDATA[550721_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[550721_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[550721_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[550721_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516012">
+        <set-property name="miniatureImage"><![CDATA[516012_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[516012_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[516012_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[516012_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto993729">
+        <set-property name="miniatureImage"><![CDATA[993729_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[993729_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[993729_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[993729_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto478067">
+        <set-property name="miniatureImage"><![CDATA[478067_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[478067_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[478067_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[478067_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto640522">
+        <set-property name="miniatureImage"><![CDATA[640522_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[640522_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[640522_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[640522_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521865">
+        <set-property name="miniatureImage"><![CDATA[521865_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[521865_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[521865_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[521865_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto546933">
+        <set-property name="miniatureImage"><![CDATA[546933_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[546933_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[546933_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[546933_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto895109">
+        <set-property name="miniatureImage"><![CDATA[895109_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[895109_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[895109_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[895109_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto541980">
+        <set-property name="miniatureImage"><![CDATA[541980_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[541980_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[541980_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[541980_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto522373">
+        <set-property name="miniatureImage"><![CDATA[522373_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[522373_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[522373_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[522373_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535473">
+        <set-property name="miniatureImage"><![CDATA[535473_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[535473_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[535473_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[535473_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto515875">
+        <set-property name="miniatureImage"><![CDATA[515875_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[515875_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[515875_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[515875_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto955542">
+        <set-property name="miniatureImage"><![CDATA[955542_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[955542_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[955542_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[955542_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514160">
+        <set-property name="miniatureImage"><![CDATA[514160_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514160_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514160_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514160_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto535266">
+        <set-property name="miniatureImage"><![CDATA[535266_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[535266_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[535266_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[535266_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519887">
+        <set-property name="miniatureImage"><![CDATA[519887_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[519887_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[519887_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[519887_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto993730">
+        <set-property name="miniatureImage"><![CDATA[993730_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[993730_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[993730_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[993730_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto541957">
+        <set-property name="miniatureImage"><![CDATA[541957_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[541957_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[541957_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[541957_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294598">
+        <set-property name="miniatureImage"><![CDATA[294598_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[294598_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[294598_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[294598_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto601701">
+        <set-property name="miniatureImage"><![CDATA[601701_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[601701_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[601701_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[601701_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537512">
+        <set-property name="miniatureImage"><![CDATA[537512_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[537512_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[537512_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[537512_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538421">
+        <set-property name="miniatureImage"><![CDATA[538421_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[538421_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[538421_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[538421_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto297949">
+        <set-property name="miniatureImage"><![CDATA[297949_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[297949_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[297949_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[297949_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499312">
+        <set-property name="miniatureImage"><![CDATA[499312_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[499312_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[499312_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[499312_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538422">
+        <set-property name="miniatureImage"><![CDATA[538422_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[538422_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[538422_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[538422_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519886">
+        <set-property name="miniatureImage"><![CDATA[519886_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[519886_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[519886_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[519886_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514162">
+        <set-property name="miniatureImage"><![CDATA[514162_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514162_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514162_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514162_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto101631">
+        <set-property name="miniatureImage"><![CDATA[101631_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[101631_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[101631_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[101631_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto296606">
+        <set-property name="miniatureImage"><![CDATA[296606_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[296606_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[296606_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[296606_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto210008">
+        <set-property name="miniatureImage"><![CDATA[210008_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[210008_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[210008_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[210008_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto258408">
+        <set-property name="miniatureImage"><![CDATA[258408_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[258408_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[258408_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[258408_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521187">
+        <set-property name="miniatureImage"><![CDATA[521187_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[521187_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[521187_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[521187_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto300019">
+        <set-property name="miniatureImage"><![CDATA[300019_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[300019_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[300019_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[300019_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto526639">
+        <set-property name="miniatureImage"><![CDATA[526639_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[526639_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[526639_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[526639_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto288410">
+        <set-property name="miniatureImage"><![CDATA[288410_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[288410_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[288410_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[288410_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto661463">
+        <set-property name="miniatureImage"><![CDATA[661463_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[661463_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[661463_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[661463_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto538156">
+        <set-property name="miniatureImage"><![CDATA[538156_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[538156_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[538156_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[538156_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto200240">
+        <set-property name="miniatureImage"><![CDATA[200240_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[200240_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[200240_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[200240_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto960990">
+        <set-property name="miniatureImage"><![CDATA[960990_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[960990_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[960990_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[960990_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto299135">
+        <set-property name="miniatureImage"><![CDATA[299135_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[299135_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[299135_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[299135_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto663639">
+        <set-property name="miniatureImage"><![CDATA[663639_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[663639_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[663639_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[663639_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto560651">
+        <set-property name="miniatureImage"><![CDATA[560651_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[560651_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[560651_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[560651_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto473046">
+        <set-property name="miniatureImage"><![CDATA[473046_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[473046_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[473046_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[473046_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto295916">
+        <set-property name="miniatureImage"><![CDATA[295916_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[295916_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[295916_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[295916_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto553077">
+        <set-property name="miniatureImage"><![CDATA[553077_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[553077_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[553077_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[553077_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto473968">
+        <set-property name="miniatureImage"><![CDATA[473968_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[473968_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[473968_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[473968_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto600663">
+        <set-property name="miniatureImage"><![CDATA[600663_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[600663_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[600663_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[600663_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537532">
+        <set-property name="miniatureImage"><![CDATA[537532_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[537532_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[537532_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[537532_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto537504">
+        <set-property name="miniatureImage"><![CDATA[537504_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[537504_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[537504_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[537504_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto824410">
+        <set-property name="miniatureImage"><![CDATA[824410_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[824410_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[824410_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[824410_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto283094">
+        <set-property name="miniatureImage"><![CDATA[283094_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[283094_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[283094_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[283094_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto992286">
+        <set-property name="miniatureImage"><![CDATA[992286_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[992286_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[992286_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[992286_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto549824">
+        <set-property name="miniatureImage"><![CDATA[549824_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[549824_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[549824_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[549824_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto299134">
+        <set-property name="miniatureImage"><![CDATA[299134_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[299134_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[299134_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[299134_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto554964">
+        <set-property name="miniatureImage"><![CDATA[554964_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[554964_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[554964_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[554964_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498148">
+        <set-property name="miniatureImage"><![CDATA[498148_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[498148_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[498148_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[498148_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto822800">
+        <set-property name="miniatureImage"><![CDATA[822800_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[822800_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[822800_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[822800_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto524573">
+        <set-property name="miniatureImage"><![CDATA[524573_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[524573_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[524573_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[524573_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto907394">
+        <set-property name="miniatureImage"><![CDATA[907394_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[907394_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[907394_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[907394_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto896040">
+        <set-property name="miniatureImage"><![CDATA[896040_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[896040_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[896040_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[896040_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto511447">
+        <set-property name="miniatureImage"><![CDATA[511447_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[511447_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[511447_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[511447_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto610707">
+        <set-property name="miniatureImage"><![CDATA[610707_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[610707_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[610707_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[610707_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto526645">
+        <set-property name="miniatureImage"><![CDATA[526645_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[526645_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[526645_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[526645_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto489630">
+        <set-property name="miniatureImage"><![CDATA[489630_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[489630_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[489630_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[489630_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519230">
+        <set-property name="miniatureImage"><![CDATA[519230_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[519230_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[519230_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[519230_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514563">
+        <set-property name="miniatureImage"><![CDATA[514563_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514563_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514563_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514563_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto515879">
+        <set-property name="miniatureImage"><![CDATA[515879_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[515879_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[515879_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[515879_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto520753">
+        <set-property name="miniatureImage"><![CDATA[520753_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[520753_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[520753_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[520753_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto907941">
+        <set-property name="miniatureImage"><![CDATA[907941_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[907941_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[907941_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[907941_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534539">
+        <set-property name="miniatureImage"><![CDATA[534539_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[534539_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[534539_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[534539_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto662616">
+        <set-property name="miniatureImage"><![CDATA[662616_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[662616_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[662616_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[662616_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto543802">
+        <set-property name="miniatureImage"><![CDATA[543802_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[543802_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[543802_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[543802_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto516110">
+        <set-property name="miniatureImage"><![CDATA[516110_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[516110_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[516110_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[516110_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto522103">
+        <set-property name="miniatureImage"><![CDATA[522103_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[522103_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[522103_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[522103_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto497263">
+        <set-property name="miniatureImage"><![CDATA[497263_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[497263_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[497263_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[497263_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498151">
+        <set-property name="miniatureImage"><![CDATA[498151_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[498151_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[498151_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[498151_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521185">
+        <set-property name="miniatureImage"><![CDATA[521185_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[521185_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[521185_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[521185_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto528175">
+        <set-property name="miniatureImage"><![CDATA[528175_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[528175_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[528175_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[528175_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto533318">
+        <set-property name="miniatureImage"><![CDATA[533318_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[533318_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[533318_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[533318_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto515513">
+        <set-property name="miniatureImage"><![CDATA[515513_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[515513_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[515513_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[515513_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto486722">
+        <set-property name="miniatureImage"><![CDATA[486722_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[486722_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[486722_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[486722_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499946">
+        <set-property name="miniatureImage"><![CDATA[499946_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[499946_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[499946_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[499946_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487678">
+        <set-property name="miniatureImage"><![CDATA[487678_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[487678_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[487678_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[487678_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto486558">
+        <set-property name="miniatureImage"><![CDATA[486558_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[486558_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[486558_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[486558_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto519003">
+        <set-property name="miniatureImage"><![CDATA[519003_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[519003_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[519003_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[519003_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto555145">
+        <set-property name="miniatureImage"><![CDATA[555145_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[555145_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[555145_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[555145_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto677849">
+        <set-property name="miniatureImage"><![CDATA[677849_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[677849_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[677849_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[677849_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto204259">
+        <set-property name="miniatureImage"><![CDATA[204259_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[204259_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[204259_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[204259_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto531101">
+        <set-property name="miniatureImage"><![CDATA[531101_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[531101_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[531101_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[531101_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto985875">
+        <set-property name="miniatureImage"><![CDATA[985875_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[985875_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[985875_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[985875_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514296">
+        <set-property name="miniatureImage"><![CDATA[514296_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514296_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514296_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514296_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto860218">
+        <set-property name="miniatureImage"><![CDATA[860218_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[860218_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[860218_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[860218_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto527521">
+        <set-property name="miniatureImage"><![CDATA[527521_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[527521_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[527521_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[527521_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521191">
+        <set-property name="miniatureImage"><![CDATA[521191_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[521191_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[521191_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[521191_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto292168">
+        <set-property name="miniatureImage"><![CDATA[292168_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[292168_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[292168_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[292168_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto555063">
+        <set-property name="miniatureImage"><![CDATA[555063_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[555063_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[555063_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[555063_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto666362">
+        <set-property name="miniatureImage"><![CDATA[666362_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[666362_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[666362_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[666362_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto475283">
+        <set-property name="miniatureImage"><![CDATA[475283_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[475283_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[475283_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[475283_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto234002">
+        <set-property name="miniatureImage"><![CDATA[234002_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[234002_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[234002_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[234002_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto293345">
+        <set-property name="miniatureImage"><![CDATA[293345_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[293345_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[293345_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[293345_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto554118">
+        <set-property name="miniatureImage"><![CDATA[554118_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[554118_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[554118_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[554118_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto497263">
+        <set-property name="miniatureImage"><![CDATA[497263_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[497263_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[497263_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[497263_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto505730">
+        <set-property name="miniatureImage"><![CDATA[505730_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[505730_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[505730_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[505730_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto497466">
+        <set-property name="miniatureImage"><![CDATA[497466_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[497466_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[497466_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[497466_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534541">
+        <set-property name="miniatureImage"><![CDATA[534541_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[534541_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[534541_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[534541_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487677">
+        <set-property name="miniatureImage"><![CDATA[487677_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[487677_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[487677_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[487677_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto989111">
+        <set-property name="miniatureImage"><![CDATA[989111_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[989111_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[989111_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[989111_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto495896">
+        <set-property name="miniatureImage"><![CDATA[495896_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[495896_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[495896_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[495896_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto895110">
+        <set-property name="miniatureImage"><![CDATA[895110_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[895110_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[895110_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[895110_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto534953">
+        <set-property name="miniatureImage"><![CDATA[534953_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[534953_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[534953_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[534953_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto495188">
+        <set-property name="miniatureImage"><![CDATA[495188_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[495188_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[495188_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[495188_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto985878">
+        <set-property name="miniatureImage"><![CDATA[985878_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[985878_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[985878_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[985878_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto974507">
+        <set-property name="miniatureImage"><![CDATA[974507_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[974507_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[974507_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[974507_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto570578">
+        <set-property name="miniatureImage"><![CDATA[570578_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[570578_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[570578_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[570578_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto101585">
+        <set-property name="miniatureImage"><![CDATA[101585_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[101585_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[101585_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[101585_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto499078">
+        <set-property name="miniatureImage"><![CDATA[499078_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[499078_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[499078_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[499078_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto620568">
+        <set-property name="miniatureImage"><![CDATA[620568_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[620568_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[620568_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[620568_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto557977">
+        <set-property name="miniatureImage"><![CDATA[557977_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[557977_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[557977_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[557977_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto556716">
+        <set-property name="miniatureImage"><![CDATA[556716_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[556716_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[556716_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[556716_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto555060">
+        <set-property name="miniatureImage"><![CDATA[555060_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[555060_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[555060_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[555060_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto514365">
+        <set-property name="miniatureImage"><![CDATA[514365_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[514365_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[514365_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[514365_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto521190">
+        <set-property name="miniatureImage"><![CDATA[521190_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[521190_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[521190_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[521190_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto560649">
+        <set-property name="miniatureImage"><![CDATA[560649_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[560649_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[560649_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[560649_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto552315">
+        <set-property name="miniatureImage"><![CDATA[552315_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[552315_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[552315_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[552315_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto257487">
+        <set-property name="miniatureImage"><![CDATA[257487_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[257487_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[257487_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[257487_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto300834">
+        <set-property name="miniatureImage"><![CDATA[300834_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[300834_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[300834_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[300834_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto270047">
+        <set-property name="miniatureImage"><![CDATA[270047_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[270047_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[270047_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[270047_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto981693">
+        <set-property name="miniatureImage"><![CDATA[981693_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[981693_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[981693_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[981693_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto294911">
+        <set-property name="miniatureImage"><![CDATA[294911_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[294911_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[294911_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[294911_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto498781">
+        <set-property name="miniatureImage"><![CDATA[498781_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[498781_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[498781_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[498781_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto488989">
+        <set-property name="miniatureImage"><![CDATA[488989_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[488989_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[488989_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[488989_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto678435">
+        <set-property name="miniatureImage"><![CDATA[678435_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[678435_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[678435_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[678435_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto291798">
+        <set-property name="miniatureImage"><![CDATA[291798_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[291798_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[291798_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[291798_w140]]></set-property>
+    </update-item>
+    <update-item item-descriptor="casto_sku" id="Casto487793">
+        <set-property name="miniatureImage"><![CDATA[487793_w43]]></set-property>
+        <set-property name="carouselImage"><![CDATA[487793_w75]]></set-property>
+        <set-property name="supportingImage"><![CDATA[487793_w125]]></set-property>
+        <set-property name="comparatorImage"><![CDATA[487793_w140]]></set-property>
+    </update-item>
+</gsa-template>

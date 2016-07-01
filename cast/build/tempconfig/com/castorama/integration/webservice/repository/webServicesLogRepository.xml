@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gsa-template PUBLIC "-//Art Technology Group, Inc.//DTD General SQL Adapter//EN"
+        "http://www.atg.com/dtds/gsa/gsa_1.0.dtd">
+
+<gsa-template>
+    <header>
+        <name>Web Service Log Repository</name>
+        <author>EPAM Team</author>
+        <version>1.0</version>
+    </header>
+
+    <item-descriptor name="inventoryWebServiceRequests" cache-mode="disabled"
+                     item-cache-size="1000" query-cache-size="1000" display-name-resource="inventoryWebServiceRequests">
+        <attribute name="resourceBundle"
+                   value="com.castorama.integration.webservice.properties.WebServiceTemplateResources"/>
+        <table name="inventory_request" type="primary" id-column-name="request_id">
+            <property name="id" column-name="request_id" data-type="string" required="true"
+                      display-name-resource="inventoryRequestId" category-resource="inventoryWebService">
+                <attribute name="propertySortPriority" value="10"/>
+            </property>
+            <property name="requestDate" column-name="request_date" data-type="timestamp" required="true"
+                      display-name-resource="inventoryRequestDate" category-resource="inventoryWebService">
+                <attribute name="propertySortPriority" value="20"/>
+            </property>
+            <property name="storeId" column-name="store_id" data-type="string" required="true"
+                      display-name-resource="inventoryRequestStoreId" category-resource="inventoryWebService">
+                <attribute name="propertySortPriority" value="30"/>
+            </property>
+            <property name="orderId" column-name="order_id" data-type="string" required="true"
+                      display-name-resource="inventoryRequestOrderId" category-resource="inventoryWebService">
+                <attribute name="propertySortPriority" value="40"/>
+            </property>
+            <property name="requestStatus" column-name="request_status" data-type="string" required="true"
+                      display-name-resource="inventoryRequestStatus" category-resource="inventoryWebService">
+                <attribute name="propertySortPriority" value="50"/>
+            </property>
+        </table>
+        <table name="inventory_request_order_items" type="multi" id-column-name="request_id">
+            <property name="orderItems" column-name="order_item_id" data-type="set"
+                      required="true" component-data-type="string" display-name-resource="inventoryRequestOrdersItems"
+                      category-resource="inventoryWebService"/>
+        </table>
+    </item-descriptor>
+</gsa-template>

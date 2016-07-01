@@ -1,0 +1,21 @@
+<dsp:getvalueof var="contextPath" bean="/OriginatingRequest.contextPath" />
+	<dsp:importbean bean="/atg/targeting/TargetingRandom"/>
+		<dsp:droplet name="TargetingRandom">
+        	<dsp:param bean="/atg/registry/Slots/CatalogueSlot" name="targeter"/>
+			<dsp:param name="fireViewItemEvent" value="false"/>
+            <dsp:oparam name="output">
+	            <dsp:getvalueof var="imageName" param='element.image.name'/>	            
+				<dsp:getvalueof var="media_url" param="element.videoUrl"/>            
+	            	<c:if test="${not empty media_url }" >			            
+				          <dsp:getvalueof var="paramToLoad" value="${contextPath}/castCatalog/includes/video_popup.jsp?url=${media_url}"/>
+				          <%-- %><a href="#" >
+				          	<img width="190" height="197" src="${imageName }" alt="" title="" onclick="showVideoPopup('product_video', '${paramToLoad}');"/>
+				          </a>--%>
+				          <a href="javascript:showVideoPopup('product_video', '${paramToLoad}');">
+				          	<img width="190" height="197" src="${imageName }" alt="" title=""/>
+				          </a>
+			        </c:if>					
+				
+           	</dsp:oparam>      	
+		</dsp:droplet>	
+ 		<div id="product_video"  class="whitePopupContainer" style="width: 500px; height: 450px; display: none;"></div>

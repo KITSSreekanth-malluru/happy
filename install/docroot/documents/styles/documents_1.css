@@ -1,0 +1,273 @@
+/*
+Name: Feuille de style 
+Version: 1
+Author: frd
+*/
+
+
+body {
+	font-family: Arial;  
+	font-weight: normal;
+	font-size: 11px;
+	color: #1c1c1c;
+}
+h2 { font-size: 22px; font-weight: normal;}
+
+a, a:hover { color: #09438b; text-decoration: none;}
+a:hover { text-decoration: underline;}
+
+/* Je choisis le bon produit */
+#choix-produit {
+	width: 790px; 
+	height: 170px;
+	border: 1px solid #D3D3D3; 
+	background: #fff; 
+	margin: 10px 0;
+}
+#choix-produit-titre {
+	background: #5A7B88 url('/documents/images/illu/titre.jpg') no-repeat top left; 
+	color: #fff; 
+	height: 64px;	
+	border: 1px solid #5A7B88; /* fusion des marges */
+}
+#choix-produit h2 { padding: 18px 0 0 210px;}
+#choix-produit p { font-weight: bold; margin-left: 200px; color: #4a4a4a;}
+#choix-produit p b { color: #010101;}
+#choix-produit p.note { color: #7e7e7e; font-size: 10px;}
+
+/* Je realise */
+#je-realise {
+	background: #5A7B88 url('/documents/images/illu/titre-realise.jpg') no-repeat top left; 
+	color: #fff; 
+	height: 64px;	
+	border: 1px solid #5A7B88; /* fusion des marges */
+}
+
+/* Avant tout, qu'est-ce que... */
+#description-produit {
+	width: 602px;	
+	text-align: justify;
+	padding: 0 178px 10px 10px;
+	position: relative;
+	border: 1px solid #D3D3D3; 
+	background: #fff; 
+	margin: 10px 0;
+	height: 113px;
+}
+#description-produit h2 { color: #09438b;}
+#clin-oeil-eco {
+	width: 167px;
+	height: 124px;
+	background: url('/documents/images/illu/eco.jpg') no-repeat top left;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border: 0px solid green;
+	
+}
+.lien-tooltip { border: 0px solid red; padding: 1px 1px 110px 164px;}
+#ma-tooltip { background: #fff; border: 2px solid #dbdbdb; padding: 10px;}
+#ma-tooltip .picto {
+	border-bottom: 1px solid #41c0eb; 
+	padding: 5px 0 5px 60px;
+	min-height: 72px;
+	width: 350px;
+}
+#ma-tooltip .eau { background: url('/documents/images/illu/picto-EcoEau.png') no-repeat 0px 5px; }
+#ma-tooltip .terre { background: url('/documents/images/illu/picto-EcoTerre.png') no-repeat 0px 5px; }
+#ma-tooltip .air { background: url('/documents/images/illu/picto-EcoAir.png') no-repeat 0px 5px; }
+#ma-tooltip .energie { background: url('/documents/images/illu/picto-EcoEnergie.png') no-repeat 0px 5px; }
+/* Les critères à prendre en compte */
+#criteres {
+	width: 770px;
+	background: #fff url('/documents/images/illu/criteres-degrade.jpg') repeat-x bottom left;	
+	padding: 0 10px 10px 10px;
+	position: relative;
+	border: 1px solid #D3D3D3;
+	margin: 10px 0 0 0;
+}
+#criteres h2 {
+	font-weight: bold;
+	color: #09438b;	
+}
+#critere1 h3,
+#critere2 h3,
+#critere3 h3,
+#critere4 h3,
+#critere5 h3,
+#critere6 h3 { color: #1C1C1C;}
+
+#criteres ul { width: 400px; list-style: none; padding: 0;}
+#criteres ul li {
+	background: #fff url('/documents/images/illu/puce-fermee.png') no-repeat 5px 7px;
+	border: 1px solid #ccc;
+	margin: 0 10px 5px 10px;
+	height: 15px;
+	width: 163px;
+	float: left;
+	clear: right;
+	padding: 4px 0 0 15px;
+}
+#criteres ul li a { color: #1c1c1c;}
+#criteres ul li a:hover { color: #09438b; font-weight: bold; text-decoration: none;}
+#col1 { float: left; border: 0px solid blue; margin: 10px 10px 0px 0;}
+#col2 { float: left; border: 0px solid green; margin: 10px 0 0 0;}
+#col2 h2 { padding: 0; margin: 0; text-transform: uppercase; font-size: 1.8em;}
+#col3 {
+	border: 0px solid red;
+	width: 150px; 
+	height: 147px; 
+	position: absolute; 
+	bottom: 0; 
+	right: 20px; 
+	background: transparent url('/documents/images/illu/mot-expert.jpg') no-repeat bottom right;	
+}
+#criteres p.plus {
+	background: url('/documents/images/illu/puce-savoir.png') no-repeat top left;
+	padding: 0 0 0 15px;	
+	font-weight: bold;
+	position: absolute; 
+	bottom: 5px; 
+	right: 180px;
+}
+
+
+/* Player casto */
+#player-casto {
+	width: 770px;
+	background: #fff url('/documents/images/illu/criteres-degrade.jpg') repeat-x bottom left;	
+	padding: 0 0px 0px 0px;
+	position: relative;
+	border: 1px solid #D3D3D3;
+	margin: 10px 0;
+}
+
+/* Bloc communautaire : télécharger, exporter, partager le Pas à pas */
+#communautaire {
+	width: 790px;
+	margin: 10px 0;
+	padding: 0;
+	position: relative;
+	border: 0px solid #D3D3D3; 
+}
+#communautaire ul {
+	 width: 288px;
+	 float: left;
+	 list-style-position: inside;
+	 list-style-type: none;
+	 background: url('/documents/images/illu/commu-degrade.jpg') repeat-x bottom left;
+	 border: 0px solid black;
+	 padding: 0;
+	 margin: 0 10px 0 0;
+}
+#communautaire ul li {
+	border-top: 1px solid #D3D3D3;
+	height: 20px;
+	padding: 9px 0 0 25px;
+}
+#communautaire .pdf { background: url('/documents/images/illu/picto-pdf.png') no-repeat 5px center;}
+#communautaire .envoyer { background: url('/documents/images/illu/picto-envoyer.png') no-repeat 5px center;}
+#communautaire .exporter { background: url('/documents/images/illu/picto-exporter.png') no-repeat 5px center;}
+#communautaire .video { background: url('/documents/images/illu/picto-video.png') no-repeat 5px center;}
+
+/* Détails des critères */
+.critere-detail {
+	width: 770px;
+	padding: 0 10px 10px 10px;	
+	background: transparent url('/documents/images/illu/titre-degrade-22px.jpg') repeat-x top left;
+	position: relative;
+	border: 1px solid #D3D3D3;  
+	margin-top: -1px;	
+}
+.critere-detail h3 {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #09438b;
+	/*background: url('/documents/images/illu/puce-fermee.png') no-repeat 2px 3px;*/
+	padding: 0px 0px 0px 5px;
+	height: 22px;
+	border: 0px solid red; margin: 4px 0 0 0px;
+}
+.critere-detail-gauche {border: 0px solid black; width: 380px; position: relative; float: left }
+.critere-detail-droite {border: 0px solid blue; width: 380px; position: relative;  float: left;}
+.critere-detail-element {
+	border: 1px solid #D3D3D3; 
+	background: #fff; 
+	width: 348px; 
+	height: auto;
+	float: none;
+	margin: 5px;
+	padding: 10px;
+	position: relative;
+	text-align: justify;
+	color: #1C1C1C;
+}
+.critere-detail-element h4 {
+	margin-top: 0 ;
+	text-transform: uppercase;
+	color: #91006a;
+	letter-spacing: 1px;	
+}
+p.resume { display: inline;}
+.go { background: none; border: 0;  display: inline; color: #09438b; margin-bottom: 30px}
+.suite-txt { color: #09438b;}
+
+/* Navigation des etapes */
+#etape-nav { 
+	width: 790px; 
+	position: relative;
+	height: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #1C1C1C;
+	font-size: 11px;
+	margin: 5px 0 0 0;
+}
+#etape-nav ul {
+		border: 0px solid red;
+		list-style-type: none;
+}
+#etape-nav ul li.prec { position: absolute; top: 0; left: 0; padding: 0 15px 0 15px; background: url('/documents/images/illu/puce-nav-prec.png') no-repeat 0px -1px;}
+#etape-nav ul li.suiv { position: absolute; top: 0; right: 0; padding: 0 15px 0 10px; background: url('/documents/images/illu/puce-nav-suiv.png') no-repeat right 0px;}
+#etape-nav a { color: #1C1C1C;}
+
+/* Easy Slider */
+#slider ul, #slider li{
+	margin: 0;
+	padding:0;
+	list-style:none;
+}
+#slider, #slider li{ 
+	/* list items must be the same size as the slider area */ 
+	width:790px;
+	height:150px;
+	overflow:hidden; 
+	}					
+#slider .critere-detail {border: 0px solid #dbdbdb;}
+#slider { border: 1px solid #dbdbdb;}
+
+span#nextBtn { position: absolute; top: 0; right: 0; padding: 0 15px 0 10px; background: url('/documents/images/illu/puce-nav-suiv.png') no-repeat right 0px;}
+span#prevBtn { position: absolute; top: 0; left: 0; padding: 0 15px 0 15px; background: url('/documents/images/illu/puce-nav-prec.png') no-repeat 0px -1px;}
+/* // Easy Slider */
+
+/* Bloc En savoir plus */
+.savoir-plus {
+	width: 770px;
+	padding: 0 10px 10px 10px;	
+	border: 1px solid #D3D3D3;
+	margin: 10px 0;
+}
+.savoir-plus h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #09438b;
+	background: url('/documents/images/illu/puce-savoir.png') no-repeat 0px 3px;
+	padding-left: 15px;
+}
+
+/* mise en forme generale */
+.nettoyeur { clear: both; height: 0px; background: #fff; color: #fff;}
+
+.lire_suite { color: #09438b; border: 0px solid #dbdbdb; text-align: right;}
+

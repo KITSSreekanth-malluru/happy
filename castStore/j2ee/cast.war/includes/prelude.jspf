@@ -1,0 +1,6 @@
+<%@ include file="/includes/taglibs.jspf" %>
+<dsp:page>
+
+  <%@ include file="/includes/context.jspf" %>
+  <dsp:setxml value="true"/>
+</dsp:page>

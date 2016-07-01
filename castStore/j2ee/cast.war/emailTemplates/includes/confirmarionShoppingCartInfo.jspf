@@ -1,0 +1,118 @@
+<p>
+<br /><fmt:message key="msg.delivery.secondary"/> : 
+
+<dsp:droplet name="/atg/dynamo/droplet/ForEach">
+  <dsp:param name="array" param="order.shippingGroups"/>
+  <dsp:param name="elementName" value="sg"/>
+  <dsp:oparam name="output">
+    <br />
+    <dsp:droplet name="/atg/dynamo/droplet/Switch">
+      <dsp:param name="value" param="sg.shippingAddress.prefix"/>
+      <dsp:oparam name="miss">  
+        <fmt:message key="msg.address.prefix.miss" />&nbsp;
+      </dsp:oparam>
+      <dsp:oparam name="mrs"> 
+        <fmt:message key="msg.address.prefix.mrs" />&nbsp;
+      </dsp:oparam>
+      <dsp:oparam name="mr">
+      <fmt:message key="msg.address.prefix.mr" />&nbsp;
+      </dsp:oparam>
+    </dsp:droplet><dsp:valueof param="sg.shippingAddress.firstName"/>&nbsp;<dsp:valueof param="sg.shippingAddress.lastName"/> 
+    <br /><dsp:valueof param="sg.shippingAddress.address1"/>
+    <br /><dsp:valueof param="sg.shippingAddress.address2"/>
+    <br /><dsp:valueof param="sg.shippingAddress.postalCode"/> 
+    <br /><dsp:valueof param="sg.shippingAddress.city"/>
+    <br /><dsp:valueof param="sg.shippingAddress.phoneNumber"/></p>
+  </dsp:oparam>
+</dsp:droplet>
+
+<p>
+<br /><fmt:message key="msg.delivery.primary"/> : 
+<dsp:droplet name="/atg/dynamo/droplet/ForEach">
+  <dsp:param name="array" param="order.paymentGroups"/>
+  <dsp:param name="elementName" value="pg"/>
+  <dsp:oparam name="output">
+    <br />
+    <dsp:droplet name="/atg/dynamo/droplet/Switch">
+      <dsp:param name="value" param="pg.billingAddress.prefix"/>
+      <dsp:oparam name="miss">  
+        <fmt:message key="msg.address.prefix.miss" />&nbsp;
+      </dsp:oparam>
+      <dsp:oparam name="mrs"> 
+        <fmt:message key="msg.address.prefix.mrs" />&nbsp;
+      </dsp:oparam>
+      <dsp:oparam name="mr">
+      <fmt:message key="msg.address.prefix.mr" />&nbsp;
+      </dsp:oparam>
+    </dsp:droplet>
+    <dsp:valueof param="pg.billingAddress.firstName"/>&nbsp;<dsp:valueof param="pg.billingAddress.lastName"/>
+    <br /><dsp:valueof param="pg.billingAddress.address1"/>
+    <br /><dsp:valueof param="pg.billingAddress.address2"/>
+    <br /><dsp:valueof param="pg.billingAddress.postalCode"/>
+    <br /><dsp:valueof param="pg.billingAddress.city"/>
+    <br /><dsp:valueof param="pg.billingAddress.phoneNumber"/></p>
+ </dsp:oparam>
+</dsp:droplet>
+<p>
+<fmt:message key="email.confirmation.shoppingCartInfo.products.list"/>
+
+<dsp:droplet name="/atg/dynamo/droplet/ForEach">
+  <dsp:param name="array" param="order.commerceItems"/>
+  <dsp:param name="elementName" value="ci"/>
+  <dsp:oparam name="output">
+ 
+    <br /><dsp:valueof param="ci.quantity"/>
+    
+    <dsp:droplet name="/com/castorama/droplet/CastLookupDroplet">
+         <dsp:param name="id" param="ci.catalogRefId"/>
+         <dsp:param name="elementName" value="sku"/>
+         <dsp:param name="itemDescriptor" value="casto_sku"/>
+         <dsp:param name="repository" bean="/atg/commerce/catalog/ProductCatalog"/>
+         <dsp:oparam name="output"> 
+           <strong>
+              <dsp:getvalueof var="productName" param="sku.displayName"/>
+              <%@ include file="productName.jspf" %>
+           </strong> &agrave;
+            <%@ include file="skuPrice.jspf" %> EUR TTC pi&egrave;ce.
+         </dsp:oparam>
+     </dsp:droplet> 
+
+    <br />
+      <fmt:message key="email.confirmation.shoppingCartInfo.delivered.in">
+        <fmt:param>
+          <a href="${httpLink}/contactUs/faq.jsp#23" title="En savoir plus"><font face="Arial" size="2" color="#09438b">
+            <dsp:include page="/castCatalog/includes/productDelivery.jsp">
+              <dsp:param name="skuId" param="ci.catalogRefId"/>
+            </dsp:include>
+          </font></a>
+        </fmt:param>
+      </fmt:message>
+  </dsp:oparam>
+</dsp:droplet>
+
+<p>
+
+<dsp:droplet name="/com/castorama/droplet/ShippingAndHandlingPriceDroplet">
+    <dsp:param name="order" param="order"/>
+    <dsp:oparam name="output">
+        <dsp:getvalueof var="shippingPrice" param="shippingPrice"/>
+        <dsp:getvalueof var="handlingPrice" param="handlingPrice"/>
+        <dsp:getvalueof var="shippingAndHandling" value="${shippingPrice + handlingPrice}"/>
+        <dsp:getvalueof var="total" param="order.priceInfo.total"/>
+        <dsp:getvalueof var="rawSubTotal" param="order.priceInfo.rawSubTotal"/>
+        
+        <strong><fmt:message key="email.confirmation.shoppingCartInfo.rawSubTotal"/></strong> <fmt:formatNumber value="${rawSubTotal}" pattern="0.00#"/> EUR<br />
+        <strong><fmt:message key="email.confirmation.shoppingCartInfo.shippingAndHandling"/></strong> <fmt:formatNumber value="${shippingAndHandling}" pattern="0.00#"/> EUR<br />
+        <strong><fmt:message key="email.confirmation.shoppingCartInfo.total"/></strong> <fmt:formatNumber value="${total}" pattern="0.00#"/> EUR</p>
+    </dsp:oparam>
+</dsp:droplet>
+
+<p>
+  <fmt:message key="email.confirmation.shoppingCartInfo.footnote">
+    <fmt:param>
+      <a href="${httpLink }/user/clientSpaceHome.jsp">
+        <fmt:message key="email.link.clientspace"/>
+      </a>
+    </fmt:param>
+  </fmt:message>
+</p> 

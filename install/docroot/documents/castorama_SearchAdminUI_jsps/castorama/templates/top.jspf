@@ -1,0 +1,25 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+
+<%@ taglib prefix="d" uri="http://www.atg.com/taglibs/daf/dspjspTaglib1_0"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<%@taglib prefix="tags" tagdir="/WEB-INF/tags"%>
+
+<%@ taglib prefix="admin-ui" uri="http://www.atg.com/taglibs/search/searchadminui1_0"%>
+<%@ taglib prefix="admin-beans" uri="http://www.atg.com/taglibs/search/searchadminbeans1_0"%>
+<%@ taglib prefix="adminfunctions" uri="http://www.atg.com/taglibs/search/searchadminfunctions1_0"%>
+<%@ taglib prefix="admin-validator" uri="http://www.atg.com/taglibs/search/searchadminvalidator1_0"%>
+<%@ taglib prefix="admin-dojo" uri="http://www.atg.com/taglibs/search/searchadmindojo1_0"%>
+<%@ taglib prefix="common" uri="http://www.atg.com/taglibs/searchadmin/searchadminBeansTaglib1_0"%>
+
+<%@ taglib prefix="dictionary" uri="http://www.atg.com/taglibs/searchadmin/dictionaryBeansTaglib1_0"%>
+<%@ taglib prefix="topic" uri="http://www.atg.com/taglibs/searchadmin/topicBeansTaglib1_0"%>
+<%@ taglib prefix="termweights" uri="http://www.atg.com/taglibs/searchadmin/termweightsBeansTaglib1_0"%>
+<%@ taglib prefix="queryrule" uri="http://www.atg.com/taglibs/searchadmin/queryruleBeansTaglib1_0"%>
+<%@ taglib prefix="facets" uri="http://www.atg.com/taglibs/searchadmin/facetsBeansTaglib1_0"%>
+<%@ taglib prefix="tpo" uri="http://www.atg.com/taglibs/searchadmin/tpoBeansTaglib1_0"%>
+
+<fmt:setBundle basename="com.castorama.searchadmin.WebAppResources"/>

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+	<script type="text/javascript">
+		function submitCall() {
+			$("#result").show();
+			$("#out").html("<em>in progress...</em>");
+			var content = {
+				"login": $("#login").val(),
+				"password": $("#password").val(),
+				"civilite": $("#civilite").val(),
+				"firstName": $("#firstName").val(),
+				"lastName": $("#lastName").val(),
+				"dateOfBirth": $("#dateOfBirth").val(),
+				"postalCode": $("#postalCode").val(),
+				"city": $("#city").val(),
+				"address1": $("#address1").val(),
+				"address2": $("#address2").val(),
+				"address3": $("#address3").val(),
+				"locality": $("#locality").val(),
+				"country": $("#country").val(),
+				"phoneNumber": $("#phoneNumber").val(),
+				"phoneNumber2": $("#phoneNumber2").val(),
+				"inscription": $("#inscription").val(),
+				"id_magasin_ref": $("#id_magasin_ref").val()
+			};
+			$.ajax(
+				$("#url").val(),
+				{
+					type: "POST",
+					contentType: "application/json;charset=utf-8",
+					data: JSON.stringify(content),
+					dataType: "json",
+					success: handleResponse,
+					error: handleError
+				}
+			);
+		}
+		function handleResponse(data) {
+			$("#out").html("<pre>" + JSON.stringify(data, null, 4) + "</pre>");
+		}
+		function handleError(req, textStatus, errorThrown) {
+			$("#out").html("<strong><h3>Error!</h3>" + textStatus + '(' + errorThrown + ").<br/>Response text: " + req.responseText + " </strong>");
+		}
+	</script>
+</head>
+<body>
+	<h1>This is a test page for the Update User Info Web service</h1>
+	<p>
+		<label for="url">URL to the service</label>
+		<input id="url" type="text" value="/rest/updateUserInfo" style="width:50%"/>
+	</p>
+	<p>
+		<table>
+			<tr>
+				<td><label for="login">Login/Email</label></td>
+				<td><input id="login" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="password">Password</label></td>
+				<td><input id="password" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="civilite">Civilite</label></td>
+				<td><input id="civilite" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="firstName">First Name</label></td>
+				<td><input id="firstName" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="lastName">Last Name</label></td>
+				<td><input id="lastName" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="dateOfBirth">Date of Birth</label></td>
+				<td><input id="dateOfBirth" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="postalCode">Postal Code</label></td>
+				<td><input id="postalCode" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="city">City</label></td>
+				<td><input id="city" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="address1">Address 1</label></td>
+				<td><input id="address1" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="address2">Address 2</label></td>
+				<td><input id="address2" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="address3">Address 3</label></td>
+				<td><input id="address3" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="locality">Locality</label></td>
+				<td><input id="locality" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="country">Country</label></td>
+				<td><input id="country" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="phoneNumber">Phone Number</label></td>
+				<td><input id="phoneNumber" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="phoneNumber2">Phone Number 2</label></td>
+				<td><input id="phoneNumber2" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="inscription">Inscription</label></td>
+				<td><input id="inscription" type="text"/><br/></td>
+			</tr>
+			<tr>
+				<td><label for="id_magasin_ref">Magasin ref</label></td>
+				<td><input id="id_magasin_ref" type="text"/><br/></td>
+			</tr>
+		</table>
+		<input type="button" value="Submit" onclick="submitCall();return false;"/>
+	</p>
+	<div id="result" style="display:none">
+		<h2>Output</h2>
+		<div id="out"></div>
+	</div>
+</body>
+</html>

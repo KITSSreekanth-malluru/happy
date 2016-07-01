@@ -1,0 +1,13 @@
+<%-- This file is included in all *.jsp files. It is specified by an include-prelude 
+     option in web.xml.
+     NOTE: Do not set a contentType directive in this file as some JSPs will render
+     text/html, whereas others will render other mime types, including application/json.
+--%>
+<%@ include file="/includes/taglibs.jspf" %>
+<dsp:page>
+
+  <%@ include file="/includes/context.jspf" %>
+
+  <%-- Set the default value for the xml="..." attribute on the dsp:page tags. --%>
+  <dsp:setxml value="true"/>
+</dsp:page>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE process SYSTEM "dynamosystemresource:/atg/dtds/pdl/pdl_1.0.dtd">
+<process author="admin" creation-time="960358497000" enabled="true" last-modified-by="admin" modification-time="1247646940795">
+  <segment migrate-from="959803685582" migrate-subjects="true">
+    <segment-name>Views Product</segment-name>
+    <!--================================-->
+    <!--== Views an item from CustomProductCatalog  -->
+    <!--================================-->
+    <event id="1">
+      <event-name>atg.dps.ViewItem</event-name>
+      <filter construct="content-repository-filter" operator="eq">
+        <event-property>
+          <property-name>repositoryName</property-name>
+        </event-property>
+        <constant>CustomProductCatalog</constant>
+      </filter>
+    </event>
+    <!--================================-->
+    <!--== Change Person's Products viewed recently by appending Event's Repository id  -->
+    <!--================================-->
+    <action id="2">
+      <action-name construct="modify-action">modify</action-name>
+      <action-param name="modified">
+        <subject-property>
+          <property-name>productsViewed</property-name>
+        </subject-property>
+      </action-param>
+      <action-param name="operator">
+        <constant>append</constant>
+      </action-param>
+      <action-param name="modifier">
+        <event-property construct="event-property">
+          <property-name>repositoryId</property-name>
+        </event-property>
+      </action-param>
+    </action>
+  </segment>
+</process>

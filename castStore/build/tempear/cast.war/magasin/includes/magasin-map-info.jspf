@@ -1,0 +1,23 @@
+	
+	<dsp:getvalueof var="accesroute" param="magasin.accesroute" />
+	<dsp:getvalueof var="accesroute2" param="magasin.accesroute2" />
+	<c:if test="${not empty accesroute || not empty accesroute2}">
+		<p><strong><fmt:message key="magasin.way.to.shop.road" /></strong></p>
+		<ul><c:if test="${not empty accesroute}"> 
+			<li>            						
+			<c:out value="${accesroute }" escapeXml="false"/></li>
+			</c:if>
+			<c:if test="${not empty accesroute2}"> 
+			<li>
+			<c:out value="${accesroute2 }" escapeXml="false"/></li>
+			</c:if>
+		</ul>
+	</c:if>
+	<dsp:getvalueof var="accesautoroute" param="magasin.accesautoroute" />
+	<c:if test="${not empty accesautoroute}">		            					
+	<p><strong><fmt:message key="magasin.way.to.shop.motorway" /></strong></p>
+	<ul>
+		<li>            						
+		<c:out value="${accesautoroute }" escapeXml="false"/></li>
+	</ul>
+	</c:if>

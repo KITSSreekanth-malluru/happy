@@ -1,0 +1,24 @@
+<div id="promotions">
+    <dsp:droplet name="/com/castorama/droplet/SheduleForProductPromotion">
+        <dsp:param name="startDateCommerce" param="sku.startDateCommercePromo"/>
+        <dsp:param name="endDateCommerce" param="sku.endDateCommercePromo"/>
+        <dsp:param name="startDateContenu" param="sku.startDateContenuPromo"/>
+        <dsp:param name="endDateContenu" param="sku.endDateContenuPromo"/>
+        <dsp:oparam name="output">
+            <dsp:getvalueof var="colorCommerce" param="sku.colorLibelleCommerce"/>
+            <dsp:getvalueof var="colorContenu" param="sku.colorLibelleContenu"/>
+            <dsp:getvalueof var="isCommerce" param="isVisibleCommerce"/>
+            <dsp:getvalueof var="isContenu" param="isVisibleContenu"/>
+            <c:if test="${(isCommerce == 'true')}">
+                <div id="promotions_commerce" class="promotion" style="background:${colorCommerce};padding:7px;">
+                    <dsp:valueof param="sku.promotionCommerce" valueishtml="true"/>
+                </div>
+            </c:if>
+            <c:if test="${(isContenu == 'true')}">
+                <div id="promotions_contenu" class="promotion" style="background:${colorContenu};padding:7px;">
+                    <dsp:valueof param="sku.promotionContenu" valueishtml="true"/>
+                </div>
+            </c:if>
+        </dsp:oparam>
+    </dsp:droplet>
+</div>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE gsa-template SYSTEM "dynamosystemresource:/atg/dtds/gsa/gsa_1.0.dtd">
+<gsa-template>
+    <import-items>
+
+        <add-item item-descriptor="Attributs Casto" id="Casto293345_ad1">
+            <set-property name="attr_ValueBoolean"><![CDATA[__NULL__]]></set-property>
+            <set-property name="attr_Type"><![CDATA[Value String]]></set-property>
+            <set-property name="attr_ValueString"><![CDATA[I/IP44]]></set-property>
+            <set-property name="attr_displayName"><![CDATA[Classe]]></set-property>
+            <set-property name="attr_name"><![CDATA[Classe]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Attributs Casto" id="Casto293345_ad2">
+            <set-property name="attr_ValueBoolean"><![CDATA[__NULL__]]></set-property>
+            <set-property name="attr_Type"><![CDATA[Value String]]></set-property>
+            <set-property name="attr_ValueString"><![CDATA[E27]]></set-property>
+            <set-property name="attr_displayName"><![CDATA[Douille]]></set-property>
+            <set-property name="attr_name"><![CDATA[Douille]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Attributs Casto" id="Casto293345_ad3">
+            <set-property name="attr_ValueBoolean"><![CDATA[__NULL__]]></set-property>
+            <set-property name="attr_Type"><![CDATA[Value Int]]></set-property>
+            <set-property name="attr_Unit"><![CDATA[Watts]]></set-property>
+            <set-property name="attr_displayName"><![CDATA[Puissance]]></set-property>
+            <set-property name="attr_name"><![CDATA[Puissance]]></set-property>
+            <set-property name="attr_ValueInt"><![CDATA[60]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Attributs Casto" id="Casto293345_ad4">
+            <set-property name="attr_ValueBoolean"><![CDATA[__NULL__]]></set-property>
+            <set-property name="attr_Type"><![CDATA[Value String]]></set-property>
+            <set-property name="attr_ValueString"><![CDATA[non]]></set-property>
+            <set-property name="attr_displayName"><![CDATA[Fournie]]></set-property>
+            <set-property name="attr_name"><![CDATA[Fournie]]></set-property>
+        </add-item>
+
+        <add-item item-descriptor="Attributs Casto" id="Casto293345_ad5">
+            <set-property name="attr_ValueBoolean"><![CDATA[__NULL__]]></set-property>
+            <set-property name="attr_Type"><![CDATA[Value String]]></set-property>
+            <set-property name="attr_Unit"><![CDATA[cm]]></set-property>
+            <set-property name="attr_ValueString"><![CDATA[31x17,5]]></set-property>
+            <set-property name="attr_displayName"><![CDATA[Dimensions en cm (HxD)]]></set-property>
+            <set-property name="attr_name"><![CDATA[Dimensions en cm (HxD)]]></set-property>
+        </add-item>
+    </import-items>
+
+    <update-item item-descriptor="casto_sku" id="Casto293345">
+        <set-property name="attributes">
+            <![CDATA[Casto293345_ad1,Casto293345_ad2,Casto293345_ad3,Casto293345_ad4,Casto293345_ad5]]></set-property>
+    </update-item>
+
+</gsa-template>

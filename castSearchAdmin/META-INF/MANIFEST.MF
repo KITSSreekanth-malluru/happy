@@ -1,0 +1,6 @@
+ATG-Product: The Castorama Search Extension
+Manifest-Version: 1.0
+ATG-Client-Class-Path: lib/classes.jar
+ATG-Class-Path: lib/classes.jar
+ATG-Config-Path: config/config.jar
+ATG-Required: DAF.Search.Base DAF.Search.Index commerce.castorama.castSearch.Versioned

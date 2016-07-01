@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application version="1.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/application_1_4.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee">
+  <description>Stock Visualization Webservice EAR</description>
+  <display-name>Stock Visualization Webservice</display-name>
+  <module>
+    <web>
+      <web-uri>castSVS.war</web-uri>
+      <context-root>/stock</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>stock-quartz-ejb.jar</ejb>
+  </module>
+</application>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd">
+
+  <context:annotation-config />
+  <context:component-scan base-package="com.castorama.stock.mchannel.cache,com.castorama.stock.mchannel.cache.mbean,com.castorama.stock.supervision" />
+
+  <bean id="cacheConfig" class="com.castorama.stock.mchannel.Configuration" scope="singleton">
+    <property name="sqlFetchSize" value="50000"/>
+    <property name="productsToLoad" value="50000"/>
+    <property name="loadOnStartUp" value="true"/>
+    <property name="numberOfThreads" value="3"/>
+    <property name="dataSourceName" value="stock_ds"/>
+    <property name="limitedAvailabilityTop" value="2"/>
+    <property name="limitedAvailabilityButtom" value="1"/>
+    <property name="maxNumberOfProductsInParameter" value="500"/>
+    <property name="lruMaxNodes" value="1000"/>
+    <property name="evictionRegionQueueSize" value="4000000"/>
+  </bean>
+  
+  <bean id="supervisionManager" class="com.castorama.stock.supervision.SupervisionManager" scope="singleton">
+    <property name="dataSourceName" value="stock_ds"/>
+  </bean>
+
+  <bean id="multiThreadCacheLoader" class="com.castorama.stock.mchannel.cache.MultiThreadCacheLoader"
+        scope="singleton" factory-method="getInstance">
+  </bean>
+
+  <bean id="cacheOwner" class="com.castorama.stock.mchannel.cache.CacheOwner" scope="singleton"
+        factory-method="getInstance">
+  </bean>
+    
+  <bean id="exporter" class="org.springframework.jmx.export.MBeanExporter">
+    <property name="assembler" ref="assembler"/>
+    <property name="namingStrategy" ref="namingStrategy"/>
+    <property name="autodetect" value="true"/>
+  </bean>
+
+  <bean id="jmxAttributeSource"
+        class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource"/>
+
+  <!-- will create management interface using annotation metadata -->
+  <bean id="assembler"
+        class="org.springframework.jmx.export.assembler.MetadataMBeanInfoAssembler">
+      <property name="attributeSource" ref="jmxAttributeSource"/>
+  </bean>
+
+  <!-- will pick up the ObjectName from the annotation -->
+  <bean id="namingStrategy"
+        class="org.springframework.jmx.export.naming.MetadataNamingStrategy">
+      <property name="attributeSource" ref="jmxAttributeSource"/>
+  </bean>
+
+  <bean id="cacheService" class="com.castorama.stock.mchannel.cache.mbean.CacheServiceMBean"/>
+</beans>

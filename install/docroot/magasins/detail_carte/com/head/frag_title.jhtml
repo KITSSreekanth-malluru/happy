@@ -1,0 +1,8 @@
+<TITLE>Castorama region <DROPLET BEAN="/atg/targeting/RepositoryLookup">
+			<PARAM NAME="repository" VALUE="bean:/atg/registry/Repository/magasinGSARepository">
+			<PARAM NAME="itemDescriptor" VALUE="region"><PARAM NAME="elementName" VALUE="region">
+			<PARAM NAME="id" VALUE="param:regionid">
+			<OPARAM NAME="output"><droplet bean="/castorama/utils/DropletDesaccentuation">
+					 	<param name="chaine_avec_accents_potentiels" value="param:region.nom">
+					 	<oparam name="sortie"><valueof param="sans_accents"/></oparam>
+						</droplet></OPARAM></DROPLET> - Le magasin Castorama le plus proche de chez vous</TITLE>

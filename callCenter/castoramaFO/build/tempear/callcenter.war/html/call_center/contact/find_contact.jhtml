@@ -1,0 +1,185 @@
+<importbean bean="/atg/userprofiling/SimpleProfileFindForm">
+<DECLAREPARAM NAME="id" CLASS="java.lang.String" DESCRIPTION="id du contact">
+<DROPLET SRC="/call_center/common/protocolChange.jhtml"><PARAM NAME="protocol" VALUE="secure"></DROPLET>
+<html>
+<TITLE>Castorama : Call center - Rechercher un contact</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<LINK REL="stylesheet" HREF="/css/hp.css">
+<BODY BGCOLOR="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+<droplet name="/atg/dynamo/security/SecurityAccessor">
+ <param name="allowGroups" value="commerce-csr-profiles-privilege">
+ <param name="denyGroups" value="">
+ <oparam name="accessAllowed">
+
+ <TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0" align="center">
+ <tr><td class="prix" align=center>Rechercher un contact par :</td></tr>
+ </table>
+ 
+ 
+<IMPORTBEAN BEAN="/castorama/DropletListeContact">
+<form name="contact" method="post" action="find_contact.jhtml">
+<input type="hidden" bean="DropletListeContact.submitSuccessURL" value="search_contact_results.jhtml">
+	
+<!-- debut -->
+			<TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0" align="center">
+    <tr bgcolor="#FFDE63"> 
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+    </tr>
+    <TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Téléopérateur 
+        :&nbsp; 
+      </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" class="moncasto" size="20" maxlength="100" BEAN="DropletListeContact.nomTeleoperateur"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Compte internaute 
+        :&nbsp; 
+      </TD>
+	   <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" class="moncasto" size="20" maxlength="100" BEAN="DropletListeContact.profileId"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Nom 
+        :&nbsp;   
+      </TD>
+      <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" class="moncasto" size="20" maxlength="100" BEAN="DropletListeContact.nom"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Prénom 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" class="moncasto" size="20" maxlength="100" BEAN="DropletListeContact.prenom"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">E-mail 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" class="moncasto" size="20" maxlength="100" BEAN="DropletListeContact.email"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">Code postal 
+        :&nbsp; 
+      </TD>
+      <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" class="moncasto" size="20" maxlength="100" BEAN="DropletListeContact.codePostal"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Ville 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30"><input type="text" class="moncasto" size="20" maxlength="100" BEAN="DropletListeContact.ville"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Statut 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">
+	  		<SELECT  CLASS="moncasto" BEAN="DropletListeContact.statut">
+		    <option value="null">...</option>
+		    <DROPLET BEAN="/atg/targeting/TargetingForEach">
+		      <PARAM NAME="targeter" VALUE="bean:/atg/registry/RepositoryTargeters/ContactCallCenter/viewAllStatuts">
+		      <OPARAM NAME="output">
+		        <option value="param:element.repositoryId"><VALUEOF PARAM="element.libelleStatut" valueishtml></VALUEOF></option>
+		      </OPARAM>
+		    </DROPLET>
+		    </SELECT>
+	  </td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Motif 
+	  	:&nbsp;
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">
+	  	<SELECT  CLASS="moncasto" BEAN="DropletListeContact.motif">
+		    <option value="null">...</option>
+		   <DROPLET BEAN="/atg/targeting/TargetingForEach">
+		     <PARAM NAME="targeter" VALUE="bean:/atg/registry/RepositoryTargeters/ContactCallCenter/viewAllMotifs">
+		     <PARAM NAME="sortProperties" VALUE="+libelleMotif">
+		     <OPARAM NAME="output">
+		       <option value="param:element.repositoryId"><VALUEOF PARAM="element.libelleMotif" valueishtml></VALUEOF></option>
+		     </OPARAM>
+		   </DROPLET>
+		</SELECT>
+	  </td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+	<TR> 
+      <TD WIDTH="1" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER"></TD>
+      
+      <TD WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center">Entre ... (jj/mm/aaaa)
+	  	:&nbsp;<input type="text" class="moncasto" size="20" maxlength="10" BEAN="DropletListeContact.dateDeb">
+	  </TD>
+	  <td WIDTH="289" VALIGN="MIDDLE" class="texte" ALIGN="center" height="30">et ... (jj/mm/aaaa)
+	  	:&nbsp;<input type="text" class="moncasto" size="20" maxlength="10" BEAN="DropletListeContact.dateFin"></td>
+      <TD WIDTH="10" VALIGN="MIDDLE" class="texte" ALIGN="CENTER">&nbsp;</TD>
+      <TD WIDTH="1" ALIGN="CENTER" bgcolor="#FFDE63"><img src="/img/1pixel.gif" width="1" height="1"></TD>
+    </TR>
+    <tr bgcolor="#FFDE63"> 
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="289"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="10"><img src="/img/1pixel.gif" width="1" height="1"></td>
+      <td width="1"><img src="/img/1pixel.gif" width="1" height="1"></td>
+    </tr>
+  </TABLE>  
+  <br>
+  <TABLE WIDTH="600" BORDER="0" CELLSPACING="0" CELLPADDING="0" align="center">
+ <tr>
+ <td class="prix" align=center><a href="javascript:history.back();"><img src="/img/annuler.gif" border="0"></a></td>
+ <td class="prix" align=center><input type="image" src="/img/valider.gif" border="0" bean="DropletListeContact.submit" value="chercher"></td>
+ </tr>
+ </table>
+ <!-- fin -->
+</FORM>
+<droplet src="/call_center/common/menuBas.jhtml"/>
+</oparam>
+</droplet>
+
+</HTML>
+

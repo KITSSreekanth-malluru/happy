@@ -1,0 +1,8 @@
+<gsa-template>
+  <item-descriptor name="priceList" cache-mode="simple"/>
+  <item-descriptor name="price" cache-mode="simple"/> 
+  <item-descriptor name="complexPrice" cache-mode="simple"/> 
+  <item-descriptor name="priceLevel" cache-mode="simple"/>
+  <item-descriptor name="genericFolder" cache-mode="simple"/>
+  <item-descriptor name="priceListFolder" cache-mode="simple"/>
+</gsa-template>

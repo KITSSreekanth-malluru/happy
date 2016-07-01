@@ -1,0 +1,20 @@
+#Tue Jan 22 08:31:28 VET 2013
+com.castorama.webservices.xsd.UpdatedUser=com.castorama.webservices.xsd.descriptors.UpdatedUserDescriptor
+com.castorama.webservices.xsd.UpdateUserRequest=com.castorama.webservices.xsd.descriptors.UpdateUserRequestDescriptor
+com.castorama.webservices.xsd.LoggedUser=com.castorama.webservices.xsd.descriptors.LoggedUserDescriptor
+com.castorama.webservices.xsd.RechercheClientsResponse=com.castorama.webservices.xsd.descriptors.RechercheClientsResponseDescriptor
+com.castorama.webservices.xsd.MotDePassePerduRequest=com.castorama.webservices.xsd.descriptors.MotDePassePerduRequestDescriptor
+com.castorama.webservices.xsd.RechercheClientsRequest=com.castorama.webservices.xsd.descriptors.RechercheClientsRequestDescriptor
+com.castorama.webservices.xsd.CreateUserResponse=com.castorama.webservices.xsd.descriptors.CreateUserResponseDescriptor
+com.castorama.webservices.xsd.UserType=com.castorama.webservices.xsd.descriptors.UserTypeDescriptor
+com.castorama.webservices.xsd.CreateUserRequest=com.castorama.webservices.xsd.descriptors.CreateUserRequestDescriptor
+com.castorama.webservices.xsd.UpdateUserResponse=com.castorama.webservices.xsd.descriptors.UpdateUserResponseDescriptor
+com.castorama.webservices.xsd.Client=com.castorama.webservices.xsd.descriptors.ClientDescriptor
+com.castorama.webservices.xsd.Clients=com.castorama.webservices.xsd.descriptors.ClientsDescriptor
+com.castorama.webservices.xsd.MotDePassePerduResponse=com.castorama.webservices.xsd.descriptors.MotDePassePerduResponseDescriptor
+com.castorama.webservices.xsd.LoginUserRequest=com.castorama.webservices.xsd.descriptors.LoginUserRequestDescriptor
+com.castorama.webservices.xsd.LoginUserResponseType=com.castorama.webservices.xsd.descriptors.LoginUserResponseTypeDescriptor
+com.castorama.webservices.xsd.ClientsType=com.castorama.webservices.xsd.descriptors.ClientsTypeDescriptor
+com.castorama.webservices.xsd.ResultType=com.castorama.webservices.xsd.descriptors.ResultTypeDescriptor
+com.castorama.webservices.xsd.LoginUserResponse=com.castorama.webservices.xsd.descriptors.LoginUserResponseDescriptor
+com.castorama.webservices.xsd.NewUser=com.castorama.webservices.xsd.descriptors.NewUserDescriptor

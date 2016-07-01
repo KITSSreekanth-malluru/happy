@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE imports SYSTEM "dynamosystemresource:/atg/dtds/gsa/multi_import_1.0.dtd">
+<imports>
+    <import repository="/atg/commerce/catalog/ProductCatalog" filename="cast-catalog-stag-init.xml"/>
+    <import repository="/atg/registry/Repository/CodePostalRepository" filename="CodePostalRepository.xml"/>
+    <import repository="/atg/registry/Repository/MotifRepository" filename="MotifRepository.xml"/>
+    <import repository="/atg/searchadmin/RefinementConfigRepository" filename="cast_doc_facets.xml"/>
+    <import repository="/atg/commerce/order/OrderRepository" filename="cast-order-poids.xml"/>
+</imports>

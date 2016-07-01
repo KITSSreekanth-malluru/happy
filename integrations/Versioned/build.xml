@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="castorama-integrations-Versioned" default="all" basedir=".">
+
+  <!-- Set properties needed by included XML files -->
+  <property name="global.dir" value="${basedir}/../.."/>
+
+  <!-- Import global defaults and settings and common tasks -->
+  <import file="${global.dir}/commonbuildtasks/common.xml"/>
+
+  <!-- Define the all task.  -->
+  <target name="all"
+    depends="clean,build,-jarstagconfigs,install,deploy"
+    description="Cleans, builds, checks and installs the project." />
+    
+</project>
+

@@ -1,0 +1,98 @@
+<dsp:getvalueof var="orderState" param="element.BOState" />
+<dsp:getvalueof var="state" param="states.ORDER_STATE" />
+<dsp:getvalueof var="orderBO" param="states.BO_ORDER" />
+<c:choose>
+	<c:when test="${null == orderBO}">
+		<dsp:getvalueof var="paymentMethod" param="element.paymentGroups[0].paymentMethod" />
+		<c:choose>
+			<c:when test="${'PENDING_PAYBOX' == orderState}">
+				<c:set var="state" value="20" />
+			</c:when>
+			<c:when test="${'PENDING_REMOVE' == orderState}">
+				<c:set var="state" value="15" />
+			</c:when>
+            <c:when test="${deliveryType == 'clickAndCollect'}">
+                <c:set var="state" value="clickAndCollect" />
+            </c:when>
+			<c:when test="${'creditCard' == paymentMethod}">
+				<c:set var="state" value="11" />
+			</c:when>
+			<c:when test="${'Mix' == paymentMethod}">
+				<c:set var="state" value="11" />
+			</c:when>
+			<c:when test="${'Atout' == paymentMethod}">
+				<c:set var="state" value="11" />
+			</c:when>
+			<c:when test="${'Cadeau' == paymentMethod}">
+				<c:set var="state" value="11" />
+			</c:when>
+			<c:when test="${'Call-Center' == paymentMethod}">
+				<c:choose>
+					<c:when test="${'VALIDE' == orderState}">
+						<c:set var="state" value="11" />
+					</c:when>
+					<c:otherwise>
+						<c:set var="state" value="12" />
+					</c:otherwise>
+				</c:choose>
+			</c:when>
+			<c:when test="${'Cheque' == paymentMethod}">
+				<c:choose>
+					<c:when test="${'VALIDE' == orderState}">
+						<c:set var="state" value="11" />
+					</c:when>
+					<c:otherwise>
+						<c:set var="state" value="13" />
+					</c:otherwise>
+				</c:choose>
+			</c:when>
+			<c:when test="${'Virement' == paymentMethod}">
+				<c:choose>
+					<c:when test="${'VALIDE' == orderState}">
+						<c:set var="state" value="11" />
+					</c:when>
+					<c:otherwise>
+						<c:set var="state" value="14" />
+					</c:otherwise>
+				</c:choose>
+			</c:when>
+			<c:otherwise>
+				<c:set var="state" value="15" />
+			</c:otherwise>
+		</c:choose>
+	</c:when>
+	<c:otherwise>
+		<dsp:getvalueof var="canceledDate" param="states.BO_ORDER.DSUPPRESSION" />
+		<c:if test="${null != canceledDate}">
+			<c:set var="state" value="15" />
+		</c:if>
+	</c:otherwise>
+</c:choose>
+
+<c:choose>
+	<c:when test="${20==state}">
+		<div class="circlesPlaceholder"><div class="circles15"></div></div>
+		En attente de réponse de Paybox
+	</c:when>
+    <c:when test="${'clickAndCollect'==state}">
+      <dsp:droplet name="/com/castorama/droplet/CastLookupDroplet">
+        <dsp:param name="elementName" value="orderStore" />
+        <dsp:param name="repository" bean="/atg/registry/Repository/MagasinGSARepository" />
+        <dsp:param name="itemDescriptor" value="magasin" />
+        <dsp:param name="id" param="element.magasinId" />
+        <dsp:oparam name="output">
+          <dsp:getvalueof var="storeName" param="orderStore.nom"/>
+          <dsp:getvalueof var="phoneNumber" param="orderStore.ccPhone"/>
+        </dsp:oparam>
+      </dsp:droplet>
+
+      <p><fmt:message key="client.orders.order.state.cc.store"><fmt:param value="${storeName}"/></fmt:message></p>
+      <c:if test="${not empty phoneNumber}">
+        <p><fmt:message key="client.orders.order.state.cc.phone"><fmt:param value="${phoneNumber}"/></fmt:message></p>
+      </c:if>
+    </c:when>
+	<c:otherwise>
+		<div class="circlesPlaceholder"><div class="circles${state}"></div></div>
+		<fmt:message key="client.orders.order.state.${state}" />
+	</c:otherwise>
+</c:choose>
